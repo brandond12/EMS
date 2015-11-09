@@ -8,6 +8,10 @@ namespace AllEmployees
 {
     class ContractEmployee : Employee
     {
+        private DateTime contractStartDate;
+        private DateTime contractStopDate;
+        private float fixedContractAmount;
+
         public ContractEmployee()
         {
 
@@ -30,11 +34,45 @@ namespace AllEmployees
             return true;//temp to remove errors
         }
 
+        //prints all employee info to the screen
         public void Details()
         {
 
         }
 
+        ////* Setters *////
+        public bool SetContractStartDate(DateTime date)
+        {
+            return true;
+        }
+
+        public bool SetContractSopDate(DateTime date)
+        {
+            return true;
+        }
+
+        public bool SetFixedContractAmount(float date)
+        {
+            return true;
+        }
+
+        ////* Getter *////
+        public DateTime GetContractStartDate()
+        {
+            return contractStartDate;
+        }
+
+        public DateTime GetContractStopDate()
+        {
+            return contractStopDate;
+        }
+
+        public float GetFixedContractAmount()
+        {
+            return fixedContractAmount;
+        }
+
+        //override the ToString to allow easy printing
         public override string ToString()
         {
             return base.ToString();//temp to remoce errors

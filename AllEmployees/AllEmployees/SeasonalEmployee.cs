@@ -8,6 +8,9 @@ namespace AllEmployees
 {
     class SeasonalEmployee : Employee
     {
+        private string season;
+        private float piecePay;
+
         public SeasonalEmployee()
         {
 
@@ -30,11 +33,35 @@ namespace AllEmployees
             return true;//temp to remove errors
         }
 
+        //prints all employee info to the screen
         public void Details()
         {
-
+            
         }
 
+        ////*Setters*//////
+        public bool SetSeason(string season)
+        {
+            return true;
+        }
+
+        public bool SetPiecePay(float piecePay)
+        {
+            return true;
+        }
+
+        ////*Getters*//////
+        public string GetSeason()
+        {
+            return season;
+        }
+
+        public float GetPiecePay()
+        {
+            return piecePay;
+        }
+
+        //override the ToString to allow easy printing
         public override string ToString()
         {
             return base.ToString();//temp to remove errors

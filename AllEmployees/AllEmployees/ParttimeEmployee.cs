@@ -8,6 +8,10 @@ namespace AllEmployees
 {
     class ParttimeEmployee : Employee
     {
+        private DateTime dateOfTermination;
+        private float hourlyRate;
+        private DateTime dateOfHire;
+
         public ParttimeEmployee()
         {
 
@@ -30,11 +34,45 @@ namespace AllEmployees
             return true;//temp to remove errors
         }
 
+        //prints all employee info to the screen
         public void Details()
         {
 
         }
 
+        ////*Setters*//////
+        public bool SetDateOfTermination(DateTime date)
+        {
+            return true;
+        }
+
+        public bool SetHourlyRate(float rate)
+        {
+            return true;
+        }
+
+        public bool SetDateOfHire(DateTime date)
+        {
+            return true;
+        }
+
+        ////*Getters*//////
+        public DateTime GetDateOfTermination()
+        {
+            return dateOfTermination;
+        }
+
+        public float GetHourlyRate()
+        {
+            return hourlyRate;
+        }
+
+        public DateTime GetDateOfHire()
+        {
+            return dateOfHire;
+        }
+
+        //override the ToString to allow easy printing
         public override string ToString()
         {
             return base.ToString();//temp to remoce errors
