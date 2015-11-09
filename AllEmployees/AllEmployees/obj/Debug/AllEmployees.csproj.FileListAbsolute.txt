@@ -1,0 +1,5 @@
+F:\Documents\Dropbox\SET\Y2S3\Software Quality 1\EMS Project\AllEmployees\AllEmployees\bin\Debug\AllEmployees.dll
+F:\Documents\Dropbox\SET\Y2S3\Software Quality 1\EMS Project\AllEmployees\AllEmployees\bin\Debug\AllEmployees.pdb
+F:\Documents\Dropbox\SET\Y2S3\Software Quality 1\EMS Project\AllEmployees\AllEmployees\obj\Debug\AllEmployees.csprojResolveAssemblyReference.cache
+F:\Documents\Dropbox\SET\Y2S3\Software Quality 1\EMS Project\AllEmployees\AllEmployees\obj\Debug\AllEmployees.dll
+F:\Documents\Dropbox\SET\Y2S3\Software Quality 1\EMS Project\AllEmployees\AllEmployees\obj\Debug\AllEmployees.pdb
