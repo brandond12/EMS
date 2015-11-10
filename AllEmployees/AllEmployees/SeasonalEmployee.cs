@@ -12,7 +12,7 @@ namespace AllEmployees
         private float piecePay;
 
         /**
-        * \breif default constructor. Sets all values to default
+        * \brief default constructor. Sets all values to default
         *
         * \details <b>Details</b>
         *
@@ -26,7 +26,7 @@ namespace AllEmployees
         }
 
         /**
-        * \breif overloaded constructor. Sets name to inputed names, set all other values to default
+        * \brief overloaded constructor. Sets name to inputed names, set all other values to default
         *
         * \details <b>Details</b>
         *
@@ -45,7 +45,7 @@ namespace AllEmployees
 
 
         /**
-        * \breif overloaded constructor. Sets all values to the values given. no default values
+        * \brief overloaded constructor. Sets all values to the values given. no default values
         *
         * \details <b>Details</b>
         *
@@ -61,13 +61,13 @@ namespace AllEmployees
         * \return  n/a
         */
         public SeasonalEmployee(string firstName, string lastName, int socialInsuranceNumber, DateTime dateOfBirth, string season, float piecePay)
-            : base(firstName, lastName, socialInsuranceNumber, dateOfBirth)
+            : base(firstName, lastName, socialInsuranceNumber, dateOfBirth, "SN")
         {
 
         }
 
         /**
-        * \breif Used to determine in the object contains a valid employee
+        * \brief Used to determine in the object contains a valid employee
         *
         * \details <b>Details</b>
         *
@@ -75,13 +75,13 @@ namespace AllEmployees
         * 
         * \return  dataValid - <b>bool</b> - True if the object contains all data for a valid employee
         */
-        public new bool Validate()
+        public bool Validate()
         {
             return true;//temp to remove errors
         }
 
         /**
-        * \breif Used to print all employee data to the consol
+        * \brief Used to print all employee data to the consol
         *
         * \details <b>Details</b>
         *
@@ -95,7 +95,7 @@ namespace AllEmployees
         }
 
         /**
-        * \breif Overriden method ToString used to return a formated string of all data
+        * \brief Overriden method ToString used to return a formated string of all data
         *
         * \details <b>Details</b>
         *
@@ -110,7 +110,7 @@ namespace AllEmployees
 
         ////*Setters*//////
         /**
-        * \breif Setter for season
+        * \brief Setter for season
         *
         * \details <b>Details</b>
         *
@@ -124,7 +124,7 @@ namespace AllEmployees
         }
 
         /**
-        * \breif Setter for piecePay
+        * \brief Setter for piecePay
         *
         * \details <b>Details</b>
         *
@@ -139,7 +139,7 @@ namespace AllEmployees
 
         ////*Getters*//////
         /**
-        * \breif Getter for season
+        * \brief Getter for season
         *
         * \details <b>Details</b>
         *
@@ -153,7 +153,7 @@ namespace AllEmployees
         }
 
         /**
-        * \breif Getter for piecePay
+        * \brief Getter for piecePay
         *
         * \details <b>Details</b>
         *

@@ -9,7 +9,7 @@ namespace AllEmployees
     class FailedConstructorException : Exception
     {
         /**
-        * \breif default constructor. Create a FailedConstructorException with base Exception class
+        * \brief default constructor. Create a FailedConstructorException with base Exception class
         *
         * \details <b>Details</b>
         *
@@ -23,7 +23,7 @@ namespace AllEmployees
         }
 
         /**
-        * \breif overloaded constructor. Create a FailedConstructorException with base Exception class and message
+        * \brief overloaded constructor. Create a FailedConstructorException with base Exception class and message
         *
         * \details <b>Details</b>
         *

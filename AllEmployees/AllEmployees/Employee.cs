@@ -12,9 +12,10 @@ namespace AllEmployees
         private string lastName;
         private int socialInsuranceNumber;
         private DateTime dateOfBirth;
+        private string employeeType;
 
         /**
-        * \breif default constructor. Sets all values to default
+        * \brief default constructor. Sets all values to default
         *
         * \details <b>Details</b>
         *
@@ -24,11 +25,15 @@ namespace AllEmployees
         */
         public Employee()
         {
-
+            firstName = "";
+            lastName = "";
+            socialInsuranceNumber = 0;
+            dateOfBirth = new DateTime();
+            employeeType = "";
         }
 
         /**
-        * \breif overloaded constructor. Sets name to inputed names, set all other values to default
+        * \brief overloaded constructor. Sets name to inputed names, set all other values to default
         *
         * \details <b>Details</b>
         *
@@ -41,11 +46,19 @@ namespace AllEmployees
         */
         public Employee(string firstName, string lastName)
         {
-
+            this.firstName = firstName;
+            this.lastName = lastName;
+            socialInsuranceNumber = 0;
+            dateOfBirth = new DateTime();
+            employeeType = "";
+            if (this.ValidateBase() != true)
+            {
+                throw new FailedConstructorException();
+            }
         }
 
         /**
-        * \breif overloaded constructor. Sets all values to the values given. no default values
+        * \brief overloaded constructor. Sets all values to the values given. no default values
         *
         * \details <b>Details</b>
         *
@@ -58,13 +71,21 @@ namespace AllEmployees
         * 
         * \return  n/a
         */
-        public Employee(string firstName, string lastName, int socialInsuranceNumber, DateTime dateOfBirth)
+        public Employee(string firstName, string lastName, int socialInsuranceNumber, DateTime dateOfBirth, string employeeType)
         {
-
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.socialInsuranceNumber = socialInsuranceNumber;
+            this.dateOfBirth = dateOfBirth;
+            this.employeeType = employeeType;
+            if (this.ValidateBase() != true)
+            {
+                throw new FailedConstructorException();
+            }
         }
 
         /**
-        * \breif Used to determine in the object contains a valid employee
+        * \brief Used to determine in the object contains a valid employee
         *
         * \details <b>Details</b>
         *
@@ -72,13 +93,57 @@ namespace AllEmployees
         * 
         * \return dataValid - <b>bool</b> - True if the object contains all data for a valid employee
         */
-        public bool Validate()
+        public bool ValidateBase()
         {
-            return true;//temp to remove errors
+            bool dataValid = true;
+            //check valid firstName
+            foreach (char letter in firstName)
+            {
+                if (!char.IsLetter(letter) && letter != '\'' && letter != '-')
+                {
+                    dataValid = false;
+                }
+            }
+            //check valid last name
+            foreach (char letter in lastName)
+            {
+                if (!char.IsLetter(letter) && letter != '\'' && letter != '-')
+                {
+                    dataValid = false;
+                }
+            }
+            //check valid sin
+            if (socialInsuranceNumber.ToString().Length != 9 && socialInsuranceNumber.ToString().Length != 0)
+            {
+                dataValid = false;
+            }
+            //DateTime will never be invalid
+            //check employeeType
+            if (employeeType != "" && employeeType != "FT" && employeeType != "PT" && employeeType != "CT" && employeeType != "SN")
+            {
+                dataValid = false;
+            }
+            return dataValid;
         }
 
+                /**
+        * \brief Used to print all employee data to the consol
+        *
+        * \details <b>Details</b>
+        *
+        * \param n/a
+        * 
+        * \return  n/a
+        */
+        public string BaseDetails()
+        {
+            string stringOutput = "Employee Type: Contract\nName: " + GetFirstName() + " " + GetLastName() +
+                "\nSocial Insurance Number: " + GetSocialInsuranceNumber().ToString().Substring(0, 5) + " " + GetSocialInsuranceNumber().ToString().Substring(5, 4) +
+                "\nDate of Birth: " + String.Format("{0:yyyy-MM-dd}", GetDateOfBirth());
+            return stringOutput;
+        }
         /**
-        * \breif Overriden method ToString used to return a formated string of all data
+        * \brief Overriden method ToString used to return a formated string of all data
         *
         * \details <b>Details</b>
         *
@@ -86,14 +151,15 @@ namespace AllEmployees
         * 
         * \return employeeString <b>string</b> - the formated string containing all employee data
         */
-        public override string ToString()
+        public string ToStringBase()
         {
-            return base.ToString();//temp to remoce errors
+            string employeeString = firstName + "|" + lastName + "|" + socialInsuranceNumber + "|" + dateOfBirth.Year + "-" + dateOfBirth.Month + "-" + dateOfBirth.Day + "|";
+            return employeeString;//temp to remoce errors
         }
 
         ////*Setters*//////
         /**
-        * \breif Setter for firstName
+        * \brief Setter for firstName
         *
         * \details <b>Details</b>
         *
@@ -103,11 +169,23 @@ namespace AllEmployees
         */
         public bool SetFirstName(string firstName)
         {
-            return true;
+            bool dataSaved = true;
+            foreach (char letter in firstName)
+            {
+                if (!char.IsLetter(letter) && letter != '\'' && letter != '-')
+                {
+                    dataSaved = false;
+                }
+            }
+            if (dataSaved == true)
+            {
+                this.firstName = firstName;
+            }
+            return dataSaved;
         }
 
         /**
-        * \breif Setter for lastName
+        * \brief Setter for lastName
         *
         * \details <b>Details</b>
         *
@@ -117,11 +195,23 @@ namespace AllEmployees
         */
         public bool SetLastName(string lastName)
         {
-            return true;
+            bool dataSaved = true;
+            foreach (char letter in lastName)
+            {
+                if (!char.IsLetter(letter) && letter != '\'' && letter != '-')
+                {
+                    dataSaved = false;
+                }
+            }
+            if (dataSaved == true)
+            {
+                this.lastName = lastName;
+            }
+            return dataSaved;
         }
 
         /**
-        * \breif Setter for socialInsuranceNumber
+        * \brief Setter for socialInsuranceNumber
         *
         * \details <b>Details</b>
         *
@@ -135,7 +225,7 @@ namespace AllEmployees
         }
 
         /**
-        * \breif Setter for dateOfBirth
+        * \brief Setter for dateOfBirth
         *
         * \details <b>Details</b>
         *
@@ -145,12 +235,13 @@ namespace AllEmployees
         */
         public bool SetDateOfBirth(DateTime date)
         {
+            dateOfBirth = date;
             return true;
         }
 
         ////*Getter*//////
         /**
-        * \breif Getter for firstName
+        * \brief Getter for firstName
         *
         * \details <b>Details</b>
         *
@@ -164,7 +255,7 @@ namespace AllEmployees
         }
 
         /**
-        * \breif Getter for lastName
+        * \brief Getter for lastName
         *
         * \details <b>Details</b>
         *
@@ -178,7 +269,7 @@ namespace AllEmployees
         }
 
         /**
-        * \breif Getter for socialInsuranceNumber
+        * \brief Getter for socialInsuranceNumber
         *
         * \details <b>Details</b>
         *
@@ -192,7 +283,7 @@ namespace AllEmployees
         }
 
         /**
-        * \breif Getter for dateOfBirth
+        * \brief Getter for dateOfBirth
         *
         * \details <b>Details</b>
         *
