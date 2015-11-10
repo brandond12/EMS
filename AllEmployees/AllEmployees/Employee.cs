@@ -93,7 +93,7 @@ namespace AllEmployees
         * 
         * \return dataValid - <b>bool</b> - True if the object contains all data for a valid employee
         */
-        public bool ValidateBase()
+        protected bool ValidateBase()
         {
             bool dataValid = true;
             //check valid firstName
@@ -126,22 +126,6 @@ namespace AllEmployees
             return dataValid;
         }
 
-                /**
-        * \brief Used to print all employee data to the consol
-        *
-        * \details <b>Details</b>
-        *
-        * \param n/a
-        * 
-        * \return  n/a
-        */
-        public string BaseDetails()
-        {
-            string stringOutput = "Employee Type: Contract\nName: " + GetFirstName() + " " + GetLastName() +
-                "\nSocial Insurance Number: " + GetSocialInsuranceNumber().ToString().Substring(0, 5) + " " + GetSocialInsuranceNumber().ToString().Substring(5, 4) +
-                "\nDate of Birth: " + String.Format("{0:yyyy-MM-dd}", GetDateOfBirth());
-            return stringOutput;
-        }
         /**
         * \brief Overriden method ToString used to return a formated string of all data
         *
@@ -151,7 +135,7 @@ namespace AllEmployees
         * 
         * \return employeeString <b>string</b> - the formated string containing all employee data
         */
-        public string ToStringBase()
+        protected string ToStringBase()
         {
             string employeeString = firstName + "|" + lastName + "|" + socialInsuranceNumber + "|" + dateOfBirth.Year + "-" + dateOfBirth.Month + "-" + dateOfBirth.Day + "|";
             return employeeString;//temp to remoce errors
@@ -221,11 +205,20 @@ namespace AllEmployees
         */
         public bool SetSocialInsuranceNumber(int socialInsuranceNumber)
         {
-            return true;
+            bool dataSaved = true;
+            if(socialInsuranceNumber < 0)
+            {
+                dataSaved = false;
+            }
+            else
+            {
+                this.socialInsuranceNumber = socialInsuranceNumber;
+            }
+            return dataSaved;
         }
 
         /**
-        * \brief Setter for dateOfBirth
+        * \brief Setter for dateOfBirth using DateTime
         *
         * \details <b>Details</b>
         *
@@ -237,6 +230,86 @@ namespace AllEmployees
         {
             dateOfBirth = date;
             return true;
+        }
+
+        /**
+        * \brief Setter for dateOfBirth with String
+        *
+        * \details <b>Details</b>
+        *
+        * \param date <b>string</b> - The date of birth of the employee
+        * 
+        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+        */
+        public bool SetDateOfBirth(string date)
+        {
+            bool dataSaved = true;
+            int year = 0;
+            int month = 0;
+            int day = 0;
+            try
+            {
+                year = Int32.Parse(date.Substring(0, 4));
+                month = Int32.Parse(date.Substring(5, 2));
+                day = Int32.Parse(date.Substring(8, 2));
+                DateTime newDateOfBirth = new DateTime(year, month, day);
+                dateOfBirth = newDateOfBirth;
+            }
+            catch (Exception)
+            {
+                dataSaved = false;
+            }
+            return dataSaved;
+        }
+
+        /**
+        * \brief Setter for dateOfBirth with ints
+        *
+        * \details <b>Details</b>
+        *
+        * \param year <b>int</b> - The year of birth of the employee
+        * \param month <b>int</b> - The month of birth of the employee
+        * \param day <b>int</b> - The day of birth of the employee
+        * 
+        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+        */
+        public bool SetDateOfBirth(int year, int month, int day)
+        {
+            bool dataSaved = true;
+
+            try
+            {
+                DateTime newcontractStartDate = new DateTime(year, month, day);
+                dateOfBirth = newcontractStartDate;
+            }
+            catch (Exception)
+            {
+                dataSaved = false;
+            }
+            return dataSaved;
+        }
+
+        /**
+        * \brief Setter for type of employee
+        *
+        * \details <b>Details</b>
+        *
+        * \param employeeType <b>string</b> - The type of the employee. Must be: "FT" "PT" "CT" "SN" or ""
+        * 
+        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+        */
+        public bool SetEmployeeType(string employeeType)
+        {
+            bool dataSaved = true;
+            if (employeeType == "" || employeeType == "FT" || employeeType == "PT" || employeeType == "CT" || employeeType == "SN")
+            {
+                this.employeeType = employeeType;
+            }
+            else
+            {
+                dataSaved = false;
+            }
+            return dataSaved;
         }
 
         ////*Getter*//////
@@ -294,6 +367,34 @@ namespace AllEmployees
         public DateTime GetDateOfBirth()
         {
             return dateOfBirth;
+        }
+
+        /**
+        * \brief Getter for dateOfBirth that returns formatted string
+        *
+        * \details <b>Details</b>
+        *
+        * \param n/a
+        * 
+        * \return dateOfBirth <b>string</b>
+        */
+        public string GetDateOfBirthString()
+        {
+            return String.Format("{0:yyyy-MM-dd}", dateOfBirth);
+        }
+
+        /**
+        * \brief Getter for employeeType
+        *
+        * \details <b>Details</b>
+        *
+        * \param n/a
+        * 
+        * \return employeeType <b>string</b>
+        */
+        public string GetEmployeeType()
+        {
+            return employeeType;
         }
     }
 }

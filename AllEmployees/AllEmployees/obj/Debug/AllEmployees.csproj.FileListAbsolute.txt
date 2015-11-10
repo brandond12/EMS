@@ -8,3 +8,8 @@ F:\Repository\EMS Project\trunk\AllEmployees\AllEmployees\bin\Debug\AllEmployees
 F:\Repository\EMS Project\trunk\AllEmployees\AllEmployees\obj\Debug\AllEmployees.csprojResolveAssemblyReference.cache
 F:\Repository\EMS Project\trunk\AllEmployees\AllEmployees\obj\Debug\AllEmployees.dll
 F:\Repository\EMS Project\trunk\AllEmployees\AllEmployees\obj\Debug\AllEmployees.pdb
+C:\SETRepo\trunk\EMS\trunk\AllEmployees\AllEmployees\obj\Debug\AllEmployees.csprojResolveAssemblyReference.cache
+C:\SETRepo\trunk\EMS\trunk\AllEmployees\AllEmployees\obj\Debug\AllEmployees.dll
+C:\SETRepo\trunk\EMS\trunk\AllEmployees\AllEmployees\obj\Debug\AllEmployees.pdb
+C:\SETRepo\trunk\EMS\trunk\AllEmployees\AllEmployees\bin\Debug\AllEmployees.dll
+C:\SETRepo\trunk\EMS\trunk\AllEmployees\AllEmployees\bin\Debug\AllEmployees.pdb

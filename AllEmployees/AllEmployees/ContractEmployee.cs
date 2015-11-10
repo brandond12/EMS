@@ -27,6 +27,7 @@ namespace AllEmployees
             contractStartDate = new DateTime();
             contractStopDate = new DateTime();
             fixedContractAmount = 0;
+            SetEmployeeType("CT");
         }
 
         /**
@@ -47,6 +48,7 @@ namespace AllEmployees
             contractStartDate = new DateTime();
             contractStopDate = new DateTime();
             fixedContractAmount = 0;
+            SetEmployeeType("CT");
             if (this.Validate() != true)
             {
                 throw new FailedConstructorException();
@@ -103,17 +105,19 @@ namespace AllEmployees
         }
 
         /**
-        * \brief Used to print all employee data to the consol
+        * \brief Used to create a formated string of all employee to be printed to the screen
         *
         * \details <b>Details</b>
         *
         * \param n/a
         * 
-        * \return  n/a
+        * \return  userInfo <b>string</b> - formatted string of employee data
         */
-        public void Details()
+        public string Details()
         {
-            Console.WriteLine(BaseDetails() +
+            return ("Employee Type: Contract\nName: " + GetFirstName() + " " + GetLastName() +
+                "\nSocial Insurance Number: " + GetSocialInsuranceNumber().ToString().Substring(0, 5) + " " + GetSocialInsuranceNumber().ToString().Substring(5, 4) +
+                "\nDate of Birth: " + GetDateOfBirthString() +
                 "\nContract Start Date: " + GetContractStartDateString() +
                 "\nContract Stop Date: " + GetContractStopDateString() +
                 "\nFixed Contract Amount: " + fixedContractAmount.ToString());
@@ -137,7 +141,6 @@ namespace AllEmployees
                 fixedContractAmount.ToString();
             return outputString;
         }
-
 
         ////* Setters *////
         /**
@@ -176,7 +179,36 @@ namespace AllEmployees
                 year = Int32.Parse(date.Substring(0, 4));
                 month = Int32.Parse(date.Substring(5, 2));
                 day = Int32.Parse(date.Substring(8, 2));
-                contractStartDate = new DateTime(year, month, day);
+
+                DateTime newcontractStartDate = new DateTime(year, month, day);
+                contractStartDate = newcontractStartDate;
+            }
+            catch (Exception)
+            {
+                dataSaved = false;
+            }
+            return dataSaved;
+        }
+
+        /**
+        * \brief Setter for contractStartDate from ints
+        *
+        * \details <b>Details</b>
+        *
+        * \param year <b>int</b> - The start year of the employees contract
+        * \param month <b>int</b> - The start month of the employees contract
+        * \param day <b>int</b> - The start day of the employees contract
+        * 
+        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+        */
+        public bool SetContractStartDate(int year, int month, int day)
+        {
+            bool dataSaved = true;
+
+            try
+            {
+                DateTime newcontractStartDate = new DateTime(year, month, day);
+                contractStartDate = newcontractStartDate;
             }
             catch (Exception)
             {
@@ -222,6 +254,33 @@ namespace AllEmployees
                 month = Int32.Parse(date.Substring(5, 2));
                 day = Int32.Parse(date.Substring(8, 2));
                 contractStopDate = new DateTime(year, month, day);
+            }
+            catch (Exception)
+            {
+                dataSaved = false;
+            }
+            return dataSaved;
+        }
+
+        /**
+        * \brief Setter for contractStopDate from ints
+        *
+        * \details <b>Details</b>
+        *
+        * \param year <b>int</b> - The stop year of the employees contract
+        * \param month <b>int</b> - The stop month of the employees contract
+        * \param day <b>int</b> - The stop day of the employees contract
+        * 
+        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+        */
+        public bool SetContractStopDate(int year, int month, int day)
+        {
+            bool dataSaved = true;
+
+            try
+            {
+                DateTime newcontractStartDate = new DateTime(year, month, day);
+                contractStartDate = newcontractStartDate;
             }
             catch (Exception)
             {
