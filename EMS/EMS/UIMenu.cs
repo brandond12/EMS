@@ -8,7 +8,7 @@ namespace EMS
 {
     static class UIMenu
     {
-
+        TheCompany company = new TheCompany();
         public static void ShowMainMenu()
         {
 
@@ -29,9 +29,21 @@ namespace EMS
 
         }
 
+        public static AllEmployees.Employee ShowFindEmployeeMenu()
+        {
+            //select a method of finding an employee
+            return new AllEmployees.Employee();
+        }
+
         public static String GetInfoFromUser(String UserPrompt)
         {
+
             return " "; //temp to remove errors
+        }
+
+        public static void ShowError(String errorMessage)
+        {
+
         }
     }
 }

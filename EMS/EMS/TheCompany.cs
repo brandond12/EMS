@@ -8,6 +8,7 @@ namespace EMS
 {
     class TheCompany
     {
+        List<AllEmployees.Employee> Employees;
         //starting point for code
         static void Main(string[] args)
         {
@@ -16,7 +17,7 @@ namespace EMS
                //exception thrown then user whats to leave
         }
 
-        public void addEmployee(AllEmployees.Employee employee)
+        public void addEmployee()
         {
             //use GetInfoFromUser from UI
             //build a Employee
@@ -25,27 +26,44 @@ namespace EMS
 
         public void removeEmployee(AllEmployees.Employee employee)
         {
-            //show user Employees individualy
-            //if user wants to delete, delete it
+            //delete the given employee
         }
 
         public void modifyEmployee(AllEmployees.Employee employee)
         {
-            //show user Employees individualy
-            //if user wants to modify
-            //show each data member
+            //given employee
+            //show each data member 
         }
 
-        //start travers through employees / reset travers
-        public static AllEmployees.Employee showFirstEmployee()
+        public AllEmployees.Employee selectEmployee()
         {
-            return new AllEmployees.Employee();//temp to remove errors
+            //search all employees
+            return new AllEmployees.Employee();
         }
 
-        //keep traversing through employees
-        public static AllEmployees.Employee showNextEmployee()
+        public AllEmployees.Employee selectEmployeeByFirstName(string firstName)
         {
-            return new AllEmployees.Employee();//temp to remove errors
+
+            return new AllEmployees.Employee();
+        }
+
+        public AllEmployees.Employee selectEmployeeByFullName(string firstName, string lastName)
+        {
+
+            return new AllEmployees.Employee();
+        }
+
+        public AllEmployees.Employee selectEmployeeBySIN(int socialInsuranceNumber)
+        {
+
+            return new AllEmployees.Employee();
+        }
+
+        public AllEmployees.Employee selectEmployeeByDOB(DateTime dateOfBirth)
+        {
+
+            return new AllEmployees.Employee();
         }
     }
 }
+
