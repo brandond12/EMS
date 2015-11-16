@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AllEmployees
 {
-    class FailedConstructorException : Exception
+    public class FailedConstructorException : Exception
     {
         /**
         * \brief default constructor. Create a FailedConstructorException with base Exception class

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AllEmployees
 {
-    class SeasonalEmployee : Employee
+    public class SeasonalEmployee : Employee
     {
         private string season;
         private float piecePay;

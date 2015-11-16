@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AllEmployees
 {
-    class ParttimeEmployee : Employee
+    public class ParttimeEmployee : Employee
     {
         private DateTime dateOfTermination;
         private float hourlyRate;
