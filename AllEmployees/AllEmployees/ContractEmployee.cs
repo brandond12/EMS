@@ -101,6 +101,11 @@ namespace AllEmployees
             {
                 dataValid = false;
             }
+
+            if (int.Parse(GetSocialInsuranceNumber().ToString().Substring(0, 2)) != int.Parse(GetDateOfBirthString().Substring(2, 2)))
+            {
+                dataValid = false;
+            }
             return dataValid;
         }
 
@@ -116,7 +121,7 @@ namespace AllEmployees
         public string Details()
         {
             return ("Employee Type: Contract\nName: " + GetFirstName() + " " + GetLastName() +
-                "\nSocial Insurance Number: " + GetSocialInsuranceNumber().ToString().Substring(0, 5) + " " + GetSocialInsuranceNumber().ToString().Substring(5, 4) +
+                "\nBuisness Number: " + GetSocialInsuranceNumber().ToString().Substring(0, 5) + " " + GetSocialInsuranceNumber().ToString().Substring(5, 4) +
                 "\nDate of Birth: " + GetDateOfBirthString() +
                 "\nContract Start Date: " + GetContractStartDateString() +
                 "\nContract Stop Date: " + GetContractStopDateString() +

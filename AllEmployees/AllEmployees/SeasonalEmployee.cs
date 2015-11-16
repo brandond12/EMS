@@ -21,8 +21,10 @@ namespace AllEmployees
         * \return  n/a
         */
         public SeasonalEmployee()
+            : base()
         {
-
+            season = "";
+            piecePay = 0;
         }
 
         /**
@@ -40,7 +42,12 @@ namespace AllEmployees
         public SeasonalEmployee(string firstName, string lastName)
             : base(firstName, lastName)
         {
-
+            season = "";
+            piecePay = 0;
+            if (this.Validate() != true)
+            {
+                throw new FailedConstructorException();
+            }
         }
 
 
@@ -63,7 +70,12 @@ namespace AllEmployees
         public SeasonalEmployee(string firstName, string lastName, int socialInsuranceNumber, DateTime dateOfBirth, string season, float piecePay)
             : base(firstName, lastName, socialInsuranceNumber, dateOfBirth, "SN")
         {
-
+            this.season = season;
+            this.piecePay = piecePay;
+            if (this.Validate() != true)
+            {
+                throw new FailedConstructorException();
+            }
         }
 
         /**
@@ -77,7 +89,16 @@ namespace AllEmployees
         */
         public bool Validate()
         {
-            return true;//temp to remove errors
+            bool dataValid = ValidateBase();
+            if (season != "Spring" && season != "Summer" && season != "Winter" && season != "Fall" && season != "")
+            {
+                dataValid = false;
+            }
+            if (piecePay < 0)
+            {
+                dataValid = false;
+            }
+            return dataValid;
         }
 
         /**
@@ -87,11 +108,15 @@ namespace AllEmployees
         *
         * \param n/a
         * 
-        * \return  n/a
+        * \return  userInfo <b>string</b> - formatted string of employee data
         */
-        public void Details()
+        public string Details()
         {
-
+            return ("Employee Type: Contract\nName: " + GetFirstName() + " " + GetLastName() +
+                "\nSocial Insurance Number: " + GetSocialInsuranceNumber().ToString().Substring(0, 3) + " " + GetSocialInsuranceNumber().ToString().Substring(3, 3) + " " + GetSocialInsuranceNumber().ToString().Substring(6, 3) +
+                "\nDate of Birth: " + GetDateOfBirthString() +
+                "\nSeason: " + season +
+                "\nPrice per Piece: " + piecePay.ToString());
         }
 
         /**
@@ -105,7 +130,11 @@ namespace AllEmployees
         */
         public override string ToString()
         {
-            return base.ToString();//temp to remoce errors
+            string outputString = "SN" + "|" +
+            ToStringBase() +
+            season + "|" +
+            piecePay.ToString();
+            return outputString;
         }
 
         ////*Setters*//////
@@ -120,7 +149,16 @@ namespace AllEmployees
         */
         public bool SetSeason(string season)
         {
-            return true;
+            bool dataSaved = true;
+            if (season != "Spring" && season != "Summer" && season != "Winter" && season != "Fall" && season != "")
+            {
+                dataSaved = false;
+            }
+            else
+            {
+                this.season = season;
+            }
+            return dataSaved;
         }
 
         /**
@@ -134,7 +172,18 @@ namespace AllEmployees
         */
         public bool SetPiecePay(float piecePay)
         {
-            return true;
+            bool dataSaved = true;
+
+            if (piecePay >= 0)
+            {
+                this.piecePay = piecePay;
+            }
+            else
+            {
+                dataSaved = false;
+            }
+
+            return dataSaved;
         }
 
         ////*Getters*//////

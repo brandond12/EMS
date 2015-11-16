@@ -22,8 +22,11 @@ namespace AllEmployees
         * \return  n/a
         */
         public ParttimeEmployee()
+            : base()
         {
-
+            dateOfTermination = new DateTime();
+            hourlyRate = 0;
+            dateOfHire = new DateTime();
         }
 
         /**
@@ -41,7 +44,13 @@ namespace AllEmployees
         public ParttimeEmployee(string firstName, string lastName)
             : base(firstName, lastName)
         {
-
+            dateOfTermination = new DateTime();
+            hourlyRate = 0;
+            dateOfHire = new DateTime();
+            if (this.Validate() != true)
+            {
+                throw new FailedConstructorException();
+            }
         }
 
         /**
@@ -64,7 +73,13 @@ namespace AllEmployees
         public ParttimeEmployee(string firstName, string lastName, int socialInsuranceNumber, DateTime dateOfBirth, DateTime dateOfHire, DateTime dateOfTermination, float hourlyRate)
             : base(firstName, lastName, socialInsuranceNumber, dateOfBirth, "PT")
         {
-
+            this.dateOfTermination = dateOfTermination;
+            this.hourlyRate = hourlyRate;
+            this.dateOfHire = dateOfHire;
+            if (this.Validate() != true)
+            {
+                throw new FailedConstructorException();
+            }
         }
 
         /**
@@ -78,7 +93,12 @@ namespace AllEmployees
         */
         public bool Validate()
         {
-            return true;//temp to remove errors
+            bool dataValid = ValidateBase();
+            if (hourlyRate < 0)
+            {
+                dataValid = false;
+            }
+            return dataValid;//temp to remove errors
         }
 
         /**
@@ -88,11 +108,16 @@ namespace AllEmployees
         *
         * \param n/a
         * 
-        * \return  n/a
+        * \return  userInfo <b>string</b> - formatted string of employee data
         */
-        public void Details()
+        public string Details()
         {
-
+            return ("Employee Type: Contract\nName: " + GetFirstName() + " " + GetLastName() +
+                "\nSocial Insurance Number: " + GetSocialInsuranceNumber().ToString().Substring(0, 3) + " " + GetSocialInsuranceNumber().ToString().Substring(3, 3) + " " + GetSocialInsuranceNumber().ToString().Substring(6, 3) +
+                "\nDate of Birth: " + GetDateOfBirthString() +
+                "\nDate of Hire: " + GetDateOfHireString() +
+                "\nDate of Termionation" + GetDateOfTerminationString() +
+                "\nHourly Rate: " + hourlyRate.ToString());
         }
 
         /**
@@ -106,7 +131,12 @@ namespace AllEmployees
         */
         public override string ToString()
         {
-            return base.ToString();//temp to remoce errors
+            string outputString = "PT" + "|" +
+               ToStringBase() +
+               GetDateOfHireString() + "|" +
+               GetDateOfTerminationString() + "|" +
+               hourlyRate.ToString();
+            return outputString;
         }
 
         ////*Setters*//////
@@ -121,7 +151,66 @@ namespace AllEmployees
         */
         public bool SetDateOfTermination(DateTime date)
         {
+            dateOfTermination = date;
             return true;
+        }
+
+        /**
+        * \brief Setter for dateOfTermination from string
+        *
+        * \details <b>Details</b>
+        *
+        * \param date <b>string</b> - The employees date of termination
+        * 
+        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+        */
+        public bool SetDateOfTermination(string date)
+        {
+            bool dataSaved = true;
+            int year = 0;
+            int month = 0;
+            int day = 0;
+            try
+            {
+                year = Int32.Parse(date.Substring(0, 4));
+                month = Int32.Parse(date.Substring(5, 2));
+                day = Int32.Parse(date.Substring(8, 2));
+
+                DateTime newDateOfTermination = new DateTime(year, month, day);
+                dateOfTermination = newDateOfTermination;
+            }
+            catch (Exception)
+            {
+                dataSaved = false;
+            }
+            return dataSaved;
+        }
+
+        /**
+        * \brief Setter for dateOfTermination from ints
+        *
+        * \details <b>Details</b>
+        *
+        * \param year <b>int</b> - The year of the employees Termination
+        * \param month <b>int</b> - The month of the employees Termination
+        * \param day <b>int</b> - The day of the employees Termination
+        * 
+        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+        */
+        public bool SetDateOfTermination(int year, int month, int day)
+        {
+            bool dataSaved = true;
+
+            try
+            {
+                DateTime newDateOfTermination = new DateTime(year, month, day);
+                dateOfTermination = newDateOfTermination;
+            }
+            catch (Exception)
+            {
+                dataSaved = false;
+            }
+            return dataSaved;
         }
 
         /**
@@ -135,7 +224,18 @@ namespace AllEmployees
         */
         public bool SetHourlyRate(float rate)
         {
-            return true;
+            bool dateSaved = true;
+
+            if (rate >= 0)
+            {
+                hourlyRate = rate;
+            }
+            else
+            {
+                dateSaved = false;
+            }
+
+            return dateSaved;
         }
 
         /**
@@ -149,7 +249,66 @@ namespace AllEmployees
         */
         public bool SetDateOfHire(DateTime date)
         {
+            dateOfHire = date;
             return true;
+        }
+
+        /** 
+        * \brief Setter for dateOfHire from string
+        *
+        * \details <b>Details</b>
+        *
+        * \param date <b>string</b> - The employees date of hire
+        * 
+        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+        */
+        public bool SetDateOfHire(string date)
+        {
+            bool dataSaved = true;
+            int year = 0;
+            int month = 0;
+            int day = 0;
+            try
+            {
+                year = Int32.Parse(date.Substring(0, 4));
+                month = Int32.Parse(date.Substring(5, 2));
+                day = Int32.Parse(date.Substring(8, 2));
+
+                DateTime newDateOfHire = new DateTime(year, month, day);
+                dateOfHire = newDateOfHire;
+            }
+            catch (Exception)
+            {
+                dataSaved = false;
+            }
+            return dataSaved;
+        }
+
+        /**
+        * \brief Setter for dateOfHire from ints
+        *
+        * \details <b>Details</b>
+        *
+        * \param year <b>int</b> - The year of the employees dateOfHire
+        * \param month <b>int</b> - The month of the employees dateOfHire
+        * \param day <b>int</b> - The day of the employees dateOfHire
+        * 
+        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+        */
+        public bool SetDateOfHire(int year, int month, int day)
+        {
+            bool dataSaved = true;
+
+            try
+            {
+                DateTime newDateOfHire = new DateTime(year, month, day);
+                dateOfHire = newDateOfHire;
+            }
+            catch (Exception)
+            {
+                dataSaved = false;
+            }
+            return dataSaved;
         }
 
         ////*Getters*//////
@@ -165,6 +324,20 @@ namespace AllEmployees
         public DateTime GetDateOfTermination()
         {
             return dateOfTermination;
+        }
+
+        /**
+        * \brief Getter for dateOfTermination that returns formatted string
+        *
+        * \details <b>Details</b>
+        *
+        * \param n/a
+        * 
+        * \return dateOfTermination <b>string</b>
+        */
+        public string GetDateOfTerminationString()
+        {
+            return String.Format("{0:yyyy-MM-dd}", dateOfTermination);
         }
 
         /**
@@ -193,6 +366,20 @@ namespace AllEmployees
         public DateTime GetDateOfHire()
         {
             return dateOfHire;
+        }
+
+        /**
+        * \brief Getter for dateOfHire that returns formatted string
+        *
+        * \details <b>Details</b>
+        *
+        * \param n/a
+        * 
+        * \return dateOfHire <b>string</b>
+        */
+        public string GetDateOfHireString()
+        {
+            return String.Format("{0:yyyy-MM-dd}", dateOfHire);
         }
     }
 }
