@@ -8,7 +8,7 @@ namespace EMS
 {
     class TheCompany
     {
-        private List<AllEmployees.Employee> listOfEmployees;  // List that holds all of the employees
+        private List<AllEmployees.Employee> listOfEmployees = new List<AllEmployees.Employee>(); // List that holds all of the employees
 
         /**
         * \brief The Main method is the starting point of code execution. This method 
@@ -30,7 +30,7 @@ namespace EMS
             {
                 runProgram = UIMenu.ShowMainMenu();
             }
-            //exception thrown then user whats to leave
+            throw new EndOfProgramException();
         }
 
         /**
@@ -46,33 +46,406 @@ namespace EMS
         */
         public void AddEmployee()
         {
-            String employeeType;    // The employee is either full-time, part-time, contract, or seasonal
+            String employeeType;    // The employee is either FT, PT, CT, or SN
+            String error;           // Data the user typed before hitting the enter key after the error message 
 
             // Get the employee type from the user
-            employeeType = UIMenu.GetInfoFromUser("Enter the employee's type: Full-time, Part-time, Contract, or Seasonal:");
+            employeeType = UIMenu.GetInfoFromUser("Enter the employee's type: FT (Full-time), PT (Part-time), CT (Contract), or  SN (Seasonal):");
             
             // Create a new employee object of the specified type
             switch(employeeType)
             {
-                case "Full-time":   // or FT
+                // Full-time Employee
+                case "FT":
                     AllEmployees.FulltimeEmployee newFulltimeEmployee = GetFulltimeEmployeeProperties();
+                    // If the returned employee is valid, add it to the employee list
+                    if ((newFulltimeEmployee.GetFirstName() != "") && (newFulltimeEmployee.GetLastName() != "")) 
+                    {
+                        AddEmployeeToList(newFulltimeEmployee);
+                    }
                     break;
-                case "Part-time":   // or PT
+                // Part-time Employee
+                case "PT":
                     AllEmployees.ParttimeEmployee newParttimeEmployee = GetParttimeEmployeeProperties();
+                    // If the returned employee is valid, add it to the employee list
+                    if ((newParttimeEmployee.GetFirstName() != "") && (newParttimeEmployee.GetLastName() != ""))
+                    {
+                        AddEmployeeToList(newParttimeEmployee);
+                    }
                     break;
-                case "Contract":    // or CT
+                // Contract Employee
+                case "CT":
                     AllEmployees.ContractEmployee newContractEmployee = GetContractEmployeeProperties();
+                    // If the returned employee is valid, add it to the employee list
+                    if ((newContractEmployee.GetFirstName() != "") && (newContractEmployee.GetLastName() != ""))
+                    {
+                        AddEmployeeToList(newContractEmployee);
+                    }
                     break;
-                case "Seasonal":    // or SN
+                // Seasonal Employee
+                case "SN":
                     AllEmployees.SeasonalEmployee newSeasonalEmployee = GetSeasonalEmployeeProperties();
+                    // If the returned employee is valid, add it to the employee list
+                    if ((newSeasonalEmployee.GetFirstName() != "") && (newSeasonalEmployee.GetLastName() != ""))
+                    {
+                        AddEmployeeToList(newSeasonalEmployee);
+                    }
                     break;
+                // An invalid employee
                 default:
-                    // Error occurred
+                    error = UIMenu.GetInfoFromUser("An invalid employee type was entered, so an employee won't be created.\nHit enter to continue.");
                     break;
             }
-            //use GetInfoFromUser from UI
-            //build a Employee
-            //save employee
+        }
+
+        /**
+        * \brief The GetFulltimeEmployeeProperties method is used to create a full-time 
+        * employee object from the properties the user enters. A valid full-time employee 
+        * object is created if the user entered valid data, otherwise a blank object is returned.
+        *
+        * \details <b>Details</b>
+        * 
+        * \param n/a
+        * 
+        * \return employee - <b>AllEmployees.FulltimeEmployee</b> - The full-time employee object
+        */
+        private AllEmployees.FulltimeEmployee GetFulltimeEmployeeProperties()
+        {
+            String firstName;                   // The first name of the employee
+            String lastName;                    // The last name of the employee
+            int intSocialInsuranceNumber;       // The int version of the SIN
+            String stringSocialInsuranceNumber; // The string version of the SIN
+            String stringYear;                  // The string year - used by DOB, date of termination and date of hire
+            String stringMonth;                 // The string month - used by DOB, date of termination and date of hire
+            String stringDay;                   // The string day - used by DOB, date of termination and date of hire
+            int intYear;                        // The int year - used by DOB, date of termination and date of hire
+            int intMonth;                       // The int month - used by DOB, date of termination and date of hire
+            int intDay;                         // The int day - used by DOB, date of termination and date of hire
+            String stringSalary;                // The string version of the salary
+            float floatSalary;                  // The float version of the salary
+            String error;                       // Data the user typed before hitting the enter key after the error message 
+            AllEmployees.FulltimeEmployee newFulltimeEmployee;  // A fulltime employee reference
+
+            try
+            {
+                // Get the first name from the user
+                firstName = UIMenu.GetInfoFromUser("Enter the employee's first name: ");
+
+                // Get the last name from the user
+                lastName = UIMenu.GetInfoFromUser("Enter the employee's last name: ");
+
+                // Get the SIN from the user
+                stringSocialInsuranceNumber = UIMenu.GetInfoFromUser("Enter the employee's social insurance number: ");
+                intSocialInsuranceNumber = Convert.ToInt32(stringSocialInsuranceNumber);
+
+                // Get the DOB from the user
+                stringYear = UIMenu.GetInfoFromUser("Enter the employee's birth year (yyyy): ");
+                intYear = Convert.ToInt32(stringYear);
+                stringMonth = UIMenu.GetInfoFromUser("Enter the employee's birth month (mm): ");
+                intMonth = Convert.ToInt32(stringMonth);
+                stringDay = UIMenu.GetInfoFromUser("Enter the employee's birth day (dd): ");
+                intDay = Convert.ToInt32(stringDay);
+                DateTime dateOfBirth = new DateTime(intYear, intMonth, intDay);
+
+                // Get the date of termination from the user
+                stringYear = UIMenu.GetInfoFromUser("Enter the employee's termination year (yyyy): ");
+                intYear = Convert.ToInt32(stringYear);
+                stringMonth = UIMenu.GetInfoFromUser("Enter the employee's termination month (mm): ");
+                intMonth = Convert.ToInt32(stringMonth);
+                stringDay = UIMenu.GetInfoFromUser("Enter the employee's termination day (dd): ");
+                intDay = Convert.ToInt32(stringDay);
+                DateTime dateOfTermination = new DateTime(intYear, intMonth, intDay);
+
+                // Get the date of hire from the user
+                stringYear = UIMenu.GetInfoFromUser("Enter the employee's hire year (yyyy): ");
+                intYear = Convert.ToInt32(stringYear);
+                stringMonth = UIMenu.GetInfoFromUser("Enter the employee's hire month (mm): ");
+                intMonth = Convert.ToInt32(stringMonth);
+                stringDay = UIMenu.GetInfoFromUser("Enter the employee's hire day (dd): ");
+                intDay = Convert.ToInt32(stringDay);
+                DateTime dateOfHire = new DateTime(intYear, intMonth, intDay);
+
+                // Get the salary from the user
+                stringSalary = UIMenu.GetInfoFromUser("Enter the employee's salary, in dollars: ");
+                floatSalary = float.Parse(stringSalary);
+
+                // Try to create an employee object with the user's data
+                newFulltimeEmployee = new AllEmployees.FulltimeEmployee(firstName, lastName, intSocialInsuranceNumber, dateOfBirth, dateOfHire, 
+                dateOfTermination, floatSalary);
+            }
+            catch (Exception)
+            {
+                error = UIMenu.GetInfoFromUser("Invalid data was entered, or another error occurred.\nThe employee object could not be created" +
+                ".\nHit enter to continue.");
+                /* If there was an error, that means an employee object wasn't created, 
+                * so create a blank employee object to return to the calling function */
+                newFulltimeEmployee = new AllEmployees.FulltimeEmployee();
+            }
+
+            return newFulltimeEmployee;
+        }
+
+        /**
+        * \brief The GetParttimeEmployeeProperties method is used to create a part-time 
+        * employee object from the properties the user enters. A valid part-time employee 
+        * object is created if the user entered valid data, otherwise a blank object is returned.
+        *
+        * \details <b>Details</b>
+        * 
+        * \param n/a
+        * 
+        * \return employee - <b>AllEmployees.ParttimeEmployee</b> - The part-time employee object
+        */
+        private AllEmployees.ParttimeEmployee GetParttimeEmployeeProperties()
+        {
+            String firstName;                   // The first name of the employee
+            String lastName;                    // The last name of the employee
+            int intSocialInsuranceNumber;       // The int version of the SIN
+            String stringSocialInsuranceNumber; // The string version of the SIN
+            String stringYear;                  // The string year - used by DOB, date of termination and date of hire
+            String stringMonth;                 // The string month - used by DOB, date of termination and date of hire
+            String stringDay;                   // The string day - used by DOB, date of termination and date of hire
+            int intYear;                        // The int year - used by DOB, date of termination and date of hire
+            int intMonth;                       // The int month - used by DOB, date of termination and date of hire
+            int intDay;                         // The int day - used by DOB, date of termination and date of hire
+            String stringHourlyRate;            // The string version of the hourly rate
+            float floatHourlyRate;              // The float version of the hourly rate
+            String error;                       // Data the user typed before hitting the enter key after the error message 
+            AllEmployees.ParttimeEmployee newParttimeEmployee;  // A parttime employee reference
+
+            try
+            {
+                // Get the first name from the user
+                firstName = UIMenu.GetInfoFromUser("Enter the employee's first name: ");
+
+                // Get the last name from the user
+                lastName = UIMenu.GetInfoFromUser("Enter the employee's last name: ");
+
+                // Get the SIN from the user
+                stringSocialInsuranceNumber = UIMenu.GetInfoFromUser("Enter the employee's social insurance number: ");
+                intSocialInsuranceNumber = Convert.ToInt32(stringSocialInsuranceNumber);
+
+                // Get the DOB from the user
+                stringYear = UIMenu.GetInfoFromUser("Enter the employee's birth year (yyyy): ");
+                intYear = Convert.ToInt32(stringYear);
+                stringMonth = UIMenu.GetInfoFromUser("Enter the employee's birth month (mm): ");
+                intMonth = Convert.ToInt32(stringMonth);
+                stringDay = UIMenu.GetInfoFromUser("Enter the employee's birth day (dd): ");
+                intDay = Convert.ToInt32(stringDay);
+                DateTime dateOfBirth = new DateTime(intYear, intMonth, intDay);
+
+                // Get the date of termination from the user
+                stringYear = UIMenu.GetInfoFromUser("Enter the employee's termination year (yyyy): ");
+                intYear = Convert.ToInt32(stringYear);
+                stringMonth = UIMenu.GetInfoFromUser("Enter the employee's termination month (mm): ");
+                intMonth = Convert.ToInt32(stringMonth);
+                stringDay = UIMenu.GetInfoFromUser("Enter the employee's termination day (dd): ");
+                intDay = Convert.ToInt32(stringDay);
+                DateTime dateOfTermination = new DateTime(intYear, intMonth, intDay);
+
+                // Get the hourly rate from the user
+                stringHourlyRate = UIMenu.GetInfoFromUser("Enter the employee's hourly rate: ");
+                floatHourlyRate = float.Parse(stringHourlyRate);
+
+                // Get the date of hire from the user
+                stringYear = UIMenu.GetInfoFromUser("Enter the employee's hire year (yyyy): ");
+                intYear = Convert.ToInt32(stringYear);
+                stringMonth = UIMenu.GetInfoFromUser("Enter the employee's hire month (mm): ");
+                intMonth = Convert.ToInt32(stringMonth);
+                stringDay = UIMenu.GetInfoFromUser("Enter the employee's hire day (dd): ");
+                intDay = Convert.ToInt32(stringDay);
+                DateTime dateOfHire = new DateTime(intYear, intMonth, intDay);
+
+                // Try to create an employee object with the user's data
+                newParttimeEmployee = new AllEmployees.ParttimeEmployee(firstName, lastName, intSocialInsuranceNumber, dateOfBirth, dateOfHire, 
+                dateOfTermination, floatHourlyRate);
+            }
+            // An exception will be thrown if invalid or out-of-range data is entered, or if the constructor fails
+            catch (Exception)
+            {
+                error = UIMenu.GetInfoFromUser("Invalid data was entered, or another error occurred.\nThe employee object could not be created" +
+                ".\nHit enter to continue.");
+                /* If there was an error, that means an employee object wasn't created, 
+                * so create a blank employee object to return to the calling function */
+                newParttimeEmployee = new AllEmployees.ParttimeEmployee();
+            }
+
+            return newParttimeEmployee;
+        }
+
+        /**
+        * \brief The GetContractEmployeeProperties method is used to create a contract 
+        * employee object from the properties the user enters. A valid contract employee 
+        * object is created if the user entered valid data, otherwise a blank object is returned.
+        *
+        * \details <b>Details</b>
+        * 
+        * \param n/a
+        * 
+        * \return employee - <b>AllEmployees.ContractEmployee</b> - The contract employee object
+        */
+        private AllEmployees.ContractEmployee GetContractEmployeeProperties()
+        {
+            String firstName;                   // The first name of the employee
+            String lastName;                    // The last name of the employee
+            int intSocialInsuranceNumber;       // The int version of the SIN
+            String stringSocialInsuranceNumber; // The string version of the SIN
+            String stringYear;                  // The string year - used by DOB, contract start date and contract end date
+            String stringMonth;                 // The string month - used by DOB, contract start date and contract end date
+            String stringDay;                   // The string day - used by DOB, contract start date and contract end date
+            int intYear;                        // The int year - used by DOB, contract start date and contract end date
+            int intMonth;                       // The int month - used by DOB, contract start date and contract end date
+            int intDay;                         // The int day - used by DOB, contract start date and contract end date
+            String stringFixedContractAmount;   // The string version of the fixed contract amount
+            float floatFixedContractAmount;     // The float version of the fixed contract amount
+            String error;                       // Data the user typed before hitting the enter key after the error message 
+            AllEmployees.ContractEmployee newContractEmployee;  // A contract employee reference
+
+            try
+            {
+                // Get the first name from the user
+                firstName = UIMenu.GetInfoFromUser("Enter the employee's first name: ");
+
+                // Get the last name from the user
+                lastName = UIMenu.GetInfoFromUser("Enter the employee's last name: ");
+
+                // Get the SIN from the user
+                stringSocialInsuranceNumber = UIMenu.GetInfoFromUser("Enter the employee's social insurance number: ");
+                intSocialInsuranceNumber = Convert.ToInt32(stringSocialInsuranceNumber);
+
+                // Get the DOB from the user
+                stringYear = UIMenu.GetInfoFromUser("Enter the employee's birth year (yyyy): ");
+                intYear = Convert.ToInt32(stringYear);
+                stringMonth = UIMenu.GetInfoFromUser("Enter the employee's birth month (mm): ");
+                intMonth = Convert.ToInt32(stringMonth);
+                stringDay = UIMenu.GetInfoFromUser("Enter the employee's birth day (dd): ");
+                intDay = Convert.ToInt32(stringDay);
+                DateTime dateOfBirth = new DateTime(intYear, intMonth, intDay);
+
+                // Get the contract start date from the user
+                stringYear = UIMenu.GetInfoFromUser("Enter the employee's contract start year (yyyy): ");
+                intYear = Convert.ToInt32(stringYear);
+                stringMonth = UIMenu.GetInfoFromUser("Enter the employee's contract start month (mm): ");
+                intMonth = Convert.ToInt32(stringMonth);
+                stringDay = UIMenu.GetInfoFromUser("Enter the employee's contract start day (dd): ");
+                intDay = Convert.ToInt32(stringDay);
+                DateTime contractStartDate = new DateTime(intYear, intMonth, intDay);
+
+                // Get the contract stop date from the user
+                stringYear = UIMenu.GetInfoFromUser("Enter the employee's contract stop year (yyyy): ");
+                intYear = Convert.ToInt32(stringYear);
+                stringMonth = UIMenu.GetInfoFromUser("Enter the employee's contract stop month (mm): ");
+                intMonth = Convert.ToInt32(stringMonth);
+                stringDay = UIMenu.GetInfoFromUser("Enter the employee's contract stop day (dd): ");
+                intDay = Convert.ToInt32(stringDay);
+                DateTime contractStopDate = new DateTime(intYear, intMonth, intDay);
+
+                // Get the fixed contract amount from the user
+                stringFixedContractAmount = UIMenu.GetInfoFromUser("Enter the employee's fixed contract amount, in dollars: ");
+                floatFixedContractAmount = float.Parse(stringFixedContractAmount);
+
+                // Try to create an employee object with the user's data
+                newContractEmployee = new AllEmployees.ContractEmployee(firstName, lastName, intSocialInsuranceNumber, 
+                dateOfBirth, contractStartDate, contractStopDate, floatFixedContractAmount);
+            }
+            // An exception will be thrown if invalid or out-of-range data is entered, or if the constructor fails
+            catch (Exception)
+            {
+                error = UIMenu.GetInfoFromUser("Invalid data was entered, or another error occurred.\nThe employee object could not be created" +
+                ".\nHit enter to continue.");
+                /* If there was an error, that means an employee object wasn't created, 
+                * so create a blank employee object to return to the calling function */
+                newContractEmployee = new AllEmployees.ContractEmployee();
+            }
+
+            return newContractEmployee;
+        }
+
+        /**
+        * \brief The GetSeasonalEmployeeProperties method is used to create a seasonal 
+        * employee object from the properties the user enters. A valid seasonal employee 
+        * object is created if the user entered valid data, otherwise a blank object is returned.
+        *
+        * \details <b>Details</b>
+        * 
+        * \param n/a
+        * 
+        * \return employee - <b>AllEmployees.SeasonalEmployee</b> - The seasonal employee object
+        */
+        private AllEmployees.SeasonalEmployee GetSeasonalEmployeeProperties()
+        {
+            String firstName;                   // The first name of the employee
+            String lastName;                    // The last name of the employee
+            int intSocialInsuranceNumber;       // The int version of the SIN
+            String stringSocialInsuranceNumber; // The string version of the SIN
+            String stringYear;                  // The string year for date of birth
+            String stringMonth;                 // The string month for date of birth
+            String stringDay;                   // The string day for date of birth
+            int intYear;                        // The int year for date of birth
+            int intMonth;                       // The int month for date of birth
+            int intDay;                         // The int day for date of birth
+            String season;                      // The season the employee works in
+            String stringPiecePay;              // String version of the piece pay
+            float floatPiecePay;                // The float version of the piece pay
+            String error;                       // Data the user typed before hitting the enter key after the error message 
+            AllEmployees.SeasonalEmployee newSeasonalEmployee;  // A seasonal employee reference
+
+            try
+            {
+                // Get the first name from the user
+                firstName = UIMenu.GetInfoFromUser("Enter the employee's first name: ");
+
+                // Get the last name from the user
+                lastName = UIMenu.GetInfoFromUser("Enter the employee's last name: ");
+
+                // Get the SIN from the user
+                stringSocialInsuranceNumber = UIMenu.GetInfoFromUser("Enter the employee's social insurance number: ");
+                intSocialInsuranceNumber = Convert.ToInt32(stringSocialInsuranceNumber);
+
+                // Get the DOB from the user
+                stringYear = UIMenu.GetInfoFromUser("Enter the employee's birth year (yyyy): ");
+                intYear = Convert.ToInt32(stringYear);
+                stringMonth = UIMenu.GetInfoFromUser("Enter the employee's birth month (mm): ");
+                intMonth = Convert.ToInt32(stringMonth);
+                stringDay = UIMenu.GetInfoFromUser("Enter the employee's birth day (dd): ");
+                intDay = Convert.ToInt32(stringDay);
+                DateTime dateOfBirth = new DateTime(intYear, intMonth, intDay);
+
+                // Get the season from the user
+                season = UIMenu.GetInfoFromUser("Enter the employee's work season: ");
+
+                // Get the piece pay from the user 
+                stringPiecePay = UIMenu.GetInfoFromUser("Enter the employee's piece pay, in dollars: ");
+                floatPiecePay = float.Parse(stringPiecePay);
+
+                // Try to create an employee object with the user's data
+                newSeasonalEmployee = new AllEmployees.SeasonalEmployee(firstName, lastName, intSocialInsuranceNumber, dateOfBirth, season, floatPiecePay);
+            }
+            // An exception will be thrown if invalid or out-of-range data is entered, or if the constructor fails
+            catch (Exception)
+            {
+                error = UIMenu.GetInfoFromUser("Invalid data was entered, or another error occurred.\nThe employee object could not be created" +
+                ".\nHit enter to continue.");
+                /* If there was an error, that means an employee object wasn't created, 
+                * so create a blank employee object to return to the calling function */
+                newSeasonalEmployee = new AllEmployees.SeasonalEmployee();
+            }
+
+            return newSeasonalEmployee;
+        }
+
+        /**
+        * \brief The AddEmployeeToList method is used to add a specified employee to the employee list.
+        * 
+        * \details <b>Details</b>
+        * 
+        * \param employee - <b>AllEmployees.Employee</b> - The employee to add to the list
+        * 
+        * \return n/a
+        */
+        public void AddEmployeeToList(AllEmployees.Employee employee)
+        {
+            listOfEmployees.Add(employee);
         }
 
         /**
@@ -87,6 +460,46 @@ namespace EMS
         public void RemoveEmployee(AllEmployees.Employee employee)
         {
             listOfEmployees.Remove(employee);
+        }
+
+        /**
+        * \brief The DisplayAllEmployees method is used to traverse 
+        * through all employee objects in the employee list.
+        *
+        * \details <b>Details</b>
+        * 
+        * \param n/a
+        * 
+        * \return n/a
+        */
+        public void DisplayAllEmployees()
+        {
+            String response;    // The key the user hits to display the next employee
+
+            // Loop through all of the employees
+            foreach (AllEmployees.Employee employee in listOfEmployees)
+            {
+                if (employee.GetEmployeeType() == "FT")
+                {
+                    response = UIMenu.GetInfoFromUser("Current Employee:\n" + ((AllEmployees.FulltimeEmployee)employee).Details()
+                    + "\nHit enter to see the next employee.");
+                }
+                else if (employee.GetEmployeeType() == "PT")
+                {
+                    response = UIMenu.GetInfoFromUser("Current Employee:\n" + ((AllEmployees.ParttimeEmployee)employee).Details()
+                    + "\nHit enter to see the next employee.");
+                }
+                else if (employee.GetEmployeeType() == "CT")
+                {
+                    response = UIMenu.GetInfoFromUser("Current Employee:\n" + ((AllEmployees.ContractEmployee)employee).Details()
+                    + "\nHit enter to see the next employee.");
+                }
+                else if (employee.GetEmployeeType() == "SN")
+                {
+                    response = UIMenu.GetInfoFromUser("Current Employee:\n" + ((AllEmployees.SeasonalEmployee)employee).Details()
+                    + "\nHit enter to see the next employee.");
+                }
+            }
         }
 
         /**
@@ -152,7 +565,7 @@ namespace EMS
         private void ModifyFirstName(AllEmployees.Employee employee)
         {
             String response;                    // The user's response
-            String error;                       // The key the user hits after the error message 
+            String error;                       // Data the user typed before hitting the enter key after the error message  
             String newFirstName;                // The new first name of the employee
             bool wasQuestionAnswered = false;   // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;         // Did the modify on the employee property work?
@@ -177,7 +590,7 @@ namespace EMS
                     {
                         /* If didModifyWork is false, that means the user's entered value 
                         * was invalid, so inform the user that the value will remain unchanged */
-                        error = UIMenu.GetInfoFromUser("The first name you entered was invalid, so the first name will remain unchanged.\nHit any key to continue.");
+                        error = UIMenu.GetInfoFromUser("The first name you entered was invalid, so the first name will remain unchanged.\nHit enter to continue.");
                     }
                     wasQuestionAnswered = true;
                 }
@@ -211,7 +624,7 @@ namespace EMS
         private void ModifyLastName(AllEmployees.Employee employee)
         {
             String response;                    // The user's response
-            String error;                       // The key the user hits after the error message 
+            String error;                       // Data the user typed before hitting the enter key after the error message 
             String newLastName;                 // The new last name of the employee
             bool wasQuestionAnswered = false;   // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;         // Did the modify on the employee property work?
@@ -236,7 +649,7 @@ namespace EMS
                     {
                         /* If didModifyWork is false, that means the user's entered value 
                         * was invalid, so inform the user that the value will remain unchanged */
-                        error = UIMenu.GetInfoFromUser("The last name you entered was invalid, so the last name will remain unchanged.\nHit any key to continue.");
+                        error = UIMenu.GetInfoFromUser("The last name you entered was invalid, so the last name will remain unchanged.\nHit enter to continue.");
                     }
                     wasQuestionAnswered = true;
                 }
@@ -270,7 +683,7 @@ namespace EMS
         private void ModifySocialInsuranceNumber(AllEmployees.Employee employee)
         {
             String response;                        // The user's response
-            String error;                           // The key the user hits after the error message 
+            String error;                           // Data the user typed before hitting the enter key after the error message 
             String newStringSocialInsuranceNumber;  // String version of the new social insurance number
             int newSocialInsuranceNumber;           // The new social insurance number
             bool wasQuestionAnswered = false;       // Did the user choose 'Y' or 'N' yet?
@@ -299,7 +712,7 @@ namespace EMS
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
-                            error = UIMenu.GetInfoFromUser("The social insurance number you entered was invalid, so it will remain unchanged.\nHit any key to continue.");
+                            error = UIMenu.GetInfoFromUser("The social insurance number you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -320,7 +733,7 @@ namespace EMS
             // An exception is thrown if the string social insurance number isn't a number
             catch (FormatException)
             {
-                error = UIMenu.GetInfoFromUser("The social insurance number you entered was invalid, so it will remain unchanged.\nHit any key to continue.");
+                error = UIMenu.GetInfoFromUser("The social insurance number you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
             }
         }
 
@@ -339,7 +752,7 @@ namespace EMS
         private void ModifyDateOfBirth(AllEmployees.Employee employee)
         {
             String response;                    // The user's response
-            String error;                       // The key the user hits after the error message
+            String error;                       // Data the user typed before hitting the enter key after the error message 
             String newStringYear;               // The string birth year
             String newStringMonth;              // The string birth month
             String newStringDay;                // The string birth date
@@ -378,7 +791,7 @@ namespace EMS
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
-                            error = UIMenu.GetInfoFromUser("The date of birth has invalid values, so it will remain unchanged.\nHit any key to continue.");
+                            error = UIMenu.GetInfoFromUser("The date of birth has invalid values, so it will remain unchanged.\nHit enter to continue.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -399,7 +812,7 @@ namespace EMS
             // Exceptions are thrown if the date of birth has invalid or out-of-range values
             catch (Exception)
             {
-                error = UIMenu.GetInfoFromUser("The date of birth has invalid values, so it will remain unchanged.\nHit any key to continue.");
+                error = UIMenu.GetInfoFromUser("The date of birth has invalid values, so it will remain unchanged.\nHit enter to continue.");
             }
         }
 
@@ -418,7 +831,7 @@ namespace EMS
         private void ModifyEmployeeType(AllEmployees.Employee employee)
         {
             String response;                    // The user's response
-            String error;                       // The key the user hits after the error message 
+            String error;                       // Data the user typed before hitting the enter key after the error message 
             String newEmployeeType;             // The new employee type
             bool wasQuestionAnswered = false;   // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;         // Did the modify on the employee property work?
@@ -443,7 +856,7 @@ namespace EMS
                     {
                         /* If didModifyWork is false, that means the user's entered value 
                         * was invalid, so inform the user that the value will remain unchanged */
-                        error = UIMenu.GetInfoFromUser("The employee type you entered was invalid, so the type will remain unchanged.\nHit any key to continue.");
+                        error = UIMenu.GetInfoFromUser("The employee type you entered was invalid, so the type will remain unchanged.\nHit enter to continue.");
                     }
                     wasQuestionAnswered = true;
                 }
@@ -477,7 +890,7 @@ namespace EMS
         private void ModifyDateOfHire(AllEmployees.Employee employee)
         {
             String response;                    // The user's response
-            String error;                       // The key the user hits after the error message
+            String error;                       // Data the user typed before hitting the enter key after the error message 
             String newStringYear;               // The string hire year
             String newStringMonth;              // The string hire month
             String newStringDay;                // The string hire date
@@ -516,7 +929,7 @@ namespace EMS
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
-                            error = UIMenu.GetInfoFromUser("The date of hire has invalid values, so it will remain unchanged.\nHit any key to continue.");
+                            error = UIMenu.GetInfoFromUser("The date of hire has invalid values, so it will remain unchanged.\nHit enter to continue.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -537,7 +950,7 @@ namespace EMS
             // Exceptions are thrown if the date of hire has invalid or out-of-range values
             catch (Exception)
             {
-                error = UIMenu.GetInfoFromUser("The date of hire has invalid values, so it will remain unchanged.\nHit any key to continue.");
+                error = UIMenu.GetInfoFromUser("The date of hire has invalid values, so it will remain unchanged.\nHit enter to continue.");
             }
         }
 
@@ -556,7 +969,7 @@ namespace EMS
         private void ModifyDateOfTermination(AllEmployees.Employee employee)
         {
             String response;                    // The user's response
-            String error;                       // The key the user hits after the error message
+            String error;                       // Data the user typed before hitting the enter key after the error message 
             String newStringYear;               // The string termination year
             String newStringMonth;              // The string termination month
             String newStringDay;                // The string termination date
@@ -595,7 +1008,7 @@ namespace EMS
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
-                            error = UIMenu.GetInfoFromUser("The date of termination has invalid values, so it will remain unchanged.\nHit any key to continue.");
+                            error = UIMenu.GetInfoFromUser("The date of termination has invalid values, so it will remain unchanged.\nHit enter to continue.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -616,7 +1029,7 @@ namespace EMS
             // Exceptions are thrown if the date of termination has invalid or out-of-range values
             catch (Exception)
             {
-                error = UIMenu.GetInfoFromUser("The date of termination has invalid values, so it will remain unchanged.\nHit any key to continue.");
+                error = UIMenu.GetInfoFromUser("The date of termination has invalid values, so it will remain unchanged.\nHit enter to continue.");
             }
         }
 
@@ -635,7 +1048,7 @@ namespace EMS
         private void ModifySalary(AllEmployees.Employee employee)
         {
             String response;                        // The user's response
-            String error;                           // The key the user hits after the error message 
+            String error;                           // Data the user typed before hitting the enter key after the error message  
             String newStringSalary;                 // String version of the new salary
             float newFloatSalary;                   // The new float salary
             bool wasQuestionAnswered = false;       // Did the user choose 'Y' or 'N' yet?
@@ -664,7 +1077,7 @@ namespace EMS
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
-                            error = UIMenu.GetInfoFromUser("The salary you entered was invalid, so it will remain unchanged.\nHit any key to continue.");
+                            error = UIMenu.GetInfoFromUser("The salary you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -685,7 +1098,7 @@ namespace EMS
             // An exception is thrown if the salary isn't a number
             catch (FormatException)
             {
-                error = UIMenu.GetInfoFromUser("The salary you entered was invalid, so it will remain unchanged.\nHit any key to continue.");
+                error = UIMenu.GetInfoFromUser("The salary you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
             }
         }
 
@@ -704,7 +1117,7 @@ namespace EMS
         private void ModifyHourlyRate(AllEmployees.Employee employee)
         {
             String response;                        // The user's response
-            String error;                           // The key the user hits after the error message 
+            String error;                           // Data the user typed before hitting the enter key after the error message 
             String newStringHourlyRate;             // String version of the new hourly rate
             float newFloatHourlyRate;               // The new float hourly rate
             bool wasQuestionAnswered = false;       // Did the user choose 'Y' or 'N' yet?
@@ -733,7 +1146,7 @@ namespace EMS
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
-                            error = UIMenu.GetInfoFromUser("The hourly rate you entered was invalid, so it will remain unchanged.\nHit any key to continue.");
+                            error = UIMenu.GetInfoFromUser("The hourly rate you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -754,7 +1167,7 @@ namespace EMS
             // An exception is thrown if the string hourly rate isn't a number
             catch (FormatException)
             {
-                error = UIMenu.GetInfoFromUser("The hourly rate you entered was invalid, so it will remain unchanged.\nHit any key to continue.");
+                error = UIMenu.GetInfoFromUser("The hourly rate you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
             }
         }
 
@@ -773,7 +1186,7 @@ namespace EMS
         private void ModifyContractStartDate(AllEmployees.Employee employee)
         {
             String response;                    // The user's response
-            String error;                       // The key the user hits after the error message
+            String error;                       // Data the user typed before hitting the enter key after the error message 
             String newStringYear;               // The string contract start year
             String newStringMonth;              // The string contract start month
             String newStringDay;                // The string contract start date
@@ -812,7 +1225,7 @@ namespace EMS
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
-                            error = UIMenu.GetInfoFromUser("The contract start date has invalid values, so it will remain unchanged.\nHit any key to continue.");
+                            error = UIMenu.GetInfoFromUser("The contract start date has invalid values, so it will remain unchanged.\nHit enter to continue.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -833,7 +1246,7 @@ namespace EMS
             // Exceptions are thrown if the contract start date has invalid or out-of-range values
             catch (Exception)
             {
-                error = UIMenu.GetInfoFromUser("The contract start date has invalid values, so it will remain unchanged.\nHit any key to continue.");
+                error = UIMenu.GetInfoFromUser("The contract start date has invalid values, so it will remain unchanged.\nHit enter to continue.");
             }
         }
 
@@ -852,7 +1265,7 @@ namespace EMS
         private void ModifyContractStopDate(AllEmployees.Employee employee)
         {
             String response;                    // The user's response
-            String error;                       // The key the user hits after the error message
+            String error;                       // Data the user typed before hitting the enter key after the error message 
             String newStringYear;               // The string contract stop year
             String newStringMonth;              // The string contract stop month
             String newStringDay;                // The string contract stop date
@@ -891,7 +1304,7 @@ namespace EMS
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
-                            error = UIMenu.GetInfoFromUser("The contract stop date has invalid values, so it will remain unchanged.\nHit any key to continue.");
+                            error = UIMenu.GetInfoFromUser("The contract stop date has invalid values, so it will remain unchanged.\nHit enter to continue.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -912,7 +1325,7 @@ namespace EMS
             // Exceptions are thrown if the contract stop date has invalid or out-of-range values
             catch (Exception)
             {
-                error = UIMenu.GetInfoFromUser("The contract stop date has invalid values, so it will remain unchanged.\nHit any key to continue.");
+                error = UIMenu.GetInfoFromUser("The contract stop date has invalid values, so it will remain unchanged.\nHit enter to continue.");
             }
         }
 
@@ -931,7 +1344,7 @@ namespace EMS
         private void ModifyFixedContractAmount(AllEmployees.Employee employee)
         {
             String response;                        // The user's response
-            String error;                           // The key the user hits after the error message 
+            String error;                           // Data the user typed before hitting the enter key after the error message 
             String newStringContractAmount;         // String version of the new fixed contract amount
             float newFloatContractAmount;           // The new float fixed contract amount
             bool wasQuestionAnswered = false;       // Did the user choose 'Y' or 'N' yet?
@@ -960,7 +1373,7 @@ namespace EMS
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
-                            error = UIMenu.GetInfoFromUser("The fixed contract amount you entered was invalid, so it will remain unchanged.\nHit any key to continue.");
+                            error = UIMenu.GetInfoFromUser("The fixed contract amount you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -981,7 +1394,7 @@ namespace EMS
             // An exception is thrown if the string hourly rate isn't a number
             catch (FormatException)
             {
-                error = UIMenu.GetInfoFromUser("The fixed contract amount you entered was invalid, so it will remain unchanged.\nHit any key to continue.");
+                error = UIMenu.GetInfoFromUser("The fixed contract amount you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
             }
         }
 
@@ -1000,7 +1413,7 @@ namespace EMS
         private void ModifySeason(AllEmployees.Employee employee)
         {
             String response;                    // The user's response
-            String error;                       // The key the user hits after the error message 
+            String error;                       // Data the user typed before hitting the enter key after the error message 
             String newSeason;                   // The new season the employee works in
             bool wasQuestionAnswered = false;   // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;         // Did the modify on the employee property work?
@@ -1025,7 +1438,7 @@ namespace EMS
                     {
                         /* If didModifyWork is false, that means the user's entered value 
                         * was invalid, so inform the user that the value will remain unchanged */
-                        error = UIMenu.GetInfoFromUser("The season you entered was invalid, so the season will remain unchanged.\nHit any key to continue.");
+                        error = UIMenu.GetInfoFromUser("The season you entered was invalid, so the season will remain unchanged.\nHit enter to continue.");
                     }
                     wasQuestionAnswered = true;
                 }
@@ -1059,7 +1472,7 @@ namespace EMS
         private void ModifyPiecePay(AllEmployees.Employee employee)
         {
             String response;                    // The user's response
-            String error;                       // The key the user hits after the error message 
+            String error;                       // Data the user typed before hitting the enter key after the error message  
             String newStringPiecePay;           // String version of the piece pay
             float newFloatPiecePay;             // The new float piece pay
             bool wasQuestionAnswered = false;   // Did the user choose 'Y' or 'N' yet?
@@ -1088,7 +1501,7 @@ namespace EMS
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
-                            error = UIMenu.GetInfoFromUser("The piece pay you entered was invalid, so it will remain unchanged.\nHit any key to continue.");
+                            error = UIMenu.GetInfoFromUser("The piece pay you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -1109,7 +1522,7 @@ namespace EMS
             // An exception is thrown if the  piece pay isn't a number
             catch (FormatException)
             {
-                error = UIMenu.GetInfoFromUser("The piece pay you entered was invalid, so it will remain unchanged.\nHit any key to continue.");
+                error = UIMenu.GetInfoFromUser("The piece pay you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
             }
         }
 
@@ -1134,9 +1547,9 @@ namespace EMS
             {
                 selectedEmployee = IsThisTheDesiredEmployee(employee);
                 // Check if the returned employee is the employee the user selected
-                if ((selectedEmployee.GetFirstName() != null) && (selectedEmployee.GetLastName() != null))
+                if ((selectedEmployee.GetFirstName() != "") && (selectedEmployee.GetLastName() != ""))
                 {
-                    /* If properties of the selectedEmployee aren't null, 
+                    /* If properties of the selectedEmployee aren't blank, 
                     * that means this is the selected employee */
                     break;
                 }
@@ -1168,9 +1581,9 @@ namespace EMS
                 {
                     selectedEmployee = IsThisTheDesiredEmployee(employee);
                     // Check if the returned employee is the employee the user selected
-                    if ((selectedEmployee.GetFirstName() != null) && (selectedEmployee.GetLastName() != null))
+                    if ((selectedEmployee.GetFirstName() != "") && (selectedEmployee.GetLastName() != ""))
                     {
-                        /* If properties of the selectedEmployee aren't null, 
+                        /* If properties of the selectedEmployee aren't blank, 
                         * that means this is the selected employee */
                         break;
                     }
@@ -1205,9 +1618,9 @@ namespace EMS
                 {
                     selectedEmployee = IsThisTheDesiredEmployee(employee);
                     // Check if the returned employee is the employee the user selected
-                    if ((selectedEmployee.GetFirstName() != null) && (selectedEmployee.GetLastName() != null))
+                    if ((selectedEmployee.GetFirstName() != "") && (selectedEmployee.GetLastName() != ""))
                     {
-                        /* If properties of the selectedEmployee aren't null, 
+                        /* If properties of the selectedEmployee aren't blank, 
                         * that means this is the selected employee */
                         break;
                     }
@@ -1240,9 +1653,9 @@ namespace EMS
                 {
                     selectedEmployee = IsThisTheDesiredEmployee(employee);
                     // Check if the returned employee is the employee the user selected
-                    if ((selectedEmployee.GetFirstName() != null) && (selectedEmployee.GetLastName() != null))
+                    if ((selectedEmployee.GetFirstName() != "") && (selectedEmployee.GetLastName() != ""))
                     {
-                        /* If properties of the selectedEmployee aren't null, 
+                        /* If properties of the selectedEmployee aren't blank, 
                         * that means this is the selected employee */
                         break;
                     }
@@ -1275,9 +1688,9 @@ namespace EMS
                 {
                     selectedEmployee = IsThisTheDesiredEmployee(employee);
                     // Check if the returned employee is the employee the user selected
-                    if ((selectedEmployee.GetFirstName() != null) && (selectedEmployee.GetLastName() != null))
+                    if ((selectedEmployee.GetFirstName() != "") && (selectedEmployee.GetLastName() != ""))
                     {
-                        /* If properties of the selectedEmployee aren't null, 
+                        /* If properties of the selectedEmployee aren't blank, 
                         * that means this is the selected employee */
                         break;
                     }
@@ -1334,7 +1747,7 @@ namespace EMS
             }
 
             /* Return the selected employee (or an employee 
-            * with null properties if the response was 'N') */
+            * with blank properties if the response was 'N') */
             return selectedEmployee;
         }
 
@@ -1350,7 +1763,7 @@ namespace EMS
         */
         private String DisplayEmployeeDetails(AllEmployees.Employee employee)
         {
-            String response;
+            String response = "";
 
             // Determine the employee details to display depending on the employeeType, and get a response from the user
             if (employee.GetEmployeeType() == "FT")
