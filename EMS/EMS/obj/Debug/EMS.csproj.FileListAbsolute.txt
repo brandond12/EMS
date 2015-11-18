@@ -11,3 +11,6 @@ F:\Documents\Dropbox\SET\Y2S3\Software Quality 1\EMS Project\EMS\EMS\bin\Debug\S
 F:\Repository\EMS Project\trunk\EMS\EMS\bin\Debug\EMS.exe.config
 F:\Repository\EMS Project\trunk\EMS\EMS\obj\Debug\EMS.exe
 F:\Repository\EMS Project\trunk\EMS\EMS\obj\Debug\EMS.pdb
+C:\GITRepo\EMSwc\trunk\EMS\EMS\bin\Debug\EMS.exe.config
+C:\GITRepo\EMSwc\trunk\EMS\EMS\obj\Debug\EMS.exe
+C:\GITRepo\EMSwc\trunk\EMS\EMS\obj\Debug\EMS.pdb
