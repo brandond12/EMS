@@ -16,9 +16,9 @@ namespace Supporting
         * 
         * \details <b>Details</b>
         * 
-        * \param args - string className - contains the class name 
-        * \param args - string methodName - contains the method name being used
-        * \param args - string eventDetails - contains the events details
+        * \param args - <b> string className </b> - contains the class name 
+        * \param args - <b> string methodName </b> - contains the method name being used
+        * \param args - <b> string eventDetails </b> - contains the events details
         * 
         * \throw <EndOfProgramException> - If the user wants the program to end
         * 
@@ -51,7 +51,7 @@ namespace Supporting
         * 
         * \details <b>Details</b>
         * 
-        * \param args - EventLog Log - contains the log file.
+        * \param args - <b> EventLog Log </b> - contains the log file.
         * 
         * \throw <EndOfProgramException> - If the user wants the program to end
         *
