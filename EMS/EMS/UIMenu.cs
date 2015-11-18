@@ -105,8 +105,8 @@ namespace EMS
         * to further process it. 
         * 
         * \details <b>Details</b>
-        * 
-        * \param args - string UserPrompt - contains the users input
+        *  
+        * \param args - <b>string UserPrompt</b> - contains the users input
         * 
         * \throw <EndOfProgramException> - If the user wants the program to end
         * 
@@ -123,7 +123,7 @@ namespace EMS
         * 
         * \details <b>Details</b>
         * 
-        * \param args - string errorMessage - contains the message
+        * \param args - <b> string errorMessage </b> - contains the message
         * 
         * \throw <EndOfProgramException> - If the user wants the program to end
         * 
