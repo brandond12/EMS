@@ -1,8 +1,16 @@
-﻿using System;
+﻿/*
+* FILE   : UIMenu.cs
+* PROJECT  : INFO 2180 -Software Quality 1  - Project - Fall 2015
+* PROGRAMMER : Jennifer Klimova
+* FIRST VERSION : 2015-11-20
+* DESCRIPTION : This is the header for the UI Menu class that will allow the user to interact with the rest of the program
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace EMS
 {
@@ -30,7 +38,25 @@ namespace EMS
         */
         public static void ShowMainMenu()
         {
+            Console.WriteLine("Menu 1 : MAIN MENU");
+            Console.WriteLine("-------------------");
+            Console.WriteLine("1. Manage EMS DBase files");
+            Console.WriteLine("2. Manage Employees");
+            Console.WriteLine("9. Quit");
 
+            string str = Console.ReadLine();
+
+            switch (str)
+            {
+                case "1":
+                    ShowFileManagementMenu();
+                    break;
+                case "2":
+                    ShowEmployeeManagementMenu();
+                    break;
+                case "9":
+                    break;
+            }
         }
 
         /**
@@ -48,7 +74,26 @@ namespace EMS
         */
         public static void ShowFileManagementMenu()
         {
+            Console.WriteLine("Menu 2 : FILE MANAGEMENT MENU");
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine("1. Load EMS DBase from file");
+            Console.WriteLine("2. Save Employee Set to EMS DBase file");
+            Console.WriteLine("9. Return to Main Menu");
 
+            string str = Console.ReadLine();
+
+            switch (str)
+            {
+                case "1":
+                    //load dbs from file
+                    break;
+                case "2":
+                    //save employee
+                    break;
+                case "9":
+                    ShowMainMenu();
+                    break;
+            }
         }
 
         /**
@@ -66,7 +111,34 @@ namespace EMS
         */
         public static void ShowEmployeeManagementMenu()
         {
+            Console.WriteLine("Menu 3 : EMPLOYEE MANAGEMENT MENU");
+            Console.WriteLine("---------------------------------");
+            Console.WriteLine("1. Display Employee Set");
+            Console.WriteLine("2. Create a NEW Employee");
+            Console.WriteLine("3. Modify an EXISTING Employee");
+            Console.WriteLine("4. Remove an EXISTING Employee");
+            Console.WriteLine("9. Return to Main Menu");
 
+            string str = Console.ReadLine();
+
+            switch (str)
+            {
+                case "1":
+                    //display employee
+                    break;
+                case "2":
+                    ShowEmployeeDetailsMenu();
+                    break;
+                case "3":
+                    ShowEmployeeDetailsMenu();
+                    break;
+                case "4":
+                    ShowEmployeeDetailsMenu(); //this can change
+                    break;
+                case "9":
+                    ShowMainMenu();
+                    break;
+            }
         }
 
         /**
@@ -84,7 +156,38 @@ namespace EMS
         */
         public static void ShowEmployeeDetailsMenu()
         {
+            Console.WriteLine("Menu 4 : EMPLOYEE DETAILS MENU");
+            Console.WriteLine("---------------------------------");
+            Console.WriteLine("1. Specify Base Employee Details");
+            Console.WriteLine("2. Specify Full-Time Employee Details");
+            Console.WriteLine("3. Specify Part-Time Employee Details");
+            Console.WriteLine("4. Specify Contract Employee Details");
+            Console.WriteLine("5. Specify Seasonal Employee Details");
+            Console.WriteLine("9. Return to Employee Management Menu");
 
+            string str = Console.ReadLine();
+
+            switch (str)
+            {
+                case "1":
+                    TheCompany.AddEmployee();
+                    break;
+                case "2":
+                    TheCompany.AddEmployee();
+                    break;
+                case "3":
+                    TheCompany.AddEmployee();
+                    break;
+                case "4":
+                    TheCompany.AddEmployee();
+                    break;
+                case "5":
+                    TheCompany.AddEmployee();
+                    break;
+                case "9":
+                    ShowEmployeeManagementMenu();
+                    break;
+            }
         }
 
         /**
