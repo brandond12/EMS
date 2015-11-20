@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+* FILE   : ContractEmployee.cs
+* PROJECT  : INFO2180 - Software Quality I - EMS
+* PROGRAMMER : Brandon Davies
+* FIRST VERSION : 2015-11-20
+* DESCRIPTION : This is the file containing the ContractEmployee class. 
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +14,15 @@ using System.Threading.Tasks;
 
 namespace AllEmployees
 {
+    /// \class ContractEmployee
+    ///
+    /// \brief <b>Brief Description</b>
+    /// The Contract Employee class is used to store and manage data about a employee who is hired on a contract
+    /// This class is a child to Employee class. It adds the contract start and stop date and the amout the employee is payed for the contract
+    /// The base classes Social Insurance Number is treated as a buisness number for this class.
+    ///
+    /// \author <i>Brandon</i>
+
     public class ContractEmployee : Employee
     {
         private DateTime contractStartDate;

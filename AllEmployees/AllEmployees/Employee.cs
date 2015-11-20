@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+* FILE   : ContractEmployee.cs
+* PROJECT  : INFO2180 - Software Quality I - EMS
+* PROGRAMMER : Brandon Davies
+* FIRST VERSION : 2015-11-20
+* DESCRIPTION : This is the file containing the Employee class. 
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +14,13 @@ using System.Threading.Tasks;
 
 namespace AllEmployees
 {
+    /// \class Employee
+    ///
+    /// \brief <b>Brief Description</b>
+    /// The Employee class is used to hold the basic infomation for all types of employees
+    /// This class is the parent to many classes that furthur define different types of employees
+    ///
+    /// \author <i>Brandon</i>
     public class Employee
     {
         private string firstName;

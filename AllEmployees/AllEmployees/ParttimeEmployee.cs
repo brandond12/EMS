@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+* FILE   : ContractEmployee.cs
+* PROJECT  : INFO2180 - Software Quality I - EMS
+* PROGRAMMER : Brandon Davies
+* FIRST VERSION : 2015-11-20
+* DESCRIPTION : This is the file containing the ParttimeEmployee class.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +14,18 @@ using System.Threading.Tasks;
 
 namespace AllEmployees
 {
+    /// \class ParttimeEmployee
+    ///
+    /// \brief <b>Brief Description</b>
+    /// The Parttime Employee class is used to store and manage data about a employee who is hired for a parttime possition
+    /// This class is a child to Employee class. It adds the date of hire and termination, and the employees hourly wage
+    ///
+    /// \author <i>Brandon</i>
     public class ParttimeEmployee : Employee
     {
+        private DateTime dateOfHire;
         private DateTime dateOfTermination;
         private float hourlyRate;
-        private DateTime dateOfHire;
 
         /**
         * \brief default constructor. Sets all values to default

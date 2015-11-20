@@ -1,0 +1,11 @@
+F:\Repository\EMS Project\trunk\Presentation\Presentation\bin\Debug\Presentation.dll
+F:\Repository\EMS Project\trunk\Presentation\Presentation\bin\Debug\Presentation.pdb
+F:\Repository\EMS Project\trunk\Presentation\Presentation\bin\Debug\AllEmployees.dll
+F:\Repository\EMS Project\trunk\Presentation\Presentation\bin\Debug\Supporting.dll
+F:\Repository\EMS Project\trunk\Presentation\Presentation\bin\Debug\AllEmployees.pdb
+F:\Repository\EMS Project\trunk\Presentation\Presentation\bin\Debug\Supporting.pdb
+F:\Repository\EMS Project\trunk\Presentation\Presentation\obj\Debug\Presentation.dll
+F:\Repository\EMS Project\trunk\Presentation\Presentation\obj\Debug\Presentation.pdb
+F:\Repository\EMS Project\trunk\Presentation\Presentation\bin\Debug\TheCompany.dll
+F:\Repository\EMS Project\trunk\Presentation\Presentation\bin\Debug\TheCompany.pdb
+F:\Repository\EMS Project\trunk\Presentation\Presentation\obj\Debug\Presentation.csprojResolveAssemblyReference.cache
