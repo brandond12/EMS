@@ -1,6 +1,6 @@
 ﻿/*
 * FILE   : UIMenu.cs
-* PROJECT  : INFO 2180 -Software Quality 1  - Project - Fall 2015
+* PROJECT  : INFO 2180 -Software Quality 1 - EMS
 * PROGRAMMER : Jennifer Klimova
 * FIRST VERSION : 2015-11-20
 * DESCRIPTION : This is the header for the UI Menu class that will allow the user to interact with the rest of the program
