@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace EMS
 {
+    /// \class UIMenu
+    ///
+    /// \brief <b>Brief Description</b> - This class dislays to the user a number of menus where the user then can access the database and either insert, delete, or make changes.
+    ///
+    /// \author <i>Jennifer Klimova</i>
     static class UIMenu
     {
         TheCompany company = new TheCompany();
