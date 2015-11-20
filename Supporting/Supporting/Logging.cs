@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+* FILE   : Logging.cs
+* PROJECT  : INFO 2180 -Software Quality 1  - Project - Fall 2015
+* PROGRAMMER : Jennifer Klimova
+* FIRST VERSION : 2015-11-20
+* DESCRIPTION : This is the header for the logging class that will collect information of the users inputs
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
