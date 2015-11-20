@@ -23,13 +23,34 @@ namespace Presentation
     public class UIMenu
     {
         Container company;
-        //new constructor
+
+        /**
+        * \brief The UIMenu constructor sets up a Container object to be used throughout the page.
+        * 
+        * \details <b>Details</b>
+        * 
+        * \param args - n/a
+        * 
+        * \throw <EndOfProgramException> - If the user wants the program to end
+        * 
+        * \return n/a
+        */
         public UIMenu()
         {
             company = new Container();
         }
 
-        //new constructor
+        /**
+        * \brief The UIMenu constructor connects Container object to the repo.
+        * 
+        * \details <b>Details</b>
+        * 
+        * \param args - <b> Container repo </b> - contains the container repo object
+        * 
+        * \throw <EndOfProgramException> - If the user wants the program to end
+        * 
+        * \return n/a
+        */
         public UIMenu(Container repo)
         {
             company = repo;
