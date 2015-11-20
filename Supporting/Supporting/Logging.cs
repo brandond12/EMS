@@ -8,6 +8,11 @@ using System.Diagnostics;
 
 namespace Supporting
 {
+    /// \class Logging
+    ///
+    /// \brief <b>Brief Description</b> - This class will log each step the user takes that makes a change tothe database. 
+    ///
+    /// \author <i>Jennifer Klimova</i>
     public static class Logging
     {
 
@@ -24,42 +29,16 @@ namespace Supporting
         * 
         * \return - n/a 
         */
-        public static void LogEvent(String className, String methodName, String eventDetails)
+        public static void Log(string className, string methodName, string eventDetails)
         {
-            //example in winProg-M08 slides
-            //I am a little shy onthe details on how the event logger class works. The arguments may have to be tweaked
-        }
-
-        /**
-        * \brief The OpenLog method will open each log. 
-        * 
-        * \details <b>Details</b>
-        * 
-        * \param args - n/a
-        * 
-        * \throw <EndOfProgramException> - If the user wants the program to end
-        *
-        * \return - EventLog - returns the log object 
-        */
-        private static EventLog OpenLog()
-        {
-            return new EventLog();//temp to remove erros
-        }
-
-        /**
-        * \brief The CloseLog method will close each log. 
-        * 
-        * \details <b>Details</b>
-        * 
-        * \param args - <b> EventLog Log </b> - contains the log file.
-        * 
-        * \throw <EndOfProgramException> - If the user wants the program to end
-        *
-        * \return - n/a
-        */
-        private static void CloseLog(EventLog Log)
-        {
-
-        }
+            EventLog serviceEventLog = new EventLog();
+            if (!EventLog.SourceExists(className))
+            {
+                EventLog.CreateEventSource(className,methodName);
+            }
+            serviceEventLog.Source = className;
+            serviceEventLog.Log = methodName;
+            serviceEventLog.WriteEntry(eventDetails);
+        } 
     }
 }
