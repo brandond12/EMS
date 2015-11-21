@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+* FILE   : Container.cs
+* PROJECT  : INFO2180 - Software Quality I - EMS
+* PROGRAMMER : Lauren Machan
+* FIRST VERSION : 2015-11-20
+* DESCRIPTION : 
+* This file contains the Container class, which is used to hold and modify employees.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +17,13 @@ using Presentation;
 
 namespace TheCompany
 {
+    /// \class Container
+    ///
+    /// \brief <b>Brief Description</b> 
+    /// This class is used to add, remove, modify and delete 
+    /// full-time, part-time, contract and seasonal employees.
+    ///
+    /// \author <i>Lauren Machan</i>
     public class Container
     {
         private List<AllEmployees.Employee> listOfEmployees = new List<AllEmployees.Employee>(); // List that holds all of the employees
