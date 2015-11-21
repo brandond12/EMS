@@ -20,8 +20,8 @@ namespace AllEmployees
     /// The Contract Employee class is used to store and manage data about a employee who is hired on a contract.
     /// This class is a child to Employee class. It adds the contract start and stop date and the amout the employee is payed for the contract.
     /// The base classes Social Insurance Number is treated as a buisness number for this class.
-    /// If the constructor creates a invalid employee, a exception is thrown
-    /// All other errors result in a defined return
+    /// If the constructor creates a invalid employee, a exception is thrown.
+    /// All other errors result in a defined return.
     ///
     /// \author <i>Brandon</i>
 
