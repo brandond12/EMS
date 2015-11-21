@@ -1,0 +1,157 @@
+\hypertarget{class_supporting_1_1_file_i_o}{}\section{Supporting.\+File\+I\+O Class Reference}
+\label{class_supporting_1_1_file_i_o}\index{Supporting.\+File\+I\+O@{Supporting.\+File\+I\+O}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} $>$ \hyperlink{class_supporting_1_1_file_i_o_ab33154b7acbb27ecaee49cfe701691e7}{Read\+All\+Records} (String file\+Name)
+\begin{DoxyCompactList}\small\item\em Give file name, return list of all valid records. \end{DoxyCompactList}\item 
+void \hyperlink{class_supporting_1_1_file_i_o_a23293f70ec655e87ea568ffada174b9f}{Write\+Record} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} Employee, String file\+Name)
+\begin{DoxyCompactList}\small\item\em Give employee write and file to write to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+File\+Stream \hyperlink{class_supporting_1_1_file_i_o_ac9cebd77d6aca1292566d7e6eb4f8123}{Open\+File\+For\+Read} (String file\+Name)
+\begin{DoxyCompactList}\small\item\em Give file name, return file for reading. \end{DoxyCompactList}\item 
+File\+Stream \hyperlink{class_supporting_1_1_file_i_o_ab3be0f867327310b9d940d79e1147b69}{Open\+File\+For\+Write} (String file\+Name)
+\begin{DoxyCompactList}\small\item\em Give file name, return file for writing. \end{DoxyCompactList}\item 
+void \hyperlink{class_supporting_1_1_file_i_o_a689379fbd7441f18477d01dfde06444c}{Close\+File} (File\+Stream file)
+\begin{DoxyCompactList}\small\item\em Closes the file. \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} $>$ \hyperlink{class_supporting_1_1_file_i_o_ab4433298adf44f58cbd355eb5db0bf7f}{Pars\+Record} (String file\+Text)
+\begin{DoxyCompactList}\small\item\em given string from file, pars all data into list, return list valid employees \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_supporting_1_1_file_i_o_a689379fbd7441f18477d01dfde06444c}{}\index{Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}!Close\+File@{Close\+File}}
+\index{Close\+File@{Close\+File}!Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}}
+\subsubsection[{Close\+File}]{\setlength{\rightskip}{0pt plus 5cm}void Supporting.\+File\+I\+O.\+Close\+File (
+\begin{DoxyParamCaption}
+\item[{File\+Stream}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_supporting_1_1_file_i_o_a689379fbd7441f18477d01dfde06444c}
+
+
+Closes the file. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & -\/ {\bfseries File\+Stream} -\/ The file to be closed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_supporting_1_1_file_i_o_ac9cebd77d6aca1292566d7e6eb4f8123}{}\index{Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}!Open\+File\+For\+Read@{Open\+File\+For\+Read}}
+\index{Open\+File\+For\+Read@{Open\+File\+For\+Read}!Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}}
+\subsubsection[{Open\+File\+For\+Read}]{\setlength{\rightskip}{0pt plus 5cm}File\+Stream Supporting.\+File\+I\+O.\+Open\+File\+For\+Read (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_supporting_1_1_file_i_o_ac9cebd77d6aca1292566d7e6eb4f8123}
+
+
+Give file name, return file for reading. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & -\/ {\bfseries string} -\/ The file path and name of file storing the records\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+read\+File -\/ {\bfseries File\+Stream} -\/ The opened file to be read 
+\end{DoxyReturn}
+\hypertarget{class_supporting_1_1_file_i_o_ab3be0f867327310b9d940d79e1147b69}{}\index{Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}!Open\+File\+For\+Write@{Open\+File\+For\+Write}}
+\index{Open\+File\+For\+Write@{Open\+File\+For\+Write}!Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}}
+\subsubsection[{Open\+File\+For\+Write}]{\setlength{\rightskip}{0pt plus 5cm}File\+Stream Supporting.\+File\+I\+O.\+Open\+File\+For\+Write (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_supporting_1_1_file_i_o_ab3be0f867327310b9d940d79e1147b69}
+
+
+Give file name, return file for writing. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & -\/ {\bfseries string} -\/ The file path and name of file storing the records\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+write\+File -\/ {\bfseries File\+Stream} -\/ The opened file to be written to 
+\end{DoxyReturn}
+\hypertarget{class_supporting_1_1_file_i_o_ab4433298adf44f58cbd355eb5db0bf7f}{}\index{Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}!Pars\+Record@{Pars\+Record}}
+\index{Pars\+Record@{Pars\+Record}!Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}}
+\subsubsection[{Pars\+Record}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf All\+Employees.\+Employee}$>$ Supporting.\+File\+I\+O.\+Pars\+Record (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+Text}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_supporting_1_1_file_i_o_ab4433298adf44f58cbd355eb5db0bf7f}
+
+
+given string from file, pars all data into list, return list valid employees 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Text} & -\/ {\bfseries string} -\/ The string of data containing an employees records\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+employee\+Rec -\/ {\bfseries List$<$\+All\+Employees.\+Employee$>$} -\/ The list of all the employee records in the strinng of data 
+\end{DoxyReturn}
+\hypertarget{class_supporting_1_1_file_i_o_ab33154b7acbb27ecaee49cfe701691e7}{}\index{Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}!Read\+All\+Records@{Read\+All\+Records}}
+\index{Read\+All\+Records@{Read\+All\+Records}!Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}}
+\subsubsection[{Read\+All\+Records}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf All\+Employees.\+Employee}$>$ Supporting.\+File\+I\+O.\+Read\+All\+Records (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_supporting_1_1_file_i_o_ab33154b7acbb27ecaee49cfe701691e7}
+
+
+Give file name, return list of all valid records. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & -\/ {\bfseries string} -\/ The file path and name of file storing the records\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+employee\+Rec -\/ {\bfseries List$<$\+All\+Employees.\+Employee$>$} -\/ The list of all the employee records in the file 
+\end{DoxyReturn}
+\hypertarget{class_supporting_1_1_file_i_o_a23293f70ec655e87ea568ffada174b9f}{}\index{Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}!Write\+Record@{Write\+Record}}
+\index{Write\+Record@{Write\+Record}!Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}}
+\subsubsection[{Write\+Record}]{\setlength{\rightskip}{0pt plus 5cm}void Supporting.\+File\+I\+O.\+Write\+Record (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{Employee, }
+\item[{String}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_supporting_1_1_file_i_o_a23293f70ec655e87ea568ffada174b9f}
+
+
+Give employee write and file to write to. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employees records \\
+\hline
+{\em file\+Name} & -\/ {\bfseries String} -\/ The file path and name of file storing the records\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+S\+E\+T\+Repo/trunk/\+E\+M\+S/trunk/\+Supporting/\+Supporting/File\+I\+O.\+cs\end{DoxyCompactItemize}
