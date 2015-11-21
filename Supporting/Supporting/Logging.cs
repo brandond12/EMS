@@ -17,7 +17,7 @@ namespace Supporting
 {
     /// \class Logging
     ///
-    /// \brief <b>Brief Description</b> - This class will log each step the user takes that makes a change tothe database. 
+    /// \brief <b>Brief Description</b> - This class will log each step the user takes that makes a change to the database. 
     ///
     /// \author <i>Jennifer Klimova</i>
     public static class Logging
