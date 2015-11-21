@@ -19,6 +19,8 @@ namespace AllEmployees
     /// \brief <b>Brief Description</b>
     /// The Employee class is used to hold the basic infomation for all types of employees.
     /// This class is the parent to many classes that furthur define different types of employees.
+    /// If the constructor creates a invalid employee, a exception is thrown
+    /// All other errors result in a defined return
     ///
     /// \author <i>Brandon</i>
     public class Employee

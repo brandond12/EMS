@@ -19,6 +19,8 @@ namespace AllEmployees
     /// \brief <b>Brief Description</b>
     /// The Fulltime Employee class is used to store and manage data about a employee who is hired for a full-time position.
     /// This class is a child to Employee class. It adds the date of hire and termination, and the employees salary.
+    /// If the constructor creates a invalid employee, a exception is thrown
+    /// All other errors result in a defined return
     ///
     /// \author <i>Brandon</i>
 
