@@ -17,8 +17,8 @@ namespace AllEmployees
     /// \class FailedConstructorException
     ///
     /// \brief <b>Brief Description</b>
-    /// The FailedConstructorException is a exception that will be thrown if the object the constructor creates is not a valid employee
-    /// FailedConstructorException is a child of the Exception class
+    /// The FailedConstructorException is a exception that will be thrown if the object the constructor creates is not a valid employee.
+    /// FailedConstructorException is a child of the Exception class.
     ///
     /// \author <i>Brandon</i>
     public class FailedConstructorException : Exception

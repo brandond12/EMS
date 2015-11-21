@@ -17,8 +17,8 @@ namespace AllEmployees
     /// \class FulltimeEmployee
     ///
     /// \brief <b>Brief Description</b>
-    /// The Fulltime Employee class is used to store and manage data about a employee who is hired for a full time position
-    /// This class is a child to Employee class. It adds the date of hire and termination, and the employees salary
+    /// The Fulltime Employee class is used to store and manage data about a employee who is hired for a full-time position.
+    /// This class is a child to Employee class. It adds the date of hire and termination, and the employees salary.
     ///
     /// \author <i>Brandon</i>
 

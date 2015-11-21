@@ -17,8 +17,8 @@ namespace AllEmployees
     /// \class ContractEmployee
     ///
     /// \brief <b>Brief Description</b>
-    /// The Contract Employee class is used to store and manage data about a employee who is hired on a contract
-    /// This class is a child to Employee class. It adds the contract start and stop date and the amout the employee is payed for the contract
+    /// The Contract Employee class is used to store and manage data about a employee who is hired on a contract.
+    /// This class is a child to Employee class. It adds the contract start and stop date and the amout the employee is payed for the contract.
     /// The base classes Social Insurance Number is treated as a buisness number for this class.
     ///
     /// \author <i>Brandon</i>

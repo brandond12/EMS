@@ -17,8 +17,8 @@ namespace AllEmployees
     /// \class SeasonalEmployee
     ///
     /// \brief <b>Brief Description</b>
-    /// The Seasonal Employee class is used to store and manage data about a employee who is hired for a season
-    /// This class is a child to Employee class. It adds the season the employee is hired for and how much the employee is paid per item completed/created
+    /// The Seasonal Employee class is used to store and manage data about a employee who is hired for a season.
+    /// This class is a child to Employee class. It adds the season the employee is hired for and how much the employee is paid per item completed/created.
     ///
     /// \author <i>Brandon</i>
     public class SeasonalEmployee : Employee

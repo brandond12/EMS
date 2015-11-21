@@ -17,8 +17,8 @@ namespace AllEmployees
     /// \class Employee
     ///
     /// \brief <b>Brief Description</b>
-    /// The Employee class is used to hold the basic infomation for all types of employees
-    /// This class is the parent to many classes that furthur define different types of employees
+    /// The Employee class is used to hold the basic infomation for all types of employees.
+    /// This class is the parent to many classes that furthur define different types of employees.
     ///
     /// \author <i>Brandon</i>
     public class Employee

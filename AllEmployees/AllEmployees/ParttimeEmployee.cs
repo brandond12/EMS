@@ -17,8 +17,8 @@ namespace AllEmployees
     /// \class ParttimeEmployee
     ///
     /// \brief <b>Brief Description</b>
-    /// The Parttime Employee class is used to store and manage data about a employee who is hired for a parttime possition
-    /// This class is a child to Employee class. It adds the date of hire and termination, and the employees hourly wage
+    /// The Parttime Employee class is used to store and manage data about a employee who is hired for a part-time possition.
+    /// This class is a child to Employee class. It adds the date of hire and termination, and the employees hourly wage.
     ///
     /// \author <i>Brandon</i>
     public class ParttimeEmployee : Employee
