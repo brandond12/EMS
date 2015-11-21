@@ -20,8 +20,11 @@ namespace TheCompany
     /// \class Container
     ///
     /// \brief <b>Brief Description</b> 
-    /// This class is used to add, remove, modify and delete 
-    /// full-time, part-time, contract and seasonal employees.
+    /// This class is used to add, remove, modify and delete full-time, part-time, contract and seasonal employees.
+    /// Bad situations would be most likely to occur during the modification or creation of employees. If a user is 
+    /// modifying an employee's properties and they enter improper data, an exception occurs and the property with 
+    /// the error is not changed. If a user is creating a new employee and they enter improper data, an exception occurs 
+    /// and the employee isn't created.
     ///
     /// \author <i>Lauren Machan</i>
     public class Container
