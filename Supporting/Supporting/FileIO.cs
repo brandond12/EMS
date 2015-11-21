@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+* FILE   : FileIO.cs
+* PROJECT  : INFO2180 - Software Quality I - EMS
+* PROGRAMMER : Nathan Nickel
+* FIRST VERSION : 2015-11-20
+* DESCRIPTION : This is the file containing the FIleIO class. 
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +15,12 @@ using System.Threading.Tasks;
 
 namespace Supporting
 {
+    /// \class FileIO
+    ///
+    /// \brief <b>Brief Description</b>
+    /// This class allows files to be written to, read all the data from a file, open a file for reading, open a file for writing, closing a file and parsing data from a file
+    ///
+    /// \author <i>Nathan</i>
     class FileIO
     {
         /**
@@ -47,7 +61,7 @@ namespace Supporting
         }
 
         /**
-        * \brief Give file name, return list of all valid records
+        * \brief Give file name, return file for reading
         *
         * \details <b>Details</b>
         *
@@ -62,7 +76,7 @@ namespace Supporting
         }
 
         /**
-        * \brief Give file name, return list of all valid records
+        * \brief Give file name, return file for writing
         *
         * \details <b>Details</b>
         *
