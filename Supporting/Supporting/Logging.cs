@@ -39,13 +39,16 @@ namespace Supporting
         public static void Log(string className, string methodName, string eventDetails)
         {
             EventLog serviceEventLog = new EventLog();
-            if (!EventLog.SourceExists(className))
+            string formattedS = className + "-" + methodName + "-" + eventDetails;
+
+            if (!EventLog.SourceExists("EMS"))
             {
-                EventLog.CreateEventSource(className,methodName);
+                EventLog.CreateEventSource("EMS", "EMSEvents");
             }
-            serviceEventLog.Source = className;
-            serviceEventLog.Log = methodName;
-            serviceEventLog.WriteEntry(eventDetails);
+            serviceEventLog.Source = "EMS";
+            serviceEventLog.Log = "EMSEvents";
+
+            serviceEventLog.WriteEntry(formattedS);
         } 
     }
 }
