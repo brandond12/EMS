@@ -18,7 +18,8 @@ namespace Supporting
     /// \class FileIO
     ///
     /// \brief <b>Brief Description</b>
-    /// This class allows files to be written to, read all the data from a file, open a file for reading, open a file for writing, closing a file and parsing data from a file
+    /// This class allows files to be written to, read all the data from a file, open a file for reading, open a file for writing, closing a file and parsing data from a file. 
+    /// The fileIO class is realted to employee and container class
     ///
     /// \author <i>Nathan</i>
     class FileIO
