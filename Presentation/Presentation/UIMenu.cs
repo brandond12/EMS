@@ -17,7 +17,7 @@ namespace Presentation
 {
     /// \class UIMenu
     ///
-    /// \brief <b>Brief Description</b> - This class dislays to the user a number of menus where the user then can access the database and either insert, delete, or make changes. If the user inputs don't match up to what is acceptable, the user will be notified appropriately. 
+    /// \brief <b>Brief Description</b> - This class dislays to the user a number of menus where the user then can access the database and either insert, delete, or make changes. The UIMenu class is related to the container class as it pulls methods from the class. If the user inputs don't match up to what is acceptable, the user will be notified appropriately. 
     ///
     /// \author <i>Jennifer Klimova</i>
     public class UIMenu
