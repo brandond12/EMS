@@ -17,7 +17,7 @@ namespace Supporting
 {
     /// \class Logging
     ///
-    /// \brief <b>Brief Description</b> - This class will log each step the user takes that makes a change to the database. 
+    /// \brief <b>Brief Description</b> - This class will log each step the user takes that makes a change to the database. It is related to the entire project as the UIMenu, AllEmployees, and Container class are all going to be using the logging service. Any errors the logging might face is that it does not receive full information, in which case it will simply leave a blank in the database. 
     ///
     /// \author <i>Jennifer Klimova</i>
     public static class Logging
