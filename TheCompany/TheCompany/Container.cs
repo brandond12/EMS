@@ -24,7 +24,8 @@ namespace TheCompany
     /// Bad situations would be most likely to occur during the modification or creation of employees. If a user is 
     /// modifying an employee's properties and they enter improper data, an exception occurs and the property with 
     /// the error is not changed. If a user is creating a new employee and they enter improper data, an exception occurs 
-    /// and the employee isn't created.
+    /// and the employee isn't created. The container class holds employee objects from AllEmployees, and the methods in 
+    /// the container class uses a method in the Presentation class to get user input.
     ///
     /// \author <i>Lauren Machan</i>
     public class Container
