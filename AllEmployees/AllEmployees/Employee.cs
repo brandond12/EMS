@@ -130,7 +130,7 @@ namespace AllEmployees
                 }
             }
             //check valid sin
-            if (socialInsuranceNumber.ToString().Length != 9 && socialInsuranceNumber.ToString().Length != 0)
+            if (socialInsuranceNumber.ToString().Length != 9 && socialInsuranceNumber != 0)
             {
                 dataValid = false;
             }
@@ -223,7 +223,7 @@ namespace AllEmployees
         public bool SetSocialInsuranceNumber(int socialInsuranceNumber)
         {
             bool dataSaved = true;
-            if(socialInsuranceNumber < 0)
+            if (socialInsuranceNumber < 0 || (socialInsuranceNumber.ToString().Length != 9 && socialInsuranceNumber != 0))
             {
                 dataSaved = false;
             }
@@ -243,67 +243,10 @@ namespace AllEmployees
         * 
         * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
         */
-        public bool SetDateOfBirth(DateTime date)
+        public bool SetDateOfBirthBase(DateTime date)
         {
             dateOfBirth = date;
             return true;
-        }
-
-        /**
-        * \brief Setter for dateOfBirth with String
-        *
-        * \details <b>Details</b>
-        *
-        * \param date <b>string</b> - The date of birth of the employee
-        * 
-        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
-        */
-        public bool SetDateOfBirth(string date)
-        {
-            bool dataSaved = true;
-            int year = 0;
-            int month = 0;
-            int day = 0;
-            try
-            {
-                year = Int32.Parse(date.Substring(0, 4));
-                month = Int32.Parse(date.Substring(5, 2));
-                day = Int32.Parse(date.Substring(8, 2));
-                DateTime newDateOfBirth = new DateTime(year, month, day);
-                dateOfBirth = newDateOfBirth;
-            }
-            catch (Exception)
-            {
-                dataSaved = false;
-            }
-            return dataSaved;
-        }
-
-        /**
-        * \brief Setter for dateOfBirth with ints
-        *
-        * \details <b>Details</b>
-        *
-        * \param year <b>int</b> - The year of birth of the employee
-        * \param month <b>int</b> - The month of birth of the employee
-        * \param day <b>int</b> - The day of birth of the employee
-        * 
-        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
-        */
-        public bool SetDateOfBirth(int year, int month, int day)
-        {
-            bool dataSaved = true;
-
-            try
-            {
-                DateTime newcontractStartDate = new DateTime(year, month, day);
-                dateOfBirth = newcontractStartDate;
-            }
-            catch (Exception)
-            {
-                dataSaved = false;
-            }
-            return dataSaved;
         }
 
         /**
