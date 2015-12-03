@@ -35,12 +35,21 @@ namespace Supporting
         */
         public List<AllEmployees.Employee> ReadAllRecords(String fileName)
         {
-            //open file
-            //read all data to a string
-            //pars data
-            //validate data
-            //return list of valid employees
             List<AllEmployees.Employee> employeeRec = new List<AllEmployees.Employee>();
+            if (File.Exists(fileName))
+            {
+                string rawEmployeeRec = File.ReadAllText(fileName);//open file and read all data to a string
+                employeeRec = ParsRecord(rawEmployeeRec);//pars data
+                //validate data
+                //return list of valid employees
+                
+                
+            }
+            else
+            {
+                //string className, string methodName, string eventDetails
+                Logging.Log("FileIO", "ReadAllRecords", "file path does not exist: " + fileName);
+            }
             return employeeRec;
         }
 
@@ -61,49 +70,7 @@ namespace Supporting
             //close file
         }
 
-        /**
-        * \brief Give file name, return file for reading
-        *
-        * \details <b>Details</b>
-        *
-        * \param fileName - <b>string</b> - The file path and name of file storing the records
-        *
-        * \return readFile - <b>FileStream</b> - The opened file to be read
-        */
-        private FileStream OpenFileForRead(String fileName)
-        {
-            FileStream readFile = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-            return readFile;
-        }
-
-        /**
-        * \brief Give file name, return file for writing
-        *
-        * \details <b>Details</b>
-        *
-        * \param fileName - <b>string</b> - The file path and name of file storing the records
-        *
-        * \return writeFile - <b>FileStream</b> - The opened file to be written to
-        */
-        private FileStream OpenFileForWrite(String fileName)
-        {
-            FileStream writeFile = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-            return writeFile;
-        }
-
-        /**
-        * \brief Closes the file
-        *
-        * \details <b>Details</b>
-        *
-        * \param file - <b>FileStream</b> - The file to be closed
-        *
-        * \return  n/a
-        */
-        private void CloseFile(FileStream file)
-        {
-
-        }
+       
 
         /**
         * \brief given string from file, pars all data into list, return list valid employees
@@ -122,5 +89,108 @@ namespace Supporting
             List<AllEmployees.Employee> employeeRec = new List<AllEmployees.Employee>();
             return employeeRec;
         }
+
+        //public override string ToString()//contract employee
+        //{
+        //    string outputString = "CT" + "|" +
+        //        ToStringBase() +
+        //        GetContractStopDateString() + "|" +
+        //        GetContractStartDateString() + "|" +
+        //        fixedContractAmount.ToString();
+        //    return outputString;
+        //}
+
+        //public override string ToString()//full time employee
+        //{
+        //    string outputString = "FT" + "|" +
+        //        ToStringBase() +
+        //        GetDateOfHireString() + "|" +
+        //        GetDateOfTerminationString() + "|" +
+        //        salary.ToString();
+        //    return outputString;
+        //}
+
+        //public override string ToString()//part time employee
+        //{
+        //    string outputString = "PT" + "|" +
+        //       ToStringBase() +
+        //       GetDateOfHireString() + "|" +
+        //       GetDateOfTerminationString() + "|" +
+        //       hourlyRate.ToString();
+        //    return outputString;
+        //}
+
+        //public override string ToString()//seasonal
+        //{
+        //    string outputString = "SN" + "|" +
+        //    ToStringBase() +
+        //    season + "|" +
+        //    piecePay.ToString();
+        //    return outputString;
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ///**
+        //* \brief Give file name, return file for reading
+        //*
+        //* \details <b>Details</b>
+        //*
+        //* \param fileName - <b>string</b> - The file path and name of file storing the records
+        //*
+        //* \return readFile - <b>FileStream</b> - The opened file to be read
+        //*/
+        //private FileStream OpenFileForRead(String fileName)
+        //{
+        //    FileStream readFile = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+        //    return readFile;
+        //}
+
+        ///**
+        //* \brief Give file name, return file for writing
+        //*
+        //* \details <b>Details</b>
+        //*
+        //* \param fileName - <b>string</b> - The file path and name of file storing the records
+        //*
+        //* \return writeFile - <b>FileStream</b> - The opened file to be written to
+        //*/
+        //private FileStream OpenFileForWrite(String fileName)
+        //{
+        //    FileStream writeFile = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+        //    return writeFile;
+        //}
+
+        ///**
+        //* \brief Closes the file
+        //*
+        //* \details <b>Details</b>
+        //*
+        //* \param file - <b>FileStream</b> - The file to be closed
+        //*
+        //* \return  n/a
+        //*/
+        //private void CloseFile(FileStream file)
+        //{
+
+        //}
     }
 }
