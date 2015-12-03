@@ -9,3 +9,14 @@ F:\Repository\EMS Project\trunk\TheCompany\TheCompany\bin\Debug\Presentation.pdb
 F:\Repository\EMS Project\trunk\TheCompany\TheCompany\bin\Debug\Supporting.pdb
 F:\Repository\EMS Project\trunk\TheCompany\TheCompany\obj\Debug\TheCompany.dll
 F:\Repository\EMS Project\trunk\TheCompany\TheCompany\obj\Debug\TheCompany.pdb
+C:\EMS-Repo\trunk\TheCompany\TheCompany\bin\Debug\TheCompany.dll
+C:\EMS-Repo\trunk\TheCompany\TheCompany\bin\Debug\TheCompany.pdb
+C:\EMS-Repo\trunk\TheCompany\TheCompany\bin\Debug\AllEmployees.dll
+C:\EMS-Repo\trunk\TheCompany\TheCompany\bin\Debug\Presentation.dll
+C:\EMS-Repo\trunk\TheCompany\TheCompany\bin\Debug\Supporting.dll
+C:\EMS-Repo\trunk\TheCompany\TheCompany\bin\Debug\AllEmployees.pdb
+C:\EMS-Repo\trunk\TheCompany\TheCompany\bin\Debug\Presentation.pdb
+C:\EMS-Repo\trunk\TheCompany\TheCompany\bin\Debug\Supporting.pdb
+C:\EMS-Repo\trunk\TheCompany\TheCompany\obj\Debug\TheCompany.dll
+C:\EMS-Repo\trunk\TheCompany\TheCompany\obj\Debug\TheCompany.pdb
+C:\EMS-Repo\trunk\TheCompany\TheCompany\obj\Debug\TheCompany.csprojResolveAssemblyReference.cache

@@ -444,7 +444,11 @@ namespace TheCompany
         */
         public void AddEmployeeToList(AllEmployees.Employee employee)
         {
-            listOfEmployees.Add(employee);
+            String employeeType = employee.GetEmployeeType();
+            if ((employeeType == "FT") || (employeeType == "PT") || (employeeType == "CT") || (employeeType == "SN"))
+            {
+                listOfEmployees.Add(employee);
+            }
         }
 
         /**
@@ -888,7 +892,7 @@ namespace TheCompany
         */
         private void ModifyDateOfHire(AllEmployees.Employee employee)
         {
-            String response;                    // The user's response
+            String response = "";               // The user's response
             String error;                       // Data the user typed before hitting the enter key after the error message 
             String newStringYear;               // The string hire year
             String newStringMonth;              // The string hire month
@@ -906,8 +910,20 @@ namespace TheCompany
                 while (wasQuestionAnswered == false)
                 {
                     // Display the employee property and a question, then get a response from the user
-                    response = UIMenu.GetInfoFromUser("Date Of Hire: " + ((AllEmployees.FulltimeEmployee)employee).GetDateOfHire().ToString()
-                    + "\nWould you like to modify the date of hire?\nType 'Y' for yes, and 'N' for no.");
+                    if (employee.GetEmployeeType() == "FT")
+                    {
+                        response = UIMenu.GetInfoFromUser("Date Of Hire: " + ((AllEmployees.FulltimeEmployee)employee).GetDateOfHire().ToString()
+                        + "\nWould you like to modify the date of hire?\nType 'Y' for yes, and 'N' for no.");
+                    }
+                    else if (employee.GetEmployeeType() == "PT")
+                    {
+                        response = UIMenu.GetInfoFromUser("Date Of Hire: " + ((AllEmployees.ParttimeEmployee)employee).GetDateOfHire().ToString()
+                      + "\nWould you like to modify the date of hire?\nType 'Y' for yes, and 'N' for no.");
+                    }
+                    else
+                    {
+                        response = "An error occurred while retrieving the date of hire.\nHit any key to continue.";
+                    }
 
                     // Check if the response was 'Y', 'N', or neither
                     if (response == "Y")
@@ -922,7 +938,14 @@ namespace TheCompany
                         newIntDay = Convert.ToInt32(newStringDay);
 
                         DateTime newDateOfHire = new DateTime(newIntYear, newIntMonth, newIntDay);
-                        didModifyWork = ((AllEmployees.FulltimeEmployee)employee).SetDateOfHire(newDateOfHire);
+                        if (employee.GetEmployeeType() == "FT")
+                        {
+                            didModifyWork = ((AllEmployees.FulltimeEmployee)employee).SetDateOfHire(newDateOfHire);
+                        }
+                        else if (employee.GetEmployeeType() == "PT")
+                        {
+                            didModifyWork = ((AllEmployees.ParttimeEmployee)employee).SetDateOfHire(newDateOfHire);
+                        }
                         // Check if the employee's date of hire has been changed
                         if (didModifyWork == false)
                         {
@@ -967,7 +990,7 @@ namespace TheCompany
         */
         private void ModifyDateOfTermination(AllEmployees.Employee employee)
         {
-            String response;                    // The user's response
+            String response = "";               // The user's response
             String error;                       // Data the user typed before hitting the enter key after the error message 
             String newStringYear;               // The string termination year
             String newStringMonth;              // The string termination month
@@ -985,8 +1008,20 @@ namespace TheCompany
                 while (wasQuestionAnswered == false)
                 {
                     // Display the employee property and a question, then get a response from the user
-                    response = UIMenu.GetInfoFromUser("Date Of Termination: " + ((AllEmployees.FulltimeEmployee)employee).GetDateOfTermination().ToString()
-                    + "\nWould you like to modify the date of termination?\nType 'Y' for yes, and 'N' for no.");
+                    if (employee.GetEmployeeType() == "FT")
+                    {
+                        response = UIMenu.GetInfoFromUser("Date Of Termination: " + ((AllEmployees.FulltimeEmployee)employee).GetDateOfTermination().ToString()
+                        + "\nWould you like to modify the date of termination?\nType 'Y' for yes, and 'N' for no.");
+                    }
+                    else if (employee.GetEmployeeType() == "PT")
+                    {
+                        response = UIMenu.GetInfoFromUser("Date Of Termination: " + ((AllEmployees.ParttimeEmployee)employee).GetDateOfTermination().ToString()
+                        + "\nWould you like to modify the date of termination?\nType 'Y' for yes, and 'N' for no.");
+                    }
+                    else
+                    {
+                        response = "An error occurred while retrieving the date of termination.\nHit any key to continue.";
+                    }
 
                     // Check if the response was 'Y', 'N', or neither
                     if (response == "Y")
@@ -1001,7 +1036,14 @@ namespace TheCompany
                         newIntDay = Convert.ToInt32(newStringDay);
 
                         DateTime newDateOfTermination = new DateTime(newIntYear, newIntMonth, newIntDay);
-                        didModifyWork = ((AllEmployees.FulltimeEmployee)employee).SetDateOfTermination(newDateOfTermination);
+                        if (employee.GetEmployeeType() == "FT")
+                        {
+                            didModifyWork = ((AllEmployees.FulltimeEmployee)employee).SetDateOfTermination(newDateOfTermination);
+                        }
+                        else if (employee.GetEmployeeType() == "PT")
+                        {
+                            didModifyWork = ((AllEmployees.ParttimeEmployee)employee).SetDateOfTermination(newDateOfTermination);
+                        }
                         // Check if the employee's date of termination has been changed
                         if (didModifyWork == false)
                         {
