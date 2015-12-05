@@ -40,18 +40,14 @@ namespace Supporting
             if (File.Exists(fileName))
             {
                 string rawEmployeeRec = File.ReadAllText(fileName);//open file and read all data to a string
-                employeeRec = ParsRecord(rawEmployeeRec);//pars data
-                //validate data
-                //return list of valid employees
-
-
+                employeeRec = ParsRecord(rawEmployeeRec);//pars data//validate data
             }
             else
             {
                 //string className, string methodName, string eventDetails
                 Logging.Log("FileIO", "ReadAllRecords", "file path does not exist: " + fileName);
             }
-            return employeeRec;
+            return employeeRec;//return list of valid employees
         }
 
         /**
@@ -66,10 +62,11 @@ namespace Supporting
         */
         public void WriteRecord(AllEmployees.Employee Employee, String fileName)
         {
-            AllEmployees.ContractEmployee employee = new AllEmployees.ContractEmployee();
-            employee.ToString();//test sample of gow to format
-            //write data (Details Method)
-            //close file
+            string fileOutput = "";
+            AllEmployees.ContractEmployee employeeData = new AllEmployees.ContractEmployee();
+            fileOutput = employeeData.ToString();//test sample of gow to format
+            StreamWriter sw = File.AppendText(fileName);//write data (Details Method)
+            sw.WriteLine(fileOutput);//will append if file exists or create new if it does not already exist
         }
 
 
@@ -114,7 +111,15 @@ namespace Supporting
                     contractEmp.SetFixedContractAmount(float.Parse(words[wordCounter], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
                     wordCounter++;
 
-                    employeeRec.Add(contractEmp);
+                    if (contractEmp.Validate() == true)
+                    {
+                        employeeRec.Add(contractEmp);
+                        Logging.Log("FileIO", "ParsRecord", "contract employee added");
+                    }
+                    else
+                    {
+                        Logging.Log("FileIO", "ParsRecord", "invalid employee data for a contract employee");
+                    }
                 }
                 else if (words[wordCounter] == "FT")
                 {
@@ -138,7 +143,15 @@ namespace Supporting
                     fullTimeEmp.SetSalary(float.Parse(words[wordCounter], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
                     wordCounter++;
 
-                    employeeRec.Add(fullTimeEmp);
+                    if (fullTimeEmp.Validate() == true)
+                    {
+                        employeeRec.Add(fullTimeEmp);
+                        Logging.Log("FileIO", "ParsRecord", "full time employee added");
+                    }
+                    else
+                    {
+                        Logging.Log("FileIO", "ParsRecord", "invalid employee data for a full time employee");
+                    }
                 }
                 else if (words[wordCounter] == "PT")
                 {
@@ -162,7 +175,15 @@ namespace Supporting
                     partTimeEmp.SetHourlyRate(float.Parse(words[wordCounter], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
                     wordCounter++;
 
-                    employeeRec.Add(partTimeEmp);
+                    if (partTimeEmp.Validate() == true)
+                    {
+                        employeeRec.Add(partTimeEmp);
+                        Logging.Log("FileIO", "ParsRecord", "part time employee added");
+                    }
+                    else
+                    {
+                        Logging.Log("FileIO", "ParsRecord", "invalid employee data for a part time employee");
+                    }
                 }
                 else if (words[wordCounter] == "SN")
                 {
@@ -184,66 +205,26 @@ namespace Supporting
                     seasonalEmp.SetPiecePay(float.Parse(words[wordCounter], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
                     wordCounter++;
 
-                    employeeRec.Add(seasonalEmp);
+                    if (seasonalEmp.Validate() == true)
+                    {
+                        employeeRec.Add(seasonalEmp);
+                        Logging.Log("FileIO", "ParsRecord", "seasonal employee added");
+                    }
+                    else
+                    {
+                        Logging.Log("FileIO", "ParsRecord", "invalid employee data for a seasonal employee");
+                    }
                 }
                 else
                 {
                     //string className, string methodName, string eventDetails
                     Logging.Log("FileIO", "ParsRecord", "invalid employee type in file");
                 }
-            }
-            //List<AllEmployees.ContractEmployee> contractEmp = new List<AllEmployees.ContractEmployee>();
-            //List<AllEmployees.FulltimeEmployee> fullTimeEmp = new List<AllEmployees.FulltimeEmployee>();
-            //List<AllEmployees.ParttimeEmployee> partTimeEmp = new List<AllEmployees.ParttimeEmployee>();
-            //List<AllEmployees.SeasonalEmployee> seasonalEmp = new List<AllEmployees.SeasonalEmployee>();
-
-
-
-            //loop through string of data
-            //parsing data
-            //save all records to list
-            
+            }           
             return employeeRec;
         }
 
-        //public override string ToString()//contract employee
-        //{
-        //    string outputString = "CT" + "|" +
-        //        ToStringBase() +
-        //        GetContractStopDateString() + "|" +
-        //        GetContractStartDateString() + "|" +
-        //        fixedContractAmount.ToString();
-        //    return outputString;
-        //}
-
-        //public override string ToString()//full time employee
-        //{
-        //    string outputString = "FT" + "|" +
-        //        ToStringBase() +
-        //        GetDateOfHireString() + "|" +
-        //        GetDateOfTerminationString() + "|" +
-        //        salary.ToString();
-        //    return outputString;
-        //}
-
-        //public override string ToString()//part time employee
-        //{
-        //    string outputString = "PT" + "|" +
-        //       ToStringBase() +
-        //       GetDateOfHireString() + "|" +
-        //       GetDateOfTerminationString() + "|" +
-        //       hourlyRate.ToString();
-        //    return outputString;
-        //}
-
-        //public override string ToString()//seasonal
-        //{
-        //    string outputString = "SN" + "|" +
-        //    ToStringBase() +
-        //    season + "|" +
-        //    piecePay.ToString();
-        //    return outputString;
-        //}
+       
 
 
 
