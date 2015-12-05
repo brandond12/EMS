@@ -85,66 +85,106 @@ namespace Supporting
         */
         private List<AllEmployees.Employee> ParsRecord(String fileText)
         {
+            List<AllEmployees.Employee> employeeRec = new List<AllEmployees.Employee>();
             //tostringbase string employeeString = firstName + "|" + lastName + "|" + socialInsuranceNumber + "|" + dateOfBirth.Year + "-" + dateOfBirth.Month + "-" + dateOfBirth.Day + "|";
             char[] delimiterChars = { '|' };
             string[] words = fileText.Split(delimiterChars);
-            int counter = 0;
-            while (counter < words.Count())
+            int wordCounter = 0;
+            while (wordCounter < words.Count())
             {
-                if (words[0] == "CT")
+                if (words[wordCounter] == "CT")
                 {
                     AllEmployees.ContractEmployee contractEmp = new AllEmployees.ContractEmployee();
 
-                    contractEmp.SetEmployeeType(words[0]);
-                    contractEmp.SetFirstName(words[1]);
-                    contractEmp.SetLastName(words[2]);
-                    contractEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[3]));//only take an int
-                    contractEmp.SetDateOfBirth(words[4]);
+                    contractEmp.SetEmployeeType(words[wordCounter]);
+                    wordCounter++;
+                    contractEmp.SetFirstName(words[wordCounter]);
+                    wordCounter++;
+                    contractEmp.SetLastName(words[wordCounter]);
+                    wordCounter++;
+                    contractEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only take an int
+                    wordCounter++;
+                    contractEmp.SetDateOfBirth(words[wordCounter]);
+                    wordCounter++;
 
-                    contractEmp.SetContractStopDate(words[5]);
-                    contractEmp.SetContractStartDate(words[6]);
-                    contractEmp.SetFixedContractAmount(float.Parse(words[7], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
+                    contractEmp.SetContractStopDate(words[wordCounter]);
+                    wordCounter++;
+                    contractEmp.SetContractStartDate(words[wordCounter]);
+                    wordCounter++;
+                    contractEmp.SetFixedContractAmount(float.Parse(words[wordCounter], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
+                    wordCounter++;
+
+                    employeeRec.Add(contractEmp);
                 }
-                else if (words[0] == "FT")
+                else if (words[wordCounter] == "FT")
                 {
                     AllEmployees.FulltimeEmployee fullTimeEmp = new AllEmployees.FulltimeEmployee();
 
-                    fullTimeEmp.SetEmployeeType(words[0]);
-                    fullTimeEmp.SetFirstName(words[1]);
-                    fullTimeEmp.SetLastName(words[2]);
-                    fullTimeEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[3]));//only takes an int
-                    fullTimeEmp.SetDateOfBirth(words[4]);
+                    fullTimeEmp.SetEmployeeType(words[wordCounter]);
+                    wordCounter++;
+                    fullTimeEmp.SetFirstName(words[wordCounter]);
+                    wordCounter++;
+                    fullTimeEmp.SetLastName(words[wordCounter]);
+                    wordCounter++;
+                    fullTimeEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only takes an int
+                    wordCounter++;
+                    fullTimeEmp.SetDateOfBirth(words[wordCounter]);
+                    wordCounter++;
 
-                    fullTimeEmp.SetDateOfHire(words[5]);
-                    fullTimeEmp.SetDateOfTermination(words[6]);
-                    fullTimeEmp.SetSalary(float.Parse(words[7], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
+                    fullTimeEmp.SetDateOfHire(words[wordCounter]);
+                    wordCounter++;
+                    fullTimeEmp.SetDateOfTermination(words[wordCounter]);
+                    wordCounter++;
+                    fullTimeEmp.SetSalary(float.Parse(words[wordCounter], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
+                    wordCounter++;
+
+                    employeeRec.Add(fullTimeEmp);
                 }
-                else if (words[0] == "PT")
+                else if (words[wordCounter] == "PT")
                 {
                     AllEmployees.ParttimeEmployee partTimeEmp = new AllEmployees.ParttimeEmployee();
 
-                    partTimeEmp.SetEmployeeType(words[0]);
-                    partTimeEmp.SetFirstName(words[1]);
-                    partTimeEmp.SetLastName(words[2]);
-                    partTimeEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[3]));//only takes an int
-                    partTimeEmp.SetDateOfBirth(words[4]);
+                    partTimeEmp.SetEmployeeType(words[wordCounter]);
+                    wordCounter++;
+                    partTimeEmp.SetFirstName(words[wordCounter]);
+                    wordCounter++;
+                    partTimeEmp.SetLastName(words[wordCounter]);
+                    wordCounter++;
+                    partTimeEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only takes an int
+                    wordCounter++;
+                    partTimeEmp.SetDateOfBirth(words[wordCounter]);
+                    wordCounter++;
 
-                    partTimeEmp.SetDateOfHire(words[5]);
-                    partTimeEmp.SetDateOfTermination(words[6]);
-                    partTimeEmp.SetHourlyRate(float.Parse(words[7], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
+                    partTimeEmp.SetDateOfHire(words[wordCounter]);
+                    wordCounter++;
+                    partTimeEmp.SetDateOfTermination(words[wordCounter]);
+                    wordCounter++;
+                    partTimeEmp.SetHourlyRate(float.Parse(words[wordCounter], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
+                    wordCounter++;
+
+                    employeeRec.Add(partTimeEmp);
                 }
-                else if (words[0] == "SN")
+                else if (words[wordCounter] == "SN")
                 {
                     AllEmployees.SeasonalEmployee seasonalEmp = new AllEmployees.SeasonalEmployee();
 
-                    seasonalEmp.SetEmployeeType(words[0]);
-                    seasonalEmp.SetFirstName(words[1]);
-                    seasonalEmp.SetLastName(words[2]);
-                    seasonalEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[3]));//only takes an int
-                    seasonalEmp.SetDateOfBirth(words[4]);
+                    seasonalEmp.SetEmployeeType(words[wordCounter]);
+                    wordCounter++;
+                    seasonalEmp.SetFirstName(words[wordCounter]);
+                    wordCounter++;
+                    seasonalEmp.SetLastName(words[wordCounter]);
+                    wordCounter++;
+                    seasonalEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only takes an int
+                    wordCounter++;
+                    seasonalEmp.SetDateOfBirth(words[wordCounter]);
+                    wordCounter++;
 
-                    seasonalEmp.SetSeason(words[5]);
-                    seasonalEmp.SetPiecePay(float.Parse(words[6], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
+                    seasonalEmp.SetSeason(words[wordCounter]);
+                    wordCounter++;
+                    seasonalEmp.SetPiecePay(float.Parse(words[wordCounter], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
+                    wordCounter++;
+
+                    employeeRec.Add(seasonalEmp);
                 }
                 else
                 {
@@ -162,7 +202,7 @@ namespace Supporting
             //loop through string of data
             //parsing data
             //save all records to list
-            List<AllEmployees.Employee> employeeRec = new List<AllEmployees.Employee>();
+            
             return employeeRec;
         }
 
