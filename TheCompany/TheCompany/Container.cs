@@ -520,36 +520,109 @@ namespace TheCompany
         */
         public void ModifyEmployee(AllEmployees.Employee employee)
         {
+            String oldEmployeeType = employee.GetEmployeeType();    // The original type
+
             // Modify basic properties
             ModifyFirstName(employee);
             ModifyLastName(employee);
             ModifySocialInsuranceNumber(employee);
             ModifyDateOfBirth(employee);
             ModifyEmployeeType(employee);
+            String newEmployeeType = employee.GetEmployeeType();
+            // If the old and new employee types are the same, then continue using the same object
+            if (oldEmployeeType == newEmployeeType)
+            {
+                // Modify properties depending on the employee's type
+                if (employee.GetEmployeeType() == "FT")
+                {
+                    ModifyDateOfHire(employee);
+                    ModifyDateOfTermination(employee);
+                    ModifySalary(employee);
+                }
+                else if (employee.GetEmployeeType() == "PT")
+                {
+                    ModifyDateOfHire(employee);
+                    ModifyDateOfTermination(employee);
+                    ModifyHourlyRate(employee);
+                }
+                else if (employee.GetEmployeeType() == "CT")
+                {
+                    ModifyContractStartDate(employee);
+                    ModifyContractStopDate(employee);
+                    ModifyFixedContractAmount(employee);
+                }
+                else if (employee.GetEmployeeType() == "SN")
+                {
+                    ModifySeason(employee);
+                    ModifyPiecePay(employee);
+                }
+            }
+            // A new employee object has to be created if the user wants to modify the employee's type
+            else if (oldEmployeeType != newEmployeeType)
+            {
+                // If the new employee type is full-time...
+                if (newEmployeeType == "FT")
+                {
+                    // Create a full-time employee object
+                    AllEmployees.FulltimeEmployee FTEmployee = new AllEmployees.FulltimeEmployee(employee.GetFirstName(), employee.GetLastName(),
+                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(0001, 01, 01), new DateTime(0001, 02, 02), 1);
 
-            // Modify properties depending on the employee's type
-            if (employee.GetEmployeeType() == "FT")
-            {
-                ModifyDateOfHire(employee);
-                ModifyDateOfTermination(employee);
-                ModifySalary(employee);
-            }
-            else if (employee.GetEmployeeType() == "PT")
-            {
-                ModifyDateOfHire(employee);
-                ModifyDateOfTermination(employee);
-                ModifyHourlyRate(employee);
-            }
-            else if (employee.GetEmployeeType() == "CT")
-            {
-                ModifyContractStartDate(employee);
-                ModifyContractStopDate(employee);
-                ModifyFixedContractAmount(employee);
-            }
-            else if (employee.GetEmployeeType() == "SN")
-            {
-                ModifySeason(employee);
-                ModifyPiecePay(employee);
+                    // Allow the user to modify the properties for the full-time employee
+                    ModifyDateOfHire(FTEmployee);
+                    ModifyDateOfTermination(FTEmployee);
+                    ModifySalary(FTEmployee);
+
+                    // Remove the old version of the employee from the list and add the new employee to the list
+                    RemoveEmployee(employee);
+                    AddEmployeeToList(FTEmployee);
+                }
+                // If the new employee type is part-time...
+                if (newEmployeeType == "PT")
+                {
+                    // Create a part-time employee object
+                    AllEmployees.ParttimeEmployee PTEmployee = new AllEmployees.ParttimeEmployee(employee.GetFirstName(), employee.GetLastName(),
+                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(0001, 01, 01), new DateTime(0001, 02, 02), 1);
+
+                    // Allow the user to modify the properties for the part-time employee
+                    ModifyDateOfHire(PTEmployee);
+                    ModifyDateOfTermination(PTEmployee);
+                    ModifyHourlyRate(PTEmployee);
+
+                    // Remove the old version of the employee from the list and add the new employee to the list
+                    RemoveEmployee(employee);
+                    AddEmployeeToList(PTEmployee);
+                }
+                // If the new employee type is contract...
+                else if (newEmployeeType == "CT")
+                {
+                    // Create a contract employee object
+                    AllEmployees.ContractEmployee CTEmployee = new AllEmployees.ContractEmployee(employee.GetFirstName(), employee.GetLastName(),
+                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(0001, 01, 01), new DateTime(0001, 02, 02), 1);
+
+                    // Allow the user to modify the properties for the contract employee
+                    ModifyContractStartDate(CTEmployee);
+                    ModifyContractStopDate(CTEmployee);
+                    ModifyFixedContractAmount(CTEmployee);
+
+                    // Remove the old version of the employee from the list and add the new employee to the list
+                    RemoveEmployee(employee);
+                    AddEmployeeToList(CTEmployee);
+                }
+                // If the new employee type is seasonal...
+                else if (newEmployeeType == "SN")
+                {
+                    // Create a seasonal employee object
+                    AllEmployees.SeasonalEmployee SNEmployee = new AllEmployees.SeasonalEmployee(employee.GetFirstName(), employee.GetLastName(),
+                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), "Summer", 1);
+
+                    // Allow the user to modify the properties for the seasonal employee
+                    ModifySeason(SNEmployee);
+                    ModifyPiecePay(SNEmployee);
+
+                    // Remove the old version of the employee from the list and add the new employee to the list
+                    RemoveEmployee(employee);
+                    AddEmployeeToList(SNEmployee);
+                }
             }
         }
 

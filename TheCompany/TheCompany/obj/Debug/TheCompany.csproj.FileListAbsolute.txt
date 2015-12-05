@@ -19,4 +19,3 @@ C:\EMS-Repo\trunk\TheCompany\TheCompany\bin\Debug\Presentation.pdb
 C:\EMS-Repo\trunk\TheCompany\TheCompany\bin\Debug\Supporting.pdb
 C:\EMS-Repo\trunk\TheCompany\TheCompany\obj\Debug\TheCompany.dll
 C:\EMS-Repo\trunk\TheCompany\TheCompany\obj\Debug\TheCompany.pdb
-C:\EMS-Repo\trunk\TheCompany\TheCompany\obj\Debug\TheCompany.csprojResolveAssemblyReference.cache

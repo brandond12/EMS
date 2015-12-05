@@ -13,6 +13,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AllEmployees;
 using System.IO;
 using TheCompany;
+using System.Collections.Generic;
 
 namespace TheCompany.Tests
 {
@@ -1962,11 +1963,10 @@ namespace TheCompany.Tests
 
         [TestMethod]
         // normal
-        public void ModifyEmployee_ValidType_ModifiesEmployeeType()
+        public void ModifyEmployee_ValidType_ModifiesFTEmployeeToPTEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n432098933\nY\n1990\n09\n20\nN\nY\n2012\n10\n11\nY\n2012\n12\n02\nY\n70000\n";
-            String actualType = "";
+            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n490398933\nY\n1990\n09\n09\nY\nPT\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n35\n";
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1975,12 +1975,73 @@ namespace TheCompany.Tests
                 Console.SetIn(input);
                 // Execute the method that is being tested
                 privateObject.Invoke("ModifyEmployee", FTEmployee);
+
                 // Check if the expected result and actual result are the same
-                actualType = FTEmployee.GetEmployeeType();
-                Assert.AreEqual("FT", actualType);
+                List<Employee> employeeList = (List<Employee>)privateObject.GetField("listOfEmployees");
+                Assert.AreEqual("PT", employeeList[0].GetEmployeeType());
             }
         }
 
+        [TestMethod]
+        public void ModifyEmployee_ValidType_ModifiesPTEmployeeToCTEmployee()
+        {
+            // Initialize a string with input data and initalize other variables
+            String dataToPassIn = "Y\nMarcus\nY\nSmithy\nY\n872098934\nY\n1987\n07\n22\nY\nCT\nY\n2014\n02\n09\nY\n2014\n09\n13\nY\n25000\n";
+            var privateObject = new PrivateObject(employeeRepo);
+
+            // Set the console to read input from the input data string
+            using (var input = new StringReader(dataToPassIn))
+            {
+                Console.SetIn(input);
+                // Execute the method that is being tested
+                privateObject.Invoke("ModifyEmployee", PTEmployee);
+
+                // Check if the expected result and actual result are the same
+                List<Employee> employeeList = (List<Employee>)privateObject.GetField("listOfEmployees");
+                Assert.AreEqual("CT", employeeList[0].GetEmployeeType());
+            }
+        }
+
+        [TestMethod]
+        public void ModifyEmployee_ValidType_ModifiesCTEmployeeToSNEmployee()
+        {
+            // Initialize a string with input data and initalize other variables
+            String dataToPassIn = "Y\nAnnie\nY\nMillerton\nY\n892398402\nY\n1989\n03\n04\nY\nSN\nY\nWinter\nY\n10000\n";
+            var privateObject = new PrivateObject(employeeRepo);
+
+            // Set the console to read input from the input data string
+            using (var input = new StringReader(dataToPassIn))
+            {
+                Console.SetIn(input);
+                // Execute the method that is being tested
+                privateObject.Invoke("ModifyEmployee", CTEmployee);
+
+                // Check if the expected result and actual result are the same
+                List<Employee> employeeList = (List<Employee>)privateObject.GetField("listOfEmployees");
+                Assert.AreEqual("SN", employeeList[0].GetEmployeeType());
+            }
+        }
+
+
+        [TestMethod]
+        public void ModifyEmployee_ValidType_ModifiesSNEmployeeToFTEmployee()
+        {
+            // Initialize a string with input data and initalize other variables
+            String dataToPassIn = "Y\nJake\nY\nWilliams\nY\n992198934\nY\n1990\n09\n08\nY\nFT\nY\n2010\n03\n12\nY\n2014\n05\n23\nY\n85000\n";
+            var privateObject = new PrivateObject(employeeRepo);
+
+            // Set the console to read input from the input data string
+            using (var input = new StringReader(dataToPassIn))
+            {
+                Console.SetIn(input);
+                // Execute the method that is being tested
+                privateObject.Invoke("ModifyEmployee", SNEmployee);
+
+                // Check if the expected result and actual result are the same
+                List<Employee> employeeList = (List<Employee>)privateObject.GetField("listOfEmployees");
+                Assert.AreEqual("FT", employeeList[0].GetEmployeeType());
+            }
+        }
 
         // Fulltime Employee
         [TestMethod]
