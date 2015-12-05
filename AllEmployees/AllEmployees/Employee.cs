@@ -134,7 +134,13 @@ namespace AllEmployees
             {
                 dataValid = false;
             }
-            //DateTime will never be invalid
+            //check date
+            /*
+            if(DateTime.Compare(dateOfBirth, DateTime.Now) < 0)
+            {
+                dataValid = false;
+            }
+             * */
             //check employeeType
             if (employeeType != "" && employeeType != "FT" && employeeType != "PT" && employeeType != "CT" && employeeType != "SN")
             {

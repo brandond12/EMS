@@ -352,15 +352,6 @@ namespace MyAllEmployee.Tests
 
         [TestMethod]
         [TestCategory("FulltimeEmployee SetDateOfHire")]
-        public void SetDateOfHireStringTestInvalidFuture()
-        {
-            FulltimeEmployee employee = new FulltimeEmployee();
-            bool retVal = employee.SetDateOfHire("2017-11-24");
-            Assert.IsFalse(retVal);
-        }
-
-        [TestMethod]
-        [TestCategory("FulltimeEmployee SetDateOfHire")]
         public void SetDateOfHireStringTestInvalidDOHafterDOT()
         {
             DateTime DOB = new DateTime(1954, 08, 20);
@@ -407,15 +398,6 @@ namespace MyAllEmployee.Tests
         {
             FulltimeEmployee employee = new FulltimeEmployee();
             bool retVal = employee.SetDateOfHire(1993, 04, 31);
-            Assert.IsFalse(retVal);
-        }
-
-        [TestMethod]
-        [TestCategory("FulltimeEmployee SetDateOfHire")]
-        public void SetDateOfHireIntsTestInvalidFutureDate()
-        {
-            FulltimeEmployee employee = new FulltimeEmployee();
-            bool retVal = employee.SetDateOfHire(2017, 04, 24);
             Assert.IsFalse(retVal);
         }
 

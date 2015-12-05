@@ -188,6 +188,10 @@ namespace AllEmployees
             {
                 dataSaved = false;
             }
+            else if (DateTime.Compare(date, DateTime.Now) > 0)
+            {
+                dataSaved = false;
+            }
             else
             {
                 SetDateOfBirthBase(date);
@@ -218,6 +222,10 @@ namespace AllEmployees
                 DateTime DOB = new DateTime(year, month, day);
                 //validate dates
                 if (dateOfHire.Year != 1 && (DateTime.Compare(dateOfHire, DOB) == -1))
+                {
+                    dataSaved = false;
+                }
+                else if (DateTime.Compare(DOB, DateTime.Now) > 0)
                 {
                     dataSaved = false;
                 }
@@ -253,6 +261,10 @@ namespace AllEmployees
                 DateTime DOB = new DateTime(year, month, day);
                 //validate dates
                 if (dateOfHire.Year != 1 && (DateTime.Compare(dateOfHire, DOB) == -1))
+                {
+                    dataSaved = false;
+                }
+                else if (DateTime.Compare(DOB, DateTime.Now) > 0)
                 {
                     dataSaved = false;
                 }

@@ -129,7 +129,7 @@ namespace AllEmployees
         */
         public string Details()
         {
-            return ("Employee Type: Contract\nName: " + GetFirstName() + " " + GetLastName() +
+            return ("Employee Type: Seasonal\nName: " + GetFirstName() + " " + GetLastName() +
                 "\nSocial Insurance Number: " + GetSocialInsuranceNumber().ToString().Substring(0, 3) + " " + GetSocialInsuranceNumber().ToString().Substring(3, 3) + " " + GetSocialInsuranceNumber().ToString().Substring(6, 3) +
                 "\nDate of Birth: " + GetDateOfBirthString() +
                 "\nSeason: " + season +

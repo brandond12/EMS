@@ -73,7 +73,7 @@ namespace MyAllEmployee.Tests
         {
             DateTime DOB = new DateTime(1993, 04, 24);
             DateTime DOH = new DateTime(2000, 12, 12);
-            DateTime DOT = new DateTime(2004, 23, 02);
+            DateTime DOT = new DateTime(2004, 03, 02);
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18);
         }
 
@@ -84,7 +84,7 @@ namespace MyAllEmployee.Tests
             DateTime DOB = new DateTime(1954, 08, 20);
             DateTime DOH = new DateTime(1994, 09, 03);
             DateTime DOT = new DateTime(2014, 12, 23);
-            ContractEmployee employee = new ContractEmployee("Brandon", "Mc'Davies", 543456789, DOB, DOH, DOT, 18);
+            ContractEmployee employee = new ContractEmployee("Brandon", "Mc'Davies", 543456789, DOB, DOH, DOT, 21);
         }
 
         [TestMethod]
@@ -94,7 +94,7 @@ namespace MyAllEmployee.Tests
             DateTime DOB = new DateTime(1954, 08, 20);
             DateTime DOH = new DateTime(1994, 09, 03);
             DateTime DOT = new DateTime(2014, 12, 23);
-            ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
+            ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 34);
         }
 
         [TestMethod]
@@ -114,7 +114,7 @@ namespace MyAllEmployee.Tests
         public void ConstructorWithAllParamTestInvalidDOHBeforeDOB()
         {
             DateTime DOB = new DateTime(2003, 12, 12);
-            DateTime DOH = new DateTime(2001, 02, 29);
+            DateTime DOH = new DateTime(2001, 02, 27);
             DateTime DOT = new DateTime(2002, 05, 21);
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 033456789, DOB, DOH, DOT, 18);
         }
@@ -142,7 +142,7 @@ namespace MyAllEmployee.Tests
             DateTime DOT = new DateTime(2014, 12, 23);
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
             String details = employee.Details();
-            Assert.IsTrue(details == "Employee Type: Contract\nName: Brandon Davies\nBuisness Number: 54345 6789\nDate of Birth: 1954-08-20\nContract Start Date: 1994-09-03\nContract Stop Date: 2014-12-23\nFixed Contract Amount: 18");
+            Assert.IsTrue(details == "Employee Type: Contract\nName: Brandon Davies\nBuisness Number: 54345 6789\nBuisness Start Date: 1954-08-20\nContract Start Date: 1994-09-03\nContract Stop Date: 2014-12-23\nFixed Contract Amount: 18");
         }
 
         /*
@@ -157,7 +157,7 @@ namespace MyAllEmployee.Tests
             DateTime DOT = new DateTime(2014, 12, 23);
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
             String toString = employee.ToString();
-            Assert.IsTrue(toString == "PT|Brandon|Davies|123456789|1954-8-20|1994-09-03|2014-12-23|230000");
+            Assert.IsTrue(toString == "CT|Brandon|Davies|543456789|1954-8-20|2014-12-23|1994-09-03|18");
         }
 
         /*
@@ -228,15 +228,6 @@ namespace MyAllEmployee.Tests
 
         [TestMethod]
         [TestCategory("ContractEmployee SetContractStartDate")]
-        public void SetContractStartDateStringTestInvalidFuture()
-        {
-            ContractEmployee employee = new ContractEmployee();
-            bool retVal = employee.SetContractStartDate("2017-11-24");
-            Assert.IsFalse(retVal);
-        }
-
-        [TestMethod]
-        [TestCategory("ContractEmployee SetContractStartDate")]
         public void SetContractStartDateStringTestInvalidDOHafterDOT()
         {
             DateTime DOB = new DateTime(1954, 08, 20);
@@ -288,15 +279,6 @@ namespace MyAllEmployee.Tests
 
         [TestMethod]
         [TestCategory("ContractEmployee SetContractStartDate")]
-        public void SetContractStartDateIntsTestInvalidFutureDate()
-        {
-            ContractEmployee employee = new ContractEmployee();
-            bool retVal = employee.SetContractStartDate(2017, 04, 24);
-            Assert.IsFalse(retVal);
-        }
-
-        [TestMethod]
-        [TestCategory("ContractEmployee SetContractStartDate")]
         public void SetContractStartDateIntsTestInvalidDOHafterDOT()
         {
             DateTime DOB = new DateTime(1954, 08, 20);
@@ -326,8 +308,11 @@ namespace MyAllEmployee.Tests
         [TestCategory("ContractEmployee SetContractStopDate")]
         public void SetContractStopDateDateTestValidDate()
         {
+            DateTime DOB = new DateTime(1984, 08, 20);
+            DateTime DOH = new DateTime(1994, 09, 03);
+            DateTime DOT = new DateTime(2000, 03, 23);
+            ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 843456789, DOB, DOH, DOT, 18);
             DateTime date = new DateTime(2012, 04, 23);
-            ContractEmployee employee = new ContractEmployee();
             bool retVal = employee.SetContractStopDate(date);
             Assert.IsTrue(retVal);
         }
@@ -342,7 +327,7 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
             DateTime date = new DateTime(1992, 04, 23);
             bool retVal = employee.SetContractStopDate(date);
-            Assert.IsTrue(retVal);
+            Assert.IsFalse(retVal);
         }
 
         [TestMethod]
@@ -352,15 +337,18 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies");
             DateTime date = new DateTime(1992, 04, 23);
             bool retVal = employee.SetContractStopDate(date);
-            Assert.IsTrue(retVal);
+            Assert.IsFalse(retVal);
         }
 
         [TestMethod]
         [TestCategory("ContractEmployee SetContractStopDate")]
         public void SetContractStopDateStringTestValidString()
         {
-            ContractEmployee employee = new ContractEmployee();
-            bool retVal = employee.SetContractStopDate("1993-04-24");
+            DateTime DOB = new DateTime(1954, 08, 20);
+            DateTime DOH = new DateTime(1994, 09, 03);
+            DateTime DOT = new DateTime(2000, 03, 23);
+            ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
+            bool retVal = employee.SetContractStopDate("1995-04-24");
             Assert.IsTrue(retVal);
         }
 
@@ -399,7 +387,7 @@ namespace MyAllEmployee.Tests
             DateTime DOH = new DateTime(1994, 09, 03);
             DateTime DOT = new DateTime(2000, 03, 23);
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
-            bool retVal = employee.SetContractStopDate("2001-12-24");
+            bool retVal = employee.SetContractStopDate("1992-12-24");
             Assert.IsFalse(retVal);
         }
 
@@ -425,8 +413,11 @@ namespace MyAllEmployee.Tests
         [TestCategory("ContractEmployee SetContractStopDate")]
         public void SetContractStopDateIntsTestValid()
         {
-            ContractEmployee employee = new ContractEmployee();
-            bool retVal = employee.SetContractStopDate(1993, 04, 24);
+            DateTime DOB = new DateTime(1954, 08, 20);
+            DateTime DOH = new DateTime(1994, 09, 03);
+            DateTime DOT = new DateTime(2000, 03, 23);
+            ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
+            bool retVal = employee.SetContractStopDate(1995, 04, 24);
             Assert.IsTrue(retVal);
         }
 
@@ -434,17 +425,11 @@ namespace MyAllEmployee.Tests
         [TestCategory("ContractEmployee SetContractStopDate")]
         public void SetContractStopDateIntsTestInvalidDate()
         {
-            ContractEmployee employee = new ContractEmployee();
-            bool retVal = employee.SetContractStopDate(1993, 04, 31);
-            Assert.IsFalse(retVal);
-        }
-
-        [TestMethod]
-        [TestCategory("ContractEmployee SetContractStopDate")]
-        public void SetContractStopDateIntsTestInvalidFutureDate()
-        {
-            ContractEmployee employee = new ContractEmployee();
-            bool retVal = employee.SetContractStopDate(2017, 04, 24);
+            DateTime DOB = new DateTime(1954, 08, 20);
+            DateTime DOH = new DateTime(1994, 09, 03);
+            DateTime DOT = new DateTime(2000, 03, 23);
+            ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
+            bool retVal = employee.SetContractStopDate(1997, 04, 31);
             Assert.IsFalse(retVal);
         }
 
@@ -456,7 +441,7 @@ namespace MyAllEmployee.Tests
             DateTime DOH = new DateTime(1994, 09, 03);
             DateTime DOT = new DateTime(2000, 03, 23);
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
-            bool retVal = employee.SetContractStopDate(2001, 12, 24);
+            bool retVal = employee.SetContractStopDate(1991, 12, 24);
             Assert.IsFalse(retVal);
         }
 

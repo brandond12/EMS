@@ -114,7 +114,7 @@ namespace MyAllEmployee.Tests
         public void ConstructorWithAllParamTestInvalidDOHBeforeDOB()
         {
             DateTime DOB = new DateTime(2003, 12, 12);
-            DateTime DOH = new DateTime(2001, 02, 29);
+            DateTime DOH = new DateTime(2001, 02, 27);
             DateTime DOT = new DateTime(2002, 05, 21);
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
         }
@@ -157,7 +157,7 @@ namespace MyAllEmployee.Tests
             DateTime DOT = new DateTime(2014, 12, 23);
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
             String toString = employee.ToString();
-            Assert.IsTrue(toString == "PT|Brandon|Davies|123456789|1954-8-20|1994-09-03|2014-12-23|230000");
+            Assert.IsTrue(toString == "PT|Brandon|Davies|123456789|1954-8-20|1994-09-03|2014-12-23|18");
         }
 
         /*
@@ -228,15 +228,6 @@ namespace MyAllEmployee.Tests
 
         [TestMethod]
         [TestCategory("ParttimeEmployee SetDateOfHire")]
-        public void SetDateOfHireStringTestInvalidFuture()
-        {
-            ParttimeEmployee employee = new ParttimeEmployee();
-            bool retVal = employee.SetDateOfHire("2017-11-24");
-            Assert.IsFalse(retVal);
-        }
-
-        [TestMethod]
-        [TestCategory("ParttimeEmployee SetDateOfHire")]
         public void SetDateOfHireStringTestInvalidDOHafterDOT()
         {
             DateTime DOB = new DateTime(1954, 08, 20);
@@ -288,15 +279,6 @@ namespace MyAllEmployee.Tests
 
         [TestMethod]
         [TestCategory("ParttimeEmployee SetDateOfHire")]
-        public void SetDateOfHireIntsTestInvalidFutureDate()
-        {
-            ParttimeEmployee employee = new ParttimeEmployee();
-            bool retVal = employee.SetDateOfHire(2017, 04, 24);
-            Assert.IsFalse(retVal);
-        }
-
-        [TestMethod]
-        [TestCategory("ParttimeEmployee SetDateOfHire")]
         public void SetDateOfHireIntsTestInvalidDOHafterDOT()
         {
             DateTime DOB = new DateTime(1954, 08, 20);
@@ -326,8 +308,11 @@ namespace MyAllEmployee.Tests
         [TestCategory("ParttimeEmployee SetDateOfTermination")]
         public void SetDateOfTerminationDateTestValidDate()
         {
+            DateTime DOB = new DateTime(1984, 08, 20);
+            DateTime DOH = new DateTime(1994, 09, 03);
+            DateTime DOT = new DateTime(2000, 03, 23);
+            ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
             DateTime date = new DateTime(2012, 04, 23);
-            ParttimeEmployee employee = new ParttimeEmployee();
             bool retVal = employee.SetDateOfTermination(date);
             Assert.IsTrue(retVal);
         }
@@ -342,7 +327,7 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
             DateTime date = new DateTime(1992, 04, 23);
             bool retVal = employee.SetDateOfTermination(date);
-            Assert.IsTrue(retVal);
+            Assert.IsFalse(retVal);
         }
 
         [TestMethod]
@@ -352,15 +337,18 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies");
             DateTime date = new DateTime(1992, 04, 23);
             bool retVal = employee.SetDateOfTermination(date);
-            Assert.IsTrue(retVal);
+            Assert.IsFalse(retVal);
         }
 
         [TestMethod]
         [TestCategory("ParttimeEmployee SetDateOfTermination")]
         public void SetDateOfTerminationStringTestValidString()
         {
-            ParttimeEmployee employee = new ParttimeEmployee();
-            bool retVal = employee.SetDateOfTermination("1993-04-24");
+            DateTime DOB = new DateTime(1954, 08, 20);
+            DateTime DOH = new DateTime(1994, 09, 03);
+            DateTime DOT = new DateTime(2000, 03, 23);
+            ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
+            bool retVal = employee.SetDateOfTermination("1999-04-24");
             Assert.IsTrue(retVal);
         }
 
@@ -399,7 +387,7 @@ namespace MyAllEmployee.Tests
             DateTime DOH = new DateTime(1994, 09, 03);
             DateTime DOT = new DateTime(2000, 03, 23);
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
-            bool retVal = employee.SetDateOfTermination("2001-12-24");
+            bool retVal = employee.SetDateOfTermination("1991-12-24");
             Assert.IsFalse(retVal);
         }
 
@@ -425,8 +413,11 @@ namespace MyAllEmployee.Tests
         [TestCategory("ParttimeEmployee SetDateOfTermination")]
         public void SetDateOfTerminationIntsTestValid()
         {
-            ParttimeEmployee employee = new ParttimeEmployee();
-            bool retVal = employee.SetDateOfTermination(1993, 04, 24);
+            DateTime DOB = new DateTime(1954, 08, 20);
+            DateTime DOH = new DateTime(1994, 09, 03);
+            DateTime DOT = new DateTime(2000, 03, 23);
+            ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
+            bool retVal = employee.SetDateOfTermination(1999, 04, 24);
             Assert.IsTrue(retVal);
         }
 
@@ -456,7 +447,7 @@ namespace MyAllEmployee.Tests
             DateTime DOH = new DateTime(1994, 09, 03);
             DateTime DOT = new DateTime(2000, 03, 23);
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
-            bool retVal = employee.SetDateOfTermination(2001, 12, 24);
+            bool retVal = employee.SetDateOfTermination(1991, 12, 24);
             Assert.IsFalse(retVal);
         }
 

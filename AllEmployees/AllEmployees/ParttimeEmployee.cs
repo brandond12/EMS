@@ -115,6 +115,18 @@ namespace AllEmployees
             {
                 dataValid = false;
             }
+
+            //validate dates
+            if (dateOfTermination.Year != 1 && DateTime.Compare(dateOfTermination, dateOfHire) < 0)
+            {
+                dataValid = false;
+            }
+
+            if (dateOfHire.Year != 1 && DateTime.Compare(dateOfHire, GetDateOfBirth()) < 0)
+            {
+                dataValid = false;
+            }
+
             return dataValid;//temp to remove errors
         }
 
@@ -158,6 +170,115 @@ namespace AllEmployees
 
         ////*Setters*//////
         /**
+       * \brief Setter for dateOfHire
+       *
+       * \details <b>Details</b>
+       *
+       * \param date <b>DateTime</b> - The employees date of hire
+       * 
+       * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+       */
+        public bool SetDateOfBirth(DateTime date)
+        {
+            bool dataSaved = true;
+            //validate dates
+            if (dateOfHire.Year != 1 && (DateTime.Compare(dateOfHire, date) == -1))
+            {
+                dataSaved = false;
+            }
+            else if (DateTime.Compare(date, DateTime.Now) > 0)
+            {
+                dataSaved = false;
+            }
+            else
+            {
+                SetDateOfBirthBase(date);
+            }
+            return dataSaved;
+        }
+
+        /**
+        * \brief Setter for dateOfBirth with String
+        *
+        * \details <b>Details</b> - string format: YYYY-MM-DD
+        *
+        * \param date <b>string</b> - The date of birth of the employee
+        * 
+        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+        */
+        public bool SetDateOfBirth(string date)
+        {
+            bool dataSaved = true;
+            int year = 0;
+            int month = 0;
+            int day = 0;
+            try
+            {
+                year = Int32.Parse(date.Substring(0, 4));
+                month = Int32.Parse(date.Substring(5, 2));
+                day = Int32.Parse(date.Substring(8, 2));
+                DateTime DOB = new DateTime(year, month, day);
+                //validate dates
+                if (dateOfHire.Year != 1 && (DateTime.Compare(dateOfHire, DOB) == -1))
+                {
+                    dataSaved = false;
+                }
+                else if (DateTime.Compare(DOB, DateTime.Now) > 0)
+                {
+                    dataSaved = false;
+                }
+                else
+                {
+                    SetDateOfBirthBase(DOB);
+                }
+            }
+            catch (Exception)
+            {
+                dataSaved = false;
+            }
+            return dataSaved;
+        }
+
+        /**
+        * \brief Setter for dateOfBirth with ints
+        *
+        * \details <b>Details</b>
+        *
+        * \param year <b>int</b> - The year of birth of the employee
+        * \param month <b>int</b> - The month of birth of the employee
+        * \param day <b>int</b> - The day of birth of the employee
+        * 
+        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+        */
+        public bool SetDateOfBirth(int year, int month, int day)
+        {
+            bool dataSaved = true;
+
+            try
+            {
+                DateTime DOB = new DateTime(year, month, day);
+                //validate dates
+                if (dateOfHire.Year != 1 && (DateTime.Compare(dateOfHire, DOB) == -1))
+                {
+                    dataSaved = false;
+                }
+                else if (DateTime.Compare(DOB, DateTime.Now) > 0)
+                {
+                    dataSaved = false;
+                }
+                else
+                {
+                    SetDateOfBirthBase(DOB);
+                }
+            }
+            catch (Exception)
+            {
+                dataSaved = false;
+            }
+            return dataSaved;
+        }
+
+        /**
         * \brief Setter for dateOfTermination
         *
         * \details <b>Details</b>
@@ -168,8 +289,18 @@ namespace AllEmployees
         */
         public bool SetDateOfTermination(DateTime date)
         {
-            dateOfTermination = date;
-            return true;
+            bool dataSaved = true;
+            //validate dates
+            if (dateOfHire.Year == 1 || (DateTime.Compare(date, dateOfHire) == -1))
+            {
+                dataSaved = false;
+            }
+            else
+            {
+                dateOfTermination = date;
+            }
+
+            return dataSaved;
         }
 
         /**
@@ -193,8 +324,16 @@ namespace AllEmployees
                 month = Int32.Parse(date.Substring(5, 2));
                 day = Int32.Parse(date.Substring(8, 2));
 
-                DateTime newDateOfTermination = new DateTime(year, month, day);
-                dateOfTermination = newDateOfTermination;
+                DateTime newdateOfTermination = new DateTime(year, month, day);
+                //validate dates
+                if (dateOfHire.Year == 1 || (DateTime.Compare(newdateOfTermination, dateOfHire) == -1))
+                {
+                    dataSaved = false;
+                }
+                else
+                {
+                    dateOfTermination = newdateOfTermination;
+                }
             }
             catch (Exception)
             {
@@ -220,8 +359,16 @@ namespace AllEmployees
 
             try
             {
-                DateTime newDateOfTermination = new DateTime(year, month, day);
-                dateOfTermination = newDateOfTermination;
+                DateTime newdateOfTermination = new DateTime(year, month, day);
+                //validate dates
+                if (dateOfHire.Year == 1 || (DateTime.Compare(newdateOfTermination, dateOfHire) == -1))
+                {
+                    dataSaved = false;
+                }
+                else
+                {
+                    dateOfTermination = newdateOfTermination;
+                }
             }
             catch (Exception)
             {
@@ -266,8 +413,22 @@ namespace AllEmployees
         */
         public bool SetDateOfHire(DateTime date)
         {
+            bool dataSaved = true;
+            //validate dates
+            if (GetDateOfBirth().Year != 1 && (DateTime.Compare(date, GetDateOfBirth()) == -1))
+            {
+                dataSaved = false;
+            }
+            else if (dateOfTermination.Year != 1 && (DateTime.Compare(date, dateOfTermination) == 1))
+            {
+                dataSaved = false;
+            }
+            else
+            {
+                dateOfHire = date;
+            }
             dateOfHire = date;
-            return true;
+            return dataSaved;
         }
 
         /** 
@@ -291,8 +452,20 @@ namespace AllEmployees
                 month = Int32.Parse(date.Substring(5, 2));
                 day = Int32.Parse(date.Substring(8, 2));
 
-                DateTime newDateOfHire = new DateTime(year, month, day);
-                dateOfHire = newDateOfHire;
+                DateTime newdateOfHire = new DateTime(year, month, day);
+                //validate dates
+                if (GetDateOfBirth().Year != 1 && (DateTime.Compare(newdateOfHire, GetDateOfBirth()) == -1))
+                {
+                    dataSaved = false;
+                }
+                else if (dateOfTermination.Year != 1 && (DateTime.Compare(newdateOfHire, dateOfTermination) == 1))
+                {
+                    dataSaved = false;
+                }
+                else
+                {
+                    dateOfHire = newdateOfHire;
+                }
             }
             catch (Exception)
             {
@@ -318,8 +491,20 @@ namespace AllEmployees
 
             try
             {
-                DateTime newDateOfHire = new DateTime(year, month, day);
-                dateOfHire = newDateOfHire;
+                DateTime newdateOfHire = new DateTime(year, month, day);
+                //validate dates
+                if (GetDateOfBirth().Year != 1 && (DateTime.Compare(newdateOfHire, GetDateOfBirth()) == -1))
+                {
+                    dataSaved = false;
+                }
+                else if (dateOfTermination.Year != 1 && (DateTime.Compare(newdateOfHire, dateOfTermination) == 1))
+                {
+                    dataSaved = false;
+                }
+                else
+                {
+                    dateOfHire = newdateOfHire;
+                }
             }
             catch (Exception)
             {

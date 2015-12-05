@@ -125,10 +125,10 @@ namespace MyAllEmployee.Tests
         [TestCategory("SeasonalEmployee Details")]
         public void DetailsTestValid()
         {
-            DateTime DOB = new DateTime(1993-07-12);
+            DateTime DOB = new DateTime(1993, 04, 24);
             SeasonalEmployee employee = new SeasonalEmployee("Brandon", "Mc'Davies", 123456789, DOB, "Winter", 15);
             String details = employee.Details();
-            Assert.IsTrue(details == "Employee Type: Contract\nName: Brandon Mc'Davies\nSocial Insurance Number: 123 456 789\nDate of Birth: 1993-07-12\nSeason: Winter\nPrice per Piece: 15");
+            Assert.IsTrue(details == "Employee Type: Seasonal\nName: Brandon Mc'Davies\nSocial Insurance Number: 123 456 789\nDate of Birth: 1993-04-24\nSeason: Winter\nPrice per Piece: 15");
         }
 
         /*
@@ -138,10 +138,10 @@ namespace MyAllEmployee.Tests
         [TestCategory("SeasonalEmployee ToString")]
         public void ToStringTestValid()
         {
-            DateTime DOB = new DateTime(1993-07-12);
+            DateTime DOB = new DateTime(1993, 04, 24);
             SeasonalEmployee employee = new SeasonalEmployee("Brandon", "Mc'Davies", 123456789, DOB, "Winter", 15);
             String toString = employee.ToString();
-            Assert.IsTrue(toString == "SN|Brandon|Mc'Davies|123456789|1993-07-12|Winter|15");
+            Assert.IsTrue(toString == "SN|Brandon|Mc'Davies|123456789|1993-4-24|Winter|15");
         }
 
         /*

@@ -121,7 +121,18 @@ namespace AllEmployees
                 dataValid = false;
             }
 
-            if (int.Parse(GetSocialInsuranceNumber().ToString().Substring(0, 2)) != int.Parse(GetDateOfBirthString().Substring(2, 2)))
+            if (GetSocialInsuranceNumber() != 0 && GetDateOfBirth().Year != 1 && int.Parse(GetSocialInsuranceNumber().ToString().Substring(0, 2)) != int.Parse(GetDateOfBirthString().Substring(2, 2)))
+            {
+                dataValid = false;
+            }
+
+            //validate dates
+            if (contractStopDate.Year != 1 && DateTime.Compare(contractStopDate, contractStartDate) < 0)
+            {
+                dataValid = false;
+            }
+
+            if (contractStartDate.Year != 1 && DateTime.Compare(contractStartDate, GetDateOfBirth()) < 0)
             {
                 dataValid = false;
             }
@@ -141,7 +152,7 @@ namespace AllEmployees
         {
             return ("Employee Type: Contract\nName: " + GetFirstName() + " " + GetLastName() +
                 "\nBuisness Number: " + GetSocialInsuranceNumber().ToString().Substring(0, 5) + " " + GetSocialInsuranceNumber().ToString().Substring(5, 4) +
-                "\nDate of Birth: " + GetDateOfBirthString() +
+                "\nBuisness Start Date: " + GetDateOfBirthString() +
                 "\nContract Start Date: " + GetContractStartDateString() +
                 "\nContract Stop Date: " + GetContractStopDateString() +
                 "\nFixed Contract Amount: " + fixedContractAmount.ToString());
@@ -168,6 +179,115 @@ namespace AllEmployees
 
         ////* Setters *////
         /**
+       * \brief Setter for dateOfHire
+       *
+       * \details <b>Details</b>
+       *
+       * \param date <b>DateTime</b> - The employees date of hire
+       * 
+       * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+       */
+        public bool SetDateOfBirth(DateTime date)
+        {
+            bool dataSaved = true;
+            //validate dates
+            if (contractStartDate.Year != 1 && (DateTime.Compare(contractStartDate, date) == -1))
+            {
+                dataSaved = false;
+            }
+            else if (DateTime.Compare(date, DateTime.Now) > 0)
+            {
+                dataSaved = false;
+            }
+            else
+            {
+                SetDateOfBirthBase(date);
+            }
+            return dataSaved;
+        }
+
+        /**
+        * \brief Setter for dateOfBirth with String
+        *
+        * \details <b>Details</b> - string format: YYYY-MM-DD
+        *
+        * \param date <b>string</b> - The date of birth of the employee
+        * 
+        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+        */
+        public bool SetDateOfBirth(string date)
+        {
+            bool dataSaved = true;
+            int year = 0;
+            int month = 0;
+            int day = 0;
+            try
+            {
+                year = Int32.Parse(date.Substring(0, 4));
+                month = Int32.Parse(date.Substring(5, 2));
+                day = Int32.Parse(date.Substring(8, 2));
+                DateTime DOB = new DateTime(year, month, day);
+                //validate dates
+                if (contractStartDate.Year != 1 && (DateTime.Compare(contractStartDate, DOB) == -1))
+                {
+                    dataSaved = false;
+                }
+                else if (DateTime.Compare(DOB, DateTime.Now) > 0)
+                {
+                    dataSaved = false;
+                }
+                else
+                {
+                    SetDateOfBirthBase(DOB);
+                }
+            }
+            catch (Exception)
+            {
+                dataSaved = false;
+            }
+            return dataSaved;
+        }
+
+        /**
+        * \brief Setter for dateOfBirth with ints
+        *
+        * \details <b>Details</b>
+        *
+        * \param year <b>int</b> - The year of birth of the employee
+        * \param month <b>int</b> - The month of birth of the employee
+        * \param day <b>int</b> - The day of birth of the employee
+        * 
+        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+        */
+        public bool SetDateOfBirth(int year, int month, int day)
+        {
+            bool dataSaved = true;
+
+            try
+            {
+                DateTime DOB = new DateTime(year, month, day);
+                //validate dates
+                if (contractStartDate.Year != 1 && (DateTime.Compare(contractStartDate, DOB) == -1))
+                {
+                    dataSaved = false;
+                }
+                else if (DateTime.Compare(DOB, DateTime.Now) > 0)
+                {
+                    dataSaved = false;
+                }
+                else
+                {
+                    SetDateOfBirthBase(DOB);
+                }
+            }
+            catch (Exception)
+            {
+                dataSaved = false;
+            }
+            return dataSaved;
+        }
+
+        /**
         * \brief Setter for contractStartDate from DateTime
         *
         * \details <b>Details</b>
@@ -179,6 +299,19 @@ namespace AllEmployees
         public bool SetContractStartDate(DateTime date)
         {
             bool dataSaved = true;
+            //validate dates
+            if (GetDateOfBirth().Year != 1 && (DateTime.Compare(date, GetDateOfBirth()) == -1))
+            {
+                dataSaved = false;
+            }
+            else if (contractStopDate.Year != 1 && (DateTime.Compare(date, contractStopDate) == 1))
+            {
+                dataSaved = false;
+            }
+            else
+            {
+                SetDateOfBirthBase(date);
+            }
             contractStartDate = date;
             return dataSaved;
         }
@@ -205,7 +338,19 @@ namespace AllEmployees
                 day = Int32.Parse(date.Substring(8, 2));
 
                 DateTime newcontractStartDate = new DateTime(year, month, day);
-                contractStartDate = newcontractStartDate;
+                //validate dates
+                if (GetDateOfBirth().Year != 1 && (DateTime.Compare(newcontractStartDate, GetDateOfBirth()) == -1))
+                {
+                    dataSaved = false;
+                }
+                else if (contractStopDate.Year != 1 && (DateTime.Compare(newcontractStartDate, contractStopDate) == 1))
+                {
+                    dataSaved = false;
+                }
+                else
+                {
+                    contractStartDate = newcontractStartDate;
+                }
             }
             catch (Exception)
             {
@@ -232,7 +377,19 @@ namespace AllEmployees
             try
             {
                 DateTime newcontractStartDate = new DateTime(year, month, day);
-                contractStartDate = newcontractStartDate;
+                //validate dates
+                if (GetDateOfBirth().Year != 1 && (DateTime.Compare(newcontractStartDate, GetDateOfBirth()) == -1))
+                {
+                    dataSaved = false;
+                }
+                else if (contractStopDate.Year != 1 && (DateTime.Compare(newcontractStartDate, contractStopDate) == 1))
+                {
+                    dataSaved = false;
+                }
+                else
+                {
+                    contractStartDate = newcontractStartDate;
+                }
             }
             catch (Exception)
             {
@@ -253,7 +410,14 @@ namespace AllEmployees
         public bool SetContractStopDate(DateTime date)
         {
             bool dataSaved = true;
-            contractStopDate = date;
+            if (contractStartDate.Year == 1 || (DateTime.Compare(date, contractStartDate) == -1))
+            {
+                dataSaved = false;
+            }
+            else
+            {
+                contractStopDate = date;
+            }
             return dataSaved;
         }
 
@@ -277,7 +441,16 @@ namespace AllEmployees
                 year = Int32.Parse(date.Substring(0, 4));
                 month = Int32.Parse(date.Substring(5, 2));
                 day = Int32.Parse(date.Substring(8, 2));
-                contractStopDate = new DateTime(year, month, day);
+                DateTime newcontractStopDate = new DateTime(year, month, day);
+                //validate dates
+                if (contractStartDate.Year == 1 || (DateTime.Compare(newcontractStopDate, contractStartDate) == -1))
+                {
+                    dataSaved = false;
+                }
+                else
+                {
+                    contractStopDate = newcontractStopDate;
+                }
             }
             catch (Exception)
             {
@@ -303,8 +476,16 @@ namespace AllEmployees
 
             try
             {
-                DateTime newcontractStartDate = new DateTime(year, month, day);
-                contractStartDate = newcontractStartDate;
+                DateTime newcontractStopDate = new DateTime(year, month, day);
+                //validate dates
+                if (contractStartDate.Year == 1 || (DateTime.Compare(newcontractStopDate, contractStartDate) == -1))
+                {
+                    dataSaved = false;
+                }
+                else
+                {
+                    contractStopDate = newcontractStopDate;
+                }
             }
             catch (Exception)
             {
