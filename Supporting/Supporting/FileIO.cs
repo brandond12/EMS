@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace Supporting
 {
@@ -42,8 +43,8 @@ namespace Supporting
                 employeeRec = ParsRecord(rawEmployeeRec);//pars data
                 //validate data
                 //return list of valid employees
-                
-                
+
+
             }
             else
             {
@@ -65,12 +66,13 @@ namespace Supporting
         */
         public void WriteRecord(AllEmployees.Employee Employee, String fileName)
         {
-            //open file 
+            AllEmployees.ContractEmployee employee = new AllEmployees.ContractEmployee();
+            employee.ToString();//test sample of gow to format
             //write data (Details Method)
             //close file
         }
 
-       
+
 
         /**
         * \brief given string from file, pars all data into list, return list valid employees
@@ -83,6 +85,80 @@ namespace Supporting
         */
         private List<AllEmployees.Employee> ParsRecord(String fileText)
         {
+            //tostringbase string employeeString = firstName + "|" + lastName + "|" + socialInsuranceNumber + "|" + dateOfBirth.Year + "-" + dateOfBirth.Month + "-" + dateOfBirth.Day + "|";
+            char[] delimiterChars = { '|' };
+            string[] words = fileText.Split(delimiterChars);
+            int counter = 0;
+            while (counter < words.Count())
+            {
+                if (words[0] == "CT")
+                {
+                    AllEmployees.ContractEmployee contractEmp = new AllEmployees.ContractEmployee();
+
+                    contractEmp.SetEmployeeType(words[0]);
+                    contractEmp.SetFirstName(words[1]);
+                    contractEmp.SetLastName(words[2]);
+                    contractEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[3]));//only take an int
+                    contractEmp.SetDateOfBirth(words[4]);
+
+                    contractEmp.SetContractStopDate(words[5]);
+                    contractEmp.SetContractStartDate(words[6]);
+                    contractEmp.SetFixedContractAmount(float.Parse(words[7], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
+                }
+                else if (words[0] == "FT")
+                {
+                    AllEmployees.FulltimeEmployee fullTimeEmp = new AllEmployees.FulltimeEmployee();
+
+                    fullTimeEmp.SetEmployeeType(words[0]);
+                    fullTimeEmp.SetFirstName(words[1]);
+                    fullTimeEmp.SetLastName(words[2]);
+                    fullTimeEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[3]));//only takes an int
+                    fullTimeEmp.SetDateOfBirth(words[4]);
+
+                    fullTimeEmp.SetDateOfHire(words[5]);
+                    fullTimeEmp.SetDateOfTermination(words[6]);
+                    fullTimeEmp.SetSalary(float.Parse(words[7], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
+                }
+                else if (words[0] == "PT")
+                {
+                    AllEmployees.ParttimeEmployee partTimeEmp = new AllEmployees.ParttimeEmployee();
+
+                    partTimeEmp.SetEmployeeType(words[0]);
+                    partTimeEmp.SetFirstName(words[1]);
+                    partTimeEmp.SetLastName(words[2]);
+                    partTimeEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[3]));//only takes an int
+                    partTimeEmp.SetDateOfBirth(words[4]);
+
+                    partTimeEmp.SetDateOfHire(words[5]);
+                    partTimeEmp.SetDateOfTermination(words[6]);
+                    partTimeEmp.SetHourlyRate(float.Parse(words[7], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
+                }
+                else if (words[0] == "SN")
+                {
+                    AllEmployees.SeasonalEmployee seasonalEmp = new AllEmployees.SeasonalEmployee();
+
+                    seasonalEmp.SetEmployeeType(words[0]);
+                    seasonalEmp.SetFirstName(words[1]);
+                    seasonalEmp.SetLastName(words[2]);
+                    seasonalEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[3]));//only takes an int
+                    seasonalEmp.SetDateOfBirth(words[4]);
+
+                    seasonalEmp.SetSeason(words[5]);
+                    seasonalEmp.SetPiecePay(float.Parse(words[6], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
+                }
+                else
+                {
+                    //string className, string methodName, string eventDetails
+                    Logging.Log("FileIO", "ParsRecord", "invalid employee type in file");
+                }
+            }
+            //List<AllEmployees.ContractEmployee> contractEmp = new List<AllEmployees.ContractEmployee>();
+            //List<AllEmployees.FulltimeEmployee> fullTimeEmp = new List<AllEmployees.FulltimeEmployee>();
+            //List<AllEmployees.ParttimeEmployee> partTimeEmp = new List<AllEmployees.ParttimeEmployee>();
+            //List<AllEmployees.SeasonalEmployee> seasonalEmp = new List<AllEmployees.SeasonalEmployee>();
+
+
+
             //loop through string of data
             //parsing data
             //save all records to list
