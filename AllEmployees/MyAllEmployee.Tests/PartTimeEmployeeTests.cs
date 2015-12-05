@@ -130,6 +130,17 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
         }
 
+        [TestMethod]
+        [TestCategory("ContractEmployee Constructor with all parameters")]
+        [ExpectedException(typeof(FailedConstructorException))]
+        public void ConstructorWithAllParamTestInvalidDOTnoDOH()
+        {
+            DateTime DOB = new DateTime(1993, 11, 14);
+            DateTime DOH = new DateTime();
+            DateTime DOT = new DateTime(2010, 07, 29);
+            ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 180000);
+        }
+
         /*
          * Details Tests
         */
@@ -171,6 +182,9 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee();
             bool retVal = employee.SetDateOfHire(date);
             Assert.IsTrue(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -184,6 +198,9 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(2012, 04, 23);
             bool retVal = employee.SetDateOfHire(date);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -197,6 +214,9 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(1980, 04, 23);
             bool retVal = employee.SetDateOfHire(date);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -206,6 +226,10 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee();
             bool retVal = employee.SetDateOfHire("1993-04-24");
             Assert.IsTrue(retVal);
+
+            DateTime date = new DateTime(1993, 04, 24);
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -215,6 +239,10 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee();
             bool retVal = employee.SetDateOfHire("19930424");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -224,6 +252,10 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee();
             bool retVal = employee.SetDateOfHire("1993-13-24");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -236,6 +268,9 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetDateOfHire("2001-12-24");
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -248,6 +283,9 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetDateOfHire("1980-12-24");
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -257,6 +295,10 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee();
             bool retVal = employee.SetDateOfHire("1993-s2-24");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -266,6 +308,10 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee();
             bool retVal = employee.SetDateOfHire(1993, 04, 24);
             Assert.IsTrue(retVal);
+
+            DateTime date = new DateTime(1993, 04, 24);
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -275,6 +321,10 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee();
             bool retVal = employee.SetDateOfHire(1993, 04, 31);
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -287,6 +337,9 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetDateOfHire(2001, 12, 24);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -299,6 +352,9 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetDateOfHire(1980, 12, 24);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         /*
@@ -315,6 +371,9 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(2012, 04, 23);
             bool retVal = employee.SetDateOfTermination(date);
             Assert.IsTrue(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -328,6 +387,9 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(1992, 04, 23);
             bool retVal = employee.SetDateOfTermination(date);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -338,6 +400,10 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(1992, 04, 23);
             bool retVal = employee.SetDateOfTermination(date);
             Assert.IsFalse(retVal);
+
+            date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -350,33 +416,41 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetDateOfTermination("1999-04-24");
             Assert.IsTrue(retVal);
+
+            DateTime date = new DateTime(1999, 04, 24);
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
         [TestCategory("ParttimeEmployee SetDateOfTermination")]
         public void SetDateOfTerminationStringTestInvalidFormat()
         {
-            ParttimeEmployee employee = new ParttimeEmployee();
+            DateTime DOB = new DateTime(1954, 08, 20);
+            DateTime DOH = new DateTime(1994, 09, 03);
+            DateTime DOT = new DateTime(2000, 03, 23);
+            ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetDateOfTermination("19930424");
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
         [TestCategory("ParttimeEmployee SetDateOfTermination")]
         public void SetDateOfTerminationStringTestInvalidDate()
         {
-            ParttimeEmployee employee = new ParttimeEmployee();
+            DateTime DOB = new DateTime(1954, 08, 20);
+            DateTime DOH = new DateTime(1994, 09, 03);
+            DateTime DOT = new DateTime(2000, 03, 23);
+            ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
+
             bool retVal = employee.SetDateOfTermination("1993-13-24");
             Assert.IsFalse(retVal);
-        }
 
-        [TestMethod]
-        [TestCategory("ParttimeEmployee SetDateOfTermination")]
-        public void SetDateOfTerminationStringTestInvalidFuture()
-        {
-            ParttimeEmployee employee = new ParttimeEmployee();
-            bool retVal = employee.SetDateOfTermination("2017-11-24");
-            Assert.IsFalse(retVal);
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -389,6 +463,9 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetDateOfTermination("1991-12-24");
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -398,15 +475,26 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies");
             bool retVal = employee.SetDateOfTermination("2001-12-24");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
         [TestCategory("ParttimeEmployee SetDateOfTermination")]
         public void SetDateOfTerminationIntsTestInvalidLetter()
         {
-            ParttimeEmployee employee = new ParttimeEmployee();
+            DateTime DOB = new DateTime(1954, 08, 20);
+            DateTime DOH = new DateTime(1994, 09, 03);
+            DateTime DOT = new DateTime(2000, 03, 23);
+            ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
+
             bool retVal = employee.SetDateOfTermination("1993-s2-24");
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -419,24 +507,26 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetDateOfTermination(1999, 04, 24);
             Assert.IsTrue(retVal);
+
+            DateTime date = new DateTime(1999, 04, 24);
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
         [TestCategory("ParttimeEmployee SetDateOfTermination")]
         public void SetDateOfTerminationIntsTestInvalidDate()
         {
-            ParttimeEmployee employee = new ParttimeEmployee();
+            DateTime DOB = new DateTime(1954, 08, 20);
+            DateTime DOH = new DateTime(1994, 09, 03);
+            DateTime DOT = new DateTime(2000, 03, 23);
+            ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
+
             bool retVal = employee.SetDateOfTermination(1993, 04, 31);
             Assert.IsFalse(retVal);
-        }
 
-        [TestMethod]
-        [TestCategory("ParttimeEmployee SetDateOfTermination")]
-        public void SetDateOfTerminationIntsTestInvalidFutureDate()
-        {
-            ParttimeEmployee employee = new ParttimeEmployee();
-            bool retVal = employee.SetDateOfTermination(2017, 04, 24);
-            Assert.IsFalse(retVal);
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -449,6 +539,9 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetDateOfTermination(1991, 12, 24);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -458,6 +551,10 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies");
             bool retVal = employee.SetDateOfTermination(2001, 12, 24);
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -467,6 +564,7 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies");
             bool retVal = employee.SetHourlyRate(18);
             Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetHourlyRate(), 18);
         }
 
         [TestMethod]
@@ -476,6 +574,7 @@ namespace MyAllEmployee.Tests
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies");
             bool retVal = employee.SetHourlyRate(-18);
             Assert.IsFalse(retVal);
+            Assert.AreEqual(employee.GetHourlyRate(), 0);
         }
     }
 }

@@ -130,6 +130,7 @@ namespace MyAllEmployee.Tests
             Employee employee = new Employee();
             bool retVal = employee.SetFirstName("Brandon");
             Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetFirstName(), "Brandon");
         }
 
         [TestMethod]
@@ -139,6 +140,7 @@ namespace MyAllEmployee.Tests
             Employee employee = new Employee();
             bool retVal = employee.SetFirstName("Mc'Brandon");
             Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetFirstName(), "Mc'Brandon");
         }
 
         [TestMethod]
@@ -148,6 +150,7 @@ namespace MyAllEmployee.Tests
             Employee employee = new Employee();
             bool retVal = employee.SetFirstName("Mc-Brandon");
             Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetFirstName(), "Mc-Brandon");
         }
 
         [TestMethod]
@@ -157,15 +160,17 @@ namespace MyAllEmployee.Tests
             Employee employee = new Employee();
             bool retVal = employee.SetFirstName("Mc Brandon");
             Assert.IsFalse(retVal);
+            Assert.AreEqual(employee.GetFirstName(), "");
         }
 
         [TestMethod]
         [TestCategory("Employee SetFirstName")]
         public void SetFirstNameTestInvalidNumber()
         {
-            Employee employee = new Employee();
+            Employee employee = new Employee("Brandon", "Davies");
             bool retVal = employee.SetFirstName("Brandon23");
             Assert.IsFalse(retVal);
+            Assert.AreEqual(employee.GetFirstName(), "Brandon");
         }
 
         [TestMethod]
@@ -175,6 +180,7 @@ namespace MyAllEmployee.Tests
             Employee employee = new Employee();
             bool retVal = employee.SetFirstName("Mc/Brandon");
             Assert.IsFalse(retVal);
+            Assert.AreEqual(employee.GetFirstName(), "");
         }
 
         /*
@@ -186,8 +192,9 @@ namespace MyAllEmployee.Tests
         public void SetLastNameTestValid1()
         {
             Employee employee = new Employee();
-            bool retVal = employee.SetFirstName("Brandon");
+            bool retVal = employee.SetLastName("Brandon");
             Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetLastName(), "Brandon");
         }
 
         [TestMethod]
@@ -195,8 +202,9 @@ namespace MyAllEmployee.Tests
         public void SetLastNameTestValid2()
         {
             Employee employee = new Employee();
-            bool retVal = employee.SetFirstName("Mc'Brandon");
+            bool retVal = employee.SetLastName("Mc'Brandon");
             Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetLastName(), "Mc'Brandon");
         }
 
         [TestMethod]
@@ -204,8 +212,9 @@ namespace MyAllEmployee.Tests
         public void SetLastNameTestValid3()
         {
             Employee employee = new Employee();
-            bool retVal = employee.SetFirstName("Mc-Brandon");
+            bool retVal = employee.SetLastName("Mc-Brandon");
             Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetLastName(), "Mc-Brandon");
         }
 
         [TestMethod]
@@ -213,17 +222,19 @@ namespace MyAllEmployee.Tests
         public void SetLastNameTestInvalidSpace()
         {
             Employee employee = new Employee();
-            bool retVal = employee.SetFirstName("Mc Brandon");
+            bool retVal = employee.SetLastName("Mc Brandon");
             Assert.IsFalse(retVal);
+            Assert.AreEqual(employee.GetLastName(), "");
         }
 
         [TestMethod]
         [TestCategory("Employee SetLastName")]
         public void SetLastNameTestInvalidNumber()
         {
-            Employee employee = new Employee();
-            bool retVal = employee.SetFirstName("Brandon23");
+            Employee employee = new Employee("Brandon", "Davies");
+            bool retVal = employee.SetLastName("Brandon23");
             Assert.IsFalse(retVal);
+            Assert.AreEqual(employee.GetLastName(), "Davies");
         }
 
         [TestMethod]
@@ -231,8 +242,9 @@ namespace MyAllEmployee.Tests
         public void SetLastNameTestInvalidSlash()
         {
             Employee employee = new Employee();
-            bool retVal = employee.SetFirstName("Mc/Brandon");
+            bool retVal = employee.SetLastName("Mc/Brandon");
             Assert.IsFalse(retVal);
+            Assert.AreEqual(employee.GetLastName(), "");
         }
 
         /*
@@ -246,6 +258,7 @@ namespace MyAllEmployee.Tests
             Employee employee = new Employee();
             bool retVal = employee.SetSocialInsuranceNumber(123456789);
             Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetSocialInsuranceNumber(), 123456789);
         }
 
         [TestMethod]
@@ -255,6 +268,7 @@ namespace MyAllEmployee.Tests
             Employee employee = new Employee();
             bool retVal = employee.SetSocialInsuranceNumber(12345678);
             Assert.IsFalse(retVal);
+            Assert.AreEqual(employee.GetSocialInsuranceNumber(), 0);
         }
 
         [TestMethod]
@@ -264,6 +278,7 @@ namespace MyAllEmployee.Tests
             Employee employee = new Employee();
             bool retVal = employee.SetSocialInsuranceNumber(-12345678);
             Assert.IsFalse(retVal);
+            Assert.AreEqual(employee.GetSocialInsuranceNumber(), 0);
         }
 
         [TestMethod]
@@ -273,6 +288,7 @@ namespace MyAllEmployee.Tests
             Employee employee = new Employee();
             bool retVal = employee.SetSocialInsuranceNumber(1112345678);
             Assert.IsFalse(retVal);
+            Assert.AreEqual(employee.GetSocialInsuranceNumber(), 0);
         }
 
         /*
@@ -286,6 +302,7 @@ namespace MyAllEmployee.Tests
             Employee employee = new Employee();
             bool retVal = employee.SetEmployeeType("CT");
             Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetEmployeeType(), "CT");
         }
 
         [TestMethod]
@@ -295,6 +312,7 @@ namespace MyAllEmployee.Tests
             Employee employee = new Employee();
             bool retVal = employee.SetEmployeeType("FT");
             Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetEmployeeType(), "FT");
         }
 
         [TestMethod]
@@ -304,6 +322,7 @@ namespace MyAllEmployee.Tests
             Employee employee = new Employee();
             bool retVal = employee.SetEmployeeType("PT");
             Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetEmployeeType(), "PT");
         }
 
         [TestMethod]
@@ -313,6 +332,7 @@ namespace MyAllEmployee.Tests
             Employee employee = new Employee();
             bool retVal = employee.SetEmployeeType("SN");
             Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetEmployeeType(), "SN");
         }
 
         [TestMethod]
@@ -322,6 +342,7 @@ namespace MyAllEmployee.Tests
             Employee employee = new Employee();
             bool retVal = employee.SetEmployeeType("");
             Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetEmployeeType(), "");
         }
 
         [TestMethod]
@@ -331,6 +352,7 @@ namespace MyAllEmployee.Tests
             Employee employee = new Employee();
             bool retVal = employee.SetEmployeeType("AB");
             Assert.IsFalse(retVal);
+            Assert.AreEqual(employee.GetEmployeeType(), "");
         }
     }
 }

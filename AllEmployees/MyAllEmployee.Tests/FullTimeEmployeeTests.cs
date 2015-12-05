@@ -131,6 +131,17 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
         }
 
+        [TestMethod]
+        [TestCategory("ContractEmployee Constructor with all parameters")]
+        [ExpectedException(typeof(FailedConstructorException))]
+        public void ConstructorWithAllParamTestInvalidDOTnoDOH()
+        {
+            DateTime DOB = new DateTime(1993, 11, 14);
+            DateTime DOH = new DateTime();
+            DateTime DOT = new DateTime(2010, 07, 29);
+            FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 180000);
+        }
+
         /*
          * Details Tests
         */
@@ -173,6 +184,9 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(1993, 05, 15);
             bool retVal = employee.SetDateOfBirth(date);
             Assert.IsTrue(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfBirth(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -186,6 +200,9 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(1995, 04, 03);
             bool retVal = employee.SetDateOfBirth(date);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfBirth(), DOB);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -195,6 +212,10 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee();
             bool retVal = employee.SetDateOfBirth("1993-04-24");
             Assert.IsTrue(retVal);
+
+            DateTime date = new DateTime(1993, 04, 24);
+            int compReturn = DateTime.Compare(employee.GetDateOfBirth(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -204,6 +225,10 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee();
             bool retVal = employee.SetDateOfBirth("19930424");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfBirth(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -213,6 +238,10 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee();
             bool retVal = employee.SetDateOfBirth("1993-13-24");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfBirth(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -222,6 +251,10 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee();
             bool retVal = employee.SetDateOfBirth("2017-11-24");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfBirth(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -234,6 +267,9 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
             bool retVal = employee.SetDateOfBirth("2001-12-24");
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfBirth(), DOB);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -243,6 +279,10 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee();
             bool retVal = employee.SetDateOfBirth("1993-s2-24");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfBirth(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -252,6 +292,10 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee();
             bool retVal = employee.SetDateOfBirth(1993, 04, 24);
             Assert.IsTrue(retVal);
+
+            DateTime date = new DateTime(1993, 04, 24);
+            int compReturn = DateTime.Compare(employee.GetDateOfBirth(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -261,6 +305,10 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee();
             bool retVal = employee.SetDateOfBirth(1993, 04, 31);
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfBirth(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -270,6 +318,10 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee();
             bool retVal = employee.SetDateOfBirth(2017, 04, 24);
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfBirth(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -282,6 +334,9 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
             bool retVal = employee.SetDateOfBirth(2001,12,24);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfBirth(), DOB);
+            Assert.AreEqual(0, compReturn);
         }
 
         /*
@@ -291,10 +346,13 @@ namespace MyAllEmployee.Tests
         [TestCategory("FulltimeEmployee SetDateOfHire")]
         public void SetDateOfHireDateTestValidDate()
         {
-            DateTime date = new DateTime(2012, 04, 23);
             FulltimeEmployee employee = new FulltimeEmployee();
+            DateTime date = new DateTime(2012, 04, 23);
             bool retVal = employee.SetDateOfHire(date);
             Assert.IsTrue(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -308,6 +366,9 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(2012, 04, 23);
             bool retVal = employee.SetDateOfHire(date);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -321,6 +382,9 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(1980, 04, 23);
             bool retVal = employee.SetDateOfHire(date);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -330,6 +394,10 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee();
             bool retVal = employee.SetDateOfHire("1993-04-24");
             Assert.IsTrue(retVal);
+
+            DateTime date = new DateTime(1993, 04, 24);
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -339,6 +407,10 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee();
             bool retVal = employee.SetDateOfHire("19930424");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -348,6 +420,10 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee();
             bool retVal = employee.SetDateOfHire("1993-13-24");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -360,6 +436,9 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
             bool retVal = employee.SetDateOfHire("2001-12-24");
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -372,6 +451,9 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
             bool retVal = employee.SetDateOfHire("1980-12-24");
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -381,6 +463,10 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee();
             bool retVal = employee.SetDateOfHire("1993-s2-24");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -390,6 +476,10 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee();
             bool retVal = employee.SetDateOfHire(1993, 04, 24);
             Assert.IsTrue(retVal);
+
+            DateTime date = new DateTime(1993, 04, 24);
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -399,6 +489,10 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee();
             bool retVal = employee.SetDateOfHire(1993, 04, 31);
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -411,6 +505,9 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
             bool retVal = employee.SetDateOfHire(2001, 12, 24);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -423,6 +520,9 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
             bool retVal = employee.SetDateOfHire(1980, 12, 24);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfHire(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         /*
@@ -439,6 +539,9 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(2012, 04, 23);
             bool retVal = employee.SetDateOfTermination(date);
             Assert.IsTrue(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -452,6 +555,9 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(1992, 04, 23);
             bool retVal = employee.SetDateOfTermination(date);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -462,6 +568,10 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(1992, 04, 23);
             bool retVal = employee.SetDateOfTermination(date);
             Assert.IsFalse(retVal);
+
+            date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -474,33 +584,42 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
             bool retVal = employee.SetDateOfTermination("1997-04-24");
             Assert.IsTrue(retVal);
+
+            DateTime date = new DateTime(1997, 04, 24);
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
         [TestCategory("FulltimeEmployee SetDateOfTermination")]
         public void SetDateOfTerminationStringTestInvalidFormat()
         {
-            FulltimeEmployee employee = new FulltimeEmployee();
-            bool retVal = employee.SetDateOfTermination("19930424");
+            DateTime DOB = new DateTime(1954, 08, 20);
+            DateTime DOH = new DateTime(1994, 09, 03);
+            DateTime DOT = new DateTime(2000, 03, 23);
+            FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
+
+            bool retVal = employee.SetDateOfTermination("19970424");
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
         [TestCategory("FulltimeEmployee SetDateOfTermination")]
         public void SetDateOfTerminationStringTestInvalidDate()
         {
-            FulltimeEmployee employee = new FulltimeEmployee();
-            bool retVal = employee.SetDateOfTermination("1993-13-24");
-            Assert.IsFalse(retVal);
-        }
+            DateTime DOB = new DateTime(1954, 08, 20);
+            DateTime DOH = new DateTime(1994, 09, 03);
+            DateTime DOT = new DateTime(2000, 03, 23);
+            FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
 
-        [TestMethod]
-        [TestCategory("FulltimeEmployee SetDateOfTermination")]
-        public void SetDateOfTerminationStringTestInvalidFuture()
-        {
-            FulltimeEmployee employee = new FulltimeEmployee();
-            bool retVal = employee.SetDateOfTermination("2017-11-24");
+            bool retVal = employee.SetDateOfTermination("1997-13-24");
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -513,6 +632,9 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
             bool retVal = employee.SetDateOfTermination("1993-12-24");
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -522,15 +644,26 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies");
             bool retVal = employee.SetDateOfTermination("2001-12-24");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
         [TestCategory("FulltimeEmployee SetDateOfTermination")]
         public void SetDateOfTerminationIntsTestInvalidLetter()
         {
-            FulltimeEmployee employee = new FulltimeEmployee();
+            DateTime DOB = new DateTime(1954, 08, 20);
+            DateTime DOH = new DateTime(1994, 09, 03);
+            DateTime DOT = new DateTime(2000, 03, 23);
+            FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
+
             bool retVal = employee.SetDateOfTermination("1993-s2-24");
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -541,26 +674,29 @@ namespace MyAllEmployee.Tests
             DateTime DOH = new DateTime(1994, 09, 03);
             DateTime DOT = new DateTime(2000, 03, 23);
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
+
             bool retVal = employee.SetDateOfTermination(1997, 04, 24);
             Assert.IsTrue(retVal);
+
+            DateTime date = new DateTime(1997, 04, 24);
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
         [TestCategory("FulltimeEmployee SetDateOfTermination")]
         public void SetDateOfTerminationIntsTestInvalidDate()
         {
-            FulltimeEmployee employee = new FulltimeEmployee();
-            bool retVal = employee.SetDateOfTermination(1993, 04, 31);
-            Assert.IsFalse(retVal);
-        }
+            DateTime DOB = new DateTime(1954, 08, 20);
+            DateTime DOH = new DateTime(1994, 09, 03);
+            DateTime DOT = new DateTime(2000, 03, 23);
+            FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
 
-        [TestMethod]
-        [TestCategory("FulltimeEmployee SetDateOfTermination")]
-        public void SetDateOfTerminationIntsTestInvalidFutureDate()
-        {
-            FulltimeEmployee employee = new FulltimeEmployee();
-            bool retVal = employee.SetDateOfTermination(2017, 04, 24);
+            bool retVal = employee.SetDateOfTermination(1997, 04, 31);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -573,6 +709,9 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
             bool retVal = employee.SetDateOfTermination(1992, 12, 24);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -582,6 +721,10 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies");
             bool retVal = employee.SetDateOfTermination(2001, 12, 24);
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetDateOfTermination(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -591,6 +734,8 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies");
             bool retVal = employee.SetSalary(20000);
             Assert.IsTrue(retVal);
+
+            Assert.AreEqual(employee.GetSalary(), 20000);
         }
 
         [TestMethod]
@@ -600,6 +745,8 @@ namespace MyAllEmployee.Tests
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies");
             bool retVal = employee.SetSalary(-20000);
             Assert.IsFalse(retVal);
+
+            Assert.AreEqual(employee.GetSalary(), 0);
         }
     }
 }

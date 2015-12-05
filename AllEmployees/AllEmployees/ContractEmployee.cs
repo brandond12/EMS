@@ -29,7 +29,7 @@ namespace AllEmployees
     {
         private DateTime contractStartDate;
         private DateTime contractStopDate;
-        private float fixedContractAmount;
+        private double fixedContractAmount;
 
         /**
         * \brief default constructor. Sets all values to default
@@ -85,19 +85,19 @@ namespace AllEmployees
         * \param dateOfBirth - <b>DateTime</b> - Date Of Birth of employee to add to records
         * \param contractStartDate - <b>DateTime</b> - Contract Start Date of employee contract to add to records
         * \param contractStopDate - <b>DateTime</b> - Contract Stop Date of employee contract to add to records
-        * \param fixedContractAmount - <b>float</b> - Fixed Contract Amount of employee contract to add to records
+        * \param fixedContractAmount - <b>double</b> - Fixed Contract Amount of employee contract to add to records
         *
         * \throw <FailedConstructorException> - If the constructor failed to create the object 
         * 
         * \return  n/a
         */
-        public ContractEmployee(string firstName, string lastName, int socialInsuranceNumber, DateTime dateOfBirth, DateTime contractStartDate, DateTime contractStopDate, float fixedContractAmount)
+        public ContractEmployee(string firstName, string lastName, int socialInsuranceNumber, DateTime dateOfBirth, DateTime contractStartDate, DateTime contractStopDate, double fixedContractAmount)
             : base(firstName, lastName, socialInsuranceNumber, dateOfBirth, "CT")
         {
             this.contractStartDate = contractStartDate;
             this.contractStopDate = contractStopDate;
             this.fixedContractAmount = fixedContractAmount;
-            if (this.Validate() != true)
+            if ((contractStartDate.Year == 1 && contractStopDate.Year != 1) || this.Validate() != true)
             {
                 throw new FailedConstructorException();
             }
@@ -150,12 +150,26 @@ namespace AllEmployees
         */
         public string Details()
         {
-            return ("Employee Type: Contract\nName: " + GetFirstName() + " " + GetLastName() +
+            string returnString = "Employee Type: Contract\nName: " + GetFirstName() + " " + GetLastName() +
                 "\nBuisness Number: " + GetSocialInsuranceNumber().ToString().Substring(0, 5) + " " + GetSocialInsuranceNumber().ToString().Substring(5, 4) +
-                "\nBuisness Start Date: " + GetDateOfBirthString() +
-                "\nContract Start Date: " + GetContractStartDateString() +
-                "\nContract Stop Date: " + GetContractStopDateString() +
-                "\nFixed Contract Amount: " + fixedContractAmount.ToString());
+                "\nBuisness Start Date: ";
+            if(GetDateOfBirth().Year != 1)
+            {
+                returnString += GetDateOfBirthString();
+            }
+            returnString += "\nContract Start Date: ";
+            if(GetContractStartDate().Year != 1)
+            {
+                returnString += GetContractStartDateString();
+            }
+            returnString += "\nContract Stop Date: ";
+            if(GetContractStopDate().Year != 1)
+            {
+                returnString += GetContractStopDateString();
+            }
+            returnString += "\nFixed Contract Amount: " + fixedContractAmount.ToString();
+
+            return returnString;
         }
 
         /**
@@ -310,9 +324,9 @@ namespace AllEmployees
             }
             else
             {
-                SetDateOfBirthBase(date);
+                contractStartDate = date;
             }
-            contractStartDate = date;
+            
             return dataSaved;
         }
 
@@ -499,11 +513,11 @@ namespace AllEmployees
         *
         * \details <b>Details</b>
         *
-        * \param contractAmount <b>float</b> - The amount the contract is payed
+        * \param contractAmount <b>double</b> - The amount the contract is payed
         * 
         * \return dataSaves <b>bool</b> - true if input was valid and data was changed. False it data was not changed
         */
-        public bool SetFixedContractAmount(float contractAmount)
+        public bool SetFixedContractAmount(double contractAmount)
         {
             bool dataSaved = true;
             if (contractAmount > 0)
@@ -581,9 +595,9 @@ namespace AllEmployees
         *
         * \param n/a
         * 
-        * \return fixedContractAmount <b>float</b>
+        * \return fixedContractAmount <b>double</b>
         */
-        public float GetFixedContractAmount()
+        public double GetFixedContractAmount()
         {
             return fixedContractAmount;
         }

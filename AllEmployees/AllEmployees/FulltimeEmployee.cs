@@ -28,7 +28,7 @@ namespace AllEmployees
     {
         private DateTime dateOfHire;
         private DateTime dateOfTermination;
-        private float salary;
+        private double salary;
 
         /**
         * \brief default constructor. Sets all values to default
@@ -82,19 +82,19 @@ namespace AllEmployees
         * \param dateOfBirth - <b>DateTime</b> - Date Of Birth of employee to add to records
         * \param dateOfHire - <b>DateTime</b> - Date Of Hire of employee to add to records
         * \param dateOfTermination - <b>DateTime</b> - Date Of Termination of employee to add to records
-        * \param salary - <b>float</b> - salary of employee to add to records
+        * \param salary - <b>double</b> - salary of employee to add to records
         *
         * \throw <FailedConstructorException> - If the constructor failed to create the object 
         * 
         * \return  n/a
         */
-        public FulltimeEmployee(string firstName, string lastName, int socialInsuranceNumber, DateTime dateOfBirth, DateTime dateOfHire, DateTime dateOfTermination, float salary)
+        public FulltimeEmployee(string firstName, string lastName, int socialInsuranceNumber, DateTime dateOfBirth, DateTime dateOfHire, DateTime dateOfTermination, double salary)
             : base(firstName, lastName, socialInsuranceNumber, dateOfBirth, "FT")
         {
             this.dateOfHire = dateOfHire;
             this.dateOfTermination = dateOfTermination;
             this.salary = salary;
-            if (this.Validate() != true)
+            if ((dateOfHire.Year == 1 && dateOfTermination.Year != 1) || this.Validate() != true)
             {
                 throw new FailedConstructorException();
             }
@@ -306,7 +306,6 @@ namespace AllEmployees
             {
                 dateOfHire = date;
             }
-            dateOfHire = date;
             return dataSaved;
         }
 
@@ -496,11 +495,11 @@ namespace AllEmployees
         *
         * \details <b>Details</b>
         *
-        * \param salary <b>float</b> - The salary of the employee
+        * \param salary <b>double</b> - The salary of the employee
         * 
         * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
         */
-        public bool SetSalary(float salary)
+        public bool SetSalary(double salary)
         {
             bool dataSaved = true;
 
@@ -580,9 +579,9 @@ namespace AllEmployees
         *
         * \param n/a
         * 
-        * \return salary <b>float</b>
+        * \return salary <b>double</b>
         */
-        public float GetSalary()
+        public double GetSalary()
         {
             return salary;
         }

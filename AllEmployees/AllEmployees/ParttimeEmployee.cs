@@ -27,7 +27,7 @@ namespace AllEmployees
     {
         private DateTime dateOfHire;
         private DateTime dateOfTermination;
-        private float hourlyRate;
+        private double hourlyRate;
 
         /**
         * \brief default constructor. Sets all values to default
@@ -81,19 +81,19 @@ namespace AllEmployees
         * \param dateOfBirth - <b>DateTime</b> - Date Of Birth of employee to add to records
         * \param dateOfHire - <b>DateTime</b> - Date Of Hire of employee to add to records
         * \param dateOfTermination - <b>DateTime</b> - Date Of Termination of employee to add to records
-        * \param hourlyRate - <b>float</b> - Hourly Rate of employee to add to records
+        * \param hourlyRate - <b>double</b> - Hourly Rate of employee to add to records
         *
         * \throw <FailedConstructorException> - If the constructor failed to create the object 
         * 
         * \return  n/a
         */
-        public ParttimeEmployee(string firstName, string lastName, int socialInsuranceNumber, DateTime dateOfBirth, DateTime dateOfHire, DateTime dateOfTermination, float hourlyRate)
+        public ParttimeEmployee(string firstName, string lastName, int socialInsuranceNumber, DateTime dateOfBirth, DateTime dateOfHire, DateTime dateOfTermination, double hourlyRate)
             : base(firstName, lastName, socialInsuranceNumber, dateOfBirth, "PT")
         {
-            this.dateOfTermination = dateOfTermination;
             this.hourlyRate = hourlyRate;
             this.dateOfHire = dateOfHire;
-            if (this.Validate() != true)
+            this.dateOfTermination = dateOfTermination;
+            if ((dateOfHire.Year == 1 && dateOfTermination.Year != 1) || this.Validate() != true)
             {
                 throw new FailedConstructorException();
             }
@@ -382,11 +382,11 @@ namespace AllEmployees
         *
         * \details <b>Details</b>
         *
-        * \param rate <b>float</b> - The employees hourly rate
+        * \param rate <b>double</b> - The employees hourly rate
         * 
         * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
         */
-        public bool SetHourlyRate(float rate)
+        public bool SetHourlyRate(double rate)
         {
             bool dateSaved = true;
 
@@ -427,7 +427,6 @@ namespace AllEmployees
             {
                 dateOfHire = date;
             }
-            dateOfHire = date;
             return dataSaved;
         }
 
@@ -549,9 +548,9 @@ namespace AllEmployees
         *
         * \param n/a
         * 
-        * \return hourlyRate <b>float</b>
+        * \return hourlyRate <b>double</b>
         */
-        public float GetHourlyRate()
+        public double GetHourlyRate()
         {
             return hourlyRate;
         }

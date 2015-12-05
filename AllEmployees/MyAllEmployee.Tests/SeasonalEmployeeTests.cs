@@ -154,6 +154,8 @@ namespace MyAllEmployee.Tests
             SeasonalEmployee employee = new SeasonalEmployee("Brandon", "Davies");
             bool retVal = employee.SetPiecePay(10);
             Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetPiecePay(), 10);
+
         }
 
         [TestMethod]
@@ -163,6 +165,48 @@ namespace MyAllEmployee.Tests
             SeasonalEmployee employee = new SeasonalEmployee("Brandon", "Davies");
             bool retVal = employee.SetPiecePay(-10);
             Assert.IsFalse(retVal);
+            Assert.AreEqual(employee.GetPiecePay(), 0);
+        }
+
+        [TestMethod]
+        [TestCategory("SeasonalEmployee SetSeason")]
+        public void SetSeasonValid1()
+        {
+            SeasonalEmployee employee = new SeasonalEmployee("Brandon", "Davies");
+            bool retVal = employee.SetSeason("");
+            Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetSeason(), "");
+        }
+
+        [TestMethod]
+        [TestCategory("SeasonalEmployee SetSeason")]
+        public void SetSeasonValid2()
+        {
+            SeasonalEmployee employee = new SeasonalEmployee("Brandon", "Davies");
+            bool retVal = employee.SetSeason("Winter");
+            Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetSeason(), "Winter");
+        }
+
+        [TestMethod]
+        [TestCategory("SeasonalEmployee SetSeason")]
+        public void SetSeasonValid3()
+        {
+            SeasonalEmployee employee = new SeasonalEmployee("Brandon", "Davies");
+            bool retVal = employee.SetSeason("Summer");
+            Assert.IsTrue(retVal);
+            Assert.AreEqual(employee.GetSeason(), "Summer");
+        }
+
+        [TestMethod]
+        [TestCategory("SeasonalEmployee SetSeason")]
+        public void SetSeasonInalid()
+        {
+            SeasonalEmployee employee = new SeasonalEmployee("Brandon", "Davies");
+            string currentSeason = employee.GetSeason();
+            bool retVal = employee.SetSeason("Summer3");
+            Assert.IsFalse(retVal);
+            Assert.AreEqual(employee.GetSeason(), currentSeason);
         }
     }
 }

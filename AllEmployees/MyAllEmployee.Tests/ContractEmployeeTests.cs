@@ -74,7 +74,7 @@ namespace MyAllEmployee.Tests
             DateTime DOB = new DateTime(1993, 04, 24);
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
-            ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18);
+            ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
         }
 
         [TestMethod]
@@ -84,7 +84,7 @@ namespace MyAllEmployee.Tests
             DateTime DOB = new DateTime(1954, 08, 20);
             DateTime DOH = new DateTime(1994, 09, 03);
             DateTime DOT = new DateTime(2014, 12, 23);
-            ContractEmployee employee = new ContractEmployee("Brandon", "Mc'Davies", 543456789, DOB, DOH, DOT, 21);
+            ContractEmployee employee = new ContractEmployee("Brandon", "Mc'Davies", 543456789, DOB, DOH, DOT, 21.54);
         }
 
         [TestMethod]
@@ -94,7 +94,7 @@ namespace MyAllEmployee.Tests
             DateTime DOB = new DateTime(1954, 08, 20);
             DateTime DOH = new DateTime(1994, 09, 03);
             DateTime DOT = new DateTime(2014, 12, 23);
-            ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 34);
+            ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 34.98);
         }
 
         [TestMethod]
@@ -105,7 +105,7 @@ namespace MyAllEmployee.Tests
             DateTime DOB = new DateTime(1954, 08, 20);
             DateTime DOH = new DateTime(1994, 09, 03);
             DateTime DOT = new DateTime(2014, 12, 23);
-            ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 54347589, DOB, DOH, DOT, 18);
+            ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 54347589, DOB, DOH, DOT, 12.87);
         }
 
         [TestMethod]
@@ -115,7 +115,7 @@ namespace MyAllEmployee.Tests
         {
             DateTime DOB = new DateTime(2003, 12, 12);
             DateTime DOH = new DateTime(2001, 02, 27);
-            DateTime DOT = new DateTime(2002, 05, 21);
+            DateTime DOT = new DateTime(2007, 05, 21);
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 033456789, DOB, DOH, DOT, 18);
         }
 
@@ -126,6 +126,17 @@ namespace MyAllEmployee.Tests
         {
             DateTime DOB = new DateTime(1993, 11, 14);
             DateTime DOH = new DateTime(2012, 10, 19);
+            DateTime DOT = new DateTime(2010, 07, 29);
+            ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18);
+        }
+
+        [TestMethod]
+        [TestCategory("ContractEmployee Constructor with all parameters")]
+        [ExpectedException(typeof(FailedConstructorException))]
+        public void ConstructorWithAllParamTestInvalidDOTnoDOH()
+        {
+            DateTime DOB = new DateTime(1993, 11, 14);
+            DateTime DOH = new DateTime();
             DateTime DOT = new DateTime(2010, 07, 29);
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18);
         }
@@ -143,6 +154,18 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
             String details = employee.Details();
             Assert.IsTrue(details == "Employee Type: Contract\nName: Brandon Davies\nBuisness Number: 54345 6789\nBuisness Start Date: 1954-08-20\nContract Start Date: 1994-09-03\nContract Stop Date: 2014-12-23\nFixed Contract Amount: 18");
+        }
+
+        [TestMethod]
+        [TestCategory("ContractEmployee Details")]
+        public void DetailsTestValidNoDate()
+        {
+            DateTime DOB = new DateTime(1954, 08, 20);
+            DateTime DOH = new DateTime();
+            DateTime DOT = new DateTime();
+            ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
+            String details = employee.Details();
+            Assert.IsTrue(details == "Employee Type: Contract\nName: Brandon Davies\nBuisness Number: 54345 6789\nBuisness Start Date: 1954-08-20\nContract Start Date: \nContract Stop Date: \nFixed Contract Amount: 18");
         }
 
         /*
@@ -171,6 +194,9 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee();
             bool retVal = employee.SetContractStartDate(date);
             Assert.IsTrue(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetContractStartDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -184,6 +210,9 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(2012, 04, 23);
             bool retVal = employee.SetContractStartDate(date);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetContractStartDate(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -197,6 +226,9 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(1980, 04, 23);
             bool retVal = employee.SetContractStartDate(date);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetContractStartDate(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -206,6 +238,10 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee();
             bool retVal = employee.SetContractStartDate("1993-04-24");
             Assert.IsTrue(retVal);
+
+            DateTime date = new DateTime(1993, 04, 24);
+            int compReturn = DateTime.Compare(employee.GetContractStartDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -215,6 +251,10 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee();
             bool retVal = employee.SetContractStartDate("19930424");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetContractStartDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -224,6 +264,10 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee();
             bool retVal = employee.SetContractStartDate("1993-13-24");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetContractStartDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -236,6 +280,9 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetContractStartDate("2001-12-24");
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetContractStartDate(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -248,6 +295,9 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 853456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetContractStartDate("1980-12-24");
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetContractStartDate(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -257,6 +307,10 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee();
             bool retVal = employee.SetContractStartDate("1993-s2-24");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetContractStartDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -266,6 +320,10 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee();
             bool retVal = employee.SetContractStartDate(1993, 04, 24);
             Assert.IsTrue(retVal);
+
+            DateTime date = new DateTime(1993, 04, 24);
+            int compReturn = DateTime.Compare(employee.GetContractStartDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -275,6 +333,10 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee();
             bool retVal = employee.SetContractStartDate(1993, 04, 31);
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetContractStartDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -287,6 +349,9 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetContractStartDate(2001, 12, 24);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetContractStartDate(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -299,6 +364,9 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 843456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetContractStartDate(1980, 12, 24);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetContractStartDate(), DOH);
+            Assert.AreEqual(0, compReturn);
         }
 
         /*
@@ -315,6 +383,9 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(2012, 04, 23);
             bool retVal = employee.SetContractStopDate(date);
             Assert.IsTrue(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetContractStopDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -328,6 +399,9 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(1992, 04, 23);
             bool retVal = employee.SetContractStopDate(date);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetContractStopDate(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -338,6 +412,10 @@ namespace MyAllEmployee.Tests
             DateTime date = new DateTime(1992, 04, 23);
             bool retVal = employee.SetContractStopDate(date);
             Assert.IsFalse(retVal);
+
+            date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetContractStopDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -350,6 +428,10 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetContractStopDate("1995-04-24");
             Assert.IsTrue(retVal);
+
+            DateTime date = new DateTime(1995, 04, 24);
+            int compReturn = DateTime.Compare(employee.GetContractStopDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -359,6 +441,10 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee();
             bool retVal = employee.SetContractStopDate("19930424");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetContractStopDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -368,6 +454,10 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee();
             bool retVal = employee.SetContractStopDate("1993-13-24");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetContractStopDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -377,6 +467,10 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee();
             bool retVal = employee.SetContractStopDate("2017-11-24");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetContractStopDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -389,6 +483,10 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetContractStopDate("1992-12-24");
             Assert.IsFalse(retVal);
+
+
+            int compReturn = DateTime.Compare(employee.GetContractStopDate(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -398,6 +496,10 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies");
             bool retVal = employee.SetContractStopDate("2001-12-24");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetContractStopDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -407,6 +509,10 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee();
             bool retVal = employee.SetContractStopDate("1993-s2-24");
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetContractStopDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -419,6 +525,10 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetContractStopDate(1995, 04, 24);
             Assert.IsTrue(retVal);
+
+            DateTime date = new DateTime(1995, 04, 24);
+            int compReturn = DateTime.Compare(employee.GetContractStopDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -431,6 +541,9 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetContractStopDate(1997, 04, 31);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetContractStopDate(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -443,6 +556,9 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
             bool retVal = employee.SetContractStopDate(1991, 12, 24);
             Assert.IsFalse(retVal);
+
+            int compReturn = DateTime.Compare(employee.GetContractStopDate(), DOT);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -452,6 +568,10 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies");
             bool retVal = employee.SetContractStopDate(2001, 12, 24);
             Assert.IsFalse(retVal);
+
+            DateTime date = new DateTime();
+            int compReturn = DateTime.Compare(employee.GetContractStopDate(), date);
+            Assert.AreEqual(0, compReturn);
         }
 
         [TestMethod]
@@ -461,6 +581,8 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies");
             bool retVal = employee.SetFixedContractAmount(18);
             Assert.IsTrue(retVal);
+
+            Assert.AreEqual(employee.GetFixedContractAmount(), 18);
         }
 
         [TestMethod]
@@ -470,6 +592,8 @@ namespace MyAllEmployee.Tests
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies");
             bool retVal = employee.SetFixedContractAmount(-18);
             Assert.IsFalse(retVal);
+
+            Assert.AreEqual(employee.GetFixedContractAmount(), 0);
         }
     }
 }

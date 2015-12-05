@@ -26,7 +26,7 @@ namespace AllEmployees
     public class SeasonalEmployee : Employee
     {
         private string season;
-        private float piecePay;
+        private double piecePay;
 
         /**
         * \brief default constructor. Sets all values to default
@@ -78,13 +78,13 @@ namespace AllEmployees
         * \param socialInsuranceNumber - <b>int</b> - Social Insurance Number of employee to add to records
         * \param dateOfBirth - <b>DateTime</b> - Date Of Birth of employee to add to records
         * \param season - <b>string</b> - season the employee worked/works
-        * \param piecePay - <b>float</b> - the price per unit that the worker is payed
+        * \param piecePay - <b>double</b> - the price per unit that the worker is payed
         *
         * \throw <FailedConstructorException> - If the constructor failed to create the object 
         * 
         * \return  n/a
         */
-        public SeasonalEmployee(string firstName, string lastName, int socialInsuranceNumber, DateTime dateOfBirth, string season, float piecePay)
+        public SeasonalEmployee(string firstName, string lastName, int socialInsuranceNumber, DateTime dateOfBirth, string season, double piecePay)
             : base(firstName, lastName, socialInsuranceNumber, dateOfBirth, "SN")
         {
             this.season = season;
@@ -183,11 +183,11 @@ namespace AllEmployees
         *
         * \details <b>Details</b>
         *
-        * \param piecePay <b>float</b> - The price the employee is payed for each unit created
+        * \param piecePay <b>double</b> - The price the employee is payed for each unit created
         * 
         * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
         */
-        public bool SetPiecePay(float piecePay)
+        public bool SetPiecePay(double piecePay)
         {
             bool dataSaved = true;
 
@@ -225,9 +225,9 @@ namespace AllEmployees
         *
         * \param n/a
         * 
-        * \return piecePay <b>float</b>
+        * \return piecePay <b>double</b>
         */
-        public float GetPiecePay()
+        public double GetPiecePay()
         {
             return piecePay;
         }
