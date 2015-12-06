@@ -183,11 +183,11 @@ namespace AllEmployees
         */
         public override string ToString()
         {
-            string outputString = "CT" + "|" + 
+            string outputString = "|CT" + "|" + 
                 ToStringBase() + 
                 GetContractStopDateString() + "|" + 
-                GetContractStartDateString() + "|" + 
-                fixedContractAmount.ToString();
+                GetContractStartDateString() + "|" +
+                fixedContractAmount.ToString() + "|";
             return outputString;
         }
 

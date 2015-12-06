@@ -160,11 +160,11 @@ namespace AllEmployees
         */
         public override string ToString()
         {
-            string outputString = "PT" + "|" +
+            string outputString = "|PT" + "|" +
                ToStringBase() +
                GetDateOfHireString() + "|" +
                GetDateOfTerminationString() + "|" +
-               hourlyRate.ToString();
+               hourlyRate.ToString() + "|";
             return outputString;
         }
 

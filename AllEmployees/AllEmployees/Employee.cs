@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Supporting;
 
 namespace AllEmployees
 {
@@ -70,8 +71,10 @@ namespace AllEmployees
             employeeType = "";
             if (this.ValidateBase() != true)
             {
+                Logging.Log("Employee", "Employee", "Invalid employee made in constructor");
                 throw new FailedConstructorException();
             }
+            Logging.Log("Employee", "Employee", "New Employee Created");
         }
 
         /**
@@ -97,6 +100,7 @@ namespace AllEmployees
             this.employeeType = employeeType;
             if (this.ValidateBase() != true)
             {
+                Logging.Log("Employee", "Employee", "Invalid employee made in constructor");
                 throw new FailedConstructorException();
             }
         }
@@ -119,6 +123,7 @@ namespace AllEmployees
                 if (!char.IsLetter(letter) && letter != '\'' && letter != '-')
                 {
                     dataValid = false;
+                    Logging.Log("Employee", "ValidateBase", "Invalid First Name - Contains Invalid Characters. Input: " + firstName);
                 }
             }
             //check valid last name
@@ -127,24 +132,27 @@ namespace AllEmployees
                 if (!char.IsLetter(letter) && letter != '\'' && letter != '-')
                 {
                     dataValid = false;
+                    Logging.Log("Employee", "ValidateBase", "Invalid Last Name - Contains Invalid Characters. Input: " + lastName);
                 }
             }
             //check valid sin
             if (socialInsuranceNumber.ToString().Length != 9 && socialInsuranceNumber != 0)
             {
                 dataValid = false;
+                Logging.Log("Employee", "ValidateBase", "Invalid Social Insurance Number - Incorrect number of characters. Input: " + socialInsuranceNumber.ToString());
             }
             //check date
-            /*
-            if(DateTime.Compare(dateOfBirth, DateTime.Now) < 0)
+            if(DateTime.Compare(dateOfBirth, DateTime.Now) > 0)
             {
                 dataValid = false;
+                Logging.Log("Employee", "ValidateBase", "Invalid Date of Birth - Birthdate Can Not be in the Future");
             }
-             * */
+             
             //check employeeType
             if (employeeType != "" && employeeType != "FT" && employeeType != "PT" && employeeType != "CT" && employeeType != "SN")
             {
                 dataValid = false;
+                Logging.Log("Employee", "ValidateBase", "Invalid Employee Type - Types can only be: FT PT CT SN. Input : " + employeeType);
             }
             return dataValid;
         }
@@ -161,7 +169,7 @@ namespace AllEmployees
         protected string ToStringBase()
         {
             string employeeString = firstName + "|" + lastName + "|" + socialInsuranceNumber + "|" + dateOfBirth.Year + "-" + dateOfBirth.Month + "-" + dateOfBirth.Day + "|";
-            return employeeString;//temp to remoce errors
+            return employeeString;
         }
 
         ////*Setters*//////
@@ -182,10 +190,12 @@ namespace AllEmployees
                 if (!char.IsLetter(letter) && letter != '\'' && letter != '-')
                 {
                     dataSaved = false;
+                    Logging.Log("Employee", "SetFirstName", "Invalid First Name - Contains Invalid Characters. Input: " + firstName);
                 }
             }
             if (dataSaved == true)
             {
+                Logging.Log("Employee", "SetFirstName", "First Name Changed - From: " + this.firstName + " To: " + firstName);
                 this.firstName = firstName;
             }
             return dataSaved;
@@ -208,10 +218,12 @@ namespace AllEmployees
                 if (!char.IsLetter(letter) && letter != '\'' && letter != '-')
                 {
                     dataSaved = false;
+                    Logging.Log("Employee", "SetFirstName", "Invalid First Name - Contains Invalid Characters. Input: " + firstName);
                 }
             }
             if (dataSaved == true)
             {
+                Logging.Log("Employee", "SetLastName", "Last Name Changed - From: " + this.lastName + " To: " + lastName);
                 this.lastName = lastName;
             }
             return dataSaved;
@@ -232,10 +244,12 @@ namespace AllEmployees
             if (socialInsuranceNumber < 0 || (socialInsuranceNumber.ToString().Length != 9 && socialInsuranceNumber != 0))
             {
                 dataSaved = false;
+                Logging.Log("Employee", "SetSocialInsuranceNumber", "Invalid Social Insurance Number - Incorrect number of characters. Input: " + socialInsuranceNumber.ToString());
             }
             else
             {
                 this.socialInsuranceNumber = socialInsuranceNumber;
+                Logging.Log("Employee", "SetSocialInsuranceNumber", "Social Insurance Number Changed - From: " + this.socialInsuranceNumber.ToString() + " To: " + socialInsuranceNumber.ToString());
             }
             return dataSaved;
         }
@@ -251,6 +265,7 @@ namespace AllEmployees
         */
         protected bool SetDateOfBirthBase(DateTime date)
         {
+            Logging.Log("Employee", "SetDateOfBirthBase", "Date of Birth Changed - From: " + String.Format("{0:yyyy-MM-dd}", this.dateOfBirth) + " To: " + String.Format("{0:yyyy-MM-dd}", dateOfBirth));
             dateOfBirth = date;
             return true;
         }
@@ -269,11 +284,13 @@ namespace AllEmployees
             bool dataSaved = true;
             if (employeeType == "" || employeeType == "FT" || employeeType == "PT" || employeeType == "CT" || employeeType == "SN")
             {
+                Logging.Log("Employee", "SetEmployeeType", "Employee Type Changed - From: " + this.employeeType + " To: " + employeeType);
                 this.employeeType = employeeType;
             }
             else
             {
                 dataSaved = false;
+                Logging.Log("Employee", "ValidateBase", "Invalid Employee Type - Types can only be: FT PT CT SN. Input : " + employeeType);
             }
             return dataSaved;
         }
