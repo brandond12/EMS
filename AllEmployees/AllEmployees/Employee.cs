@@ -249,7 +249,7 @@ namespace AllEmployees
         * 
         * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
         */
-        public bool SetDateOfBirthBase(DateTime date)
+        protected bool SetDateOfBirthBase(DateTime date)
         {
             dateOfBirth = date;
             return true;

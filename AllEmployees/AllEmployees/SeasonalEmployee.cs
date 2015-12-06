@@ -205,6 +205,102 @@ namespace AllEmployees
 
         ////*Getters*//////
         /**
+       * \brief Setter for SetDateOfBirth
+       *
+       * \details <b>Details</b>
+       *
+       * \param date <b>DateTime</b> - The employees date of birth
+       * 
+       * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+       */
+        public bool SetDateOfBirth(DateTime date)
+        {
+            bool dataSaved = true;
+            //validate dates
+            if (DateTime.Compare(date, DateTime.Now) > 0)
+            {
+                dataSaved = false;
+            }
+            else
+            {
+                SetDateOfBirthBase(date);
+            }
+            return dataSaved;
+        }
+
+        /**
+        * \brief Setter for dateOfBirth with String
+        *
+        * \details <b>Details</b> - string format: YYYY-MM-DD
+        *
+        * \param date <b>string</b> - The date of birth of the employee
+        * 
+        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+        */
+        public bool SetDateOfBirth(string date)
+        {
+            bool dataSaved = true;
+            int year = 0;
+            int month = 0;
+            int day = 0;
+            try
+            {
+                year = Int32.Parse(date.Substring(0, 4));
+                month = Int32.Parse(date.Substring(5, 2));
+                day = Int32.Parse(date.Substring(8, 2));
+                DateTime DOB = new DateTime(year, month, day);
+                //validate dates
+                if (DateTime.Compare(DOB, DateTime.Now) > 0)
+                {
+                    dataSaved = false;
+                }
+                else
+                {
+                    SetDateOfBirthBase(DOB);
+                }
+            }
+            catch (Exception)
+            {
+                dataSaved = false;
+            }
+            return dataSaved;
+        }
+
+        /**
+        * \brief Setter for dateOfBirth with ints
+        *
+        * \details <b>Details</b>
+        *
+        * \param year <b>int</b> - The year of birth of the employee
+        * \param month <b>int</b> - The month of birth of the employee
+        * \param day <b>int</b> - The day of birth of the employee
+        * 
+        * \return dataSaved <b>bool</b> - true if input was valid and data was changed. False it data was not changed
+        */
+        public bool SetDateOfBirth(int year, int month, int day)
+        {
+            bool dataSaved = true;
+
+            try
+            {
+                DateTime DOB = new DateTime(year, month, day);
+                //validate dates
+                if (DateTime.Compare(DOB, DateTime.Now) > 0)
+                {
+                    dataSaved = false;
+                }
+                else
+                {
+                    SetDateOfBirthBase(DOB);
+                }
+            }
+            catch (Exception)
+            {
+                dataSaved = false;
+            }
+            return dataSaved;
+        }
+        /**
         * \brief Getter for season
         *
         * \details <b>Details</b>
