@@ -23,8 +23,22 @@ namespace Supporting
     /// The fileIO class is realted to employee and container class
     ///
     /// \author <i>Nathan</i>
-    class FileIO
+    public class FileIO
     {
+        /**
+        * \brief default constructor.
+        *
+        * \details <b>Details</b>
+        *
+        * \param n/a
+        *
+        * \return  n/a
+        */
+        public FileIO()
+        {
+
+        }
+
         /**
         * \brief Give file name, return list of all valid records
         *
@@ -63,10 +77,51 @@ namespace Supporting
         public void WriteRecord(AllEmployees.Employee Employee, String fileName)
         {
             string fileOutput = "";
-            AllEmployees.ContractEmployee employeeData = new AllEmployees.ContractEmployee();
-            fileOutput = employeeData.ToString();//test sample of gow to format
-            StreamWriter sw = File.AppendText(fileName);//write data (Details Method)
-            sw.WriteLine(fileOutput);//will append if file exists or create new if it does not already exist
+            string identifier = Employee.GetEmployeeType();
+            if (identifier == "CT")
+            {
+                AllEmployees.ContractEmployee employeeData = new AllEmployees.ContractEmployee();
+                employeeData = (AllEmployees.ContractEmployee)Employee;
+                fileOutput = employeeData.ToString();//test sample of gow to format
+                StreamWriter sw = File.AppendText(fileName);//write data (Details Method)
+                sw.WriteLine(fileOutput);//will append if file exists or create new if it does not already exist
+                sw.Close();
+                Logging.Log("FileIO", "WriteAllRecords", "ContractEmployee written to file");
+            }
+            else if (identifier == "FT")
+            {
+                AllEmployees.FulltimeEmployee employeeData = new AllEmployees.FulltimeEmployee();
+                employeeData = (AllEmployees.FulltimeEmployee)Employee;
+                fileOutput = employeeData.ToString();//test sample of gow to format
+                StreamWriter sw = File.AppendText(fileName);//write data (Details Method)
+                sw.WriteLine(fileOutput);//will append if file exists or create new if it does not already exist
+                sw.Close();
+                Logging.Log("FileIO", "WriteAllRecords", "FulltimeEmployee written to file");
+            }
+            else if (identifier == "PT")
+            {
+                AllEmployees.ParttimeEmployee employeeData = new AllEmployees.ParttimeEmployee();
+                employeeData = (AllEmployees.ParttimeEmployee)Employee;
+                fileOutput = employeeData.ToString();//test sample of gow to format
+                StreamWriter sw = File.AppendText(fileName);//write data (Details Method)
+                sw.WriteLine(fileOutput);//will append if file exists or create new if it does not already exist
+                sw.Close();
+                Logging.Log("FileIO", "WriteAllRecords", "ParttimeEmployee written to file");
+            }
+            else if (identifier == "SN")
+            {
+                AllEmployees.SeasonalEmployee employeeData = new AllEmployees.SeasonalEmployee();
+                employeeData = (AllEmployees.SeasonalEmployee)Employee;
+                fileOutput = employeeData.ToString();//test sample of gow to format
+                StreamWriter sw = File.AppendText(fileName);//write data (Details Method)
+                sw.WriteLine(fileOutput);//will append if file exists or create new if it does not already exist
+                sw.Close();
+                Logging.Log("FileIO", "WriteAllRecords", "SeasonalEmployee written to file");
+            }
+            else
+            {
+                Logging.Log("FileIO", "WriteAllRecords", "invalid unknown employee type was not written to file: " + identifier);
+            }
         }
 
 
@@ -86,133 +141,165 @@ namespace Supporting
             //tostringbase string employeeString = firstName + "|" + lastName + "|" + socialInsuranceNumber + "|" + dateOfBirth.Year + "-" + dateOfBirth.Month + "-" + dateOfBirth.Day + "|";
             char[] delimiterChars = { '|' };
             string[] words = fileText.Split(delimiterChars);
-            int wordCounter = 0;
+            int wordCounter = 1;
             while (wordCounter < words.Count())
             {
                 if (words[wordCounter] == "CT")
                 {
-                    AllEmployees.ContractEmployee contractEmp = new AllEmployees.ContractEmployee();
-
-                    contractEmp.SetEmployeeType(words[wordCounter]);
-                    wordCounter++;
-                    contractEmp.SetFirstName(words[wordCounter]);
-                    wordCounter++;
-                    contractEmp.SetLastName(words[wordCounter]);
-                    wordCounter++;
-                    contractEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only take an int
-                    wordCounter++;
-                    contractEmp.SetDateOfBirth(words[wordCounter]);
-                    wordCounter++;
-
-                    contractEmp.SetContractStopDate(words[wordCounter]);
-                    wordCounter++;
-                    contractEmp.SetContractStartDate(words[wordCounter]);
-                    wordCounter++;
-                    contractEmp.SetFixedContractAmount(float.Parse(words[wordCounter], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
-                    wordCounter++;
-
-                    if (contractEmp.Validate() == true)
+                    if (words[wordCounter + 7] != null)
                     {
-                        employeeRec.Add(contractEmp);
-                        Logging.Log("FileIO", "ParsRecord", "contract employee added");
-                    }
-                    else
-                    {
-                        Logging.Log("FileIO", "ParsRecord", "invalid employee data for a contract employee");
+                        AllEmployees.ContractEmployee contractEmp = new AllEmployees.ContractEmployee();
+
+                        contractEmp.SetEmployeeType(words[wordCounter]);
+                        wordCounter++;
+                        contractEmp.SetFirstName(words[wordCounter]);
+                        wordCounter++;
+                        contractEmp.SetLastName(words[wordCounter]);
+                        wordCounter++;
+                        contractEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only take an int
+                        wordCounter++;
+                        contractEmp.SetDateOfBirth(words[wordCounter]);
+                        wordCounter++;
+
+                        contractEmp.SetContractStopDate(words[wordCounter]);
+                        wordCounter++;
+                        contractEmp.SetContractStartDate(words[wordCounter]);
+                        wordCounter++;
+                        contractEmp.SetFixedContractAmount(float.Parse(words[wordCounter], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
+                        wordCounter++;
+
+                        if (contractEmp.Validate() == true)
+                        {
+                            employeeRec.Add(contractEmp);
+                            Logging.Log("FileIO", "ParsRecord", "contract employee added");
+                            wordCounter++;
+                        }
+                        else
+                        {
+                            Logging.Log("FileIO", "ParsRecord", "invalid employee data for a contract employee");
+                            while (words[wordCounter] != "FT" && words[wordCounter] != "PT" && words[wordCounter] != "SN" && words[wordCounter] != "CT" && wordCounter < words.Count())
+                            {
+                                wordCounter++;
+                            }
+                        }
                     }
                 }
                 else if (words[wordCounter] == "FT")
                 {
-                    AllEmployees.FulltimeEmployee fullTimeEmp = new AllEmployees.FulltimeEmployee();
-
-                    fullTimeEmp.SetEmployeeType(words[wordCounter]);
-                    wordCounter++;
-                    fullTimeEmp.SetFirstName(words[wordCounter]);
-                    wordCounter++;
-                    fullTimeEmp.SetLastName(words[wordCounter]);
-                    wordCounter++;
-                    fullTimeEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only takes an int
-                    wordCounter++;
-                    fullTimeEmp.SetDateOfBirth(words[wordCounter]);
-                    wordCounter++;
-
-                    fullTimeEmp.SetDateOfHire(words[wordCounter]);
-                    wordCounter++;
-                    fullTimeEmp.SetDateOfTermination(words[wordCounter]);
-                    wordCounter++;
-                    fullTimeEmp.SetSalary(float.Parse(words[wordCounter], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
-                    wordCounter++;
-
-                    if (fullTimeEmp.Validate() == true)
+                    if (words[wordCounter + 7] != null)
                     {
-                        employeeRec.Add(fullTimeEmp);
-                        Logging.Log("FileIO", "ParsRecord", "full time employee added");
-                    }
-                    else
-                    {
-                        Logging.Log("FileIO", "ParsRecord", "invalid employee data for a full time employee");
+                        AllEmployees.FulltimeEmployee fullTimeEmp = new AllEmployees.FulltimeEmployee();
+
+                        fullTimeEmp.SetEmployeeType(words[wordCounter]);
+                        wordCounter++;
+                        fullTimeEmp.SetFirstName(words[wordCounter]);
+                        wordCounter++;
+                        fullTimeEmp.SetLastName(words[wordCounter]);
+                        wordCounter++;
+                        fullTimeEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only takes an int
+                        wordCounter++;
+                        fullTimeEmp.SetDateOfBirth(words[wordCounter]);
+                        wordCounter++;
+
+                        fullTimeEmp.SetDateOfHire(words[wordCounter]);
+                        wordCounter++;
+                        fullTimeEmp.SetDateOfTermination(words[wordCounter]);
+                        wordCounter++;
+                        fullTimeEmp.SetSalary(float.Parse(words[wordCounter], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
+                        wordCounter++;
+
+                        if (fullTimeEmp.Validate() == true)
+                        {
+                            wordCounter++;
+                            employeeRec.Add(fullTimeEmp);
+                            Logging.Log("FileIO", "ParsRecord", "full time employee added");
+                        }
+                        else
+                        {
+                            Logging.Log("FileIO", "ParsRecord", "invalid employee data for a full time employee");
+                            while (words[wordCounter] != "FT" && words[wordCounter] != "PT" && words[wordCounter] != "SN" && words[wordCounter] != "CT" && wordCounter < words.Count())
+                            {
+                                wordCounter++;
+                            }
+                        }
                     }
                 }
                 else if (words[wordCounter] == "PT")
                 {
-                    AllEmployees.ParttimeEmployee partTimeEmp = new AllEmployees.ParttimeEmployee();
-
-                    partTimeEmp.SetEmployeeType(words[wordCounter]);
-                    wordCounter++;
-                    partTimeEmp.SetFirstName(words[wordCounter]);
-                    wordCounter++;
-                    partTimeEmp.SetLastName(words[wordCounter]);
-                    wordCounter++;
-                    partTimeEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only takes an int
-                    wordCounter++;
-                    partTimeEmp.SetDateOfBirth(words[wordCounter]);
-                    wordCounter++;
-
-                    partTimeEmp.SetDateOfHire(words[wordCounter]);
-                    wordCounter++;
-                    partTimeEmp.SetDateOfTermination(words[wordCounter]);
-                    wordCounter++;
-                    partTimeEmp.SetHourlyRate(float.Parse(words[wordCounter], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
-                    wordCounter++;
-
-                    if (partTimeEmp.Validate() == true)
+                    if (words[wordCounter + 7] != null)
                     {
-                        employeeRec.Add(partTimeEmp);
-                        Logging.Log("FileIO", "ParsRecord", "part time employee added");
-                    }
-                    else
-                    {
-                        Logging.Log("FileIO", "ParsRecord", "invalid employee data for a part time employee");
+                        AllEmployees.ParttimeEmployee partTimeEmp = new AllEmployees.ParttimeEmployee();
+
+                        partTimeEmp.SetEmployeeType(words[wordCounter]);
+                        wordCounter++;
+                        partTimeEmp.SetFirstName(words[wordCounter]);
+                        wordCounter++;
+                        partTimeEmp.SetLastName(words[wordCounter]);
+                        wordCounter++;
+                        partTimeEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only takes an int
+                        wordCounter++;
+                        partTimeEmp.SetDateOfBirth(words[wordCounter]);
+                        wordCounter++;
+
+                        partTimeEmp.SetDateOfHire(words[wordCounter]);
+                        wordCounter++;
+                        partTimeEmp.SetDateOfTermination(words[wordCounter]);
+                        wordCounter++;
+                        partTimeEmp.SetHourlyRate(float.Parse(words[wordCounter], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
+                        wordCounter++;
+
+                        if (partTimeEmp.Validate() == true)
+                        {
+                            wordCounter++;
+                            employeeRec.Add(partTimeEmp);
+                            Logging.Log("FileIO", "ParsRecord", "part time employee added");
+                        }
+                        else
+                        {
+                            Logging.Log("FileIO", "ParsRecord", "invalid employee data for a part time employee");
+                            while (words[wordCounter] != "FT" && words[wordCounter] != "PT" && words[wordCounter] != "SN" && words[wordCounter] != "CT" && wordCounter < words.Count())
+                            {
+                                wordCounter++;
+                            }
+                        }
                     }
                 }
                 else if (words[wordCounter] == "SN")
                 {
-                    AllEmployees.SeasonalEmployee seasonalEmp = new AllEmployees.SeasonalEmployee();
-
-                    seasonalEmp.SetEmployeeType(words[wordCounter]);
-                    wordCounter++;
-                    seasonalEmp.SetFirstName(words[wordCounter]);
-                    wordCounter++;
-                    seasonalEmp.SetLastName(words[wordCounter]);
-                    wordCounter++;
-                    seasonalEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only takes an int
-                    wordCounter++;
-                    seasonalEmp.SetDateOfBirth(words[wordCounter]);
-                    wordCounter++;
-
-                    seasonalEmp.SetSeason(words[wordCounter]);
-                    wordCounter++;
-                    seasonalEmp.SetPiecePay(float.Parse(words[wordCounter], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
-                    wordCounter++;
-
-                    if (seasonalEmp.Validate() == true)
+                    if (words[wordCounter + 6] != null)
                     {
-                        employeeRec.Add(seasonalEmp);
-                        Logging.Log("FileIO", "ParsRecord", "seasonal employee added");
-                    }
-                    else
-                    {
-                        Logging.Log("FileIO", "ParsRecord", "invalid employee data for a seasonal employee");
+                        AllEmployees.SeasonalEmployee seasonalEmp = new AllEmployees.SeasonalEmployee();
+
+                        seasonalEmp.SetEmployeeType(words[wordCounter]);
+                        wordCounter++;
+                        seasonalEmp.SetFirstName(words[wordCounter]);
+                        wordCounter++;
+                        seasonalEmp.SetLastName(words[wordCounter]);
+                        wordCounter++;
+                        seasonalEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only takes an int
+                        wordCounter++;
+                        seasonalEmp.SetDateOfBirth(words[wordCounter]);
+                        wordCounter++;
+
+                        seasonalEmp.SetSeason(words[wordCounter]);
+                        wordCounter++;
+                        seasonalEmp.SetPiecePay(float.Parse(words[wordCounter], CultureInfo.InvariantCulture.NumberFormat));//only takes a float
+                        wordCounter++;
+
+                        if (seasonalEmp.Validate() == true)
+                        {
+                            wordCounter++;
+                            employeeRec.Add(seasonalEmp);
+                            Logging.Log("FileIO", "ParsRecord", "seasonal employee added");
+                        }
+                        else
+                        {
+                            Logging.Log("FileIO", "ParsRecord", "invalid employee data for a seasonal employee");
+                            while (words[wordCounter] != "FT" && words[wordCounter] != "PT" && words[wordCounter] != "SN" && words[wordCounter] != "CT" && wordCounter < words.Count())
+                            {
+                                wordCounter++;
+                            }
+                        }
                     }
                 }
                 else
@@ -220,74 +307,9 @@ namespace Supporting
                     //string className, string methodName, string eventDetails
                     Logging.Log("FileIO", "ParsRecord", "invalid employee type in file");
                 }
-            }           
+            }
             return employeeRec;
         }
 
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        ///**
-        //* \brief Give file name, return file for reading
-        //*
-        //* \details <b>Details</b>
-        //*
-        //* \param fileName - <b>string</b> - The file path and name of file storing the records
-        //*
-        //* \return readFile - <b>FileStream</b> - The opened file to be read
-        //*/
-        //private FileStream OpenFileForRead(String fileName)
-        //{
-        //    FileStream readFile = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-        //    return readFile;
-        //}
-
-        ///**
-        //* \brief Give file name, return file for writing
-        //*
-        //* \details <b>Details</b>
-        //*
-        //* \param fileName - <b>string</b> - The file path and name of file storing the records
-        //*
-        //* \return writeFile - <b>FileStream</b> - The opened file to be written to
-        //*/
-        //private FileStream OpenFileForWrite(String fileName)
-        //{
-        //    FileStream writeFile = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-        //    return writeFile;
-        //}
-
-        ///**
-        //* \brief Closes the file
-        //*
-        //* \details <b>Details</b>
-        //*
-        //* \param file - <b>FileStream</b> - The file to be closed
-        //*
-        //* \return  n/a
-        //*/
-        //private void CloseFile(FileStream file)
-        //{
-
-        //}
     }
 }
