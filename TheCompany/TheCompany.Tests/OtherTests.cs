@@ -30,11 +30,14 @@ namespace TheCompany.Tests
             employeeRepo = new Container();
             DateTime dateOfBirth = new DateTime(1990, 09, 10);
             DateTime dateOfHire = new DateTime(2010, 10, 11);
-            DateTime dateOfTermination = new DateTime(0001, 01, 01);
-            FTEmployee = new FulltimeEmployee("Sam", "Jones", 212398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+            DateTime dateOfTermination = new DateTime(2011, 03, 19);
+            FTEmployee = new FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
         }
 
-        // ======================================= AddEmployeeToList Tests =======================================
+        // ---------------------------------
+        //      AddEmployeeToList Tests
+        // ---------------------------------
+
        [TestMethod]
         // normal
         public void AddEmployeeToList_ValidEmployee_AddsEmployeeToList()
@@ -54,7 +57,7 @@ namespace TheCompany.Tests
        {
            // Instantiate an Employee object and a private object
            DateTime dateOfBirth = new DateTime(1987, 11, 29);
-           Employee employee = new Employee("Janet", "Moore", 122046045, dateOfBirth, "");
+           Employee employee = new Employee("Janet", "Moore", 872046045, dateOfBirth, "");
            var privateObject = new PrivateObject(employeeRepo);
 
            // Execute the method that is being tested
@@ -64,8 +67,10 @@ namespace TheCompany.Tests
            Assert.AreEqual(0, employeeList.Count);
        }
 
+       // ------------------------------
+       //      RemoveEmployee Tests
+       // ------------------------------
 
-        // ======================================= RemoveEmployee Tests =======================================
         [TestMethod]
         // normal
         public void RemoveEmployee_ValidEmployeeInList_RemovesEmployee()
@@ -89,8 +94,8 @@ namespace TheCompany.Tests
             // Instantiate a ParttimeEmployee object and a private object
             DateTime dateOfBirth = new DateTime(1987, 06, 22);
             DateTime dateOfHire = new DateTime(2013, 04, 12);
-            DateTime dateOfTermination = new DateTime(0001, 01, 01);
-            ParttimeEmployee PTEmployee = new ParttimeEmployee("Mark", "Smith", 432098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+            DateTime dateOfTermination = new DateTime(2015, 01, 25);
+            ParttimeEmployee PTEmployee = new ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
             var privateObject = new PrivateObject(employeeRepo);
 
             // Add an employee to the list before attempting to remove one
@@ -102,7 +107,9 @@ namespace TheCompany.Tests
             Assert.AreEqual(1, employeeList.Count);
         }
 
-        // ======================================= DisplayAllEmployees Tests =======================================
+        // ----------------------------------
+        //      DisplayAllEmployees Test
+        // ----------------------------------
         // can't really test for output, so have to explain why this can't be tested in an automated way (has to be tested manually)
         //      - has to be tested manually because there is no way to tell in an automated way if an employee
         //        (and their details) is being displayed correctly

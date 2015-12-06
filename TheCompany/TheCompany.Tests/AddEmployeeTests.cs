@@ -29,13 +29,16 @@ namespace TheCompany.Tests
             employeeRepo = new Container();
         }
 
-        // ======================================= GetFulltimeEmployeeProperties Tests =======================================
+        // ---------------------------------------------
+        //      GetFulltimeEmployeeProperties Tests
+        // ---------------------------------------------
+        
         //normal
         [TestMethod]
         public void GetFulltimeEmployeeProperties_ValidProperties_ReturnsValidFulltimeEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Sam\nJones\n212398402\n1990\n09\n10\n0001\n01\n01\n2010\n10\n11\n50000";
+            String dataToPassIn = "Sam\nJones\n902398402\n1990\n09\n10\n2015\n06\n28\n2010\n10\n11\n50000";
             FulltimeEmployee FTEmployee = new FulltimeEmployee();
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -55,7 +58,7 @@ namespace TheCompany.Tests
         public void GetFulltimeEmployeeProperties_InvalidProperties_ReturnsBlankFulltimeEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Sam\nJones\n212398402\n1990\n94\n100\n0001\n01\n01\n2010\n67\n11\n50000";
+            String dataToPassIn = "Sam\nJones\n902398402\n1990\n94\n100\n1234\n19\n32\n2010\n67\n11\n50000";
             FulltimeEmployee FTEmployee = new FulltimeEmployee();
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -70,13 +73,16 @@ namespace TheCompany.Tests
             }
         }
 
-        // ======================================= GetParttimeEmployeeProperties Tests =======================================
+        // ---------------------------------------------
+        //      GetParttimeEmployeeProperties Tests
+        // ---------------------------------------------
+
         //normal
         [TestMethod]
         public void GetParttimeEmployeeProperties_ValidProperties_ReturnsValidParttimeEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Mark\nSmith\n432098933\n1987\n06\n22\n0001\n01\n01\n30\n2013\n04\n12\n";
+            String dataToPassIn = "Mark\nSmith\n872098933\n1987\n06\n22\n2015\n11\n16\n30\n2013\n04\n12\n";
             ParttimeEmployee PTEmployee = new ParttimeEmployee();
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -96,7 +102,7 @@ namespace TheCompany.Tests
         public void GetParttimeEmployeeProperties_InvalidProperties_ReturnsBlankParttimeEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Mark\nSmith\n43209893&\n1987\n06\n78\n0001\n01\n01\n30\n2013\n04\n12\n";
+            String dataToPassIn = "Mark\nSmith\n87209893&\n1987\n06\n78\n1800\n04\n01\n30\n2013\n04\n12\n";
             ParttimeEmployee PTEmployee = new ParttimeEmployee();
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -111,7 +117,10 @@ namespace TheCompany.Tests
             }
         }
 
-        // ======================================= GetContractEmployeeProperties Tests =======================================
+        // ---------------------------------------------
+        //      GetContractEmployeeProperties Tests
+        // ---------------------------------------------
+
         //normal
         [TestMethod]
         public void GetContractEmployeeProperties_ValidProperties_ReturnsValidContractEmployee()
@@ -153,13 +162,15 @@ namespace TheCompany.Tests
         }
 
 
+        // ---------------------------------------------
+        //      GetSeasonalEmployeeProperties Tests
+        // ---------------------------------------------
 
-        // ======================================= GetSeasonalEmployeeProperties Tests =======================================
         [TestMethod]
         public void GetSeasonalEmployeeProperties_ValidProperties_ReturnsValidSeasonalEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Jake\nWilliams\n432098933\n1991\n03\n18\nFall\n20000\n";
+            String dataToPassIn = "Jake\nWilliams\n912098933\n1991\n03\n18\nFall\n20000\n";
             SeasonalEmployee SNEmployee = new SeasonalEmployee();
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -178,7 +189,7 @@ namespace TheCompany.Tests
         public void GetSeasonalEmployeeProperties_InvalidProperties_ReturnsBlankSeasonalEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Jake\nWilliams\n432098933\n1800\n23\n55\nFFFF\n20000\n";
+            String dataToPassIn = "Jake\nWilliams\n902098933\n1800\n23\n55\nFFFF\n20000\n";
             SeasonalEmployee SNEmployee = new SeasonalEmployee();
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -193,14 +204,16 @@ namespace TheCompany.Tests
             }
         }
 
+        // ---------------------------
+        //      AddEmployee Tests
+        // ---------------------------
 
-        // ======================================= AddEmployee Tests =======================================
         //fulltime
         [TestMethod]
         public void AddEmployee_ValidProperties_FulltimeEmployeeAddedToList()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "FT\nSam\nJones\n212398402\n1990\n09\n10\n0001\n01\n01\n2010\n10\n11\n50000";
+            String dataToPassIn = "FT\nSam\nJones\n902398402\n1990\n09\n10\n2015\n01\n02\n2010\n10\n11\n50000";
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -219,7 +232,7 @@ namespace TheCompany.Tests
         public void AddEmployee_InvalidProperties_FulltimeEmployeeNotAddedToList()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "FT\nSam\nJones\n21239*402\n1990\n09\n10\n0001\n01\n01\n2010\n10\n65\n50000";
+            String dataToPassIn = "FT\nSam\nJones\n90239*402\n1990\n09\n10\n2015\n06\n04\n2010\n10\n65\n50000";
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -239,7 +252,7 @@ namespace TheCompany.Tests
         public void AddEmployee_ValidProperties_ParttimeEmployeeAddedToList()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "PT\nMark\nSmith\n432098933\n1987\n06\n22\n0001\n01\n01\n30\n2013\n04\n12";
+            String dataToPassIn = "PT\nMark\nSmith\n872098933\n1987\n06\n22\n2014\n08\n14\n30\n2013\n04\n12";
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -258,7 +271,7 @@ namespace TheCompany.Tests
         public void AddEmployee_InvalidProperties_ParttimeEmployeeNotAddedToList()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "PT\nMark\nSmith\n432098933\n1987\n33\n122\n0001\n01\n01\n30\n2013\n04\n12";
+            String dataToPassIn = "PT\nMark\nSmith\n872098933\n1987\n33\n122\n2015\n07\n13\n30\n2013\n04\n12";
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -317,7 +330,7 @@ namespace TheCompany.Tests
         public void AddEmployee_ValidProperties_SeasonalEmployeeAddedToList()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "SN\nJake\nWilliams\n432098933\n1991\n03\n18\nSummer\n10000";
+            String dataToPassIn = "SN\nJake\nWilliams\n912098933\n1991\n03\n18\nSummer\n10000";
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -336,7 +349,7 @@ namespace TheCompany.Tests
         public void AddEmployee_InvalidProperties_SeasonalEmployeeNotAddedToList()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "SN\nJake\nWilliams\n432098933\n1991\n03\n18\nSumwinter\n10000";
+            String dataToPassIn = "SN\nJake\nWilliams\n912098933\n1991\n03\n18\nSumwinter\n10000";
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string

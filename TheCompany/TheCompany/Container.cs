@@ -121,7 +121,7 @@ namespace TheCompany
             int intMonth;                       // The int month - used by DOB, date of termination and date of hire
             int intDay;                         // The int day - used by DOB, date of termination and date of hire
             String stringSalary;                // The string version of the salary
-            float floatSalary;                  // The float version of the salary
+            double doubleSalary;                // The double version of the salary
             String error;                       // Data the user typed before hitting the enter key after the error message 
             AllEmployees.FulltimeEmployee newFulltimeEmployee;  // A fulltime employee reference
 
@@ -166,11 +166,11 @@ namespace TheCompany
 
                 // Get the salary from the user
                 stringSalary = UIMenu.GetInfoFromUser("Enter the employee's salary, in dollars: ");
-                floatSalary = float.Parse(stringSalary);
+                doubleSalary = double.Parse(stringSalary);
 
                 // Try to create an employee object with the user's data
                 newFulltimeEmployee = new AllEmployees.FulltimeEmployee(firstName, lastName, intSocialInsuranceNumber, dateOfBirth, dateOfHire,
-                dateOfTermination, floatSalary);
+                dateOfTermination, doubleSalary);
             }
             catch (Exception)
             {
@@ -208,7 +208,7 @@ namespace TheCompany
             int intMonth;                       // The int month - used by DOB, date of termination and date of hire
             int intDay;                         // The int day - used by DOB, date of termination and date of hire
             String stringHourlyRate;            // The string version of the hourly rate
-            float floatHourlyRate;              // The float version of the hourly rate
+            double doubleHourlyRate;            // The double version of the hourly rate
             String error;                       // Data the user typed before hitting the enter key after the error message 
             AllEmployees.ParttimeEmployee newParttimeEmployee;  // A parttime employee reference
 
@@ -244,7 +244,7 @@ namespace TheCompany
 
                 // Get the hourly rate from the user
                 stringHourlyRate = UIMenu.GetInfoFromUser("Enter the employee's hourly rate: ");
-                floatHourlyRate = float.Parse(stringHourlyRate);
+                doubleHourlyRate = double.Parse(stringHourlyRate);
 
                 // Get the date of hire from the user
                 stringYear = UIMenu.GetInfoFromUser("Enter the employee's hire year (yyyy): ");
@@ -257,7 +257,7 @@ namespace TheCompany
 
                 // Try to create an employee object with the user's data
                 newParttimeEmployee = new AllEmployees.ParttimeEmployee(firstName, lastName, intSocialInsuranceNumber, dateOfBirth, dateOfHire,
-                dateOfTermination, floatHourlyRate);
+                dateOfTermination, doubleHourlyRate);
             }
             // An exception will be thrown if invalid or out-of-range data is entered, or if the constructor fails
             catch (Exception)
@@ -296,7 +296,7 @@ namespace TheCompany
             int intMonth;                       // The int month - used by DOB, contract start date and contract end date
             int intDay;                         // The int day - used by DOB, contract start date and contract end date
             String stringFixedContractAmount;   // The string version of the fixed contract amount
-            float floatFixedContractAmount;     // The float version of the fixed contract amount
+            double doubleFixedContractAmount;   // The double version of the fixed contract amount
             String error;                       // Data the user typed before hitting the enter key after the error message 
             AllEmployees.ContractEmployee newContractEmployee;  // A contract employee reference
 
@@ -341,11 +341,11 @@ namespace TheCompany
 
                 // Get the fixed contract amount from the user
                 stringFixedContractAmount = UIMenu.GetInfoFromUser("Enter the employee's fixed contract amount, in dollars: ");
-                floatFixedContractAmount = float.Parse(stringFixedContractAmount);
+                doubleFixedContractAmount = double.Parse(stringFixedContractAmount);
 
                 // Try to create an employee object with the user's data
                 newContractEmployee = new AllEmployees.ContractEmployee(firstName, lastName, intSocialInsuranceNumber,
-                dateOfBirth, contractStartDate, contractStopDate, floatFixedContractAmount);
+                dateOfBirth, contractStartDate, contractStopDate, doubleFixedContractAmount);
             }
             // An exception will be thrown if invalid or out-of-range data is entered, or if the constructor fails
             catch (Exception)
@@ -385,7 +385,7 @@ namespace TheCompany
             int intDay;                         // The int day for date of birth
             String season;                      // The season the employee works in
             String stringPiecePay;              // String version of the piece pay
-            float floatPiecePay;                // The float version of the piece pay
+            double doublePiecePay;                // The double version of the piece pay
             String error;                       // Data the user typed before hitting the enter key after the error message 
             AllEmployees.SeasonalEmployee newSeasonalEmployee;  // A seasonal employee reference
 
@@ -415,10 +415,10 @@ namespace TheCompany
 
                 // Get the piece pay from the user 
                 stringPiecePay = UIMenu.GetInfoFromUser("Enter the employee's piece pay, in dollars: ");
-                floatPiecePay = float.Parse(stringPiecePay);
+                doublePiecePay = double.Parse(stringPiecePay);
 
                 // Try to create an employee object with the user's data
-                newSeasonalEmployee = new AllEmployees.SeasonalEmployee(firstName, lastName, intSocialInsuranceNumber, dateOfBirth, season, floatPiecePay);
+                newSeasonalEmployee = new AllEmployees.SeasonalEmployee(firstName, lastName, intSocialInsuranceNumber, dateOfBirth, season, doublePiecePay);
             }
             // An exception will be thrown if invalid or out-of-range data is entered, or if the constructor fails
             catch (Exception)
@@ -445,6 +445,7 @@ namespace TheCompany
         public void AddEmployeeToList(AllEmployees.Employee employee)
         {
             String employeeType = employee.GetEmployeeType();
+            // Add an employee to the list if it has a valid employee type
             if ((employeeType == "FT") || (employeeType == "PT") || (employeeType == "CT") || (employeeType == "SN"))
             {
                 listOfEmployees.Add(employee);
@@ -565,7 +566,7 @@ namespace TheCompany
                 {
                     // Create a full-time employee object
                     AllEmployees.FulltimeEmployee FTEmployee = new AllEmployees.FulltimeEmployee(employee.GetFirstName(), employee.GetLastName(),
-                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(0001, 01, 01), new DateTime(0001, 02, 02), 1);
+                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(), new DateTime(), 1);
 
                     // Allow the user to modify the properties for the full-time employee
                     ModifyDateOfHire(FTEmployee);
@@ -581,7 +582,7 @@ namespace TheCompany
                 {
                     // Create a part-time employee object
                     AllEmployees.ParttimeEmployee PTEmployee = new AllEmployees.ParttimeEmployee(employee.GetFirstName(), employee.GetLastName(),
-                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(0001, 01, 01), new DateTime(0001, 02, 02), 1);
+                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(), new DateTime(), 1);
 
                     // Allow the user to modify the properties for the part-time employee
                     ModifyDateOfHire(PTEmployee);
@@ -597,7 +598,7 @@ namespace TheCompany
                 {
                     // Create a contract employee object
                     AllEmployees.ContractEmployee CTEmployee = new AllEmployees.ContractEmployee(employee.GetFirstName(), employee.GetLastName(),
-                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(0001, 01, 01), new DateTime(0001, 02, 02), 1);
+                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(), new DateTime(), 1);
 
                     // Allow the user to modify the properties for the contract employee
                     ModifyContractStartDate(CTEmployee);
@@ -861,7 +862,24 @@ namespace TheCompany
                         newIntDay = Convert.ToInt32(newStringDay);
 
                         DateTime newDateOfBirth = new DateTime(newIntYear, newIntMonth, newIntDay);
-                        didModifyWork = employee.SetDateOfBirth(newDateOfBirth);
+                        // Set the date of birth depending on the employee's type
+                        if (employee.GetEmployeeType() == "FT")
+                        {
+                            didModifyWork = ((AllEmployees.FulltimeEmployee)employee).SetDateOfBirth(newDateOfBirth);
+                        }
+                        else if (employee.GetEmployeeType() == "PT")
+                        {
+                            didModifyWork = ((AllEmployees.ParttimeEmployee)employee).SetDateOfBirth(newDateOfBirth);
+                        }
+                        else if (employee.GetEmployeeType() == "CT")
+                        {
+                            didModifyWork = ((AllEmployees.ContractEmployee)employee).SetDateOfBirth(newDateOfBirth);
+                        }
+                        else if (employee.GetEmployeeType() == "SN")
+                        {
+                            didModifyWork = ((AllEmployees.SeasonalEmployee)employee).SetDateOfBirth(newDateOfBirth);
+                        }
+
                         // Check if the employee's date of birth has been changed
                         if (didModifyWork == false)
                         {
@@ -1164,7 +1182,7 @@ namespace TheCompany
             String response;                        // The user's response
             String error;                           // Data the user typed before hitting the enter key after the error message  
             String newStringSalary;                 // String version of the new salary
-            float newFloatSalary;                   // The new float salary
+            double newDoubleSalary;                   // The new double salary
             bool wasQuestionAnswered = false;       // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;             // Did the modify on the employee property work?
 
@@ -1184,8 +1202,8 @@ namespace TheCompany
                         /* If 'Y' is the reponse, ask the user for a salary, 
                         and try to set the employee's salary to the new salary */
                         newStringSalary = UIMenu.GetInfoFromUser("Enter a new salary, in dollars: ");
-                        newFloatSalary = float.Parse(newStringSalary);
-                        didModifyWork = ((AllEmployees.FulltimeEmployee)employee).SetSalary(newFloatSalary);
+                        newDoubleSalary = double.Parse(newStringSalary);
+                        didModifyWork = ((AllEmployees.FulltimeEmployee)employee).SetSalary(newDoubleSalary);
                         // Check if the employee's salary has been changed
                         if (didModifyWork == false)
                         {
@@ -1233,7 +1251,7 @@ namespace TheCompany
             String response;                        // The user's response
             String error;                           // Data the user typed before hitting the enter key after the error message 
             String newStringHourlyRate;             // String version of the new hourly rate
-            float newFloatHourlyRate;               // The new float hourly rate
+            double newDoubleHourlyRate;               // The new double hourly rate
             bool wasQuestionAnswered = false;       // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;             // Did the modify on the employee property work?
 
@@ -1253,8 +1271,8 @@ namespace TheCompany
                         /* If 'Y' is the reponse, ask the user for an hourly rate
                         and try to set the employee's hourly rate to the new rate */
                         newStringHourlyRate = UIMenu.GetInfoFromUser("Enter a new hourly rate, in dollars: ");
-                        newFloatHourlyRate = float.Parse(newStringHourlyRate);
-                        didModifyWork = ((AllEmployees.ParttimeEmployee)employee).SetHourlyRate(newFloatHourlyRate);
+                        newDoubleHourlyRate = double.Parse(newStringHourlyRate);
+                        didModifyWork = ((AllEmployees.ParttimeEmployee)employee).SetHourlyRate(newDoubleHourlyRate);
                         // Check if the employee's hourly rate has been changed
                         if (didModifyWork == false)
                         {
@@ -1460,7 +1478,7 @@ namespace TheCompany
             String response;                        // The user's response
             String error;                           // Data the user typed before hitting the enter key after the error message 
             String newStringContractAmount;         // String version of the new fixed contract amount
-            float newFloatContractAmount;           // The new float fixed contract amount
+            double newDoubleContractAmount;           // The new double fixed contract amount
             bool wasQuestionAnswered = false;       // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;             // Did the modify on the employee property work?
 
@@ -1480,8 +1498,8 @@ namespace TheCompany
                         /* If 'Y' is the reponse, ask the user for a fixed contract amount and 
                         * try to set the employee's fixed contract amount to the new contract amount */
                         newStringContractAmount = UIMenu.GetInfoFromUser("Enter a new fixed contract amount, in dollars: ");
-                        newFloatContractAmount = float.Parse(newStringContractAmount);
-                        didModifyWork = ((AllEmployees.ContractEmployee)employee).SetFixedContractAmount(newFloatContractAmount);
+                        newDoubleContractAmount = double.Parse(newStringContractAmount);
+                        didModifyWork = ((AllEmployees.ContractEmployee)employee).SetFixedContractAmount(newDoubleContractAmount);
                         // Check if the employee's fixed contract amount has been changed
                         if (didModifyWork == false)
                         {
@@ -1588,7 +1606,7 @@ namespace TheCompany
             String response;                    // The user's response
             String error;                       // Data the user typed before hitting the enter key after the error message  
             String newStringPiecePay;           // String version of the piece pay
-            float newFloatPiecePay;             // The new float piece pay
+            double newDoublePiecePay;             // The new double piece pay
             bool wasQuestionAnswered = false;   // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;         // Did the modify on the employee property work?
 
@@ -1608,8 +1626,8 @@ namespace TheCompany
                         /* If 'Y' is the reponse, ask the user for a piece pay and 
                         * try to set the employee's piece pay to the new piece pay */
                         newStringPiecePay = UIMenu.GetInfoFromUser("Enter a new piece pay, in dollars: ");
-                        newFloatPiecePay = float.Parse(newStringPiecePay);
-                        didModifyWork = ((AllEmployees.SeasonalEmployee)employee).SetPiecePay(newFloatPiecePay);
+                        newDoublePiecePay = double.Parse(newStringPiecePay);
+                        didModifyWork = ((AllEmployees.SeasonalEmployee)employee).SetPiecePay(newDoublePiecePay);
                         // Check if the employee's piece pay has been changed
                         if (didModifyWork == false)
                         {

@@ -20,7 +20,7 @@ namespace TheCompany.Tests
     [TestClass]
     public class ModifyEmployeeTests
     {
-        private TheCompany.Container employeeRepo;  // A reference to a Container object
+        private Container employeeRepo;             // A reference to a Container object
         private FulltimeEmployee FTEmployee;        // A reference to a FulltimeEmployee object
         private ParttimeEmployee PTEmployee;        // A reference to a ParttimeEmployee object
         private ContractEmployee CTEmployee;        // A reference to a ContractEmployee object
@@ -35,14 +35,14 @@ namespace TheCompany.Tests
             // Instantiate a full-time employee
             DateTime dateOfBirth = new DateTime(1990, 09, 10);
             DateTime dateOfHire = new DateTime(2010, 10, 11);
-            DateTime dateOfTermination = new DateTime(0001, 01, 01);
-            FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 212398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+            DateTime dateOfTermination = new DateTime(2012, 02, 19);
+            FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
 
             // Instantiate a part-time employee
             dateOfBirth = new DateTime(1987, 06, 22);
             dateOfHire = new DateTime(2013, 04, 12);
-            dateOfTermination = new DateTime(0001, 01, 01);
-            PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 432098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+            dateOfTermination = new DateTime(2014, 05, 13);
+            PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
 
             // Instantiate a contract employee
             dateOfBirth = new DateTime(1989, 07, 02);
@@ -52,10 +52,13 @@ namespace TheCompany.Tests
 
             // Instantiate a seasonal employee
             dateOfBirth = new DateTime(1991, 03, 18);
-            SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 432098933, dateOfBirth, "Summer", 20);
+            SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         }
 
-        // ======================================= ModifyFirstName Tests =======================================
+        // -------------------------------
+        //      ModifyFirstName Tests
+        // -------------------------------
+
         [TestMethod]
         // normal
         public void ModifyFirstName_YesWithValidFirstName_UpdatesFirstName()
@@ -182,7 +185,10 @@ namespace TheCompany.Tests
             }
         }
 
-        // ======================================= ModifyLastName Tests =======================================
+        // -------------------------------
+        //      ModifyLastName Tests
+        // -------------------------------
+
         [TestMethod]
         // normal
         public void ModifyLastName_YesWithValidLastName_UpdatesLastName()
@@ -310,13 +316,16 @@ namespace TheCompany.Tests
         }
 
 
-        // ======================================= ModifySocialInsuranceNumber Tests =======================================
+        // -------------------------------------------
+        //      ModifySocialInsuranceNumber Tests
+        // -------------------------------------------
+
         [TestMethod]
         // normal
         public void ModifySocialInsuranceNumber_YesWithValidSIN_UpdatesSIN()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\n212098301";
+            String dataToPassIn = "Y\n902398433";
             int actualSIN = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -328,7 +337,7 @@ namespace TheCompany.Tests
                 privateObject.Invoke("ModifySocialInsuranceNumber", FTEmployee);
                 // Check if the expected result and actual result are the same
                 actualSIN = FTEmployee.GetSocialInsuranceNumber();
-                Assert.AreEqual(212098301, actualSIN);
+                Assert.AreEqual(902398433, actualSIN);
             }
         }
 
@@ -349,7 +358,7 @@ namespace TheCompany.Tests
                 privateObject.Invoke("ModifySocialInsuranceNumber", FTEmployee);
                 // Check if the expected result and actual result are the same
                 actualSIN = FTEmployee.GetSocialInsuranceNumber();
-                Assert.AreEqual(212398402, actualSIN);
+                Assert.AreEqual(902398402, actualSIN);
             }
         }
 
@@ -358,7 +367,7 @@ namespace TheCompany.Tests
         public void ModifySocialInsuranceNumber_YesWithInvalidSIN_NoUpdateOccurs()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\n21H098GO1";
+            String dataToPassIn = "Y\n90H098GO1";
             int actualSIN = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -370,7 +379,7 @@ namespace TheCompany.Tests
                 privateObject.Invoke("ModifySocialInsuranceNumber", FTEmployee);
                 // Check if the expected result and actual result are the same
                 actualSIN = FTEmployee.GetSocialInsuranceNumber();
-                Assert.AreEqual(212398402, actualSIN);
+                Assert.AreEqual(902398402, actualSIN);
             }
         }
 
@@ -391,7 +400,7 @@ namespace TheCompany.Tests
                 privateObject.Invoke("ModifySocialInsuranceNumber", FTEmployee);
                 // Check if the expected result and actual result are the same
                 actualSIN = FTEmployee.GetSocialInsuranceNumber();
-                Assert.AreEqual(212398402, actualSIN);
+                Assert.AreEqual(902398402, actualSIN);
             }
         }
 
@@ -412,7 +421,7 @@ namespace TheCompany.Tests
                 privateObject.Invoke("ModifySocialInsuranceNumber", FTEmployee);
                 // Check if the expected result and actual result are the same
                 actualSIN = FTEmployee.GetSocialInsuranceNumber();
-                Assert.AreEqual(212398402, actualSIN);
+                Assert.AreEqual(902398402, actualSIN);
             }
         }
 
@@ -421,7 +430,7 @@ namespace TheCompany.Tests
         public void ModifySocialInsuranceNumber_InvalidChoiceThenYesWithValidSIN_LoopsBackAndUpdatesSIN()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "no and yes\nY\n306098301";
+            String dataToPassIn = "no and yes\nY\n902398461";
             int actualSIN = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -433,12 +442,15 @@ namespace TheCompany.Tests
                 privateObject.Invoke("ModifySocialInsuranceNumber", FTEmployee);
                 // Check if the expected result and actual result are the same
                 actualSIN = FTEmployee.GetSocialInsuranceNumber();
-                Assert.AreEqual(306098301, actualSIN);
+                Assert.AreEqual(902398461, actualSIN);
             }
         }
 
 
-        // ======================================= ModifyDateOfBirth Tests =======================================
+        // ---------------------------------
+        //      ModifyDateOfBirth Tests
+        // ---------------------------------
+
         [TestMethod]
         // normal
         public void ModifyDateOfBirth_YesWithValidDOB_UpdatesDOB()
@@ -446,7 +458,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n1991\n09\n21";
             DateTime expectedDOB = new DateTime(1991, 09, 21);
-            DateTime actualDOB = new DateTime(0001, 01, 01);
+            DateTime actualDOB = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -468,7 +480,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n ";
             DateTime expectedDOB = new DateTime(1990, 09, 10);
-            DateTime actualDOB = new DateTime(0001, 01, 01);
+            DateTime actualDOB = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -491,7 +503,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n1900\n40\n67";
             DateTime expectedDOB = new DateTime(1990, 09, 10);
-            DateTime actualDOB = new DateTime(0001, 01, 01);
+            DateTime actualDOB = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -513,7 +525,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "N\n";
             DateTime expectedDOB = new DateTime(1990, 09, 10);
-            DateTime actualDOB = new DateTime(0001, 01, 01);
+            DateTime actualDOB = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -535,7 +547,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nN";
             DateTime expectedDOB = new DateTime(1990, 09, 10);
-            DateTime actualDOB = new DateTime(0001, 01, 01);
+            DateTime actualDOB = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -557,7 +569,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nY\n1992\n10\n09";
             DateTime expectedDOB = new DateTime(1992, 10, 09);
-            DateTime actualDOB = new DateTime(0001, 01, 01);
+            DateTime actualDOB = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -572,7 +584,10 @@ namespace TheCompany.Tests
             }
         }
 
-        // ======================================= ModifyEmployeeType Tests =======================================
+        // ----------------------------------
+        //      ModifyEmployeeType Tests
+        // ----------------------------------
+
         [TestMethod]
         // normal
         public void ModifyEmployeeType_YesWithValidType_UpdatesType()
@@ -699,15 +714,18 @@ namespace TheCompany.Tests
             }
         }
 
-        // ======================================= ModifyDateOfHire Tests =======================================
+        // ---------------------------------
+        //      ModifyDateOfHire Tests
+        // ---------------------------------
+
         [TestMethod]
         // normal
         public void ModifyDateOfHire_YesWithValidDOH_UpdatesDOH()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\n2015\n03\n22";
-            DateTime expectedDOH = new DateTime(2015, 03, 22);
-            DateTime actualDOH = new DateTime(0001, 01, 01);
+            String dataToPassIn = "Y\n2010\n03\n22";
+            DateTime expectedDOH = new DateTime(2010, 03, 22);
+            DateTime actualDOH = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -729,7 +747,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n ";
             DateTime expectedDOH = new DateTime(2010, 10, 11);
-            DateTime actualDOH = new DateTime(0001, 01, 01);
+            DateTime actualDOH = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -751,7 +769,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n1900\n40\n67";
             DateTime expectedDOH = new DateTime(2010, 10, 11);
-            DateTime actualDOH = new DateTime(0001, 01, 01);
+            DateTime actualDOH = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -773,7 +791,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "N\n";
             DateTime expectedDOH = new DateTime(2010, 10, 11);
-            DateTime actualDOH = new DateTime(0001, 01, 01);
+            DateTime actualDOH = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -795,7 +813,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nN";
             DateTime expectedDOH = new DateTime(2010, 10, 11);
-            DateTime actualDOH = new DateTime(0001, 01, 01);
+            DateTime actualDOH = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -815,9 +833,9 @@ namespace TheCompany.Tests
         public void ModifyDateOfHire_InvalidChoiceThenYesWithValidDOH_LoopsBackAndUpdatesDOH()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "no and yes\nY\n2014\n01\n29";
-            DateTime expectedDOH = new DateTime(2014, 01, 29);
-            DateTime actualDOH = new DateTime(0001, 01, 01);
+            String dataToPassIn = "no and yes\nY\n2011\n01\n29";
+            DateTime expectedDOH = new DateTime(2011, 01, 29);
+            DateTime actualDOH = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -833,7 +851,10 @@ namespace TheCompany.Tests
         }
 
 
-        // ======================================= ModifyDateOfTermination Tests =======================================
+        // ---------------------------------------
+        //      ModifyDateOfTermination Tests
+        // ---------------------------------------
+
         [TestMethod]
         // normal
         public void ModifyDateOfTermination_YesWithValidDOT_UpdatesDOT()
@@ -841,7 +862,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n2015\n11\n30";
             DateTime expectedDOT = new DateTime(2015, 11, 30);
-            DateTime actualDOT = new DateTime(0001, 01, 01);
+            DateTime actualDOT = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -862,8 +883,8 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n ";
-            DateTime expectedDOT = new DateTime(0001, 01, 01);
-            DateTime actualDOT = new DateTime(0001, 01, 01);
+            DateTime expectedDOT = new DateTime(2012, 02, 19);
+            DateTime actualDOT = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -884,8 +905,8 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n1900\n40\n67";
-            DateTime expectedDOT = new DateTime(0001, 01, 01);
-            DateTime actualDOT = new DateTime(0001, 01, 01);
+            DateTime expectedDOT = new DateTime(2012, 02, 19);
+            DateTime actualDOT = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -906,8 +927,8 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "N\n";
-            DateTime expectedDOT = new DateTime(0001, 01, 01);
-            DateTime actualDOT = new DateTime(0001, 01, 01);
+            DateTime expectedDOT = new DateTime(2012, 02, 19);
+            DateTime actualDOT = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -928,8 +949,8 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nN";
-            DateTime expectedDOT = new DateTime(0001, 01, 01);
-            DateTime actualDOT = new DateTime(0001, 01, 01);
+            DateTime expectedDOT = new DateTime(2012, 02, 19);
+            DateTime actualDOT = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -951,7 +972,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nY\n2015\n05\n13";
             DateTime expectedDOT = new DateTime(2015, 05, 13);
-            DateTime actualDOT = new DateTime(0001, 01, 01);
+            DateTime actualDOT = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -966,15 +987,17 @@ namespace TheCompany.Tests
             }
         }
 
+        // ----------------------------
+        //      ModifySalary Tests
+        // ----------------------------
 
-        // ======================================= ModifySalary Tests =======================================
         [TestMethod]
         // normal
         public void ModifySalary_YesWithValidSalary_UpdatesSalary()
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n65000";
-            float actualSalary = 0;
+            double actualSalary = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -995,7 +1018,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n ";
-            float actualSalary = 0;
+            double actualSalary = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1016,7 +1039,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n-999999";
-            float actualSalary = 0;
+            double actualSalary = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1037,7 +1060,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "N\n";
-            float actualSalary = 0;
+            double actualSalary = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1059,7 +1082,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nN";
-            float actualSalary = 0;
+            double actualSalary = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1080,7 +1103,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nY\n70000";
-            float actualSalary = 0;
+            double actualSalary = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1095,15 +1118,17 @@ namespace TheCompany.Tests
             }
         }
 
+        // --------------------------------
+        //      ModifyHourlyRate Tests
+        // --------------------------------
 
-        // ======================================= ModifyHourlyRate Tests =======================================
         [TestMethod]
         // normal
         public void ModifyHourlyRate_YesWithValidRate_UpdatesRate()
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n35.50";
-            float actualHourlyRate = 0;
+            double actualHourlyRate = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1124,7 +1149,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n ";
-            float actualHourlyRate = 0;
+            double actualHourlyRate = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1145,7 +1170,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n-15";
-            float actualHourlyRate = 0;
+            double actualHourlyRate = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1166,7 +1191,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "N\n";
-            float actualHourlyRate = 0;
+            double actualHourlyRate = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1188,7 +1213,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nN";
-            float actualHourlyRate = 0;
+            double actualHourlyRate = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1209,7 +1234,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nY\n25.00";
-            float actualHourlyRate = 0;
+            double actualHourlyRate = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1224,8 +1249,10 @@ namespace TheCompany.Tests
             }
         }
 
+        // ---------------------------------------
+        //      ModifyContractStartDate Tests
+        // ---------------------------------------
 
-        // ======================================= ModifyContractStartDate Tests =======================================
         [TestMethod]
         // normal
         public void ModifyContractStartDate_YesWithValidStartDate_UpdatesStartDate()
@@ -1233,7 +1260,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n2013\n01\n16";
             DateTime expectedStartDate = new DateTime(2013, 01, 16);
-            DateTime actualStartDate = new DateTime(0001, 01, 01);
+            DateTime actualStartDate = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1255,7 +1282,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n ";
             DateTime expectedStartDate = new DateTime(2014, 02, 08);
-            DateTime actualStartDate = new DateTime(0001, 01, 01);
+            DateTime actualStartDate = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1277,7 +1304,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n1600\n37\n88";
             DateTime expectedStartDate = new DateTime(2014, 02, 08);
-            DateTime actualStartDate = new DateTime(0001, 01, 01);
+            DateTime actualStartDate = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1299,7 +1326,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "N\n";
             DateTime expectedStartDate = new DateTime(2014, 02, 08);
-            DateTime actualStartDate = new DateTime(0001, 01, 01);
+            DateTime actualStartDate = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1322,7 +1349,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nN";
             DateTime expectedStartDate = new DateTime(2014, 02, 08);
-            DateTime actualStartDate = new DateTime(0001, 01, 01);
+            DateTime actualStartDate = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1345,7 +1372,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nY\n2013\n01\n25";
             DateTime expectedStartDate = new DateTime(2013, 01, 25);
-            DateTime actualStartDate = new DateTime(0001, 01, 01);
+            DateTime actualStartDate = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1360,15 +1387,18 @@ namespace TheCompany.Tests
             }
         }
 
-        // ======================================= ModifyContractStopDate Tests =======================================
+        // --------------------------------------
+        //      ModifyContractStopDate Tests
+        // --------------------------------------
+
         [TestMethod]
         // normal
         public void ModifyContractStopDate_YesWithValidStopDate_UpdatesStopDate()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\n2013\n07\n27";
-            DateTime expectedStopDate = new DateTime(2013, 07, 27);
-            DateTime actualStopDate = new DateTime(0001, 01, 01);
+            String dataToPassIn = "Y\n2014\n10\n27";
+            DateTime expectedStopDate = new DateTime(2014, 10, 27);
+            DateTime actualStopDate = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1390,7 +1420,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n ";
             DateTime expectedStopDate = new DateTime(2014, 09, 12);
-            DateTime actualStopDate = new DateTime(0001, 01, 01);
+            DateTime actualStopDate = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1412,7 +1442,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n1400\n90\n36";
             DateTime expectedStopDate = new DateTime(2014, 09, 12);
-            DateTime actualStopDate = new DateTime(0001, 01, 01);
+            DateTime actualStopDate = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1434,7 +1464,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "N\n";
             DateTime expectedStopDate = new DateTime(2014, 09, 12);
-            DateTime actualStopDate = new DateTime(0001, 01, 01);
+            DateTime actualStopDate = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1456,7 +1486,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nN";
             DateTime expectedStopDate = new DateTime(2014, 09, 12);
-            DateTime actualStopDate = new DateTime(0001, 01, 01);
+            DateTime actualStopDate = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1478,7 +1508,7 @@ namespace TheCompany.Tests
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nY\n2014\n08\n01";
             DateTime expectedStopDate = new DateTime(2014, 08, 01);
-            DateTime actualStopDate = new DateTime(0001, 01, 01);
+            DateTime actualStopDate = new DateTime();
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1493,14 +1523,17 @@ namespace TheCompany.Tests
             }
         }
 
-        // ======================================= ModifyFixedContractAmount Tests =======================================
+        // -----------------------------------------
+        //      ModifyFixedContractAmount Tests
+        // -----------------------------------------
+
         [TestMethod]
         // normal
         public void ModifyFixedContractAmount_YesWithValidContractAmount_UpdatesContractAmount()
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n30000";
-            float actualContractAmount = 0;
+            double actualContractAmount = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1521,7 +1554,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n ";
-            float actualContractAmount = 0;
+            double actualContractAmount = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1542,7 +1575,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n-123456";
-            float actualContractAmount = 0;
+            double actualContractAmount = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1563,7 +1596,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "N\n";
-            float actualContractAmount = 0;
+            double actualContractAmount = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1584,7 +1617,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nN";
-            float actualContractAmount = 0;
+            double actualContractAmount = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1605,7 +1638,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nY\n15000";
-            float actualContractAmount = 0;
+            double actualContractAmount = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1620,8 +1653,10 @@ namespace TheCompany.Tests
             }
         }
 
+        // ----------------------------
+        //      ModifySeason Tests
+        // ----------------------------
 
-        // ======================================= ModifySeason Tests =======================================
         [TestMethod]
         // normal
         public void ModifySeason_YesWithValidSeason_UpdatesSeason()
@@ -1748,15 +1783,17 @@ namespace TheCompany.Tests
             }
         }
 
+        // ------------------------------
+        //      ModifyPiecePay Tests
+        // ------------------------------
 
-        // ======================================= ModifyPiecePay Tests =======================================
         [TestMethod]
         // normal
         public void ModifyPiecePay_YesWithValidPiecePay_UpdatesPiecePay()
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n25";
-            float actualPiecePay = 0;
+            double actualPiecePay = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1777,7 +1814,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n ";
-            float actualPiecePay = 0;
+            double actualPiecePay = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1798,7 +1835,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n-10";
-            float actualPiecePay = 0;
+            double actualPiecePay = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1819,7 +1856,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "N\n";
-            float actualPiecePay = 0;
+            double actualPiecePay = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1840,7 +1877,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nN";
-            float actualPiecePay = 0;
+            double actualPiecePay = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1861,7 +1898,7 @@ namespace TheCompany.Tests
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "no and yes\nY\n30";
-            float actualPiecePay = 0;
+            double actualPiecePay = 0;
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1876,14 +1913,16 @@ namespace TheCompany.Tests
             }
         }
 
-        // ======================================= ModifyEmployee Tests =======================================
-        // more like integration of all the modify methods
+        // ------------------------------
+        //      ModifyEmployee Tests
+        // ------------------------------
+
         [TestMethod]
         // normal
         public void ModifyEmployee_ValidFirstName_ModifiesEmployeeFirstName()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n432098933\nY\n1990\n09\n20\nN\nY\n2012\n10\n11\nY\n2012\n12\n02\nY\n70000\n";
+            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n";
             String actualFirstName = "";
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -1904,7 +1943,7 @@ namespace TheCompany.Tests
         public void ModifyEmployee_ValidLastName_ModifiesEmployeeLastName()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n432098933\nY\n1990\n09\n20\nN\nY\n2012\n10\n11\nY\n2012\n12\n02\nY\n70000\n";
+            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n";
             String actualLastName = "";
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -1925,7 +1964,7 @@ namespace TheCompany.Tests
         public void ModifyEmployee_ValidSIN_ModifiesEmployeeSIN()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n432098933\nY\n1990\n09\n20\nN\nY\n2012\n10\n11\nY\n2012\n12\n02\nY\n70000\n";
+            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n";
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -1936,7 +1975,7 @@ namespace TheCompany.Tests
                 privateObject.Invoke("ModifyEmployee", FTEmployee);
                 // Check if the expected result and actual result are the same
                 int actualSIN = FTEmployee.GetSocialInsuranceNumber();
-                Assert.AreEqual(432098933, actualSIN);
+                Assert.AreEqual(902098933, actualSIN);
             }
         }
 
@@ -1945,7 +1984,7 @@ namespace TheCompany.Tests
         public void ModifyEmployee_ValidDOB_ModifiesEmployeeDOB()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n432098933\nY\n1990\n09\n20\nN\nY\n2012\n10\n11\nY\n2012\n12\n02\nY\n70000\n";
+            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n";
             DateTime expectedDOB = new DateTime(1990, 09, 20);
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -1966,7 +2005,7 @@ namespace TheCompany.Tests
         public void ModifyEmployee_ValidType_ModifiesFTEmployeeToPTEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n490398933\nY\n1990\n09\n09\nY\nPT\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n35\n";
+            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n900398933\nY\n1990\n09\n09\nY\nPT\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n35\n";
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -2027,7 +2066,7 @@ namespace TheCompany.Tests
         public void ModifyEmployee_ValidType_ModifiesSNEmployeeToFTEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\nJake\nY\nWilliams\nY\n992198934\nY\n1990\n09\n08\nY\nFT\nY\n2010\n03\n12\nY\n2014\n05\n23\nY\n85000\n";
+            String dataToPassIn = "Y\nJake\nY\nWilliams\nY\n902198934\nY\n1990\n09\n08\nY\nFT\nY\n2010\n03\n12\nY\n2014\n05\n23\nY\n85000\n";
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -2049,8 +2088,8 @@ namespace TheCompany.Tests
         public void ModifyEmployee_ValidDateOfHire_ModifiesFulltimeEmployeeDateOfHire()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n432098933\nY\n1990\n09\n20\nN\nY\n2012\n10\n11\nY\n2012\n12\n02\nY\n70000\n";
-            DateTime expectedDOH = new DateTime(2012, 10, 11);
+            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n";
+            DateTime expectedDOH = new DateTime(2011, 10, 11);
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -2071,7 +2110,7 @@ namespace TheCompany.Tests
         public void ModifyEmployee_ValidDateOfTermination_ModifiesFulltimeEmployeeDateOfTermination()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n432098933\nY\n1990\n09\n20\nN\nY\n2012\n10\n11\nY\n2012\n12\n02\nY\n70000\n";
+            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n900989332\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n";
             DateTime expectedDOT = new DateTime(2012, 12, 02);
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -2092,7 +2131,7 @@ namespace TheCompany.Tests
         public void ModifyEmployee_ValidSalary_ModifiesEmployeeSalary()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n432098933\nY\n1990\n09\n20\nN\nY\n2012\n10\n11\nY\n2012\n12\n02\nY\n70000\n";
+            String dataToPassIn = "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n";
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -2102,7 +2141,7 @@ namespace TheCompany.Tests
                 // Execute the method that is being tested
                 privateObject.Invoke("ModifyEmployee", FTEmployee);
                 // Check if the expected result and actual result are the same
-                float actualSalary = FTEmployee.GetSalary();
+                double actualSalary = FTEmployee.GetSalary();
                 Assert.AreEqual(70000, actualSalary);
             }
         }
@@ -2115,7 +2154,7 @@ namespace TheCompany.Tests
         public void ModifyEmployee_ValidDateOfHire_ModifiesParttimeEmployeeDateOfHire()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\nMarcus\nY\nSmithy\nY\n490398988\nY\n1990\n09\n09\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n35\n";
+            String dataToPassIn = "Y\nMarcus\nY\nSmithy\nY\n900398988\nY\n1990\n09\n09\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n35\n";
             DateTime expectedDOH = new DateTime(2011, 10, 11);
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -2136,7 +2175,7 @@ namespace TheCompany.Tests
         public void ModifyEmployee_ValidDateOfTermination_ModifiesParttimeEmployeeDateOfTermination()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\nMarcus\nY\nSmithy\nY\n490398988\nY\n1990\n09\n09\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n35\n";
+            String dataToPassIn = "Y\nMarcus\nY\nSmithy\nY\n900398988\nY\n1990\n09\n09\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n35\n";
             DateTime expectedDOT = new DateTime(2012, 12, 02);
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -2158,7 +2197,7 @@ namespace TheCompany.Tests
         public void ModifyEmployee_ValidHourlyRate_ModifiesEmployeeHourlyRate()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\nMarcus\nY\nSmithy\nY\n490398988\nY\n1990\n09\n09\nN\nY\n2010\n10\n11\nY\n2012\n12\n02\nY\n35\n";
+            String dataToPassIn = "Y\nMarcus\nY\nSmithy\nY\n900398988\nY\n1990\n09\n09\nN\nY\n2010\n10\n11\nY\n2012\n12\n02\nY\n35\n";
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -2168,15 +2207,11 @@ namespace TheCompany.Tests
                 // Execute the method that is being tested
                 privateObject.Invoke("ModifyEmployee", PTEmployee);
                 // Check if the expected result and actual result are the same
-                float actualHourlyRate = PTEmployee.GetHourlyRate();
+                double actualHourlyRate = PTEmployee.GetHourlyRate();
                 Assert.AreEqual(35, actualHourlyRate);
             }
         }
 
-
-
-
-     
         [TestMethod]
         // normal
         public void ModifyEmployee_ValidContractStartDate_ModifiesEmployeeContractStartDate()
@@ -2234,19 +2269,17 @@ namespace TheCompany.Tests
                 // Execute the method that is being tested
                 privateObject.Invoke("ModifyEmployee", CTEmployee);
                 // Check if the expected result and actual result are the same
-                float actualFixedContractAmount = CTEmployee.GetFixedContractAmount();
+                double actualFixedContractAmount = CTEmployee.GetFixedContractAmount();
                 Assert.AreEqual(10000, actualFixedContractAmount);
             }
         }
-
-
 
         [TestMethod]
         // normal
         public void ModifyEmployee_ValidSeason_ModifiesEmployeeSeason()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\nJacob\nY\nWilliams\nY\n432098988\nY\n1990\n09\n20\nN\nY\nFall\nY\n15000";
+            String dataToPassIn = "Y\nJacob\nY\nWilliams\nY\n902098988\nY\n1990\n09\n20\nN\nY\nFall\nY\n15000";
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -2266,7 +2299,7 @@ namespace TheCompany.Tests
         public void ModifyEmployee_ValidPiecePay_ModifiesEmployeePiecePay()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\nJacob\nY\nWilliams\nY\n432098988\nY\n1990\n09\n20\nN\nY\nFall\nY\n15000";
+            String dataToPassIn = "Y\nJacob\nY\nWilliams\nY\n902098988\nY\n1990\n09\n20\nN\nY\nFall\nY\n15000";
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -2276,7 +2309,7 @@ namespace TheCompany.Tests
                 // Execute the method that is being tested
                 privateObject.Invoke("ModifyEmployee", SNEmployee);
                 // Check if the expected result and actual result are the same
-                float actualPiecePay = SNEmployee.GetPiecePay();
+                double actualPiecePay = SNEmployee.GetPiecePay();
                 Assert.AreEqual(15000, actualPiecePay);
             }
         }

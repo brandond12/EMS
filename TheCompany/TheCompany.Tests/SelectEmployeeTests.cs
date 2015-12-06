@@ -29,13 +29,16 @@ namespace TheCompany.Tests
             employeeRepo = new Container();
             DateTime dateOfBirth = new DateTime(1990, 09, 10);
             DateTime dateOfHire = new DateTime(2010, 10, 11);
-            DateTime dateOfTermination = new DateTime(0001, 01, 01);
-            FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 212398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+            DateTime dateOfTermination = new DateTime(2013, 03, 04);
+            FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
             // Add the employee to a list
             employeeRepo.AddEmployeeToList(FTEmployee);
         }
 
-        // ======================================= SelectEmployee Tests =======================================
+        // -----------------------------
+        //      SelectEmployee Test
+        // -----------------------------
+
         [TestMethod]
         // normal
         public void SelectEmployee_GoesThroughListAndYes_SelectsValidEmployee()
@@ -131,8 +134,10 @@ namespace TheCompany.Tests
             Assert.AreEqual("", actualEmployee.GetFirstName());
         }
 
+        // -----------------------------------------
+        //      SelectEmployeeByFirstName Tests
+        // -----------------------------------------
 
-        // ======================================= SelectEmployeeByFirstName Tests =======================================
         [TestMethod]
         // normal
         public void SelectEmployeeByFirstName_ValidFirstNameWithYes_SelectsValidEmployee()
@@ -233,7 +238,10 @@ namespace TheCompany.Tests
             }
         }
 
-        // ======================================= SelectEmployeeByFullName Tests =======================================
+        // ----------------------------------------
+        //      SelectEmployeeByFullName Tests
+        // ----------------------------------------
+        
         [TestMethod]
         // normal
         public void SelectEmployeeByFullName_ValidFullNameWithYes_SelectsValidEmployee()
@@ -334,7 +342,10 @@ namespace TheCompany.Tests
             }
         }
 
-        // ======================================= SelectEmployeeBySIN Tests =======================================
+        // -----------------------------------
+        //      SelectEmployeeBySIN Tests
+        // -----------------------------------
+        
         [TestMethod]
         // normal
         public void SelectEmployeeBySIN_ValidSINWithYes_SelectsValidEmployee()
@@ -349,7 +360,7 @@ namespace TheCompany.Tests
             {
                 Console.SetIn(input);
                 // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeBySIN", 212398402);
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeBySIN", 902398402);
                 // Check if the expected result and actual result are the same
                 Assert.AreEqual("Sam", actualEmployee.GetFirstName());
             }
@@ -369,7 +380,7 @@ namespace TheCompany.Tests
             {
                 Console.SetIn(input);
                 // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeBySIN", 212398402);
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeBySIN", 902398402);
                 // Check if the expected result and actual result are the same
                 Assert.AreEqual("", actualEmployee.GetFirstName());
             }
@@ -389,7 +400,7 @@ namespace TheCompany.Tests
             {
                 Console.SetIn(input);
                 // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeBySIN", 212398402);
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeBySIN", 902398402);
                 // Check if the expected result and actual result are the same
                 Assert.AreEqual("Sam", actualEmployee.GetFirstName());
             }
@@ -409,7 +420,7 @@ namespace TheCompany.Tests
             {
                 Console.SetIn(input);
                 // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeBySIN", 212398402);
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeBySIN", 902398402);
                 // Check if the expected result and actual result are the same
                 Assert.AreEqual("", actualEmployee.GetFirstName());
             }
@@ -429,13 +440,16 @@ namespace TheCompany.Tests
             {
                 Console.SetIn(input);
                 // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeBySIN", 173498562);
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeBySIN", 873498562);
                 // Check if the expected result and actual result are the same
                 Assert.AreEqual("", actualEmployee.GetFirstName());
             }
         }
 
-        // ======================================= SelectEmployeeByDOB Tests =======================================
+        // -----------------------------------
+        //      SelectEmployeeByDOB Tests
+        // -----------------------------------
+
         [TestMethod]
         // normal
         public void SelectEmployeeByDOB_ValidDOBWithYes_SelectsValidEmployee()
@@ -542,7 +556,10 @@ namespace TheCompany.Tests
             }
         }
 
-        // ======================================= IsThisTheDesiredEmployee Tests =======================================
+        // ----------------------------------------
+        //      IsThisTheDesiredEmployee Tests
+        // ----------------------------------------
+        
         [TestMethod]
         // normal
         public void IsThisTheDesiredEmployee_ValidEmployeeWithYes_ReturnsValidEmployee()
@@ -623,7 +640,9 @@ namespace TheCompany.Tests
             }
         }
 
-        // ======================================= DisplayEmployeeDetails Tests =======================================
+        // ---------------------------------------
+        //      DisplayEmployeeDetails Tests
+        // ---------------------------------------
         // have to have special instructions here stating that the unit tests can't test that the details being displayed
         // to the user are correct, so they have to look at the test output
         [TestMethod]
@@ -676,8 +695,8 @@ namespace TheCompany.Tests
             var privateObject = new PrivateObject(employeeRepo);
             DateTime dateOfBirth = new DateTime(1987, 06, 22);
             DateTime dateOfHire = new DateTime(2013, 04, 12);
-            DateTime dateOfTermination = new DateTime(0001, 01, 01);
-            ParttimeEmployee PTEmployee = new ParttimeEmployee("Mark", "Smith", 432098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+            DateTime dateOfTermination = new DateTime(2015, 06, 17);
+            ParttimeEmployee PTEmployee = new ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
           
             // Set the console to read input from the input data string
             using (var input = new StringReader(dataToPassIn))
@@ -700,8 +719,8 @@ namespace TheCompany.Tests
             var privateObject = new PrivateObject(employeeRepo);
             DateTime dateOfBirth = new DateTime(1987, 06, 22);
             DateTime dateOfHire = new DateTime(2013, 04, 12);
-            DateTime dateOfTermination = new DateTime(0001, 01, 01);
-            ParttimeEmployee PTEmployee = new ParttimeEmployee("Mark", "Smith", 432098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+            DateTime dateOfTermination = new DateTime(2015, 06, 17);
+            ParttimeEmployee PTEmployee = new ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
 
             // Set the console to read input from the input data string
             using (var input = new StringReader(dataToPassIn))
@@ -772,7 +791,7 @@ namespace TheCompany.Tests
             String actualString = "";
             var privateObject = new PrivateObject(employeeRepo);
             DateTime dateOfBirth = new DateTime(1991, 03, 18);
-            SeasonalEmployee SNEmployee = new SeasonalEmployee("Jake", "Williams", 432098933, dateOfBirth, "Summer", 20);
+            SeasonalEmployee SNEmployee = new SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
 
             // Set the console to read input from the input data string
             using (var input = new StringReader(dataToPassIn))
@@ -794,7 +813,7 @@ namespace TheCompany.Tests
             String actualString = "";
             var privateObject = new PrivateObject(employeeRepo);
             DateTime dateOfBirth = new DateTime(1991, 03, 18);
-            SeasonalEmployee SNEmployee = new SeasonalEmployee("Jake", "Williams", 432098933, dateOfBirth, "Summer", 20);
+            SeasonalEmployee SNEmployee = new SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
 
             // Set the console to read input from the input data string
             using (var input = new StringReader(dataToPassIn))
@@ -815,7 +834,7 @@ namespace TheCompany.Tests
             String actualString = "";
             var privateObject = new PrivateObject(employeeRepo);
             DateTime dateOfBirth = new DateTime(1987, 11, 29);
-            Employee employee = new Employee("Janet", "Moore", 122046045, dateOfBirth, "");
+            Employee employee = new Employee("Janet", "Moore", 872046045, dateOfBirth, "");
 
             // Execute the method that is being tested
             actualString = (String)privateObject.Invoke("DisplayEmployeeDetails", employee);

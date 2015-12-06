@@ -30,8 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AllEmployees, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="AllEmployees">
       <HintPath>..\..\AllEmployees\AllEmployees\bin\Debug\AllEmployees.dll</HintPath>
     </Reference>
     <Reference Include="Presentation">
