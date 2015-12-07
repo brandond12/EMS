@@ -7,13 +7,6 @@ namespace MyAllEmployee.Tests
     [TestClass]
     public class FullTimeEmployeeTests
     {
-        [TestMethod]
-        [TestCategory("FulltimeEmployee Base Constructor")]
-        //[ExpectedException(typeof(FailedConstructorException))]
-        public void BaseConstructorTest()
-        {
-            FulltimeEmployee employee = new FulltimeEmployee();
-        }
 
         /*
          * Constructor with names Tests

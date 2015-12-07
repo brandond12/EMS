@@ -148,7 +148,6 @@ namespace MyAllEmployee.Tests
             bool retVal = employee.SetPiecePay(10);
             Assert.IsTrue(retVal);
             Assert.AreEqual(employee.GetPiecePay(), 10);
-
         }
 
         [TestMethod]

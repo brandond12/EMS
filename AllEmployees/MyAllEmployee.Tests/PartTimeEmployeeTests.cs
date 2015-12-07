@@ -7,13 +7,6 @@ namespace MyAllEmployee.Tests
     [TestClass]
     public class ParttimeEmployeeTests
     {
-        [TestMethod]
-        [TestCategory("ParttimeEmployee Base Constructor")]
-        public void BaseConstructorTest()
-        {
-            ParttimeEmployee employee = new ParttimeEmployee();
-        }
-
         /*
          * Constructor with names Tests
         */

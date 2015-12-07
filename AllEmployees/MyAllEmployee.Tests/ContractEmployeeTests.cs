@@ -7,13 +7,6 @@ namespace MyAllEmployee.Tests
     [TestClass]
     public class ContractEmployeeTests
     {
-        [TestMethod]
-        [TestCategory("ContractEmployee Base Constructor")]
-        public void BaseConstructorTest()
-        {
-            ContractEmployee employee = new ContractEmployee();
-        }
-
         /*
          * Constructor with names Tests
         */
@@ -93,7 +86,7 @@ namespace MyAllEmployee.Tests
         {
             DateTime DOB = new DateTime(1954, 08, 20);
             DateTime DOH = new DateTime(1994, 09, 03);
-            DateTime DOT = new DateTime(2014, 12, 23);
+            DateTime DOT = new DateTime();
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 34.98);
         }
 
@@ -126,8 +119,8 @@ namespace MyAllEmployee.Tests
         {
             DateTime DOB = new DateTime(1993, 11, 14);
             DateTime DOH = new DateTime(2012, 10, 19);
-            DateTime DOT = new DateTime(2010, 07, 29);
-            ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18);
+            DateTime DOT = new DateTime(1004, 07, 29);
+            ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
         }
 
         [TestMethod]
