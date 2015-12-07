@@ -13,6 +13,30 @@ namespace FileIOTests
         /// -----------------------------
         ///      WriteRecord tests
         /// -----------------------------
+        /// 
+
+        /**
+        * \brief The unit test's purpose is to test if the method WriteRecord
+        * will write a valid contract employee to the file.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is WriteRecord.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is normal/functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.WriteRecord will write "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.WriteRecord will wrote "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
         public void writeGoodDataToEmptyFileCT()
@@ -30,6 +54,28 @@ namespace FileIOTests
             Assert.IsTrue(rawEmployeeRec == (CTEmp.ToString() + "\r\n" ));
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method WriteRecord
+        * will write a valid full time employee to the file.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is WriteRecord.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is normal/functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.WriteRecord will write "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.WriteRecord will wrote "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
         public void writeGoodDataToEmptyFileFT()
@@ -47,6 +93,28 @@ namespace FileIOTests
             Assert.IsTrue(rawEmployeeRec == (FTEmp.ToString() + "\r\n"));
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method WriteRecord
+        * will write a valid part time employee to the file.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is WriteRecord.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is normal/functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.WriteRecord will write "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.WriteRecord will wrote "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
         public void writeGoodDataToEmptyFilePT()
