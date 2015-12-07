@@ -566,7 +566,7 @@ namespace TheCompany
                 {
                     // Create a full-time employee object
                     AllEmployees.FulltimeEmployee FTEmployee = new AllEmployees.FulltimeEmployee(employee.GetFirstName(), employee.GetLastName(),
-                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(), new DateTime(), 1);
+                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(2000, 01, 01), new DateTime(), 1);
 
                     // Allow the user to modify the properties for the full-time employee
                     ModifyDateOfHire(FTEmployee);
@@ -582,7 +582,7 @@ namespace TheCompany
                 {
                     // Create a part-time employee object
                     AllEmployees.ParttimeEmployee PTEmployee = new AllEmployees.ParttimeEmployee(employee.GetFirstName(), employee.GetLastName(),
-                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(), new DateTime(), 1);
+                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(2000, 01, 01), new DateTime(), 1);
 
                     // Allow the user to modify the properties for the part-time employee
                     ModifyDateOfHire(PTEmployee);
@@ -598,7 +598,7 @@ namespace TheCompany
                 {
                     // Create a contract employee object
                     AllEmployees.ContractEmployee CTEmployee = new AllEmployees.ContractEmployee(employee.GetFirstName(), employee.GetLastName(),
-                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(), new DateTime(), 1);
+                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(2000, 01, 01), new DateTime(2016, 01, 01), 1);
 
                     // Allow the user to modify the properties for the contract employee
                     ModifyContractStartDate(CTEmployee);
@@ -1684,119 +1684,6 @@ namespace TheCompany
                         EmployeeMatch = false;
                     }
                 }
-
-                else if (employeeParameters.GetFirstName() != "")
-                {
-                    if (employeeParameters.GetFirstName() != employee.GetFirstName())
-                    {
-                        EmployeeMatch = false;
-                    }
-                }
-
-                else if (employeeParameters.GetLastName() != "")
-                {
-                    if (employeeParameters.GetLastName() != employee.GetLastName())
-                    {
-                        EmployeeMatch = false;
-                    }
-                }
-
-                else if (employeeParameters.GetSocialInsuranceNumber() != 0)
-                {
-                    if (employeeParameters.GetSocialInsuranceNumber() != employee.GetSocialInsuranceNumber())
-                    {
-                        EmployeeMatch = false;
-                    }
-                }
-                //full time employee checks
-                else if (((FulltimeEmployee)employeeParameters).GetDateOfHireString() != "0001-01-01")
-                {
-                    if (DateTime.Compare(((FulltimeEmployee)employeeParameters).GetDateOfHire(), ((FulltimeEmployee)employee).GetDateOfHire()) != 0)
-                    {
-                        EmployeeMatch = false;
-                    }
-                }
-
-                else if (((FulltimeEmployee)employeeParameters).GetDateOfTerminationString() != "0001-01-01")
-                {
-                    if (DateTime.Compare(((FulltimeEmployee)employeeParameters).GetDateOfTermination(), ((FulltimeEmployee)employee).GetDateOfTermination()) != 0)
-                    {
-                        EmployeeMatch = false;
-                    }
-                }
-
-                else if (((FulltimeEmployee)employeeParameters).GetSalary() != 0)
-                {
-                    if (((FulltimeEmployee)employeeParameters).GetSalary() != ((FulltimeEmployee)employee).GetSalary())
-                    {
-                        EmployeeMatch = false;
-                    }
-                }
-                //part time employee checks
-                else if (((ParttimeEmployee)employeeParameters).GetDateOfHireString() != "0001-01-01")
-                {
-                    if (DateTime.Compare(((ParttimeEmployee)employeeParameters).GetDateOfHire(), ((ParttimeEmployee)employee).GetDateOfHire()) != 0)
-                    {
-                        EmployeeMatch = false;
-                    }
-                }
-
-                else if (((ParttimeEmployee)employeeParameters).GetDateOfTerminationString() != "0001-01-01")
-                {
-                    if (DateTime.Compare(((ParttimeEmployee)employeeParameters).GetDateOfTermination(), ((ParttimeEmployee)employee).GetDateOfTermination()) != 0)
-                    {
-                        EmployeeMatch = false;
-                    }
-                }
-
-                else if (((ParttimeEmployee)employeeParameters).GetHourlyRate() != 0)
-                {
-                    if (((ParttimeEmployee)employeeParameters).GetHourlyRate() != ((ParttimeEmployee)employee).GetHourlyRate())
-                    {
-                        EmployeeMatch = false;
-                    }
-                }
-                //Contract employee checks
-                else if (((ContractEmployee)employeeParameters).GetContractStartDateString() != "0001-01-01")
-                {
-                    if (DateTime.Compare(((ContractEmployee)employeeParameters).GetContractStartDate(), ((ContractEmployee)employee).GetContractStartDate()) != 0)
-                    {
-                        EmployeeMatch = false;
-                    }
-                }
-
-                else if (((ContractEmployee)employeeParameters).GetContractStopDateString() != "0001-01-01")
-                {
-                    if (DateTime.Compare(((ContractEmployee)employeeParameters).GetContractStopDate(), ((ContractEmployee)employee).GetContractStopDate()) != 0)
-                    {
-                        EmployeeMatch = false;
-                    }
-                }
-
-                else if (((ContractEmployee)employeeParameters).GetFixedContractAmount() != 0)
-                {
-                    if (((ContractEmployee)employeeParameters).GetFixedContractAmount() != ((ContractEmployee)employee).GetFixedContractAmount())
-                    {
-                        EmployeeMatch = false;
-                    }
-                }
-                //Seasonal employee checks
-                else if (((SeasonalEmployee)employeeParameters).GetSeason() != "")
-                {
-                    if (((SeasonalEmployee)employeeParameters).GetSeason() != ((SeasonalEmployee)employee).GetSeason())
-                    {
-                        EmployeeMatch = false;
-                    }
-                }
-
-                else if (((SeasonalEmployee)employeeParameters).GetPiecePay() != 0)
-                {
-                    if (((SeasonalEmployee)employeeParameters).GetPiecePay() != ((SeasonalEmployee)employee).GetPiecePay())
-                    {
-                        EmployeeMatch = false;
-                    }
-                }
-
                 if (EmployeeMatch == true)
                 {
                     selectedEmployee = IsThisTheDesiredEmployee(employee);
