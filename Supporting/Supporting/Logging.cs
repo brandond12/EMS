@@ -39,18 +39,18 @@ namespace Supporting
         {
             //write line to a file name and specify the string
             //write a log to a file, in test, open it read compare to what you think should be in there
-
+            string filePath = "..\\..\\..\\..\\ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log";
             StreamWriter log;
             String timeStamp = DateTime.Now.ToString();
 
-            if (!File.Exists("ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log"))
+            if (!File.Exists(filePath))
             {
-                log = new StreamWriter("ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log");
+                log = new StreamWriter(filePath);
             }
 
             else
             {
-                log = File.AppendText("ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log");
+                log = File.AppendText(filePath);
             }
 
             string formattedS = timeStamp + " " +"[" + className + "." + methodName + "] " + eventDetails;
