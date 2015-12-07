@@ -1670,46 +1670,134 @@ namespace TheCompany
         * 
         * \return employee - <b>AllEmployees.Employee</b> - The selected employee
         */
-        public AllEmployees.Employee SelectEmployee()
+        public AllEmployees.Employee SelectEmployee(Employee employeeParameters)
         {
             AllEmployees.Employee selectedEmployee = new AllEmployees.Employee();   // A variable to save the selected employee
-
+            bool EmployeeMatch = true;
             // Go through all employees in the list
             foreach (AllEmployees.Employee employee in listOfEmployees)
             {
-                selectedEmployee = IsThisTheDesiredEmployee(employee);
-                // Check if the returned employee is the employee the user selected
-                if ((selectedEmployee.GetFirstName() != "") && (selectedEmployee.GetLastName() != ""))
+                if (employeeParameters.GetEmployeeType() != "")
                 {
-                    /* If properties of the selectedEmployee aren't blank, 
-                    * that means this is the selected employee */
-                    break;
+                    if (employeeParameters.GetEmployeeType() != employee.GetEmployeeType())
+                    {
+                        EmployeeMatch = false;
+                    }
                 }
-            }
-            return selectedEmployee;    // Return the selected employee
-        }
 
-        /**
-        * \brief The SelectEmployeeByFirstName method is used to select an employee from a list. 
-        * The method loops through an employee list and displays each employee individually to the 
-        * user that has a first name that matches the firstName parameter. The user will decide if 
-        * they want to select a displayed employee or not.
-        * 
-        * \details <b>Details</b>
-        * 
-        * \param firstName - <b>string</b> - The first name of the employee to select
-        * 
-        * \return employee - <b>AllEmployees.Employee</b> - The selected employee
-        */
-        public AllEmployees.Employee SelectEmployeeByFirstName(string firstName)
-        {
-            AllEmployees.Employee selectedEmployee = new AllEmployees.Employee();   // A variable to save the selected employee
+                else if (employeeParameters.GetFirstName() != "")
+                {
+                    if (employeeParameters.GetFirstName() != employee.GetFirstName())
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
 
-            // Go through all employees in the list
-            foreach (AllEmployees.Employee employee in listOfEmployees)
-            {
-                // Only loop through employees that have a first name that matches the firstName parameter
-                if (employee.GetFirstName() == firstName)
+                else if (employeeParameters.GetLastName() != "")
+                {
+                    if (employeeParameters.GetLastName() != employee.GetLastName())
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+
+                else if (employeeParameters.GetSocialInsuranceNumber() != 0)
+                {
+                    if (employeeParameters.GetSocialInsuranceNumber() != employee.GetSocialInsuranceNumber())
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+                //full time employee checks
+                else if (((FulltimeEmployee)employeeParameters).GetDateOfHireString() != "0001-01-01")
+                {
+                    if (DateTime.Compare(((FulltimeEmployee)employeeParameters).GetDateOfHire(), ((FulltimeEmployee)employee).GetDateOfHire()) != 0)
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+
+                else if (((FulltimeEmployee)employeeParameters).GetDateOfTerminationString() != "0001-01-01")
+                {
+                    if (DateTime.Compare(((FulltimeEmployee)employeeParameters).GetDateOfTermination(), ((FulltimeEmployee)employee).GetDateOfTermination()) != 0)
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+
+                else if (((FulltimeEmployee)employeeParameters).GetSalary() != 0)
+                {
+                    if (((FulltimeEmployee)employeeParameters).GetSalary() != ((FulltimeEmployee)employee).GetSalary())
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+                //part time employee checks
+                else if (((ParttimeEmployee)employeeParameters).GetDateOfHireString() != "0001-01-01")
+                {
+                    if (DateTime.Compare(((ParttimeEmployee)employeeParameters).GetDateOfHire(), ((ParttimeEmployee)employee).GetDateOfHire()) != 0)
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+
+                else if (((ParttimeEmployee)employeeParameters).GetDateOfTerminationString() != "0001-01-01")
+                {
+                    if (DateTime.Compare(((ParttimeEmployee)employeeParameters).GetDateOfTermination(), ((ParttimeEmployee)employee).GetDateOfTermination()) != 0)
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+
+                else if (((ParttimeEmployee)employeeParameters).GetHourlyRate() != 0)
+                {
+                    if (((ParttimeEmployee)employeeParameters).GetHourlyRate() != ((ParttimeEmployee)employee).GetHourlyRate())
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+                //Contract employee checks
+                else if (((ContractEmployee)employeeParameters).GetContractStartDateString() != "0001-01-01")
+                {
+                    if (DateTime.Compare(((ContractEmployee)employeeParameters).GetContractStartDate(), ((ContractEmployee)employee).GetContractStartDate()) != 0)
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+
+                else if (((ContractEmployee)employeeParameters).GetContractStopDateString() != "0001-01-01")
+                {
+                    if (DateTime.Compare(((ContractEmployee)employeeParameters).GetContractStopDate(), ((ContractEmployee)employee).GetContractStopDate()) != 0)
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+
+                else if (((ContractEmployee)employeeParameters).GetFixedContractAmount() != 0)
+                {
+                    if (((ContractEmployee)employeeParameters).GetFixedContractAmount() != ((ContractEmployee)employee).GetFixedContractAmount())
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+                //Seasonal employee checks
+                else if (((SeasonalEmployee)employeeParameters).GetSeason() != "")
+                {
+                    if (((SeasonalEmployee)employeeParameters).GetSeason() != ((SeasonalEmployee)employee).GetSeason())
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+
+                else if (((SeasonalEmployee)employeeParameters).GetPiecePay() != 0)
+                {
+                    if (((SeasonalEmployee)employeeParameters).GetPiecePay() != ((SeasonalEmployee)employee).GetPiecePay())
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+
+                if (EmployeeMatch == true)
                 {
                     selectedEmployee = IsThisTheDesiredEmployee(employee);
                     // Check if the returned employee is the employee the user selected
@@ -1724,114 +1812,7 @@ namespace TheCompany
             return selectedEmployee;    // Return the selected employee
         }
 
-        /**
-        * \brief The SelectEmployeeByFullName method is used to select an employee from a list. 
-        * The method loops through an employee list and displays each employee individually to the 
-        * user that has a first name and last name that matches the firstName and lastName parameter. 
-        * The user will decide if they want to select a displayed employee or not.
-        * 
-        * \details <b>Details</b>
-        * 
-        * \param firstName - <b>string</b> - The first name of the employee to select
-        * \param lastName - <b>string</b> - The last name of the employee to select
-        * 
-        * \return employee - <b>AllEmployees.Employee</b> - The selected employee
-        */
-        public AllEmployees.Employee SelectEmployeeByFullName(string firstName, string lastName)
-        {
-            AllEmployees.Employee selectedEmployee = new AllEmployees.Employee();   // A variable to save the selected employee
-
-            // Go through all employees in the list
-            foreach (AllEmployees.Employee employee in listOfEmployees)
-            {
-                /* Only loop through employees that have a first name that matches the firstName 
-                * parameter and a last name that matches the last name parameter */
-                if ((employee.GetFirstName() == firstName) && (employee.GetLastName() == lastName))
-                {
-                    selectedEmployee = IsThisTheDesiredEmployee(employee);
-                    // Check if the returned employee is the employee the user selected
-                    if ((selectedEmployee.GetFirstName() != "") && (selectedEmployee.GetLastName() != ""))
-                    {
-                        /* If properties of the selectedEmployee aren't blank, 
-                        * that means this is the selected employee */
-                        break;
-                    }
-                }
-            }
-            return selectedEmployee;    // Return the selected employee
-        }
-
-        /**
-        * \brief The SelectEmployeeBySIN method is used to select an employee from a list. The 
-        * method loops through an employee list and displays each employee individually to the 
-        * user that has a SIN that matches the socialInsuranceNumber parameter. The user will 
-        * decide if they want to select a displayed employee or not.
-        * 
-        * \details <b>Details</b>
-        * 
-        * \param socialInsuranceNumber - <b>int</b> - The SIN of the employee to select
-        * 
-        * \return employee - <b>AllEmployees.Employee</b> - The selected employee
-        */
-        public AllEmployees.Employee SelectEmployeeBySIN(int socialInsuranceNumber)
-        {
-            AllEmployees.Employee selectedEmployee = new AllEmployees.Employee();   // A variable to save the selected employee
-
-            // Go through all employees in the list
-            foreach (AllEmployees.Employee employee in listOfEmployees)
-            {
-                // Only loop through employees that have a first name that matches the firstName parameter
-                if (employee.GetSocialInsuranceNumber() == socialInsuranceNumber)
-                {
-                    selectedEmployee = IsThisTheDesiredEmployee(employee);
-                    // Check if the returned employee is the employee the user selected
-                    if ((selectedEmployee.GetFirstName() != "") && (selectedEmployee.GetLastName() != ""))
-                    {
-                        /* If properties of the selectedEmployee aren't blank, 
-                        * that means this is the selected employee */
-                        break;
-                    }
-                }
-            }
-            return selectedEmployee;    // Return the selected employee
-        }
-
-        /**
-        * \brief The SelectEmployeeByDOB method is used to select an employee from a list. The 
-        * method loops through an employee list and displays each employee individually to the 
-        * user that has a DOB that matches the dateOfBirth parameter. The user will decide if 
-        * they want to select a displayed employee or not.
-        * 
-        * \details <b>Details</b>
-        * 
-        * \param dateOfBirth - <b>DateTime</b> - The DOB of the employee to select
-        * 
-        * \return employee - <b>AllEmployees.Employee</b> - The selected employee
-        */
-        public AllEmployees.Employee SelectEmployeeByDOB(DateTime dateOfBirth)
-        {
-            AllEmployees.Employee selectedEmployee = new AllEmployees.Employee();   // A variable to save the selected employee
-
-            // Go through all employees in the list
-            foreach (AllEmployees.Employee employee in listOfEmployees)
-            {
-                // Only loop through employees that have a date of birth that matches the dateOfBirth parameter
-                if (employee.GetDateOfBirth() == dateOfBirth)
-                {
-                    selectedEmployee = IsThisTheDesiredEmployee(employee);
-                    // Check if the returned employee is the employee the user selected
-                    if ((selectedEmployee.GetFirstName() != "") && (selectedEmployee.GetLastName() != ""))
-                    {
-                        /* If properties of the selectedEmployee aren't blank, 
-                        * that means this is the selected employee */
-                        break;
-                    }
-                }
-            }
-
-            return selectedEmployee;    // Return the selected employee
-        }
-
+        
         /**
         * \brief The IsThisTheDesiredEmployee method is used to determine if the user wants the 
         * specified employee. An employee's details are displayed to the user, and the user chooses 
