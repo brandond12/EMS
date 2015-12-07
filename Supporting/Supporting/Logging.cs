@@ -22,7 +22,6 @@ namespace Supporting
     /// \author <i>Jennifer Klimova</i>
     public static class Logging
     {
-
         /**
         * \brief The LogEvent method will log each step the user takes. 
         * 
@@ -46,22 +45,17 @@ namespace Supporting
 
             if (!File.Exists("ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log"))
             {
-
                 log = new StreamWriter("ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log");
-
             }
 
             else
             {
-
                 log = File.AppendText("ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log");
-
             }
 
             string formattedS = timeStamp + " " +"[" + className + "." + methodName + "] " + eventDetails;
 
             log.WriteLine(formattedS);
-
             log.Close();
         } 
     }
