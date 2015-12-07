@@ -1,0 +1,9 @@
+C:\SETRepo\trunk\EMS\trunk\Supporting\FileIO.Tests\obj\Debug\FileIOTests.csprojResolveAssemblyReference.cache
+C:\SETRepo\trunk\EMS\trunk\Supporting\FileIO.Tests\bin\Debug\FileIO.Tests.dll
+C:\SETRepo\trunk\EMS\trunk\Supporting\FileIO.Tests\bin\Debug\FileIO.Tests.pdb
+C:\SETRepo\trunk\EMS\trunk\Supporting\FileIO.Tests\bin\Debug\AllEmployees.dll
+C:\SETRepo\trunk\EMS\trunk\Supporting\FileIO.Tests\bin\Debug\Supporting.dll
+C:\SETRepo\trunk\EMS\trunk\Supporting\FileIO.Tests\bin\Debug\Supporting.pdb
+C:\SETRepo\trunk\EMS\trunk\Supporting\FileIO.Tests\bin\Debug\AllEmployees.pdb
+C:\SETRepo\trunk\EMS\trunk\Supporting\FileIO.Tests\obj\Debug\FileIO.Tests.dll
+C:\SETRepo\trunk\EMS\trunk\Supporting\FileIO.Tests\obj\Debug\FileIO.Tests.pdb
