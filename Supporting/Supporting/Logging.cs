@@ -37,25 +37,30 @@ namespace Supporting
         */
         public static void Log(string className, string methodName, string eventDetails)
         {
-            //write line to a file name and specify the string
-            //write a log to a file, in test, open it read compare to what you think should be in there
-            string filePath = "..\\..\\..\\..\\ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log";
             StreamWriter log;
             String timeStamp = DateTime.Now.ToString();
 
+            string filePath = "..\\..\\..\\..\\ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log";
+            // Check to see if the file exists
             if (!File.Exists(filePath))
             {
+                // If not, create it
                 log = new StreamWriter(filePath);
             }
 
             else
             {
+                // If it does, append
                 log = File.AppendText(filePath);
             }
 
+            // The string which sets up how the log event detail would look like
             string formattedS = timeStamp + " " +"[" + className + "." + methodName + "] " + eventDetails;
 
+            // Writes it to the log
             log.WriteLine(formattedS);
+
+            // Close the log
             log.Close();
         } 
     }
