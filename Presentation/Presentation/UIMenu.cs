@@ -11,7 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TheCompany;
-
+using Supporting;
+using AllEmployees;
 
 namespace Presentation
 {
@@ -108,6 +109,8 @@ namespace Presentation
         */
         private void ShowFileManagementMenu()
         {
+            List<Employee> employeeList = new List<Employee>();
+
             Console.WriteLine("Menu 2 : FILE MANAGEMENT MENU");
             Console.WriteLine("-------------------------------");
             Console.WriteLine("1. Load EMS DBase from file");
@@ -119,10 +122,21 @@ namespace Presentation
             switch (str)
             {
                 case "1":
-                    //load dbs from file
+                    
+                    //nathan returns a list, that contains the employees, i need to send that list to lauren so she can add it to the container class
+                    employeeList = FileIO.ReadAllRecords(@"DBase\DBase.txt");
+                    foreach(Employee emp in employeeList)
+                    {
+                        company.AddEmployeeToList(emp);
+                    }
                     break;
                 case "2":
-                    //save employee
+                    //get a list from lauren, and send it to nathan
+                    employeeList = company.GetEmployeeList();
+                    foreach(Employee emp in employeeList)
+                    {
+                       FileIO.WriteRecord(emp, @"DBase\DBase.txt");
+                    }
                     break;
                 case "9":
                     ShowMainMenu();
@@ -158,7 +172,7 @@ namespace Presentation
             switch (str)
             {
                 case "1":
-                    //display employee
+                    company.DisplayAllEmployees();
                     break;
                 case "2":
                     ShowEmployeeDetailsMenu();
@@ -190,56 +204,243 @@ namespace Presentation
         */
         private void ShowEmployeeDetailsMenu()
         {
-            Console.WriteLine("Menu 4 : EMPLOYEE DETAILS MENU");
-            Console.WriteLine("---------------------------------");
-            Console.WriteLine("1. Specify Base Employee Details");
-            Console.WriteLine("2. Specify Full-Time Employee Details");
-            Console.WriteLine("3. Specify Part-Time Employee Details");
-            Console.WriteLine("4. Specify Contract Employee Details");
-            Console.WriteLine("5. Specify Seasonal Employee Details");
-            Console.WriteLine("9. Return to Employee Management Menu");
-
-            string str = Console.ReadLine();
-
-            switch (str)
+            // Variables 
+            Employee employee = new Employee();
+            string menuOption = "";
+            
+            while(menuOption != "9")
             {
-                case "1":
-                    company.AddEmployee();
-                    break;
-                case "2":
-                    company.AddEmployee();
-                    break;
-                case "3":
-                    company.AddEmployee();
-                    break;
-                case "4":
-                    company.AddEmployee();
-                    break;
-                case "5":
-                    company.AddEmployee();
-                    break;
-                case "9":
-                    ShowEmployeeManagementMenu();
-                    break;
+                Console.WriteLine("Menu 4 : EMPLOYEE DETAILS MENU");
+                Console.WriteLine("---------------------------------");
+
+                if(employee.GetEmployeeType()  == "")
+                {
+                    Console.WriteLine("1. Specify Base Employee Details.");
+                    Console.WriteLine("9. Return to Employee Management Menu.");
+
+                    menuOption = Console.ReadLine();
+                    switch(menuOption)
+                    {
+                        case "1":
+                            employee = GetBaseEmployeeDetails();
+                            break;
+                    }
+                }
+                else if (employee.GetEmployeeType() == "FT")
+                {
+                    Console.WriteLine("1. Specify Base Employee Details.");
+                    Console.WriteLine("2. Specify Date of Hire.");
+                    Console.WriteLine("3. Specify Date of Termination.");
+                    Console.WriteLine("4. Specify Employees Salary.");
+                    Console.WriteLine("9. Go back.");
+
+                    menuOption = Console.ReadLine();
+
+                    switch (menuOption)
+                    {
+                        case"1":
+                            employee = GetBaseEmployeeDetails();
+                            break;
+                        case"2":
+                            Console.WriteLine("Specify the date of hire YYYY-MM-DD");
+                            // Sets the employee details to the users input and checks if it is in the proper format
+                            if(((FulltimeEmployee)employee).SetDateOfHire(Console.ReadLine())==false)
+                            {
+                                Console.WriteLine("The date inputed is not in the correct format of YYYY-MM-DD");
+                            }
+                            break;
+                        case"3":
+                            Console.WriteLine("Specify the date of termination YYYY-MM-DD");
+                            // Sets the employee details to the users input and checks if it is in the proper format
+                            if(((FulltimeEmployee)employee).SetDateOfTermination(Console.ReadLine()) == false)
+                            {
+                                Console.WriteLine("The date inputed is not in the correct format of YYYY-MM-DD");
+                            }
+                            break;
+                        case"4":
+                            Console.WriteLine("Specify the salary");
+                            // Sets the employee details to the users input and checks if it is in the proper format
+                            if(((FulltimeEmployee)employee).SetSalary(double.Parse(Console.ReadLine())) == false)
+                            {
+                                Console.WriteLine("The salary must be greater than 0");
+                            }
+                            break;
+                    }       
+                }
+                else if (employee.GetEmployeeType() == "PT")
+                {
+                    Console.WriteLine("1. Specify Base Employee Details.");
+                    Console.WriteLine("2. Specify Date of Hire.");
+                    Console.WriteLine("3. Specify Date of Termination.");
+                    Console.WriteLine("4. Specify Hourly Rate.");
+                    Console.WriteLine("9. Go back.");
+
+                    menuOption = Console.ReadLine();
+
+                    switch(menuOption)
+                    {
+                        case"1":
+                            employee = GetBaseEmployeeDetails();
+                            break;
+                        case "2":
+                            Console.WriteLine("Specify the date of hire");
+                            // Sets the employee details to the users input and checks if it is in the proper format
+                            if(((ParttimeEmployee)employee).SetDateOfHire(Console.ReadLine())==false)
+                            {
+                                Console.WriteLine("The date inputed is not in the correct format of YYYY-MM-DD");
+                            }
+                            break;
+                        case "3":
+                            Console.WriteLine("Specify the date of termination");
+                            // Sets the employee details to the users input and checks if it is in the proper format
+                            if(((ParttimeEmployee)employee).SetDateOfTermination(Console.ReadLine())==false)
+                            {
+                                Console.WriteLine("The date inputed is not in the correct format of YYYY-MM-DD");
+                            }
+                            break;
+                        case"4":
+                            Console.WriteLine("Specify the hourly rate");
+                            // Sets the employee details to the users input and checks if it is in the proper format
+                            if(((ParttimeEmployee)employee).SetHourlyRate(double.Parse(Console.ReadLine()))==false)
+                            {
+                                Console.WriteLine("The hourly rate must be greater than 0");
+                            }
+                            break;
+                    }
+                }
+                else if(employee.GetEmployeeType() == "CT")
+                {
+                    Console.WriteLine("1. Specify Base Employee Details.");
+                    Console.WriteLine("2. Specify Contract Start Date.");
+                    Console.WriteLine("3. Specify Contract Stop Date.");
+                    Console.WriteLine("4. Specify Fixed Contract Amount.");
+                    Console.WriteLine("9. Go back.");
+
+                    menuOption = Console.ReadLine();
+
+                    switch (menuOption)
+                    {
+                        case "1":
+                            employee = GetBaseEmployeeDetails();
+                            break;
+                        case "2":
+                            Console.WriteLine("Specify the contract's start date");
+                            // Sets the employee details to the users input and checks if it is in the proper format
+                            if(((ContractEmployee)employee).SetContractStartDate(Console.ReadLine())==false)
+                            {
+                                Console.WriteLine("The date inputed is not in the correct format of YYYY-MM-DD");
+                            }
+                            break;
+                        case"3":
+                            Console.WriteLine("Specify the contract's stop date");
+                            // Sets the employee details to the users input and checks if it is in the proper format
+                            if(((ContractEmployee)employee).SetContractStopDate(Console.ReadLine())==false)
+                            {
+                                Console.WriteLine("The date inputed is not in the correct format of YYYY-MM-DD");
+                            }
+                            break;
+                        case"4":
+                            Console.WriteLine("Specify the fixed contract amount");
+                            // Sets the employee details to the users input and checks if it is in the proper format
+                            if(((ContractEmployee)employee).SetFixedContractAmount(double.Parse(Console.ReadLine()))==false)
+                            {
+                                Console.WriteLine("The fixed contract amount must be greater than 0");
+                            }
+                            break;
+                    }
+                }
+                else if (employee.GetEmployeeType() == "SN")
+                {
+                    Console.WriteLine("1. Specify Base Employee Details.");
+                    Console.WriteLine("2. Specify the Season.");
+                    Console.WriteLine("3. Specify the amount the employee receives per item produced.");
+                    Console.WriteLine("9. Go back.");
+
+                    menuOption = Console.ReadLine();
+
+                    switch (menuOption)
+                    {
+                        case "1":
+                            employee = GetBaseEmployeeDetails();
+                            break;
+                        case "2":
+                            Console.WriteLine("Specify which season the employee is working in");
+                            // Sets the employee details to the users input and checks if it is in the proper format
+                           if(((SeasonalEmployee)employee).SetSeason(Console.ReadLine()) == false)
+                           {
+                               Console.WriteLine("The season must only be Summer, Winter, Fall, or Spring.");
+                           }
+                            break;
+                        case "3":
+                            Console.WriteLine("Specify the piece pay of the employee");
+                            // Sets the employee details to the users input and checks if it is in the proper format
+                            if(((SeasonalEmployee)employee).SetPiecePay(double.Parse(Console.ReadLine()))==false)
+                            {
+                                Console.WriteLine("The piece pay must be greater than 0");
+                            }
+                            break;
+                    }
+                }
             }
         }
 
         /**
-        * \brief The ShowFindEmployeeMenu method will display to the user, a UI menu.This 
-        * menu allows the user to search for a specific employee in the database. 
+        * \brief The GetBaseEmployeeDetails method will get the users input, set it in an employee object and return the employee object
+        * to further process it. 
         * 
         * \details <b>Details</b>
-        * 
+        *  
         * \param args - n/a
         * 
         * \throw <EndOfProgramException> - If the user wants the program to end
         * 
-        * \return - AllEmployees.Employee - returns an employee object 
+        * \return - <b> Employee emp </b>- returns the employee with information
         */
-        public static AllEmployees.Employee ShowFindEmployeeMenu()
+        private static Employee GetBaseEmployeeDetails()
         {
-            //select a method of finding an employee
-            return new AllEmployees.Employee();
+            // Variables
+            int employeeSIN;
+            Employee emp = new Employee();
+            string empType;
+            string empLName;
+            string empFName;
+            string empSIN;
+            string empDOB;
+
+            // Prompt for details
+            do
+            {
+                Console.WriteLine("Enter the employee type \n 'FT' for FullTime \n 'PT' for PartTime \n 'CT' for Contract \n 'SN' for Seasonal:");
+                empType = Console.ReadLine();
+
+            } while (emp.SetEmployeeType(empType));
+
+            do
+            {
+                Console.WriteLine("Enter the employee's last name:");
+                empLName = Console.ReadLine();
+            } while (emp.SetLastName(empLName));
+
+            do
+            {
+                Console.WriteLine("Enter the employee's first name:");
+                empFName = Console.ReadLine();
+            } while (emp.SetFirstName(empFName));
+
+            do
+            {
+                Console.WriteLine("Enter the employee's SIN number:");
+                empSIN = Console.ReadLine();
+                empSIN.Replace(" ", "");
+                int.TryParse(empSIN, out employeeSIN);
+            } while (emp.SetSocialInsuranceNumber(employeeSIN));
+
+            do
+            {
+            Console.WriteLine("Enter the employee's date of birth in the format: YYYY-MM-DD");
+            empDOB = Console.ReadLine();
+            } while(((AllEmployees.ContractEmployee)emp).SetDateOfBirth(empDOB));
+            return emp;
         }
 
         /**
@@ -252,12 +453,13 @@ namespace Presentation
         * 
         * \throw <EndOfProgramException> - If the user wants the program to end
         * 
-        * \return - string UserPrompt - returns the users information
+        * \return - <b> string UserPrompt</b> - returns the users information
         */
         public static String GetInfoFromUser(String UserPrompt)
         {
-
-            return " "; //temp to remove errors
+            Console.WriteLine(UserPrompt);
+            string str = Console.ReadLine();
+            return str; 
         }
 
         /**
@@ -273,7 +475,7 @@ namespace Presentation
         */
         public static void ShowError(String errorMessage)
         {
-
+            Console.WriteLine(errorMessage);
         }
     }
 }
