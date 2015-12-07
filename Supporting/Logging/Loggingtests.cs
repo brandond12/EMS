@@ -37,10 +37,10 @@ namespace Loggingtests
            // Sample Data
             string methodName = "GetEmployeeInformation";
             string className = "Employee";
-            string eventDetails = "Employee - Clarke,Sean (333 333 333) VALID";
+            string eventDetails = "Employee - Clarke,Sean (333 333 333) VALIDER";
 
             // This will ensure that the test log file is empty
-            StreamWriter writer = new StreamWriter("ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log");
+            StreamWriter writer = new StreamWriter("..\\..\\..\\..\\ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log");
             writer.WriteLine("");
             writer.Close();
 
@@ -50,7 +50,7 @@ namespace Loggingtests
             string formattedS = "[" + className + "." + methodName + "] " + eventDetails + "\r\n";
 
             // Read in the details
-            StreamReader reader = new StreamReader("ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log");
+            StreamReader reader = new StreamReader("..\\..\\..\\..\\ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log");
 
             string logEvent = reader.ReadToEnd();
             reader.Close();

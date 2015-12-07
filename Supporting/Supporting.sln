@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supporting", "Supporting\Supporting.csproj", "{36FBD984-8764-4525-9004-BA74DE8C130C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileIOTests", "FileIO.Tests\FileIOTests.csproj", "{4341A986-5F6F-4D11-A718-9D8F8F4BE620}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loggingtest", "Logging\Loggingtest.csproj", "{7CA7307E-CEB0-4A7E-8BC6-19CCA58BEF32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4341A986-5F6F-4D11-A718-9D8F8F4BE620}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4341A986-5F6F-4D11-A718-9D8F8F4BE620}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4341A986-5F6F-4D11-A718-9D8F8F4BE620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CA7307E-CEB0-4A7E-8BC6-19CCA58BEF32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CA7307E-CEB0-4A7E-8BC6-19CCA58BEF32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CA7307E-CEB0-4A7E-8BC6-19CCA58BEF32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CA7307E-CEB0-4A7E-8BC6-19CCA58BEF32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
