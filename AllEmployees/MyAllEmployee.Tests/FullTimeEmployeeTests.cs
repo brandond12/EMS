@@ -92,8 +92,8 @@ namespace MyAllEmployee.Tests
         [TestCategory("FulltimeEmployee Constructor with all parameters")]
         public void ConstructorWithAllParamTestValid3()
         {
-            DateTime DOB = new DateTime();
-            DateTime DOH = new DateTime();
+            DateTime DOB = new DateTime(1984, 12, 23);
+            DateTime DOH = new DateTime(1994, 11, 03);
             DateTime DOT = new DateTime();
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
         }

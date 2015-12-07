@@ -72,7 +72,7 @@ namespace MyAllEmployee.Tests
         [TestCategory("Employee Constructor with all parameters")]
         public void ConstructorWithAllParamTestValid1()
         {
-            DateTime DOB = new DateTime();
+            DateTime DOB = new DateTime(2003, 02, 20);
             Employee employee = new Employee("Brandon", "Davies", 123456789, DOB, "FT");
         }
 

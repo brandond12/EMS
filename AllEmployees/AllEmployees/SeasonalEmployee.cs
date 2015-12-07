@@ -61,10 +61,6 @@ namespace AllEmployees
         {
             season = "";
             piecePay = 0;
-            if (this.Validate() != true)
-            {
-                throw new FailedConstructorException();
-            }
         }
 
 
@@ -107,14 +103,15 @@ namespace AllEmployees
         public bool Validate()
         {
             bool dataValid = ValidateBase();
-            if (season != "Spring" && season != "Summer" && season != "Winter" && season != "Fall" && season != "")
+            if (season != "Spring" && season != "Summer" && season != "Winter" && season != "Fall")
             {
                 dataValid = false;
             }
-            if (piecePay < 0)
+            else if (piecePay <= 0)
             {
                 dataValid = false;
             }
+
             return dataValid;
         }
 

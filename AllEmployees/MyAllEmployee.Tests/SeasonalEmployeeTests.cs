@@ -7,13 +7,6 @@ namespace MyAllEmployee.Tests
     [TestClass]
     public class SeasonalEmployeeTests
     {
-        [TestMethod]
-        [TestCategory("SeasonalEmployee Base Constructor")]
-        public void BaseConstructorTest()
-        {
-            SeasonalEmployee employee = new SeasonalEmployee();
-        }
-
         /*
          * Constructor with names Tests
         */
@@ -79,7 +72,7 @@ namespace MyAllEmployee.Tests
         [TestCategory("SeasonalEmployee Constructor with all parameters")]
         public void ConstructorWithAllParamTestValid2()
         {
-            DateTime DOB = new DateTime();
+            DateTime DOB = new DateTime(1991, 12, 23);
             SeasonalEmployee employee = new SeasonalEmployee("Brandon", "Mc'Davies", 123456789, DOB, "Winter", 15);
         }
 
@@ -88,7 +81,7 @@ namespace MyAllEmployee.Tests
         public void ConstructorWithAllParamTestValid3()
         {
             DateTime DOB = new DateTime(1993, 04, 24);
-            SeasonalEmployee employee = new SeasonalEmployee("Brandon", "Davies", 123456789, DOB, "Fall", 0);
+            SeasonalEmployee employee = new SeasonalEmployee("Brandon", "Davies", 123456789, DOB, "Fall", 1);
         }
 
         [TestMethod]
@@ -200,7 +193,7 @@ namespace MyAllEmployee.Tests
 
         [TestMethod]
         [TestCategory("SeasonalEmployee SetSeason")]
-        public void SetSeasonInalid()
+        public void SetSeasonInvalid()
         {
             SeasonalEmployee employee = new SeasonalEmployee("Brandon", "Davies");
             string currentSeason = employee.GetSeason();

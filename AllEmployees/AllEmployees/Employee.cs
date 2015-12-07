@@ -69,11 +69,24 @@ namespace AllEmployees
             socialInsuranceNumber = 0;
             dateOfBirth = new DateTime();
             employeeType = "";
-            if (this.ValidateBase() != true)
+
+            //check valid firstName
+            foreach (char letter in firstName)
             {
-                Logging.Log("Employee", "Employee", "Invalid employee made in constructor");
-                throw new FailedConstructorException();
+                if (!char.IsLetter(letter) && letter != '\'' && letter != '-')
+                {
+                    throw new FailedConstructorException();
+                }
             }
+            //check valid last name
+            foreach (char letter in lastName)
+            {
+                if (!char.IsLetter(letter) && letter != '\'' && letter != '-')
+                {
+                    throw new FailedConstructorException();
+                }
+            }
+
             Logging.Log("Employee", "Employee", "New Employee Created: " + this.ToStringBase());
         }
 
@@ -155,6 +168,11 @@ namespace AllEmployees
                 dataValid = false;
                 Logging.Log("Employee", "ValidateBase", "Invalid Employee Type - Types can only be: FT PT CT SN. Input : " + employeeType);
             }
+            //check that all needed data is present
+            if(lastName.Length == 0 || firstName.Length == 0 || dateOfBirth.Year == 1 || socialInsuranceNumber.ToString().Length == 1)
+            {
+                dataValid = false;
+            }
             return dataValid;
         }
 
@@ -170,18 +188,6 @@ namespace AllEmployees
         protected string ToStringBase()
         {
             string employeeString = firstName + "|" + lastName + "|" + socialInsuranceNumber + "|" + GetDateOfBirthString() + "|";
-            /*
-            if (dateOfBirth.Month.ToString().Length == 1)
-            {
-                employeeString += "0";
-            }
-            employeeString += dateOfBirth.Month.ToString() + "-";
-            if (dateOfBirth.Day.ToString().Length == 1)
-            {
-                employeeString += "0";
-            }
-            employeeString += dateOfBirth.Day.ToString() + "|";
-             * */
             return employeeString;
         }
 

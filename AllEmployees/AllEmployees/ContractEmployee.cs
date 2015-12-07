@@ -69,11 +69,6 @@ namespace AllEmployees
             contractStopDate = new DateTime();
             fixedContractAmount = 0;
             SetEmployeeType("CT");
-            if (this.Validate() != true)
-            {
-                Logging.Log("ContractEmployee", "ContractEmployee", "Invalid ContractEmployee made in constructor");
-                throw new FailedConstructorException();
-            }
             Logging.Log("ContractEmployee", "ContractEmployee", "New Contract Employee Created");
         }
 
@@ -127,35 +122,41 @@ namespace AllEmployees
                 Logging.Log("ContractEmployee", "Validate", "Invalid Contract Amount - Can Not be Less Than 0. Input: " + fixedContractAmount);
             }
 
-            if (GetSocialInsuranceNumber() != 0 && GetSocialInsuranceNumber().ToString().Length != 9)
+            else if (GetSocialInsuranceNumber() != 0 && GetSocialInsuranceNumber().ToString().Length != 9)
             {
                 dataValid = false;
                 Logging.Log("ContractEmployee", "Validate", "Invalid Social Insurance Number - Incorrect number of characters. Input: " + GetSocialInsuranceNumber().ToString());
             }
 
-            if (GetSocialInsuranceNumber() != 0 && GetDateOfBirth().Year != 1 && int.Parse(GetSocialInsuranceNumber().ToString().Substring(0, 2)) != int.Parse(GetDateOfBirthString().Substring(2, 2)))
+            else if (GetSocialInsuranceNumber() != 0 && GetDateOfBirth().Year != 1 && int.Parse(GetSocialInsuranceNumber().ToString().Substring(0, 2)) != int.Parse(GetDateOfBirthString().Substring(2, 2)))
             {
                 dataValid = false;
                 Logging.Log("ContractEmployee", "Validate", "Invalid Social Insurance Number - First 2 numbers dont match buisness start date. Input: " + GetSocialInsuranceNumber().ToString());
             }
 
             //validate dates
-            if(contractStopDate.Year != 1 && contractStartDate.Year == 1)
+            else if(contractStopDate.Year != 1 && contractStartDate.Year == 1)
             {
                 dataValid = false;
                 Logging.Log("ContractEmployee", "Validate", "Invalid Contract Stop Date - No Contract Start Date");
             }
 
-            if (DateTime.Compare(contractStopDate, contractStartDate) < 0)
+            else if (DateTime.Compare(contractStopDate, contractStartDate) < 0)
             {
                 dataValid = false;
                 Logging.Log("ContractEmployee", "Validate", "Invalid Contract Stop Date - Stop date before Start Date. Input: " + String.Format("{0:yyyy-MM-dd}", contractStopDate));
             }
 
-            if (contractStartDate.Year != 1 && DateTime.Compare(contractStartDate, GetDateOfBirth()) < 0)
+            else if (contractStartDate.Year != 1 && DateTime.Compare(contractStartDate, GetDateOfBirth()) < 0)
             {
                 dataValid = false;
                 Logging.Log("ContractEmployee", "Validate", "Invalid Contract Start Date - Start date before Date of Birth. Input: " + String.Format("{0:yyyy-MM-dd}", contractStartDate));
+            }
+
+            else if(contractStartDate.Year == 1 || fixedContractAmount == 0)
+            {
+                dataValid = false;
+                Logging.Log("ContractEmployee", "Validate", "Invalid Employee: " + this.ToString());
             }
             return dataValid;
         }

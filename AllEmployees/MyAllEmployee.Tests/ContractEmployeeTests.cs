@@ -158,14 +158,13 @@ namespace MyAllEmployee.Tests
 
         [TestMethod]
         [TestCategory("ContractEmployee Details")]
-        public void DetailsTestValidNoDate()
+        [ExpectedException(typeof(FailedConstructorException))]
+        public void DetailsTestInvalidNoDate()
         {
             DateTime DOB = new DateTime(1954, 08, 20);
             DateTime DOH = new DateTime();
             DateTime DOT = new DateTime();
             ContractEmployee employee = new ContractEmployee("Brandon", "Davies", 543456789, DOB, DOH, DOT, 18);
-            String details = employee.Details();
-            Assert.IsTrue(details == "Employee Type: Contract\nName: Brandon Davies\nBuisness Number: 54345 6789\nBuisness Start Date: 1954-08-20\nContract Start Date: \nContract Stop Date: \nFixed Contract Amount: 18");
         }
 
         /*

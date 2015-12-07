@@ -66,11 +66,6 @@ namespace AllEmployees
             dateOfHire = new DateTime();
             dateOfTermination = new DateTime();
             salary = 0;
-            if (this.Validate() != true)
-            {
-                Logging.Log("FulltimeEmployee", "FulltimeEmployee", "Invalid FulltimeEmployee made in constructor");
-                throw new FailedConstructorException();
-            }
             Logging.Log("FulltimeEmployee", "Employee", "New Employee Created");
         }
 
@@ -125,7 +120,7 @@ namespace AllEmployees
             }
 
             //validate dates
-            if (dateOfTermination.Year != 1 && dateOfHire.Year == 1)
+            else if (dateOfTermination.Year != 1 && dateOfHire.Year == 1)
             {
                 dataValid = false;
                 Logging.Log("FulltimeEmployee", "Validate", "Invalid Termination Date - No Date of Hire");
@@ -137,12 +132,16 @@ namespace AllEmployees
                 Logging.Log("FulltimeEmployee", "Validate", "Invalid Termination Date - Date of Termination before Start Date.");
             }
 
-            if (dateOfHire.Year != 1 && DateTime.Compare(dateOfHire, GetDateOfBirth()) < 0)
+            else if (dateOfHire.Year != 1 && DateTime.Compare(dateOfHire, GetDateOfBirth()) < 0)
             {
                 dataValid = false;
                 Logging.Log("FulltimeEmployee", "Validate", "Invalid Start Date - Start Date Before Birth Date.");
             }
-
+            else if (dateOfHire.Year == 1 || salary == 0)
+            {
+                dataValid = false;
+                Logging.Log("FulltimeEmployee", "Validate", "Invalid Employee: " + this.ToString());
+            }
             return dataValid;
         }
 

@@ -91,8 +91,8 @@ namespace MyAllEmployee.Tests
         [TestCategory("ParttimeEmployee Constructor with all parameters")]
         public void ConstructorWithAllParamTestValid3()
         {
-            DateTime DOB = new DateTime();
-            DateTime DOH = new DateTime();
+            DateTime DOB = new DateTime(1830, 07, 29);
+            DateTime DOH = new DateTime(2013, 05, 12);
             DateTime DOT = new DateTime();
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
         }
@@ -102,8 +102,8 @@ namespace MyAllEmployee.Tests
         [ExpectedException(typeof(FailedConstructorException))]
         public void ConstructorWithAllParamTestInvalidSIN()
         {
-            DateTime DOB = new DateTime();
-            DateTime DOH = new DateTime();
+            DateTime DOB = new DateTime(1984, 02, 15);
+            DateTime DOH = new DateTime(1986, 02, 15);
             DateTime DOT = new DateTime();
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 1234756789, DOB, DOH, DOT, 18);
         }
@@ -133,11 +133,11 @@ namespace MyAllEmployee.Tests
         [TestMethod]
         [TestCategory("ContractEmployee Constructor with all parameters")]
         [ExpectedException(typeof(FailedConstructorException))]
-        public void ConstructorWithAllParamTestInvalidDOTnoDOH()
+        public void ConstructorWithAllParamTestInvalidNoDOH()
         {
             DateTime DOB = new DateTime(1993, 11, 14);
             DateTime DOH = new DateTime();
-            DateTime DOT = new DateTime(2010, 07, 29);
+            DateTime DOT = new DateTime();
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 180000);
         }
 

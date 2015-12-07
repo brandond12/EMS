@@ -65,11 +65,6 @@ namespace AllEmployees
             dateOfTermination = new DateTime();
             hourlyRate = 0;
             dateOfHire = new DateTime();
-            if (this.Validate() != true)
-            {
-                Logging.Log("ParttimeEmployee", "ParttimeEmployee", "Invalid ParttimeEmployee made in constructor");
-                throw new FailedConstructorException();
-            }
             Logging.Log("ParttimeEmployee", "Employee", "New Employee Created");
         }
 
@@ -140,6 +135,12 @@ namespace AllEmployees
             {
                 Logging.Log("ParttimeEmployee", "Validate", "Invalid Date of Hire - Date of Hire Before Date of Birth");
                 dataValid = false;
+            }
+
+            else if (dateOfHire.Year == 1 || hourlyRate == 0)
+            {
+                dataValid = false;
+                Logging.Log("ParttimeEmployee", "Validate", "Invalid Employee: " + this.ToString());
             }
 
             return dataValid;//temp to remove errors
