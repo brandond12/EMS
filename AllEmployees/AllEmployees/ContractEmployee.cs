@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Supporting;
 
 namespace AllEmployees
 {
@@ -70,8 +71,10 @@ namespace AllEmployees
             SetEmployeeType("CT");
             if (this.Validate() != true)
             {
+                Logging.Log("ContractEmployee", "ContractEmployee", "Invalid ContractEmployee made in constructor");
                 throw new FailedConstructorException();
             }
+            Logging.Log("ContractEmployee", "ContractEmployee", "New Contract Employee Created");
         }
 
         /**
@@ -99,8 +102,10 @@ namespace AllEmployees
             this.fixedContractAmount = fixedContractAmount;
             if ((contractStartDate.Year == 1 && contractStopDate.Year != 1) || this.Validate() != true)
             {
+                Logging.Log("ContractEmployee", "ContractEmployee", "Invalid ContractEmployee made in constructor");
                 throw new FailedConstructorException();
             }
+            Logging.Log("ContractEmployee", "ContractEmployee", "New Contract Employee Created");
         }
 
         /**
@@ -119,22 +124,38 @@ namespace AllEmployees
             if (fixedContractAmount < 0)
             {
                 dataValid = false;
+                Logging.Log("ContractEmployee", "Validate", "Invalid Contract Amount - Can Not be Less Than 0. Input: " + fixedContractAmount);
+            }
+
+            if (GetSocialInsuranceNumber() != 0 && GetSocialInsuranceNumber().ToString().Length != 9)
+            {
+                dataValid = false;
+                Logging.Log("ContractEmployee", "Validate", "Invalid Social Insurance Number - Incorrect number of characters. Input: " + GetSocialInsuranceNumber().ToString());
             }
 
             if (GetSocialInsuranceNumber() != 0 && GetDateOfBirth().Year != 1 && int.Parse(GetSocialInsuranceNumber().ToString().Substring(0, 2)) != int.Parse(GetDateOfBirthString().Substring(2, 2)))
             {
                 dataValid = false;
+                Logging.Log("ContractEmployee", "Validate", "Invalid Social Insurance Number - First 2 numbers dont match buisness start date. Input: " + GetSocialInsuranceNumber().ToString());
             }
 
             //validate dates
-            if (contractStopDate.Year != 1 && DateTime.Compare(contractStopDate, contractStartDate) < 0)
+            if(contractStopDate.Year != 1 && contractStartDate.Year == 1)
             {
                 dataValid = false;
+                Logging.Log("ContractEmployee", "Validate", "Invalid Contract Stop Date - No Contract Start Date");
+            }
+
+            if (DateTime.Compare(contractStopDate, contractStartDate) < 0)
+            {
+                dataValid = false;
+                Logging.Log("ContractEmployee", "Validate", "Invalid Contract Stop Date - Stop date before Start Date. Input: " + String.Format("{0:yyyy-MM-dd}", contractStopDate));
             }
 
             if (contractStartDate.Year != 1 && DateTime.Compare(contractStartDate, GetDateOfBirth()) < 0)
             {
                 dataValid = false;
+                Logging.Log("ContractEmployee", "Validate", "Invalid Contract Start Date - Start date before Date of Birth. Input: " + String.Format("{0:yyyy-MM-dd}", contractStartDate));
             }
             return dataValid;
         }
@@ -185,8 +206,8 @@ namespace AllEmployees
         {
             string outputString = "|CT" + "|" + 
                 ToStringBase() + 
-                GetContractStopDateString() + "|" + 
                 GetContractStartDateString() + "|" +
+                GetContractStopDateString() + "|" + 
                 fixedContractAmount.ToString() + "|";
             return outputString;
         }
@@ -208,14 +229,18 @@ namespace AllEmployees
             if (contractStartDate.Year != 1 && (DateTime.Compare(contractStartDate, date) == -1))
             {
                 dataSaved = false;
+                Logging.Log("ContractEmployee", "SetDateOfBirth", "Invalid Date of Birth - Date of Birth After Contract Start Date");
             }
             else if (DateTime.Compare(date, DateTime.Now) > 0)
             {
                 dataSaved = false;
+                Logging.Log("ContractEmployee", "SetDateOfBirth", "Invalid Date of Birth - Can Not be in Future");
             }
             else
             {
+                Logging.Log("ContractEmployee", "SetDateOfBirth", "Date of Birth Changed From: " + GetDateOfBirthString() + " To: " + String.Format("{0:yyyy-MM-dd}", date));
                 SetDateOfBirthBase(date);
+                
             }
             return dataSaved;
         }
@@ -245,19 +270,23 @@ namespace AllEmployees
                 if (contractStartDate.Year != 1 && (DateTime.Compare(contractStartDate, DOB) == -1))
                 {
                     dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetDateOfBirth", "Invalid Date of Birth - Date of Birth After Contract Start Date");
                 }
                 else if (DateTime.Compare(DOB, DateTime.Now) > 0)
                 {
                     dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetDateOfBirth", "Invalid Date of Birth - Can Not be in Future");
                 }
                 else
                 {
+                    Logging.Log("ContractEmployee", "SetDateOfBirth", "Date of Birth Changed From: " + GetDateOfBirthString() + " To: " + String.Format("{0:yyyy-MM-dd}", DOB));
                     SetDateOfBirthBase(DOB);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 dataSaved = false;
+                Logging.Log("ContractEmployee", "SetDateOfBirth", "Exception Caught in Method. " + ex.Message);
             }
             return dataSaved;
         }
@@ -284,19 +313,23 @@ namespace AllEmployees
                 if (contractStartDate.Year != 1 && (DateTime.Compare(contractStartDate, DOB) == -1))
                 {
                     dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetDateOfBirth", "Invalid Date of Birth - Date of Birth After Contract Start Date");
                 }
                 else if (DateTime.Compare(DOB, DateTime.Now) > 0)
                 {
                     dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetDateOfBirth", "Invalid Date of Birth - Can Not be in Future");
                 }
                 else
                 {
+                    Logging.Log("ContractEmployee", "SetDateOfBirth", "Date of Birth Changed From: " + GetDateOfBirthString() + " To: " + String.Format("{0:yyyy-MM-dd}", DOB));
                     SetDateOfBirthBase(DOB);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 dataSaved = false;
+                Logging.Log("ContractEmployee", "SetDateOfBirth", "Exception Caught in Method. " + ex.Message);
             }
             return dataSaved;
         }
@@ -317,13 +350,16 @@ namespace AllEmployees
             if (GetDateOfBirth().Year != 1 && (DateTime.Compare(date, GetDateOfBirth()) == -1))
             {
                 dataSaved = false;
+                Logging.Log("ContractEmployee", "SetContractStartDate", "Invalid Contract Start Date - Contract Start Date Before Date of Birth");
             }
             else if (contractStopDate.Year != 1 && (DateTime.Compare(date, contractStopDate) == 1))
             {
                 dataSaved = false;
+                Logging.Log("ContractEmployee", "SetContractStartDate", "Invalid Contract Start Date - Contract Start Date after Contract Stop Date");
             }
             else
             {
+                Logging.Log("ContractEmployee", "SetContractStartDate", "Contract Start Date Changed From: " + GetContractStartDateString() + " To: " + String.Format("{0:yyyy-MM-dd}", date));
                 contractStartDate = date;
             }
             
@@ -356,19 +392,23 @@ namespace AllEmployees
                 if (GetDateOfBirth().Year != 1 && (DateTime.Compare(newcontractStartDate, GetDateOfBirth()) == -1))
                 {
                     dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetContractStartDate", "Invalid Contract Start Date - Contract Start Date Before Date of Birth");
                 }
                 else if (contractStopDate.Year != 1 && (DateTime.Compare(newcontractStartDate, contractStopDate) == 1))
                 {
                     dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetContractStartDate", "Invalid Contract Start Date - Contract Start Date after Contract Stop Date");
                 }
                 else
                 {
+                    Logging.Log("ContractEmployee", "SetContractStartDate", "Contract Start Date Changed From: " + GetContractStartDateString() + " To: " + String.Format("{0:yyyy-MM-dd}", newcontractStartDate));
                     contractStartDate = newcontractStartDate;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 dataSaved = false;
+                Logging.Log("ContractEmployee", "SetContractStartDate", "Exception Caught in Method. " + ex.Message);
             }
             return dataSaved;
         }
@@ -395,19 +435,23 @@ namespace AllEmployees
                 if (GetDateOfBirth().Year != 1 && (DateTime.Compare(newcontractStartDate, GetDateOfBirth()) == -1))
                 {
                     dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetContractStartDate", "Invalid Contract Start Date - Contract Start Date Before Date of Birth");
                 }
                 else if (contractStopDate.Year != 1 && (DateTime.Compare(newcontractStartDate, contractStopDate) == 1))
                 {
                     dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetContractStartDate", "Invalid Contract Start Date - Contract Start Date after Contract Stop Date");
                 }
                 else
                 {
+                    Logging.Log("ContractEmployee", "SetContractStartDate", "Contract Start Date Changed From: " + GetContractStartDateString() + " To: " + String.Format("{0:yyyy-MM-dd}", newcontractStartDate));
                     contractStartDate = newcontractStartDate;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 dataSaved = false;
+                Logging.Log("ContractEmployee", "SetContractStartDate", "Exception Caught in Method. " + ex.Message);
             }
             return dataSaved;
         }
@@ -424,12 +468,19 @@ namespace AllEmployees
         public bool SetContractStopDate(DateTime date)
         {
             bool dataSaved = true;
-            if (contractStartDate.Year == 1 || (DateTime.Compare(date, contractStartDate) == -1))
+            if (contractStartDate.Year == 1)
             {
                 dataSaved = false;
+                Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Contract Stop Date - No Contract Start Date");
+            }
+            else if(DateTime.Compare(date, contractStartDate) == -1)
+            {
+                dataSaved = false;
+                Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Contract Stop Date - Contract Stop Date Before Contract Start Date");
             }
             else
             {
+                Logging.Log("ContractEmployee", "SetContractStopDate", "Contract Stop Date Changed From: " + GetContractStopDateString() + " To: " + String.Format("{0:yyyy-MM-dd}", date));
                 contractStopDate = date;
             }
             return dataSaved;
@@ -457,18 +508,26 @@ namespace AllEmployees
                 day = Int32.Parse(date.Substring(8, 2));
                 DateTime newcontractStopDate = new DateTime(year, month, day);
                 //validate dates
-                if (contractStartDate.Year == 1 || (DateTime.Compare(newcontractStopDate, contractStartDate) == -1))
+                if (contractStartDate.Year == 1)
                 {
                     dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Contract Stop Date - No Contract Start Date");
+                }
+                else if(DateTime.Compare(newcontractStopDate, contractStartDate) == -1)
+                {
+                    dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Contract Stop Date - Contract Stop Date Before Contract Start Date");
                 }
                 else
                 {
+                    Logging.Log("ContractEmployee", "SetContractStopDate", "Contract Stop Date Changed From: " + GetContractStopDateString() + " To: " + String.Format("{0:yyyy-MM-dd}", newcontractStopDate));
                     contractStopDate = newcontractStopDate;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 dataSaved = false;
+                Logging.Log("ContractEmployee", "SetContractStopDate", "Exception Caught in Method. " + ex.Message);
             }
             return dataSaved;
         }
@@ -492,18 +551,26 @@ namespace AllEmployees
             {
                 DateTime newcontractStopDate = new DateTime(year, month, day);
                 //validate dates
-                if (contractStartDate.Year == 1 || (DateTime.Compare(newcontractStopDate, contractStartDate) == -1))
+                if (contractStartDate.Year == 1)
                 {
                     dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Contract Stop Date - No Contract Start Date");
+                }
+                else if(DateTime.Compare(newcontractStopDate, contractStartDate) == -1)
+                {
+                    dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Contract Stop Date - Contract Stop Date Before Contract Start Date");
                 }
                 else
                 {
+                    Logging.Log("ContractEmployee", "SetContractStopDate", "Contract Stop Date Changed From: " + GetContractStopDateString() + " To: " + String.Format("{0:yyyy-MM-dd}", newcontractStopDate));
                     contractStopDate = newcontractStopDate;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 dataSaved = false;
+                Logging.Log("ContractEmployee", "SetContractStopDate", "Exception Caught in Method. " + ex.Message);
             }
             return dataSaved;
         }
@@ -522,10 +589,12 @@ namespace AllEmployees
             bool dataSaved = true;
             if (contractAmount > 0)
             {
+                Logging.Log("ContractEmployee", "SetFixedContractAmount", "Contract Amount Changed From: " + this.fixedContractAmount + " To: " + contractAmount);
                 this.fixedContractAmount = contractAmount;
             }
             else
             {
+                Logging.Log("ContractEmployee", "SetFixedContractAmount", "Invalid Contract Amount - Must be Greater Than 0");
                 dataSaved = false;
             }
             return dataSaved;

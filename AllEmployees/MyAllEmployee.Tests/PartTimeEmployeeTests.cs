@@ -153,7 +153,7 @@ namespace MyAllEmployee.Tests
             DateTime DOT = new DateTime(2014, 12, 23);
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
             String details = employee.Details();
-            Assert.IsTrue(details == "Employee Type: Contract\nName: Brandon Davies\nSocial Insurance Number: 123 456 789\nDate of Birth: 1954-08-20\nDate of Hire: 1994-09-03\nDate of Termionation2014-12-23\nHourly Rate: 18");
+            Assert.IsTrue(details == "Employee Type: ParttimeEmployee\nName: Brandon Davies\nSocial Insurance Number: 123 456 789\nDate of Birth: 1954-08-20\nDate of Hire: 1994-09-03\nDate of Termionation2014-12-23\nHourly Rate: 18");
         }
 
         /*
@@ -168,7 +168,7 @@ namespace MyAllEmployee.Tests
             DateTime DOT = new DateTime(2014, 12, 23);
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 18);
             String toString = employee.ToString();
-            Assert.IsTrue(toString == "PT|Brandon|Davies|123456789|1954-8-20|1994-09-03|2014-12-23|18");
+            Assert.IsTrue(toString == "|PT|Brandon|Davies|123456789|1954-08-20|1994-09-03|2014-12-23|18|");
         }
 
         /*

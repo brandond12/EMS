@@ -74,7 +74,7 @@ namespace AllEmployees
                 Logging.Log("Employee", "Employee", "Invalid employee made in constructor");
                 throw new FailedConstructorException();
             }
-            Logging.Log("Employee", "Employee", "New Employee Created");
+            Logging.Log("Employee", "Employee", "New Employee Created: " + this.ToStringBase());
         }
 
         /**
@@ -103,6 +103,7 @@ namespace AllEmployees
                 Logging.Log("Employee", "Employee", "Invalid employee made in constructor");
                 throw new FailedConstructorException();
             }
+            Logging.Log("Employee", "Employee", "New Employee Created: " + this.ToStringBase());
         }
 
         /**
@@ -168,7 +169,19 @@ namespace AllEmployees
         */
         protected string ToStringBase()
         {
-            string employeeString = firstName + "|" + lastName + "|" + socialInsuranceNumber + "|" + dateOfBirth.Year + "-" + dateOfBirth.Month + "-" + dateOfBirth.Day + "|";
+            string employeeString = firstName + "|" + lastName + "|" + socialInsuranceNumber + "|" + GetDateOfBirthString() + "|";
+            /*
+            if (dateOfBirth.Month.ToString().Length == 1)
+            {
+                employeeString += "0";
+            }
+            employeeString += dateOfBirth.Month.ToString() + "-";
+            if (dateOfBirth.Day.ToString().Length == 1)
+            {
+                employeeString += "0";
+            }
+            employeeString += dateOfBirth.Day.ToString() + "|";
+             * */
             return employeeString;
         }
 

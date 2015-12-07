@@ -141,7 +141,7 @@ namespace MyAllEmployee.Tests
             DateTime DOB = new DateTime(1993, 04, 24);
             SeasonalEmployee employee = new SeasonalEmployee("Brandon", "Mc'Davies", 123456789, DOB, "Winter", 15);
             String toString = employee.ToString();
-            Assert.IsTrue(toString == "SN|Brandon|Mc'Davies|123456789|1993-4-24|Winter|15");
+            Assert.IsTrue(toString == "|SN|Brandon|Mc'Davies|123456789|1993-04-24|Winter|15|");
         }
 
         /*

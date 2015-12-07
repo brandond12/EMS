@@ -169,7 +169,7 @@ namespace MyAllEmployee.Tests
             DateTime DOT = new DateTime(2014, 12, 23);
             FulltimeEmployee employee = new FulltimeEmployee("Brandon", "Davies", 123456789, DOB, DOH, DOT, 230000);
             String toString = employee.ToString();
-            Assert.IsTrue(toString == "FT|Brandon|Davies|123456789|1954-8-20|1994-09-03|2014-12-23|230000");
+            Assert.IsTrue(toString == "|FT|Brandon|Davies|123456789|1954-08-20|1994-09-03|2014-12-23|230000|");
         }
 
         /*

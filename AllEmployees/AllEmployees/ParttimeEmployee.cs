@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Supporting;
 
 namespace AllEmployees
 {
@@ -66,8 +67,10 @@ namespace AllEmployees
             dateOfHire = new DateTime();
             if (this.Validate() != true)
             {
+                Logging.Log("ParttimeEmployee", "ParttimeEmployee", "Invalid ParttimeEmployee made in constructor");
                 throw new FailedConstructorException();
             }
+            Logging.Log("ParttimeEmployee", "Employee", "New Employee Created");
         }
 
         /**
@@ -95,8 +98,10 @@ namespace AllEmployees
             this.dateOfTermination = dateOfTermination;
             if ((dateOfHire.Year == 1 && dateOfTermination.Year != 1) || this.Validate() != true)
             {
+                Logging.Log("ParttimeEmployee", "ParttimeEmployee", "Invalid ParttimeEmployee made in constructor");
                 throw new FailedConstructorException();
             }
+            Logging.Log("ParttimeEmployee", "ParttimeEmployee", "New Parttime Employee Created");
         }
 
         /**
@@ -111,19 +116,29 @@ namespace AllEmployees
         public bool Validate()
         {
             bool dataValid = ValidateBase();
+
             if (hourlyRate < 0)
             {
+                Logging.Log("FulltimeEmployee", "Validate", "Invalid Hourly Rate - Hourly Rate Must be Greater Than 0");
                 dataValid = false;
             }
 
             //validate dates
-            if (dateOfTermination.Year != 1 && DateTime.Compare(dateOfTermination, dateOfHire) < 0)
+            else if (dateOfTermination.Year != 1 && dateOfHire.Year == 1)
             {
+                dataValid = false;
+                Logging.Log("FulltimeEmployee", "Validate", "Invalid Termination Date - No Date of Hire");
+            }
+
+            else if (dateOfTermination.Year != 1 && DateTime.Compare(dateOfTermination, dateOfHire) < 0)
+            {
+                Logging.Log("ParttimeEmployee", "Validate", "Invalid Date of Termination - Date of Termination Before Date of Hire");
                 dataValid = false;
             }
 
-            if (dateOfHire.Year != 1 && DateTime.Compare(dateOfHire, GetDateOfBirth()) < 0)
+            else if (dateOfHire.Year != 1 && DateTime.Compare(dateOfHire, GetDateOfBirth()) < 0)
             {
+                Logging.Log("ParttimeEmployee", "Validate", "Invalid Date of Hire - Date of Hire Before Date of Birth");
                 dataValid = false;
             }
 
@@ -141,7 +156,7 @@ namespace AllEmployees
         */
         public string Details()
         {
-            return ("Employee Type: Contract\nName: " + GetFirstName() + " " + GetLastName() +
+            return ("Employee Type: ParttimeEmployee\nName: " + GetFirstName() + " " + GetLastName() +
                 "\nSocial Insurance Number: " + GetSocialInsuranceNumber().ToString().Substring(0, 3) + " " + GetSocialInsuranceNumber().ToString().Substring(3, 3) + " " + GetSocialInsuranceNumber().ToString().Substring(6, 3) +
                 "\nDate of Birth: " + GetDateOfBirthString() +
                 "\nDate of Hire: " + GetDateOfHireString() +
@@ -184,14 +199,17 @@ namespace AllEmployees
             //validate dates
             if (dateOfHire.Year != 1 && (DateTime.Compare(dateOfHire, date) == -1))
             {
+                Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Invalid Date of Birth - Date of Birth After Date of Hire");
                 dataSaved = false;
             }
             else if (DateTime.Compare(date, DateTime.Now) > 0)
             {
+                Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Invalid Date of Birth - Can Not be in Future");
                 dataSaved = false;
             }
             else
             {
+                Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Date of Birth Changed From: " + GetDateOfBirthString() + " To: " + String.Format("{0:yyyy-MM-dd}", date));
                 SetDateOfBirthBase(date);
             }
             return dataSaved;
@@ -221,19 +239,23 @@ namespace AllEmployees
                 //validate dates
                 if (dateOfHire.Year != 1 && (DateTime.Compare(dateOfHire, DOB) == -1))
                 {
+                    Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Invalid Date of Birth - Date of Birth After Contract Start Date");
                     dataSaved = false;
                 }
                 else if (DateTime.Compare(DOB, DateTime.Now) > 0)
                 {
+                    Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Invalid Date of Birth - Can Not be in Future");
                     dataSaved = false;
                 }
                 else
                 {
+                    Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Date of Birth Changed From: " + GetDateOfBirthString() + " To: " + String.Format("{0:yyyy-MM-dd}", DOB));
                     SetDateOfBirthBase(DOB);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Exception Caught in Method. " + ex.Message);
                 dataSaved = false;
             }
             return dataSaved;
@@ -260,19 +282,23 @@ namespace AllEmployees
                 //validate dates
                 if (dateOfHire.Year != 1 && (DateTime.Compare(dateOfHire, DOB) == -1))
                 {
+                    Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Invalid Date of Birth - Date of Birth After Contract Start Date");
                     dataSaved = false;
                 }
                 else if (DateTime.Compare(DOB, DateTime.Now) > 0)
                 {
+                    Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Invalid Date of Birth - Can Not be in Future");
                     dataSaved = false;
                 }
                 else
                 {
+                    Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Date of Birth Changed From: " + GetDateOfBirthString() + " To: " + String.Format("{0:yyyy-MM-dd}", DOB));
                     SetDateOfBirthBase(DOB);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Exception Caught in Method. " + ex.Message);
                 dataSaved = false;
             }
             return dataSaved;
@@ -291,12 +317,19 @@ namespace AllEmployees
         {
             bool dataSaved = true;
             //validate dates
-            if (dateOfHire.Year == 1 || (DateTime.Compare(date, dateOfHire) == -1))
+            if (dateOfHire.Year == 1)
             {
+                Logging.Log("ParttimeEmployee", "SetDateOfTermination", "Invalid Date of Termination - No Start Date");
+                dataSaved = false;
+            }
+            else if(DateTime.Compare(date, dateOfHire) == -1)
+            {
+                Logging.Log("ParttimeEmployee", "SetDateOfTermination", "Invalid Date of Termination - Date of Termination Before Start Date");
                 dataSaved = false;
             }
             else
             {
+                Logging.Log("ParttimeEmployee", "SetContractStopDate", "Contract Stop Date Changed From: " + GetDateOfTerminationString() + " To: " + String.Format("{0:yyyy-MM-dd}", date));
                 dateOfTermination = date;
             }
 
@@ -326,17 +359,25 @@ namespace AllEmployees
 
                 DateTime newdateOfTermination = new DateTime(year, month, day);
                 //validate dates
-                if (dateOfHire.Year == 1 || (DateTime.Compare(newdateOfTermination, dateOfHire) == -1))
+                if (dateOfHire.Year == 1)
                 {
+                    Logging.Log("ParttimeEmployee", "SetDateOfTermination", "Invalid Date of Termination - No Start Date");
+                    dataSaved = false;
+                }
+                else if(DateTime.Compare(newdateOfTermination, dateOfHire) == -1)
+                {
+                    Logging.Log("ParttimeEmployee", "SetDateOfTermination", "Invalid Date of Termination - Date of Termination Before Start Date");
                     dataSaved = false;
                 }
                 else
                 {
+                    Logging.Log("ParttimeEmployee", "SetContractStopDate", "Contract Stop Date Changed From: " + GetDateOfTerminationString() + " To: " + String.Format("{0:yyyy-MM-dd}", newdateOfTermination));
                     dateOfTermination = newdateOfTermination;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Exception Caught in Method. " + ex.Message);
                 dataSaved = false;
             }
             return dataSaved;
@@ -361,17 +402,25 @@ namespace AllEmployees
             {
                 DateTime newdateOfTermination = new DateTime(year, month, day);
                 //validate dates
-                if (dateOfHire.Year == 1 || (DateTime.Compare(newdateOfTermination, dateOfHire) == -1))
+                if (dateOfHire.Year == 1)
                 {
+                    Logging.Log("ParttimeEmployee", "SetDateOfTermination", "Invalid Date of Termination - No Start Date");
+                    dataSaved = false;
+                }
+                else if(DateTime.Compare(newdateOfTermination, dateOfHire) == -1)
+                {
+                    Logging.Log("ParttimeEmployee", "SetDateOfTermination", "Invalid Date of Termination - Date of Termination Before Start Date");
                     dataSaved = false;
                 }
                 else
                 {
+                    Logging.Log("ParttimeEmployee", "SetContractStopDate", "Contract Stop Date Changed From: " + GetDateOfTerminationString() + " To: " + String.Format("{0:yyyy-MM-dd}", newdateOfTermination));
                     dateOfTermination = newdateOfTermination;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Exception Caught in Method. " + ex.Message);
                 dataSaved = false;
             }
             return dataSaved;
@@ -392,10 +441,12 @@ namespace AllEmployees
 
             if (rate >= 0)
             {
+                Logging.Log("ParttimeEmployee", "SetHourlyRate", "Hourly Rate Changed From: " + this.hourlyRate.ToString() + " To: " + rate.ToString());
                 hourlyRate = rate;
             }
             else
             {
+                Logging.Log("ParttimeEmployee", "SetHourlyRate", "Invalid Hourly Rate - Must be Greater Than 0");
                 dateSaved = false;
             }
 
@@ -417,14 +468,17 @@ namespace AllEmployees
             //validate dates
             if (GetDateOfBirth().Year != 1 && (DateTime.Compare(date, GetDateOfBirth()) == -1))
             {
+                Logging.Log("ParttimeEmployee", "SetDateOfHire", "Invalid Date of Hire - Date of Hire Before Date of Birth");
                 dataSaved = false;
             }
             else if (dateOfTermination.Year != 1 && (DateTime.Compare(date, dateOfTermination) == 1))
             {
+                Logging.Log("ParttimeEmployee", "SetDateOfHire", "Invalid Date of Hire - Date of Hire after Date of Termination");
                 dataSaved = false;
             }
             else
             {
+                Logging.Log("ParttimeEmployee", "SetDateOfHire", "Date of Hire Changed From: " + GetDateOfHireString() + " To: " + String.Format("{0:yyyy-MM-dd}", date));
                 dateOfHire = date;
             }
             return dataSaved;
@@ -455,19 +509,23 @@ namespace AllEmployees
                 //validate dates
                 if (GetDateOfBirth().Year != 1 && (DateTime.Compare(newdateOfHire, GetDateOfBirth()) == -1))
                 {
+                    Logging.Log("ParttimeEmployee", "SetDateOfHire", "Invalid Date of Hire - Date of Hire Before Date of Birth");
                     dataSaved = false;
                 }
                 else if (dateOfTermination.Year != 1 && (DateTime.Compare(newdateOfHire, dateOfTermination) == 1))
                 {
+                    Logging.Log("ParttimeEmployee", "SetDateOfHire", "Invalid Date of Hire - Date of Hire after Date of Termination");
                     dataSaved = false;
                 }
                 else
                 {
+                    Logging.Log("ParttimeEmployee", "SetDateOfHire", "Date of Hire Changed From: " + GetDateOfHireString() + " To: " + String.Format("{0:yyyy-MM-dd}", newdateOfHire));
                     dateOfHire = newdateOfHire;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Exception Caught in Method. " + ex.Message);
                 dataSaved = false;
             }
             return dataSaved;
@@ -494,19 +552,23 @@ namespace AllEmployees
                 //validate dates
                 if (GetDateOfBirth().Year != 1 && (DateTime.Compare(newdateOfHire, GetDateOfBirth()) == -1))
                 {
+                    Logging.Log("ParttimeEmployee", "SetDateOfHire", "Invalid Date of Hire - Date of Hire Before Date of Birth");
                     dataSaved = false;
                 }
                 else if (dateOfTermination.Year != 1 && (DateTime.Compare(newdateOfHire, dateOfTermination) == 1))
                 {
+                    Logging.Log("ParttimeEmployee", "SetDateOfHire", "Invalid Date of Hire - Date of Hire after Date of Termination");
                     dataSaved = false;
                 }
                 else
                 {
+                    Logging.Log("ParttimeEmployee", "SetDateOfHire", "Date of Hire Changed From: " + GetDateOfHireString() + " To: " + String.Format("{0:yyyy-MM-dd}", newdateOfHire));
                     dateOfHire = newdateOfHire;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Exception Caught in Method. " + ex.Message);
                 dataSaved = false;
             }
             return dataSaved;
