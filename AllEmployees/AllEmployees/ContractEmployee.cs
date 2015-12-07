@@ -141,7 +141,7 @@ namespace AllEmployees
                 Logging.Log("ContractEmployee", "Validate", "Invalid Contract Stop Date - No Contract Start Date");
             }
 
-            else if (DateTime.Compare(contractStopDate, contractStartDate) < 0)
+            else if (contractStopDate.Year != 1 && DateTime.Compare(contractStopDate, contractStartDate) < 0)
             {
                 dataValid = false;
                 Logging.Log("ContractEmployee", "Validate", "Invalid Contract Stop Date - Stop date before Start Date. Input: " + String.Format("{0:yyyy-MM-dd}", contractStopDate));
