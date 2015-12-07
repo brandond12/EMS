@@ -38,17 +38,31 @@ namespace Supporting
         */
         public static void Log(string className, string methodName, string eventDetails)
         {
-            EventLog serviceEventLog = new EventLog();
-            string formattedS = className + "-" + methodName + "-" + eventDetails;
+            //write line to a file name and specify the string
+            //write a log to a file, in test, open it read compare to what you think should be in there
 
-            if (!EventLog.SourceExists("EMS"))
+            StreamWriter log;
+            String timeStamp = DateTime.Now.ToString();
+
+            if (!File.Exists("ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log"))
             {
-                EventLog.CreateEventSource("EMS", "EMSEvents");
-            }
-            serviceEventLog.Source = "EMS";
-            serviceEventLog.Log = "EMSEvents";
 
-            serviceEventLog.WriteEntry(formattedS);
+                log = new StreamWriter("ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log");
+
+            }
+
+            else
+            {
+
+                log = File.AppendText("ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log");
+
+            }
+
+            string formattedS = timeStamp + " " +"[" + className + "." + methodName + "] " + eventDetails;
+
+            log.WriteLine(formattedS);
+
+            log.Close();
         } 
     }
 }
