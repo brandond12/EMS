@@ -385,7 +385,7 @@ namespace TheCompany
             int intDay;                         // The int day for date of birth
             String season;                      // The season the employee works in
             String stringPiecePay;              // String version of the piece pay
-            double doublePiecePay;                // The double version of the piece pay
+            double doublePiecePay;              // The double version of the piece pay
             String error;                       // Data the user typed before hitting the enter key after the error message 
             AllEmployees.SeasonalEmployee newSeasonalEmployee;  // A seasonal employee reference
 
@@ -1182,7 +1182,7 @@ namespace TheCompany
             String response;                        // The user's response
             String error;                           // Data the user typed before hitting the enter key after the error message  
             String newStringSalary;                 // String version of the new salary
-            double newDoubleSalary;                   // The new double salary
+            double newDoubleSalary;                 // The new double salary
             bool wasQuestionAnswered = false;       // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;             // Did the modify on the employee property work?
 
@@ -1251,7 +1251,7 @@ namespace TheCompany
             String response;                        // The user's response
             String error;                           // Data the user typed before hitting the enter key after the error message 
             String newStringHourlyRate;             // String version of the new hourly rate
-            double newDoubleHourlyRate;               // The new double hourly rate
+            double newDoubleHourlyRate;             // The new double hourly rate
             bool wasQuestionAnswered = false;       // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;             // Did the modify on the employee property work?
 
@@ -1478,7 +1478,7 @@ namespace TheCompany
             String response;                        // The user's response
             String error;                           // Data the user typed before hitting the enter key after the error message 
             String newStringContractAmount;         // String version of the new fixed contract amount
-            double newDoubleContractAmount;           // The new double fixed contract amount
+            double newDoubleContractAmount;         // The new double fixed contract amount
             bool wasQuestionAnswered = false;       // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;             // Did the modify on the employee property work?
 
@@ -1606,7 +1606,7 @@ namespace TheCompany
             String response;                    // The user's response
             String error;                       // Data the user typed before hitting the enter key after the error message  
             String newStringPiecePay;           // String version of the piece pay
-            double newDoublePiecePay;             // The new double piece pay
+            double newDoublePiecePay;           // The new double piece pay
             bool wasQuestionAnswered = false;   // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;         // Did the modify on the employee property work?
 
@@ -1920,6 +1920,21 @@ namespace TheCompany
             }
 
             return response;
+        }
+
+        /**
+        * \brief The GetEmployeeList method is used to return 
+        * the list of employees to the calling method.
+        * 
+        * \details <b>Details</b>
+        * 
+        * \param n/a
+        * 
+        * \return listOfEmployees - <b>List</b> - The list of all employees
+        */
+        public List<AllEmployees.Employee> GetEmployeeList()
+        {
+            return listOfEmployees;
         }
     }
 }
