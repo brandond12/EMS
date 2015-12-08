@@ -565,64 +565,132 @@ namespace TheCompany
                 if (newEmployeeType == "FT")
                 {
                     // Create a full-time employee object
-                    AllEmployees.FulltimeEmployee FTEmployee = new AllEmployees.FulltimeEmployee(employee.GetFirstName(), employee.GetLastName(),
-                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(2000, 01, 01), new DateTime(), 1);
+                    AllEmployees.FulltimeEmployee FTEmployee = new AllEmployees.FulltimeEmployee();
+
+                    // Move the old employee data to the new employee
+                    FTEmployee.SetFirstName(employee.GetFirstName());
+                    FTEmployee.SetLastName(employee.GetLastName());
+                    FTEmployee.SetSocialInsuranceNumber(employee.GetSocialInsuranceNumber());
+                    FTEmployee.SetDateOfBirth(employee.GetDateOfBirth());
+                    FTEmployee.SetEmployeeType("FT");
 
                     // Allow the user to modify the properties for the full-time employee
                     ModifyDateOfHire(FTEmployee);
                     ModifyDateOfTermination(FTEmployee);
                     ModifySalary(FTEmployee);
 
-                    // Remove the old version of the employee from the list and add the new employee to the list
-                    RemoveEmployee(employee);
-                    AddEmployeeToList(FTEmployee);
+                    // Try creating the full-time employee object
+                    bool didModifyWork = FTEmployee.Validate();
+                    if (didModifyWork == true)
+                    {
+                        // Remove the old version of the employee from the list and add the new employee to the list
+                        RemoveEmployee(employee);
+                        AddEmployeeToList(FTEmployee);
+                    }
+                    // If an error occurs then inform the user and set the employee type back to its original type
+                    else
+                    {
+                        String error = UIMenu.GetInfoFromUser("A valid part-time employee could not be created\nso the employee will remain unchanged.\nHit enter to continue.");
+                        employee.SetEmployeeType(oldEmployeeType);
+                    }
                 }
                 // If the new employee type is part-time...
                 if (newEmployeeType == "PT")
                 {
                     // Create a part-time employee object
-                    AllEmployees.ParttimeEmployee PTEmployee = new AllEmployees.ParttimeEmployee(employee.GetFirstName(), employee.GetLastName(),
-                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(2000, 01, 01), new DateTime(), 1);
+                    AllEmployees.ParttimeEmployee PTEmployee = new AllEmployees.ParttimeEmployee();
+
+                    // Move the old employee data to the new employee
+                    PTEmployee.SetFirstName(employee.GetFirstName());
+                    PTEmployee.SetLastName(employee.GetLastName());
+                    PTEmployee.SetSocialInsuranceNumber(employee.GetSocialInsuranceNumber());
+                    PTEmployee.SetDateOfBirth(employee.GetDateOfBirth());
+                    PTEmployee.SetEmployeeType("PT");
 
                     // Allow the user to modify the properties for the part-time employee
                     ModifyDateOfHire(PTEmployee);
                     ModifyDateOfTermination(PTEmployee);
                     ModifyHourlyRate(PTEmployee);
 
-                    // Remove the old version of the employee from the list and add the new employee to the list
-                    RemoveEmployee(employee);
-                    AddEmployeeToList(PTEmployee);
+                    // Try creating the part-time employee object
+                    bool didModifyWork = PTEmployee.Validate();
+                    if (didModifyWork == true)
+                    {
+                        // Remove the old version of the employee from the list and add the new employee to the list
+                        RemoveEmployee(employee);
+                        AddEmployeeToList(PTEmployee);
+                    }
+                    // If an error occurs then inform the user and set the employee type back to its original type
+                    else
+                    {
+                        String error = UIMenu.GetInfoFromUser("A valid part-time employee could not be created\nso the employee will remain unchanged.\nHit enter to continue.");
+                        employee.SetEmployeeType(oldEmployeeType);
+                    }
                 }
                 // If the new employee type is contract...
                 else if (newEmployeeType == "CT")
                 {
                     // Create a contract employee object
-                    AllEmployees.ContractEmployee CTEmployee = new AllEmployees.ContractEmployee(employee.GetFirstName(), employee.GetLastName(),
-                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), new DateTime(2000, 01, 01), new DateTime(2016, 01, 01), 1);
+                    AllEmployees.ContractEmployee CTEmployee = new AllEmployees.ContractEmployee();
+
+                    // Move the old employee data to the new employee
+                    CTEmployee.SetFirstName(employee.GetFirstName());
+                    CTEmployee.SetLastName(employee.GetLastName());
+                    CTEmployee.SetSocialInsuranceNumber(employee.GetSocialInsuranceNumber());
+                    CTEmployee.SetDateOfBirth(employee.GetDateOfBirth());
+                    CTEmployee.SetEmployeeType("CT");
 
                     // Allow the user to modify the properties for the contract employee
                     ModifyContractStartDate(CTEmployee);
                     ModifyContractStopDate(CTEmployee);
                     ModifyFixedContractAmount(CTEmployee);
 
-                    // Remove the old version of the employee from the list and add the new employee to the list
-                    RemoveEmployee(employee);
-                    AddEmployeeToList(CTEmployee);
+                    // Try creating the contract employee object
+                    bool didModifyWork = CTEmployee.Validate();
+                    if (didModifyWork == true)
+                    {
+                        // Remove the old version of the employee from the list and add the new employee to the list
+                        RemoveEmployee(employee);
+                        AddEmployeeToList(CTEmployee);
+                    }
+                    // If an error occurs then inform the user and set the employee type back to its original type
+                    else
+                    {
+                        String error = UIMenu.GetInfoFromUser("A valid contract employee could not be created\nso the employee will remain unchanged.\nHit enter to continue.");
+                        employee.SetEmployeeType(oldEmployeeType);
+                    }
                 }
                 // If the new employee type is seasonal...
                 else if (newEmployeeType == "SN")
                 {
                     // Create a seasonal employee object
-                    AllEmployees.SeasonalEmployee SNEmployee = new AllEmployees.SeasonalEmployee(employee.GetFirstName(), employee.GetLastName(),
-                    employee.GetSocialInsuranceNumber(), employee.GetDateOfBirth(), "Summer", 1);
+                    AllEmployees.SeasonalEmployee SNEmployee = new AllEmployees.SeasonalEmployee();
+
+                    // Move the old employee data to the new employee
+                    SNEmployee.SetFirstName(employee.GetFirstName());
+                    SNEmployee.SetLastName(employee.GetLastName());
+                    SNEmployee.SetSocialInsuranceNumber(employee.GetSocialInsuranceNumber());
+                    SNEmployee.SetDateOfBirth(employee.GetDateOfBirth());
+                    SNEmployee.SetEmployeeType("SN");
 
                     // Allow the user to modify the properties for the seasonal employee
                     ModifySeason(SNEmployee);
                     ModifyPiecePay(SNEmployee);
 
-                    // Remove the old version of the employee from the list and add the new employee to the list
-                    RemoveEmployee(employee);
-                    AddEmployeeToList(SNEmployee);
+                    // Try creating the seasonal employee object
+                    bool didModifyWork = SNEmployee.Validate();
+                    if (didModifyWork == true)
+                    {
+                        // Remove the old version of the employee from the list and add the new employee to the list
+                        RemoveEmployee(employee);
+                        AddEmployeeToList(SNEmployee);
+                    }
+                    // If an error occurs then inform the user and set the employee type back to its original type
+                    else
+                    {
+                        String error = UIMenu.GetInfoFromUser("A valid seasonal employee could not be created\nso the employee will remain unchanged.\nHit enter to continue.");
+                        employee.SetEmployeeType(oldEmployeeType);
+                    }
                 }
             }
         }
@@ -1673,15 +1741,139 @@ namespace TheCompany
         public AllEmployees.Employee SelectEmployee(Employee employeeParameters)
         {
             AllEmployees.Employee selectedEmployee = new AllEmployees.Employee();   // A variable to save the selected employee
-            bool EmployeeMatch = true;
             // Go through all employees in the list
             foreach (AllEmployees.Employee employee in listOfEmployees)
             {
+                bool EmployeeMatch = true;
                 if (employeeParameters.GetEmployeeType() != "")
                 {
                     if (employeeParameters.GetEmployeeType() != employee.GetEmployeeType())
                     {
                         EmployeeMatch = false;
+                    }
+                }
+
+                if (employeeParameters.GetFirstName() != "")
+                {
+                    if (employeeParameters.GetFirstName() != employee.GetFirstName())
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+
+                if (employeeParameters.GetLastName() != "")
+                {
+                    if (employeeParameters.GetLastName() != employee.GetLastName())
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+
+                if (employeeParameters.GetSocialInsuranceNumber() != 0)
+                {
+                    if (employeeParameters.GetSocialInsuranceNumber() != employee.GetSocialInsuranceNumber())
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+                //full time employee checks
+                if (employeeParameters.GetEmployeeType() == "FT")
+                {
+                    if (((FulltimeEmployee)employeeParameters).GetDateOfHireString() != "0001-01-01")
+                    {
+                        if (DateTime.Compare(((FulltimeEmployee)employeeParameters).GetDateOfHire(), ((FulltimeEmployee)employee).GetDateOfHire()) != 0)
+                        {
+                            EmployeeMatch = false;
+                        }
+                    }
+
+                    if (((FulltimeEmployee)employeeParameters).GetDateOfTerminationString() != "0001-01-01")
+                    {
+                        if (DateTime.Compare(((FulltimeEmployee)employeeParameters).GetDateOfTermination(), ((FulltimeEmployee)employee).GetDateOfTermination()) != 0)
+                        {
+                            EmployeeMatch = false;
+                        }
+                    }
+
+                    if (((FulltimeEmployee)employeeParameters).GetSalary() != 0)
+                    {
+                        if (((FulltimeEmployee)employeeParameters).GetSalary() != ((FulltimeEmployee)employee).GetSalary())
+                        {
+                            EmployeeMatch = false;
+                        }
+                    }
+                }
+                if (employeeParameters.GetEmployeeType() == "PT")
+                {
+                    //part time employee checks
+                    if (((ParttimeEmployee)employeeParameters).GetDateOfHireString() != "0001-01-01")
+                    {
+                        if (DateTime.Compare(((ParttimeEmployee)employeeParameters).GetDateOfHire(), ((ParttimeEmployee)employee).GetDateOfHire()) != 0)
+                        {
+                            EmployeeMatch = false;
+                        }
+                    }
+
+                    if (((ParttimeEmployee)employeeParameters).GetDateOfTerminationString() != "0001-01-01")
+                    {
+                        if (DateTime.Compare(((ParttimeEmployee)employeeParameters).GetDateOfTermination(), ((ParttimeEmployee)employee).GetDateOfTermination()) != 0)
+                        {
+                            EmployeeMatch = false;
+                        }
+                    }
+
+                    if (((ParttimeEmployee)employeeParameters).GetHourlyRate() != 0)
+                    {
+                        if (((ParttimeEmployee)employeeParameters).GetHourlyRate() != ((ParttimeEmployee)employee).GetHourlyRate())
+                        {
+                            EmployeeMatch = false;
+                        }
+                    }
+                }
+                if (employeeParameters.GetEmployeeType() == "CT")
+                {
+                    //Contract employee checks
+                    if (((ContractEmployee)employeeParameters).GetContractStartDateString() != "0001-01-01")
+                    {
+                        if (DateTime.Compare(((ContractEmployee)employeeParameters).GetContractStartDate(), ((ContractEmployee)employee).GetContractStartDate()) != 0)
+                        {
+                            EmployeeMatch = false;
+                        }
+                    }
+
+                    else if (((ContractEmployee)employeeParameters).GetContractStopDateString() != "0001-01-01")
+                    {
+                        if (DateTime.Compare(((ContractEmployee)employeeParameters).GetContractStopDate(), ((ContractEmployee)employee).GetContractStopDate()) != 0)
+                        {
+                            EmployeeMatch = false;
+                        }
+                    }
+
+                    if (((ContractEmployee)employeeParameters).GetFixedContractAmount() != 0)
+                    {
+                        if (((ContractEmployee)employeeParameters).GetFixedContractAmount() != ((ContractEmployee)employee).GetFixedContractAmount())
+                        {
+                            EmployeeMatch = false;
+                        }
+                    }
+                }
+                if (employeeParameters.GetEmployeeType() == "SN")
+                {
+                    //Seasonal employee checks
+                    if (((SeasonalEmployee)employeeParameters).GetSeason() != "")
+                    {
+                        if (((SeasonalEmployee)employeeParameters).GetSeason() != ((SeasonalEmployee)employee).GetSeason())
+                        {
+                            EmployeeMatch = false;
+                        }
+                    }
+
+                    if (((SeasonalEmployee)employeeParameters).GetPiecePay() != 0)
+                    {
+                        if (((SeasonalEmployee)employeeParameters).GetPiecePay() != ((SeasonalEmployee)employee).GetPiecePay())
+                        {
+                            EmployeeMatch = false;
+                        }
                     }
                 }
                 if (EmployeeMatch == true)
