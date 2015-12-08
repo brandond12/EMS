@@ -1824,6 +1824,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a full time employee with an missing social insurance number and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|FT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingFTSocialInsuranceNumberData()
@@ -1842,6 +1864,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a part time employee with an missing social insurance number and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|PT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingPTSocialInsuranceNumberData()
@@ -1860,6 +1904,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a seasonal employee with an missing social insurance number and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|SN|Brandon|Davies|1993-04-24|Summer|10|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|1993-04-24|Summer|10|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|1993-04-24|Summer|10|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingSNSocialInsuranceNumberData()
@@ -1878,6 +1944,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a contract employee with a missing date of birth and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|CT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingCTDateOfBirthData()
@@ -1896,6 +1984,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a full time employee with a missing date of birth and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|FT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingFTDateOfBirthData()
@@ -1914,6 +2024,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a part time employee with a missing date of birth and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|PT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingPTDateOfBirthData()
@@ -1932,6 +2064,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a seasonal employee with a missing date of birth and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|SN|Brandon|Davies|123456789|Summer|10|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|Summer|10|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|Summer|10|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingSNDateOfBirthData()
@@ -1950,6 +2104,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a contract employee with a missing start date and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|CT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingCTContractStartDateData()
@@ -1968,6 +2144,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a full time employee with a missing start date and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|FT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingFTDateOfHireData()
@@ -1986,6 +2184,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a part time employee with a missing start date and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|PT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingPTDateOfHireData()
@@ -2004,6 +2224,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a seasonal employee with a missing season and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|SN|Brandon|Davies|123456789|1993-04-24|10|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|1993-04-24|10|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|1993-04-24|10|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingSNSeasonData()
@@ -2022,6 +2264,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a contract employee with a missing stop date and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingCTContractStopDateData()
@@ -2040,6 +2304,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a full time employee with a missing stop date and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingFTDateOfTerminationData()
@@ -2058,6 +2344,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a part time employee with a missing stop date and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingPTDateOfTerminationData()
@@ -2076,6 +2384,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a seasonal employee with a missing piece pay and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|SN|Brandon|Davies|123456789|1993-04-24|Summer|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|1993-04-24|Summer|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|1993-04-24|Summer|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingSNPiecePayData()
@@ -2094,6 +2424,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a contract employee with a missing contract amount and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingCTFixedContractAmountData()
@@ -2112,6 +2464,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a full time employee with a missing salary and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingFTSalaryData()
@@ -2130,6 +2504,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a part time employee with a missing hourly rate and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readMissingPTHourlyRateData()
@@ -2148,6 +2544,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a contract employee with a blank first name and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|CT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|CT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|CT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankCTFirstNameData()
@@ -2166,6 +2584,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a full time employee with a blank first name and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|FT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|FT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|FT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankFTFirstNameData()
@@ -2184,6 +2624,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a part time employee with a blank first name and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|PT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|PT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|PT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankPTFirstNameData()
@@ -2202,6 +2664,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a seasonal employee with a blank first name and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|SN||Davies|123456789|1993-04-24|Summer|10|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|SN||Davies|123456789|1993-04-24|Summer|10|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|SN||Davies|123456789|1993-04-24|Summer|10|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankSNFirstNameData()
@@ -2220,6 +2704,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a contract employee with a blank last name and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankCTLastNameData()
@@ -2238,6 +2744,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a full time employee with a blank last name and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|FT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankFTLastNameData()
@@ -2256,6 +2784,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a part time employee with a blank last name and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|PT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankPTLastNameData()
@@ -2274,6 +2824,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a seasonal employee with a blank last name and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|SN|Brandon||123456789|1993-04-24|Summer|10|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon||123456789|1993-04-24|Summer|10|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon||123456789|1993-04-24|Summer|10|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankSNLastNameData()
@@ -2292,6 +2864,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a contract employee with a blank social insurance number and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|CT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankCTSocialInsuranceNumberData()
@@ -2310,6 +2904,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a full time employee with a blank social insurance number and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|FT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankFTSocialInsuranceNumberData()
@@ -2328,6 +2944,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a part time employee with a blank social insurance number and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|PT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankPTSocialInsuranceNumberData()
@@ -2346,6 +2984,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a seasonal employee with a blank social insurance number and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|SN|Brandon|Davies||1993-04-24|Summer|10|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies||1993-04-24|Summer|10|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies||1993-04-24|Summer|10|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankSNSocialInsuranceNumberData()
@@ -2364,6 +3024,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a contract employee with a blank date of birth and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|CT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankCTDateOfBirthData()
@@ -2382,6 +3064,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a full time employee with a blank date of birth and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|FT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankFTDateOfBirthData()
@@ -2400,6 +3104,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a part time employee with a blank date of birth and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|PT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankPTDateOfBirthData()
@@ -2418,6 +3144,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a seasonal employee with a blank date of birth and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|SN|Brandon|Davies|123456789||Summer|10|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789||Summer|10|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789||Summer|10|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankSNDateOfBirthData()
@@ -2436,6 +3184,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a contract employee with a blank start date and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|CT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankCTContractStartDateData()
@@ -2454,6 +3224,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a full time employee with a blank start date and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|FT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankFTDateOfHireData()
@@ -2472,6 +3264,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a part time employee with a blank start date and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|PT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankPTDateOfHireData()
@@ -2490,6 +3304,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a seasonal employee with a blank season and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|SN|Brandon|Davies|123456789|1993-04-24||10|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|1993-04-24||10|" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|1993-04-24||10|" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankSNSeasonData()
@@ -2508,6 +3344,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a contract employee with a blank stop date and return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Normal/Functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankCTContractStopDateData()
@@ -2531,6 +3389,28 @@ namespace FileIOTests
             Assert.IsTrue(((AllEmployees.ContractEmployee)EmpRecords[0]).ToString() == CTEmp.ToString());
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a full time employee with a blank stop date and return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Normal/Functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankFTDateOfTerminationData()
@@ -2554,6 +3434,28 @@ namespace FileIOTests
             Assert.IsTrue(((AllEmployees.FulltimeEmployee)EmpRecords[0]).ToString() == CTEmp.ToString());
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a part time employee with a blank stop date and return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Normal/Functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankPTDateOfTerminationData()
@@ -2577,6 +3479,28 @@ namespace FileIOTests
             Assert.IsTrue(((AllEmployees.ParttimeEmployee)EmpRecords[0]).ToString() == CTEmp.ToString());
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a seasonal employee with a blank peice pay and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|SN|Brandon|Davies|123456789|1993-04-24|Summer||"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|1993-04-24|Summer||" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|1993-04-24|Summer||" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankSNPiecePayData()
@@ -2595,6 +3519,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a contract employee with a blank contract and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankCTFixedContractAmountData()
@@ -2613,6 +3559,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a full time employee with a blank salary and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankFTSalaryData()
@@ -2631,6 +3599,28 @@ namespace FileIOTests
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method ReadAllRecords
+        * will read a part time employee with a blank hour rate and not return that employee in a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is ReadAllRecords.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is Fault/Exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||"
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
         public void readBlankPTHourlyRateData()
