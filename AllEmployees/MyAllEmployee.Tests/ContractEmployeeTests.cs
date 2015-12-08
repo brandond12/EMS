@@ -11,6 +11,12 @@ using AllEmployees;
 
 namespace MyAllEmployee.Tests
 {
+    /// \class ContractEmployeeTests
+    ///
+    /// \brief <b>Brief Description</b> 
+    /// This class is used to test the ContractEmployee methods in the AllEmployee class. The methods tested 
+    /// include the constructors, Details, SetDateOfBirth (all 3 overloaded methods), SetContractDate (all 3 overloaded methods), SetContractStopDate(all 3 overloaded methods), SetFixedCntractAmount and ToString.
+
     [TestClass]
     public class ContractEmployeeTests
     {

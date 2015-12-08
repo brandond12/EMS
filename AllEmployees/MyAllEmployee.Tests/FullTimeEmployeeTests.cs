@@ -11,6 +11,11 @@ using AllEmployees;
 
 namespace MyAllEmployee.Tests
 {
+    /// \class FullTimeEmployeeTests
+    ///
+    /// \brief <b>Brief Description</b> 
+    /// This class is used to test the FulltimeEmployee methods in the AllEmployee class. The methods tested 
+    /// include the constructors, Details, SetDateOfBirth (all 3 overloaded methods), SetDateofHire (all 3 overloaded methods), SetDateofTermination(all 3 overloaded methods), SetSalary and ToString.
     [TestClass]
     public class FullTimeEmployeeTests
     {

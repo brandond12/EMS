@@ -11,6 +11,11 @@ using AllEmployees;
 
 namespace MyAllEmployee.Tests
 {
+    /// \class ParttimeEmployeeTests
+    ///
+    /// \brief <b>Brief Description</b> 
+    /// This class is used to test the ParttimeEmployee methods in the AllEmployee class. The methods tested 
+    /// include the constructors, Details, SetDateOfBirth (all 3 overloaded methods), SetDateofHire (all 3 overloaded methods), SetDateofTermination(all 3 overloaded methods), SetHourlyRate and ToString.
     [TestClass]
     public class ParttimeEmployeeTests
     {
@@ -1393,7 +1398,7 @@ namespace MyAllEmployee.Tests
         * \brief This unit test will set the salary to a valid amount
         * 
         * \<b>Name of Method/b>
-        * SetSalaryValid()
+        * SetHourlyRate()
         * 
         * \<b>How test is Conducted/b>
         * This test is run automatically
@@ -1412,8 +1417,8 @@ namespace MyAllEmployee.Tests
         * Return value is true, and the data member should have changed
         */
         [TestMethod]
-        [TestCategory("ParttimeEmployee SetSalary")]
-        public void SetSalaryValid()
+        [TestCategory("ParttimeEmployee SetHourlyRate")]
+        public void SetHourlyRateValid()
         {
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies");
             bool retVal = employee.SetHourlyRate(18);
@@ -1425,7 +1430,7 @@ namespace MyAllEmployee.Tests
         * \brief This unit test will set the salary to an invalid amount
         * 
         * \<b>Name of Method/b>
-        * SetSalaryInvalidNegitive()
+        * SetHourlyRateInvalidNegitive()
         * 
         * \<b>How test is Conducted/b>
         * This test is run automatically
@@ -1444,8 +1449,8 @@ namespace MyAllEmployee.Tests
         * Return value is false, and the data member should not have changed
         */
         [TestMethod]
-        [TestCategory("ParttimeEmployee SetSalary")]
-        public void SetSalaryInvalidNegitive()
+        [TestCategory("ParttimeEmployee SetHourlyRate")]
+        public void SetHourlyRateInvalidNegitive()
         {
             ParttimeEmployee employee = new ParttimeEmployee("Brandon", "Davies");
             bool retVal = employee.SetHourlyRate(-18);

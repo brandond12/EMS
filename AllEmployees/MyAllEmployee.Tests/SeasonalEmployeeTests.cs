@@ -11,6 +11,11 @@ using AllEmployees;
 
 namespace MyAllEmployee.Tests
 {
+    /// \class SeasonalEmployeeTests
+    ///
+    /// \brief <b>Brief Description</b> 
+    /// This class is used to test the SeasonalEmployee methods in the AllEmployee class. The methods tested 
+    /// include the constructors, Details, SetDateOfBirth (all 3 overloaded methods), SetPiecePay, SetSeason and ToString.
     [TestClass]
     public class SeasonalEmployeeTests
     {
@@ -489,7 +494,7 @@ namespace MyAllEmployee.Tests
         * Return value is false, and the data member should not have changed
         */
         [TestMethod]
-        [TestCategory("SeasonalEmployee SetSalary")]
+        [TestCategory("SeasonalEmployee SetPiecePay")]
         public void SetPiecePayInvalidNegitive()
         {
             SeasonalEmployee employee = new SeasonalEmployee("Brandon", "Davies");
@@ -520,7 +525,7 @@ namespace MyAllEmployee.Tests
         * Return value is true, and the data member should have changed
         */
         [TestMethod]
-        [TestCategory("SeasonalEmployee SetSeason")]
+        [TestCategory("SeasonalEmployee SetPiecePay")]
         public void SetSeasonValid1()
         {
             SeasonalEmployee employee = new SeasonalEmployee("Brandon", "Davies");
