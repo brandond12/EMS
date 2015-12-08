@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+* FILE   : Loggingtests.cs
+* PROJECT  : INFO 2180 -Software Quality 1 - EMS
+* PROGRAMMER : Jennifer Klimova
+* FIRST VERSION : 2015-12-07
+* DESCRIPTION : This is the header for the logging test class that will test the logger
+*/
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Supporting;
 using System.IO;
@@ -23,7 +30,9 @@ namespace Loggingtests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * string methodName = "GetEmployeeInformation";
+        * string className = "Employee";
+        * string eventDetails = "Employee - Clarke,Sean (333 333 333) VALIDER";
         * 
         * \<b>Expected Result</b>
         * The expected result is that both logging events are the same in terms of what information they were given. 
