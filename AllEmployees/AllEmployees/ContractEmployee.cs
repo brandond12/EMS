@@ -469,12 +469,7 @@ namespace AllEmployees
         public bool SetContractStopDate(DateTime date)
         {
             bool dataSaved = true;
-            if (contractStartDate.Year == 1)
-            {
-                dataSaved = false;
-                Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Contract Stop Date - No Contract Start Date");
-            }
-            else if(DateTime.Compare(date, contractStartDate) == -1)
+            if(DateTime.Compare(date, contractStartDate) == -1)
             {
                 dataSaved = false;
                 Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Contract Stop Date - Contract Stop Date Before Contract Start Date");
@@ -509,12 +504,7 @@ namespace AllEmployees
                 day = Int32.Parse(date.Substring(8, 2));
                 DateTime newcontractStopDate = new DateTime(year, month, day);
                 //validate dates
-                if (contractStartDate.Year == 1)
-                {
-                    dataSaved = false;
-                    Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Contract Stop Date - No Contract Start Date");
-                }
-                else if(DateTime.Compare(newcontractStopDate, contractStartDate) == -1)
+                if(DateTime.Compare(newcontractStopDate, contractStartDate) == -1)
                 {
                     dataSaved = false;
                     Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Contract Stop Date - Contract Stop Date Before Contract Start Date");
@@ -552,12 +542,7 @@ namespace AllEmployees
             {
                 DateTime newcontractStopDate = new DateTime(year, month, day);
                 //validate dates
-                if (contractStartDate.Year == 1)
-                {
-                    dataSaved = false;
-                    Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Contract Stop Date - No Contract Start Date");
-                }
-                else if(DateTime.Compare(newcontractStopDate, contractStartDate) == -1)
+                if(DateTime.Compare(newcontractStopDate, contractStartDate) == -1)
                 {
                     dataSaved = false;
                     Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Contract Stop Date - Contract Stop Date Before Contract Start Date");
