@@ -52,7 +52,11 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2011, 03, 19);
+        * FTEmployee = new FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employeeList.Count will return 1.
@@ -86,7 +90,7 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * Employee employee = new Employee("Janet", "Moore", 872046045, dateOfBirth, "");
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employeeList.Count will return 0.
@@ -127,7 +131,11 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2011, 03, 19);
+        * FTEmployee = new FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employeeList.Count will return 0.
@@ -164,7 +172,16 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference:
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2011, 03, 19);
+        * FTEmployee = new FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * And a part-time employee reference:
+        * DateTime dateOfBirth = new DateTime(1987, 06, 22);
+        * DateTime dateOfHire = new DateTime(2013, 04, 12);
+        * DateTime dateOfTermination = new DateTime(2015, 01, 25);
+        * ParttimeEmployee PTEmployee = new ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employeeList.Count will return 1.
@@ -210,7 +227,19 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A part-time employee reference:
+        * DateTime dateOfBirth = new DateTime(1987, 06, 22);
+        * DateTime dateOfHire = new DateTime(2013, 04, 12);
+        * DateTime dateOfTermination = new DateTime(2014, 05, 13);
+        * ParttimeEmployee PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+        * A contract employee reference:
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * ContractEmployee CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * A seasonal employee reference:
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SeasonalEmployee SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         *    
         * \<b>Expected Result</b>
         * The expected result is that all of the employees will be be displayed to the user 
@@ -277,7 +306,16 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference:
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2011, 03, 19);
+        * FTEmployee = new FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * A part-time employee reference:
+        * DateTime dateOfBirth = new DateTime(1987, 06, 22);
+        * DateTime dateOfHire = new DateTime(2013, 04, 12);
+        * DateTime dateOfTermination = new DateTime(2014, 05, 13);
+        * ParttimeEmployee PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employeeList.Count will return 2.
@@ -299,7 +337,9 @@ namespace TheCompany.Tests
             employeeRepo.AddEmployeeToList(PTEmployee);
 
             var privateObject = new PrivateObject(employeeRepo);
+            // Execute the method that is being tested
             List<Employee> employeeList = (List<Employee>)privateObject.Invoke("GetEmployeeList");
+            // Check if the expected result and actual result are the same
             Assert.AreEqual(2, employeeList.Count);
         }
     }

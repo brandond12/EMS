@@ -1744,148 +1744,195 @@ namespace TheCompany
             // Go through all employees in the list
             foreach (AllEmployees.Employee employee in listOfEmployees)
             {
-                bool EmployeeMatch = true;
+                bool EmployeeMatch = true;          // Does the employee match the given employee parameters
+                bool isBaseDetailsAMatch = false;   // Does the employee match the given base employee details
+
+                // Check if there is a parameter for the employee type
                 if (employeeParameters.GetEmployeeType() != "")
                 {
+                    // If the parameter and the employee's value match, then this employee is a match
+                    isBaseDetailsAMatch = true;
+                    // If the parameter and the employee's value don't match, then this employee isn't a match
                     if (employeeParameters.GetEmployeeType() != employee.GetEmployeeType())
                     {
                         EmployeeMatch = false;
+                        isBaseDetailsAMatch = false;
                     }
                 }
 
+                // Check if there is a parameter for the first name
                 if (employeeParameters.GetFirstName() != "")
                 {
+                    // If the parameter and the employee's value match, then this employee is a match
+                    isBaseDetailsAMatch = true;
+                    // If the parameter and the employee's value don't match, then this employee isn't a match
                     if (employeeParameters.GetFirstName() != employee.GetFirstName())
                     {
                         EmployeeMatch = false;
+                        isBaseDetailsAMatch = false;
                     }
                 }
 
+                // Check if there is a parameter for the last name
                 if (employeeParameters.GetLastName() != "")
                 {
+                    // If the parameter and the employee's value match, then this employee is a match
+                    isBaseDetailsAMatch = true;
+                    // If the parameter and the employee's value don't match, then this employee isn't a match
                     if (employeeParameters.GetLastName() != employee.GetLastName())
                     {
                         EmployeeMatch = false;
+                        isBaseDetailsAMatch = false;
                     }
                 }
 
+                // Check if there is a parameter for the social insurance number
                 if (employeeParameters.GetSocialInsuranceNumber() != 0)
                 {
+                    // If the parameter and the employee's value match, then this employee is a match
+                    isBaseDetailsAMatch = true;
+                    // If the parameter and the employee's value don't match, then this employee isn't a match
                     if (employeeParameters.GetSocialInsuranceNumber() != employee.GetSocialInsuranceNumber())
                     {
                         EmployeeMatch = false;
+                        isBaseDetailsAMatch = false;
                     }
                 }
 
+                // Check if there is a parameter for the date of birth
                 if (employeeParameters.GetDateOfBirthString() != "0001-01-01")
                 {
+                    // If the parameter and the employee's value match, then this employee is a match
+                    isBaseDetailsAMatch = true;
+                    // If the parameter and the employee's value don't match, then this employee isn't a match
                     if (DateTime.Compare(employeeParameters.GetDateOfBirth(), employee.GetDateOfBirth()) != 0)
                     {
                         EmployeeMatch = false;
+                        isBaseDetailsAMatch = false;
                     }
                 }
 
-                //full time employee checks
+                // Check the values for a full-time employee
                 if ((employee.GetType() == typeof(AllEmployees.FulltimeEmployee)) && (employeeParameters.GetType() == typeof(AllEmployees.FulltimeEmployee)))
                 {
+                    // Check if there is a parameter for the date of hire
                     if (((FulltimeEmployee)employeeParameters).GetDateOfHireString() != "0001-01-01")
                     {
+                        // If the parameter and the employee's value don't match, then this employee isn't a match
                         if (DateTime.Compare(((FulltimeEmployee)employeeParameters).GetDateOfHire(), ((FulltimeEmployee)employee).GetDateOfHire()) != 0)
                         {
                             EmployeeMatch = false;
                         }
                     }
-
+                    // Check if there is a parameter for the date of termination
                     if (((FulltimeEmployee)employeeParameters).GetDateOfTerminationString() != "0001-01-01")
                     {
+                        // If the parameter and the employee's value don't match, then this employee isn't a match
                         if (DateTime.Compare(((FulltimeEmployee)employeeParameters).GetDateOfTermination(), ((FulltimeEmployee)employee).GetDateOfTermination()) != 0)
                         {
                             EmployeeMatch = false;
                         }
                     }
-
+                    // Check if there is a parameter for the salary
                     if (((FulltimeEmployee)employeeParameters).GetSalary() != 0)
                     {
+                        // If the parameter and the employee's value don't match, then this employee isn't a match
                         if (((FulltimeEmployee)employeeParameters).GetSalary() != ((FulltimeEmployee)employee).GetSalary())
                         {
                             EmployeeMatch = false;
                         }
                     }
                 }
+
+                // Check the values for a part-time employee
                 else if ((employee.GetType() == typeof(AllEmployees.ParttimeEmployee)) && (employeeParameters.GetType() == typeof(AllEmployees.ParttimeEmployee)))
                 {
-                    //part time employee checks
+                    // Check if there is a parameter for the date of hire
                     if (((ParttimeEmployee)employeeParameters).GetDateOfHireString() != "0001-01-01")
                     {
+                        // If the parameter and the employee's value don't match, then this employee isn't a match
                         if (DateTime.Compare(((ParttimeEmployee)employeeParameters).GetDateOfHire(), ((ParttimeEmployee)employee).GetDateOfHire()) != 0)
                         {
                             EmployeeMatch = false;
                         }
                     }
-
+                    // Check if there is a parameter for the date of termination
                     if (((ParttimeEmployee)employeeParameters).GetDateOfTerminationString() != "0001-01-01")
                     {
+                        // If the parameter and the employee's value don't match, then this employee isn't a match
                         if (DateTime.Compare(((ParttimeEmployee)employeeParameters).GetDateOfTermination(), ((ParttimeEmployee)employee).GetDateOfTermination()) != 0)
                         {
                             EmployeeMatch = false;
                         }
                     }
-
+                    // Check if there is a parameter for the hourly rate
                     if (((ParttimeEmployee)employeeParameters).GetHourlyRate() != 0)
                     {
+                        // If the parameter and the employee's value don't match, then this employee isn't a match
                         if (((ParttimeEmployee)employeeParameters).GetHourlyRate() != ((ParttimeEmployee)employee).GetHourlyRate())
                         {
                             EmployeeMatch = false;
                         }
                     }
                 }
+
+                // Check the values for a contract employee
                 else if ((employee.GetType() == typeof(AllEmployees.ContractEmployee)) && (employeeParameters.GetType() == typeof(AllEmployees.ContractEmployee)))
                 {
-                    //Contract employee checks
+                    // Check if there is a parameter for the contract start date
                     if (((ContractEmployee)employeeParameters).GetContractStartDateString() != "0001-01-01")
                     {
+                        // If the parameter and the employee's value don't match, then this employee isn't a match
                         if (DateTime.Compare(((ContractEmployee)employeeParameters).GetContractStartDate(), ((ContractEmployee)employee).GetContractStartDate()) != 0)
                         {
                             EmployeeMatch = false;
                         }
                     }
-
+                    // Check if there is a parameter for the contract stop date
                     else if (((ContractEmployee)employeeParameters).GetContractStopDateString() != "0001-01-01")
                     {
+                        // If the parameter and the employee's value don't match, then this employee isn't a match
                         if (DateTime.Compare(((ContractEmployee)employeeParameters).GetContractStopDate(), ((ContractEmployee)employee).GetContractStopDate()) != 0)
                         {
                             EmployeeMatch = false;
                         }
                     }
-
+                    // Check if there is a parameter for the contract amount
                     if (((ContractEmployee)employeeParameters).GetFixedContractAmount() != 0)
                     {
+                        // If the parameter and the employee's value don't match, then this employee isn't a match
                         if (((ContractEmployee)employeeParameters).GetFixedContractAmount() != ((ContractEmployee)employee).GetFixedContractAmount())
                         {
                             EmployeeMatch = false;
                         }
                     }
                 }
+
+                // Check the values for a seasonal employee
                 else if ((employee.GetType() == typeof(AllEmployees.SeasonalEmployee)) && (employeeParameters.GetType() == typeof(AllEmployees.SeasonalEmployee)))
                 {
-                    //Seasonal employee checks
+                    // Check if there is a parameter for the season
                     if (((SeasonalEmployee)employeeParameters).GetSeason() != "")
                     {
+                        // If the parameter and the employee's value don't match, then this employee isn't a match
                         if (((SeasonalEmployee)employeeParameters).GetSeason() != ((SeasonalEmployee)employee).GetSeason())
                         {
                             EmployeeMatch = false;
                         }
                     }
-
+                    // Check if there is a parameter for the piece pay
                     if (((SeasonalEmployee)employeeParameters).GetPiecePay() != 0)
                     {
+                        // If the parameter and the employee's value don't match, then this employee isn't a match
                         if (((SeasonalEmployee)employeeParameters).GetPiecePay() != ((SeasonalEmployee)employee).GetPiecePay())
                         {
                             EmployeeMatch = false;
                         }
                     }
                 }
-                else if (employee.GetType() != employeeParameters.GetType())
+                /* If the employee type doesn't match the employee parameter type, and there were no 
+                * matches in the base details, then this employee isn't a match to the given employee */
+                else if ((employee.GetType() != employeeParameters.GetType()) && (isBaseDetailsAMatch == false))
                 {
                     EmployeeMatch = false;
                 }
