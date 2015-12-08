@@ -147,7 +147,7 @@ namespace Supporting
                 if (words[wordCounter] == "CT")
                 {
                     bool isValid = true;
-                    if (words[wordCounter + 7] != null)
+                    if (words.Length > (wordCounter + 7))
                     {
                         //AllEmployees.ContractEmployee contractEmp = new AllEmployees.ContractEmployee(words[wordCounter], words[wordCounter+1], Convert.ToInt32(words[wordCounter+2]), words[wordCounter+3], words[wordCounter+4], words[wordCounter+5], Convert.ToDouble(words[wordCounter+6]));
                         try
@@ -202,12 +202,13 @@ namespace Supporting
                     else
                     {
                         Logging.Log("FileIO", "ParsRecord", "Not enough employee data for a contract employee");
+                        break;
                     }
                 }
                 else if (words[wordCounter] == "FT")
                 {
                     bool isValid = true;
-                    if (words[wordCounter + 7] != null)
+                    if (words.Length > (wordCounter + 7))
                     {
                         AllEmployees.FulltimeEmployee fullTimeEmp = new AllEmployees.FulltimeEmployee();
 
@@ -263,11 +264,12 @@ namespace Supporting
                     else
                     {
                         Logging.Log("FileIO", "ParsRecord", "Not enough employee data for a full time employee");
+                        break;
                     }
                 }
                 else if (words[wordCounter] == "PT")
                 {
-                    if (words[wordCounter + 7] != null)
+                    if (words.Length > (wordCounter + 7))
                     {
                         bool isValid = true;
                         AllEmployees.ParttimeEmployee partTimeEmp = new AllEmployees.ParttimeEmployee();
@@ -323,11 +325,12 @@ namespace Supporting
                     else
                     {
                         Logging.Log("FileIO", "ParsRecord", "Not enough employee data for a part time employee");
+                        break;
                     }
                 }
                 else if (words[wordCounter] == "SN")
                 {
-                    if (words[wordCounter + 6] != null)
+                    if (words.Length > (wordCounter + 6))
                     {
                         AllEmployees.SeasonalEmployee seasonalEmp = new AllEmployees.SeasonalEmployee();
 
@@ -379,6 +382,7 @@ namespace Supporting
                     else
                     {
                         Logging.Log("FileIO", "ParsRecord", "Not enough employee data for a seasonal employee");
+                        break;
                     }
                 }
                 else
