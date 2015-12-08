@@ -19,9 +19,8 @@ namespace Presentation
     /// \class UIMenu
     ///
     /// \brief <b>Brief Description</b> - This class dislays to the user a number of menus where the user then can access the database and either insert, delete, or make changes. 
-    /// \brief <b>Brief Description Continued</b> - The UIMenu class is related to the container class as it pulls methods from the class. If the user inputs don't match up to 
-    /// \brief <b>Brief Description Continued</b> - what is acceptable, the user will be notified appropriately. 
-    /// \brief <b>Brief Description Continued</b> - The UI Menu will not be unit tested. It will be hand tested. 
+    /// The UIMenu class is related to the container class as it pulls methods from the class. If the user inputs don't match up to 
+    /// what is acceptable, the user will be notified appropriately. The UI Menu will not be unit tested. It will be hand tested. 
     /// \author <i>Jennifer Klimova</i>
     public class UIMenu
     {
@@ -85,15 +84,17 @@ namespace Presentation
             switch (str)
             {
                 case "1":
+                    // Goes to the second menu
                     ShowFileManagementMenu();
                     break;
                 case "2":
+                    // Goes to the third menu
                     ShowEmployeeManagementMenu();
                     break;
                 case "9":
                     break;
             }
-            return true;//temp here
+            return true;
         }
 
         /**
@@ -124,16 +125,16 @@ namespace Presentation
             switch (str)
             {
                 case "1":
-                    
-                    //nathan returns a list, that contains the employees, i need to send that list to lauren so she can add it to the container class
+                    // Gets employee list from the database
                     employeeList = FileIO.ReadAllRecords(@"DBase\DBase.txt");
                     foreach(Employee emp in employeeList)
                     {
+                        // Add it to the list
                         company.AddEmployeeToList(emp);
                     }
                     break;
                 case "2":
-                    //get a list from lauren, and send it to nathan
+                    // Send each individual employee back out to the database
                     employeeList = company.GetEmployeeList();
                     foreach(Employee emp in employeeList)
                     {
@@ -161,6 +162,9 @@ namespace Presentation
         */
         private void ShowEmployeeManagementMenu()
         {
+            // Employee object
+            Employee employee = new Employee();
+
             Console.WriteLine("Menu 3 : EMPLOYEE MANAGEMENT MENU");
             Console.WriteLine("---------------------------------");
             Console.WriteLine("1. Display Employee Set");
@@ -174,16 +178,25 @@ namespace Presentation
             switch (str)
             {
                 case "1":
+                    // Display the employees
                     company.DisplayAllEmployees();
                     break;
                 case "2":
-                    ShowEmployeeDetailsMenu();
+                    // Go to menu 4
+                    employee = ShowEmployeeDetailsMenu();
+                    company.AddEmployeeToList(employee);
                     break;
                 case "3":
-                    ShowEmployeeDetailsMenu();
+                    // Go to menu 4
+                    employee = ShowEmployeeDetailsMenu();
+                    employee = company.SelectEmployee(employee);
+                    company.ModifyEmployee(employee);
                     break;
                 case "4":
-                    ShowEmployeeDetailsMenu(); //this can change
+                    // Give the employee details to the container class, and remove the applicable employee
+                    employee = ShowEmployeeDetailsMenu();
+                    employee = company.SelectEmployee(employee);
+                    company.RemoveEmployee(employee);
                     break;
                 case "9":
                     ShowMainMenu();
@@ -204,7 +217,7 @@ namespace Presentation
         * 
         * \return n/a
         */
-        private void ShowEmployeeDetailsMenu()
+        private Employee ShowEmployeeDetailsMenu()
         {
             // Variables 
             Employee employee = new Employee();
@@ -384,6 +397,7 @@ namespace Presentation
                     }
                 }
             }
+            return employee;
         }
 
         /**
