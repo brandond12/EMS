@@ -1776,8 +1776,17 @@ namespace TheCompany
                         EmployeeMatch = false;
                     }
                 }
+
+                if (employeeParameters.GetDateOfBirthString() != "0001-01-01")
+                {
+                    if (DateTime.Compare(employeeParameters.GetDateOfBirth(), employee.GetDateOfBirth()) != 0)
+                    {
+                        EmployeeMatch = false;
+                    }
+                }
+
                 //full time employee checks
-                if (employeeParameters.GetEmployeeType() == "FT")
+                if ((employee.GetType() == typeof(AllEmployees.FulltimeEmployee)) && (employeeParameters.GetType() == typeof(AllEmployees.FulltimeEmployee)))
                 {
                     if (((FulltimeEmployee)employeeParameters).GetDateOfHireString() != "0001-01-01")
                     {
@@ -1803,7 +1812,7 @@ namespace TheCompany
                         }
                     }
                 }
-                if (employeeParameters.GetEmployeeType() == "PT")
+                else if ((employee.GetType() == typeof(AllEmployees.ParttimeEmployee)) && (employeeParameters.GetType() == typeof(AllEmployees.ParttimeEmployee)))
                 {
                     //part time employee checks
                     if (((ParttimeEmployee)employeeParameters).GetDateOfHireString() != "0001-01-01")
@@ -1830,7 +1839,7 @@ namespace TheCompany
                         }
                     }
                 }
-                if (employeeParameters.GetEmployeeType() == "CT")
+                else if ((employee.GetType() == typeof(AllEmployees.ContractEmployee)) && (employeeParameters.GetType() == typeof(AllEmployees.ContractEmployee)))
                 {
                     //Contract employee checks
                     if (((ContractEmployee)employeeParameters).GetContractStartDateString() != "0001-01-01")
@@ -1857,7 +1866,7 @@ namespace TheCompany
                         }
                     }
                 }
-                if (employeeParameters.GetEmployeeType() == "SN")
+                else if ((employee.GetType() == typeof(AllEmployees.SeasonalEmployee)) && (employeeParameters.GetType() == typeof(AllEmployees.SeasonalEmployee)))
                 {
                     //Seasonal employee checks
                     if (((SeasonalEmployee)employeeParameters).GetSeason() != "")
@@ -1875,6 +1884,10 @@ namespace TheCompany
                             EmployeeMatch = false;
                         }
                     }
+                }
+                else if (employee.GetType() != employeeParameters.GetType())
+                {
+                    EmployeeMatch = false;
                 }
                 if (EmployeeMatch == true)
                 {

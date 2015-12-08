@@ -38,41 +38,104 @@ namespace TheCompany.Tests
         //      AddEmployeeToList Tests
         // ---------------------------------
 
-       [TestMethod]
-        // normal
+        /**
+        * \brief The unit test's purpose is to test if the method AddEmployeeToList 
+        * actually adds an employee to the employee list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is AddEmployeeToList.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is normal/functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the employeeList.Count will return 1.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the employeeList.Count returns 1.
+        */
+        [TestMethod]
         public void AddEmployeeToList_ValidEmployee_AddsEmployeeToList()
         {
             // Instantiate a private object 
             var privateObject = new PrivateObject(employeeRepo);
             // Execute the method that is being tested
-            employeeRepo.AddEmployeeToList(FTEmployee);
+            privateObject.Invoke("AddEmployeeToList", FTEmployee);
             // Check if the expected result and actual result are the same
             List<Employee> employeeList = (List<Employee>)privateObject.GetField("listOfEmployees");
             Assert.AreEqual(1, employeeList.Count);
         }
 
-       [TestMethod]
-       // normal
-       public void AddEmployeeToList_InvalidEmployee_EmployeeNotAddedToList()
-       {
-           // Instantiate an Employee object and a private object
-           DateTime dateOfBirth = new DateTime(1987, 11, 29);
-           Employee employee = new Employee("Janet", "Moore", 872046045, dateOfBirth, "");
-           var privateObject = new PrivateObject(employeeRepo);
-
-           // Execute the method that is being tested
-           employeeRepo.AddEmployeeToList(employee);
-           // Check if the expected result and actual result are the same
-           List<Employee> employeeList = (List<Employee>)privateObject.GetField("listOfEmployees");
-           Assert.AreEqual(0, employeeList.Count);
-       }
-
-       // ------------------------------
-       //      RemoveEmployee Tests
-       // ------------------------------
-
+        /**
+        * \brief The unit test's purpose is to test if the method AddEmployeeToList 
+        * will not add an invalid employee to the employee list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is AddEmployeeToList.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is fault/exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the employeeList.Count will return 0.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the employeeList.Count returns 0.
+        */
         [TestMethod]
-        // normal
+        public void AddEmployeeToList_InvalidEmployee_EmployeeNotAddedToList()
+        {
+            // Instantiate an Employee object and a private object
+            DateTime dateOfBirth = new DateTime(1987, 11, 29);
+            Employee employee = new Employee("Janet", "Moore", 872046045, dateOfBirth, "");
+            var privateObject = new PrivateObject(employeeRepo);
+
+            // Execute the method that is being tested
+            privateObject.Invoke("AddEmployeeToList", employee);
+            // Check if the expected result and actual result are the same
+            List<Employee> employeeList = (List<Employee>)privateObject.GetField("listOfEmployees");
+            Assert.AreEqual(0, employeeList.Count);
+        }
+
+        // ------------------------------
+        //      RemoveEmployee Tests
+        // ------------------------------
+
+        /**
+        * \brief The unit test's purpose is to test if the method RemoveEmployee
+        * will remove an employee from the employee list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is RemoveEmployee.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is normal/functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the employeeList.Count will return 0.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the employeeList.Count returns 0.
+        */
+        [TestMethod]
         public void RemoveEmployee_ValidEmployeeInList_RemovesEmployee()
         {
             // Instantiate a private object 
@@ -81,14 +144,35 @@ namespace TheCompany.Tests
             employeeRepo.AddEmployeeToList(FTEmployee);
 
             // Execute the method that is being tested
-            employeeRepo.RemoveEmployee(FTEmployee);
+            privateObject.Invoke("RemoveEmployee", FTEmployee);
             // Check if the expected result and actual result are the same
             List<Employee> employeeList = (List<Employee>)privateObject.GetField("listOfEmployees");
             Assert.AreEqual(0, employeeList.Count);
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method RemoveEmployee
+        * will not remove an invalid employee from the employee list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is RemoveEmployee.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is fault/exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the employeeList.Count will return 1.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the employeeList.Count returns 1.
+        */
         [TestMethod]
-        // normal
         public void RemoveEmployee_InvalidEmployeeNotInList_EmployeeIsNotRemoved()
         {
             // Instantiate a ParttimeEmployee object and a private object
@@ -97,21 +181,126 @@ namespace TheCompany.Tests
             DateTime dateOfTermination = new DateTime(2015, 01, 25);
             ParttimeEmployee PTEmployee = new ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
             var privateObject = new PrivateObject(employeeRepo);
-
             // Add an employee to the list before attempting to remove one
             employeeRepo.AddEmployeeToList(FTEmployee);
+
             // Execute the method that is being tested
-            employeeRepo.RemoveEmployee(PTEmployee);
+            privateObject.Invoke("RemoveEmployee", PTEmployee);
             // Check if the expected result and actual result are the same
             List<Employee> employeeList = (List<Employee>)privateObject.GetField("listOfEmployees");
             Assert.AreEqual(1, employeeList.Count);
         }
 
-        // ----------------------------------
-        //      DisplayAllEmployees Test
-        // ----------------------------------
-        // can't really test for output, so have to explain why this can't be tested in an automated way (has to be tested manually)
-        //      - has to be tested manually because there is no way to tell in an automated way if an employee
-        //        (and their details) is being displayed correctly
+        // -----------------------------------
+        //      DisplayAllEmployees Tests
+        // -----------------------------------
+
+        /**
+        * \brief The unit test's purpose is to test if the method DisplayAllEmployees
+        * displays the employee details of all employees in the list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is DisplayAllEmployees.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is run automatically, but the user has to view the output of the test 
+        * to make sure that all of the employees were displayed with the correct data.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is normal/functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that all of the employees will be be displayed to the user 
+        * with the correct details.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that all of the employees are displayed to the user 
+        * with the correct details.
+        */
+        [TestMethod]
+        public void DisplayAllEmployees_ValidEmployeesInList_DisplaysAllEmployees()
+        {
+            // Add the full-time employee to the container
+            employeeRepo.AddEmployeeToList(FTEmployee);
+
+            // Instantiate a part-time employee and add it to the container
+            DateTime dateOfBirth = new DateTime(1987, 06, 22);
+            DateTime dateOfHire = new DateTime(2013, 04, 12);
+            DateTime dateOfTermination = new DateTime(2014, 05, 13);
+            ParttimeEmployee PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+            employeeRepo.AddEmployeeToList(PTEmployee);
+
+            // Instantiate a contract employee and add it to the container
+            dateOfBirth = new DateTime(1989, 07, 02);
+            DateTime contractStartDate = new DateTime(2014, 02, 08);
+            DateTime contractStopDate = new DateTime(2014, 09, 12);
+            ContractEmployee CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+            employeeRepo.AddEmployeeToList(CTEmployee);
+
+            // Instantiate a seasonal employee and add it to the container
+            dateOfBirth = new DateTime(1991, 03, 18);
+            SeasonalEmployee SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+            employeeRepo.AddEmployeeToList(SNEmployee);
+
+            // Initialize a string with input data and initalize other variables
+            var privateObject = new PrivateObject(employeeRepo);
+            String dataToPassIn = "\n\n\n\n";
+            // Set the console to read input from the input data string
+            using (var input = new StringReader(dataToPassIn))
+            {
+                Console.SetIn(input);
+                // Execute the method that is being tested
+                privateObject.Invoke("DisplayAllEmployees");
+                /* There is no assert, since the user has to view the 
+                * output to make sure the method is operating properly */
+            }
+        }
+
+        // -------------------------------
+        //      GetEmployeeList Tests
+        // -------------------------------
+
+        /**
+        * \brief The unit test's purpose is to test if the method 
+        * GetEmployeeList returns the employee list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is GetEmployeeList.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is normal/functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the employeeList.Count will return 2.
+        * 
+        * \<b>Actual Result</b>
+        * The expected result is that the employeeList.Count will return 2.
+        */
+        [TestMethod]
+        public void GetEmployeeList_ValidEmployeesInList_ReturnsAnEmployeeList()
+        {
+            // Add the full-time employee to the container
+            employeeRepo.AddEmployeeToList(FTEmployee);
+
+            // Instantiate a part-time employee and add it to the container
+            DateTime dateOfBirth = new DateTime(1987, 06, 22);
+            DateTime dateOfHire = new DateTime(2013, 04, 12);
+            DateTime dateOfTermination = new DateTime(2014, 05, 13);
+            ParttimeEmployee PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+            employeeRepo.AddEmployeeToList(PTEmployee);
+
+            var privateObject = new PrivateObject(employeeRepo);
+            List<Employee> employeeList = (List<Employee>)privateObject.Invoke("GetEmployeeList");
+            Assert.AreEqual(2, employeeList.Count);
+        }
     }
 }

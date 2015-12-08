@@ -32,8 +32,29 @@ namespace TheCompany.Tests
         // ---------------------------------------------
         //      GetFulltimeEmployeeProperties Tests
         // ---------------------------------------------
-        
-        //normal
+
+        /**
+        * \brief The unit test's purpose is to test if the method GetFulltimeEmployeeProperties
+        * creates an employee from the given information and returns that employee.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is GetFulltimeEmployeeProperties.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is normal/functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the name of the returned employee is Sam.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the name of the returned employee is Sam.
+        */
         [TestMethod]
         public void GetFulltimeEmployeeProperties_ValidProperties_ReturnsValidFulltimeEmployee()
         {
@@ -53,7 +74,28 @@ namespace TheCompany.Tests
             }
         }
 
-        //exception
+        /**
+        * \brief The unit test's purpose is to test if the method GetFulltimeEmployeeProperties
+        * will return a blank employee if the given information is invalid.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is GetFulltimeEmployeeProperties.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is fault/exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the name of the returned employee is blank.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the name of the returned employee is blank.
+        */
         [TestMethod]
         public void GetFulltimeEmployeeProperties_InvalidProperties_ReturnsBlankFulltimeEmployee()
         {
@@ -77,7 +119,28 @@ namespace TheCompany.Tests
         //      GetParttimeEmployeeProperties Tests
         // ---------------------------------------------
 
-        //normal
+        /**
+        * \brief The unit test's purpose is to test if the method GetParttimeEmployeeProperties
+        * creates an employee from the given information and returns that employee.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is GetParttimeEmployeeProperties.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is normal/functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the name of the returned employee is Mark.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the name of the returned employee is Mark.
+        */
         [TestMethod]
         public void GetParttimeEmployeeProperties_ValidProperties_ReturnsValidParttimeEmployee()
         {
@@ -97,7 +160,28 @@ namespace TheCompany.Tests
             }
         }
 
-        //exception
+        /**
+        * \brief The unit test's purpose is to test if the method GetParttimeEmployeeProperties
+        * will return a blank employee if the given information is invalid.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is GetParttimeEmployeeProperties.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is fault/exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the name of the returned employee is blank.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the name of the returned employee is blank.
+        */
         [TestMethod]
         public void GetParttimeEmployeeProperties_InvalidProperties_ReturnsBlankParttimeEmployee()
         {
@@ -121,7 +205,28 @@ namespace TheCompany.Tests
         //      GetContractEmployeeProperties Tests
         // ---------------------------------------------
 
-        //normal
+        /**
+        * \brief The unit test's purpose is to test if the method GetContractEmployeeProperties
+        * creates an employee from the given information and returns that employee.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is GetContractEmployeeProperties.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is normal/functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the name of the returned employee is Anna.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the name of the returned employee is Anna.
+        */
         [TestMethod]
         public void GetContractEmployeeProperties_ValidProperties_ReturnsValidContractEmployee()
         {
@@ -141,7 +246,28 @@ namespace TheCompany.Tests
             }
         }
 
-        //exception
+        /**
+        * \brief The unit test's purpose is to test if the method GetContractEmployeeProperties
+        * will return a blank employee if the given information is invalid.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is GetContractEmployeeProperties.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is fault/exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the name of the returned employee is blank.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the name of the returned employee is blank.
+        */
         [TestMethod]
         public void GetContractEmployeeProperties_InvalidProperties_ReturnsBlankContractEmployee()
         {
@@ -161,16 +287,37 @@ namespace TheCompany.Tests
             }
         }
 
-
         // ---------------------------------------------
         //      GetSeasonalEmployeeProperties Tests
         // ---------------------------------------------
 
+        /**
+        * \brief The unit test's purpose is to test if the method GetSeasonalEmployeeProperties
+        * creates an employee from the given information and returns that employee.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is GetSeasonalEmployeeProperties.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is normal/functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the name of the returned employee is Jake.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the name of the returned employee is Jake.
+        */
         [TestMethod]
         public void GetSeasonalEmployeeProperties_ValidProperties_ReturnsValidSeasonalEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Jake\nWilliams\n912098933\n1991\n03\n18\nFall\n20000\n";
+            String dataToPassIn = "Jake\nWilliams\n912098933\n1991\n03\n18\nFall\n20\n";
             SeasonalEmployee SNEmployee = new SeasonalEmployee();
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -185,11 +332,33 @@ namespace TheCompany.Tests
             }
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method GetSeasonalEmployeeProperties
+        * will return a blank employee if the given information is invalid.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is GetSeasonalEmployeeProperties.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is fault/exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the name of the returned employee is blank.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the name of the returned employee is blank.
+        */
         [TestMethod]
         public void GetSeasonalEmployeeProperties_InvalidProperties_ReturnsBlankSeasonalEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Jake\nWilliams\n902098933\n1800\n23\n55\nFFFF\n20000\n";
+            String dataToPassIn = "Jake\nWilliams\n902098933\n1800\n23\n55\nFFFF\n20\n";
             SeasonalEmployee SNEmployee = new SeasonalEmployee();
             var privateObject = new PrivateObject(employeeRepo);
 
@@ -208,7 +377,29 @@ namespace TheCompany.Tests
         //      AddEmployee Tests
         // ---------------------------
 
-        //fulltime
+        /**
+        * \brief The unit test's purpose is to test if the method AddEmployee will
+        * create a full-time employee from the given information and add that employee 
+        * to a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is AddEmployee.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is normal/functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the employeeList.Count will return 1.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the employeeList.Count returns 1.
+        */
         [TestMethod]
         public void AddEmployee_ValidProperties_FulltimeEmployeeAddedToList()
         {
@@ -228,6 +419,29 @@ namespace TheCompany.Tests
             }
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method AddEmployee will
+        * not create a full-time employee from the given invalid information and therefore 
+        * not add it to the employee list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is AddEmployee.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is fault/exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the employeeList.Count will return 0.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the employeeList.Count returns 0.
+        */
         [TestMethod]
         public void AddEmployee_InvalidProperties_FulltimeEmployeeNotAddedToList()
         {
@@ -247,7 +461,29 @@ namespace TheCompany.Tests
             }
         }
 
-        //parttime
+        /**
+        * \brief The unit test's purpose is to test if the method AddEmployee will
+        * create a part-time employee from the given information and add that employee 
+        * to a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is AddEmployee.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is normal/functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the employeeList.Count will return 1.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the employeeList.Count returns 1.
+        */
         [TestMethod]
         public void AddEmployee_ValidProperties_ParttimeEmployeeAddedToList()
         {
@@ -267,6 +503,29 @@ namespace TheCompany.Tests
             }
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method AddEmployee will
+        * not create a part-time employee from the given invalid information and therefore 
+        * not add it to the employee list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is AddEmployee.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is fault/exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the employeeList.Count will return 0.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the employeeList.Count returns 0.
+        */
         [TestMethod]
         public void AddEmployee_InvalidProperties_ParttimeEmployeeNotAddedToList()
         {
@@ -286,7 +545,29 @@ namespace TheCompany.Tests
             }
         }
 
-        //contract
+        /**
+        * \brief The unit test's purpose is to test if the method AddEmployee will
+        * create a contract employee from the given information and add that employee 
+        * to a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is AddEmployee.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is normal/functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the employeeList.Count will return 1.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the employeeList.Count returns 1.
+        */
         [TestMethod]
         public void AddEmployee_ValidProperties_ContractEmployeeAddedToList()
         {
@@ -306,6 +587,29 @@ namespace TheCompany.Tests
             }
         }
 
+        /**
+        * \brief The unit test's purpose is to test if the method AddEmployee will
+        * not create a contract employee from the given invalid information and therefore 
+        * not add it to the employee list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is AddEmployee.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is fault/exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the employeeList.Count will return 0.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the employeeList.Count returns 0.
+        */
         [TestMethod]
         public void AddEmployee_InvalidProperties_ContractEmployeeNotAddedToList()
         {
@@ -325,12 +629,34 @@ namespace TheCompany.Tests
             }
         }
 
-        //seasonal
+        /**
+        * \brief The unit test's purpose is to test if the method AddEmployee will
+        * create a seasonal employee from the given information and add that employee 
+        * to a list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is AddEmployee.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is normal/functional.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the employeeList.Count will return 1.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the employeeList.Count returns 1.
+        */
         [TestMethod]
         public void AddEmployee_ValidProperties_SeasonalEmployeeAddedToList()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "SN\nJake\nWilliams\n912098933\n1991\n03\n18\nSummer\n10000";
+            String dataToPassIn = "SN\nJake\nWilliams\n912098933\n1991\n03\n18\nSummer\n10";
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -345,11 +671,35 @@ namespace TheCompany.Tests
             }
         }
 
+
+        /**
+        * \brief The unit test's purpose is to test if the method AddEmployee will
+        * not create a seasonal employee from the given invalid information and therefore 
+        * not add it to the employee list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is AddEmployee.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is fault/exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the employeeList.Count will return 0.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the employeeList.Count returns 0.
+        */
         [TestMethod]
         public void AddEmployee_InvalidProperties_SeasonalEmployeeNotAddedToList()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "SN\nJake\nWilliams\n912098933\n1991\n03\n18\nSumwinter\n10000";
+            String dataToPassIn = "SN\nJake\nWilliams\n912098933\n1991\n03\n18\nSumwinter\n10";
             var privateObject = new PrivateObject(employeeRepo);
 
             // Set the console to read input from the input data string
@@ -364,7 +714,29 @@ namespace TheCompany.Tests
             }
         }
 
-        //fault
+        /**
+        * \brief The unit test's purpose is to test if the method AddEmployee will
+        * not create an employee from the given invalid employee type and therefore 
+        * not add it to the employee list.
+        * 
+        * \<b>Name of Method/b>
+        * The method being tested is AddEmployee.
+        * 
+        * \<b>How test is Conducted/b>
+        * The test is automatically conducted.
+        * 
+        * \<b>Type of Test</b>
+        * The type of test is fault/exception.
+        * 
+        * \<b>Sample Data Sets</b>
+        * n/a
+        *    
+        * \<b>Expected Result</b>
+        * The expected result is that the employeeList.Count will return 0.
+        * 
+        * \<b>Actual Result</b>
+        * The actual result is that the employeeList.Count returns 0.
+        */
         [TestMethod]
         public void AddEmployee_InvalidEmployeeType_EmployeeNotAddedToList()
         {
@@ -383,6 +755,5 @@ namespace TheCompany.Tests
                 Assert.AreEqual(0, employeeList.Count);
             }
         }
-
     }
 }

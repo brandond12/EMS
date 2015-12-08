@@ -21,6 +21,8 @@ namespace TheCompany.Tests
     {
         private Container employeeRepo;         // A reference to a Container object
         private FulltimeEmployee FTEmployee;    // A reference to a FulltimeEmployee object
+        private FulltimeEmployee FTEmployee2;   // A reference to a FulltimeEmployee object
+        private ParttimeEmployee PTEmployee;    // A reference to a ParttimeEmployee object
 
         [TestInitialize]
         public void TestInitialize()
@@ -31,8 +33,30 @@ namespace TheCompany.Tests
             DateTime dateOfHire = new DateTime(2010, 10, 11);
             DateTime dateOfTermination = new DateTime(2013, 03, 04);
             FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
-            // Add the employee to a list
+
+            // Instantiate a part-time employee
+            dateOfBirth = new DateTime(1987, 06, 22);
+            dateOfHire = new DateTime(2010, 10, 11);
+            dateOfTermination = new DateTime(2014, 05, 13);
+            PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 30);
+
+            // Instantiate a full-time employee
+            dateOfBirth = new DateTime(1990, 09, 10);
+            dateOfHire = new DateTime(2011, 02, 18);
+            dateOfTermination = new DateTime(2013, 03, 04);
+            FulltimeEmployee FTEmployee2 = new AllEmployees.FulltimeEmployee("Sam", "Appleton", 904509401, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+
+            // Instantiate a contract employee
+            dateOfBirth = new DateTime(1989, 07, 02);
+            DateTime contractStartDate = new DateTime(2014, 02, 08);
+            DateTime contractStopDate = new DateTime(2014, 09, 12);
+            ContractEmployee CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+            
+            // Add the employees to a list
             employeeRepo.AddEmployeeToList(FTEmployee);
+            employeeRepo.AddEmployeeToList(PTEmployee);
+            employeeRepo.AddEmployeeToList(FTEmployee2);
+            employeeRepo.AddEmployeeToList(CTEmployee);
         }
 
         // -----------------------------
@@ -40,521 +64,321 @@ namespace TheCompany.Tests
         // -----------------------------
 
         [TestMethod]
-        // normal
-        public void SelectEmployee_GoesThroughListAndYes_SelectsValidEmployee()
+        public void SelectEmployee_GivenFirstName_SelectsValidEmployee()
+        {
+            // Initialize a string with input data and initalize other variables
+            String dataToPassIn = "N\nY\n";
+            Employee actualEmployee = new Employee();
+            var privateObject = new PrivateObject(employeeRepo);
+
+            FulltimeEmployee givenEmployee = new FulltimeEmployee();
+            givenEmployee.SetFirstName("Sam");
+
+            // Set the console to read input from the input data string
+            using (var input = new StringReader(dataToPassIn))
+            {
+                Console.SetIn(input);
+                // Execute the method that is being tested
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee", givenEmployee);
+                // Check if the expected result and actual result are the same
+                Assert.AreEqual("Sam", actualEmployee.GetFirstName());
+            }
+        }
+
+        [TestMethod]
+        public void SelectEmployee_GivenLastName_SelectsValidEmployee()
+        {
+            // Initialize a string with input data and initalize other variables
+            String dataToPassIn = "N\nY\n";
+            var privateObject = new PrivateObject(employeeRepo);
+            Employee actualEmployee = new Employee();
+
+            FulltimeEmployee givenEmployee = new FulltimeEmployee();
+            givenEmployee.SetLastName("Jones");
+
+            // Set the console to read input from the input data string
+            using (var input = new StringReader(dataToPassIn))
+            {
+                Console.SetIn(input);
+                // Execute the method that is being tested
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee", givenEmployee);
+                // Check if the expected result and actual result are the same
+                Assert.AreEqual("Mark", actualEmployee.GetFirstName());
+            }
+        }
+
+        [TestMethod]
+        public void SelectEmployee_GivenSIN_SelectsValidEmployee()
+        {
+            // Initialize a string with input data and initalize other variables
+            String dataToPassIn = "N\nY\n";
+            Employee actualEmployee = new Employee();
+            var privateObject = new PrivateObject(employeeRepo);
+
+            FulltimeEmployee givenEmployee = new FulltimeEmployee();
+            givenEmployee.SetSocialInsuranceNumber(902398402);
+
+            // Set the console to read input from the input data string
+            using (var input = new StringReader(dataToPassIn))
+            {
+                Console.SetIn(input);
+                // Execute the method that is being tested
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee", givenEmployee);
+                // Check if the expected result and actual result are the same
+                Assert.AreEqual("Mark", actualEmployee.GetFirstName());
+            }
+        }
+
+        [TestMethod]
+        public void SelectEmployee_GivenDOB_SelectsValidEmployee()
+        {
+            // Initialize a string with input data and initalize other variables
+            String dataToPassIn = "N\nY\n";
+            Employee actualEmployee = new Employee();
+            var privateObject = new PrivateObject(employeeRepo);
+
+            FulltimeEmployee givenEmployee = new FulltimeEmployee();
+            givenEmployee.SetDateOfBirth(1990, 09, 10);
+
+            // Set the console to read input from the input data string
+            using (var input = new StringReader(dataToPassIn))
+            {
+                Console.SetIn(input);
+                // Execute the method that is being tested
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee", givenEmployee);
+                // Check if the expected result and actual result are the same
+                Assert.AreEqual("Sam", actualEmployee.GetFirstName());
+            }
+        }
+
+        [TestMethod]
+        public void SelectEmployee_GivenType_SelectsValidEmployee()
+        {
+            // Initialize a string with input data and initalize other variables
+            String dataToPassIn = "N\nY\n";
+            Employee actualEmployee = new Employee();
+            var privateObject = new PrivateObject(employeeRepo);
+
+            FulltimeEmployee givenEmployee = new FulltimeEmployee();
+            givenEmployee.SetEmployeeType("FT");
+
+            // Set the console to read input from the input data string
+            using (var input = new StringReader(dataToPassIn))
+            {
+                Console.SetIn(input);
+                // Execute the method that is being tested
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee", givenEmployee);
+                // Check if the expected result and actual result are the same
+                Assert.AreEqual("Sam", actualEmployee.GetFirstName());
+            }
+        }
+
+        [TestMethod]
+        public void SelectEmployee_GivenDOH_SelectsValidFulltimeEmployee()
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n";
             Employee actualEmployee = new Employee();
             var privateObject = new PrivateObject(employeeRepo);
 
+            FulltimeEmployee givenEmployee = new FulltimeEmployee();
+            givenEmployee.SetDateOfHire(2010, 10, 11);
+
             // Set the console to read input from the input data string
             using (var input = new StringReader(dataToPassIn))
             {
                 Console.SetIn(input);
                 // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee");
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee", givenEmployee);
                 // Check if the expected result and actual result are the same
                 Assert.AreEqual("Sam", actualEmployee.GetFirstName());
             }
         }
 
         [TestMethod]
-        // normal
-        public void SelectEmployee_GoesThroughListAndNo_ReturnsBlankEmployee()
+        public void SelectEmployee_GivenDOT_SelectsValidFulltimeEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "N\n";
+            String dataToPassIn = "N\nY\n";
             Employee actualEmployee = new Employee();
             var privateObject = new PrivateObject(employeeRepo);
+
+            FulltimeEmployee givenEmployee = new FulltimeEmployee();
+            givenEmployee.SetDateOfTermination(2013, 03, 04);
 
             // Set the console to read input from the input data string
             using (var input = new StringReader(dataToPassIn))
             {
                 Console.SetIn(input);
                 // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee");
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("", actualEmployee.GetFirstName());
-            }
-        }
-
-        [TestMethod]
-        // normal
-        public void SelectEmployee_GoesThroughListAndInvalidChoiceThenYes_LoopsBackAndSelectsEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "no and yes\nY";
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee");
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee", givenEmployee);
                 // Check if the expected result and actual result are the same
                 Assert.AreEqual("Sam", actualEmployee.GetFirstName());
             }
         }
 
         [TestMethod]
-        // normal
-        public void SelectEmployee_GoesThroughListAndInvalidChoiceThenNo_LoopsBackAndReturnsBlankEmployee()
+        public void SelectEmployee_GivenSalary_SelectsValidEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "no and yes\nN";
+            String dataToPassIn = "N\nY\n";
             Employee actualEmployee = new Employee();
             var privateObject = new PrivateObject(employeeRepo);
+
+            FulltimeEmployee givenEmployee = new FulltimeEmployee();
+            givenEmployee.SetSalary(50000);
 
             // Set the console to read input from the input data string
             using (var input = new StringReader(dataToPassIn))
             {
                 Console.SetIn(input);
                 // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee");
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee", givenEmployee);
                 // Check if the expected result and actual result are the same
-                Assert.AreEqual("", actualEmployee.GetFirstName());
+                Assert.AreEqual("Sam", actualEmployee.GetFirstName());
             }
         }
 
         [TestMethod]
-        // normal
-        public void SelectEmployee_GoesThroughBlankList_ReturnsBlankEmployee()
+        public void SelectEmployee_GivenDOH_SelectsValidParttimeEmployee()
         {
-            // Instantiate a blank container, blank employee, and a private object
-            Container testRepo = new Container();
+            // Initialize a string with input data and initalize other variables
+            String dataToPassIn = "N\nY\n";
             Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(testRepo);
+            var privateObject = new PrivateObject(employeeRepo);
 
-            // Execute the method that is being tested
-            actualEmployee = (Employee)privateObject.Invoke("SelectEmployee");
-            // Check if the expected result and actual result are the same
-            Assert.AreEqual("", actualEmployee.GetFirstName());
+            // Instantiate a part-time employee
+            DateTime dateOfBirth = new DateTime(1987, 06, 22);
+            DateTime dateOfHire = new DateTime(2010, 10, 11);
+            DateTime dateOfTermination = new DateTime(2014, 05, 13);
+            AllEmployees.ParttimeEmployee PTEmployee2 = new AllEmployees.ParttimeEmployee("Karen", "Walters", 908098731, dateOfBirth, dateOfHire, dateOfTermination, 30);
+            employeeRepo.AddEmployeeToList(PTEmployee2);
+
+            ParttimeEmployee givenEmployee = new ParttimeEmployee();
+            givenEmployee.SetDateOfHire(2010, 10, 11);
+
+            // Set the console to read input from the input data string
+            using (var input = new StringReader(dataToPassIn))
+            {
+                Console.SetIn(input);
+                // Execute the method that is being tested
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee", givenEmployee);
+                // Check if the expected result and actual result are the same
+                Assert.AreEqual("Karen", actualEmployee.GetFirstName());
+            }
         }
 
-        // -----------------------------------------
-        //      SelectEmployeeByFirstName Tests
-        // -----------------------------------------
+        [TestMethod]
+        public void SelectEmployee_GivenDOT_SelectsValidParttimeEmployee()
+        {
+            // Initialize a string with input data and initalize other variables
+            String dataToPassIn = "N\nY\n";
+            Employee actualEmployee = new Employee();
+            var privateObject = new PrivateObject(employeeRepo);
+
+            // Instantiate a part-time employee
+            DateTime dateOfBirth = new DateTime(1987, 06, 22);
+            DateTime dateOfHire = new DateTime(2010, 10, 11);
+            DateTime dateOfTermination = new DateTime(2014, 05, 13);
+            AllEmployees.ParttimeEmployee PTEmployee2 = new AllEmployees.ParttimeEmployee("Karen", "Walters", 908098731, dateOfBirth, dateOfHire, dateOfTermination, 30);
+            employeeRepo.AddEmployeeToList(PTEmployee2);
+
+            ParttimeEmployee givenEmployee = new ParttimeEmployee();
+            givenEmployee.SetDateOfTermination(2014, 05, 13);
+
+            // Set the console to read input from the input data string
+            using (var input = new StringReader(dataToPassIn))
+            {
+                Console.SetIn(input);
+                // Execute the method that is being tested
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee", givenEmployee);
+                // Check if the expected result and actual result are the same
+                Assert.AreEqual("Karen", actualEmployee.GetFirstName());
+            }
+        }
 
         [TestMethod]
-        // normal
-        public void SelectEmployeeByFirstName_ValidFirstNameWithYes_SelectsValidEmployee()
+        public void SelectEmployee_GivenHourlyRate_SelectsValidEmployee()
         {
             // Initialize a string with input data and initalize other variables
             String dataToPassIn = "Y\n";
             Employee actualEmployee = new Employee();
             var privateObject = new PrivateObject(employeeRepo);
 
+            ParttimeEmployee givenEmployee = new ParttimeEmployee();
+            givenEmployee.SetHourlyRate(30);
+
             // Set the console to read input from the input data string
             using (var input = new StringReader(dataToPassIn))
             {
                 Console.SetIn(input);
                 // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeByFirstName", "Sam");
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee", givenEmployee);
                 // Check if the expected result and actual result are the same
-                Assert.AreEqual("Sam", actualEmployee.GetFirstName());
+                Assert.AreEqual("Mark", actualEmployee.GetFirstName());
             }
         }
 
         [TestMethod]
-        // normal
-        public void SelectEmployeeByFirstName_ValidFirstNameWithNo_ReturnsBlankEmployee()
+        public void SelectEmployee_GivenContractStartDate_SelectsValidEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "N\n";
+            String dataToPassIn = "N\nY\n";
             Employee actualEmployee = new Employee();
             var privateObject = new PrivateObject(employeeRepo);
+
+            // Instantiate a contract employee
+            DateTime dateOfBirth = new DateTime(1989, 10, 08);
+            DateTime contractStartDate = new DateTime(2014, 02, 08);
+            DateTime contractStopDate = new DateTime(2014, 09, 12);
+            ContractEmployee CTEmployee2 = new AllEmployees.ContractEmployee("Jack", "Phillips", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+            employeeRepo.AddEmployeeToList(CTEmployee2);
+
+            ContractEmployee givenEmployee = new ContractEmployee();
+            givenEmployee.SetContractStartDate(2014, 02, 08);
 
             // Set the console to read input from the input data string
             using (var input = new StringReader(dataToPassIn))
             {
                 Console.SetIn(input);
                 // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeByFirstName", "Sam");
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee", givenEmployee);
                 // Check if the expected result and actual result are the same
-                Assert.AreEqual("", actualEmployee.GetFirstName());
+                Assert.AreEqual("Jack", actualEmployee.GetFirstName());
             }
         }
 
         [TestMethod]
-        // normal
-        public void SelectEmployeeByFirstName_ValidFirstNameWithInvalidChoiceThenYes_LoopsBackAndSelectsEmployee()
+        public void SelectEmployee_GivenContractStopDate_SelectsValidEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "no and yes\nY";
+            String dataToPassIn = "N\nY\n";
             Employee actualEmployee = new Employee();
             var privateObject = new PrivateObject(employeeRepo);
+
+            // Instantiate a contract employee
+            DateTime dateOfBirth = new DateTime(1989, 10, 08);
+            DateTime contractStartDate = new DateTime(2014, 02, 08);
+            DateTime contractStopDate = new DateTime(2014, 09, 12);
+            ContractEmployee CTEmployee2 = new AllEmployees.ContractEmployee("Jack", "Phillips", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+            employeeRepo.AddEmployeeToList(CTEmployee2);
+
+            ContractEmployee givenEmployee = new ContractEmployee();
+            givenEmployee.SetContractStopDate(2014, 09, 12);
 
             // Set the console to read input from the input data string
             using (var input = new StringReader(dataToPassIn))
             {
                 Console.SetIn(input);
                 // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeByFirstName", "Sam");
+                actualEmployee = (Employee)privateObject.Invoke("SelectEmployee", givenEmployee);
                 // Check if the expected result and actual result are the same
-                Assert.AreEqual("Sam", actualEmployee.GetFirstName());
-            }
-        }
-
-        [TestMethod]
-        // normal
-        public void SelectEmployeeByFirstName_ValidFirstNameWithInvalidChoiceThenNo_LoopsBackAndReturnsBlankEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "no and yes\nN";
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeByFirstName", "Sam");
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("", actualEmployee.GetFirstName());
-            }
-        }
-
-        [TestMethod]
-        // fault
-        public void SelectEmployeeByFirstName_FirstNameNotFound_ReturnsBlankEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "";
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeByFirstName", "Michelle");
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("", actualEmployee.GetFirstName());
-            }
-        }
-
-        // ----------------------------------------
-        //      SelectEmployeeByFullName Tests
-        // ----------------------------------------
-        
-        [TestMethod]
-        // normal
-        public void SelectEmployeeByFullName_ValidFullNameWithYes_SelectsValidEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\n";
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeByFullName", "Sam", "Jones");
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("Sam", actualEmployee.GetFirstName());
-            }
-        }
-
-        [TestMethod]
-        // normal
-        public void SelectEmployeeByFullName_ValidFullNameWithNo_ReturnsBlankEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "N\n";
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeByFullName", "Sam", "Jones");
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("", actualEmployee.GetFirstName());
-            }
-        }
-
-        [TestMethod]
-        // normal
-        public void SelectEmployeeByFullName_ValidFullNameWithInvalidChoiceThenYes_LoopsBackAndSelectsEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "no and yes\nY";
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeByFullName", "Sam", "Jones");
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("Sam", actualEmployee.GetFirstName());
-            }
-        }
-
-        [TestMethod]
-        // normal
-        public void SelectEmployeeByFullName_ValidFullNameWithInvalidChoiceThenNo_LoopsBackAndReturnsBlankEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "no and yes\nN";
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeByFullName", "Sam", "Jones");
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("", actualEmployee.GetFirstName());
-            }
-        }
-
-        [TestMethod]
-        // fault
-        public void SelectEmployeeByFullName_FullNameNotFound_ReturnsBlankEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "";
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeByFullName", "Sam", "Williams");
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("", actualEmployee.GetFirstName());
-            }
-        }
-
-        // -----------------------------------
-        //      SelectEmployeeBySIN Tests
-        // -----------------------------------
-        
-        [TestMethod]
-        // normal
-        public void SelectEmployeeBySIN_ValidSINWithYes_SelectsValidEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\n";
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeBySIN", 902398402);
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("Sam", actualEmployee.GetFirstName());
-            }
-        }
-
-        [TestMethod]
-        // normal
-        public void SelectEmployeeBySIN_ValidSINWithNo_ReturnsBlankEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "N\n";
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeBySIN", 902398402);
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("", actualEmployee.GetFirstName());
-            }
-        }
-
-        [TestMethod]
-        // normal
-        public void SelectEmployeeBySIN_ValidSINWithInvalidChoiceThenYes_LoopsBackAndSelectsEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "no and yes\nY";
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeBySIN", 902398402);
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("Sam", actualEmployee.GetFirstName());
-            }
-        }
-
-        [TestMethod]
-        // normal
-        public void SelectEmployeeBySIN_ValidSINWithInvalidChoiceThenNo_LoopsBackAndReturnsBlankEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "no and yes\nN";
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeBySIN", 902398402);
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("", actualEmployee.GetFirstName());
-            }
-        }
-
-        [TestMethod]
-        // fault
-        public void SelectEmployeeBySIN_SINNotFound_ReturnsBlankEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "";
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeBySIN", 873498562);
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("", actualEmployee.GetFirstName());
-            }
-        }
-
-        // -----------------------------------
-        //      SelectEmployeeByDOB Tests
-        // -----------------------------------
-
-        [TestMethod]
-        // normal
-        public void SelectEmployeeByDOB_ValidDOBWithYes_SelectsValidEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "Y\n"; 
-            DateTime dateToSearch = new DateTime(1990, 09, 10);
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeByDOB", dateToSearch);
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("Sam", actualEmployee.GetFirstName());
-            }
-        }
-
-        [TestMethod]
-        // normal
-        public void SelectEmployeeByDOB_ValidDOBWithNo_ReturnsBlankEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "N\n";
-            DateTime dateToSearch = new DateTime(1990, 09, 10);
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeByDOB", dateToSearch);
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("", actualEmployee.GetFirstName());
+                Assert.AreEqual("Jack", actualEmployee.GetFirstName());
             }
         }
 
 
-        [TestMethod]
-        // normal
-        public void SelectEmployeeByDOB_ValidDOBWithInvalidChoiceThenYes_LoopsBackAndSelectsEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "no and yes\nY";
-            DateTime dateToSearch = new DateTime(1990, 09, 10);
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
 
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeByDOB", dateToSearch);
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("Sam", actualEmployee.GetFirstName());
-            }
-        }
-
-        [TestMethod]
-        // normal
-        public void SelectEmployeeByDOB_ValidDOBWithInvalidChoiceThenNo_LoopsBackAndReturnsBlankEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "no and yes\nN";
-            DateTime dateToSearch = new DateTime(1990, 09, 10);
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeByDOB", dateToSearch);
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("", actualEmployee.GetFirstName());
-            }
-        }
-
-        [TestMethod]
-        // fault
-        public void SelectEmployeeByDOB_DOBNotFound_ReturnsBlankEmployee()
-        {
-            // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "";
-            DateTime dateToSearch = new DateTime(1991, 08, 24);
-            Employee actualEmployee = new Employee();
-            var privateObject = new PrivateObject(employeeRepo);
-
-            // Set the console to read input from the input data string
-            using (var input = new StringReader(dataToPassIn))
-            {
-                Console.SetIn(input);
-                // Execute the method that is being tested
-                actualEmployee = (Employee)privateObject.Invoke("SelectEmployeeByDOB", dateToSearch);
-                // Check if the expected result and actual result are the same
-                Assert.AreEqual("", actualEmployee.GetFirstName());
-            }
-        }
 
         // ----------------------------------------
         //      IsThisTheDesiredEmployee Tests

@@ -7,5 +7,7 @@ C:\EMS-Repo\trunk\TheCompany\TheCompany.Tests\bin\Debug\AllEmployees.pdb
 C:\EMS-Repo\trunk\TheCompany\TheCompany.Tests\bin\Debug\Presentation.pdb
 C:\EMS-Repo\trunk\TheCompany\TheCompany.Tests\obj\Debug\TheCompany.Tests.dll
 C:\EMS-Repo\trunk\TheCompany\TheCompany.Tests\obj\Debug\TheCompany.Tests.pdb
-C:\EMS-Repo\trunk\TheCompany\TheCompany.Tests\obj\Debug\TheCompany.Tests.csprojResolveAssemblyReference.cache
 C:\EMS-Repo\trunk\TheCompany\TheCompany.Tests\bin\Debug\TheCompany.pdb
+C:\EMS-Repo\trunk\TheCompany\TheCompany.Tests\bin\Debug\Supporting.dll
+C:\EMS-Repo\trunk\TheCompany\TheCompany.Tests\bin\Debug\Supporting.pdb
+C:\EMS-Repo\trunk\TheCompany\TheCompany.Tests\obj\Debug\TheCompany.Tests.csprojResolveAssemblyReference.cache
