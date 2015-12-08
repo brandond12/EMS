@@ -17,6 +17,18 @@ using System.Collections.Generic;
 
 namespace TheCompany.Tests
 {
+    /// \class  ModifyEmployeeTests
+    ///
+    /// \brief <b>Brief Description</b> 
+    /// This class is used to test the ModifyEmployee methods in the Container class. The methods tested 
+    /// include ModifyFirstName, ModifyLastName, ModifySocialInsuranceNumber, ModifyDateOfBirth, ModifyDateOfHire, 
+    /// ModifyEmployeeType, ModifyDateOfTermination, ModifySalary, ModifyHourlyRate, ModifyContractStartDate, 
+    /// ModifyContractStopDate, ModifyFixedContractAmount, ModifySeason, ModifyPiecePay and ModifyEmployee.
+    /// Some of the methods in this class require user input for testing (they will have a string called dataToPassIn, 
+    /// and will use Console.SetIn() and StringReader). To test the methods with user input, Console.SetIn() and 
+    /// StringReader are used to simulate the user input. The idea/code to use the Console.SetIn() and StringReader 
+    /// for user input was borrowed from Assaf Stone's post at this link:
+    /// http://www.softwareandi.com/2012/02/how-to-write-automated-tests-for.html
     [TestClass]
     public class ModifyEmployeeTests
     {
@@ -73,7 +85,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\nSamantha"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's name is Samantha.
@@ -115,7 +133,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n "
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's name is Sam.
@@ -157,7 +181,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n12345"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's name is Sam.
@@ -199,7 +229,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "N\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's name is Sam.
@@ -242,7 +278,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "no and yes\nN"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's name is Sam.
@@ -285,7 +327,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "no and yes\nY\nSamantha"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's name is Samantha.
@@ -331,7 +379,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\nAnderson"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's name is Anderson.
@@ -373,7 +427,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n "
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's name is Jones.
@@ -415,7 +475,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n12345"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's name is Jones.
@@ -457,7 +523,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "N\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's name is Jones.
@@ -500,7 +572,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "no and yes\nN"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's last name is Jones.
@@ -543,7 +621,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "no and yes\nY\nAnderson"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's last name is Anderson.
@@ -589,7 +673,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n902398433"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's SIN is 902398433.
@@ -631,7 +721,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n "
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's SIN is 902398402.
@@ -673,7 +769,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n90H098GO1"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's SIN is 902398402.
@@ -715,7 +817,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "N\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's SIN is 902398402.
@@ -758,7 +866,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "no and yes\nN"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's SIN is 902398402.
@@ -801,7 +915,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "no and yes\nY\n902398461"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's SIN is 902398461.
@@ -847,7 +967,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n1991\n09\n21"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOB is 1991-09-21.
@@ -890,7 +1016,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n "
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOB is 1990-09-10.
@@ -933,7 +1065,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n1900\n40\n67"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOB is 1990-09-10.
@@ -976,7 +1114,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "N\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOB is 1990-09-10.
@@ -1020,7 +1164,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "no and yes\nN"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOB is 1990-09-10.
@@ -1064,7 +1214,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "no and yes\nY\n1992\n10\n09"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOB is 1992-10-09.
@@ -1111,7 +1267,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\nPT"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's type is PT (part-time).
@@ -1153,7 +1315,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n "
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's type is FT (full-time).
@@ -1195,7 +1363,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\nOT"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's type is FT (full-time).
@@ -1237,7 +1411,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "N\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's type is FT (full-time).
@@ -1280,7 +1460,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "no and yes\nN"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's type is FT (full-time).
@@ -1323,7 +1509,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "no and yes\nY\nSN"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's type is SN (seasonal).
@@ -1369,7 +1561,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n2010\n03\n22"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOH is 2010-03-22.
@@ -1412,7 +1610,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n "
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOH is 2010-10-11.
@@ -1455,7 +1659,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n1900\n40\n67"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOH is 2010-10-11.
@@ -1498,7 +1708,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "N\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOH is 2010-10-11.
@@ -1542,7 +1758,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "no and yes\nN"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOH is 2010-10-11.
@@ -1586,7 +1808,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "no and yes\nY\n2011\n01\n29"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOH is 2011-01-29.
@@ -1633,7 +1861,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n2015\n11\n30"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOT is 2015-11-30.
@@ -1676,7 +1910,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n "
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOT is 2012-02-19.
@@ -1719,7 +1959,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n1900\n40\n67"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOT is 2012-02-19.
@@ -1762,7 +2008,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "N\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOT is 2012-02-19.
@@ -1806,7 +2058,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "no and yes\nN"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOT is 2012-02-19.
@@ -1850,7 +2108,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "no and yes\nY\n2015\n05\n13"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOT is 2015-05-13.
@@ -1897,7 +2161,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n65000"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's salary is 65000.
@@ -1939,7 +2209,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n "
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's salary is 50000.
@@ -1981,7 +2257,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\n-999999"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's salary is 50000.
@@ -2023,7 +2305,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "N\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's salary is 50000.
@@ -2066,7 +2354,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "no and yes\nN"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's salary is 50000.
@@ -2109,7 +2403,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "no and yes\nY\n70000"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's salary is 70000.
@@ -2155,7 +2455,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A part-time employee reference: 
+        * dateOfBirth = new DateTime(1987, 06, 22);
+        * dateOfHire = new DateTime(2013, 04, 12);
+        * dateOfTermination = new DateTime(2014, 05, 13);
+        * PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+        * Input string:
+        * "Y\n35.50"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's hourly rate is 35.50.
@@ -2197,7 +2503,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A part-time employee reference: 
+        * dateOfBirth = new DateTime(1987, 06, 22);
+        * dateOfHire = new DateTime(2013, 04, 12);
+        * dateOfTermination = new DateTime(2014, 05, 13);
+        * PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+        * Input string:
+        * "Y\n "
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's hourly rate is 30.
@@ -2239,7 +2551,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A part-time employee reference: 
+        * dateOfBirth = new DateTime(1987, 06, 22);
+        * dateOfHire = new DateTime(2013, 04, 12);
+        * dateOfTermination = new DateTime(2014, 05, 13);
+        * PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+        * Input string:
+        * "Y\n-15"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's hourly rate is 30.
@@ -2281,7 +2599,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A part-time employee reference: 
+        * dateOfBirth = new DateTime(1987, 06, 22);
+        * dateOfHire = new DateTime(2013, 04, 12);
+        * dateOfTermination = new DateTime(2014, 05, 13);
+        * PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+        * Input string:
+        * "Y\n-15"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's hourly rate is 30.
@@ -2324,7 +2648,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A part-time employee reference: 
+        * dateOfBirth = new DateTime(1987, 06, 22);
+        * dateOfHire = new DateTime(2013, 04, 12);
+        * dateOfTermination = new DateTime(2014, 05, 13);
+        * PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+        * Input string:
+        * "no and yes\nN"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's hourly rate is 30.
@@ -2367,7 +2697,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A part-time employee reference: 
+        * dateOfBirth = new DateTime(1987, 06, 22);
+        * dateOfHire = new DateTime(2013, 04, 12);
+        * dateOfTermination = new DateTime(2014, 05, 13);
+        * PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+        * Input string:
+        * "no and yes\nY\n25.00"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's hourly rate is 25.
@@ -2413,7 +2749,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "Y\n2013\n01\n16"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract start date is 2013-01-16.
@@ -2456,7 +2798,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "Y\n "
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract start date is 2014-02-08.
@@ -2499,7 +2847,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "Y\n1600\n37\n88"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract start date is 2014-02-08.
@@ -2542,7 +2896,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "N\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract start date is 2014-02-08.
@@ -2586,7 +2946,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "no and yes\nN"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract start date is 2014-02-08.
@@ -2630,7 +2996,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "no and yes\nY\n2013\n01\n25"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract start date is 2013-01-25.
@@ -2677,7 +3049,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "Y\n2014\n10\n27"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract stop date is 2014-10-27.
@@ -2720,7 +3098,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "Y\n "
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract stop date is 2014-09-12.
@@ -2763,7 +3147,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "Y\n1400\n90\n36"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract stop date is 2014-09-12.
@@ -2806,7 +3196,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "N\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract stop date is 2014-09-12.
@@ -2850,7 +3246,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "no and yes\nN"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract stop date is 2014-09-12.
@@ -2894,7 +3296,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "no and yes\nY\n2014\n08\n01"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract stop date is 2014-08-01.
@@ -2941,7 +3349,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "Y\n30000"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract amount is 30000.
@@ -2983,7 +3397,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "Y\n "
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract amount is 25000.
@@ -3025,7 +3445,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "Y\n-123456"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract amount is 25000.
@@ -3067,7 +3493,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "N\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract amount is 25000.
@@ -3110,7 +3542,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "no and yes\nN"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract amount is 25000.
@@ -3153,7 +3591,13 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "no and yes\nY\n15000"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract amount is 15000.
@@ -3199,7 +3643,11 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A seasonal employee reference: 
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+        * Input string:
+        * "Y\nFall"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's season is Fall.
@@ -3241,7 +3689,11 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A seasonal employee reference: 
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+        * Input string:
+        * "Y\n "
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's season is Summer.
@@ -3283,7 +3735,11 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A seasonal employee reference: 
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+        * Input string:
+        * "Y\nSumminter"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's season is Summer.
@@ -3325,7 +3781,11 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A seasonal employee reference: 
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+        * Input string:
+        * "N\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's season is Summer.
@@ -3368,7 +3828,11 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A seasonal employee reference: 
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+        * Input string:
+        * "no and yes\nN"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's season is Summer.
@@ -3411,7 +3875,11 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A seasonal employee reference: 
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+        * Input string:
+        * "no and yes\nY\nSpring"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's season is Spring.
@@ -3457,7 +3925,11 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A seasonal employee reference: 
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+        * Input string:
+        * "Y\n25"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's piece pay is 25.
@@ -3499,7 +3971,11 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A seasonal employee reference: 
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+        * Input string:
+        * "Y\n "
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's piece pay is 20.
@@ -3541,7 +4017,11 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A seasonal employee reference: 
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+        * Input string:
+        * "Y\n-10"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's piece pay is 20.
@@ -3583,7 +4063,11 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A seasonal employee reference: 
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+        * Input string:
+        * "N\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's piece pay is 20.
@@ -3626,7 +4110,11 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A seasonal employee reference: 
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+        * Input string:
+        * "no and yes\nN"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's piece pay is 20.
@@ -3669,7 +4157,11 @@ namespace TheCompany.Tests
         * The type of test is fault/exception then normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A seasonal employee reference: 
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+        * Input string:
+        * "no and yes\nY\n30"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's piece pay is 30.
@@ -3715,7 +4207,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's first name is Samantha.
@@ -3757,7 +4255,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's last name is Jamieson.
@@ -3799,7 +4303,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's SIN is 902098933.
@@ -3840,7 +4350,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOB is 1990-09-02.
@@ -3882,7 +4398,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\nSamantha\nY\nJamieson\nY\n900398933\nY\n1990\n09\n09\nY\nPT\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n35\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's type is PT.
@@ -3925,7 +4447,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\nSamantha\nY\nJamieson\nY\n900398933\nY\n1990\n09\n09\nY\nPT\nY\n2011\n45\n11\n\nY\n2012\n12\n66\n\nY\n35\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's type is FT.
@@ -3968,7 +4496,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A part-time employee reference: 
+        * dateOfBirth = new DateTime(1987, 06, 22);
+        * dateOfHire = new DateTime(2013, 04, 12);
+        * dateOfTermination = new DateTime(2014, 05, 13);
+        * PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+        * Input string:
+        * "Y\nMarcus\nY\nSmithy\nY\n872098934\nY\n1987\n07\n22\nY\nCT\nY\n2014\n02\n09\nY\n2014\n09\n13\nY\n25000\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's type is CT.
@@ -4011,7 +4545,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A part-time employee reference: 
+        * dateOfBirth = new DateTime(1987, 06, 22);
+        * dateOfHire = new DateTime(2013, 04, 12);
+        * dateOfTermination = new DateTime(2014, 05, 13);
+        * PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+        * Input string:
+        * "Y\nMarcus\nY\nSmithy\nY\n872098934\nY\n1987\n07\n22\nY\nCT\nY\n2014\n02\n09\nY\n2014\n09\n13\nY\n0\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's type is PT.
@@ -4054,7 +4594,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "Y\nAnnie\nY\nMillerton\nY\n892398402\nY\n1989\n03\n04\nY\nSN\nY\nWinter\nY\n10000\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's type is SN.
@@ -4097,7 +4643,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "Y\nAnnie\nY\nMillerton\nY\n892398402\nY\n1989\n03\n04\nY\nSN\nY\nFalummer\n\nY\n10000\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's type is CT.
@@ -4140,7 +4692,11 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A seasonal employee reference: 
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+        * Input string:
+        * "Y\nJake\nY\nWilliams\nY\n902198934\nY\n1990\n09\n08\nY\nFT\nY\n2010\n03\n12\nY\n2014\n05\n23\nY\n85000\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's type is FT.
@@ -4183,7 +4739,11 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A seasonal employee reference: 
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+        * Input string:
+        * "Y\nJake\nY\nWilliams\nY\n902198934\nY\n1990\n09\n08\nY\nFT\nY\n2010\n03\n12\nY\n2014\n05\n23\nY\n0\n\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's type is SN.
@@ -4226,7 +4786,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOH is 2011-10-11.
@@ -4268,7 +4834,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\nSamantha\nY\nJamieson\nY\n900989332\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOT is 2012-12-02.
@@ -4310,7 +4882,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A full-time employee reference: 
+        * DateTime dateOfBirth = new DateTime(1990, 09, 10);
+        * DateTime dateOfHire = new DateTime(2010, 10, 11);
+        * DateTime dateOfTermination = new DateTime(2012, 02, 19);
+        * FTEmployee = new AllEmployees.FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
+        * Input string:
+        * "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's salary is 70000.
@@ -4351,7 +4929,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A part-time employee reference: 
+        * dateOfBirth = new DateTime(1987, 06, 22);
+        * dateOfHire = new DateTime(2013, 04, 12);
+        * dateOfTermination = new DateTime(2014, 05, 13);
+        * PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+        * Input string:
+        * "Y\nMarcus\nY\nSmithy\nY\n900398988\nY\n1990\n09\n09\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n35\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOH is 2011-10-11.
@@ -4393,7 +4977,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A part-time employee reference: 
+        * dateOfBirth = new DateTime(1987, 06, 22);
+        * dateOfHire = new DateTime(2013, 04, 12);
+        * dateOfTermination = new DateTime(2014, 05, 13);
+        * PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+        * Input string:
+        * "Y\nMarcus\nY\nSmithy\nY\n900398988\nY\n1990\n09\n09\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n35\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's DOT is 2011-10-11.
@@ -4435,7 +5025,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A part-time employee reference: 
+        * dateOfBirth = new DateTime(1987, 06, 22);
+        * dateOfHire = new DateTime(2013, 04, 12);
+        * dateOfTermination = new DateTime(2014, 05, 13);
+        * PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
+        * Input string:
+        * "Y\nMarcus\nY\nSmithy\nY\n900398988\nY\n1990\n09\n09\nN\nY\n2010\n10\n11\nY\n2012\n12\n02\nY\n35\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's hourly rate is 35.
@@ -4476,7 +5072,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "Y\nAnnie\nY\nMillerton\nY\n892398400\nY\n1989\n08\n02\nN\nY\n2014\n03\n08\nY\n2014\n10\n12\nY\n10000\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract start date is 2014-03-08.
@@ -4518,7 +5120,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "Y\nAnnie\nY\nMillerton\nY\n892398400\nY\n1989\n08\n02\nN\nY\n2014\n03\n08\nY\n2014\n10\n12\nY\n10000\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract stop date is 2014-10-12.
@@ -4560,7 +5168,13 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A contract employee reference: 
+        * dateOfBirth = new DateTime(1989, 07, 02);
+        * DateTime contractStartDate = new DateTime(2014, 02, 08);
+        * DateTime contractStopDate = new DateTime(2014, 09, 12);
+        * CTEmployee = new AllEmployees.ContractEmployee("Anna", "Miller", 892398402, dateOfBirth, contractStartDate, contractStopDate, 25000);
+        * Input string:
+        * "Y\nAnnie\nY\nMillerton\nY\n892398400\nY\n1989\n08\n02\nN\nY\n2014\n03\n08\nY\n2014\n10\n12\nY\n10000\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's contract amount is 10000.
@@ -4601,7 +5215,11 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A seasonal employee reference: 
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+        * Input string:
+        * "Y\nJacob\nY\nWilliams\nY\n902098988\nY\n1990\n09\n20\nN\nY\nFall\nY\n15000"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's season is Fall.
@@ -4642,7 +5260,11 @@ namespace TheCompany.Tests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * n/a
+        * A seasonal employee reference: 
+        * dateOfBirth = new DateTime(1991, 03, 18);
+        * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
+        * Input string:
+        * "Y\nJacob\nY\nWilliams\nY\n902098988\nY\n1990\n09\n20\nN\nY\nFall\nY\n15000"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's piece pay is 15000.

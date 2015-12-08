@@ -17,6 +17,16 @@ using System.Collections.Generic;
 
 namespace TheCompany.Tests
 {
+    /// \class OtherTests
+    ///
+    /// \brief <b>Brief Description</b> 
+    /// This class is used to test the miscellaneous methods in the Container class. The methods tested 
+    /// include AddEmployeeToList, RemoveEmployee, DisplayAllEmployees and GetEmployeeList. Some of the 
+    /// methods in this class require user input for testing (they will have a string called dataToPassIn, 
+    /// and will use Console.SetIn() and StringReader). To test the methods with user input, Console.SetIn() 
+    /// and StringReader are used to simulate the user input. The idea/code to use the Console.SetIn() and 
+    /// StringReader for user input was borrowed from Assaf Stone's post at this link:
+    /// http://www.softwareandi.com/2012/02/how-to-write-automated-tests-for.html
     [TestClass]
     public class OtherTests
     {
