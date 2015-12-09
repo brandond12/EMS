@@ -14,6 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AllEmployees;
 using Presentation;
+using Supporting;
 
 namespace TheCompany
 {
@@ -449,6 +450,7 @@ namespace TheCompany
             if ((employeeType == "FT") || (employeeType == "PT") || (employeeType == "CT") || (employeeType == "SN"))
             {
                 listOfEmployees.Add(employee);
+                Logging.Log("Container", "AddEmployeeToList", "Added an employee named " + employee.GetFirstName() + " to the container.");
             }
         }
 
@@ -464,6 +466,7 @@ namespace TheCompany
         public void RemoveEmployee(AllEmployees.Employee employee)
         {
             listOfEmployees.Remove(employee);
+            Logging.Log("Container", "RemoveEmployee", "Removed an employee named " + employee.GetFirstName() + " from the container.");
         }
 
         /**
@@ -731,11 +734,16 @@ namespace TheCompany
                     newFirstName = UIMenu.GetInfoFromUser("Enter a new first name: ");
                     didModifyWork = employee.SetFirstName(newFirstName);
                     // Check if the employee's first name has been changed
+                    if (didModifyWork == true)
+                    {
+                        Logging.Log("Container", "ModifyFirstName", "Modifying an employee's first name to " + newFirstName + " succeeded.");
+                    }
                     if (didModifyWork == false)
                     {
                         /* If didModifyWork is false, that means the user's entered value 
                         * was invalid, so inform the user that the value will remain unchanged */
                         error = UIMenu.GetInfoFromUser("The first name you entered was invalid, so the first name will remain unchanged.\nHit enter to continue.");
+                        Logging.Log("Container", "ModifyFirstName", "Modifying an employee's first name to " + newFirstName + " failed.");
                     }
                     wasQuestionAnswered = true;
                 }
@@ -790,11 +798,16 @@ namespace TheCompany
                     newLastName = UIMenu.GetInfoFromUser("Enter a new last name: ");
                     didModifyWork = employee.SetLastName(newLastName);
                     // Check if the employee's last name has been changed
+                    if (didModifyWork == true)
+                    {
+                        Logging.Log("Container", "ModifyLastName", "Modifying an employee's last name to " + newLastName + " succeeded.");
+                    }
                     if (didModifyWork == false)
                     {
                         /* If didModifyWork is false, that means the user's entered value 
                         * was invalid, so inform the user that the value will remain unchanged */
                         error = UIMenu.GetInfoFromUser("The last name you entered was invalid, so the last name will remain unchanged.\nHit enter to continue.");
+                        Logging.Log("Container", "ModifyLastName", "Modifying an employee's last name to " + newLastName + " failed.");
                     }
                     wasQuestionAnswered = true;
                 }
@@ -829,7 +842,7 @@ namespace TheCompany
         {
             String response;                        // The user's response
             String error;                           // Data the user typed before hitting the enter key after the error message 
-            String newStringSocialInsuranceNumber;  // String version of the new social insurance number
+            String newStringSocialInsuranceNumber = "";  // String version of the new social insurance number
             int newSocialInsuranceNumber;           // The new social insurance number
             bool wasQuestionAnswered = false;       // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;             // Did the modify on the employee property work?
@@ -853,11 +866,16 @@ namespace TheCompany
                         newSocialInsuranceNumber = Convert.ToInt32(newStringSocialInsuranceNumber);
                         didModifyWork = employee.SetSocialInsuranceNumber(newSocialInsuranceNumber);
                         // Check if the employee's social insurance number has been changed
+                        if (didModifyWork == true)
+                        {
+                            Logging.Log("Container", "ModifySocialInsuranceNumber", "Modifying an employee's social insurance number to " + newStringSocialInsuranceNumber + " succeeded.");
+                        }
                         if (didModifyWork == false)
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
                             error = UIMenu.GetInfoFromUser("The social insurance number you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
+                            Logging.Log("Container", "ModifySocialInsuranceNumber", "Modifying an employee's social insurance number to " + newStringSocialInsuranceNumber + " failed.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -879,6 +897,7 @@ namespace TheCompany
             catch (FormatException)
             {
                 error = UIMenu.GetInfoFromUser("The social insurance number you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
+                Logging.Log("Container", "ModifySocialInsuranceNumber", "Modifying an employee's social insurance number to " + newStringSocialInsuranceNumber + " failed.");
             }
         }
 
@@ -898,9 +917,9 @@ namespace TheCompany
         {
             String response;                    // The user's response
             String error;                       // Data the user typed before hitting the enter key after the error message 
-            String newStringYear;               // The string birth year
-            String newStringMonth;              // The string birth month
-            String newStringDay;                // The string birth date
+            String newStringYear = "";          // The string birth year
+            String newStringMonth = "";         // The string birth month
+            String newStringDay = "";           // The string birth date
             int newIntYear;                     // The int birth year
             int newIntMonth;                    // The int birth month
             int newIntDay;                      // The int birth date
@@ -949,11 +968,16 @@ namespace TheCompany
                         }
 
                         // Check if the employee's date of birth has been changed
+                        if (didModifyWork == true)
+                        {
+                            Logging.Log("Container", "ModifyDateOfBirth", "Modifying an employee's date of birth to " + newStringYear + "-" + newStringMonth + "-" + newStringDay + " succeeded.");
+                        }
                         if (didModifyWork == false)
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
                             error = UIMenu.GetInfoFromUser("The date of birth has invalid values, so it will remain unchanged.\nHit enter to continue.");
+                            Logging.Log("Container", "ModifyDateOfBirth", "Modifying an employee's date of birth to " + newStringYear + "-" + newStringMonth + "-" + newStringDay + " failed.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -975,6 +999,7 @@ namespace TheCompany
             catch (Exception)
             {
                 error = UIMenu.GetInfoFromUser("The date of birth has invalid values, so it will remain unchanged.\nHit enter to continue.");
+                Logging.Log("Container", "ModifyDateOfBirth", "Modifying an employee's date of birth to " + newStringYear + "-" + newStringMonth + "-" + newStringDay + " failed.");
             }
         }
 
@@ -1014,11 +1039,16 @@ namespace TheCompany
                     newEmployeeType = UIMenu.GetInfoFromUser("Enter a new employee type (FT, PT, CT, or SN): ");
                     didModifyWork = employee.SetEmployeeType(newEmployeeType);
                     // Check if the employee's type has been changed
+                    if (didModifyWork == true)
+                    {
+                        Logging.Log("Container", "ModifyEmployeeType", "Modifying an employee's type to " + newEmployeeType + " succeeded.");
+                    }
                     if (didModifyWork == false)
                     {
                         /* If didModifyWork is false, that means the user's entered value 
                         * was invalid, so inform the user that the value will remain unchanged */
                         error = UIMenu.GetInfoFromUser("The employee type you entered was invalid, so the type will remain unchanged.\nHit enter to continue.");
+                        Logging.Log("Container", "ModifyEmployeeType", "Modifying an employee's type to " + newEmployeeType + " failed.");
                     }
                     wasQuestionAnswered = true;
                 }
@@ -1053,9 +1083,9 @@ namespace TheCompany
         {
             String response = "";               // The user's response
             String error;                       // Data the user typed before hitting the enter key after the error message 
-            String newStringYear;               // The string hire year
-            String newStringMonth;              // The string hire month
-            String newStringDay;                // The string hire date
+            String newStringYear = "";          // The string hire year
+            String newStringMonth = "";         // The string hire month
+            String newStringDay = "";           // The string hire date
             int newIntYear;                     // The int hire year
             int newIntMonth;                    // The int hire month
             int newIntDay;                      // The int hire date
@@ -1106,11 +1136,16 @@ namespace TheCompany
                             didModifyWork = ((AllEmployees.ParttimeEmployee)employee).SetDateOfHire(newDateOfHire);
                         }
                         // Check if the employee's date of hire has been changed
+                        if (didModifyWork == true)
+                        {
+                            Logging.Log("Container", "ModifyDateOfHire", "Modifying an employee's date of hire to " + newStringYear + "-" + newStringMonth + "-" + newStringDay + " succeeded.");
+                        }
                         if (didModifyWork == false)
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
                             error = UIMenu.GetInfoFromUser("The date of hire has invalid values, so it will remain unchanged.\nHit enter to continue.");
+                            Logging.Log("Container", "ModifyDateOfHire", "Modifying an employee's date of hire to " + newStringYear + "-" + newStringMonth + "-" + newStringDay + " failed.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -1132,6 +1167,7 @@ namespace TheCompany
             catch (Exception)
             {
                 error = UIMenu.GetInfoFromUser("The date of hire has invalid values, so it will remain unchanged.\nHit enter to continue.");
+                Logging.Log("Container", "ModifyDateOfHire", "Modifying an employee's date of hire to " + newStringYear + "-" + newStringMonth + "-" + newStringDay + " failed.");
             }
         }
 
@@ -1151,9 +1187,9 @@ namespace TheCompany
         {
             String response = "";               // The user's response
             String error;                       // Data the user typed before hitting the enter key after the error message 
-            String newStringYear;               // The string termination year
-            String newStringMonth;              // The string termination month
-            String newStringDay;                // The string termination date
+            String newStringYear = "";          // The string termination year
+            String newStringMonth = "";         // The string termination month
+            String newStringDay = "";           // The string termination date
             int newIntYear;                     // The int termination year
             int newIntMonth;                    // The int termination month
             int newIntDay;                      // The int termination date
@@ -1204,11 +1240,16 @@ namespace TheCompany
                             didModifyWork = ((AllEmployees.ParttimeEmployee)employee).SetDateOfTermination(newDateOfTermination);
                         }
                         // Check if the employee's date of termination has been changed
+                        if (didModifyWork == true)
+                        {
+                            Logging.Log("Container", "ModifyDateOfTermination", "Modifying an employee's date of termination to " + newStringYear + "-" + newStringMonth + "-" + newStringDay + " succeeded.");
+                        }
                         if (didModifyWork == false)
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
                             error = UIMenu.GetInfoFromUser("The date of termination has invalid values, so it will remain unchanged.\nHit enter to continue.");
+                            Logging.Log("Container", "ModifyDateOfTermination", "Modifying an employee's date of termination to " + newStringYear + "-" + newStringMonth + "-" + newStringDay + " failed.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -1230,6 +1271,7 @@ namespace TheCompany
             catch (Exception)
             {
                 error = UIMenu.GetInfoFromUser("The date of termination has invalid values, so it will remain unchanged.\nHit enter to continue.");
+                Logging.Log("Container", "ModifyDateOfTermination", "Modifying an employee's date of termination to " + newStringYear + "-" + newStringMonth + "-" + newStringDay + " failed.");
             }
         }
 
@@ -1249,7 +1291,7 @@ namespace TheCompany
         {
             String response;                        // The user's response
             String error;                           // Data the user typed before hitting the enter key after the error message  
-            String newStringSalary;                 // String version of the new salary
+            String newStringSalary = "";            // String version of the new salary
             double newDoubleSalary;                 // The new double salary
             bool wasQuestionAnswered = false;       // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;             // Did the modify on the employee property work?
@@ -1273,11 +1315,16 @@ namespace TheCompany
                         newDoubleSalary = double.Parse(newStringSalary);
                         didModifyWork = ((AllEmployees.FulltimeEmployee)employee).SetSalary(newDoubleSalary);
                         // Check if the employee's salary has been changed
+                        if (didModifyWork == true)
+                        {
+                            Logging.Log("Container", "ModifySalary", "Modifying an employee's salary to $" + newStringSalary + " succeeded.");
+                        }
                         if (didModifyWork == false)
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
                             error = UIMenu.GetInfoFromUser("The salary you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
+                            Logging.Log("Container", "ModifySalary", "Modifying an employee's salary to $" + newStringSalary + " failed.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -1299,6 +1346,7 @@ namespace TheCompany
             catch (FormatException)
             {
                 error = UIMenu.GetInfoFromUser("The salary you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
+                Logging.Log("Container", "ModifySalary", "Modifying an employee's salary to $" + newStringSalary + " failed.");
             }
         }
 
@@ -1318,7 +1366,7 @@ namespace TheCompany
         {
             String response;                        // The user's response
             String error;                           // Data the user typed before hitting the enter key after the error message 
-            String newStringHourlyRate;             // String version of the new hourly rate
+            String newStringHourlyRate = "";        // String version of the new hourly rate
             double newDoubleHourlyRate;             // The new double hourly rate
             bool wasQuestionAnswered = false;       // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;             // Did the modify on the employee property work?
@@ -1342,11 +1390,16 @@ namespace TheCompany
                         newDoubleHourlyRate = double.Parse(newStringHourlyRate);
                         didModifyWork = ((AllEmployees.ParttimeEmployee)employee).SetHourlyRate(newDoubleHourlyRate);
                         // Check if the employee's hourly rate has been changed
+                        if (didModifyWork == true)
+                        {
+                            Logging.Log("Container", "ModifyHourlyRate", "Modifying an employee's hourly rate to $" + newStringHourlyRate + " succeeded.");
+                        }
                         if (didModifyWork == false)
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
                             error = UIMenu.GetInfoFromUser("The hourly rate you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
+                            Logging.Log("Container", "ModifyHourlyRate", "Modifying an employee's hourly rate to $" + newStringHourlyRate + " failed.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -1368,6 +1421,7 @@ namespace TheCompany
             catch (FormatException)
             {
                 error = UIMenu.GetInfoFromUser("The hourly rate you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
+                Logging.Log("Container", "ModifyHourlyRate", "Modifying an employee's hourly rate to $" + newStringHourlyRate + " failed.");
             }
         }
 
@@ -1387,9 +1441,9 @@ namespace TheCompany
         {
             String response;                    // The user's response
             String error;                       // Data the user typed before hitting the enter key after the error message 
-            String newStringYear;               // The string contract start year
-            String newStringMonth;              // The string contract start month
-            String newStringDay;                // The string contract start date
+            String newStringYear = "";          // The string contract start year
+            String newStringMonth = "";         // The string contract start month
+            String newStringDay = "";           // The string contract start date
             int newIntYear;                     // The int contract start year
             int newIntMonth;                    // The int contract start month
             int newIntDay;                      // The int contract start date
@@ -1421,11 +1475,16 @@ namespace TheCompany
                         DateTime newContractStartDate = new DateTime(newIntYear, newIntMonth, newIntDay);
                         didModifyWork = ((AllEmployees.ContractEmployee)employee).SetContractStartDate(newContractStartDate);
                         // Check if the employee's contract start date has been changed
+                        if (didModifyWork == true)
+                        {
+                            Logging.Log("Container", "ModifyContractStartDate", "Modifying an employee's contract start date to " + newStringYear + "-" + newStringMonth + "-" + newStringDay + " succeeded.");
+                        }
                         if (didModifyWork == false)
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
                             error = UIMenu.GetInfoFromUser("The contract start date has invalid values, so it will remain unchanged.\nHit enter to continue.");
+                            Logging.Log("Container", "ModifyContractStartDate", "Modifying an employee's contract start date to " + newStringYear + "-" + newStringMonth + "-" + newStringDay + " failed.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -1447,6 +1506,7 @@ namespace TheCompany
             catch (Exception)
             {
                 error = UIMenu.GetInfoFromUser("The contract start date has invalid values, so it will remain unchanged.\nHit enter to continue.");
+                Logging.Log("Container", "ModifyContractStartDate", "Modifying an employee's contract start date to " + newStringYear + "-" + newStringMonth + "-" + newStringDay + " failed.");
             }
         }
 
@@ -1466,9 +1526,9 @@ namespace TheCompany
         {
             String response;                    // The user's response
             String error;                       // Data the user typed before hitting the enter key after the error message 
-            String newStringYear;               // The string contract stop year
-            String newStringMonth;              // The string contract stop month
-            String newStringDay;                // The string contract stop date
+            String newStringYear = "";          // The string contract stop year
+            String newStringMonth = "";         // The string contract stop month
+            String newStringDay = "";           // The string contract stop date
             int newIntYear;                     // The int contract stop year
             int newIntMonth;                    // The int contract stop month
             int newIntDay;                      // The int contract stop date
@@ -1500,11 +1560,16 @@ namespace TheCompany
                         DateTime newContractStopDate = new DateTime(newIntYear, newIntMonth, newIntDay);
                         didModifyWork = ((AllEmployees.ContractEmployee)employee).SetContractStopDate(newContractStopDate);
                         // Check if the employee's contract start date has been changed
+                        if (didModifyWork == true)
+                        {
+                            Logging.Log("Container", "ModifyContractStopDate", "Modifying an employee's contract stop date to " + newStringYear + "-" + newStringMonth + "-" + newStringDay + " succeeded.");
+                        }
                         if (didModifyWork == false)
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
                             error = UIMenu.GetInfoFromUser("The contract stop date has invalid values, so it will remain unchanged.\nHit enter to continue.");
+                            Logging.Log("Container", "ModifyContractStopDate", "Modifying an employee's contract stop date to " + newStringYear + "-" + newStringMonth + "-" + newStringDay + " failed.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -1526,6 +1591,7 @@ namespace TheCompany
             catch (Exception)
             {
                 error = UIMenu.GetInfoFromUser("The contract stop date has invalid values, so it will remain unchanged.\nHit enter to continue.");
+                Logging.Log("Container", "ModifyContractStopDate", "Modifying an employee's contract stop date to " + newStringYear + "-" + newStringMonth + "-" + newStringDay + " failed.");
             }
         }
 
@@ -1545,7 +1611,7 @@ namespace TheCompany
         {
             String response;                        // The user's response
             String error;                           // Data the user typed before hitting the enter key after the error message 
-            String newStringContractAmount;         // String version of the new fixed contract amount
+            String newStringContractAmount = "";    // String version of the new fixed contract amount
             double newDoubleContractAmount;         // The new double fixed contract amount
             bool wasQuestionAnswered = false;       // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;             // Did the modify on the employee property work?
@@ -1569,11 +1635,16 @@ namespace TheCompany
                         newDoubleContractAmount = double.Parse(newStringContractAmount);
                         didModifyWork = ((AllEmployees.ContractEmployee)employee).SetFixedContractAmount(newDoubleContractAmount);
                         // Check if the employee's fixed contract amount has been changed
+                        if (didModifyWork == true)
+                        {
+                            Logging.Log("Container", "ModifyFixedContractAmount", "Modifying an employee's fixed contract amount to $" + newStringContractAmount + " succeeded.");
+                        }
                         if (didModifyWork == false)
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
                             error = UIMenu.GetInfoFromUser("The fixed contract amount you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
+                            Logging.Log("Container", "ModifyFixedContractAmount", "Modifying an employee's fixed contract amount to $" + newStringContractAmount + " failed.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -1595,6 +1666,7 @@ namespace TheCompany
             catch (FormatException)
             {
                 error = UIMenu.GetInfoFromUser("The fixed contract amount you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
+                Logging.Log("Container", "ModifyFixedContractAmount", "Modifying an employee's fixed contract amount to $" + newStringContractAmount + " failed.");
             }
         }
 
@@ -1634,11 +1706,16 @@ namespace TheCompany
                     newSeason = UIMenu.GetInfoFromUser("Enter a new season: ");
                     didModifyWork = ((AllEmployees.SeasonalEmployee)employee).SetSeason(newSeason);
                     // Check if the employee's season has been changed
+                    if (didModifyWork == true)
+                    {
+                        Logging.Log("Container", "ModifySeason", "Modifying an employee's season to " + newSeason + " succeeded.");
+                    }
                     if (didModifyWork == false)
                     {
                         /* If didModifyWork is false, that means the user's entered value 
                         * was invalid, so inform the user that the value will remain unchanged */
                         error = UIMenu.GetInfoFromUser("The season you entered was invalid, so the season will remain unchanged.\nHit enter to continue.");
+                        Logging.Log("Container", "ModifySeason", "Modifying an employee's season to " + newSeason + " failed.");
                     }
                     wasQuestionAnswered = true;
                 }
@@ -1673,7 +1750,7 @@ namespace TheCompany
         {
             String response;                    // The user's response
             String error;                       // Data the user typed before hitting the enter key after the error message  
-            String newStringPiecePay;           // String version of the piece pay
+            String newStringPiecePay = "";      // String version of the piece pay
             double newDoublePiecePay;           // The new double piece pay
             bool wasQuestionAnswered = false;   // Did the user choose 'Y' or 'N' yet?
             bool didModifyWork = false;         // Did the modify on the employee property work?
@@ -1697,11 +1774,16 @@ namespace TheCompany
                         newDoublePiecePay = double.Parse(newStringPiecePay);
                         didModifyWork = ((AllEmployees.SeasonalEmployee)employee).SetPiecePay(newDoublePiecePay);
                         // Check if the employee's piece pay has been changed
+                        if (didModifyWork == true)
+                        {
+                            Logging.Log("Container", "ModifyPiecePay", "Modifying an employee's piece pay to $" + newStringPiecePay + " succeeded.");
+                        }
                         if (didModifyWork == false)
                         {
                             /* If didModifyWork is false, that means the user's entered value 
                             * was invalid, so inform the user that the value will remain unchanged */
                             error = UIMenu.GetInfoFromUser("The piece pay you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
+                            Logging.Log("Container", "ModifyPiecePay", "Modifying an employee's piece pay to $" + newStringPiecePay + " failed.");
                         }
                         wasQuestionAnswered = true;
                     }
@@ -1723,6 +1805,7 @@ namespace TheCompany
             catch (FormatException)
             {
                 error = UIMenu.GetInfoFromUser("The piece pay you entered was invalid, so it will remain unchanged.\nHit enter to continue.");
+                Logging.Log("Container", "ModifyPiecePay", "Modifying an employee's piece pay to $" + newStringPiecePay + " failed.");
             }
         }
 
