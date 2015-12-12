@@ -12,12 +12,8 @@ namespace EMS_RunLine
     {
         static void Main(string[] args)
         {
-            Employee emp = new Employee();
-            ContractEmployee CTemp = new ContractEmployee();
-
-            CTemp = (ContractEmployee)emp;
-            //UIMenu EMSMenu = new UIMenu();
-            //EMSMenu.ShowMainMenu();
+            UIMenu EMSMenu = new UIMenu();
+            EMSMenu.ShowMainMenu();
         }
     }
 }
