@@ -416,12 +416,17 @@ namespace Presentation
         {
             // Variables
             int employeeSIN;
-            Employee emp = new Employee();
+            Employee tempEmp = new Employee();
             string empType;
             string empLName;
             string empFName;
             string empSIN;
             string empDOB;
+
+            FulltimeEmployee FTemp = new FulltimeEmployee();
+            ParttimeEmployee PTemp = new ParttimeEmployee();
+            ContractEmployee CTemp = new ContractEmployee();
+            SeasonalEmployee SNemp = new SeasonalEmployee();
 
             // Prompt for details
             do
@@ -429,34 +434,147 @@ namespace Presentation
                 Console.WriteLine("Enter the employee type \n 'FT' for FullTime \n 'PT' for PartTime \n 'CT' for Contract \n 'SN' for Seasonal:");
                 empType = Console.ReadLine();
 
-            } while (!emp.SetEmployeeType(empType));
+            } while (!tempEmp.SetEmployeeType(empType));
 
-            do
+            if (tempEmp.GetEmployeeType() == "FT")
             {
-                Console.WriteLine("Enter the employee's last name:");
-                empLName = Console.ReadLine();
-            } while (!emp.SetLastName(empLName));
+                
+                do
+                {
+                    Console.WriteLine("Enter the employee's last name:");
+                    empLName = Console.ReadLine();
+                } while (!((Employee)FTemp).SetLastName(empLName));
 
-            do
-            {
-                Console.WriteLine("Enter the employee's first name:");
-                empFName = Console.ReadLine();
-            } while (!emp.SetFirstName(empFName));
+                do
+                {
+                    Console.WriteLine("Enter the employee's first name:");
+                    empFName = Console.ReadLine();
+                } while (!((Employee)FTemp).SetFirstName(empFName));
 
-            do
-            {
-                Console.WriteLine("Enter the employee's SIN number:");
-                empSIN = Console.ReadLine();
-                empSIN.Replace(" ", "");
-                int.TryParse(empSIN, out employeeSIN);
-            } while (!emp.SetSocialInsuranceNumber(employeeSIN));
+                do
+                {
+                    Console.WriteLine("Enter the employee's SIN number:");
+                    empSIN = Console.ReadLine();
+                    empSIN.Replace(" ", "");
+                    int.TryParse(empSIN, out employeeSIN);
+                } while (!((Employee)FTemp).SetSocialInsuranceNumber(employeeSIN));
 
-            do
+                do
+                {
+                    Console.WriteLine("Enter the employee's date of birth in the format: YYYY-MM-DD");
+                    empDOB = Console.ReadLine();
+                } while (!FTemp.SetDateOfBirth(empDOB));
+            }
+            else if (tempEmp.GetEmployeeType() == "PT")
             {
-            Console.WriteLine("Enter the employee's date of birth in the format: YYYY-MM-DD");
-            empDOB = Console.ReadLine();
-            } while(!((AllEmployees.ContractEmployee)emp).SetDateOfBirth(empDOB));
-            return emp;
+                
+                do
+                {
+                    Console.WriteLine("Enter the employee's last name:");
+                    empLName = Console.ReadLine();
+                } while (!((Employee)PTemp).SetLastName(empLName));
+
+                do
+                {
+                    Console.WriteLine("Enter the employee's first name:");
+                    empFName = Console.ReadLine();
+                } while (!((Employee)PTemp).SetFirstName(empFName));
+
+                do
+                {
+                    Console.WriteLine("Enter the employee's SIN number:");
+                    empSIN = Console.ReadLine();
+                    empSIN.Replace(" ", "");
+                    int.TryParse(empSIN, out employeeSIN);
+                } while (!((Employee)PTemp).SetSocialInsuranceNumber(employeeSIN));
+
+                do
+                {
+                    Console.WriteLine("Enter the employee's date of birth in the format: YYYY-MM-DD");
+                    empDOB = Console.ReadLine();
+                } while (!PTemp.SetDateOfBirth(empDOB));
+            }
+            else if (tempEmp.GetEmployeeType() == "CT")
+            {
+                
+                do
+                {
+                    Console.WriteLine("Enter the employee's last name:");
+                    empLName = Console.ReadLine();
+                } while (!((Employee)CTemp).SetLastName(empLName));
+
+                do
+                {
+                    Console.WriteLine("Enter the employee's first name:");
+                    empFName = Console.ReadLine();
+                } while (!((Employee)CTemp).SetFirstName(empFName));
+
+                do
+                {
+                    Console.WriteLine("Enter the employee's SIN number:");
+                    empSIN = Console.ReadLine();
+                    empSIN.Replace(" ", "");
+                    int.TryParse(empSIN, out employeeSIN);
+                } while (!((Employee)CTemp).SetSocialInsuranceNumber(employeeSIN));
+
+                do
+                {
+                    Console.WriteLine("Enter the employee's date of birth in the format: YYYY-MM-DD");
+                    empDOB = Console.ReadLine();
+                } while (!CTemp.SetDateOfBirth(empDOB));
+            }
+            else if (tempEmp.GetEmployeeType() == "SN")
+            {
+                
+                do
+                {
+                    Console.WriteLine("Enter the employee's last name:");
+                    empLName = Console.ReadLine();
+                } while (!((Employee)SNemp).SetLastName(empLName));
+
+                do
+                {
+                    Console.WriteLine("Enter the employee's first name:");
+                    empFName = Console.ReadLine();
+                } while (!((Employee)SNemp).SetFirstName(empFName));
+
+                do
+                {
+                    Console.WriteLine("Enter the employee's SIN number:");
+                    empSIN = Console.ReadLine();
+                    empSIN.Replace(" ", "");
+                    int.TryParse(empSIN, out employeeSIN);
+                } while (!((Employee)SNemp).SetSocialInsuranceNumber(employeeSIN));
+
+                do
+                {
+                    Console.WriteLine("Enter the employee's date of birth in the format: YYYY-MM-DD");
+                    empDOB = Console.ReadLine();
+                } while (!SNemp.SetDateOfBirth(empDOB));
+            }
+
+            if (tempEmp.GetEmployeeType() == "FT")
+            {
+                return FTemp;
+            }
+
+            else if (tempEmp.GetEmployeeType() == "PT")
+            {
+                return PTemp;
+            }
+
+            else if (tempEmp.GetEmployeeType() == "CT")
+            {
+                return CTemp;
+            }
+
+            else if (tempEmp.GetEmployeeType() == "SN")
+            {
+                return SNemp;
+
+            }
+
+            return tempEmp;
         }
 
         /**
