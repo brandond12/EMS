@@ -25,6 +25,7 @@ namespace Supporting
     /// \author <i>Nathan</i>
     public class FileIO
     {
+        static bool wasRead = false;
         /**
         * \brief default constructor.
         *
@@ -56,6 +57,7 @@ namespace Supporting
                 string rawEmployeeRec = File.ReadAllText(fileName);//open file and read all data to a string
                 employeeRec = ParsRecord(rawEmployeeRec);//pars data//validate data
                 Logging.Log("FileIO", "ReadAllRecords", "file read sucessfully: " + fileName);
+                wasRead = true;
             }
             else
             {
@@ -79,6 +81,10 @@ namespace Supporting
         {
             string fileOutput = "";
             string identifier = Employee.GetEmployeeType();
+            if (wasRead == true)
+            {
+                File.WriteAllText(fileName, String.Empty);
+            }
             if (identifier == "CT")
             {
                 AllEmployees.ContractEmployee employeeData = new AllEmployees.ContractEmployee();
