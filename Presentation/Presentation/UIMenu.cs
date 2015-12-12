@@ -146,14 +146,12 @@ namespace Presentation
                     case "2":
                         // Send each individual employee back out to the database
                         employeeList = company.GetEmployeeList();
-                        foreach (Employee emp in employeeList)
-                        {
-                            FileIO.WriteRecord(emp, @"..\..\..\..\DBase.txt");
-                        }
+
+                        FileIO.WriteRecord(employeeList, @"..\..\..\..\DBase.txt");
+                        
                         Console.WriteLine(employeeList.Count().ToString() + " record(s) were saved.");
                         break;
                     case "9":
-                        ShowMainMenu();
                         break;
                     default:
                         Console.WriteLine("Invalid menu choice.");
@@ -237,7 +235,6 @@ namespace Presentation
 
                         break;
                     case "9":
-                        ShowMainMenu();
                         break;
                     default:
                         Console.WriteLine("Invalid menu choice.");
