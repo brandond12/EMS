@@ -446,35 +446,11 @@ namespace TheCompany
         public void AddEmployeeToList(AllEmployees.Employee employee)
         {
             String employeeType = employee.GetEmployeeType();
-            bool isEmployeeValid = false;
-
-            // Check if the employee is valid
-            if (employeeType == "FT")
-            {
-                isEmployeeValid = ((AllEmployees.FulltimeEmployee)employee).Validate();
-            }
-            else if (employeeType == "PT")
-            {
-                isEmployeeValid = ((AllEmployees.ParttimeEmployee)employee).Validate();
-            }
-            else if (employeeType == "CT")
-            {
-                isEmployeeValid = ((AllEmployees.ContractEmployee)employee).Validate();
-            }
-            else if (employeeType == "SN")
-            {
-                isEmployeeValid = ((AllEmployees.SeasonalEmployee)employee).Validate();
-            }
-
-            // Add an employee to the list if it is valid
-            if (isEmployeeValid == true)
+            // Add an employee to the list if it has a valid employee type
+            if ((employeeType == "FT") || (employeeType == "PT") || (employeeType == "CT") || (employeeType == "SN"))
             {
                 listOfEmployees.Add(employee);
                 Logging.Log("Container", "AddEmployeeToList", "Added an employee named " + employee.GetFirstName() + " to the container.");
-            }
-            else
-            {
-                Logging.Log("Container", "AddEmployeeToList", "Didn't add an employee named " + employee.GetFirstName() + " to the container because it was invalid.");
             }
         }
 
