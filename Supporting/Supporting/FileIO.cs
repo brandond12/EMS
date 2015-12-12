@@ -54,17 +54,20 @@ namespace Supporting
         public static List<AllEmployees.Employee> ReadAllRecords(String fileName)
         {
             List<AllEmployees.Employee> employeeRec = new List<AllEmployees.Employee>();
-            if (File.Exists(fileName))
+            if (wasRead == false)
             {
-                string rawEmployeeRec = File.ReadAllText(fileName);//open file and read all data to a string
-                employeeRec = ParsRecord(rawEmployeeRec);//pars data//validate data
-                Logging.Log("FileIO", "ReadAllRecords", "file read sucessfully: " + fileName);
-                wasRead = true;
-            }
-            else
-            {
-                //string className, string methodName, string eventDetails
-                Logging.Log("FileIO", "ReadAllRecords", "file path does not exist: " + fileName);
+                if (File.Exists(fileName))
+                {
+                    string rawEmployeeRec = File.ReadAllText(fileName);//open file and read all data to a string
+                    employeeRec = ParsRecord(rawEmployeeRec);//pars data//validate data
+                    Logging.Log("FileIO", "ReadAllRecords", "file read sucessfully: " + fileName);
+                    wasRead = true;
+                }
+                else
+                {
+                    //string className, string methodName, string eventDetails
+                    Logging.Log("FileIO", "ReadAllRecords", "file path does not exist: " + fileName);
+                }
             }
             return employeeRec;//return list of valid employees
         }
@@ -74,7 +77,7 @@ namespace Supporting
         *
         * \details <b>Details</b>
         *
-        * \param Employee - <b>AllEmployees.Employee</b> - The employees records
+        * \employeeList - <b>List<AllEmployees.Employee></b> - The employees records
         * \param fileName - <b>String</b> - The file path and name of file storing the records
         *
         * \return  n/a
