@@ -533,13 +533,14 @@ namespace Presentation
                     empFName = Console.ReadLine();
                 } while (!((Employee)PTemp).SetFirstName(empFName));
 
+                bool valid;
                 do
                 {
                     Console.WriteLine("Enter the employee's SIN number:");
                     empSIN = Console.ReadLine();
                     empSIN.Replace(" ", "");
-                    int.TryParse(empSIN, out employeeSIN);
-                } while (!((Employee)PTemp).SetSocialInsuranceNumber(employeeSIN));
+                    valid = int.TryParse(empSIN, out employeeSIN);
+                } while (!((Employee)PTemp).SetSocialInsuranceNumber(employeeSIN) || !valid);
 
                 do
                 {
@@ -562,13 +563,14 @@ namespace Presentation
                     empFName = Console.ReadLine();
                 } while (!((Employee)CTemp).SetFirstName(empFName));
 
+                bool valid;
                 do
                 {
                     Console.WriteLine("Enter the employee's SIN number:");
                     empSIN = Console.ReadLine();
                     empSIN.Replace(" ", "");
-                    int.TryParse(empSIN, out employeeSIN);
-                } while (!((Employee)CTemp).SetSocialInsuranceNumber(employeeSIN));
+                    valid = int.TryParse(empSIN, out employeeSIN);
+                } while (!((Employee)CTemp).SetSocialInsuranceNumber(employeeSIN) || !valid);
 
                 do
                 {
@@ -591,13 +593,14 @@ namespace Presentation
                     empFName = Console.ReadLine();
                 } while (!((Employee)SNemp).SetFirstName(empFName));
 
+                bool valid;
                 do
                 {
                     Console.WriteLine("Enter the employee's SIN number:");
                     empSIN = Console.ReadLine();
                     empSIN.Replace(" ", "");
-                    int.TryParse(empSIN, out employeeSIN);
-                } while (!((Employee)SNemp).SetSocialInsuranceNumber(employeeSIN));
+                    valid = int.TryParse(empSIN, out employeeSIN);
+                } while (!((Employee)SNemp).SetSocialInsuranceNumber(employeeSIN) || !valid);
 
                 do
                 {
