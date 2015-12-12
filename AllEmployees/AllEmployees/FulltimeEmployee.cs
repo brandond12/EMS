@@ -441,7 +441,7 @@ namespace AllEmployees
         {
             bool dataSaved = true;
             //validate dates
-            if (DateTime.Compare(date, dateOfHire) == -1)
+            if (DateTime.Compare(date, dateOfHire) == -1 && date.Year != 1)
             {
                 Logging.Log("FulltimeEmployee", "SetDateOfTermination", "Invalid Date of Termination - Date of Termination Before Start Date");
                 dataSaved = false;
@@ -478,7 +478,7 @@ namespace AllEmployees
 
                 DateTime newdateOfTermination = new DateTime(year, month, day);
                 //validate dates
-                if (DateTime.Compare(newdateOfTermination, dateOfHire) == -1)
+                if (DateTime.Compare(newdateOfTermination, dateOfHire) == -1 && year != 1)
                 {
                     Logging.Log("FulltimeEmployee", "SetDateOfTermination", "Invalid Date of Termination - Date of Termination Before Start Date");
                     dataSaved = false;

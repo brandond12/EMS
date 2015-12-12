@@ -135,7 +135,7 @@ namespace Presentation
                 {
                     case "1":
                         // Gets employee list from the database
-                        employeeList = FileIO.ReadAllRecords(@"DBase\DBase.txt");
+                        employeeList = FileIO.ReadAllRecords(@"..\..\..\..\DBase.txt");
                         foreach(Employee emp in employeeList)
                         {
                             // Add it to the list
@@ -148,7 +148,7 @@ namespace Presentation
                         employeeList = company.GetEmployeeList();
                         foreach(Employee emp in employeeList)
                         {
-                           FileIO.WriteRecord(emp, @"DBase\DBase.txt");
+                            FileIO.WriteRecord(emp, @"..\..\..\..\DBase.txt");
                            Console.WriteLine(employeeList.Count().ToString() + "records were saved.");
                         }
                         break;
