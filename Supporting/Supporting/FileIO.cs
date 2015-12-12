@@ -48,7 +48,7 @@ namespace Supporting
         *
         * \return  employeeRec - <b>List<AllEmployees.Employee></b> - The list of all the employee records in the file
         */
-        public List<AllEmployees.Employee> ReadAllRecords(String fileName)
+        public static List<AllEmployees.Employee> ReadAllRecords(String fileName)
         {
             List<AllEmployees.Employee> employeeRec = new List<AllEmployees.Employee>();
             if (File.Exists(fileName))
@@ -74,7 +74,7 @@ namespace Supporting
         *
         * \return  n/a
         */
-        public void WriteRecord(AllEmployees.Employee Employee, String fileName)
+        public static void WriteRecord(AllEmployees.Employee Employee, String fileName)
         {
             string fileOutput = "";
             string identifier = Employee.GetEmployeeType();
@@ -135,7 +135,7 @@ namespace Supporting
         *
         * \return  employeeRec - <b>List<AllEmployees.Employee></b> - The list of all the employee records in the strinng of data
         */
-        private List<AllEmployees.Employee> ParsRecord(String fileText)
+        private static List<AllEmployees.Employee> ParsRecord(String fileText)
         {
             List<AllEmployees.Employee> employeeRec = new List<AllEmployees.Employee>();
             //tostringbase string employeeString = firstName + "|" + lastName + "|" + SocialInsuranceNumber + "|" + DateOfBirth.Year + "-" + DateOfBirth.Month + "-" + DateOfBirth.Day + "|";

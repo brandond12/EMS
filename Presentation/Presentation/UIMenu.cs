@@ -429,19 +429,19 @@ namespace Presentation
                 Console.WriteLine("Enter the employee type \n 'FT' for FullTime \n 'PT' for PartTime \n 'CT' for Contract \n 'SN' for Seasonal:");
                 empType = Console.ReadLine();
 
-            } while (emp.SetEmployeeType(empType));
+            } while (!emp.SetEmployeeType(empType));
 
             do
             {
                 Console.WriteLine("Enter the employee's last name:");
                 empLName = Console.ReadLine();
-            } while (emp.SetLastName(empLName));
+            } while (!emp.SetLastName(empLName));
 
             do
             {
                 Console.WriteLine("Enter the employee's first name:");
                 empFName = Console.ReadLine();
-            } while (emp.SetFirstName(empFName));
+            } while (!emp.SetFirstName(empFName));
 
             do
             {
@@ -449,13 +449,13 @@ namespace Presentation
                 empSIN = Console.ReadLine();
                 empSIN.Replace(" ", "");
                 int.TryParse(empSIN, out employeeSIN);
-            } while (emp.SetSocialInsuranceNumber(employeeSIN));
+            } while (!emp.SetSocialInsuranceNumber(employeeSIN));
 
             do
             {
             Console.WriteLine("Enter the employee's date of birth in the format: YYYY-MM-DD");
             empDOB = Console.ReadLine();
-            } while(((AllEmployees.ContractEmployee)emp).SetDateOfBirth(empDOB));
+            } while(!((AllEmployees.ContractEmployee)emp).SetDateOfBirth(empDOB));
             return emp;
         }
 

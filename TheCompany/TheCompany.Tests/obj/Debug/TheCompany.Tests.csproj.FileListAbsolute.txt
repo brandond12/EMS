@@ -11,3 +11,16 @@ C:\EMS-Repo\trunk\TheCompany\TheCompany.Tests\bin\Debug\TheCompany.pdb
 C:\EMS-Repo\trunk\TheCompany\TheCompany.Tests\bin\Debug\Supporting.dll
 C:\EMS-Repo\trunk\TheCompany\TheCompany.Tests\bin\Debug\Supporting.pdb
 C:\EMS-Repo\trunk\TheCompany\TheCompany.Tests\obj\Debug\TheCompany.Tests.csprojResolveAssemblyReference.cache
+C:\SETRepo\EMS\trunk\TheCompany\TheCompany.Tests\bin\Debug\TheCompany.Tests.dll
+C:\SETRepo\EMS\trunk\TheCompany\TheCompany.Tests\bin\Debug\TheCompany.Tests.pdb
+C:\SETRepo\EMS\trunk\TheCompany\TheCompany.Tests\bin\Debug\AllEmployees.dll
+C:\SETRepo\EMS\trunk\TheCompany\TheCompany.Tests\bin\Debug\Presentation.dll
+C:\SETRepo\EMS\trunk\TheCompany\TheCompany.Tests\bin\Debug\TheCompany.dll
+C:\SETRepo\EMS\trunk\TheCompany\TheCompany.Tests\bin\Debug\Supporting.dll
+C:\SETRepo\EMS\trunk\TheCompany\TheCompany.Tests\bin\Debug\AllEmployees.pdb
+C:\SETRepo\EMS\trunk\TheCompany\TheCompany.Tests\bin\Debug\Presentation.pdb
+C:\SETRepo\EMS\trunk\TheCompany\TheCompany.Tests\bin\Debug\TheCompany.pdb
+C:\SETRepo\EMS\trunk\TheCompany\TheCompany.Tests\bin\Debug\Supporting.pdb
+C:\SETRepo\EMS\trunk\TheCompany\TheCompany.Tests\obj\Debug\TheCompany.Tests.csprojResolveAssemblyReference.cache
+C:\SETRepo\EMS\trunk\TheCompany\TheCompany.Tests\obj\Debug\TheCompany.Tests.dll
+C:\SETRepo\EMS\trunk\TheCompany\TheCompany.Tests\obj\Debug\TheCompany.Tests.pdb
