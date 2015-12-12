@@ -52,8 +52,9 @@ namespace FileIOTests
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
             AllEmployees.ContractEmployee CTEmp = new AllEmployees.ContractEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
-            
-            FileIO.WriteRecord(CTEmp, path);//if true the data was correct and written to the file
+            List<AllEmployees.Employee> empList = new List<AllEmployees.Employee>();
+            empList.Add(CTEmp);
+            FileIO.WriteRecord(empList, path);//if true the data was correct and written to the file
 
             string rawEmployeeRec = File.ReadAllText(path);
             Assert.IsTrue(rawEmployeeRec == (CTEmp.ToString() + "\r\n" ));
@@ -91,7 +92,10 @@ namespace FileIOTests
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
             AllEmployees.FulltimeEmployee FTEmp = new AllEmployees.FulltimeEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
-            FileIO.WriteRecord(FTEmp, path);//if true the data was correct and written to the file
+
+            List<AllEmployees.Employee> empList = new List<AllEmployees.Employee>();
+            empList.Add(FTEmp);
+            FileIO.WriteRecord(empList, path);//if true the data was correct and written to the file
 
             string rawEmployeeRec = File.ReadAllText(path);
             Assert.IsTrue(rawEmployeeRec == (FTEmp.ToString() + "\r\n"));
@@ -129,7 +133,10 @@ namespace FileIOTests
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
             AllEmployees.ParttimeEmployee PTEmp = new AllEmployees.ParttimeEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
-            FileIO.WriteRecord(PTEmp, path);//if true the data was correct and written to the file
+
+            List<AllEmployees.Employee> empList = new List<AllEmployees.Employee>();
+            empList.Add(PTEmp);
+            FileIO.WriteRecord(empList, path);//if true the data was correct and written to the file
 
             string rawEmployeeRec = File.ReadAllText(path);
             Assert.IsTrue(rawEmployeeRec == (PTEmp.ToString() + "\r\n"));
@@ -165,8 +172,10 @@ namespace FileIOTests
             File.Delete(path);//makes sure file does not exist beforehand
             DateTime DOB = new DateTime(1993, 04, 24);
             AllEmployees.SeasonalEmployee SNEmp = new AllEmployees.SeasonalEmployee("Brandon", "Davies", 123456789, DOB, "Summer", 10);
-            
-            FileIO.WriteRecord(SNEmp, path);//if true the data was correct and written to the file
+
+            List<AllEmployees.Employee> empList = new List<AllEmployees.Employee>();
+            empList.Add(SNEmp);
+            FileIO.WriteRecord(empList, path);//if true the data was correct and written to the file
 
             string rawEmployeeRec = File.ReadAllText(path);
             Assert.IsTrue(rawEmployeeRec == (SNEmp.ToString() + "\r\n"));
@@ -203,8 +212,10 @@ namespace FileIOTests
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
             AllEmployees.ContractEmployee CTEmp = new AllEmployees.ContractEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
-            
-            FileIO.WriteRecord(CTEmp, path);//if true the data was correct and written to the file
+
+            List<AllEmployees.Employee> empList = new List<AllEmployees.Employee>();
+            empList.Add(CTEmp);
+            FileIO.WriteRecord(empList, path);//if true the data was correct and written to the file
 
             string rawEmployeeRec = File.ReadAllText(path);
             Assert.IsTrue(rawEmployeeRec.Contains(CTEmp.ToString() + "\r\n"));
@@ -241,8 +252,10 @@ namespace FileIOTests
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
             AllEmployees.FulltimeEmployee FTEmp = new AllEmployees.FulltimeEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
-            
-            FileIO.WriteRecord(FTEmp, path);//if true the data was correct and written to the file
+
+            List<AllEmployees.Employee> empList = new List<AllEmployees.Employee>();
+            empList.Add(FTEmp);
+            FileIO.WriteRecord(empList, path);//if true the data was correct and written to the file
 
             string rawEmployeeRec = File.ReadAllText(path);
             Assert.IsTrue(rawEmployeeRec.Contains(FTEmp.ToString() + "\r\n"));
@@ -279,8 +292,10 @@ namespace FileIOTests
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
             AllEmployees.ParttimeEmployee PTEmp = new AllEmployees.ParttimeEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
-            
-            FileIO.WriteRecord(PTEmp, path);//if true the data was correct and written to the file
+
+            List<AllEmployees.Employee> empList = new List<AllEmployees.Employee>();
+            empList.Add(PTEmp);
+            FileIO.WriteRecord(empList, path);//if true the data was correct and written to the file
 
             string rawEmployeeRec = File.ReadAllText(path);
             Assert.IsTrue(rawEmployeeRec.Contains(PTEmp.ToString() + "\r\n"));
@@ -315,8 +330,10 @@ namespace FileIOTests
             string path = @"DBase\DBase.txt";
             DateTime DOB = new DateTime(1993, 04, 24);
             AllEmployees.SeasonalEmployee SNEmp = new AllEmployees.SeasonalEmployee("Brandon", "Davies", 123456789, DOB, "Summer", 10);
-            
-            FileIO.WriteRecord(SNEmp, path);//if true the data was correct and written to the file
+
+            List<AllEmployees.Employee> empList = new List<AllEmployees.Employee>();
+            empList.Add(SNEmp);
+            FileIO.WriteRecord(empList, path);//if true the data was correct and written to the file
 
             string rawEmployeeRec = File.ReadAllText(path);
             Assert.IsTrue(rawEmployeeRec.Contains(SNEmp.ToString() + "\r\n"));
