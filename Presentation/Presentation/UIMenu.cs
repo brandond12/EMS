@@ -112,39 +112,43 @@ namespace Presentation
         */
         private void ShowFileManagementMenu()
         {
-            List<Employee> employeeList = new List<Employee>();
-
-            Console.WriteLine("Menu 2 : FILE MANAGEMENT MENU");
-            Console.WriteLine("-------------------------------");
-            Console.WriteLine("1. Load EMS DBase from file");
-            Console.WriteLine("2. Save Employee Set to EMS DBase file");
-            Console.WriteLine("9. Return to Main Menu");
-
-            string str = Console.ReadLine();
-
-            switch (str)
+            string str;
+            do
             {
-                case "1":
-                    // Gets employee list from the database
-                    employeeList = FileIO.ReadAllRecords(@"DBase\DBase.txt");
-                    foreach(Employee emp in employeeList)
-                    {
-                        // Add it to the list
-                        company.AddEmployeeToList(emp);
-                    }
-                    break;
-                case "2":
-                    // Send each individual employee back out to the database
-                    employeeList = company.GetEmployeeList();
-                    foreach(Employee emp in employeeList)
-                    {
-                       FileIO.WriteRecord(emp, @"DBase\DBase.txt");
-                    }
-                    break;
-                case "9":
-                    ShowMainMenu();
-                    break;
-            }
+                List<Employee> employeeList = new List<Employee>();
+
+                Console.WriteLine("Menu 2 : FILE MANAGEMENT MENU");
+                Console.WriteLine("-------------------------------");
+                Console.WriteLine("1. Load EMS DBase from file");
+                Console.WriteLine("2. Save Employee Set to EMS DBase file");
+                Console.WriteLine("9. Return to Main Menu");
+
+                str = Console.ReadLine();
+
+                switch (str)
+                {
+                    case "1":
+                        // Gets employee list from the database
+                        employeeList = FileIO.ReadAllRecords(@"DBase\DBase.txt");
+                        foreach(Employee emp in employeeList)
+                        {
+                            // Add it to the list
+                            company.AddEmployeeToList(emp);
+                        }
+                        break;
+                    case "2":
+                        // Send each individual employee back out to the database
+                        employeeList = company.GetEmployeeList();
+                        foreach(Employee emp in employeeList)
+                        {
+                           FileIO.WriteRecord(emp, @"DBase\DBase.txt");
+                        }
+                        break;
+                    case "9":
+                        ShowMainMenu();
+                        break;
+                }
+            } while (str != "9");
         }
 
         /**
@@ -162,46 +166,50 @@ namespace Presentation
         */
         private void ShowEmployeeManagementMenu()
         {
-            // Employee object
-            Employee employee = new Employee();
-
-            Console.WriteLine("Menu 3 : EMPLOYEE MANAGEMENT MENU");
-            Console.WriteLine("---------------------------------");
-            Console.WriteLine("1. Display Employee Set");
-            Console.WriteLine("2. Create a NEW Employee");
-            Console.WriteLine("3. Modify an EXISTING Employee");
-            Console.WriteLine("4. Remove an EXISTING Employee");
-            Console.WriteLine("9. Return to Main Menu");
-
-            string str = Console.ReadLine();
-
-            switch (str)
+            string str;
+            do
             {
-                case "1":
-                    // Display the employees
-                    company.DisplayAllEmployees();
-                    break;
-                case "2":
-                    // Go to menu 4
-                    employee = ShowEmployeeDetailsMenu();
-                    company.AddEmployeeToList(employee);
-                    break;
-                case "3":
-                    // Go to menu 4
-                    employee = ShowEmployeeDetailsMenu();
-                    employee = company.SelectEmployee(employee);
-                    company.ModifyEmployee(employee);
-                    break;
-                case "4":
-                    // Give the employee details to the container class, and remove the applicable employee
-                    employee = ShowEmployeeDetailsMenu();
-                    employee = company.SelectEmployee(employee);
-                    company.RemoveEmployee(employee);
-                    break;
-                case "9":
-                    ShowMainMenu();
-                    break;
-            }
+                // Employee object
+                Employee employee = new Employee();
+
+                Console.WriteLine("Menu 3 : EMPLOYEE MANAGEMENT MENU");
+                Console.WriteLine("---------------------------------");
+                Console.WriteLine("1. Display Employee Set");
+                Console.WriteLine("2. Create a NEW Employee");
+                Console.WriteLine("3. Modify an EXISTING Employee");
+                Console.WriteLine("4. Remove an EXISTING Employee");
+                Console.WriteLine("9. Return to Main Menu");
+
+                str = Console.ReadLine();
+
+                switch (str)
+                {
+                    case "1":
+                        // Display the employees
+                        company.DisplayAllEmployees();
+                        break;
+                    case "2":
+                        // Go to menu 4
+                        employee = ShowEmployeeDetailsMenu();
+                        company.AddEmployeeToList(employee);
+                        break;
+                    case "3":
+                        // Go to menu 4
+                        employee = ShowEmployeeDetailsMenu();
+                        employee = company.SelectEmployee(employee);
+                        company.ModifyEmployee(employee);
+                        break;
+                    case "4":
+                        // Give the employee details to the container class, and remove the applicable employee
+                        employee = ShowEmployeeDetailsMenu();
+                        employee = company.SelectEmployee(employee);
+                        company.RemoveEmployee(employee);
+                        break;
+                    case "9":
+                        ShowMainMenu();
+                        break;
+                }
+            } while (str != "9");
         }
 
         /**
@@ -325,6 +333,7 @@ namespace Presentation
                 }
                 else if(employee.GetEmployeeType() == "CT")
                 {
+
                     Console.WriteLine("1. Specify Base Employee Details.");
                     Console.WriteLine("2. Specify Contract Start Date.");
                     Console.WriteLine("3. Specify Contract Stop Date.");
@@ -571,7 +580,6 @@ namespace Presentation
             else if (tempEmp.GetEmployeeType() == "SN")
             {
                 return SNemp;
-
             }
 
             return tempEmp;
