@@ -362,17 +362,17 @@ namespace Presentation
                             break;
                         case "2":
                             Console.Clear();
-                            Console.WriteLine("Specify the date of hire");
+                            Console.WriteLine("Specify the date of hire YYYY-MM-DD");
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((ParttimeEmployee)employee).SetDateOfHire(Console.ReadLine()) == false)
                             {
                                 Console.Clear();
-                                Console.WriteLine("The date inputed is not in the correct format of YYYY-MM-DD");
+                                Console.WriteLine("The date inputed is not correct");
                             }
                             break;
                         case "3":
                             Console.Clear();
-                            Console.WriteLine("Specify the date of termination");
+                            Console.WriteLine("Specify the date of termination YYYY-MM-DD");
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((ParttimeEmployee)employee).SetDateOfTermination(Console.ReadLine()) == false)
                             {
@@ -410,7 +410,7 @@ namespace Presentation
                             break;
                         case "2":
                             Console.Clear();
-                            Console.WriteLine("Specify the contract's start date");
+                            Console.WriteLine("Specify the contract's start date YYYY-MM-DD");
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((ContractEmployee)employee).SetContractStartDate(Console.ReadLine()) == false)
                             {
@@ -420,7 +420,7 @@ namespace Presentation
                             break;
                         case "3":
                             Console.Clear();
-                            Console.WriteLine("Specify the contract's stop date");
+                            Console.WriteLine("Specify the contract's stop date YYYY-MM-DD");
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((ContractEmployee)employee).SetContractStopDate(Console.ReadLine()) == false)
                             {
