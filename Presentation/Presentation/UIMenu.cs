@@ -476,6 +476,7 @@ namespace Presentation
             {
                 Console.WriteLine("Enter the employee type \n 'FT' for FullTime \n 'PT' for PartTime \n 'CT' for Contract \n 'SN' for Seasonal:");
                 empType = Console.ReadLine();
+                empType.ToUpper();
 
             } while (!tempEmp.SetEmployeeType(empType));
 
