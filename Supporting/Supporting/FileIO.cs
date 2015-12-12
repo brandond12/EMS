@@ -55,6 +55,7 @@ namespace Supporting
             {
                 string rawEmployeeRec = File.ReadAllText(fileName);//open file and read all data to a string
                 employeeRec = ParsRecord(rawEmployeeRec);//pars data//validate data
+                Logging.Log("FileIO", "ReadAllRecords", "file read sucessfully: " + fileName);
             }
             else
             {
