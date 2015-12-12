@@ -81,19 +81,25 @@ namespace Presentation
 
             string str = Console.ReadLine();
 
-            switch (str)
+            do
             {
-                case "1":
-                    // Goes to the second menu
-                    ShowFileManagementMenu();
-                    break;
-                case "2":
-                    // Goes to the third menu
-                    ShowEmployeeManagementMenu();
-                    break;
-                case "9":
-                    break;
-            }
+                switch (str)
+                {
+                    case "1":
+                        // Goes to the second menu
+                        ShowFileManagementMenu();
+                        break;
+                    case "2":
+                        // Goes to the third menu
+                        ShowEmployeeManagementMenu();
+                        break;
+                    case "9":
+                        break;
+                    default:
+                        Console.WriteLine("Invalid menu choice.");
+                        break;
+                }
+            } while (str != "9");
             return true;
         }
 
@@ -134,6 +140,7 @@ namespace Presentation
                         {
                             // Add it to the list
                             company.AddEmployeeToList(emp);
+                            Console.WriteLine(employeeList.Count().ToString() + "records were read.");
                         }
                         break;
                     case "2":
@@ -142,10 +149,14 @@ namespace Presentation
                         foreach(Employee emp in employeeList)
                         {
                            FileIO.WriteRecord(emp, @"DBase\DBase.txt");
+                           Console.WriteLine(employeeList.Count().ToString() + "records were saved.");
                         }
                         break;
                     case "9":
                         ShowMainMenu();
+                        break;
+                    default:
+                        Console.WriteLine("Invalid menu choice.");
                         break;
                 }
             } while (str != "9");
@@ -192,21 +203,44 @@ namespace Presentation
                         // Go to menu 4
                         employee = ShowEmployeeDetailsMenu();
                         company.AddEmployeeToList(employee);
+                        Console.WriteLine("Employee was successfully added");
                         break;
                     case "3":
                         // Go to menu 4
                         employee = ShowEmployeeDetailsMenu();
                         employee = company.SelectEmployee(employee);
-                        company.ModifyEmployee(employee);
+                        
+                        if(employee.GetEmployeeType() != "")
+                        {
+                            company.ModifyEmployee(employee);
+                            Console.WriteLine("Employee was successfully modified.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Employee was not successfully modified.");
+                        }
                         break;
                     case "4":
                         // Give the employee details to the container class, and remove the applicable employee
                         employee = ShowEmployeeDetailsMenu();
                         employee = company.SelectEmployee(employee);
-                        company.RemoveEmployee(employee);
+
+                        if(employee.GetEmployeeType() != "")
+                        {
+                            company.RemoveEmployee(employee);
+                            Console.WriteLine("Employee was successfully removed.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Employee was not successfully removed.");
+                        }
+                       
                         break;
                     case "9":
                         ShowMainMenu();
+                        break;
+                    default:
+                        Console.WriteLine("Invalid menu choice.");
                         break;
                 }
             } while (str != "9");
