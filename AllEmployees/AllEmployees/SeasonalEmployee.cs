@@ -40,6 +40,7 @@ namespace AllEmployees
         public SeasonalEmployee()
             : base()
         {
+            SetEmployeeType("SN");
             season = "";
             piecePay = 0;
         }
@@ -59,6 +60,7 @@ namespace AllEmployees
         public SeasonalEmployee(string firstName, string lastName)
             : base(firstName, lastName)
         {
+            SetEmployeeType("SN");
             season = "";
             piecePay = 0;
         }

@@ -913,7 +913,7 @@ namespace TheCompany
         * 
         * \return n/a
         */
-        private void ModifyDateOfBirth(AllEmployees.Employee employee)
+        public void ModifyDateOfBirth(AllEmployees.Employee employee)
         {
             String response;                    // The user's response
             String error;                       // Data the user typed before hitting the enter key after the error message 

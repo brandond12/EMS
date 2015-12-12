@@ -42,6 +42,7 @@ namespace AllEmployees
         public ParttimeEmployee()
             : base()
         {
+            SetEmployeeType("PT");
             dateOfTermination = new DateTime();
             hourlyRate = 0;
             dateOfHire = new DateTime();
@@ -62,6 +63,7 @@ namespace AllEmployees
         public ParttimeEmployee(string firstName, string lastName)
             : base(firstName, lastName)
         {
+            SetEmployeeType("PT");
             dateOfTermination = new DateTime();
             hourlyRate = 0;
             dateOfHire = new DateTime();

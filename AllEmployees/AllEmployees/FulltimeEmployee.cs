@@ -43,6 +43,7 @@ namespace AllEmployees
         public FulltimeEmployee()
             : base()
         {
+            SetEmployeeType("FT");
             dateOfHire = new DateTime();
             dateOfTermination = new DateTime();
             salary = 0;
@@ -63,6 +64,7 @@ namespace AllEmployees
         public FulltimeEmployee(string firstName, string lastName)
             : base(firstName, lastName)
         {
+            SetEmployeeType("FT");
             dateOfHire = new DateTime();
             dateOfTermination = new DateTime();
             salary = 0;
