@@ -37,10 +37,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.WriteRecord will write "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The expected result is that the FileIO.WriteRecord will write "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.WriteRecord will wrote "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The actual result is that the FileIO.WriteRecord will wrote "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
@@ -52,8 +52,8 @@ namespace FileIOTests
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
             AllEmployees.ContractEmployee CTEmp = new AllEmployees.ContractEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
-            FileIO myFileIO = new FileIO();
-            myFileIO.WriteRecord(CTEmp, path);//if true the data was correct and written to the file
+            
+            FileIO.WriteRecord(CTEmp, path);//if true the data was correct and written to the file
 
             string rawEmployeeRec = File.ReadAllText(path);
             Assert.IsTrue(rawEmployeeRec == (CTEmp.ToString() + "\r\n" ));
@@ -76,10 +76,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.WriteRecord will write "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The expected result is that the FileIO.WriteRecord will write "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.WriteRecord will wrote "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The actual result is that the FileIO.WriteRecord will wrote "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
@@ -91,8 +91,7 @@ namespace FileIOTests
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
             AllEmployees.FulltimeEmployee FTEmp = new AllEmployees.FulltimeEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
-            FileIO myFileIO = new FileIO();
-            myFileIO.WriteRecord(FTEmp, path);//if true the data was correct and written to the file
+            FileIO.WriteRecord(FTEmp, path);//if true the data was correct and written to the file
 
             string rawEmployeeRec = File.ReadAllText(path);
             Assert.IsTrue(rawEmployeeRec == (FTEmp.ToString() + "\r\n"));
@@ -115,10 +114,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.WriteRecord will write "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The expected result is that the FileIO.WriteRecord will write "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.WriteRecord will wrote "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The actual result is that the FileIO.WriteRecord will wrote "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
@@ -130,8 +129,7 @@ namespace FileIOTests
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
             AllEmployees.ParttimeEmployee PTEmp = new AllEmployees.ParttimeEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
-            FileIO myFileIO = new FileIO();
-            myFileIO.WriteRecord(PTEmp, path);//if true the data was correct and written to the file
+            FileIO.WriteRecord(PTEmp, path);//if true the data was correct and written to the file
 
             string rawEmployeeRec = File.ReadAllText(path);
             Assert.IsTrue(rawEmployeeRec == (PTEmp.ToString() + "\r\n"));
@@ -154,10 +152,10 @@ namespace FileIOTests
         * "|SN|Brandon|Davies|123456789|1993-04-24|Summer|10|";
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.WriteRecord will write "|SN|Brandon|Davies|123456789|1993-04-24|Summer|10|" to the file.
+        * The expected result is that the FileIO.WriteRecord will write "|SN|Brandon|Davies|123456789|1993-04-24|Summer|10|" to the file.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.WriteRecord will wrote "|SN|Brandon|Davies|123456789|1993-04-24|Summer|10|" to the file.
+        * The actual result is that the FileIO.WriteRecord will wrote "|SN|Brandon|Davies|123456789|1993-04-24|Summer|10|" to the file.
         */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
@@ -167,8 +165,8 @@ namespace FileIOTests
             File.Delete(path);//makes sure file does not exist beforehand
             DateTime DOB = new DateTime(1993, 04, 24);
             AllEmployees.SeasonalEmployee SNEmp = new AllEmployees.SeasonalEmployee("Brandon", "Davies", 123456789, DOB, "Summer", 10);
-            FileIO myFileIO = new FileIO();
-            myFileIO.WriteRecord(SNEmp, path);//if true the data was correct and written to the file
+            
+            FileIO.WriteRecord(SNEmp, path);//if true the data was correct and written to the file
 
             string rawEmployeeRec = File.ReadAllText(path);
             Assert.IsTrue(rawEmployeeRec == (SNEmp.ToString() + "\r\n"));
@@ -191,10 +189,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.WriteRecord will write "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The expected result is that the FileIO.WriteRecord will write "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.WriteRecord will wrote "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The actual result is that the FileIO.WriteRecord will wrote "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
@@ -205,8 +203,8 @@ namespace FileIOTests
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
             AllEmployees.ContractEmployee CTEmp = new AllEmployees.ContractEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
-            FileIO myFileIO = new FileIO();
-            myFileIO.WriteRecord(CTEmp, path);//if true the data was correct and written to the file
+            
+            FileIO.WriteRecord(CTEmp, path);//if true the data was correct and written to the file
 
             string rawEmployeeRec = File.ReadAllText(path);
             Assert.IsTrue(rawEmployeeRec.Contains(CTEmp.ToString() + "\r\n"));
@@ -229,10 +227,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.WriteRecord will write "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The expected result is that the FileIO.WriteRecord will write "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.WriteRecord will wrote "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The actual result is that the FileIO.WriteRecord will wrote "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
@@ -243,8 +241,8 @@ namespace FileIOTests
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
             AllEmployees.FulltimeEmployee FTEmp = new AllEmployees.FulltimeEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
-            FileIO myFileIO = new FileIO();
-            myFileIO.WriteRecord(FTEmp, path);//if true the data was correct and written to the file
+            
+            FileIO.WriteRecord(FTEmp, path);//if true the data was correct and written to the file
 
             string rawEmployeeRec = File.ReadAllText(path);
             Assert.IsTrue(rawEmployeeRec.Contains(FTEmp.ToString() + "\r\n"));
@@ -267,10 +265,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.WriteRecord will write "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The expected result is that the FileIO.WriteRecord will write "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.WriteRecord will wrote "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The actual result is that the FileIO.WriteRecord will wrote "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
@@ -281,8 +279,8 @@ namespace FileIOTests
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
             AllEmployees.ParttimeEmployee PTEmp = new AllEmployees.ParttimeEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
-            FileIO myFileIO = new FileIO();
-            myFileIO.WriteRecord(PTEmp, path);//if true the data was correct and written to the file
+            
+            FileIO.WriteRecord(PTEmp, path);//if true the data was correct and written to the file
 
             string rawEmployeeRec = File.ReadAllText(path);
             Assert.IsTrue(rawEmployeeRec.Contains(PTEmp.ToString() + "\r\n"));
@@ -305,10 +303,10 @@ namespace FileIOTests
         * "|SN|Brandon|Davies|123456789|1993-04-24|Summer|10|";
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.WriteRecord will write "|SN|Brandon|Davies|123456789|1993-04-24|Summer|10|" to the file.
+        * The expected result is that the FileIO.WriteRecord will write "|SN|Brandon|Davies|123456789|1993-04-24|Summer|10|" to the file.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.WriteRecord will wrote "|SN|Brandon|Davies|123456789|1993-04-24|Summer|10|" to the file.
+        * The actual result is that the FileIO.WriteRecord will wrote "|SN|Brandon|Davies|123456789|1993-04-24|Summer|10|" to the file.
         */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
@@ -317,8 +315,8 @@ namespace FileIOTests
             string path = @"DBase\DBase.txt";
             DateTime DOB = new DateTime(1993, 04, 24);
             AllEmployees.SeasonalEmployee SNEmp = new AllEmployees.SeasonalEmployee("Brandon", "Davies", 123456789, DOB, "Summer", 10);
-            FileIO myFileIO = new FileIO();
-            myFileIO.WriteRecord(SNEmp, path);//if true the data was correct and written to the file
+            
+            FileIO.WriteRecord(SNEmp, path);//if true the data was correct and written to the file
 
             string rawEmployeeRec = File.ReadAllText(path);
             Assert.IsTrue(rawEmployeeRec.Contains(SNEmp.ToString() + "\r\n"));
@@ -349,10 +347,10 @@ namespace FileIOTests
         * "|SN|Brandon|Davies|123456789|1993-04-24|Summer|10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "|SN|Brandon|Davies|123456789|1993-04-24|Summer|10|".
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "|SN|Brandon|Davies|123456789|1993-04-24|Summer|10|".
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "|SN|Brandon|Davies|123456789|1993-04-24|Summer|10|".
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "|SN|Brandon|Davies|123456789|1993-04-24|Summer|10|".
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -365,10 +363,10 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
             List<AllEmployees.Employee> sampleRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             DateTime DOB = new DateTime(1993, 04, 24);
             DateTime DOH = new DateTime(2000, 12, 12);
@@ -406,10 +404,10 @@ namespace FileIOTests
         * "|CT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -422,9 +420,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -446,10 +444,10 @@ namespace FileIOTests
         * "|FT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -462,9 +460,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -486,10 +484,10 @@ namespace FileIOTests
         * "|PT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -502,9 +500,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -526,10 +524,10 @@ namespace FileIOTests
         * "|SN|123456!@#$%^|Davies|123456789|1993-04-24|Summer|10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|123456!@#$%^|Davies|123456789|1993-04-24|Summer|10|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|123456!@#$%^|Davies|123456789|1993-04-24|Summer|10|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|123456!@#$%^|Davies|123456789|1993-04-24|Summer|10|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|123456!@#$%^|Davies|123456789|1993-04-24|Summer|10|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -542,9 +540,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -566,10 +564,10 @@ namespace FileIOTests
         * "|CT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -582,9 +580,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -606,10 +604,10 @@ namespace FileIOTests
         * "|FT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -622,9 +620,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -646,10 +644,10 @@ namespace FileIOTests
         * "|PT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -662,9 +660,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -686,10 +684,10 @@ namespace FileIOTests
         * "|SN|Brandon|123456!@#$%^|123456789|1993-04-24|Summer|10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|123456!@#$%^|123456789|1993-04-24|Summer|10|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|Brandon|123456!@#$%^|123456789|1993-04-24|Summer|10|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|123456!@#$%^|123456789|1993-04-24|Summer|10|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|Brandon|123456!@#$%^|123456789|1993-04-24|Summer|10|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -702,9 +700,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -726,10 +724,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies|54347589|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|54347589|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|Davies|54347589|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|54347589|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|Davies|54347589|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -742,9 +740,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -766,10 +764,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies|54347589|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|54347589|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|Davies|54347589|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|54347589|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|Davies|54347589|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -782,9 +780,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -806,10 +804,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies|54347589|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|54347589|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|Davies|54347589|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|54347589|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|Davies|54347589|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -822,9 +820,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -846,10 +844,10 @@ namespace FileIOTests
         * "|SN|Brandon|Davies|54347589|1993-04-24|Summer|10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|54347589|1993-04-24|Summer|10|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|Brandon|Davies|54347589|1993-04-24|Summer|10|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|54347589|1993-04-24|Summer|10|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|Brandon|Davies|54347589|1993-04-24|Summer|10|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -862,9 +860,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -886,10 +884,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -902,9 +900,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -926,10 +924,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -942,9 +940,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -966,10 +964,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -982,9 +980,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1006,10 +1004,10 @@ namespace FileIOTests
         * "|SN|Brandon|Davies|123456789|3993-04-24|Summer|10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|3993-04-24|Summer|10|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|3993-04-24|Summer|10|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|3993-04-24|Summer|10|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|3993-04-24|Summer|10|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1022,9 +1020,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1046,10 +1044,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1062,9 +1060,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1086,10 +1084,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1102,9 +1100,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1126,10 +1124,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1142,9 +1140,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1166,10 +1164,10 @@ namespace FileIOTests
         * "|SN|Brandon|Davies|123456789|1993-04-24|datTimeOvYearDoe|10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|1993-04-24|datTimeOvYearDoe|10|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|1993-04-24|datTimeOvYearDoe|10|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|1993-04-24|datTimeOvYearDoe|10|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|1993-04-24|datTimeOvYearDoe|10|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1182,9 +1180,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1206,10 +1204,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1222,9 +1220,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1246,10 +1244,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1262,9 +1260,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1286,10 +1284,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1302,9 +1300,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1326,10 +1324,10 @@ namespace FileIOTests
         * "|SN|Brandon|Davies|123456789|1993-04-24|Summer|-10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|1993-04-24|Summer|-10|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|1993-04-24|Summer|-10|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|1993-04-24|Summer|-10|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|1993-04-24|Summer|-10|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1342,9 +1340,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1366,10 +1364,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1382,9 +1380,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1406,10 +1404,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1422,9 +1420,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1446,10 +1444,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1462,9 +1460,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1486,10 +1484,10 @@ namespace FileIOTests
         * "|CT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1502,9 +1500,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1526,10 +1524,10 @@ namespace FileIOTests
         * "|FT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1542,9 +1540,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1566,10 +1564,10 @@ namespace FileIOTests
         * "|PT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1582,9 +1580,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1606,10 +1604,10 @@ namespace FileIOTests
         * "|SN|Davies|123456789|1993-04-24|Summer|10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Davies|123456789|1993-04-24|Summer|10|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|Davies|123456789|1993-04-24|Summer|10|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Davies|123456789|1993-04-24|Summer|10|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|Davies|123456789|1993-04-24|Summer|10|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1622,9 +1620,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1646,10 +1644,10 @@ namespace FileIOTests
         * "|CT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1662,9 +1660,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1686,10 +1684,10 @@ namespace FileIOTests
         * "|FT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1702,9 +1700,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1726,10 +1724,10 @@ namespace FileIOTests
         * "|PT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1742,9 +1740,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1766,10 +1764,10 @@ namespace FileIOTests
         * "|SN|Brandon|123456789|1993-04-24|Summer|10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|123456789|1993-04-24|Summer|10|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|Brandon|123456789|1993-04-24|Summer|10|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|123456789|1993-04-24|Summer|10|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|Brandon|123456789|1993-04-24|Summer|10|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1782,9 +1780,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1806,10 +1804,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1822,9 +1820,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1846,10 +1844,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1862,9 +1860,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1886,10 +1884,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|Davies|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1902,9 +1900,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1926,10 +1924,10 @@ namespace FileIOTests
         * "|SN|Brandon|Davies|1993-04-24|Summer|10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|1993-04-24|Summer|10|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|Brandon|Davies|1993-04-24|Summer|10|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|1993-04-24|Summer|10|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|Brandon|Davies|1993-04-24|Summer|10|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1942,9 +1940,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -1966,10 +1964,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1982,9 +1980,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2006,10 +2004,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2022,9 +2020,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2046,10 +2044,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2062,9 +2060,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2086,10 +2084,10 @@ namespace FileIOTests
         * "|SN|Brandon|Davies|123456789|Summer|10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|Summer|10|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|Summer|10|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|Summer|10|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|Summer|10|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2102,9 +2100,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2126,10 +2124,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2142,9 +2140,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2166,10 +2164,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2182,9 +2180,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2206,10 +2204,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2222,9 +2220,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2246,10 +2244,10 @@ namespace FileIOTests
         * "|SN|Brandon|Davies|123456789|1993-04-24|10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|1993-04-24|10|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|1993-04-24|10|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|1993-04-24|10|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|1993-04-24|10|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2262,9 +2260,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2286,10 +2284,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2302,9 +2300,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2326,10 +2324,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2342,9 +2340,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2366,10 +2364,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2382,9 +2380,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2406,10 +2404,10 @@ namespace FileIOTests
         * "|SN|Brandon|Davies|123456789|1993-04-24|Summer|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|1993-04-24|Summer|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|1993-04-24|Summer|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|1993-04-24|Summer|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|1993-04-24|Summer|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2422,9 +2420,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2446,10 +2444,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2462,9 +2460,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2486,10 +2484,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2502,9 +2500,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2526,10 +2524,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2542,9 +2540,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2566,10 +2564,10 @@ namespace FileIOTests
         * "|CT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2582,9 +2580,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2606,10 +2604,10 @@ namespace FileIOTests
         * "|FT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2622,9 +2620,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2646,10 +2644,10 @@ namespace FileIOTests
         * "|PT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2662,9 +2660,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2686,10 +2684,10 @@ namespace FileIOTests
         * "|SN||Davies|123456789|1993-04-24|Summer|10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN||Davies|123456789|1993-04-24|Summer|10|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN||Davies|123456789|1993-04-24|Summer|10|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN||Davies|123456789|1993-04-24|Summer|10|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN||Davies|123456789|1993-04-24|Summer|10|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2702,9 +2700,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2726,10 +2724,10 @@ namespace FileIOTests
         * "|CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2742,9 +2740,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2766,10 +2764,10 @@ namespace FileIOTests
         * "|FT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2782,9 +2780,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2806,10 +2804,10 @@ namespace FileIOTests
         * "|PT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2822,9 +2820,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2846,10 +2844,10 @@ namespace FileIOTests
         * "|SN|Brandon||123456789|1993-04-24|Summer|10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon||123456789|1993-04-24|Summer|10|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|Brandon||123456789|1993-04-24|Summer|10|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon||123456789|1993-04-24|Summer|10|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|Brandon||123456789|1993-04-24|Summer|10|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2862,9 +2860,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2886,10 +2884,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2902,9 +2900,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2926,10 +2924,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2942,9 +2940,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -2966,10 +2964,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2982,9 +2980,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -3006,10 +3004,10 @@ namespace FileIOTests
         * "|SN|Brandon|Davies||1993-04-24|Summer|10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies||1993-04-24|Summer|10|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|Brandon|Davies||1993-04-24|Summer|10|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies||1993-04-24|Summer|10|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|Brandon|Davies||1993-04-24|Summer|10|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3022,9 +3020,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -3046,10 +3044,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3062,9 +3060,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -3086,10 +3084,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3102,9 +3100,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -3126,10 +3124,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3142,9 +3140,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -3166,10 +3164,10 @@ namespace FileIOTests
         * "|SN|Brandon|Davies|123456789||Summer|10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789||Summer|10|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789||Summer|10|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789||Summer|10|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789||Summer|10|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3182,9 +3180,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -3206,10 +3204,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3222,9 +3220,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -3246,10 +3244,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3262,9 +3260,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -3286,10 +3284,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3302,9 +3300,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -3326,10 +3324,10 @@ namespace FileIOTests
         * "|SN|Brandon|Davies|123456789|1993-04-24||10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|1993-04-24||10|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|1993-04-24||10|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|1993-04-24||10|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|1993-04-24||10|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3342,9 +3340,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -3366,10 +3364,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3382,9 +3380,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             DateTime DOB = new DateTime(1993, 04, 24);
             DateTime DOH = new DateTime(2000, 12, 12);
@@ -3411,10 +3409,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3427,9 +3425,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             DateTime DOB = new DateTime(1993, 04, 24);
             DateTime DOH = new DateTime(2000, 12, 12);
@@ -3456,10 +3454,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3472,9 +3470,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             DateTime DOB = new DateTime(1993, 04, 24);
             DateTime DOH = new DateTime(2000, 12, 12);
@@ -3501,10 +3499,10 @@ namespace FileIOTests
         * "|SN|Brandon|Davies|123456789|1993-04-24|Summer||"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|1993-04-24|Summer||" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|SN|Brandon|Davies|123456789|1993-04-24|Summer||" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|1993-04-24|Summer||" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|SN|Brandon|Davies|123456789|1993-04-24|Summer||" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3517,9 +3515,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -3541,10 +3539,10 @@ namespace FileIOTests
         * "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3557,9 +3555,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -3581,10 +3579,10 @@ namespace FileIOTests
         * "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3597,9 +3595,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -3621,10 +3619,10 @@ namespace FileIOTests
         * "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the myFileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the myFileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "|PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3637,9 +3635,9 @@ namespace FileIOTests
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
 
-            FileIO myFileIO = new FileIO();
+            
             List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-            EmpRecords = myFileIO.ReadAllRecords(path);
+            EmpRecords = FileIO.ReadAllRecords(path);
 
             Assert.IsTrue(EmpRecords.Count() == 0);
         }
@@ -3656,10 +3654,10 @@ namespace FileIOTests
         //{
         //    string fileData = "|CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
 
-        //    myFileIOParse = new FileIO();
+        //    FileIOParse = new FileIO();
         //    List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
-        //    var privateObject = PrivateObject(myFileIOParse); 
-        //    EmpRecords = myFileIOParse.ParsRecord(fileData);
+        //    var privateObject = PrivateObject(FileIOParse); 
+        //    EmpRecords = FileIOParse.ParsRecord(fileData);
 
         //    Assert.IsTrue(EmpRecords.Count() == 0);
         //}
