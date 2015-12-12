@@ -73,16 +73,17 @@ namespace Presentation
         */
         public bool ShowMainMenu()
         {
-            Console.WriteLine("Menu 1 : MAIN MENU");
-            Console.WriteLine("-------------------");
-            Console.WriteLine("1. Manage EMS DBase files");
-            Console.WriteLine("2. Manage Employees");
-            Console.WriteLine("9. Quit");
-
-            string str = Console.ReadLine();
-
+            string str;
             do
             {
+                Console.WriteLine("Menu 1 : MAIN MENU");
+                Console.WriteLine("-------------------");
+                Console.WriteLine("1. Manage EMS DBase files");
+                Console.WriteLine("2. Manage Employees");
+                Console.WriteLine("9. Quit");
+
+                str = Console.ReadLine();
+
                 switch (str)
                 {
                     case "1":
