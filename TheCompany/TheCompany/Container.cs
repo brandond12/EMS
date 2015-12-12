@@ -2019,7 +2019,7 @@ namespace TheCompany
                 {
                     EmployeeMatch = false;
                 }
-                if (EmployeeMatch == true)
+                if ((EmployeeMatch == true) || (isBaseDetailsAMatch == true))
                 {
                     selectedEmployee = IsThisTheDesiredEmployee(employee);
                     // Check if the returned employee is the employee the user selected
