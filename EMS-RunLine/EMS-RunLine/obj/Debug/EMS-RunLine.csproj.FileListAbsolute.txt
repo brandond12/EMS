@@ -1,0 +1,14 @@
+C:\SETRepo\EMS\trunk\EMS-RunLine\EMS-RunLine\bin\Debug\EMS-RunLine.exe.config
+C:\SETRepo\EMS\trunk\EMS-RunLine\EMS-RunLine\bin\Debug\EMS-RunLine.exe
+C:\SETRepo\EMS\trunk\EMS-RunLine\EMS-RunLine\bin\Debug\EMS-RunLine.pdb
+C:\SETRepo\EMS\trunk\EMS-RunLine\EMS-RunLine\bin\Debug\AllEmployees.dll
+C:\SETRepo\EMS\trunk\EMS-RunLine\EMS-RunLine\bin\Debug\Presentation.dll
+C:\SETRepo\EMS\trunk\EMS-RunLine\EMS-RunLine\bin\Debug\Supporting.dll
+C:\SETRepo\EMS\trunk\EMS-RunLine\EMS-RunLine\bin\Debug\TheCompany.dll
+C:\SETRepo\EMS\trunk\EMS-RunLine\EMS-RunLine\bin\Debug\AllEmployees.pdb
+C:\SETRepo\EMS\trunk\EMS-RunLine\EMS-RunLine\bin\Debug\Presentation.pdb
+C:\SETRepo\EMS\trunk\EMS-RunLine\EMS-RunLine\bin\Debug\Supporting.pdb
+C:\SETRepo\EMS\trunk\EMS-RunLine\EMS-RunLine\bin\Debug\TheCompany.pdb
+C:\SETRepo\EMS\trunk\EMS-RunLine\EMS-RunLine\obj\Debug\EMS-RunLine.csprojResolveAssemblyReference.cache
+C:\SETRepo\EMS\trunk\EMS-RunLine\EMS-RunLine\obj\Debug\EMS-RunLine.exe
+C:\SETRepo\EMS\trunk\EMS-RunLine\EMS-RunLine\obj\Debug\EMS-RunLine.pdb

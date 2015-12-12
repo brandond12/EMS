@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Presentation;
+using AllEmployees;
 
 namespace EMS_RunLine
 {
@@ -11,8 +12,12 @@ namespace EMS_RunLine
     {
         static void Main(string[] args)
         {
-            UIMenu EMSMenu = new UIMenu();
-            EMSMenu.ShowMainMenu();
+            Employee emp = new Employee();
+            ContractEmployee CTemp = new ContractEmployee();
+
+            CTemp = (ContractEmployee)emp;
+            //UIMenu EMSMenu = new UIMenu();
+            //EMSMenu.ShowMainMenu();
         }
     }
 }
