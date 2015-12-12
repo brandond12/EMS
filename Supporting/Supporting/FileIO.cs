@@ -13,6 +13,8 @@ using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 using System.Globalization;
+using AllEmployees;
+
 
 namespace Supporting
 {
@@ -77,57 +79,61 @@ namespace Supporting
         *
         * \return  n/a
         */
-        public static void WriteRecord(AllEmployees.Employee Employee, String fileName)
+        public static void WriteRecord(List<AllEmployees.Employee> employeeList, String fileName)
         {
-            string fileOutput = "";
-            string identifier = Employee.GetEmployeeType();
             if (wasRead == true)
             {
                 File.WriteAllText(fileName, String.Empty);
             }
-            if (identifier == "CT")
+            foreach (Employee emp in employeeList)
             {
-                AllEmployees.ContractEmployee employeeData = new AllEmployees.ContractEmployee();
-                employeeData = (AllEmployees.ContractEmployee)Employee;
-                fileOutput = employeeData.ToString();//test sample of gow to format
-                StreamWriter sw = File.AppendText(fileName);//write data (Details Method)
-                sw.WriteLine(fileOutput);//will append if file exists or create new if it does not already exist
-                sw.Close();
-                Logging.Log("FileIO", "WriteAllRecords", "ContractEmployee written to file");
-            }
-            else if (identifier == "FT")
-            {
-                AllEmployees.FulltimeEmployee employeeData = new AllEmployees.FulltimeEmployee();
-                employeeData = (AllEmployees.FulltimeEmployee)Employee;
-                fileOutput = employeeData.ToString();//test sample of gow to format
-                StreamWriter sw = File.AppendText(fileName);//write data (Details Method)
-                sw.WriteLine(fileOutput);//will append if file exists or create new if it does not already exist
-                sw.Close();
-                Logging.Log("FileIO", "WriteAllRecords", "FulltimeEmployee written to file");
-            }
-            else if (identifier == "PT")
-            {
-                AllEmployees.ParttimeEmployee employeeData = new AllEmployees.ParttimeEmployee();
-                employeeData = (AllEmployees.ParttimeEmployee)Employee;
-                fileOutput = employeeData.ToString();//test sample of gow to format
-                StreamWriter sw = File.AppendText(fileName);//write data (Details Method)
-                sw.WriteLine(fileOutput);//will append if file exists or create new if it does not already exist
-                sw.Close();
-                Logging.Log("FileIO", "WriteAllRecords", "ParttimeEmployee written to file");
-            }
-            else if (identifier == "SN")
-            {
-                AllEmployees.SeasonalEmployee employeeData = new AllEmployees.SeasonalEmployee();
-                employeeData = (AllEmployees.SeasonalEmployee)Employee;
-                fileOutput = employeeData.ToString();//test sample of gow to format
-                StreamWriter sw = File.AppendText(fileName);//write data (Details Method)
-                sw.WriteLine(fileOutput);//will append if file exists or create new if it does not already exist
-                sw.Close();
-                Logging.Log("FileIO", "WriteAllRecords", "SeasonalEmployee written to file");
-            }
-            else
-            {
-                Logging.Log("FileIO", "WriteAllRecords", "invalid unknown employee type was not written to file: " + identifier);
+                string identifier = emp.GetEmployeeType();
+                string fileOutput = "";
+
+                if (identifier == "CT")
+                {
+                    AllEmployees.ContractEmployee employeeData = new AllEmployees.ContractEmployee();
+                    employeeData = (AllEmployees.ContractEmployee)emp;
+                    fileOutput = employeeData.ToString();//test sample of gow to format
+                    StreamWriter sw = File.AppendText(fileName);//write data (Details Method)
+                    sw.WriteLine(fileOutput);//will append if file exists or create new if it does not already exist
+                    sw.Close();
+                    Logging.Log("FileIO", "WriteAllRecords", "ContractEmployee written to file");
+                }
+                else if (identifier == "FT")
+                {
+                    AllEmployees.FulltimeEmployee employeeData = new AllEmployees.FulltimeEmployee();
+                    employeeData = (AllEmployees.FulltimeEmployee)emp;
+                    fileOutput = employeeData.ToString();//test sample of gow to format
+                    StreamWriter sw = File.AppendText(fileName);//write data (Details Method)
+                    sw.WriteLine(fileOutput);//will append if file exists or create new if it does not already exist
+                    sw.Close();
+                    Logging.Log("FileIO", "WriteAllRecords", "FulltimeEmployee written to file");
+                }
+                else if (identifier == "PT")
+                {
+                    AllEmployees.ParttimeEmployee employeeData = new AllEmployees.ParttimeEmployee();
+                    employeeData = (AllEmployees.ParttimeEmployee)emp;
+                    fileOutput = employeeData.ToString();//test sample of gow to format
+                    StreamWriter sw = File.AppendText(fileName);//write data (Details Method)
+                    sw.WriteLine(fileOutput);//will append if file exists or create new if it does not already exist
+                    sw.Close();
+                    Logging.Log("FileIO", "WriteAllRecords", "ParttimeEmployee written to file");
+                }
+                else if (identifier == "SN")
+                {
+                    AllEmployees.SeasonalEmployee employeeData = new AllEmployees.SeasonalEmployee();
+                    employeeData = (AllEmployees.SeasonalEmployee)emp;
+                    fileOutput = employeeData.ToString();//test sample of gow to format
+                    StreamWriter sw = File.AppendText(fileName);//write data (Details Method)
+                    sw.WriteLine(fileOutput);//will append if file exists or create new if it does not already exist
+                    sw.Close();
+                    Logging.Log("FileIO", "WriteAllRecords", "SeasonalEmployee written to file");
+                }
+                else
+                {
+                    Logging.Log("FileIO", "WriteAllRecords", "invalid unknown employee type was not written to file: " + identifier);
+                }
             }
         }
 
