@@ -7,6 +7,11 @@ using System.Linq;
 
 namespace FileIOTests
 {
+    /// \class FileIOTests
+    ///
+    /// \brief <b>Brief Description</b> 
+    /// This class is used to test the Methods in the FileIO class. The methods tested 
+    /// include WriteRecord, ReadAllRecords, ParsRecord. ReadAllRecords inherantly uses ParsRecord so they are tested at the same time 
     [TestClass]
     public class FileIOTests
     {
