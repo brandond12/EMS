@@ -446,11 +446,35 @@ namespace TheCompany
         public void AddEmployeeToList(AllEmployees.Employee employee)
         {
             String employeeType = employee.GetEmployeeType();
-            // Add an employee to the list if it has a valid employee type
-            if ((employeeType == "FT") || (employeeType == "PT") || (employeeType == "CT") || (employeeType == "SN"))
+            bool isEmployeeValid = false;
+
+            // Check if the employee is valid
+            if (employeeType == "FT")
+            {
+                isEmployeeValid = ((AllEmployees.FulltimeEmployee)employee).Validate();
+            }
+            else if (employeeType == "PT")
+            {
+                isEmployeeValid = ((AllEmployees.ParttimeEmployee)employee).Validate();
+            }
+            else if (employeeType == "CT")
+            {
+                isEmployeeValid = ((AllEmployees.ContractEmployee)employee).Validate();
+            }
+            else if (employeeType == "SN")
+            {
+                isEmployeeValid = ((AllEmployees.SeasonalEmployee)employee).Validate();
+            }
+
+            // Add an employee to the list if it is valid
+            if (isEmployeeValid == true)
             {
                 listOfEmployees.Add(employee);
                 Logging.Log("Container", "AddEmployeeToList", "Added an employee named " + employee.GetFirstName() + " to the container.");
+            }
+            else
+            {
+                Logging.Log("Container", "AddEmployeeToList", "Didn't add an employee named " + employee.GetFirstName() + " to the container because it was invalid.");
             }
         }
 
@@ -482,30 +506,38 @@ namespace TheCompany
         public void DisplayAllEmployees()
         {
             String response;    // The key the user hits to display the next employee
+            String error = "";
 
-            // Loop through all of the employees
-            foreach (AllEmployees.Employee employee in listOfEmployees)
+            try
             {
-                if (employee.GetEmployeeType() == "FT")
+                // Loop through all of the employees
+                foreach (AllEmployees.Employee employee in listOfEmployees)
                 {
-                    response = UIMenu.GetInfoFromUser("Current Employee:\n" + ((AllEmployees.FulltimeEmployee)employee).Details()
-                    + "\nHit enter to see the next employee.");
+                    if (employee.GetEmployeeType() == "FT")
+                    {
+                        response = UIMenu.GetInfoFromUser("Current Employee:\n" + ((AllEmployees.FulltimeEmployee)employee).Details()
+                        + "\nHit enter to see the next employee.");
+                    }
+                    else if (employee.GetEmployeeType() == "PT")
+                    {
+                        response = UIMenu.GetInfoFromUser("Current Employee:\n" + ((AllEmployees.ParttimeEmployee)employee).Details()
+                        + "\nHit enter to see the next employee.");
+                    }
+                    else if (employee.GetEmployeeType() == "CT")
+                    {
+                        response = UIMenu.GetInfoFromUser("Current Employee:\n" + ((AllEmployees.ContractEmployee)employee).Details()
+                        + "\nHit enter to see the next employee.");
+                    }
+                    else if (employee.GetEmployeeType() == "SN")
+                    {
+                        response = UIMenu.GetInfoFromUser("Current Employee:\n" + ((AllEmployees.SeasonalEmployee)employee).Details()
+                        + "\nHit enter to see the next employee.");
+                    }
                 }
-                else if (employee.GetEmployeeType() == "PT")
-                {
-                    response = UIMenu.GetInfoFromUser("Current Employee:\n" + ((AllEmployees.ParttimeEmployee)employee).Details()
-                    + "\nHit enter to see the next employee.");
-                }
-                else if (employee.GetEmployeeType() == "CT")
-                {
-                    response = UIMenu.GetInfoFromUser("Current Employee:\n" + ((AllEmployees.ContractEmployee)employee).Details()
-                    + "\nHit enter to see the next employee.");
-                }
-                else if (employee.GetEmployeeType() == "SN")
-                {
-                    response = UIMenu.GetInfoFromUser("Current Employee:\n" + ((AllEmployees.SeasonalEmployee)employee).Details()
-                    + "\nHit enter to see the next employee.");
-                }
+            }
+            catch (Exception)
+            {
+                error = UIMenu.GetInfoFromUser("An error occurred while trying to display an employee.\nHit enter to continue.");
             }
         }
 
