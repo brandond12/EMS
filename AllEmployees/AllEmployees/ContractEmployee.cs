@@ -286,8 +286,11 @@ namespace AllEmployees
             }
             catch (Exception ex)
             {
-                dataSaved = false;
-                Logging.Log("ContractEmployee", "SetDateOfBirth", "Exception Caught in Method. " + ex.Message);
+                if (date.Length != 0)
+                {
+                    dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetDateOfBirth", "Exception Caught in Method. " + ex.Message);
+                }
             }
             return dataSaved;
         }
@@ -408,8 +411,11 @@ namespace AllEmployees
             }
             catch (Exception ex)
             {
-                dataSaved = false;
-                Logging.Log("ContractEmployee", "SetContractStartDate", "Exception Caught in Method. " + ex.Message);
+                if (date.Length != 0)
+                {
+                    dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetContractStartDate", "Exception Caught in Method. " + ex.Message);
+                }
             }
             return dataSaved;
         }
@@ -517,8 +523,11 @@ namespace AllEmployees
             }
             catch (Exception ex)
             {
-                dataSaved = false;
-                Logging.Log("ContractEmployee", "SetContractStopDate", "Exception Caught in Method. " + ex.Message);
+                if (date.Length != 0)
+                {
+                    dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetContractStopDate", "Exception Caught in Method. " + ex.Message);
+                }
             }
             return dataSaved;
         }

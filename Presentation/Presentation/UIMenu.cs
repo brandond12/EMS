@@ -495,13 +495,14 @@ namespace Presentation
                     empFName = Console.ReadLine();
                 } while (!((Employee)FTemp).SetFirstName(empFName));
 
+                bool valid;
                 do
                 {
                     Console.WriteLine("Enter the employee's SIN number:");
                     empSIN = Console.ReadLine();
                     empSIN.Replace(" ", "");
-                    int.TryParse(empSIN, out employeeSIN);
-                } while (!((Employee)FTemp).SetSocialInsuranceNumber(employeeSIN));
+                    valid = int.TryParse(empSIN, out employeeSIN);
+                } while (!((Employee)FTemp).SetSocialInsuranceNumber(employeeSIN) || !valid);
 
                 do
                 {

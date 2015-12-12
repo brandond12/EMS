@@ -260,7 +260,10 @@ namespace AllEmployees
             }
             catch (Exception)
             {
-                dataSaved = false;
+                if (date.Length != 0)
+                {
+                    dataSaved = false;
+                }
             }
             return dataSaved;
         }
