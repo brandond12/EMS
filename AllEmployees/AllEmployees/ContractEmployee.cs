@@ -172,20 +172,24 @@ namespace AllEmployees
         */
         public string Details()
         {
-            string returnString = "Employee Type: Contract\nName: " + GetFirstName() + " " + GetLastName() +
-                "\nBuisness Number: " + GetSocialInsuranceNumber().ToString().Substring(0, 5) + " " + GetSocialInsuranceNumber().ToString().Substring(5, 4) +
-                "\nBuisness Start Date: ";
-            if(GetDateOfBirth().Year != 1)
+            string returnString = "Employee Type: Contract\nName: " + GetLastName()+
+            "\nBuisness Number: ";
+            if (GetSocialInsuranceNumber().ToString().Length == 9)
+            {
+                returnString += GetSocialInsuranceNumber().ToString().Substring(0, 5) + " " + GetSocialInsuranceNumber().ToString().Substring(5, 4);
+            }
+            returnString += "\nBuisness Start Date: ";
+            if(GetDateOfBirthString() != "0001-01-01")
             {
                 returnString += GetDateOfBirthString();
             }
             returnString += "\nContract Start Date: ";
-            if(GetContractStartDate().Year != 1)
+            if (GetContractStartDateString() != "0001-01-01")
             {
                 returnString += GetContractStartDateString();
             }
             returnString += "\nContract Stop Date: ";
-            if(GetContractStopDate().Year != 1)
+            if (GetContractStopDateString() != "0001-01-01")
             {
                 returnString += GetContractStopDateString();
             }

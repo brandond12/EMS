@@ -285,7 +285,7 @@ namespace AllEmployees
         */
         protected bool SetDateOfBirthBase(DateTime date)
         {
-            Logging.Log("Employee", "SetDateOfBirthBase", "Date of Birth Changed - From: " + String.Format("{0:yyyy-MM-dd}", this.dateOfBirth) + " To: " + String.Format("{0:yyyy-MM-dd}", dateOfBirth));
+            Logging.Log("Employee", "SetDateOfBirthBase", "Date of Birth Changed - From: " + String.Format("{0:yyyy-MM-dd}", this.dateOfBirth) + " To: " + String.Format("{0:yyyy-MM-dd}", date));
             dateOfBirth = date;
             return true;
         }

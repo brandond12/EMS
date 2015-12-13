@@ -164,12 +164,29 @@ namespace AllEmployees
         */
         public string Details()
         {
-            return ("Employee Type: ParttimeEmployee\nName: " + GetFirstName() + " " + GetLastName() +
-                "\nSocial Insurance Number: " + GetSocialInsuranceNumber().ToString().Substring(0, 3) + " " + GetSocialInsuranceNumber().ToString().Substring(3, 3) + " " + GetSocialInsuranceNumber().ToString().Substring(6, 3) +
-                "\nDate of Birth: " + GetDateOfBirthString() +
-                "\nDate of Hire: " + GetDateOfHireString() +
-                "\nDate of Termionation" + GetDateOfTerminationString() +
-                "\nHourly Rate: " + hourlyRate.ToString());
+            string details = "Employee Type: Parttime\nName: " + GetFirstName() + " " + GetLastName() +
+            "\nSocial Insurance Number: ";
+            if (GetSocialInsuranceNumber().ToString().Length == 9)
+            {
+                details += GetSocialInsuranceNumber().ToString().Substring(0, 3) + " " + GetSocialInsuranceNumber().ToString().Substring(3, 3) + " " + GetSocialInsuranceNumber().ToString().Substring(6, 3);
+            }
+            details += "\nDate of Birth: ";
+            if (GetDateOfBirthString() != "0001-01-01")
+            {
+                details += GetDateOfBirthString();
+            }
+            details += "\nDate of Hire: ";
+            if (GetDateOfHireString() != "0001-01-01")
+            {
+                details += GetDateOfHireString();
+            }
+            details += "\nDate of Termination: ";
+            if (GetDateOfTerminationString() != "0001-01-01")
+            {
+                details += GetDateOfTerminationString();
+            }
+            details += "\nHourly Rate: " + hourlyRate.ToString();
+            return details;
         }
 
         /**

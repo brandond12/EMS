@@ -109,7 +109,7 @@ namespace AllEmployees
             {
                 dataValid = false;
             }
-            if (season != "Spring" && season != "Summer" && season != "Winter" && season != "Fall")
+            if (season != "Spring" && season != "SPRING" && season != "Summer" && season != "SUMMER" && season != "Winter" && season != "WINTER" && season != "Fall" && season != "Fall")
             {
                 dataValid = false;
             }
@@ -132,11 +132,28 @@ namespace AllEmployees
         */
         public string Details()
         {
-            return ("Employee Type: Seasonal\nName: " + GetFirstName() + " " + GetLastName() +
-                "\nSocial Insurance Number: " + GetSocialInsuranceNumber().ToString().Substring(0, 3) + " " + GetSocialInsuranceNumber().ToString().Substring(3, 3) + " " + GetSocialInsuranceNumber().ToString().Substring(6, 3) +
-                "\nDate of Birth: " + GetDateOfBirthString() +
-                "\nSeason: " + season +
-                "\nPrice per Piece: " + piecePay.ToString());
+            string details = "Employee Type: Seasonal\nName: " + GetFirstName() + " " + GetLastName();
+
+            if (GetSocialInsuranceNumber().ToString().Length == 9)
+            {
+                details += ("\nSocial Insurance Number: " + GetSocialInsuranceNumber().ToString().Substring(0, 3) + " " + GetSocialInsuranceNumber().ToString().Substring(3, 3) + " " + GetSocialInsuranceNumber().ToString().Substring(6, 3));
+            }
+            else
+            {
+                details += "\nSocial Insurance Number: ";
+            }
+            if (GetDateOfBirthString() != "0001-01-01")
+            {
+                details += "\nDate of Birth: " + GetDateOfBirthString();
+            }
+            else
+            {
+                details += "\nDate of Birth: ";
+            }
+               details += "\nSeason: " + season.ToUpper() +
+                "\nPrice per Piece: " + piecePay.ToString();
+
+            return details;
         }
 
         /**
@@ -170,7 +187,7 @@ namespace AllEmployees
         public bool SetSeason(string season)
         {
             bool dataSaved = true;
-            if (season != "Spring" && season != "Summer" && season != "Winter" && season != "Fall" && season != "")
+            if (season != "Spring" && season != "SPRING" && season != "Summer" && season != "SUMMER" && season != "Winter" && season != "WINTER" && season != "Fall" && season != "Fall")
             {
                 dataSaved = false;
             }
