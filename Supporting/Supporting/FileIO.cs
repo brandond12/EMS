@@ -155,9 +155,9 @@ namespace Supporting
         {
             List<AllEmployees.Employee> employeeRec = new List<AllEmployees.Employee>();
             //tostringbase string employeeString = firstName + "|" + lastName + "|" + SocialInsuranceNumber + "|" + DateOfBirth.Year + "-" + DateOfBirth.Month + "-" + DateOfBirth.Day + "|";
-            char[] delimiterChars = { '|' };
+            char[] delimiterChars = { '|', '\n'};
             string[] words = fileText.Split(delimiterChars);
-            int wordCounter = 1;
+            int wordCounter = 0;
             while (wordCounter < words.Count() - 1)
             {
                 if (words[wordCounter] == "CT")
