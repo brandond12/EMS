@@ -77,7 +77,6 @@ namespace Presentation
             string str;
             do
             {
-                Console.Clear();
                 Console.WriteLine("Menu 1 : MAIN MENU");
                 Console.WriteLine("-------------------");
                 Console.WriteLine("1. Manage EMS DBase files");
@@ -123,7 +122,7 @@ namespace Presentation
             string str;
             do
             {
-                
+
                 List<Employee> employeeList = new List<Employee>();
 
                 Console.WriteLine("Menu 2 : FILE MANAGEMENT MENU");
@@ -151,9 +150,10 @@ namespace Presentation
                         // Send each individual employee back out to the database
                         employeeList = company.GetEmployeeList();
 
-                        FileIO.WriteRecord(employeeList, @"..\..\..\..\DBase.txt");
+                        int validEmployee = FileIO.WriteRecord(employeeList, @"..\..\..\..\DBase.txt");
                         Console.Clear();
                         Console.WriteLine(employeeList.Count().ToString() + " record(s) were saved.");
+                        Console.WriteLine(validEmployee.ToString() + " employee(s) were saved");
                         break;
                     case "9":
                         break;
@@ -207,9 +207,10 @@ namespace Presentation
                         // Go to menu 4
                         menuOptionFlag = 1;
                         employee = ShowEmployeeDetailsMenu();
-                        company.AddEmployeeToList(employee);
-                        if(cancel == false)
+
+                        if (cancel == false)
                         {
+                            company.AddEmployeeToList(employee);
                             Console.Clear();
                             Console.WriteLine("Employee was successfully added");
                             Console.WriteLine("Press enter to continue");
@@ -221,7 +222,7 @@ namespace Presentation
                         menuOptionFlag = 2;
                         employee = ShowEmployeeDetailsMenu();
 
-                        if(cancel == false)
+                        if (cancel == false)
                         {
                             employee = company.SelectEmployee(employee);
 
@@ -248,7 +249,7 @@ namespace Presentation
                         // Give the employee details to the container class, and remove the applicable employee
                         employee = ShowEmployeeDetailsMenu();
 
-                        if(cancel == false)
+                        if (cancel == false)
                         {
                             employee = company.SelectEmployee(employee);
 
@@ -501,7 +502,7 @@ namespace Presentation
                             Console.WriteLine("Specify which season the employee is working in. The seaons can be: Summer, Winter, Fall, or Spring.");
                             // Sets the employee details to the users input and checks if it is in the proper format
                             string userInput = Console.ReadLine();
-                            userInput = userInput.Substring(0,1).ToUpper() + userInput.Substring(1).ToLower();
+                            userInput = userInput.Substring(0, 1).ToUpper() + userInput.Substring(1).ToLower();
                             if (((SeasonalEmployee)employee).SetSeason(userInput) == false)
                             {
                                 Console.Clear();
@@ -559,23 +560,26 @@ namespace Presentation
             ContractEmployee CTemp = new ContractEmployee();
             SeasonalEmployee SNemp = new SeasonalEmployee();
             Console.Clear();
-            if(menuOptionFlag == 1)
+            if (menuOptionFlag == 1)
             {
                 Console.Clear();
                 Console.WriteLine("Employee Creation");
                 Console.WriteLine("__________________");
+                Console.WriteLine("Press enter to skip entry.");
             }
-            else if(menuOptionFlag == 2)
+            else if (menuOptionFlag == 2)
             {
                 Console.Clear();
                 Console.WriteLine("Employee Modification");
                 Console.WriteLine("______________________");
+                Console.WriteLine("Press enter to skip entry.");
             }
             else if (menuOptionFlag == 3)
             {
                 Console.Clear();
                 Console.WriteLine("Employee Deletion");
                 Console.WriteLine("__________________");
+                Console.WriteLine("Press enter to skip entry.");
             }
             // Prompt for details
             do
