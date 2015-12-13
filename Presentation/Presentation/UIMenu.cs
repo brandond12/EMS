@@ -636,15 +636,9 @@ namespace Presentation
 
                 do
                 {
-                    Console.WriteLine("Enter the employee's last name:");
+                    Console.WriteLine("Enter the employee's coorporation name:");
                     empLName = Console.ReadLine();
                 } while (!((Employee)CTemp).SetLastName(empLName));
-
-                do
-                {
-                    Console.WriteLine("Enter the employee's first name:");
-                    empFName = Console.ReadLine();
-                } while (!((Employee)CTemp).SetFirstName(empFName));
 
                 bool valid;
                 do
@@ -657,7 +651,7 @@ namespace Presentation
 
                 do
                 {
-                    Console.WriteLine("Enter the employee's date of birth in the format: YYYY-MM-DD");
+                    Console.WriteLine("Enter the employee's date of incorporation in the format: YYYY-MM-DD");
                     empDOB = Console.ReadLine();
                 } while (!CTemp.SetDateOfBirth(empDOB));
             }
