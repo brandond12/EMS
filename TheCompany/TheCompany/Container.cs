@@ -1934,7 +1934,7 @@ namespace TheCompany
                         }
                     }
                     // Check if there is a parameter for the date of termination
-                    if (((FulltimeEmployee)employeeParameters).GetDateOfTerminationString() != "0001-01-01")
+                    if (((FulltimeEmployee)employeeParameters).GetDateOfTerminationString() != "N/A")
                     {
                         // If the parameter and the employee's value don't match, then this employee isn't a match
                         if (DateTime.Compare(((FulltimeEmployee)employeeParameters).GetDateOfTermination(), ((FulltimeEmployee)employee).GetDateOfTermination()) != 0)
@@ -1969,7 +1969,7 @@ namespace TheCompany
                         }
                     }
                     // Check if there is a parameter for the date of termination
-                    if (((ParttimeEmployee)employeeParameters).GetDateOfTerminationString() != "0001-01-01")
+                    if (((ParttimeEmployee)employeeParameters).GetDateOfTerminationString() != "N/A")
                     {
                         // If the parameter and the employee's value don't match, then this employee isn't a match
                         if (DateTime.Compare(((ParttimeEmployee)employeeParameters).GetDateOfTermination(), ((ParttimeEmployee)employee).GetDateOfTermination()) != 0)

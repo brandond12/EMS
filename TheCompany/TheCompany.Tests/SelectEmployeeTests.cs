@@ -188,10 +188,10 @@ namespace TheCompany.Tests
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SeasonalEmployee SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Comparing against:
-        * FulltimeEmployee givenEmployee = new FulltimeEmployee();
+        * ParttimeEmployee givenEmployee = new ParttimeEmployee();
         * givenEmployee.SetLastName("Jones");
         * Input string:
-        * "N\nY\n"    
+        * "Y\n"    
         * 
         * \<b>Expected Result</b>
         * The expected result is that the employee's name is Mark.
@@ -203,11 +203,11 @@ namespace TheCompany.Tests
         public void SelectEmployee_GivenLastName_SelectsValidEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "N\nY\n";
+            String dataToPassIn = "Y\n";
             var privateObject = new PrivateObject(employeeRepo);
             Employee actualEmployee = new Employee();
             // Set the employee parameters
-            FulltimeEmployee givenEmployee = new FulltimeEmployee();
+            ParttimeEmployee givenEmployee = new ParttimeEmployee();
             givenEmployee.SetLastName("Jones");
 
             // Set the console to read input from the input data string
@@ -263,7 +263,7 @@ namespace TheCompany.Tests
         * FulltimeEmployee givenEmployee = new FulltimeEmployee();
         * givenEmployee.SetSocialInsuranceNumber(902398402);
         * Input string:
-        * "N\nY\n"
+        * "Y\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's name is Mark.
@@ -275,11 +275,11 @@ namespace TheCompany.Tests
         public void SelectEmployee_GivenSIN_SelectsValidEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "N\nY\n";
+            String dataToPassIn = "Y\n";
             Employee actualEmployee = new Employee();
             var privateObject = new PrivateObject(employeeRepo);
             // Set the employee parameters
-            FulltimeEmployee givenEmployee = new FulltimeEmployee();
+            ParttimeEmployee givenEmployee = new ParttimeEmployee();
             givenEmployee.SetSocialInsuranceNumber(902398402);
 
             // Set the console to read input from the input data string
@@ -335,7 +335,7 @@ namespace TheCompany.Tests
         * FulltimeEmployee givenEmployee = new FulltimeEmployee();
         * givenEmployee.SetDateOfBirth(1990, 09, 10);
         * Input string:
-        * "N\nN\nY\n"
+        * "N\nY\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employee's name is Sam.
@@ -347,7 +347,7 @@ namespace TheCompany.Tests
         public void SelectEmployee_GivenDOB_SelectsValidEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "N\nN\nY\n";
+            String dataToPassIn = "N\nY\n";
             Employee actualEmployee = new Employee();
             var privateObject = new PrivateObject(employeeRepo);
             // Set the employee parameters
@@ -1365,7 +1365,7 @@ namespace TheCompany.Tests
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SeasonalEmployee SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Comparing against:
-        * FulltimeEmployee givenEmployee = new FulltimeEmployee();
+        * ParttimeEmployee givenEmployee = new ParttimeEmployee();
         * givenEmployee.SetLastName("Jones");
         * givenEmployee.SetSocialInsuranceNumber(902398402);
         * Input string:
@@ -1381,11 +1381,11 @@ namespace TheCompany.Tests
         public void SelectEmployee_GivenLastNameAndSIN_SelectsValidEmployee()
         {
             // Initialize a string with input data and initalize other variables
-            String dataToPassIn = "N\nY\n";
+            String dataToPassIn = "Y\n";
             Employee actualEmployee = new Employee();
             var privateObject = new PrivateObject(employeeRepo);
             // Set the employee parameters
-            FulltimeEmployee givenEmployee = new FulltimeEmployee();
+            ParttimeEmployee givenEmployee = new ParttimeEmployee();
             givenEmployee.SetLastName("Jones");
             givenEmployee.SetSocialInsuranceNumber(902398402);
 
