@@ -174,11 +174,6 @@ namespace AllEmployees
                 dataValid = false;
                 Logging.Log("Employee", "ValidateBase", "Invalid Employee Type - Types can only be: FT PT CT SN. Input : " + employeeType);
             }
-            //check that all needed data is present
-            if(lastName.Length == 0 || firstName.Length == 0 || dateOfBirth.Year == 1 || socialInsuranceNumber.ToString().Length == 1)
-            {
-                dataValid = false;
-            }
             return dataValid;
         }
 
