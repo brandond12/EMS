@@ -205,7 +205,7 @@ namespace AllEmployees
         */
         public override string ToString()
         {
-            string outputString = "|CT" + "|" + 
+            string outputString = "CT" + "|" + 
                 ToStringBase() + 
                 GetContractStartDateString() + "|" +
                 GetContractStopDateString() + "|" + 

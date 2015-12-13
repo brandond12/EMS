@@ -177,7 +177,7 @@ namespace AllEmployees
         */
         public override string ToString()
         {
-            string outputString = "|FT" + "|" +
+            string outputString = "FT" + "|" +
                 ToStringBase() +
                 GetDateOfHireString() + "|" +
                 GetDateOfTerminationString() + "|" +

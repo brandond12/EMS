@@ -146,7 +146,7 @@ namespace AllEmployees
         */
         public override string ToString()
         {
-            string outputString = "|SN" + "|" +
+            string outputString = "SN" + "|" +
             ToStringBase() +
             season + "|" +
             piecePay.ToString() + "|";
