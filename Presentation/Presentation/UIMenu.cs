@@ -143,7 +143,7 @@ namespace Presentation
                             // Add it to the list
                             company.AddEmployeeToList(emp);
                         }
-                        Console.Clear();
+                        //Console.Clear();
                         Console.WriteLine(employeeList.Count().ToString() + " record(s) were read.");
                         break;
                     case "2":
@@ -151,14 +151,13 @@ namespace Presentation
                         employeeList = company.GetEmployeeList();
 
                         int validEmployee = FileIO.WriteRecord(employeeList, @"..\..\..\..\DBase.txt");
-                        Console.Clear();
-                        Console.WriteLine(employeeList.Count().ToString() + " record(s) were saved.");
-                        Console.WriteLine(validEmployee.ToString() + " employee(s) were saved");
+                        //Console.Clear();
+                        Console.WriteLine(validEmployee.ToString() + " employee(s) were saved from " + employeeList.Count().ToString() + " record(s)" );
                         break;
                     case "9":
                         break;
                     default:
-                        Console.Clear();
+                        //Console.Clear();
                         Console.WriteLine("Invalid menu choice.");
                         break;
                 }
@@ -183,7 +182,7 @@ namespace Presentation
             string str;
             do
             {
-                Console.Clear();
+                //Console.Clear();
                 // Employee object
                 Employee employee = new Employee();
 
@@ -211,7 +210,7 @@ namespace Presentation
                         if (cancel == false)
                         {
                             company.AddEmployeeToList(employee);
-                            Console.Clear();
+                            //Console.Clear();
                             Console.WriteLine("Employee was successfully added");
                             Console.WriteLine("Press enter to continue");
                             input = Console.ReadLine();
@@ -228,7 +227,7 @@ namespace Presentation
 
                             if (employee.GetEmployeeType() != "")
                             {
-                                Console.Clear();
+                                //Console.Clear();
                                 company.ModifyEmployee(employee);
                                 Console.WriteLine("Employee was successfully modified.");
                                 Console.WriteLine("Press enter to continue");
@@ -236,7 +235,7 @@ namespace Presentation
                             }
                             else
                             {
-                                Console.Clear();
+                                //Console.Clear();
                                 Console.WriteLine("Employee was not successfully modified.");
                                 Console.WriteLine("Press enter to continue");
                                 input = Console.ReadLine();
@@ -255,7 +254,7 @@ namespace Presentation
 
                             if (employee.GetEmployeeType() != "")
                             {
-                                Console.Clear();
+                                //Console.Clear();
                                 company.RemoveEmployee(employee);
                                 Console.WriteLine("Employee was successfully removed.");
                                 Console.WriteLine("Press enter to continue");
@@ -263,7 +262,7 @@ namespace Presentation
                             }
                             else
                             {
-                                Console.Clear();
+                                //Console.Clear();
                                 Console.WriteLine("Employee was not successfully removed.");
                                 Console.WriteLine("Press enter to continue");
                                 input = Console.ReadLine();
@@ -273,7 +272,6 @@ namespace Presentation
                     case "9":
                         break;
                     default:
-                        Console.Clear();
                         Console.WriteLine("Invalid menu choice.");
                         break;
                 }
@@ -301,7 +299,7 @@ namespace Presentation
 
             while ((menuOption != "9") && (menuOption != "8"))
             {
-                Console.Clear();
+                //Console.Clear();
                 Console.WriteLine("Menu 4 : EMPLOYEE DETAILS MENU");
                 Console.WriteLine("---------------------------------");
 
@@ -338,27 +336,27 @@ namespace Presentation
                             employee = GetBaseEmployeeDetails();
                             break;
                         case "2":
-                            Console.Clear();
+                            //Console.Clear();
                             Console.WriteLine("Specify the date of hire YYYY-MM-DD");
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((FulltimeEmployee)employee).SetDateOfHire(Console.ReadLine()) == false)
                             {
-                                Console.Clear();
+                                ////Console.Clear();
                                 Console.WriteLine("The date was not valid");
                             }
                             break;
                         case "3":
-                            Console.Clear();
+                            //Console.Clear();
                             Console.WriteLine("Specify the date of termination YYYY-MM-DD");
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((FulltimeEmployee)employee).SetDateOfTermination(Console.ReadLine()) == false)
                             {
-                                Console.Clear();
+                                //Console.Clear();
                                 Console.WriteLine("The date was not valid");
                             }
                             break;
                         case "4":
-                            Console.Clear();
+                            //Console.Clear();
                             Console.WriteLine("Specify the salary");
                             string salaryInput = Console.ReadLine();
                             double salaryAmount;
@@ -366,7 +364,7 @@ namespace Presentation
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((FulltimeEmployee)employee).SetSalary(salaryAmount) == false)
                             {
-                                Console.Clear();
+                                //Console.Clear();
                                 Console.WriteLine("The salary must be greater than 0");
                             }
                             break;
@@ -392,32 +390,32 @@ namespace Presentation
                             employee = GetBaseEmployeeDetails();
                             break;
                         case "2":
-                            Console.Clear();
+                            //Console.Clear();
                             Console.WriteLine("Specify the date of hire YYYY-MM-DD");
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((ParttimeEmployee)employee).SetDateOfHire(Console.ReadLine()) == false)
                             {
-                                Console.Clear();
+                                //Console.Clear();
                                 Console.WriteLine("The date was not valid");
                             }
                             break;
                         case "3":
-                            Console.Clear();
+                            //Console.Clear();
                             Console.WriteLine("Specify the date of termination YYYY-MM-DD");
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((ParttimeEmployee)employee).SetDateOfTermination(Console.ReadLine()) == false)
                             {
-                                Console.Clear();
+                                //Console.Clear();
                                 Console.WriteLine("The date was not valid");
                             }
                             break;
                         case "4":
-                            Console.Clear();
+                            //Console.Clear();
                             Console.WriteLine("Specify the hourly rate");
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((ParttimeEmployee)employee).SetHourlyRate(double.Parse(Console.ReadLine())) == false)
                             {
-                                Console.Clear();
+                                //Console.Clear();
                                 Console.WriteLine("The hourly rate must be greater than 0");
                             }
                             break;
@@ -428,7 +426,7 @@ namespace Presentation
                 }
                 else if (employee.GetEmployeeType() == "CT")
                 {
-                    Console.Clear();
+                    //Console.Clear();
                     Console.WriteLine("1. Specify Base Employee Details.");
                     Console.WriteLine("2. Specify Contract Start Date.");
                     Console.WriteLine("3. Specify Contract Stop Date.");
@@ -444,27 +442,27 @@ namespace Presentation
                             employee = GetBaseEmployeeDetails();
                             break;
                         case "2":
-                            Console.Clear();
+                            //Console.Clear();
                             Console.WriteLine("Specify the contract's start date YYYY-MM-DD");
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((ContractEmployee)employee).SetContractStartDate(Console.ReadLine()) == false)
                             {
-                                Console.Clear();
-                                Console.WriteLine("The date was not valid");
+                                    // //Console.Clear();
+                                    Console.WriteLine("The date was not valid");
                             }
                             break;
                         case "3":
-                            Console.Clear();
+                            ////Console.Clear();
                             Console.WriteLine("Specify the contract's stop date YYYY-MM-DD");
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((ContractEmployee)employee).SetContractStopDate(Console.ReadLine()) == false)
                             {
-                                Console.Clear();
+                               // //Console.Clear();
                                 Console.WriteLine("The date was not valid");
                             }
                             break;
                         case "4":
-                            Console.Clear();
+                            //Console.Clear();
                             Console.WriteLine("Specify the fixed contract amount");
                             // Sets the employee details to the users input and checks if it is in the proper format
                             string contractInput = Console.ReadLine();
@@ -473,7 +471,7 @@ namespace Presentation
                             if (((ContractEmployee)employee).SetFixedContractAmount(contractAmount) == false)
                             // first line get users input instead of try parse, just have the users input, second in if statement use the users input
                             {
-                                Console.Clear();
+                                ////Console.Clear();
                                 Console.WriteLine("The fixed contract amount must be greater than 0");
                             }
                             break;
@@ -498,19 +496,19 @@ namespace Presentation
                             employee = GetBaseEmployeeDetails();
                             break;
                         case "2":
-                            Console.Clear();
+                            //Console.Clear();
                             Console.WriteLine("Specify which season the employee is working in. The seaons can be: Summer, Winter, Fall, or Spring.");
                             // Sets the employee details to the users input and checks if it is in the proper format
                             string userInput = Console.ReadLine();
                             userInput = userInput.Substring(0, 1).ToUpper() + userInput.Substring(1).ToLower();
                             if (((SeasonalEmployee)employee).SetSeason(userInput) == false)
                             {
-                                Console.Clear();
+                                //Console.Clear();
                                 Console.WriteLine("The season must only be Summer, Winter, Fall, or Spring.");
                             }
                             break;
                         case "3":
-                            Console.Clear();
+                            //Console.Clear();
                             Console.WriteLine("Specify the piece pay of the employee");
 
                             string pieceInput = Console.ReadLine();
@@ -519,7 +517,7 @@ namespace Presentation
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((SeasonalEmployee)employee).SetPiecePay(pieceAmount) == false)
                             {
-                                Console.Clear();
+                                //Console.Clear();
                                 Console.WriteLine("The piece pay must be greater than 0");
                             }
                             break;
@@ -527,6 +525,10 @@ namespace Presentation
                             cancel = true;
                             break;
                     }
+                }
+                else
+                {
+                    Console.WriteLine("The employee type was invalid. Valid employee types are: FT, PT, CT, SN");
                 }
             }
             return employee;
@@ -559,149 +561,235 @@ namespace Presentation
             ParttimeEmployee PTemp = new ParttimeEmployee();
             ContractEmployee CTemp = new ContractEmployee();
             SeasonalEmployee SNemp = new SeasonalEmployee();
-            Console.Clear();
+            //Console.Clear();
             if (menuOptionFlag == 1)
             {
-                Console.Clear();
+                //Console.Clear();
                 Console.WriteLine("Employee Creation");
                 Console.WriteLine("__________________");
                 Console.WriteLine("Press enter to skip entry.");
             }
             else if (menuOptionFlag == 2)
             {
-                Console.Clear();
+                //Console.Clear();
                 Console.WriteLine("Employee Modification");
                 Console.WriteLine("______________________");
                 Console.WriteLine("Press enter to skip entry.");
             }
             else if (menuOptionFlag == 3)
             {
-                Console.Clear();
+                //Console.Clear();
                 Console.WriteLine("Employee Deletion");
                 Console.WriteLine("__________________");
                 Console.WriteLine("Press enter to skip entry.");
             }
             // Prompt for details
-            do
-            {
+            bool error = false;
+            do{
+            
+                if(error)
+                {
+                    Console.WriteLine("Invalid data was put in. Acceptable employee types are 'FT'  'PT'  'CT'  or  'SN'");
+                }
+                error = true;
                 Console.WriteLine("Enter the employee type \n 'FT' for FullTime \n 'PT' for PartTime \n 'CT' for Contract \n 'SN' for Seasonal:");
                 empType = Console.ReadLine();
                 empType = empType.ToUpper();
 
             } while (!tempEmp.SetEmployeeType(empType));
+            error = false;
 
             if (tempEmp.GetEmployeeType() == "FT")
             {
 
                 do
                 {
+                    if (error)
+                    {
+                        Console.WriteLine("Invalid data was put in. There must only be letters, dashes, and/or apostrophes");
+                    }
+                    error = true;
                     Console.WriteLine("Enter the employee's last name:");
                     empLName = Console.ReadLine();
                 } while (!((Employee)FTemp).SetLastName(empLName));
-
+                error = false;
                 do
                 {
+                    if (error)
+                    {
+                        Console.WriteLine("Invalid data was put in. There must only be letters, dashes, and/or apostrophes");
+                    }
+                    error = true;
                     Console.WriteLine("Enter the employee's first name:");
                     empFName = Console.ReadLine();
                 } while (!((Employee)FTemp).SetFirstName(empFName));
-
+                error = false;
                 bool valid;
                 do
                 {
+                    if (error)
+                    {
+                        Console.WriteLine("Invalid data was put in. A SIN number should be in the format of ### ### ###");
+                    }
+                    error = true;
                     Console.WriteLine("Enter the employee's SIN number:");
                     empSIN = Console.ReadLine();
                     empSIN = empSIN.Replace(" ", "");
                     valid = int.TryParse(empSIN, out employeeSIN);
                 } while (!((Employee)FTemp).SetSocialInsuranceNumber(employeeSIN) || (!valid && empSIN != ""));
-
+                error = false;
                 do
                 {
+                    if (error)
+                    {
+                        Console.WriteLine("Invalid data was put in. The date must be in the format of  YYYY-MM-DD");
+                    }
+                    error = true;
                     Console.WriteLine("Enter the employee's date of birth in the format: YYYY-MM-DD");
                     empDOB = Console.ReadLine();
                 } while (!FTemp.SetDateOfBirth(empDOB));
+                error = false;
             }
             else if (tempEmp.GetEmployeeType() == "PT")
             {
 
                 do
                 {
+                    if (error)
+                    {
+                        Console.WriteLine("Invalid data was put in. There must only be letters, dashes, and/or apostrophes");
+                    }
+                    error = true;
                     Console.WriteLine("Enter the employee's last name:");
                     empLName = Console.ReadLine();
                 } while (!((Employee)PTemp).SetLastName(empLName));
-
+                error = false;
                 do
                 {
+                    if (error)
+                    {
+                        Console.WriteLine("Invalid data was put in. There must only be letters, dashes, and/or apostrophes");
+                    }
+                    error = true;
                     Console.WriteLine("Enter the employee's first name:");
                     empFName = Console.ReadLine();
                 } while (!((Employee)PTemp).SetFirstName(empFName));
-
+                error = false;
                 bool valid;
                 do
                 {
+                    if (error)
+                    {
+                        Console.WriteLine("Invalid data was put in. A SIN number should be in the format of ### ### ###");
+                    }
+                    error = true;
                     Console.WriteLine("Enter the employee's SIN number:");
                     empSIN = Console.ReadLine();
                     empSIN.Replace(" ", "");
                     valid = int.TryParse(empSIN, out employeeSIN);
                 } while (!((Employee)PTemp).SetSocialInsuranceNumber(employeeSIN) || (!valid && empSIN != ""));
-
+                error = false;
                 do
                 {
+                    if (error)
+                    {
+                        Console.WriteLine("Invalid data was put in. The date must be in the format of  YYYY-MM-DD");
+                    }
+                    error = true;
                     Console.WriteLine("Enter the employee's date of birth in the format: YYYY-MM-DD");
                     empDOB = Console.ReadLine();
                 } while (!PTemp.SetDateOfBirth(empDOB));
+                error = false;
             }
             else if (tempEmp.GetEmployeeType() == "CT")
             {
 
                 do
                 {
+                    if (error)
+                    {
+                        Console.WriteLine("Invalid data was put in. There must only be letters, dashes, and/or apostrophes");
+                    }
+                    error = true;
                     Console.WriteLine("Enter the employee's coorporation name:");
                     empLName = Console.ReadLine();
                 } while (!((Employee)CTemp).SetLastName(empLName));
-
+                error = false;
                 bool valid;
                 do
                 {
+                    if (error)
+                    {
+                        Console.WriteLine("Invalid data was put in. A SIN number should be in the format of ### ### ###");
+                    }
+                    error = true;
                     Console.WriteLine("Enter the employee's SIN number:");
                     empSIN = Console.ReadLine();
                     empSIN.Replace(" ", "");
                     valid = int.TryParse(empSIN, out employeeSIN);
                 } while (!((Employee)CTemp).SetSocialInsuranceNumber(employeeSIN) || (!valid && empSIN != ""));
-
+                error = false;
                 do
                 {
+                    if (error)
+                    {
+                        Console.WriteLine("Invalid data was put in. The date must be in the format of  YYYY-MM-DD");
+                    }
+                    error = true;
                     Console.WriteLine("Enter the employee's date of incorporation in the format: YYYY-MM-DD");
                     empDOB = Console.ReadLine();
                 } while (!CTemp.SetDateOfBirth(empDOB));
+                error = false;
             }
             else if (tempEmp.GetEmployeeType() == "SN")
             {
                 do
                 {
+                    if (error)
+                    {
+                        Console.WriteLine("Invalid data was put in. There must only be letters, dashes, and/or apostrophes");
+                    }
+                    error = true;
                     Console.WriteLine("Enter the employee's last name:");
                     empLName = Console.ReadLine();
                 } while (!((Employee)SNemp).SetLastName(empLName));
-
+                error = false;
                 do
                 {
+                    if (error)
+                    {
+                        Console.WriteLine("Invalid data was put in. There must only be letters, dashes, and/or apostrophes");
+                    }
+                    error = true;
                     Console.WriteLine("Enter the employee's first name:");
                     empFName = Console.ReadLine();
                 } while (!((Employee)SNemp).SetFirstName(empFName));
-
+                error = false;
                 bool valid;
                 do
                 {
+                    if (error)
+                    {
+                        Console.WriteLine("Invalid data was put in. A SIN number should be in the format of ### ### ###");
+                    }
+                    error = true;
                     Console.WriteLine("Enter the employee's SIN number:");
                     empSIN = Console.ReadLine();
                     empSIN.Replace(" ", "");
                     valid = int.TryParse(empSIN, out employeeSIN);
                 } while (!((Employee)SNemp).SetSocialInsuranceNumber(employeeSIN) || (!valid && empSIN != ""));
-
+                error = false;
                 do
                 {
+                    if (error)
+                    {
+                        Console.WriteLine("Invalid data was put in. The date must be in the format of  YYYY-MM-DD");
+                    }
+                    error = true;
                     Console.WriteLine("Enter the employee's date of birth in the format: YYYY-MM-DD");
                     empDOB = Console.ReadLine();
                 } while (!SNemp.SetDateOfBirth(empDOB));
+                error = false;
             }
 
             if (tempEmp.GetEmployeeType() == "FT")
