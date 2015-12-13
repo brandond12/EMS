@@ -494,7 +494,9 @@ namespace Presentation
                             Console.Clear();
                             Console.WriteLine("Specify which season the employee is working in. The seaons can be: Summer, Winter, Fall, or Spring.");
                             // Sets the employee details to the users input and checks if it is in the proper format
-                            if (((SeasonalEmployee)employee).SetSeason(Console.ReadLine()) == false)
+                            string userInput = Console.ReadLine();
+                            userInput = userInput.Substring(0,1).ToUpper() + userInput.Substring(1).ToLower();
+                            if (((SeasonalEmployee)employee).SetSeason(userInput) == false)
                             {
                                 Console.Clear();
                                 Console.WriteLine("The season must only be Summer, Winter, Fall, or Spring.");
@@ -598,7 +600,7 @@ namespace Presentation
                 {
                     Console.WriteLine("Enter the employee's SIN number:");
                     empSIN = Console.ReadLine();
-                    empSIN.Replace(" ", "");
+                    empSIN = empSIN.Replace(" ", "");
                     valid = int.TryParse(empSIN, out employeeSIN);
                 } while (!((Employee)FTemp).SetSocialInsuranceNumber(employeeSIN) || !valid);
 
