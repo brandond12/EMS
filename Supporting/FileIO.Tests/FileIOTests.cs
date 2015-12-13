@@ -34,13 +34,13 @@ namespace FileIOTests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.70|"
+        * "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.70|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.WriteRecord will write "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The expected result is that the FileIO.WriteRecord will write "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.WriteRecord will wrote "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The actual result is that the FileIO.WriteRecord will wrote "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
@@ -51,7 +51,7 @@ namespace FileIOTests
             DateTime DOB = new DateTime(1993, 04, 24);
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
-            AllEmployees.ContractEmployee CTEmp = new AllEmployees.ContractEmployee("", "Brandon", 933456789, DOB, DOH, DOT, 18.78);
+            AllEmployees.ContractEmployee CTEmp = new AllEmployees.ContractEmployee("", "Brandon", 933456793, DOB, DOH, DOT, 18.78);
             List<AllEmployees.Employee> empList = new List<AllEmployees.Employee>();
             empList.Add(CTEmp);
             FileIO.WriteRecord(empList, path);//if true the data was correct and written to the file
@@ -74,13 +74,13 @@ namespace FileIOTests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|"
+        * "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.70|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.WriteRecord will write "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The expected result is that the FileIO.WriteRecord will write "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.WriteRecord will wrote "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The actual result is that the FileIO.WriteRecord will wrote "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
@@ -91,7 +91,7 @@ namespace FileIOTests
             DateTime DOB = new DateTime(1993, 04, 24);
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
-            AllEmployees.FulltimeEmployee FTEmp = new AllEmployees.FulltimeEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
+            AllEmployees.FulltimeEmployee FTEmp = new AllEmployees.FulltimeEmployee("Brandon", "Davies", 933456793, DOB, DOH, DOT, 18.78);
 
             List<AllEmployees.Employee> empList = new List<AllEmployees.Employee>();
             empList.Add(FTEmp);
@@ -115,13 +115,13 @@ namespace FileIOTests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|"
+        * "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.70|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.WriteRecord will write "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The expected result is that the FileIO.WriteRecord will write "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.WriteRecord will wrote "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The actual result is that the FileIO.WriteRecord will wrote "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
@@ -132,7 +132,7 @@ namespace FileIOTests
             DateTime DOB = new DateTime(1993, 04, 24);
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
-            AllEmployees.ParttimeEmployee PTEmp = new AllEmployees.ParttimeEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
+            AllEmployees.ParttimeEmployee PTEmp = new AllEmployees.ParttimeEmployee("Brandon", "Davies", 933456793, DOB, DOH, DOT, 18.78);
 
             List<AllEmployees.Employee> empList = new List<AllEmployees.Employee>();
             empList.Add(PTEmp);
@@ -195,13 +195,13 @@ namespace FileIOTests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.70|"
+        * "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.70|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.WriteRecord will write "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The expected result is that the FileIO.WriteRecord will write "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.WriteRecord will wrote "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The actual result is that the FileIO.WriteRecord will wrote "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
@@ -211,7 +211,7 @@ namespace FileIOTests
             DateTime DOB = new DateTime(1993, 04, 24);
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
-            AllEmployees.ContractEmployee CTEmp = new AllEmployees.ContractEmployee("", "Brandon", 933456789, DOB, DOH, DOT, 18.78);
+            AllEmployees.ContractEmployee CTEmp = new AllEmployees.ContractEmployee("", "Brandon", 933456793, DOB, DOH, DOT, 18.78);
 
             List<AllEmployees.Employee> empList = new List<AllEmployees.Employee>();
             empList.Add(CTEmp);
@@ -235,13 +235,13 @@ namespace FileIOTests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|"
+        * "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.70|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.WriteRecord will write "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The expected result is that the FileIO.WriteRecord will write "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.WriteRecord will wrote "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The actual result is that the FileIO.WriteRecord will wrote "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
@@ -251,7 +251,7 @@ namespace FileIOTests
             DateTime DOB = new DateTime(1993, 04, 24);
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
-            AllEmployees.FulltimeEmployee FTEmp = new AllEmployees.FulltimeEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
+            AllEmployees.FulltimeEmployee FTEmp = new AllEmployees.FulltimeEmployee("Brandon", "Davies", 933456793, DOB, DOH, DOT, 18.78);
 
             List<AllEmployees.Employee> empList = new List<AllEmployees.Employee>();
             empList.Add(FTEmp);
@@ -275,13 +275,13 @@ namespace FileIOTests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|"
+        * "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.70|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.WriteRecord will write "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The expected result is that the FileIO.WriteRecord will write "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.WriteRecord will wrote "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
+        * The actual result is that the FileIO.WriteRecord will wrote "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.70|" to the file.
         */
         [TestMethod]
         [TestCategory("FileIO WriteRecord")]
@@ -291,7 +291,7 @@ namespace FileIOTests
             DateTime DOB = new DateTime(1993, 04, 24);
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
-            AllEmployees.ParttimeEmployee PTEmp = new AllEmployees.ParttimeEmployee("Brandon", "Davies", 933456789, DOB, DOH, DOT, 18.78);
+            AllEmployees.ParttimeEmployee PTEmp = new AllEmployees.ParttimeEmployee("Brandon", "Davies", 933456793, DOB, DOH, DOT, 18.78);
 
             List<AllEmployees.Employee> empList = new List<AllEmployees.Employee>();
             empList.Add(PTEmp);
@@ -358,16 +358,16 @@ namespace FileIOTests
         * The type of test is normal/functional.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
-        * "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
-        * "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         * "SN|Brandon|Davies|123456789|1993-04-24|Summer|10|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "SN|Brandon|Davies|123456789|1993-04-24|Summer|10|".
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|", "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|", "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|", "SN|Brandon|Davies|123456789|1993-04-24|Summer|10|".
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|", "SN|Brandon|Davies|123456789|1993-04-24|Summer|10|".
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|", "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|", "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|", "SN|Brandon|Davies|123456789|1993-04-24|Summer|10|".
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -375,7 +375,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" + "\r\n" + "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" + "\r\n" + "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" + "\r\n" + "SN|Brandon|Davies|123456789|1993-04-24|Summer|10|";
+            string fileData = "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" + "\r\n" + "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" + "\r\n" + "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" + "\r\n" + "SN|Brandon|Davies|123456789|1993-04-24|Summer|10|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -388,9 +388,9 @@ namespace FileIOTests
             DateTime DOB = new DateTime(1993, 04, 24);
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(2004, 03, 02);
-            AllEmployees.ContractEmployee CTEmp = new AllEmployees.ContractEmployee("", "Brandon", 933456789, DOB, DOH, DOT, 18.78);
-            AllEmployees.FulltimeEmployee FTEmp = new AllEmployees.FulltimeEmployee("Davies", "Brandon", 933456789, DOB, DOH, DOT, 18.78);
-            AllEmployees.ParttimeEmployee PTEmp = new AllEmployees.ParttimeEmployee("Davies", "Brandon", 933456789, DOB, DOH, DOT, 18.78);
+            AllEmployees.ContractEmployee CTEmp = new AllEmployees.ContractEmployee("", "Brandon", 933456793, DOB, DOH, DOT, 18.78);
+            AllEmployees.FulltimeEmployee FTEmp = new AllEmployees.FulltimeEmployee("Davies", "Brandon", 933456793, DOB, DOH, DOT, 18.78);
+            AllEmployees.ParttimeEmployee PTEmp = new AllEmployees.ParttimeEmployee("Davies", "Brandon", 933456793, DOB, DOH, DOT, 18.78);
             AllEmployees.SeasonalEmployee SNEmp = new AllEmployees.SeasonalEmployee("Davies", "Brandon", 123456789, DOB, "Summer", 10);
 
             sampleRecords.Add(CTEmp);
@@ -418,13 +418,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "CT|123456!@#$%^|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|123456!@#$%^|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|123456!@#$%^|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -432,7 +432,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "CT|123456!@#$%^|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -458,13 +458,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "FT|123456!@#$%^|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|123456!@#$%^|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|123456!@#$%^|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -472,7 +472,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "FT|123456!@#$%^|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -498,13 +498,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "PT|123456!@#$%^|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|123456!@#$%^|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|123456!@#$%^|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -512,7 +512,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|123456!@#$%^|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "PT|123456!@#$%^|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -578,13 +578,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "CT|Brandon|123456!@#$%^|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon|123456!@#$%^|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon|123456!@#$%^|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -592,7 +592,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "CT|Brandon|123456!@#$%^|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -618,13 +618,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "FT|Brandon|123456!@#$%^|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|123456!@#$%^|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|123456!@#$%^|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -632,7 +632,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "FT|Brandon|123456!@#$%^|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -658,13 +658,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "PT|Brandon|123456!@#$%^|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|123456!@#$%^|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|123456!@#$%^|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -672,7 +672,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Brandon|123456!@#$%^|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "PT|Brandon|123456!@#$%^|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -898,13 +898,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon||933456789|3993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "CT|Brandon||933456793|3993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456793|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456793|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -912,7 +912,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon||933456789|3993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "CT|Brandon||933456793|3993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -938,13 +938,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "FT|Brandon|Davies|933456793|3993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456793|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456793|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -952,7 +952,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "FT|Brandon|Davies|933456793|3993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -978,13 +978,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "PT|Brandon|Davies|933456793|3993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456793|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456793|3993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -992,7 +992,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Brandon|Davies|933456789|3993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "PT|Brandon|Davies|933456793|3993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -1058,13 +1058,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon||933456789|1993-04-24|1000-12-12|2004-03-02|18.78|"
+        * "CT|Brandon||933456793|1993-04-24|1000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456793|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456793|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1072,7 +1072,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon||933456789|1993-04-24|1000-12-12|2004-03-02|18.78|";
+            string fileData = "CT|Brandon||933456793|1993-04-24|1000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -1098,13 +1098,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|"
+        * "FT|Brandon|Davies|933456793|1993-04-24|1000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456793|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456793|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1112,7 +1112,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|";
+            string fileData = "FT|Brandon|Davies|933456793|1993-04-24|1000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -1138,13 +1138,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|"
+        * "PT|Brandon|Davies|933456793|1993-04-24|1000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456793|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456793|1993-04-24|1000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1152,7 +1152,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Brandon|Davies|933456789|1993-04-24|1000-12-12|2004-03-02|18.78|";
+            string fileData = "PT|Brandon|Davies|933456793|1993-04-24|1000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -1218,13 +1218,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon||933456789|1993-04-24|2000-12-12|1004-03-02|18.78|"
+        * "CT|Brandon||933456793|1993-04-24|2000-12-12|1004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456793|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456793|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1232,7 +1232,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon||933456789|1993-04-24|2000-12-12|1004-03-02|18.78|";
+            string fileData = "CT|Brandon||933456793|1993-04-24|2000-12-12|1004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -1258,13 +1258,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|"
+        * "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|1004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1272,7 +1272,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|";
+            string fileData = "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|1004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -1298,13 +1298,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|"
+        * "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|1004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|1004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1312,7 +1312,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|1004-03-02|18.78|";
+            string fileData = "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|1004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -1378,13 +1378,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|"
+        * "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|-18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1392,7 +1392,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|";
+            string fileData = "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|-18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -1418,13 +1418,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|"
+        * "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|-18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1432,7 +1432,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|";
+            string fileData = "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|-18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -1458,13 +1458,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|"
+        * "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|-18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|-18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1472,7 +1472,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|-18.78|";
+            string fileData = "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|-18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -1498,13 +1498,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "CT|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1512,7 +1512,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "CT|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -1538,13 +1538,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "FT|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1552,7 +1552,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "FT|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -1578,13 +1578,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "PT|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1592,7 +1592,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "PT|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -1658,13 +1658,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "CT|Brandon|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1672,7 +1672,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "CT|Brandon|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -1698,13 +1698,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "FT|Brandon|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1712,7 +1712,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "FT|Brandon|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -1738,13 +1738,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "PT|Brandon|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1752,7 +1752,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Brandon|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "PT|Brandon|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -1978,13 +1978,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon||933456789|2000-12-12|2004-03-02|18.78|"
+        * "CT|Brandon||933456793|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456793|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456793|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -1992,7 +1992,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon||933456789|2000-12-12|2004-03-02|18.78|";
+            string fileData = "CT|Brandon||933456793|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2018,13 +2018,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|"
+        * "FT|Brandon|Davies|933456793|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456793|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456793|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2032,7 +2032,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|";
+            string fileData = "FT|Brandon|Davies|933456793|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2058,13 +2058,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|"
+        * "PT|Brandon|Davies|933456793|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456793|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456793|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2072,7 +2072,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Brandon|Davies|933456789|2000-12-12|2004-03-02|18.78|";
+            string fileData = "PT|Brandon|Davies|933456793|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2138,13 +2138,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon||933456789|1993-04-24|2004-03-02|18.78|"
+        * "CT|Brandon||933456793|1993-04-24|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456793|1993-04-24|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456793|1993-04-24|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2152,7 +2152,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon||933456789|1993-04-24|2004-03-02|18.78|";
+            string fileData = "CT|Brandon||933456793|1993-04-24|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2178,13 +2178,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|"
+        * "FT|Brandon|Davies|933456793|1993-04-24|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456793|1993-04-24|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456793|1993-04-24|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2192,7 +2192,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|";
+            string fileData = "FT|Brandon|Davies|933456793|1993-04-24|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2218,13 +2218,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|"
+        * "PT|Brandon|Davies|933456793|1993-04-24|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456793|1993-04-24|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456793|1993-04-24|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2232,7 +2232,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Brandon|Davies|933456789|1993-04-24|2004-03-02|18.78|";
+            string fileData = "PT|Brandon|Davies|933456793|1993-04-24|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2298,13 +2298,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon||933456789|1993-04-24|2000-12-12|18.78|"
+        * "CT|Brandon||933456793|1993-04-24|2000-12-12|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456793|1993-04-24|2000-12-12|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456793|1993-04-24|2000-12-12|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2312,7 +2312,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon||933456789|1993-04-24|2000-12-12|18.78|";
+            string fileData = "CT|Brandon||933456793|1993-04-24|2000-12-12|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2338,13 +2338,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|"
+        * "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2352,7 +2352,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|";
+            string fileData = "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2378,13 +2378,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|"
+        * "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2392,7 +2392,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|18.78|";
+            string fileData = "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2458,13 +2458,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|"
+        * "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2472,7 +2472,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|";
+            string fileData = "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2498,13 +2498,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|"
+        * "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2512,7 +2512,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|";
+            string fileData = "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2538,13 +2538,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|"
+        * "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2552,7 +2552,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|";
+            string fileData = "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2578,13 +2578,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "CT||Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT||Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT||Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2592,7 +2592,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "CT||Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2618,13 +2618,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "FT||Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT||Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT||Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2632,7 +2632,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "FT||Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2658,13 +2658,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "PT||Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT||Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT||Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2672,7 +2672,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT||Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "PT||Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2738,13 +2738,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2752,7 +2752,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2778,13 +2778,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "FT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2792,7 +2792,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "FT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2818,13 +2818,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|"
+        * "PT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -2832,7 +2832,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "PT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2912,7 +2912,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon|||1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "CT|Brandon|||1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2952,7 +2952,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "FT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -2992,7 +2992,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "PT|Brandon|Davies||1993-04-24|2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -3058,13 +3058,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon||933456789||2000-12-12|2004-03-02|18.78|"
+        * "CT|Brandon||933456793||2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456793||2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456793||2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3072,7 +3072,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon||933456789||2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "CT|Brandon||933456793||2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -3098,13 +3098,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|"
+        * "FT|Brandon|Davies|933456793||2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456793||2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456793||2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3112,7 +3112,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "FT|Brandon|Davies|933456793||2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -3138,13 +3138,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|"
+        * "PT|Brandon|Davies|933456793||2000-12-12|2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456793||2000-12-12|2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456793||2000-12-12|2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3152,7 +3152,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Brandon|Davies|933456789||2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "PT|Brandon|Davies|933456793||2000-12-12|2004-03-02|18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -3218,13 +3218,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon||933456789|1993-04-24||2004-03-02|18.78|"
+        * "CT|Brandon||933456793|1993-04-24||2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456793|1993-04-24||2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456793|1993-04-24||2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3232,7 +3232,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon||933456789|1993-04-24||2004-03-02|18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "CT|Brandon||933456793|1993-04-24||2004-03-02|18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -3258,13 +3258,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|"
+        * "FT|Brandon|Davies|933456793|1993-04-24||2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456793|1993-04-24||2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456793|1993-04-24||2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3272,7 +3272,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "FT|Brandon|Davies|933456793|1993-04-24||2004-03-02|18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -3298,13 +3298,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|"
+        * "PT|Brandon|Davies|933456793|1993-04-24||2004-03-02|18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456793|1993-04-24||2004-03-02|18.78|" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456793|1993-04-24||2004-03-02|18.78|" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3312,7 +3312,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Brandon|Davies|933456789|1993-04-24||2004-03-02|18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "PT|Brandon|Davies|933456793|1993-04-24||2004-03-02|18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -3378,13 +3378,13 @@ namespace FileIOTests
         * The type of test is Normal/Functional.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon||933456789|1993-04-24|2000-12-12||18.78|"
+        * "CT|Brandon||933456793|1993-04-24|2000-12-12||18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456793|1993-04-24|2000-12-12||18.78|" and add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456793|1993-04-24|2000-12-12||18.78|" and add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3392,7 +3392,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon||933456789|1993-04-24|2000-12-12||18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "CT|Brandon||933456793|1993-04-24|2000-12-12||18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -3404,7 +3404,7 @@ namespace FileIOTests
             DateTime DOB = new DateTime(1993, 04, 24);
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(0001, 01, 01);
-            AllEmployees.ContractEmployee CTEmp = new AllEmployees.ContractEmployee("", "Brandon", 933456789, DOB, DOH, DOT, 18.78);
+            AllEmployees.ContractEmployee CTEmp = new AllEmployees.ContractEmployee("", "Brandon", 933456793, DOB, DOH, DOT, 18.78);
 
             Assert.IsTrue(((AllEmployees.ContractEmployee)EmpRecords[0]).ToString() == CTEmp.ToString());
         }
@@ -3423,13 +3423,13 @@ namespace FileIOTests
         * The type of test is Normal/Functional.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|"
+        * "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12||18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12||18.78|" and add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12||18.78|" and add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3437,7 +3437,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12||18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -3449,7 +3449,7 @@ namespace FileIOTests
             DateTime DOB = new DateTime(1993, 04, 24);
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(0001, 01, 01);
-            AllEmployees.FulltimeEmployee CTEmp = new AllEmployees.FulltimeEmployee("Davies", "Brandon", 933456789, DOB, DOH, DOT, 18.78);
+            AllEmployees.FulltimeEmployee CTEmp = new AllEmployees.FulltimeEmployee("Davies", "Brandon", 933456793, DOB, DOH, DOT, 18.78);
 
             Assert.IsTrue(((AllEmployees.FulltimeEmployee)EmpRecords[0]).ToString() == CTEmp.ToString());
         }
@@ -3468,13 +3468,13 @@ namespace FileIOTests
         * The type of test is Normal/Functional.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|"
+        * "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12||18.78|"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12||18.78|" and add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|" and add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12||18.78|" and add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3482,7 +3482,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12||18.78|";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12||18.78|";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -3494,7 +3494,7 @@ namespace FileIOTests
             DateTime DOB = new DateTime(1993, 04, 24);
             DateTime DOH = new DateTime(2000, 12, 12);
             DateTime DOT = new DateTime(0001, 01, 01);
-            AllEmployees.ParttimeEmployee CTEmp = new AllEmployees.ParttimeEmployee("Davies", "Brandon", 933456789, DOB, DOH, DOT, 18.78);
+            AllEmployees.ParttimeEmployee CTEmp = new AllEmployees.ParttimeEmployee("Davies", "Brandon", 933456793, DOB, DOH, DOT, 18.78);
 
             Assert.IsTrue(((AllEmployees.ParttimeEmployee)EmpRecords[0]).ToString() == CTEmp.ToString());
         }
@@ -3553,13 +3553,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02||"
+        * "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02||"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3567,7 +3567,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02||";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02||";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -3593,13 +3593,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||"
+        * "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02||"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3607,7 +3607,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "FT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "FT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02||";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -3633,13 +3633,13 @@ namespace FileIOTests
         * The type of test is Fault/Exception.
         * 
         * \<b>Sample Data Sets</b>
-        * "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||"
+        * "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02||"
         *    
         * \<b>Expected Result</b>
-        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        * The expected result is that the FileIO.ReadAllRecords will read "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
         * 
         * \<b>Actual Result</b>
-        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
+        * The actual result is that the FileIO.ReadAllRecords read "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02||" but not add it to the list.
         */
         [TestMethod]
         [TestCategory("FileIO ReadAllRecords")]
@@ -3647,7 +3647,7 @@ namespace FileIOTests
         {
             string path = @"DBase\DBase.txt";
             File.Delete(path);//makes sure file does not exist beforehand
-            string fileData = "PT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02||";//"CT|Brandon|Davies|933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+            string fileData = "PT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02||";//"CT|Brandon|Davies|933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
             StreamWriter sw = File.AppendText(path);//write data (Details Method)
             sw.WriteLine(fileData);//will append if file exists or create new if it does not already exist
             sw.Close();
@@ -3669,7 +3669,7 @@ namespace FileIOTests
         //[TestCategory("FileIO ParsRecord")]
         //public void parseGoodData()
         //{
-        //    string fileData = "CT|Brandon||933456789|1993-04-24|2000-12-12|2004-03-02|18.78|";
+        //    string fileData = "CT|Brandon||933456793|1993-04-24|2000-12-12|2004-03-02|18.78|";
 
         //    FileIOParse = new FileIO();
         //    List<AllEmployees.Employee> EmpRecords = new List<AllEmployees.Employee>();
