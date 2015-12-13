@@ -609,7 +609,7 @@ namespace TheCompany
                     // If an error occurs then inform the user and set the employee type back to its original type
                     else
                     {
-                        String error = UIMenu.GetInfoFromUser("A valid part-time employee could not be created\nso the employee will remain unchanged.\nHit enter to continue.");
+                        String error = UIMenu.GetInfoFromUser("A valid full-time employee could not be created\nso the employee will remain unchanged.\nHit enter to continue.");
                         employee.SetEmployeeType(oldEmployeeType);
                     }
                 }
@@ -738,6 +738,7 @@ namespace TheCompany
             * chooses to modify or not modify the propery */
             while (wasQuestionAnswered == false)
             {
+                Console.Clear();
                 // Display the employee property and a question, then get a response from the user
                 response = UIMenu.GetInfoFromUser("First Name: " + employee.GetFirstName()
                 + "\nWould you like to modify the first name?\nType 'Y' for yes, and 'N' for no.");
@@ -802,6 +803,7 @@ namespace TheCompany
             * chooses to modify or not modify the propery */
             while (wasQuestionAnswered == false)
             {
+                Console.Clear();
                 // Display the employee property and a question, then get a response from the user
                 response = UIMenu.GetInfoFromUser("Last Name: " + employee.GetLastName()
                 + "\nWould you like to modify the last name?\nType 'Y' for yes, and 'N' for no.");
@@ -869,6 +871,7 @@ namespace TheCompany
                 * chooses to modify or not modify the propery */
                 while (wasQuestionAnswered == false)
                 {
+                    Console.Clear();
                     // Display the employee property and a question, then get a response from the user
                     response = UIMenu.GetInfoFromUser("Social Insurance Number: " + employee.GetSocialInsuranceNumber().ToString()
                     + "\nWould you like to modify the social insurance number?\nType 'Y' for yes, and 'N' for no.");
@@ -948,6 +951,7 @@ namespace TheCompany
                 * chooses to modify or not modify the propery */
                 while (wasQuestionAnswered == false)
                 {
+                    Console.Clear();
                     // Display the employee property and a question, then get a response from the user
                     response = UIMenu.GetInfoFromUser("Date Of Birth: " + employee.GetDateOfBirthString()
                     + "\nWould you like to modify the date of birth?\nType 'Y' for yes, and 'N' for no.");
@@ -1043,6 +1047,7 @@ namespace TheCompany
             * chooses to modify or not modify the propery */
             while (wasQuestionAnswered == false)
             {
+                Console.Clear();
                 // Display the employee property and a question, then get a response from the user
                 response = UIMenu.GetInfoFromUser("Employee Type: " + employee.GetEmployeeType()
                 + "\nWould you like to modify the employee type?\nType 'Y' for yes, and 'N' for no.");
@@ -1114,6 +1119,7 @@ namespace TheCompany
                 * chooses to modify or not modify the propery */
                 while (wasQuestionAnswered == false)
                 {
+                    Console.Clear();
                     // Display the employee property and a question, then get a response from the user
                     if (employee.GetEmployeeType() == "FT")
                     {
@@ -1218,6 +1224,7 @@ namespace TheCompany
                 * chooses to modify or not modify the propery */
                 while (wasQuestionAnswered == false)
                 {
+                    Console.Clear();
                     // Display the employee property and a question, then get a response from the user
                     if (employee.GetEmployeeType() == "FT")
                     {
@@ -1318,6 +1325,7 @@ namespace TheCompany
                 * chooses to modify or not modify the propery */
                 while (wasQuestionAnswered == false)
                 {
+                    Console.Clear();
                     // Display the employee property and a question, then get a response from the user
                     response = UIMenu.GetInfoFromUser("Salary: " + ((AllEmployees.FulltimeEmployee)employee).GetSalary().ToString()
                     + "\nWould you like to modify the salary?\nType 'Y' for yes, and 'N' for no.");
@@ -1393,6 +1401,7 @@ namespace TheCompany
                 * chooses to modify or not modify the propery */
                 while (wasQuestionAnswered == false)
                 {
+                    Console.Clear();
                     // Display the employee property and a question, then get a response from the user
                     response = UIMenu.GetInfoFromUser("Hourly Rate: " + ((AllEmployees.ParttimeEmployee)employee).GetHourlyRate().ToString()
                     + "\nWould you like to modify the hourly rate?\nType 'Y' for yes, and 'N' for no.");
@@ -1472,6 +1481,7 @@ namespace TheCompany
                 * chooses to modify or not modify the propery */
                 while (wasQuestionAnswered == false)
                 {
+                    Console.Clear();
                     // Display the employee property and a question, then get a response from the user
                     response = UIMenu.GetInfoFromUser("Contract Start Date: " + ((AllEmployees.ContractEmployee)employee).GetContractStartDateString()
                     + "\nWould you like to modify the contract start date?\nType 'Y' for yes, and 'N' for no.");
@@ -1557,6 +1567,7 @@ namespace TheCompany
                 * chooses to modify or not modify the propery */
                 while (wasQuestionAnswered == false)
                 {
+                    Console.Clear();
                     // Display the employee property and a question, then get a response from the user
                     response = UIMenu.GetInfoFromUser("Contract Stop Date: " + ((AllEmployees.ContractEmployee)employee).GetContractStopDateString()
                     + "\nWould you like to modify the contract stop date?\nType 'Y' for yes, and 'N' for no.");
@@ -1638,6 +1649,7 @@ namespace TheCompany
                 * chooses to modify or not modify the propery */
                 while (wasQuestionAnswered == false)
                 {
+                    Console.Clear();
                     // Display the employee property and a question, then get a response from the user
                     response = UIMenu.GetInfoFromUser("Fixed Contract Amount: " + ((AllEmployees.ContractEmployee)employee).GetFixedContractAmount().ToString()
                     + "\nWould you like to modify the fixed contract amount?\nType 'Y' for yes, and 'N' for no.");
@@ -1710,6 +1722,7 @@ namespace TheCompany
             * chooses to modify or not modify the propery */
             while (wasQuestionAnswered == false)
             {
+                Console.Clear();
                 // Display the employee property and a question, then get a response from the user
                 response = UIMenu.GetInfoFromUser("Season: " + ((AllEmployees.SeasonalEmployee)employee).GetSeason()
                 + "\nWould you like to modify the season?\nType 'Y' for yes, and 'N' for no.");
@@ -1777,6 +1790,7 @@ namespace TheCompany
                 * chooses to modify or not modify the propery */
                 while (wasQuestionAnswered == false)
                 {
+                    Console.Clear();
                     // Display the employee property and a question, then get a response from the user
                     response = UIMenu.GetInfoFromUser("Piece Pay: " + ((AllEmployees.SeasonalEmployee)employee).GetPiecePay().ToString()
                     + "\nWould you like to modify the piece pay?\nType 'Y' for yes, and 'N' for no.");
@@ -2101,6 +2115,7 @@ namespace TheCompany
             * chooses to select or not select the employee */
             while (wasQuestionAnswered == false)
             {
+                Console.Clear();  
                 // Display the employee details and a question, then get a response from the user
                 response = DisplayEmployeeDetails(employee);
 
