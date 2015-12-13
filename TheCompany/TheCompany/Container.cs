@@ -1832,6 +1832,9 @@ namespace TheCompany
         public AllEmployees.Employee SelectEmployee(Employee employeeParameters)
         {
             AllEmployees.Employee selectedEmployee = new AllEmployees.Employee();   // A variable to save the selected employee
+            bool wasThereAMatch = false;
+            String response = "";
+
             // Go through all employees in the list
             foreach (AllEmployees.Employee employee in listOfEmployees)
             {
@@ -2029,6 +2032,7 @@ namespace TheCompany
                 }
                 if ((EmployeeMatch == true) || (isBaseDetailsAMatch == true))
                 {
+                    wasThereAMatch = true;
                     selectedEmployee = IsThisTheDesiredEmployee(employee);
                     // Check if the returned employee is the employee the user selected
                     if ((selectedEmployee.GetFirstName() != "") && (selectedEmployee.GetLastName() != ""))
@@ -2039,6 +2043,13 @@ namespace TheCompany
                     }
                 }
             }
+
+            // If a match wasn't found for the given data, then inform the user
+            if (wasThereAMatch == false)
+            {
+                response = UIMenu.GetInfoFromUser("There are no employees that match the given data.\nHit enter to continue.");
+            }
+
             return selectedEmployee;    // Return the selected employee
         }
 
