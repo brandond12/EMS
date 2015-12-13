@@ -26,6 +26,7 @@ namespace Presentation
     {
         Container company;
         static int menuOptionFlag = 0;
+        static bool cancel = false;
         /**
         * \brief The UIMenu constructor sets up a Container object to be used throughout the page.
         * 
@@ -214,19 +215,24 @@ namespace Presentation
                         // Go to menu 4
                         menuOptionFlag = 2;
                         employee = ShowEmployeeDetailsMenu();
-                        employee = company.SelectEmployee(employee);
 
-                        if (employee.GetEmployeeType() != "")
+                        if(cancel == false)
                         {
-                            Console.Clear();
-                            company.ModifyEmployee(employee);
-                            Console.WriteLine("Employee was successfully modified.");
+                            employee = company.SelectEmployee(employee);
+
+                            if (employee.GetEmployeeType() != "")
+                            {
+                                Console.Clear();
+                                company.ModifyEmployee(employee);
+                                Console.WriteLine("Employee was successfully modified.");
+                            }
+                            else
+                            {
+                                Console.Clear();
+                                Console.WriteLine("Employee was not successfully modified.");
+                            }
                         }
-                        else
-                        {
-                            Console.Clear();
-                            Console.WriteLine("Employee was not successfully modified.");
-                        }
+                        cancel = false;
                         break;
                     case "4":
                         menuOptionFlag = 3;
@@ -276,7 +282,7 @@ namespace Presentation
             Employee employee = new Employee();
             string menuOption = "";
 
-            while (menuOption != "9")
+            while ((menuOption != "9") && (menuOption != "8"))
             {
                 Console.Clear();
                 Console.WriteLine("Menu 4 : EMPLOYEE DETAILS MENU");
@@ -285,6 +291,7 @@ namespace Presentation
                 if (employee.GetEmployeeType() == "")
                 {
                     Console.WriteLine("1. Specify Base Employee Details.");
+                    Console.WriteLine("8. Go Back");
                     Console.WriteLine("9. Return to Employee Management Menu.");
 
                     menuOption = Console.ReadLine();
@@ -292,6 +299,11 @@ namespace Presentation
                     {
                         case "1":
                             employee = GetBaseEmployeeDetails();
+                            break;
+                        case "8":
+                            cancel = true;
+                            break;
+                        case "9":
                             break;
                     }
                 }
@@ -301,7 +313,8 @@ namespace Presentation
                     Console.WriteLine("2. Specify Date of Hire.");
                     Console.WriteLine("3. Specify Date of Termination.");
                     Console.WriteLine("4. Specify Employees Salary.");
-                    Console.WriteLine("9. Go back.");
+                    Console.WriteLine("8. Go back.");
+                    Console.WriteLine("9. Proceed.");
 
                     menuOption = Console.ReadLine();
 
@@ -343,6 +356,9 @@ namespace Presentation
                                 Console.WriteLine("The salary must be greater than 0");
                             }
                             break;
+                        case "8":
+                            cancel = true;
+                            break;
                     }
                 }
                 else if (employee.GetEmployeeType() == "PT")
@@ -351,7 +367,8 @@ namespace Presentation
                     Console.WriteLine("2. Specify Date of Hire.");
                     Console.WriteLine("3. Specify Date of Termination.");
                     Console.WriteLine("4. Specify Hourly Rate.");
-                    Console.WriteLine("9. Go back.");
+                    Console.WriteLine("8. Go back.");
+                    Console.WriteLine("9. Proceed.");
 
                     menuOption = Console.ReadLine();
 
@@ -390,6 +407,9 @@ namespace Presentation
                                 Console.WriteLine("The hourly rate must be greater than 0");
                             }
                             break;
+                        case "8":
+                            cancel = true;
+                            break;
                     }
                 }
                 else if (employee.GetEmployeeType() == "CT")
@@ -399,7 +419,8 @@ namespace Presentation
                     Console.WriteLine("2. Specify Contract Start Date.");
                     Console.WriteLine("3. Specify Contract Stop Date.");
                     Console.WriteLine("4. Specify Fixed Contract Amount.");
-                    Console.WriteLine("9. Go back.");
+                    Console.WriteLine("8. Go back.");
+                    Console.WriteLine("9. Proceed.");
 
                     menuOption = Console.ReadLine();
 
@@ -442,6 +463,9 @@ namespace Presentation
                                 Console.WriteLine("The fixed contract amount must be greater than 0");
                             }
                             break;
+                        case "8":
+                            cancel = true;
+                            break;
                     }
                 }
                 else if (employee.GetEmployeeType() == "SN")
@@ -449,7 +473,8 @@ namespace Presentation
                     Console.WriteLine("1. Specify Base Employee Details.");
                     Console.WriteLine("2. Specify the Season.");
                     Console.WriteLine("3. Specify the amount the employee receives per item produced.");
-                    Console.WriteLine("9. Go back.");
+                    Console.WriteLine("8. Go back.");
+                    Console.WriteLine("9. Proceed.");
 
                     menuOption = Console.ReadLine();
 
@@ -481,6 +506,9 @@ namespace Presentation
                                 Console.Clear();
                                 Console.WriteLine("The piece pay must be greater than 0");
                             }
+                            break;
+                        case "8":
+                            cancel = true;
                             break;
                     }
                 }
