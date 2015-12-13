@@ -25,7 +25,7 @@ namespace Presentation
     public class UIMenu
     {
         Container company;
-
+        static int menuOptionFlag = 0;
         /**
         * \brief The UIMenu constructor sets up a Container object to be used throughout the page.
         * 
@@ -204,6 +204,7 @@ namespace Presentation
                         break;
                     case "2":
                         // Go to menu 4
+                        menuOptionFlag = 1;
                         employee = ShowEmployeeDetailsMenu();
                         company.AddEmployeeToList(employee);
                         Console.Clear();
@@ -211,6 +212,7 @@ namespace Presentation
                         break;
                     case "3":
                         // Go to menu 4
+                        menuOptionFlag = 2;
                         employee = ShowEmployeeDetailsMenu();
                         employee = company.SelectEmployee(employee);
 
@@ -227,6 +229,7 @@ namespace Presentation
                         }
                         break;
                     case "4":
+                        menuOptionFlag = 3;
                         // Give the employee details to the container class, and remove the applicable employee
                         employee = ShowEmployeeDetailsMenu();
                         employee = company.SelectEmployee(employee);
@@ -281,7 +284,6 @@ namespace Presentation
 
                 if (employee.GetEmployeeType() == "")
                 {
-                    Console.Clear();
                     Console.WriteLine("1. Specify Base Employee Details.");
                     Console.WriteLine("9. Return to Employee Management Menu.");
 
@@ -295,7 +297,6 @@ namespace Presentation
                 }
                 else if (employee.GetEmployeeType() == "FT")
                 {
-                    Console.Clear();
                     Console.WriteLine("1. Specify Base Employee Details.");
                     Console.WriteLine("2. Specify Date of Hire.");
                     Console.WriteLine("3. Specify Date of Termination.");
@@ -316,7 +317,7 @@ namespace Presentation
                             if (((FulltimeEmployee)employee).SetDateOfHire(Console.ReadLine()) == false)
                             {
                                 Console.Clear();
-                                Console.WriteLine("The date inputed is not in the correct format of YYYY-MM-DD");
+                                Console.WriteLine("The date was not valid");
                             }
                             break;
                         case "3":
@@ -326,7 +327,7 @@ namespace Presentation
                             if (((FulltimeEmployee)employee).SetDateOfTermination(Console.ReadLine()) == false)
                             {
                                 Console.Clear();
-                                Console.WriteLine("The date inputed is not in the correct format of YYYY-MM-DD");
+                                Console.WriteLine("The date was not valid");
                             }
                             break;
                         case "4":
@@ -346,7 +347,6 @@ namespace Presentation
                 }
                 else if (employee.GetEmployeeType() == "PT")
                 {
-                    Console.Clear();
                     Console.WriteLine("1. Specify Base Employee Details.");
                     Console.WriteLine("2. Specify Date of Hire.");
                     Console.WriteLine("3. Specify Date of Termination.");
@@ -367,7 +367,7 @@ namespace Presentation
                             if (((ParttimeEmployee)employee).SetDateOfHire(Console.ReadLine()) == false)
                             {
                                 Console.Clear();
-                                Console.WriteLine("The date inputed is not correct");
+                                Console.WriteLine("The date was not valid");
                             }
                             break;
                         case "3":
@@ -377,7 +377,7 @@ namespace Presentation
                             if (((ParttimeEmployee)employee).SetDateOfTermination(Console.ReadLine()) == false)
                             {
                                 Console.Clear();
-                                Console.WriteLine("The date inputed is not in the correct format of YYYY-MM-DD");
+                                Console.WriteLine("The date was not valid");
                             }
                             break;
                         case "4":
@@ -415,7 +415,7 @@ namespace Presentation
                             if (((ContractEmployee)employee).SetContractStartDate(Console.ReadLine()) == false)
                             {
                                 Console.Clear();
-                                Console.WriteLine("The date inputed is not in the correct format of YYYY-MM-DD");
+                                Console.WriteLine("The date was not valid");
                             }
                             break;
                         case "3":
@@ -425,7 +425,7 @@ namespace Presentation
                             if (((ContractEmployee)employee).SetContractStopDate(Console.ReadLine()) == false)
                             {
                                 Console.Clear();
-                                Console.WriteLine("The date inputed is not in the correct format of YYYY-MM-DD");
+                                Console.WriteLine("The date was not valid");
                             }
                             break;
                         case "4":
@@ -446,7 +446,6 @@ namespace Presentation
                 }
                 else if (employee.GetEmployeeType() == "SN")
                 {
-                    Console.Clear();
                     Console.WriteLine("1. Specify Base Employee Details.");
                     Console.WriteLine("2. Specify the Season.");
                     Console.WriteLine("3. Specify the amount the employee receives per item produced.");
@@ -516,11 +515,28 @@ namespace Presentation
             ParttimeEmployee PTemp = new ParttimeEmployee();
             ContractEmployee CTemp = new ContractEmployee();
             SeasonalEmployee SNemp = new SeasonalEmployee();
-
+            Console.Clear();
+            if(menuOptionFlag == 1)
+            {
+                Console.Clear();
+                Console.WriteLine("Employee Creation");
+                Console.WriteLine("__________________");
+            }
+            else if(menuOptionFlag == 2)
+            {
+                Console.Clear();
+                Console.WriteLine("Employee Modification");
+                Console.WriteLine("______________________");
+            }
+            else if (menuOptionFlag == 3)
+            {
+                Console.Clear();
+                Console.WriteLine("Employee Deletion");
+                Console.WriteLine("__________________");
+            }
             // Prompt for details
             do
             {
-                Console.Clear();
                 Console.WriteLine("Enter the employee type \n 'FT' for FullTime \n 'PT' for PartTime \n 'CT' for Contract \n 'SN' for Seasonal:");
                 empType = Console.ReadLine();
                 empType = empType.ToUpper();
@@ -532,14 +548,12 @@ namespace Presentation
 
                 do
                 {
-                    Console.Clear();
                     Console.WriteLine("Enter the employee's last name:");
                     empLName = Console.ReadLine();
                 } while (!((Employee)FTemp).SetLastName(empLName));
 
                 do
                 {
-                    Console.Clear();
                     Console.WriteLine("Enter the employee's first name:");
                     empFName = Console.ReadLine();
                 } while (!((Employee)FTemp).SetFirstName(empFName));
@@ -547,7 +561,6 @@ namespace Presentation
                 bool valid;
                 do
                 {
-                    Console.Clear();
                     Console.WriteLine("Enter the employee's SIN number:");
                     empSIN = Console.ReadLine();
                     empSIN.Replace(" ", "");
@@ -556,7 +569,6 @@ namespace Presentation
 
                 do
                 {
-                    Console.Clear();
                     Console.WriteLine("Enter the employee's date of birth in the format: YYYY-MM-DD");
                     empDOB = Console.ReadLine();
                 } while (!FTemp.SetDateOfBirth(empDOB));
@@ -566,14 +578,12 @@ namespace Presentation
 
                 do
                 {
-                    Console.Clear();
                     Console.WriteLine("Enter the employee's last name:");
                     empLName = Console.ReadLine();
                 } while (!((Employee)PTemp).SetLastName(empLName));
 
                 do
                 {
-                    Console.Clear();
                     Console.WriteLine("Enter the employee's first name:");
                     empFName = Console.ReadLine();
                 } while (!((Employee)PTemp).SetFirstName(empFName));
@@ -581,7 +591,6 @@ namespace Presentation
                 bool valid;
                 do
                 {
-                    Console.Clear();
                     Console.WriteLine("Enter the employee's SIN number:");
                     empSIN = Console.ReadLine();
                     empSIN.Replace(" ", "");
@@ -590,7 +599,6 @@ namespace Presentation
 
                 do
                 {
-                    Console.Clear();
                     Console.WriteLine("Enter the employee's date of birth in the format: YYYY-MM-DD");
                     empDOB = Console.ReadLine();
                 } while (!PTemp.SetDateOfBirth(empDOB));
@@ -600,14 +608,12 @@ namespace Presentation
 
                 do
                 {
-                    Console.Clear();
                     Console.WriteLine("Enter the employee's last name:");
                     empLName = Console.ReadLine();
                 } while (!((Employee)CTemp).SetLastName(empLName));
 
                 do
                 {
-                    Console.Clear();
                     Console.WriteLine("Enter the employee's first name:");
                     empFName = Console.ReadLine();
                 } while (!((Employee)CTemp).SetFirstName(empFName));
@@ -615,7 +621,6 @@ namespace Presentation
                 bool valid;
                 do
                 {
-                    Console.Clear();
                     Console.WriteLine("Enter the employee's SIN number:");
                     empSIN = Console.ReadLine();
                     empSIN.Replace(" ", "");
@@ -624,24 +629,20 @@ namespace Presentation
 
                 do
                 {
-                    Console.Clear();
                     Console.WriteLine("Enter the employee's date of birth in the format: YYYY-MM-DD");
                     empDOB = Console.ReadLine();
                 } while (!CTemp.SetDateOfBirth(empDOB));
             }
             else if (tempEmp.GetEmployeeType() == "SN")
             {
-
                 do
                 {
-                    Console.Clear();
                     Console.WriteLine("Enter the employee's last name:");
                     empLName = Console.ReadLine();
                 } while (!((Employee)SNemp).SetLastName(empLName));
 
                 do
                 {
-                    Console.Clear();
                     Console.WriteLine("Enter the employee's first name:");
                     empFName = Console.ReadLine();
                 } while (!((Employee)SNemp).SetFirstName(empFName));
@@ -649,7 +650,6 @@ namespace Presentation
                 bool valid;
                 do
                 {
-                    Console.Clear();
                     Console.WriteLine("Enter the employee's SIN number:");
                     empSIN = Console.ReadLine();
                     empSIN.Replace(" ", "");
@@ -658,7 +658,6 @@ namespace Presentation
 
                 do
                 {
-                    Console.Clear();
                     Console.WriteLine("Enter the employee's date of birth in the format: YYYY-MM-DD");
                     empDOB = Console.ReadLine();
                 } while (!SNemp.SetDateOfBirth(empDOB));
