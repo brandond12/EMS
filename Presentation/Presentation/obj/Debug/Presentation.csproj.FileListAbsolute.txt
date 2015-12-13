@@ -20,3 +20,14 @@ C:\SETRepo\EMS\trunk\Presentation\Presentation\bin\Debug\TheCompany.pdb
 C:\SETRepo\EMS\trunk\Presentation\Presentation\obj\Debug\Presentation.dll
 C:\SETRepo\EMS\trunk\Presentation\Presentation\obj\Debug\Presentation.pdb
 C:\SETRepo\EMS\trunk\Presentation\Presentation\obj\Debug\Presentation.csprojResolveAssemblyReference.cache
+C:\GITRepo\EMS\trunk\Presentation\Presentation\bin\Debug\Presentation.dll
+C:\GITRepo\EMS\trunk\Presentation\Presentation\bin\Debug\Presentation.pdb
+C:\GITRepo\EMS\trunk\Presentation\Presentation\bin\Debug\AllEmployees.dll
+C:\GITRepo\EMS\trunk\Presentation\Presentation\bin\Debug\Supporting.dll
+C:\GITRepo\EMS\trunk\Presentation\Presentation\bin\Debug\TheCompany.dll
+C:\GITRepo\EMS\trunk\Presentation\Presentation\bin\Debug\AllEmployees.pdb
+C:\GITRepo\EMS\trunk\Presentation\Presentation\bin\Debug\Supporting.pdb
+C:\GITRepo\EMS\trunk\Presentation\Presentation\bin\Debug\TheCompany.pdb
+C:\GITRepo\EMS\trunk\Presentation\Presentation\obj\Debug\Presentation.dll
+C:\GITRepo\EMS\trunk\Presentation\Presentation\obj\Debug\Presentation.pdb
+C:\GITRepo\EMS\trunk\Presentation\Presentation\obj\Debug\Presentation.csprojResolveAssemblyReference.cache
