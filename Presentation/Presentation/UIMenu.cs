@@ -196,7 +196,7 @@ namespace Presentation
                 Console.WriteLine("9. Return to Main Menu");
 
                 str = Console.ReadLine();
-
+                string input;
                 switch (str)
                 {
                     case "1":
@@ -210,6 +210,8 @@ namespace Presentation
                         company.AddEmployeeToList(employee);
                         Console.Clear();
                         Console.WriteLine("Employee was successfully added");
+                        Console.WriteLine("Press enter to continue");
+                        input = Console.ReadLine();
                         break;
                     case "3":
                         // Go to menu 4
@@ -225,11 +227,15 @@ namespace Presentation
                                 Console.Clear();
                                 company.ModifyEmployee(employee);
                                 Console.WriteLine("Employee was successfully modified.");
+                                Console.WriteLine("Press enter to continue");
+                                input = Console.ReadLine();
                             }
                             else
                             {
                                 Console.Clear();
                                 Console.WriteLine("Employee was not successfully modified.");
+                                Console.WriteLine("Press enter to continue");
+                                input = Console.ReadLine();
                             }
                         }
                         cancel = false;
@@ -245,11 +251,15 @@ namespace Presentation
                             Console.Clear();
                             company.RemoveEmployee(employee);
                             Console.WriteLine("Employee was successfully removed.");
+                            Console.WriteLine("Press enter to continue");
+                            input = Console.ReadLine();
                         }
                         else
                         {
                             Console.Clear();
                             Console.WriteLine("Employee was not successfully removed.");
+                            Console.WriteLine("Press enter to continue");
+                            input = Console.ReadLine();
                         }
 
                         break;
@@ -292,7 +302,6 @@ namespace Presentation
                 {
                     Console.WriteLine("1. Specify Base Employee Details.");
                     Console.WriteLine("8. Go Back");
-                    Console.WriteLine("9. Return to Employee Management Menu.");
 
                     menuOption = Console.ReadLine();
                     switch (menuOption)
@@ -302,8 +311,6 @@ namespace Presentation
                             break;
                         case "8":
                             cancel = true;
-                            break;
-                        case "9":
                             break;
                     }
                 }
@@ -485,7 +492,7 @@ namespace Presentation
                             break;
                         case "2":
                             Console.Clear();
-                            Console.WriteLine("Specify which season the employee is working in");
+                            Console.WriteLine("Specify which season the employee is working in. The seaons can be: Summer, Winter, Fall, or Spring.");
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((SeasonalEmployee)employee).SetSeason(Console.ReadLine()) == false)
                             {
