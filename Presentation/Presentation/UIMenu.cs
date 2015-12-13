@@ -208,10 +208,13 @@ namespace Presentation
                         menuOptionFlag = 1;
                         employee = ShowEmployeeDetailsMenu();
                         company.AddEmployeeToList(employee);
-                        Console.Clear();
-                        Console.WriteLine("Employee was successfully added");
-                        Console.WriteLine("Press enter to continue");
-                        input = Console.ReadLine();
+                        if(cancel == false)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Employee was successfully added");
+                            Console.WriteLine("Press enter to continue");
+                            input = Console.ReadLine();
+                        }
                         break;
                     case "3":
                         // Go to menu 4
@@ -244,24 +247,27 @@ namespace Presentation
                         menuOptionFlag = 3;
                         // Give the employee details to the container class, and remove the applicable employee
                         employee = ShowEmployeeDetailsMenu();
-                        employee = company.SelectEmployee(employee);
 
-                        if (employee.GetEmployeeType() != "")
+                        if(cancel == false)
                         {
-                            Console.Clear();
-                            company.RemoveEmployee(employee);
-                            Console.WriteLine("Employee was successfully removed.");
-                            Console.WriteLine("Press enter to continue");
-                            input = Console.ReadLine();
-                        }
-                        else
-                        {
-                            Console.Clear();
-                            Console.WriteLine("Employee was not successfully removed.");
-                            Console.WriteLine("Press enter to continue");
-                            input = Console.ReadLine();
-                        }
+                            employee = company.SelectEmployee(employee);
 
+                            if (employee.GetEmployeeType() != "")
+                            {
+                                Console.Clear();
+                                company.RemoveEmployee(employee);
+                                Console.WriteLine("Employee was successfully removed.");
+                                Console.WriteLine("Press enter to continue");
+                                input = Console.ReadLine();
+                            }
+                            else
+                            {
+                                Console.Clear();
+                                Console.WriteLine("Employee was not successfully removed.");
+                                Console.WriteLine("Press enter to continue");
+                                input = Console.ReadLine();
+                            }
+                        }
                         break;
                     case "9":
                         break;
