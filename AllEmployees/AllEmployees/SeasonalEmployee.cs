@@ -105,6 +105,10 @@ namespace AllEmployees
         public bool Validate()
         {
             bool dataValid = ValidateBase();
+            if (GetFirstName() == "")
+            {
+                dataValid = false;
+            }
             if (season != "Spring" && season != "Summer" && season != "Winter" && season != "Fall")
             {
                 dataValid = false;

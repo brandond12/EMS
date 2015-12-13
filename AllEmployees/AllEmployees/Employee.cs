@@ -149,21 +149,27 @@ namespace AllEmployees
                     Logging.Log("Employee", "ValidateBase", "Invalid Last Name - Contains Invalid Characters. Input: " + lastName);
                 }
             }
+
+            if (lastName == "")
+            {
+                dataValid = false;
+                Logging.Log("Employee", "ValidateBase", "Invalid Last Name - Missing ");
+            }
             //check valid sin
-            if (socialInsuranceNumber.ToString().Length != 9 && socialInsuranceNumber != 0)
+            if (socialInsuranceNumber.ToString().Length != 9)
             {
                 dataValid = false;
                 Logging.Log("Employee", "ValidateBase", "Invalid Social Insurance Number - Incorrect number of characters. Input: " + socialInsuranceNumber.ToString());
             }
             //check date
-            if(DateTime.Compare(dateOfBirth, DateTime.Now) > 0)
+            if(DateTime.Compare(dateOfBirth, DateTime.Now) > 0 && dateOfBirth.Year > 1)
             {
                 dataValid = false;
                 Logging.Log("Employee", "ValidateBase", "Invalid Date of Birth - Birthdate Can Not be in the Future");
             }
              
             //check employeeType
-            if (employeeType != "" && employeeType != "FT" && employeeType != "PT" && employeeType != "CT" && employeeType != "SN")
+            if (employeeType != "FT" && employeeType != "PT" && employeeType != "CT" && employeeType != "SN")
             {
                 dataValid = false;
                 Logging.Log("Employee", "ValidateBase", "Invalid Employee Type - Types can only be: FT PT CT SN. Input : " + employeeType);
@@ -187,7 +193,7 @@ namespace AllEmployees
         */
         protected string ToStringBase()
         {
-            string employeeString = firstName + "|" + lastName + "|" + socialInsuranceNumber + "|" + GetDateOfBirthString() + "|";
+            string employeeString = lastName + "|" + firstName + "|" + socialInsuranceNumber + "|" + GetDateOfBirthString() + "|";
             return employeeString;
         }
 

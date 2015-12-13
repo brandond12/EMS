@@ -115,6 +115,11 @@ namespace AllEmployees
         {
             bool dataValid = this.ValidateBase();
 
+            if (GetFirstName() == "")
+            {
+                dataValid = false;
+            }
+
             if (salary < 0)
             {
                 dataValid = false;

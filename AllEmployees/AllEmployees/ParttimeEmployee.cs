@@ -114,6 +114,11 @@ namespace AllEmployees
         {
             bool dataValid = ValidateBase();
 
+            if (GetFirstName() == "")
+            {
+                dataValid = false;
+            }
+
             if (hourlyRate < 0)
             {
                 Logging.Log("FulltimeEmployee", "Validate", "Invalid Hourly Rate - Hourly Rate Must be Greater Than 0");
