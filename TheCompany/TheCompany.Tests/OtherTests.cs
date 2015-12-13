@@ -100,7 +100,10 @@ namespace TheCompany.Tests
         * The type of test is fault/exception.
         * 
         * \<b>Sample Data Sets</b>
-        * Employee employee = new Employee("Janet", "Moore", 872046045, dateOfBirth, "");
+        * Employee employee = new Employee();
+        * employee.SetFirstName("Janet");
+        * employee.SetLastName("Moore");
+        * employee.SetSocialInsuranceNumber(872046458);
         *    
         * \<b>Expected Result</b>
         * The expected result is that the employeeList.Count will return 0.
@@ -113,7 +116,10 @@ namespace TheCompany.Tests
         {
             // Instantiate an Employee object and a private object
             DateTime dateOfBirth = new DateTime(1987, 11, 29);
-            Employee employee = new Employee("Janet", "Moore", 872046045, dateOfBirth, "");
+            Employee employee = new Employee();
+            employee.SetFirstName("Janet");
+            employee.SetLastName("Moore");
+            employee.SetSocialInsuranceNumber(872046458);
             var privateObject = new PrivateObject(employeeRepo);
 
             // Execute the method that is being tested

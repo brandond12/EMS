@@ -31,3 +31,13 @@ C:\SETRepo\EMS\trunk\TheCompany\TheCompany\bin\Debug\Supporting.pdb
 C:\SETRepo\EMS\trunk\TheCompany\TheCompany\obj\Debug\TheCompany.csprojResolveAssemblyReference.cache
 C:\SETRepo\EMS\trunk\TheCompany\TheCompany\obj\Debug\TheCompany.dll
 C:\SETRepo\EMS\trunk\TheCompany\TheCompany\obj\Debug\TheCompany.pdb
+C:\Testing-EMS-2\trunk\TheCompany\TheCompany\bin\Debug\TheCompany.dll
+C:\Testing-EMS-2\trunk\TheCompany\TheCompany\bin\Debug\TheCompany.pdb
+C:\Testing-EMS-2\trunk\TheCompany\TheCompany\bin\Debug\AllEmployees.dll
+C:\Testing-EMS-2\trunk\TheCompany\TheCompany\bin\Debug\Presentation.dll
+C:\Testing-EMS-2\trunk\TheCompany\TheCompany\bin\Debug\Supporting.dll
+C:\Testing-EMS-2\trunk\TheCompany\TheCompany\bin\Debug\AllEmployees.pdb
+C:\Testing-EMS-2\trunk\TheCompany\TheCompany\bin\Debug\Presentation.pdb
+C:\Testing-EMS-2\trunk\TheCompany\TheCompany\bin\Debug\Supporting.pdb
+C:\Testing-EMS-2\trunk\TheCompany\TheCompany\obj\Debug\TheCompany.dll
+C:\Testing-EMS-2\trunk\TheCompany\TheCompany\obj\Debug\TheCompany.pdb

@@ -2104,9 +2104,9 @@ namespace TheCompany.Tests
         * \<b>Sample Data Sets</b>
         * An employee reference:
         * DateTime dateOfBirth = new DateTime(1991, 03, 18);
-        * Employee employee = new Employee("Janet", "Moore", 872046045, dateOfBirth, "");
+        * FulltimeEmployee employee = new FulltimeEmployee("Janet", "Moore", 720460450, dateOfBirth, new DateTime(2013, 04, 05), new DateTime(2016, 03, 04), 35000);
         * Input string:
-        * ""
+        * "\n"
         *    
         * \<b>Expected Result</b>
         * The expected result is that the user's response will be a blank.
@@ -2118,15 +2118,20 @@ namespace TheCompany.Tests
         public void DisplayEmployeeDetails_ValidEmployee_ReturnsBlankString()
         {
             // Instantiate a private object and an Employee object
+            String dataToPassIn = "\n";
             String actualString = "";
             var privateObject = new PrivateObject(employeeRepo);
             DateTime dateOfBirth = new DateTime(1987, 11, 29);
-            Employee employee = new Employee("Janet", "Moore", 872046045, dateOfBirth, "");
+            FulltimeEmployee employee = new FulltimeEmployee("Janet", "Moore", 720460450, dateOfBirth, new DateTime(2013, 04, 05), new DateTime(2016, 03, 04), 35000);
 
-            // Execute the method that is being tested
-            actualString = (String)privateObject.Invoke("DisplayEmployeeDetails", employee);
-            // Check if the expected result and actual result are the same
-            Assert.AreEqual("", actualString);
+            using (var input = new StringReader(dataToPassIn))
+            {
+                Console.SetIn(input);
+                // Execute the method that is being tested
+                actualString = (String)privateObject.Invoke("DisplayEmployeeDetails", employee);
+                // Check if the expected result and actual result are the same
+                Assert.AreEqual("", actualString);
+            }
         }
 
     }
