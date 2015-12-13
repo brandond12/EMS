@@ -1846,6 +1846,7 @@ namespace TheCompany
             // Go through all employees in the list
             foreach (AllEmployees.Employee employee in listOfEmployees)
             {
+                bool isMatchFalse = false;
                 bool EmployeeMatch = true;          // Does the employee match the given employee parameters
                 bool isBaseDetailsAMatch = false;   // Does the employee match the given base employee details
 
@@ -1859,6 +1860,7 @@ namespace TheCompany
                     {
                         EmployeeMatch = false;
                         isBaseDetailsAMatch = false;
+                        isMatchFalse = true;
                     }
                 }
 
@@ -1872,6 +1874,7 @@ namespace TheCompany
                     {
                         EmployeeMatch = false;
                         isBaseDetailsAMatch = false;
+                        isMatchFalse = true;
                     }
                 }
 
@@ -1885,6 +1888,7 @@ namespace TheCompany
                     {
                         EmployeeMatch = false;
                         isBaseDetailsAMatch = false;
+                        isMatchFalse = true;
                     }
                 }
 
@@ -1898,6 +1902,7 @@ namespace TheCompany
                     {
                         EmployeeMatch = false;
                         isBaseDetailsAMatch = false;
+                        isMatchFalse = true;
                     }
                 }
 
@@ -1911,6 +1916,7 @@ namespace TheCompany
                     {
                         EmployeeMatch = false;
                         isBaseDetailsAMatch = false;
+                        isMatchFalse = true;
                     }
                 }
 
@@ -1924,6 +1930,7 @@ namespace TheCompany
                         if (DateTime.Compare(((FulltimeEmployee)employeeParameters).GetDateOfHire(), ((FulltimeEmployee)employee).GetDateOfHire()) != 0)
                         {
                             EmployeeMatch = false;
+                            isMatchFalse = true;
                         }
                     }
                     // Check if there is a parameter for the date of termination
@@ -1933,6 +1940,7 @@ namespace TheCompany
                         if (DateTime.Compare(((FulltimeEmployee)employeeParameters).GetDateOfTermination(), ((FulltimeEmployee)employee).GetDateOfTermination()) != 0)
                         {
                             EmployeeMatch = false;
+                            isMatchFalse = true;
                         }
                     }
                     // Check if there is a parameter for the salary
@@ -1942,6 +1950,7 @@ namespace TheCompany
                         if (((FulltimeEmployee)employeeParameters).GetSalary() != ((FulltimeEmployee)employee).GetSalary())
                         {
                             EmployeeMatch = false;
+                            isMatchFalse = true;
                         }
                     }
                 }
@@ -1956,6 +1965,7 @@ namespace TheCompany
                         if (DateTime.Compare(((ParttimeEmployee)employeeParameters).GetDateOfHire(), ((ParttimeEmployee)employee).GetDateOfHire()) != 0)
                         {
                             EmployeeMatch = false;
+                            isMatchFalse = true;
                         }
                     }
                     // Check if there is a parameter for the date of termination
@@ -1965,6 +1975,7 @@ namespace TheCompany
                         if (DateTime.Compare(((ParttimeEmployee)employeeParameters).GetDateOfTermination(), ((ParttimeEmployee)employee).GetDateOfTermination()) != 0)
                         {
                             EmployeeMatch = false;
+                            isMatchFalse = true;
                         }
                     }
                     // Check if there is a parameter for the hourly rate
@@ -1974,6 +1985,7 @@ namespace TheCompany
                         if (((ParttimeEmployee)employeeParameters).GetHourlyRate() != ((ParttimeEmployee)employee).GetHourlyRate())
                         {
                             EmployeeMatch = false;
+                            isMatchFalse = true;
                         }
                     }
                 }
@@ -1988,6 +2000,7 @@ namespace TheCompany
                         if (DateTime.Compare(((ContractEmployee)employeeParameters).GetContractStartDate(), ((ContractEmployee)employee).GetContractStartDate()) != 0)
                         {
                             EmployeeMatch = false;
+                            isMatchFalse = true;
                         }
                     }
                     // Check if there is a parameter for the contract stop date
@@ -1997,6 +2010,7 @@ namespace TheCompany
                         if (DateTime.Compare(((ContractEmployee)employeeParameters).GetContractStopDate(), ((ContractEmployee)employee).GetContractStopDate()) != 0)
                         {
                             EmployeeMatch = false;
+                            isMatchFalse = true;
                         }
                     }
                     // Check if there is a parameter for the contract amount
@@ -2006,6 +2020,7 @@ namespace TheCompany
                         if (((ContractEmployee)employeeParameters).GetFixedContractAmount() != ((ContractEmployee)employee).GetFixedContractAmount())
                         {
                             EmployeeMatch = false;
+                            isMatchFalse = true;
                         }
                     }
                 }
@@ -2020,6 +2035,7 @@ namespace TheCompany
                         if (((SeasonalEmployee)employeeParameters).GetSeason() != ((SeasonalEmployee)employee).GetSeason())
                         {
                             EmployeeMatch = false;
+                            isMatchFalse = true;
                         }
                     }
                     // Check if there is a parameter for the piece pay
@@ -2029,6 +2045,7 @@ namespace TheCompany
                         if (((SeasonalEmployee)employeeParameters).GetPiecePay() != ((SeasonalEmployee)employee).GetPiecePay())
                         {
                             EmployeeMatch = false;
+                            isMatchFalse = true;
                         }
                     }
                 }
@@ -2038,7 +2055,7 @@ namespace TheCompany
                 {
                     EmployeeMatch = false;
                 }
-                if ((EmployeeMatch == true) || (isBaseDetailsAMatch == true))
+                if ((EmployeeMatch == true) || (isBaseDetailsAMatch == true) && (isMatchFalse == false))
                 {
                     Console.Clear();   
                     wasThereAMatch = true;
