@@ -483,6 +483,7 @@ namespace TheCompany
         {
             String response;    // The key the user hits to display the next employee
             String error = "";
+            bool isThereEmployees = false;
 
             try
             {
@@ -490,6 +491,7 @@ namespace TheCompany
                 foreach (AllEmployees.Employee employee in listOfEmployees)
                 {
                     Console.Clear();
+                    isThereEmployees = true;
                     if (employee.GetEmployeeType() == "FT")
                     {
                         response = UIMenu.GetInfoFromUser("Current Employee:\n" + ((AllEmployees.FulltimeEmployee)employee).Details()
@@ -510,6 +512,11 @@ namespace TheCompany
                         response = UIMenu.GetInfoFromUser("Current Employee:\n" + ((AllEmployees.SeasonalEmployee)employee).Details()
                         + "\nHit enter to see the next employee.");
                     }
+                }
+
+                if (isThereEmployees == false)
+                {
+                    response = UIMenu.GetInfoFromUser("There are no employees to display.\nHit enter to continue.");
                 }
             }
             catch (Exception)
