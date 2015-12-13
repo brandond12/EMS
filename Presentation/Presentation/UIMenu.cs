@@ -317,6 +317,9 @@ namespace Presentation
                         case "8":
                             cancel = true;
                             break;
+                        default:
+                            Console.WriteLine("Invalid menu choice.");
+                            break;
                     }
                 }
                 else if (employee.GetEmployeeType() == "FT")
@@ -371,6 +374,9 @@ namespace Presentation
                         case "8":
                             cancel = true;
                             break;
+                        default:
+                            Console.WriteLine("Invalid menu choice.");
+                            break;
                     }
                 }
                 else if (employee.GetEmployeeType() == "PT")
@@ -421,6 +427,9 @@ namespace Presentation
                             break;
                         case "8":
                             cancel = true;
+                            break;
+                        default:
+                            Console.WriteLine("Invalid menu choice.");
                             break;
                     }
                 }
@@ -478,6 +487,9 @@ namespace Presentation
                         case "8":
                             cancel = true;
                             break;
+                        default:
+                            Console.WriteLine("Invalid menu choice.");
+                            break;
                     }
                 }
                 else if (employee.GetEmployeeType() == "SN")
@@ -523,6 +535,9 @@ namespace Presentation
                             break;
                         case "8":
                             cancel = true;
+                            break;
+                        default:
+                            Console.WriteLine("Invalid menu choice.");
                             break;
                     }
                 }
