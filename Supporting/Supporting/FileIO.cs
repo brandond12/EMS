@@ -171,9 +171,8 @@ namespace Supporting
                             AllEmployees.ContractEmployee contractEmp = new AllEmployees.ContractEmployee();
                             contractEmp.SetEmployeeType(words[wordCounter]);
                             wordCounter++;
-                            contractEmp.SetFirstName(words[wordCounter]);
-                            wordCounter++;
                             contractEmp.SetLastName(words[wordCounter]);
+                            wordCounter++;
                             wordCounter++;
                             contractEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only take an int
                             wordCounter++;
@@ -232,9 +231,9 @@ namespace Supporting
                         {
                             fullTimeEmp.SetEmployeeType(words[wordCounter]);
                             wordCounter++;
-                            fullTimeEmp.SetFirstName(words[wordCounter]);
-                            wordCounter++;
                             fullTimeEmp.SetLastName(words[wordCounter]);
+                            wordCounter++;
+                            fullTimeEmp.SetFirstName(words[wordCounter]);
                             wordCounter++;
                             fullTimeEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only takes an int
                             wordCounter++;
@@ -294,9 +293,9 @@ namespace Supporting
                         {
                             partTimeEmp.SetEmployeeType(words[wordCounter]);
                             wordCounter++;
-                            partTimeEmp.SetFirstName(words[wordCounter]);
-                            wordCounter++;
                             partTimeEmp.SetLastName(words[wordCounter]);
+                            wordCounter++;
+                            partTimeEmp.SetFirstName(words[wordCounter]);
                             wordCounter++;
                             partTimeEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only takes an int
                             wordCounter++;
@@ -356,9 +355,9 @@ namespace Supporting
 
                             seasonalEmp.SetEmployeeType(words[wordCounter]);
                             wordCounter++;
-                            seasonalEmp.SetFirstName(words[wordCounter]);
-                            wordCounter++;
                             seasonalEmp.SetLastName(words[wordCounter]);
+                            wordCounter++;
+                            seasonalEmp.SetFirstName(words[wordCounter]);
                             wordCounter++;
                             seasonalEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only takes an int
                             wordCounter++;
@@ -405,6 +404,10 @@ namespace Supporting
                 {
                     //string className, string methodName, string eventDetails
                     Logging.Log("FileIO", "ParsRecord", "invalid employee type in file");
+                    while (words[wordCounter] != "FT" && words[wordCounter] != "PT" && words[wordCounter] != "SN" && words[wordCounter] != "CT" && wordCounter < words.Count() - 1)
+                    {
+                        wordCounter++;
+                    }
                 }
             }
             return employeeRec;
