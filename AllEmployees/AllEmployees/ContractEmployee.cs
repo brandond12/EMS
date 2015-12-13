@@ -278,6 +278,11 @@ namespace AllEmployees
                     dataSaved = false;
                     Logging.Log("ContractEmployee", "SetDateOfBirth", "Invalid Date of Birth - Can Not be in Future");
                 }
+                else if (date[4] != '-' || date[7] != '-')
+                {
+                    Logging.Log("ContractEmployee", "SetDateOfBirth", "Invalid Date of Hire - Delimiters not '-'");
+                    dataSaved = false;
+                }
                 else
                 {
                     Logging.Log("ContractEmployee", "SetDateOfBirth", "Date of Birth Changed From: " + GetDateOfBirthString() + " To: " + String.Format("{0:yyyy-MM-dd}", DOB));
@@ -403,6 +408,11 @@ namespace AllEmployees
                     dataSaved = false;
                     Logging.Log("ContractEmployee", "SetContractStartDate", "Invalid Contract Start Date - Contract Start Date after Contract Stop Date");
                 }
+                else if (date[4] != '-' || date[7] != '-')
+                {
+                    Logging.Log("ContractEmployee", "SetContractStartDate", "Invalid Date of Hire - Delimiters not '-'");
+                    dataSaved = false;
+                }
                 else
                 {
                     Logging.Log("ContractEmployee", "SetContractStartDate", "Contract Start Date Changed From: " + GetContractStartDateString() + " To: " + String.Format("{0:yyyy-MM-dd}", newcontractStartDate));
@@ -514,6 +524,11 @@ namespace AllEmployees
                 {
                     dataSaved = false;
                     Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Contract Stop Date - Contract Stop Date Before Contract Start Date");
+                }
+                else if (date[4] != '-' || date[7] != '-')
+                {
+                    Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Date of Hire - Delimiters not '-'");
+                    dataSaved = false;
                 }
                 else
                 {
@@ -649,7 +664,12 @@ namespace AllEmployees
         */
         public string GetContractStopDateString()
         {
-            return String.Format("{0:yyyy-MM-dd}",contractStopDate);
+            string termination = String.Format("{0:yyyy-MM-dd}", contractStopDate);
+            if (termination == "0001-01-01")
+            {
+                termination = "N/A";
+            }
+            return termination;
         }
 
         /**

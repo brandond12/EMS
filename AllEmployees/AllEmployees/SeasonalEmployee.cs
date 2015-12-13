@@ -253,6 +253,10 @@ namespace AllEmployees
                 {
                     dataSaved = false;
                 }
+                else if (date[4] != '-' || date[7] != '-')
+                {
+                    dataSaved = false;
+                }
                 else
                 {
                     SetDateOfBirthBase(DOB);

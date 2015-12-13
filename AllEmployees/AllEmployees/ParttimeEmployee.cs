@@ -250,6 +250,11 @@ namespace AllEmployees
                     Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Invalid Date of Birth - Can Not be in Future");
                     dataSaved = false;
                 }
+                else if (date[4] != '-' || date[7] != '-')
+                {
+                    Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Invalid Date of Hire - Delimiters not '-'");
+                    dataSaved = false;
+                }
                 else
                 {
                     Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Date of Birth Changed From: " + GetDateOfBirthString() + " To: " + String.Format("{0:yyyy-MM-dd}", DOB));
@@ -363,6 +368,11 @@ namespace AllEmployees
                 if(DateTime.Compare(newdateOfTermination, dateOfHire) == -1)
                 {
                     Logging.Log("ParttimeEmployee", "SetDateOfTermination", "Invalid Date of Termination - Date of Termination Before Start Date");
+                    dataSaved = false;
+                }
+                else if (date[4] != '-' || date[7] != '-')
+                {
+                    Logging.Log("ParttimeEmployee", "SetDateOfTermination", "Invalid Date of Hire - Delimiters not '-'");
                     dataSaved = false;
                 }
                 else
@@ -511,6 +521,11 @@ namespace AllEmployees
                     Logging.Log("ParttimeEmployee", "SetDateOfHire", "Invalid Date of Hire - Date of Hire after Date of Termination");
                     dataSaved = false;
                 }
+                else if(date[4] != '-' || date [7] != '-')
+                {
+                    Logging.Log("ParttimeEmployee", "SetDateOfHire", "Invalid Date of Hire - Delimiters not '-'");
+                    dataSaved = false;
+                }
                 else
                 {
                     Logging.Log("ParttimeEmployee", "SetDateOfHire", "Date of Hire Changed From: " + GetDateOfHireString() + " To: " + String.Format("{0:yyyy-MM-dd}", newdateOfHire));
@@ -597,7 +612,12 @@ namespace AllEmployees
         */
         public string GetDateOfTerminationString()
         {
-            return String.Format("{0:yyyy-MM-dd}", dateOfTermination);
+            string termination = String.Format("{0:yyyy-MM-dd}", dateOfTermination);
+            if (termination == "0001-01-01")
+            {
+                termination = "N/A";
+            }
+            return termination;
         }
 
         /**
