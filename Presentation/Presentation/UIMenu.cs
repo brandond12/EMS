@@ -123,7 +123,7 @@ namespace Presentation
             string str;
             do
             {
-                Console.Clear();
+                
                 List<Employee> employeeList = new List<Employee>();
 
                 Console.WriteLine("Menu 2 : FILE MANAGEMENT MENU");
@@ -602,7 +602,7 @@ namespace Presentation
                     empSIN = Console.ReadLine();
                     empSIN = empSIN.Replace(" ", "");
                     valid = int.TryParse(empSIN, out employeeSIN);
-                } while (!((Employee)FTemp).SetSocialInsuranceNumber(employeeSIN) || !valid);
+                } while (!((Employee)FTemp).SetSocialInsuranceNumber(employeeSIN) || (!valid && empSIN != ""));
 
                 do
                 {
@@ -632,7 +632,7 @@ namespace Presentation
                     empSIN = Console.ReadLine();
                     empSIN.Replace(" ", "");
                     valid = int.TryParse(empSIN, out employeeSIN);
-                } while (!((Employee)PTemp).SetSocialInsuranceNumber(employeeSIN) || !valid);
+                } while (!((Employee)PTemp).SetSocialInsuranceNumber(employeeSIN) || (!valid && empSIN != ""));
 
                 do
                 {
@@ -656,7 +656,7 @@ namespace Presentation
                     empSIN = Console.ReadLine();
                     empSIN.Replace(" ", "");
                     valid = int.TryParse(empSIN, out employeeSIN);
-                } while (!((Employee)CTemp).SetSocialInsuranceNumber(employeeSIN) || !valid);
+                } while (!((Employee)CTemp).SetSocialInsuranceNumber(employeeSIN) || (!valid && empSIN != ""));
 
                 do
                 {
@@ -685,7 +685,7 @@ namespace Presentation
                     empSIN = Console.ReadLine();
                     empSIN.Replace(" ", "");
                     valid = int.TryParse(empSIN, out employeeSIN);
-                } while (!((Employee)SNemp).SetSocialInsuranceNumber(employeeSIN) || !valid);
+                } while (!((Employee)SNemp).SetSocialInsuranceNumber(employeeSIN) || (!valid && empSIN != ""));
 
                 do
                 {

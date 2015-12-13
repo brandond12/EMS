@@ -513,35 +513,38 @@ namespace AllEmployees
             int year = 0;
             int month = 0;
             int day = 0;
-            try
+            if (date != "N/A")
             {
-                year = Int32.Parse(date.Substring(0, 4));
-                month = Int32.Parse(date.Substring(5, 2));
-                day = Int32.Parse(date.Substring(8, 2));
-                DateTime newcontractStopDate = new DateTime(year, month, day);
-                //validate dates
-                if(DateTime.Compare(newcontractStopDate, contractStartDate) == -1 && year != 1)
+                try
                 {
-                    dataSaved = false;
-                    Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Contract Stop Date - Contract Stop Date Before Contract Start Date");
+                    year = Int32.Parse(date.Substring(0, 4));
+                    month = Int32.Parse(date.Substring(5, 2));
+                    day = Int32.Parse(date.Substring(8, 2));
+                    DateTime newcontractStopDate = new DateTime(year, month, day);
+                    //validate dates
+                    if (DateTime.Compare(newcontractStopDate, contractStartDate) == -1 && year != 1)
+                    {
+                        dataSaved = false;
+                        Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Contract Stop Date - Contract Stop Date Before Contract Start Date");
+                    }
+                    else if (date[4] != '-' || date[7] != '-')
+                    {
+                        Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Date of Hire - Delimiters not '-'");
+                        dataSaved = false;
+                    }
+                    else
+                    {
+                        Logging.Log("ContractEmployee", "SetContractStopDate", "Contract Stop Date Changed From: " + GetContractStopDateString() + " To: " + String.Format("{0:yyyy-MM-dd}", newcontractStopDate));
+                        contractStopDate = newcontractStopDate;
+                    }
                 }
-                else if (date[4] != '-' || date[7] != '-')
+                catch (Exception ex)
                 {
-                    Logging.Log("ContractEmployee", "SetContractStopDate", "Invalid Date of Hire - Delimiters not '-'");
-                    dataSaved = false;
-                }
-                else
-                {
-                    Logging.Log("ContractEmployee", "SetContractStopDate", "Contract Stop Date Changed From: " + GetContractStopDateString() + " To: " + String.Format("{0:yyyy-MM-dd}", newcontractStopDate));
-                    contractStopDate = newcontractStopDate;
-                }
-            }
-            catch (Exception ex)
-            {
-                if (date.Length != 0)
-                {
-                    dataSaved = false;
-                    Logging.Log("ContractEmployee", "SetContractStopDate", "Exception Caught in Method. " + ex.Message);
+                    if (date.Length != 0)
+                    {
+                        dataSaved = false;
+                        Logging.Log("ContractEmployee", "SetContractStopDate", "Exception Caught in Method. " + ex.Message);
+                    }
                 }
             }
             return dataSaved;

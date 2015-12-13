@@ -238,6 +238,7 @@ namespace AllEmployees
             int year = 0;
             int month = 0;
             int day = 0;
+
             try
             {
                 year = Int32.Parse(date.Substring(0, 4));
@@ -362,36 +363,39 @@ namespace AllEmployees
             int year = 0;
             int month = 0;
             int day = 0;
-            try
+            if (date != "N/A")
             {
-                year = Int32.Parse(date.Substring(0, 4));
-                month = Int32.Parse(date.Substring(5, 2));
-                day = Int32.Parse(date.Substring(8, 2));
+                try
+                {
+                    year = Int32.Parse(date.Substring(0, 4));
+                    month = Int32.Parse(date.Substring(5, 2));
+                    day = Int32.Parse(date.Substring(8, 2));
 
-                DateTime newdateOfTermination = new DateTime(year, month, day);
-                //validate dates
-                if(DateTime.Compare(newdateOfTermination, dateOfHire) == -1)
-                {
-                    Logging.Log("ParttimeEmployee", "SetDateOfTermination", "Invalid Date of Termination - Date of Termination Before Start Date");
-                    dataSaved = false;
+                    DateTime newdateOfTermination = new DateTime(year, month, day);
+                    //validate dates
+                    if (DateTime.Compare(newdateOfTermination, dateOfHire) == -1)
+                    {
+                        Logging.Log("ParttimeEmployee", "SetDateOfTermination", "Invalid Date of Termination - Date of Termination Before Start Date");
+                        dataSaved = false;
+                    }
+                    else if (date[4] != '-' || date[7] != '-')
+                    {
+                        Logging.Log("ParttimeEmployee", "SetDateOfTermination", "Invalid Date of Hire - Delimiters not '-'");
+                        dataSaved = false;
+                    }
+                    else
+                    {
+                        Logging.Log("ParttimeEmployee", "SetContractStopDate", "Contract Stop Date Changed From: " + GetDateOfTerminationString() + " To: " + String.Format("{0:yyyy-MM-dd}", newdateOfTermination));
+                        dateOfTermination = newdateOfTermination;
+                    }
                 }
-                else if (date[4] != '-' || date[7] != '-')
+                catch (Exception ex)
                 {
-                    Logging.Log("ParttimeEmployee", "SetDateOfTermination", "Invalid Date of Hire - Delimiters not '-'");
-                    dataSaved = false;
-                }
-                else
-                {
-                    Logging.Log("ParttimeEmployee", "SetContractStopDate", "Contract Stop Date Changed From: " + GetDateOfTerminationString() + " To: " + String.Format("{0:yyyy-MM-dd}", newdateOfTermination));
-                    dateOfTermination = newdateOfTermination;
-                }
-            }
-            catch (Exception ex)
-            {
-                if (date.Length != 0)
-                {
-                    Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Exception Caught in Method. " + ex.Message);
-                    dataSaved = false;
+                    if (date.Length != 0)
+                    {
+                        Logging.Log("ParttimeEmployee", "SetDateOfBirth", "Exception Caught in Method. " + ex.Message);
+                        dataSaved = false;
+                    }
                 }
             }
             return dataSaved;
