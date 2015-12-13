@@ -489,6 +489,7 @@ namespace TheCompany
                 // Loop through all of the employees
                 foreach (AllEmployees.Employee employee in listOfEmployees)
                 {
+                    Console.Clear();
                     if (employee.GetEmployeeType() == "FT")
                     {
                         response = UIMenu.GetInfoFromUser("Current Employee:\n" + ((AllEmployees.FulltimeEmployee)employee).Details()
@@ -735,7 +736,7 @@ namespace TheCompany
                 + "\nWould you like to modify the first name?\nType 'Y' for yes, and 'N' for no.");
 
                 // Check if the response was 'Y', 'N', or neither
-                if (response == "Y")
+                if (response.ToUpper() == "Y")
                 {
                     /* If 'Y' is the reponse, ask the user for a first name, 
                     and try to set the employee's first name to the new name */
@@ -755,7 +756,7 @@ namespace TheCompany
                     }
                     wasQuestionAnswered = true;
                 }
-                else if (response == "N")
+                else if (response.ToUpper() == "N")
                 {
                     /* If 'N' is the response, then the user has chosen not 
                     * to modify this property, so leave the while loop */
@@ -799,7 +800,7 @@ namespace TheCompany
                 + "\nWould you like to modify the last name?\nType 'Y' for yes, and 'N' for no.");
 
                 // Check if the response was 'Y', 'N', or neither
-                if (response == "Y")
+                if (response.ToUpper() == "Y")
                 {
                     /* If 'Y' is the reponse, ask the user for a last name, 
                     and try to set the employee's last name to the new name */
@@ -819,7 +820,7 @@ namespace TheCompany
                     }
                     wasQuestionAnswered = true;
                 }
-                else if (response == "N")
+                else if (response.ToUpper() == "N")
                 {
                     /* If 'N' is the response, then the user has chosen not 
                     * to modify this property, so leave the while loop */
@@ -866,7 +867,7 @@ namespace TheCompany
                     + "\nWould you like to modify the social insurance number?\nType 'Y' for yes, and 'N' for no.");
 
                     // Check if the response was 'Y', 'N', or neither
-                    if (response == "Y")
+                    if (response.ToUpper() == "Y")
                     {
                         /* If 'Y' is the reponse, ask the user for a social insurance number, 
                         and try to set the employee's social insurance number to the new number */
@@ -887,7 +888,7 @@ namespace TheCompany
                         }
                         wasQuestionAnswered = true;
                     }
-                    else if (response == "N")
+                    else if (response.ToUpper() == "N")
                     {
                         /* If 'N' is the response, then the user has chosen not 
                         * to modify this property, so leave the while loop */
@@ -945,7 +946,7 @@ namespace TheCompany
                     + "\nWould you like to modify the date of birth?\nType 'Y' for yes, and 'N' for no.");
 
                     // Check if the response was 'Y', 'N', or neither
-                    if (response == "Y")
+                    if (response.ToUpper() == "Y")
                     {
                         /* If 'Y' is the reponse, ask the user for a year, month, and day 
                         * and try to set the employee's date of birth to the new date of birth */
@@ -989,7 +990,7 @@ namespace TheCompany
                         }
                         wasQuestionAnswered = true;
                     }
-                    else if (response == "N")
+                    else if (response.ToUpper() == "N")
                     {
                         /* If 'N' is the response, then the user has chosen not 
                         * to modify this property, so leave the while loop */
@@ -1040,7 +1041,7 @@ namespace TheCompany
                 + "\nWould you like to modify the employee type?\nType 'Y' for yes, and 'N' for no.");
 
                 // Check if the response was 'Y', 'N', or neither
-                if (response == "Y")
+                if (response.ToUpper() == "Y")
                 {
                     /* If 'Y' is the reponse, ask the user for a new employee type, 
                     * and try to set the employee's type to the new type */
@@ -1060,7 +1061,7 @@ namespace TheCompany
                     }
                     wasQuestionAnswered = true;
                 }
-                else if (response == "N")
+                else if (response.ToUpper() == "N")
                 {
                     /* If 'N' is the response, then the user has chosen not 
                     * to modify this property, so leave the while loop */
@@ -1123,7 +1124,7 @@ namespace TheCompany
                     }
 
                     // Check if the response was 'Y', 'N', or neither
-                    if (response == "Y")
+                    if (response.ToUpper() == "Y")
                     {
                         /* If 'Y' is the reponse, ask the user for a year, month, and day 
                         * and try to set the employee's date of hire to the new date of hire */
@@ -1157,7 +1158,7 @@ namespace TheCompany
                         }
                         wasQuestionAnswered = true;
                     }
-                    else if (response == "N")
+                    else if (response.ToUpper() == "N")
                     {
                         /* If 'N' is the response, then the user has chosen not 
                         * to modify this property, so leave the while loop */
@@ -1227,7 +1228,7 @@ namespace TheCompany
                     }
 
                     // Check if the response was 'Y', 'N', or neither
-                    if (response == "Y")
+                    if (response.ToUpper() == "Y")
                     {
                         /* If 'Y' is the reponse, ask the user for a year, month, and day and try 
                         * to set the employee's date of termination to the new date of termination */
@@ -1261,7 +1262,7 @@ namespace TheCompany
                         }
                         wasQuestionAnswered = true;
                     }
-                    else if (response == "N")
+                    else if (response.ToUpper() == "N")
                     {
                         /* If 'N' is the response, then the user has chosen not 
                         * to modify this property, so leave the while loop */
@@ -1315,7 +1316,7 @@ namespace TheCompany
                     + "\nWould you like to modify the salary?\nType 'Y' for yes, and 'N' for no.");
 
                     // Check if the response was 'Y', 'N', or neither
-                    if (response == "Y")
+                    if (response.ToUpper() == "Y")
                     {
                         /* If 'Y' is the reponse, ask the user for a salary, 
                         and try to set the employee's salary to the new salary */
@@ -1336,7 +1337,7 @@ namespace TheCompany
                         }
                         wasQuestionAnswered = true;
                     }
-                    else if (response == "N")
+                    else if (response.ToUpper() == "N")
                     {
                         /* If 'N' is the response, then the user has chosen not 
                         * to modify this property, so leave the while loop */
@@ -1390,7 +1391,7 @@ namespace TheCompany
                     + "\nWould you like to modify the hourly rate?\nType 'Y' for yes, and 'N' for no.");
 
                     // Check if the response was 'Y', 'N', or neither
-                    if (response == "Y")
+                    if (response.ToUpper() == "Y")
                     {
                         /* If 'Y' is the reponse, ask the user for an hourly rate
                         and try to set the employee's hourly rate to the new rate */
@@ -1411,7 +1412,7 @@ namespace TheCompany
                         }
                         wasQuestionAnswered = true;
                     }
-                    else if (response == "N")
+                    else if (response.ToUpper() == "N")
                     {
                         /* If 'N' is the response, then the user has chosen not 
                         * to modify this property, so leave the while loop */
@@ -1469,7 +1470,7 @@ namespace TheCompany
                     + "\nWould you like to modify the contract start date?\nType 'Y' for yes, and 'N' for no.");
 
                     // Check if the response was 'Y', 'N', or neither
-                    if (response == "Y")
+                    if (response.ToUpper() == "Y")
                     {
                         /* If 'Y' is the reponse, ask the user for a year, month, and day and try 
                         * to set the employee's contract start date to the new contract start date */
@@ -1496,7 +1497,7 @@ namespace TheCompany
                         }
                         wasQuestionAnswered = true;
                     }
-                    else if (response == "N")
+                    else if (response.ToUpper() == "N")
                     {
                         /* If 'N' is the response, then the user has chosen not 
                         * to modify this property, so leave the while loop */
@@ -1554,7 +1555,7 @@ namespace TheCompany
                     + "\nWould you like to modify the contract stop date?\nType 'Y' for yes, and 'N' for no.");
 
                     // Check if the response was 'Y', 'N', or neither
-                    if (response == "Y")
+                    if (response.ToUpper() == "Y")
                     {
                         /* If 'Y' is the reponse, ask the user for a year, month, and day and try 
                         * to set the employee's contract stop date to the new contract stop date */
@@ -1581,7 +1582,7 @@ namespace TheCompany
                         }
                         wasQuestionAnswered = true;
                     }
-                    else if (response == "N")
+                    else if (response.ToUpper() == "N")
                     {
                         /* If 'N' is the response, then the user has chosen not 
                         * to modify this property, so leave the while loop */
@@ -1635,7 +1636,7 @@ namespace TheCompany
                     + "\nWould you like to modify the fixed contract amount?\nType 'Y' for yes, and 'N' for no.");
 
                     // Check if the response was 'Y', 'N', or neither
-                    if (response == "Y")
+                    if (response.ToUpper() == "Y")
                     {
                         /* If 'Y' is the reponse, ask the user for a fixed contract amount and 
                         * try to set the employee's fixed contract amount to the new contract amount */
@@ -1656,7 +1657,7 @@ namespace TheCompany
                         }
                         wasQuestionAnswered = true;
                     }
-                    else if (response == "N")
+                    else if (response.ToUpper() == "N")
                     {
                         /* If 'N' is the response, then the user has chosen not 
                         * to modify this property, so leave the while loop */
@@ -1707,7 +1708,7 @@ namespace TheCompany
                 + "\nWould you like to modify the season?\nType 'Y' for yes, and 'N' for no.");
 
                 // Check if the response was 'Y', 'N', or neither
-                if (response == "Y")
+                if (response.ToUpper() == "Y")
                 {
                     /* If 'Y' is the reponse, ask the user for a season, 
                     and try to set the employee's season to the new season */
@@ -1727,7 +1728,7 @@ namespace TheCompany
                     }
                     wasQuestionAnswered = true;
                 }
-                else if (response == "N")
+                else if (response.ToUpper() == "N")
                 {
                     /* If 'N' is the response, then the user has chosen not 
                     * to modify this property, so leave the while loop */
@@ -1774,7 +1775,7 @@ namespace TheCompany
                     + "\nWould you like to modify the piece pay?\nType 'Y' for yes, and 'N' for no.");
 
                     // Check if the response was 'Y', 'N', or neither
-                    if (response == "Y")
+                    if (response.ToUpper() == "Y")
                     {
                         /* If 'Y' is the reponse, ask the user for a piece pay and 
                         * try to set the employee's piece pay to the new piece pay */
@@ -1795,7 +1796,7 @@ namespace TheCompany
                         }
                         wasQuestionAnswered = true;
                     }
-                    else if (response == "N")
+                    else if (response.ToUpper() == "N")
                     {
                         /* If 'N' is the response, then the user has chosen not 
                         * to modify this property, so leave the while loop */
@@ -2032,6 +2033,7 @@ namespace TheCompany
                 }
                 if ((EmployeeMatch == true) || (isBaseDetailsAMatch == true))
                 {
+                    Console.Clear();   
                     wasThereAMatch = true;
                     selectedEmployee = IsThisTheDesiredEmployee(employee);
                     // Check if the returned employee is the employee the user selected
@@ -2079,14 +2081,14 @@ namespace TheCompany
                 response = DisplayEmployeeDetails(employee);
 
                 // Check if the response was 'Y', 'N', or neither
-                if (response == "Y")
+                if (response.ToUpper() == "Y")
                 {
                     /* If 'Y' is the response, then the user has selected 
                     * this employee, so leave the while loop */
                     selectedEmployee = employee;
                     wasQuestionAnswered = true;
                 }
-                else if (response == "N")
+                else if (response.ToUpper() == "N")
                 {
                     /* If 'N' is the response, then the user has not selected 
                     * this employee, so leave the while loop */
