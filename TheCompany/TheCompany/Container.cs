@@ -1733,6 +1733,7 @@ namespace TheCompany
                     /* If 'Y' is the reponse, ask the user for a season, 
                     and try to set the employee's season to the new season */
                     newSeason = UIMenu.GetInfoFromUser("Enter a new season: ");
+                    newSeason = newSeason.Substring(0, 1).ToUpper() + newSeason.Substring(1).ToLower();
                     didModifyWork = ((AllEmployees.SeasonalEmployee)employee).SetSeason(newSeason);
                     // Check if the employee's season has been changed
                     if (didModifyWork == true)
