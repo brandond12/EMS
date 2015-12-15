@@ -244,6 +244,7 @@ namespace Presentation
                         cancel = false;
                         break;
                     case "4":
+                        cancel = false;
                         menuOptionFlag = 3;
                         // Give the employee details to the container class, and remove the applicable employee
                         employee = ShowEmployeeDetailsMenu();
