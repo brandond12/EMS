@@ -1,0 +1,941 @@
+\hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests}{}\section{My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests Class Reference}
+\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests}\index{My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests@{My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests}}
+
+
+{\bfseries  Brief Description} This class is used to test the Parttime\+Employee methods in the All\+Employee class. The methods tested include the constructors, Details, Set\+Date\+Of\+Birth (all 3 overloaded methods), Set\+Dateof\+Hire (all 3 overloaded methods), Set\+Dateof\+Termination(all 3 overloaded methods), Set\+Hourly\+Rate and To\+String.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a8a3389bd51381be941170d33d311de77}{Constructor\+With\+Names\+Test\+Valid1} ()
+\begin{DoxyCompactList}\small\item\em This unit test will check if either name contains anything other than a letter, apostrophe, dash. It will throw an exception if wrong. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aacc90e48de93173876f79a4730249122}{Constructor\+With\+Names\+Test\+Valid2} ()
+\begin{DoxyCompactList}\small\item\em This unit test will check if either name contains anything other than a letter, apostrophe, dash. It will throw an exception if wrong. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a570acee022df6349ccb168fdd8795fb2}{Constructor\+With\+Names\+Test\+Valid3} ()
+\begin{DoxyCompactList}\small\item\em This unit test will check if either name contains anything other than a letter, apostrophe, dash. It will throw an exception if wrong. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a4bec66f82e4a17023d901772b4ba0ba2}{Constructor\+With\+Names\+Test\+Invalid\+Slash} ()
+\begin{DoxyCompactList}\small\item\em This unit test will check if the constructor will fail and if the string is invalid because it contains a slash. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a02d83e44f280d5e321da862bcde79145}{Constructor\+With\+Names\+Test\+Invalid\+Space} ()
+\begin{DoxyCompactList}\small\item\em This unit test will check if the constructor will fail and if the string is invalid because it contains a space. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_afa5c9343c7245a45c6c39bc8c821d982}{Constructor\+With\+Names\+Test\+Invalid\+Number} ()
+\begin{DoxyCompactList}\small\item\em This unit test will check if the constructor will fail and if the string is invalid because it contains a number. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a0cbca99d6bc8eb60f9c2faa98f5441b9}{Constructor\+With\+All\+Param\+Test\+Valid1} ()
+\begin{DoxyCompactList}\small\item\em This unit test will check the constructor that takes in all possible parameters, and give them all valid data. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_afc4d0c29429c2d4238d61c08c3fb2d3c}{Constructor\+With\+All\+Param\+Test\+Valid2} ()
+\begin{DoxyCompactList}\small\item\em This unit test will check the constructor that takes in all possible parameters, and give them all valid data. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a3ce1978ff98c7f208eaf239195bfab88}{Constructor\+With\+All\+Param\+Test\+Valid3} ()
+\begin{DoxyCompactList}\small\item\em This unit test will check the constructor that takes in all possible parameters, and give them all valid data. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a72a8ea8c0c900a8e045dabd5617ba707}{Constructor\+With\+All\+Param\+Test\+Invalid\+S\+I\+N} ()
+\begin{DoxyCompactList}\small\item\em This unit test will check the constructor that takes in all possible parameters, and give them all invalid data. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_ae59654accc19b9d7e38ab7f4e0f34fb6}{Constructor\+With\+All\+Param\+Test\+Invalid\+D\+O\+H\+Before\+D\+O\+B} ()
+\begin{DoxyCompactList}\small\item\em This unit test will check the constructor that takes in all possible parameters, and give them all invalid data. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a36b5c50519f9866cab59de9204f00e91}{Constructor\+With\+All\+Param\+Test\+Invalid\+D\+O\+T\+Bofore\+D\+O\+H} ()
+\begin{DoxyCompactList}\small\item\em This unit test will check the constructor that takes in all possible parameters, and give them all invalid data. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_acf0c1df829038c4ea3b2b4afd372bb48}{Constructor\+With\+All\+Param\+Test\+Invalid\+No\+D\+O\+H} ()
+\begin{DoxyCompactList}\small\item\em This unit test will check the constructor that takes in all possible parameters, and give them all invalid data. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a4c3a51bc9124ca9b76d227aa5a591e66}{Details\+Test\+Valid} ()
+\begin{DoxyCompactList}\small\item\em This unit test will create an employee and runs it\textquotesingle{}s details, and will ensure that the string is what it should be(it is hardcoded) \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a93e1c4eaf3750132e8e60df585eb4be4}{To\+String\+Test\+Valid} ()
+\begin{DoxyCompactList}\small\item\em This unit test will create an employee and runs it\textquotesingle{}s details, and will ensure that the string is what it should be(it is hardcoded) \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a0b68bd86c876d05b7823bdeaedef0112}{Set\+Date\+Of\+Hire\+Date\+Test\+Valid\+Date} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of hire date to a valid date. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aaca9d768d0e5b83ef1a74043417cd969}{Set\+Date\+Of\+Hire\+Date\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of hire date to an invalid date. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_ac5405b2d9ab9280666fcd50087abafb6}{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of hire string to an invalid string. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a568d484fb9c0c9685e4520d6106253d7}{Set\+Date\+Of\+Hire\+String\+Test\+Valid\+String} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of hire string to a valid string. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa0d53613837b28606160c2c147e6b909}{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+Format} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of hire string to an invalid string. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aadf36504af3cf262b6bb072f865d3802}{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+Date} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of hire string to an invalid string. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a162b58b62ab4c1107b68602b2f3a6bbc}{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of hire string to an invalid string. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_add3e9cea0f3d03ba1b177590c697e0e1}{Set\+Date\+Of\+Hire\+Date\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of hire date to an invalid date. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a2662fee5c4dbd1e1d6d8038e42d1d615}{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+Letter} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of hire date to an invalid date. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a660a87661d1dea83cdbcdda435f9704c}{Set\+Date\+Of\+Hire\+Ints\+Test\+Valid} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of hire date to a valid date. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_af43b5633da2c4a81340fdf02dafba5c0}{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+Date} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of hire date to an invalid date. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aaf42195f47a983540917b2e4a8ef2106}{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of hire date to an invalid date. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_ac8c15a69d2b818c831a58bee0ad03015}{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of hire date to an invalid date. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa2ca527e770931b43f6353f68ed6b109}{Set\+Date\+Of\+Termination\+Date\+Test\+Valid\+Date} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of termination date to a valid date. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a25ab537e746d046721b346fedf0a7455}{Set\+Date\+Of\+Termination\+Date\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of termination date to an invalid date. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a3713ed1297ae952202955d529d4a4629}{Set\+Date\+Of\+Termination\+String\+Test\+Valid\+String} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of termination string to a valid string. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_ad580c5170feee540d2cd2008e7c54a66}{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+Format} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of termination string to an invalid string. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a22bdea19ca3266a5e54c0792bf6b7ff7}{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+Date} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of termination string to an invalid string. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a73d08e15b8eb651bbc09e7aca26cd65f}{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of termination string to an invalid string. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa445325458236a1781eccd8ada0c9f17}{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+Letter} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of termination string to an invalid string. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa47717f8a375b5bcfb637d87bcc62160}{Set\+Date\+Of\+Termination\+Ints\+Test\+Valid} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of termination date to a valid date. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a422a5225128e49d11e33ee3e4292f779}{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+Date} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of termination date to an invalid date. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a6b600dc38b952b9ada8e31bea5528d3d}{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the date of termination date to an invalid date. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a1a74fc5a6b0121238e98a8f79b167946}{Set\+Hourly\+Rate\+Valid} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the salary to a valid amount. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a6f28346f0b36854cfc4f9b4d6e00da83}{Set\+Hourly\+Rate\+Invalid\+Negitive} ()
+\begin{DoxyCompactList}\small\item\em This unit test will set the salary to an invalid amount. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+{\bfseries  Brief Description} This class is used to test the Parttime\+Employee methods in the All\+Employee class. The methods tested include the constructors, Details, Set\+Date\+Of\+Birth (all 3 overloaded methods), Set\+Dateof\+Hire (all 3 overloaded methods), Set\+Dateof\+Termination(all 3 overloaded methods), Set\+Hourly\+Rate and To\+String. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_ae59654accc19b9d7e38ab7f4e0f34fb6}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Constructor\+With\+All\+Param\+Test\+Invalid\+D\+O\+H\+Before\+D\+O\+B@{Constructor\+With\+All\+Param\+Test\+Invalid\+D\+O\+H\+Before\+D\+O\+B}}
+\index{Constructor\+With\+All\+Param\+Test\+Invalid\+D\+O\+H\+Before\+D\+O\+B@{Constructor\+With\+All\+Param\+Test\+Invalid\+D\+O\+H\+Before\+D\+O\+B}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Constructor\+With\+All\+Param\+Test\+Invalid\+D\+O\+H\+Before\+D\+O\+B}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Constructor\+With\+All\+Param\+Test\+Invalid\+D\+O\+H\+Before\+D\+O\+B (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_ae59654accc19b9d7e38ab7f4e0f34fb6}
+
+
+This unit test will check the constructor that takes in all possible parameters, and give them all invalid data. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_ae59654accc19b9d7e38ab7f4e0f34fb6}{Constructor\+With\+All\+Param\+Test\+Invalid\+D\+O\+H\+Before\+D\+O\+B()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time D\+O\+B = new Date\+Time(2003, 12, 12); Date\+Time D\+O\+H = new Date\+Time(2001, 02, 27); Date\+Time D\+O\+T = new Date\+Time(2006, 05, 21); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that there is an exception
+
+\textbackslash{} {\bfseries  Actual Result} An exception is thrown \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a36b5c50519f9866cab59de9204f00e91}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Constructor\+With\+All\+Param\+Test\+Invalid\+D\+O\+T\+Bofore\+D\+O\+H@{Constructor\+With\+All\+Param\+Test\+Invalid\+D\+O\+T\+Bofore\+D\+O\+H}}
+\index{Constructor\+With\+All\+Param\+Test\+Invalid\+D\+O\+T\+Bofore\+D\+O\+H@{Constructor\+With\+All\+Param\+Test\+Invalid\+D\+O\+T\+Bofore\+D\+O\+H}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Constructor\+With\+All\+Param\+Test\+Invalid\+D\+O\+T\+Bofore\+D\+O\+H}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Constructor\+With\+All\+Param\+Test\+Invalid\+D\+O\+T\+Bofore\+D\+O\+H (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a36b5c50519f9866cab59de9204f00e91}
+
+
+This unit test will check the constructor that takes in all possible parameters, and give them all invalid data. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a36b5c50519f9866cab59de9204f00e91}{Constructor\+With\+All\+Param\+Test\+Invalid\+D\+O\+T\+Bofore\+D\+O\+H()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time D\+O\+B = new Date\+Time(1993, 11, 14); Date\+Time D\+O\+H = new Date\+Time(2012, 10, 19); Date\+Time D\+O\+T = new Date\+Time(2010, 07, 29); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that there is an exception
+
+\textbackslash{} {\bfseries  Actual Result} An exception is thrown \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_acf0c1df829038c4ea3b2b4afd372bb48}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Constructor\+With\+All\+Param\+Test\+Invalid\+No\+D\+O\+H@{Constructor\+With\+All\+Param\+Test\+Invalid\+No\+D\+O\+H}}
+\index{Constructor\+With\+All\+Param\+Test\+Invalid\+No\+D\+O\+H@{Constructor\+With\+All\+Param\+Test\+Invalid\+No\+D\+O\+H}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Constructor\+With\+All\+Param\+Test\+Invalid\+No\+D\+O\+H}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Constructor\+With\+All\+Param\+Test\+Invalid\+No\+D\+O\+H (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_acf0c1df829038c4ea3b2b4afd372bb48}
+
+
+This unit test will check the constructor that takes in all possible parameters, and give them all invalid data. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_acf0c1df829038c4ea3b2b4afd372bb48}{Constructor\+With\+All\+Param\+Test\+Invalid\+No\+D\+O\+H()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time D\+O\+B = new Date\+Time(1993, 11, 14); Date\+Time D\+O\+H = new Date\+Time(); Date\+Time D\+O\+T = new Date\+Time(); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 933456789, D\+O\+B, D\+O\+H, D\+O\+T, 180000
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that there is an exception
+
+\textbackslash{} {\bfseries  Actual Result} An exception is thrown \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a72a8ea8c0c900a8e045dabd5617ba707}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Constructor\+With\+All\+Param\+Test\+Invalid\+S\+I\+N@{Constructor\+With\+All\+Param\+Test\+Invalid\+S\+I\+N}}
+\index{Constructor\+With\+All\+Param\+Test\+Invalid\+S\+I\+N@{Constructor\+With\+All\+Param\+Test\+Invalid\+S\+I\+N}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Constructor\+With\+All\+Param\+Test\+Invalid\+S\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Constructor\+With\+All\+Param\+Test\+Invalid\+S\+I\+N (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a72a8ea8c0c900a8e045dabd5617ba707}
+
+
+This unit test will check the constructor that takes in all possible parameters, and give them all invalid data. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a72a8ea8c0c900a8e045dabd5617ba707}{Constructor\+With\+All\+Param\+Test\+Invalid\+S\+I\+N()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time D\+O\+B = new Date\+Time(1984, 02, 15); Date\+Time D\+O\+H = new Date\+Time(1986, 20, 15); Date\+Time D\+O\+T = new Date\+Time(); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 1234756789, D\+O\+B, D\+O\+H, D\+O\+T, 18
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that there is an exception
+
+\textbackslash{} {\bfseries  Actual Result} An exception is thrown \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a0cbca99d6bc8eb60f9c2faa98f5441b9}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Constructor\+With\+All\+Param\+Test\+Valid1@{Constructor\+With\+All\+Param\+Test\+Valid1}}
+\index{Constructor\+With\+All\+Param\+Test\+Valid1@{Constructor\+With\+All\+Param\+Test\+Valid1}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Constructor\+With\+All\+Param\+Test\+Valid1}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Constructor\+With\+All\+Param\+Test\+Valid1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a0cbca99d6bc8eb60f9c2faa98f5441b9}
+
+
+This unit test will check the constructor that takes in all possible parameters, and give them all valid data. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a0cbca99d6bc8eb60f9c2faa98f5441b9}{Constructor\+With\+All\+Param\+Test\+Valid1()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an normal/function.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time D\+O\+B = new Date\+Time(1993, 04, 24); Date\+Time D\+O\+H = new Date\+Time(2000, 12, 12); Date\+Time D\+O\+T = new Date\+Time(); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that there is no exception
+
+\textbackslash{} {\bfseries  Actual Result} An exception is not thrown \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_afc4d0c29429c2d4238d61c08c3fb2d3c}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Constructor\+With\+All\+Param\+Test\+Valid2@{Constructor\+With\+All\+Param\+Test\+Valid2}}
+\index{Constructor\+With\+All\+Param\+Test\+Valid2@{Constructor\+With\+All\+Param\+Test\+Valid2}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Constructor\+With\+All\+Param\+Test\+Valid2}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Constructor\+With\+All\+Param\+Test\+Valid2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_afc4d0c29429c2d4238d61c08c3fb2d3c}
+
+
+This unit test will check the constructor that takes in all possible parameters, and give them all valid data. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_afc4d0c29429c2d4238d61c08c3fb2d3c}{Constructor\+With\+All\+Param\+Test\+Valid2()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an normal/function.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time D\+O\+B = new Date\+Time(1954, 08, 20); Date\+Time D\+O\+H = new Date\+Time(1994, 09, 03); Date\+Time D\+O\+T = new Date\+Time(2014, 12, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Mc\textquotesingle{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that there is no exception
+
+\textbackslash{} {\bfseries  Actual Result} An exception is not thrown \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a3ce1978ff98c7f208eaf239195bfab88}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Constructor\+With\+All\+Param\+Test\+Valid3@{Constructor\+With\+All\+Param\+Test\+Valid3}}
+\index{Constructor\+With\+All\+Param\+Test\+Valid3@{Constructor\+With\+All\+Param\+Test\+Valid3}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Constructor\+With\+All\+Param\+Test\+Valid3}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Constructor\+With\+All\+Param\+Test\+Valid3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a3ce1978ff98c7f208eaf239195bfab88}
+
+
+This unit test will check the constructor that takes in all possible parameters, and give them all valid data. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a3ce1978ff98c7f208eaf239195bfab88}{Constructor\+With\+All\+Param\+Test\+Valid3()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an normal/function.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time D\+O\+B = new Date\+Time(1830, 07, 29); Date\+Time D\+O\+H = new Date\+Time(2013, 05, 12); Date\+Time D\+O\+T = new Date\+Time(); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that there is no exception
+
+\textbackslash{} {\bfseries  Actual Result} An exception is not thrown \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_afa5c9343c7245a45c6c39bc8c821d982}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Constructor\+With\+Names\+Test\+Invalid\+Number@{Constructor\+With\+Names\+Test\+Invalid\+Number}}
+\index{Constructor\+With\+Names\+Test\+Invalid\+Number@{Constructor\+With\+Names\+Test\+Invalid\+Number}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Constructor\+With\+Names\+Test\+Invalid\+Number}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Constructor\+With\+Names\+Test\+Invalid\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_afa5c9343c7245a45c6c39bc8c821d982}
+
+
+This unit test will check if the constructor will fail and if the string is invalid because it contains a number. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_afa5c9343c7245a45c6c39bc8c821d982}{Constructor\+With\+Names\+Test\+Invalid\+Number()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+Brandon2\char`\"{}, \char`\"{}\+Davies\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that it will throw an exception
+
+\textbackslash{} {\bfseries  Actual Result} An exception is thrown \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a4bec66f82e4a17023d901772b4ba0ba2}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Constructor\+With\+Names\+Test\+Invalid\+Slash@{Constructor\+With\+Names\+Test\+Invalid\+Slash}}
+\index{Constructor\+With\+Names\+Test\+Invalid\+Slash@{Constructor\+With\+Names\+Test\+Invalid\+Slash}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Constructor\+With\+Names\+Test\+Invalid\+Slash}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Constructor\+With\+Names\+Test\+Invalid\+Slash (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a4bec66f82e4a17023d901772b4ba0ba2}
+
+
+This unit test will check if the constructor will fail and if the string is invalid because it contains a slash. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a4bec66f82e4a17023d901772b4ba0ba2}{Constructor\+With\+Names\+Test\+Invalid\+Slash()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Mc/\+Davies\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that it will throw an exception
+
+\textbackslash{} {\bfseries  Actual Result} An exception is thrown \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a02d83e44f280d5e321da862bcde79145}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Constructor\+With\+Names\+Test\+Invalid\+Space@{Constructor\+With\+Names\+Test\+Invalid\+Space}}
+\index{Constructor\+With\+Names\+Test\+Invalid\+Space@{Constructor\+With\+Names\+Test\+Invalid\+Space}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Constructor\+With\+Names\+Test\+Invalid\+Space}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Constructor\+With\+Names\+Test\+Invalid\+Space (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a02d83e44f280d5e321da862bcde79145}
+
+
+This unit test will check if the constructor will fail and if the string is invalid because it contains a space. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a02d83e44f280d5e321da862bcde79145}{Constructor\+With\+Names\+Test\+Invalid\+Space()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Mc Davies\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that it will throw an exception
+
+\textbackslash{} {\bfseries  Actual Result} An exception is thrown \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a8a3389bd51381be941170d33d311de77}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Constructor\+With\+Names\+Test\+Valid1@{Constructor\+With\+Names\+Test\+Valid1}}
+\index{Constructor\+With\+Names\+Test\+Valid1@{Constructor\+With\+Names\+Test\+Valid1}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Constructor\+With\+Names\+Test\+Valid1}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Constructor\+With\+Names\+Test\+Valid1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a8a3389bd51381be941170d33d311de77}
+
+
+This unit test will check if either name contains anything other than a letter, apostrophe, dash. It will throw an exception if wrong. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a8a3389bd51381be941170d33d311de77}{Constructor\+With\+Names\+Test\+Valid1()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is normal/functional.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that there is no exception
+
+\textbackslash{} {\bfseries  Actual Result} There is no exception. \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aacc90e48de93173876f79a4730249122}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Constructor\+With\+Names\+Test\+Valid2@{Constructor\+With\+Names\+Test\+Valid2}}
+\index{Constructor\+With\+Names\+Test\+Valid2@{Constructor\+With\+Names\+Test\+Valid2}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Constructor\+With\+Names\+Test\+Valid2}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Constructor\+With\+Names\+Test\+Valid2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aacc90e48de93173876f79a4730249122}
+
+
+This unit test will check if either name contains anything other than a letter, apostrophe, dash. It will throw an exception if wrong. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aacc90e48de93173876f79a4730249122}{Constructor\+With\+Names\+Test\+Valid2()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is normal/functional.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Mc\textquotesingle{}\+Davies\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that there is no exception
+
+\textbackslash{} {\bfseries  Actual Result} There is no exception. \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a570acee022df6349ccb168fdd8795fb2}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Constructor\+With\+Names\+Test\+Valid3@{Constructor\+With\+Names\+Test\+Valid3}}
+\index{Constructor\+With\+Names\+Test\+Valid3@{Constructor\+With\+Names\+Test\+Valid3}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Constructor\+With\+Names\+Test\+Valid3}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Constructor\+With\+Names\+Test\+Valid3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a570acee022df6349ccb168fdd8795fb2}
+
+
+This unit test will check if either name contains anything other than a letter, apostrophe, dash. It will throw an exception if wrong. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a570acee022df6349ccb168fdd8795fb2}{Constructor\+With\+Names\+Test\+Valid3()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is normal/functional.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Le\+Roy-\/\+Davies\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that there is no exception
+
+\textbackslash{} {\bfseries  Actual Result} There is no exception. \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a4c3a51bc9124ca9b76d227aa5a591e66}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Details\+Test\+Valid@{Details\+Test\+Valid}}
+\index{Details\+Test\+Valid@{Details\+Test\+Valid}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Details\+Test\+Valid}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Details\+Test\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a4c3a51bc9124ca9b76d227aa5a591e66}
+
+
+This unit test will create an employee and runs it\textquotesingle{}s details, and will ensure that the string is what it should be(it is hardcoded) 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a4c3a51bc9124ca9b76d227aa5a591e66}{Details\+Test\+Valid()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an normal/function.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time D\+O\+B = new Date\+Time(1954, 08, 20); Date\+Time D\+O\+H = new Date\+Time(1994, 09, 03); Date\+Time D\+O\+T = new Date\+Time(2014, 12, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the string will be \char`\"{}\+Employee Type\+: Parttime\+Employee\textbackslash{}n\+Name\+: Brandon Davies\textbackslash{}n\+Social Insurance Number\+: 123 456 789\textbackslash{}n\+Date of Birth\+: 1954-\/08-\/20\textbackslash{}n\+Date of Hire\+: 1994-\/09-\/03\textbackslash{}n\+Date of Termionation2014-\/12-\/23\textbackslash{}n\+Hourly Rate\+: 18\char`\"{}
+
+\textbackslash{} {\bfseries  Actual Result} The string is equivalent to \char`\"{}\+Employee Type\+: Parttime\+Employee\textbackslash{}n\+Name\+: Brandon Davies\textbackslash{}n\+Social Insurance Number\+: 123 456 789\textbackslash{}n\+Date of Birth\+: 1954-\/08-\/20\textbackslash{}n\+Date of Hire\+: 1994-\/09-\/03\textbackslash{}n\+Date of Termionation2014-\/12-\/23\textbackslash{}n\+Hourly Rate\+: 18\char`\"{} \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aaca9d768d0e5b83ef1a74043417cd969}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Hire\+Date\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T@{Set\+Date\+Of\+Hire\+Date\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T}}
+\index{Set\+Date\+Of\+Hire\+Date\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T@{Set\+Date\+Of\+Hire\+Date\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Hire\+Date\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Hire\+Date\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aaca9d768d0e5b83ef1a74043417cd969}
+
+
+This unit test will set the date of hire date to an invalid date. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aaca9d768d0e5b83ef1a74043417cd969}{Set\+Date\+Of\+Hire\+Date\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time D\+O\+B = new Date\+Time(1954, 08, 20); Date\+Time D\+O\+H = new Date\+Time(1994, 09, 03); Date\+Time D\+O\+T = new Date\+Time(2000, 03, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18 2012, 04, 23
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_add3e9cea0f3d03ba1b177590c697e0e1}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Hire\+Date\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B@{Set\+Date\+Of\+Hire\+Date\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B}}
+\index{Set\+Date\+Of\+Hire\+Date\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B@{Set\+Date\+Of\+Hire\+Date\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Hire\+Date\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Hire\+Date\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_add3e9cea0f3d03ba1b177590c697e0e1}
+
+
+This unit test will set the date of hire date to an invalid date. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_add3e9cea0f3d03ba1b177590c697e0e1}{Set\+Date\+Of\+Hire\+Date\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time(1954, 08, 20); Date\+Time(1994, 09, 03); Date\+Time(2000, 03, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18 \char`\"{}1980-\/12-\/24\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a0b68bd86c876d05b7823bdeaedef0112}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Hire\+Date\+Test\+Valid\+Date@{Set\+Date\+Of\+Hire\+Date\+Test\+Valid\+Date}}
+\index{Set\+Date\+Of\+Hire\+Date\+Test\+Valid\+Date@{Set\+Date\+Of\+Hire\+Date\+Test\+Valid\+Date}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Hire\+Date\+Test\+Valid\+Date}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Hire\+Date\+Test\+Valid\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a0b68bd86c876d05b7823bdeaedef0112}
+
+
+This unit test will set the date of hire date to a valid date. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a0b68bd86c876d05b7823bdeaedef0112}{Set\+Date\+Of\+Hire\+Date\+Test\+Valid\+Date()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an normal/function.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time(2012, 04, 23)
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be true and the data member should have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is true, and the data member should have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_af43b5633da2c4a81340fdf02dafba5c0}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+Date@{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+Date}}
+\index{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+Date@{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+Date}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+Date}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_af43b5633da2c4a81340fdf02dafba5c0}
+
+
+This unit test will set the date of hire date to an invalid date. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_af43b5633da2c4a81340fdf02dafba5c0}{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+Date()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} 1993, 04, 31
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aaf42195f47a983540917b2e4a8ef2106}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T@{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T}}
+\index{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T@{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aaf42195f47a983540917b2e4a8ef2106}
+
+
+This unit test will set the date of hire date to an invalid date. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aaf42195f47a983540917b2e4a8ef2106}{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time(1954, 08, 20); Date\+Time(1994, 09, 03); Date\+Time(2000, 03, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18 2001, 12, 24
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_ac8c15a69d2b818c831a58bee0ad03015}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B@{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B}}
+\index{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B@{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_ac8c15a69d2b818c831a58bee0ad03015}
+
+
+This unit test will set the date of hire date to an invalid date. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_ac8c15a69d2b818c831a58bee0ad03015}{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time(1984, 08, 20); Date\+Time(1994, 09, 03); Date\+Time(2000, 03, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18 1980, 12, 24
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a2662fee5c4dbd1e1d6d8038e42d1d615}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+Letter@{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+Letter}}
+\index{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+Letter@{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+Letter}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+Letter}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+Letter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a2662fee5c4dbd1e1d6d8038e42d1d615}
+
+
+This unit test will set the date of hire date to an invalid date. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a2662fee5c4dbd1e1d6d8038e42d1d615}{Set\+Date\+Of\+Hire\+Ints\+Test\+Invalid\+Letter()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}1993-\/s2-\/24\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a660a87661d1dea83cdbcdda435f9704c}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Hire\+Ints\+Test\+Valid@{Set\+Date\+Of\+Hire\+Ints\+Test\+Valid}}
+\index{Set\+Date\+Of\+Hire\+Ints\+Test\+Valid@{Set\+Date\+Of\+Hire\+Ints\+Test\+Valid}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Hire\+Ints\+Test\+Valid}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Hire\+Ints\+Test\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a660a87661d1dea83cdbcdda435f9704c}
+
+
+This unit test will set the date of hire date to a valid date. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a660a87661d1dea83cdbcdda435f9704c}{Set\+Date\+Of\+Hire\+Ints\+Test\+Valid()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an normal/function.
+
+\textbackslash{} {\bfseries  Sample Data Sets} 1993, 04, 24
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be true and the data member should have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is true, and the data member should have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aadf36504af3cf262b6bb072f865d3802}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+Date@{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+Date}}
+\index{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+Date@{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+Date}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+Date}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aadf36504af3cf262b6bb072f865d3802}
+
+
+This unit test will set the date of hire string to an invalid string. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa0d53613837b28606160c2c147e6b909}{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+Format()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}1993-\/13-\/24\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a162b58b62ab4c1107b68602b2f3a6bbc}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T@{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T}}
+\index{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T@{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a162b58b62ab4c1107b68602b2f3a6bbc}
+
+
+This unit test will set the date of hire string to an invalid string. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a162b58b62ab4c1107b68602b2f3a6bbc}{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+D\+O\+Hafter\+D\+O\+T()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time(1954, 08, 20); Date\+Time(1994, 09, 03); Date\+Time(2000, 03, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18 \char`\"{}2001-\/12-\/24\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_ac5405b2d9ab9280666fcd50087abafb6}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B@{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B}}
+\index{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B@{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_ac5405b2d9ab9280666fcd50087abafb6}
+
+
+This unit test will set the date of hire string to an invalid string. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_ac5405b2d9ab9280666fcd50087abafb6}{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+D\+O\+Hbefore\+D\+O\+B()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time D\+O\+B = new Date\+Time(1985, 08, 20); Date\+Time D\+O\+H = new Date\+Time(1994, 09, 03); Date\+Time D\+O\+T = new Date\+Time(2000, 03, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18 1980, 04, 23
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa0d53613837b28606160c2c147e6b909}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+Format@{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+Format}}
+\index{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+Format@{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+Format}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+Format}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+Format (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa0d53613837b28606160c2c147e6b909}
+
+
+This unit test will set the date of hire string to an invalid string. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa0d53613837b28606160c2c147e6b909}{Set\+Date\+Of\+Hire\+String\+Test\+Invalid\+Format()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}19930424\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a568d484fb9c0c9685e4520d6106253d7}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Hire\+String\+Test\+Valid\+String@{Set\+Date\+Of\+Hire\+String\+Test\+Valid\+String}}
+\index{Set\+Date\+Of\+Hire\+String\+Test\+Valid\+String@{Set\+Date\+Of\+Hire\+String\+Test\+Valid\+String}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Hire\+String\+Test\+Valid\+String}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Hire\+String\+Test\+Valid\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a568d484fb9c0c9685e4520d6106253d7}
+
+
+This unit test will set the date of hire string to a valid string. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a568d484fb9c0c9685e4520d6106253d7}{Set\+Date\+Of\+Hire\+String\+Test\+Valid\+String()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an normal/function.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}1993-\/04-\/24\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be true and the data member should have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is true, and the data member should have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a25ab537e746d046721b346fedf0a7455}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Termination\+Date\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H@{Set\+Date\+Of\+Termination\+Date\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H}}
+\index{Set\+Date\+Of\+Termination\+Date\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H@{Set\+Date\+Of\+Termination\+Date\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Termination\+Date\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Termination\+Date\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a25ab537e746d046721b346fedf0a7455}
+
+
+This unit test will set the date of termination date to an invalid date. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a25ab537e746d046721b346fedf0a7455}{Set\+Date\+Of\+Termination\+Date\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time(1954, 08, 20); Date\+Time(1994, 09, 03); Date\+Time(2000, 03, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18 1992, 04, 23
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa2ca527e770931b43f6353f68ed6b109}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Termination\+Date\+Test\+Valid\+Date@{Set\+Date\+Of\+Termination\+Date\+Test\+Valid\+Date}}
+\index{Set\+Date\+Of\+Termination\+Date\+Test\+Valid\+Date@{Set\+Date\+Of\+Termination\+Date\+Test\+Valid\+Date}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Termination\+Date\+Test\+Valid\+Date}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Termination\+Date\+Test\+Valid\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa2ca527e770931b43f6353f68ed6b109}
+
+
+This unit test will set the date of termination date to a valid date. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa2ca527e770931b43f6353f68ed6b109}{Set\+Date\+Of\+Termination\+Date\+Test\+Valid\+Date()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an normal/function.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time(1984, 08, 20); Date\+Time(1994, 09, 03); Date\+Time(2000, 03, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18 2012, 04, 23
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be true and the data member should have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is true, and the data member should have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a422a5225128e49d11e33ee3e4292f779}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+Date@{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+Date}}
+\index{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+Date@{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+Date}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+Date}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a422a5225128e49d11e33ee3e4292f779}
+
+
+This unit test will set the date of termination date to an invalid date. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a422a5225128e49d11e33ee3e4292f779}{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+Date()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time(1954, 08, 20); Date\+Time(1994, 09, 03); Date\+Time(2000, 03, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18 1993, 04, 31
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a6b600dc38b952b9ada8e31bea5528d3d}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H@{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H}}
+\index{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H@{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a6b600dc38b952b9ada8e31bea5528d3d}
+
+
+This unit test will set the date of termination date to an invalid date. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a6b600dc38b952b9ada8e31bea5528d3d}{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time(1954, 08, 20); Date\+Time(1994, 09, 03); Date\+Time(2000, 03, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18 1991, 12, 24
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa445325458236a1781eccd8ada0c9f17}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+Letter@{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+Letter}}
+\index{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+Letter@{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+Letter}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+Letter}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+Letter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa445325458236a1781eccd8ada0c9f17}
+
+
+This unit test will set the date of termination string to an invalid string. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa445325458236a1781eccd8ada0c9f17}{Set\+Date\+Of\+Termination\+Ints\+Test\+Invalid\+Letter()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time(1954, 08, 20); Date\+Time(1994, 09, 03); Date\+Time(2000, 03, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18 \char`\"{}1993-\/s2-\/24\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa47717f8a375b5bcfb637d87bcc62160}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Termination\+Ints\+Test\+Valid@{Set\+Date\+Of\+Termination\+Ints\+Test\+Valid}}
+\index{Set\+Date\+Of\+Termination\+Ints\+Test\+Valid@{Set\+Date\+Of\+Termination\+Ints\+Test\+Valid}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Termination\+Ints\+Test\+Valid}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Termination\+Ints\+Test\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa47717f8a375b5bcfb637d87bcc62160}
+
+
+This unit test will set the date of termination date to a valid date. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_aa47717f8a375b5bcfb637d87bcc62160}{Set\+Date\+Of\+Termination\+Ints\+Test\+Valid()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an normal/function.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time(1954, 08, 20); Date\+Time(1994, 09, 03); Date\+Time(2000, 03, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18 1997, 04, 24
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be true and the data member should have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is true, and the data member should have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a22bdea19ca3266a5e54c0792bf6b7ff7}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+Date@{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+Date}}
+\index{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+Date@{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+Date}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+Date}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a22bdea19ca3266a5e54c0792bf6b7ff7}
+
+
+This unit test will set the date of termination string to an invalid string. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a22bdea19ca3266a5e54c0792bf6b7ff7}{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+Date()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time(1954, 08, 20); Date\+Time(1994, 09, 03); Date\+Time(2000, 03, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18 \char`\"{}1997-\/13-\/24\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a73d08e15b8eb651bbc09e7aca26cd65f}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H@{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H}}
+\index{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H@{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a73d08e15b8eb651bbc09e7aca26cd65f}
+
+
+This unit test will set the date of termination string to an invalid string. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a73d08e15b8eb651bbc09e7aca26cd65f}{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+D\+O\+Tbefore\+D\+O\+H()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time(1954, 08, 20); Date\+Time(1994, 09, 03); Date\+Time(2000, 03, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18 \char`\"{}1993-\/12-\/24\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_ad580c5170feee540d2cd2008e7c54a66}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+Format@{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+Format}}
+\index{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+Format@{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+Format}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+Format}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+Format (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_ad580c5170feee540d2cd2008e7c54a66}
+
+
+This unit test will set the date of termination string to an invalid string. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_ad580c5170feee540d2cd2008e7c54a66}{Set\+Date\+Of\+Termination\+String\+Test\+Invalid\+Format()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time(1954, 08, 20); Date\+Time(1994, 09, 03); Date\+Time(2000, 03, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 230000 \char`\"{}19970424\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a3713ed1297ae952202955d529d4a4629}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Date\+Of\+Termination\+String\+Test\+Valid\+String@{Set\+Date\+Of\+Termination\+String\+Test\+Valid\+String}}
+\index{Set\+Date\+Of\+Termination\+String\+Test\+Valid\+String@{Set\+Date\+Of\+Termination\+String\+Test\+Valid\+String}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Date\+Of\+Termination\+String\+Test\+Valid\+String}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Date\+Of\+Termination\+String\+Test\+Valid\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a3713ed1297ae952202955d529d4a4629}
+
+
+This unit test will set the date of termination string to a valid string. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a3713ed1297ae952202955d529d4a4629}{Set\+Date\+Of\+Termination\+String\+Test\+Valid\+String()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an normal/function.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time(1954, 08, 20); Date\+Time(1994, 09, 03); Date\+Time(2000, 03, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18 \char`\"{}1997-\/04-\/24\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be true and the data member should have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is true, and the data member should have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a6f28346f0b36854cfc4f9b4d6e00da83}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Hourly\+Rate\+Invalid\+Negitive@{Set\+Hourly\+Rate\+Invalid\+Negitive}}
+\index{Set\+Hourly\+Rate\+Invalid\+Negitive@{Set\+Hourly\+Rate\+Invalid\+Negitive}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Hourly\+Rate\+Invalid\+Negitive}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Hourly\+Rate\+Invalid\+Negitive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a6f28346f0b36854cfc4f9b4d6e00da83}
+
+
+This unit test will set the salary to an invalid amount. 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a6f28346f0b36854cfc4f9b4d6e00da83}{Set\+Hourly\+Rate\+Invalid\+Negitive()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{} -\/18
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be false and the data member should not have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is false, and the data member should not have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a1a74fc5a6b0121238e98a8f79b167946}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!Set\+Hourly\+Rate\+Valid@{Set\+Hourly\+Rate\+Valid}}
+\index{Set\+Hourly\+Rate\+Valid@{Set\+Hourly\+Rate\+Valid}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{Set\+Hourly\+Rate\+Valid}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+Set\+Hourly\+Rate\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a1a74fc5a6b0121238e98a8f79b167946}
+
+
+This unit test will set the salary to a valid amount. 
+
+\textbackslash{} {\bfseries  Name of Method} Set\+Hourly\+Rate()
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an normal/function.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{} 18
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is the return value should be true and the data member should have changed
+
+\textbackslash{} {\bfseries  Actual Result} Return value is true, and the data member should have changed \hypertarget{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a93e1c4eaf3750132e8e60df585eb4be4}{}\index{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}!To\+String\+Test\+Valid@{To\+String\+Test\+Valid}}
+\index{To\+String\+Test\+Valid@{To\+String\+Test\+Valid}!My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests@{My\+All\+Employee\+::\+Tests\+::\+Parttime\+Employee\+Tests}}
+\subsubsection[{To\+String\+Test\+Valid}]{\setlength{\rightskip}{0pt plus 5cm}void My\+All\+Employee.\+Tests.\+Parttime\+Employee\+Tests.\+To\+String\+Test\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a93e1c4eaf3750132e8e60df585eb4be4}
+
+
+This unit test will create an employee and runs it\textquotesingle{}s details, and will ensure that the string is what it should be(it is hardcoded) 
+
+\textbackslash{} {\bfseries  Name of Method} \hyperlink{class_my_all_employee_1_1_tests_1_1_parttime_employee_tests_a93e1c4eaf3750132e8e60df585eb4be4}{To\+String\+Test\+Valid()}
+
+\textbackslash{} {\bfseries  How test is Conducted} This test is run automatically
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is an normal/function.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Date\+Time D\+O\+B = new Date\+Time(1954, 08, 20); Date\+Time D\+O\+H = new Date\+Time(1994, 09, 03); Date\+Time D\+O\+T = new Date\+Time(2014, 12, 23); \char`\"{}\+Brandon\char`\"{}, \char`\"{}\+Davies\char`\"{}, 123456789, D\+O\+B, D\+O\+H, D\+O\+T, 18
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the string will be \char`\"{}$\vert$\+P\+T$\vert$\+Brandon$\vert$\+Davies$\vert$123456789$\vert$1954-\/08-\/20$\vert$1994-\/09-\/03$\vert$2014-\/12-\/23$\vert$18$\vert$\char`\"{}
+
+\textbackslash{} {\bfseries  Actual Result} The string is equivalent to \char`\"{}$\vert$\+P\+T$\vert$\+Brandon$\vert$\+Davies$\vert$123456789$\vert$1954-\/08-\/20$\vert$1994-\/09-\/03$\vert$2014-\/12-\/23$\vert$18$\vert$\char`\"{} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+S\+E\+T\+Repo/trunk/\+E\+M\+S/trunk/\+All\+Employees/\+My\+All\+Employee.\+Tests/Part\+Time\+Employee\+Tests.\+cs\end{DoxyCompactItemize}

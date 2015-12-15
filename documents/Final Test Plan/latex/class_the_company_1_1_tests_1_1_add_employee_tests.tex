@@ -1,0 +1,421 @@
+\hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests}{}\section{The\+Company.\+Tests.\+Add\+Employee\+Tests Class Reference}
+\label{class_the_company_1_1_tests_1_1_add_employee_tests}\index{The\+Company.\+Tests.\+Add\+Employee\+Tests@{The\+Company.\+Tests.\+Add\+Employee\+Tests}}
+
+
+{\bfseries  Brief Description} This class is used to test the Add\+Employee methods in the Container class. The methods tested include Get\+Fulltime\+Employee\+Properties, Get\+Parttime\+Employee\+Properties, Get\+Contract\+Employee\+Properties, Get\+Seasonal\+Employee\+Properties and Add\+Employee. Some of the methods in this class require user input for testing (they will have a string called data\+To\+Pass\+In, and will use Console.\+Set\+In() and String\+Reader). To test the methods with user input, Console.\+Set\+In() and String\+Reader are used to simulate the user input. The idea/code to use the Console.\+Set\+In() and String\+Reader for user input was borrowed from Assaf Stone\textquotesingle{}s post at this link\+: \href{http://www.softwareandi.com/2012/02/how-to-write-automated-tests-for.html}{\tt http\+://www.\+softwareandi.\+com/2012/02/how-\/to-\/write-\/automated-\/tests-\/for.\+html}  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_a3fdc4450cb4b3557355341ac357573ab}{}void {\bfseries Test\+Initialize} ()\label{class_the_company_1_1_tests_1_1_add_employee_tests_a3fdc4450cb4b3557355341ac357573ab}
+
+\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_a6eb37c62a430e5823a61cb158ca02a8f}{Get\+Fulltime\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Fulltime\+Employee} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Get\+Fulltime\+Employee\+Properties creates an employee from the given information and returns that employee. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_a4eb5e98f7407d60af8177d56907dd9bb}{Get\+Fulltime\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Fulltime\+Employee} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Get\+Fulltime\+Employee\+Properties will return a blank employee if the given information is invalid. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_a2de59a3ddfb3172e91cf48a3b7003a39}{Get\+Parttime\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Parttime\+Employee} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Get\+Parttime\+Employee\+Properties creates an employee from the given information and returns that employee. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_aa9ac558d1283759c06c7beb936687ec5}{Get\+Parttime\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Parttime\+Employee} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Get\+Parttime\+Employee\+Properties will return a blank employee if the given information is invalid. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_a736db3f025050c4ac8e09a238b1281b0}{Get\+Contract\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Contract\+Employee} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Get\+Contract\+Employee\+Properties creates an employee from the given information and returns that employee. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_a01ea79c78f37608dcc2a2581d281f48a}{Get\+Contract\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Contract\+Employee} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Get\+Contract\+Employee\+Properties will return a blank employee if the given information is invalid. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_ac30034a498a77c2fc126bd6bdfd7c6b7}{Get\+Seasonal\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Seasonal\+Employee} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Get\+Seasonal\+Employee\+Properties creates an employee from the given information and returns that employee. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_a3a016a2644147e1986067c9904f3eccd}{Get\+Seasonal\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Seasonal\+Employee} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Get\+Seasonal\+Employee\+Properties will return a blank employee if the given information is invalid. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_a91a0e2595bad9bdf615e50c7b75ebdf7}{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Fulltime\+Employee\+Added\+To\+List} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will create a full-\/time employee from the given information and add that employee to a list. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_af781266ccde824a6f42ee4695356dc6c}{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Fulltime\+Employee\+Not\+Added\+To\+List} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will not create a full-\/time employee from the given invalid information and therefore not add it to the employee list. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_ab70c02349350d6afcd78c8d85b4bba05}{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Parttime\+Employee\+Added\+To\+List} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will create a part-\/time employee from the given information and add that employee to a list. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_ace4225c2678e8613cf361e8e4a9d3c12}{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Parttime\+Employee\+Not\+Added\+To\+List} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will not create a part-\/time employee from the given invalid information and therefore not add it to the employee list. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_a075fdfefdfc404f59b2aa6da94963358}{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Contract\+Employee\+Added\+To\+List} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will create a contract employee from the given information and add that employee to a list. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_a5a79ce8cc50df9bc509f3b6a54065867}{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Contract\+Employee\+Not\+Added\+To\+List} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will not create a contract employee from the given invalid information and therefore not add it to the employee list. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_a3c3f8aff01f9c84800a8934b593c6cba}{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Seasonal\+Employee\+Added\+To\+List} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will create a seasonal employee from the given information and add that employee to a list. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_ad53969bc747e488054e9c2d3dffd82d4}{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Seasonal\+Employee\+Not\+Added\+To\+List} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will not create a seasonal employee from the given invalid information and therefore not add it to the employee list. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_add_employee_tests_a5df4ad5271ea9e8b1d34111800128944}{Add\+Employee\+\_\+\+Invalid\+Employee\+Type\+\_\+\+Employee\+Not\+Added\+To\+List} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will not create an employee from the given invalid employee type and therefore not add it to the employee list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_af3ae11de7dbfe8a320fa9820ef398847}{}Container {\bfseries employee\+Repo}\label{class_the_company_1_1_tests_1_1_add_employee_tests_af3ae11de7dbfe8a320fa9820ef398847}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+{\bfseries  Brief Description} This class is used to test the Add\+Employee methods in the Container class. The methods tested include Get\+Fulltime\+Employee\+Properties, Get\+Parttime\+Employee\+Properties, Get\+Contract\+Employee\+Properties, Get\+Seasonal\+Employee\+Properties and Add\+Employee. Some of the methods in this class require user input for testing (they will have a string called data\+To\+Pass\+In, and will use Console.\+Set\+In() and String\+Reader). To test the methods with user input, Console.\+Set\+In() and String\+Reader are used to simulate the user input. The idea/code to use the Console.\+Set\+In() and String\+Reader for user input was borrowed from Assaf Stone\textquotesingle{}s post at this link\+: \href{http://www.softwareandi.com/2012/02/how-to-write-automated-tests-for.html}{\tt http\+://www.\+softwareandi.\+com/2012/02/how-\/to-\/write-\/automated-\/tests-\/for.\+html} 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_a5df4ad5271ea9e8b1d34111800128944}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Add\+Employee\+\_\+\+Invalid\+Employee\+Type\+\_\+\+Employee\+Not\+Added\+To\+List@{Add\+Employee\+\_\+\+Invalid\+Employee\+Type\+\_\+\+Employee\+Not\+Added\+To\+List}}
+\index{Add\+Employee\+\_\+\+Invalid\+Employee\+Type\+\_\+\+Employee\+Not\+Added\+To\+List@{Add\+Employee\+\_\+\+Invalid\+Employee\+Type\+\_\+\+Employee\+Not\+Added\+To\+List}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Add\+Employee\+\_\+\+Invalid\+Employee\+Type\+\_\+\+Employee\+Not\+Added\+To\+List}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Add\+Employee\+\_\+\+Invalid\+Employee\+Type\+\_\+\+Employee\+Not\+Added\+To\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_a5df4ad5271ea9e8b1d34111800128944}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will not create an employee from the given invalid employee type and therefore not add it to the employee list. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Add\+Employee.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is fault/exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+O\+T\textbackslash{}n\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the employee\+List.\+Count will return 0.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the employee\+List.\+Count returns 0. \hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_a5a79ce8cc50df9bc509f3b6a54065867}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Contract\+Employee\+Not\+Added\+To\+List@{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Contract\+Employee\+Not\+Added\+To\+List}}
+\index{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Contract\+Employee\+Not\+Added\+To\+List@{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Contract\+Employee\+Not\+Added\+To\+List}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Contract\+Employee\+Not\+Added\+To\+List}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Contract\+Employee\+Not\+Added\+To\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_a5a79ce8cc50df9bc509f3b6a54065867}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will not create a contract employee from the given invalid information and therefore not add it to the employee list. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Add\+Employee.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is fault/exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+C\+T\textbackslash{}n\+Anna\textbackslash{}n\+Miller\textbackslash{}n892398402\textbackslash{}n1989\textbackslash{}n07\textbackslash{}n02\textbackslash{}n2014\textbackslash{}n02\textbackslash{}n08\textbackslash{}n2014\textbackslash{}n99\textbackslash{}n48\textbackslash{}n15000\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the employee\+List.\+Count will return 0.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the employee\+List.\+Count returns 0. \hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_af781266ccde824a6f42ee4695356dc6c}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Fulltime\+Employee\+Not\+Added\+To\+List@{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Fulltime\+Employee\+Not\+Added\+To\+List}}
+\index{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Fulltime\+Employee\+Not\+Added\+To\+List@{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Fulltime\+Employee\+Not\+Added\+To\+List}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Fulltime\+Employee\+Not\+Added\+To\+List}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Fulltime\+Employee\+Not\+Added\+To\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_af781266ccde824a6f42ee4695356dc6c}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will not create a full-\/time employee from the given invalid information and therefore not add it to the employee list. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Add\+Employee.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is fault/exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+F\+T\textbackslash{}n\+Sam\textbackslash{}n\+Jones\textbackslash{}n90239$\ast$402\textbackslash{}n1990\textbackslash{}n09\textbackslash{}n10\textbackslash{}n2015\textbackslash{}n06\textbackslash{}n04\textbackslash{}n2010\textbackslash{}n10\textbackslash{}n65\textbackslash{}n50000\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the employee\+List.\+Count will return 0.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the employee\+List.\+Count returns 0. \hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_ace4225c2678e8613cf361e8e4a9d3c12}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Parttime\+Employee\+Not\+Added\+To\+List@{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Parttime\+Employee\+Not\+Added\+To\+List}}
+\index{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Parttime\+Employee\+Not\+Added\+To\+List@{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Parttime\+Employee\+Not\+Added\+To\+List}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Parttime\+Employee\+Not\+Added\+To\+List}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Parttime\+Employee\+Not\+Added\+To\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_ace4225c2678e8613cf361e8e4a9d3c12}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will not create a part-\/time employee from the given invalid information and therefore not add it to the employee list. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Add\+Employee.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is fault/exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+P\+T\textbackslash{}n\+Mark\textbackslash{}n\+Smith\textbackslash{}n872098933\textbackslash{}n1987\textbackslash{}n33\textbackslash{}n122\textbackslash{}n2015\textbackslash{}n07\textbackslash{}n13\textbackslash{}n30\textbackslash{}n2013\textbackslash{}n04\textbackslash{}n12\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the employee\+List.\+Count will return 0.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the employee\+List.\+Count returns 0. \hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_ad53969bc747e488054e9c2d3dffd82d4}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Seasonal\+Employee\+Not\+Added\+To\+List@{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Seasonal\+Employee\+Not\+Added\+To\+List}}
+\index{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Seasonal\+Employee\+Not\+Added\+To\+List@{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Seasonal\+Employee\+Not\+Added\+To\+List}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Seasonal\+Employee\+Not\+Added\+To\+List}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Add\+Employee\+\_\+\+Invalid\+Properties\+\_\+\+Seasonal\+Employee\+Not\+Added\+To\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_ad53969bc747e488054e9c2d3dffd82d4}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will not create a seasonal employee from the given invalid information and therefore not add it to the employee list. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Add\+Employee.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is fault/exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+S\+N\textbackslash{}n\+Jake\textbackslash{}n\+Williams\textbackslash{}n912098933\textbackslash{}n1991\textbackslash{}n03\textbackslash{}n18\textbackslash{}n\+Sumwinter\textbackslash{}n10\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the employee\+List.\+Count will return 0.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the employee\+List.\+Count returns 0. \hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_a075fdfefdfc404f59b2aa6da94963358}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Contract\+Employee\+Added\+To\+List@{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Contract\+Employee\+Added\+To\+List}}
+\index{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Contract\+Employee\+Added\+To\+List@{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Contract\+Employee\+Added\+To\+List}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Contract\+Employee\+Added\+To\+List}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Contract\+Employee\+Added\+To\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_a075fdfefdfc404f59b2aa6da94963358}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will create a contract employee from the given information and add that employee to a list. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Add\+Employee.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is normal/functional.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+C\+T\textbackslash{}n\+Anna\textbackslash{}n\+Miller\textbackslash{}n892398402\textbackslash{}n1989\textbackslash{}n07\textbackslash{}n02\textbackslash{}n2014\textbackslash{}n02\textbackslash{}n08\textbackslash{}n2014\textbackslash{}n09\textbackslash{}n12\textbackslash{}n15000\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the employee\+List.\+Count will return 1.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the employee\+List.\+Count returns 1. \hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_a91a0e2595bad9bdf615e50c7b75ebdf7}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Fulltime\+Employee\+Added\+To\+List@{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Fulltime\+Employee\+Added\+To\+List}}
+\index{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Fulltime\+Employee\+Added\+To\+List@{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Fulltime\+Employee\+Added\+To\+List}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Fulltime\+Employee\+Added\+To\+List}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Fulltime\+Employee\+Added\+To\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_a91a0e2595bad9bdf615e50c7b75ebdf7}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will create a full-\/time employee from the given information and add that employee to a list. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Add\+Employee.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is normal/functional.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+F\+T\textbackslash{}n\+Sam\textbackslash{}n\+Jones\textbackslash{}n902398402\textbackslash{}n1990\textbackslash{}n09\textbackslash{}n10\textbackslash{}n2015\textbackslash{}n01\textbackslash{}n02\textbackslash{}n2010\textbackslash{}n10\textbackslash{}n11\textbackslash{}n50000\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the employee\+List.\+Count will return 1.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the employee\+List.\+Count returns 1. \hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_ab70c02349350d6afcd78c8d85b4bba05}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Parttime\+Employee\+Added\+To\+List@{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Parttime\+Employee\+Added\+To\+List}}
+\index{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Parttime\+Employee\+Added\+To\+List@{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Parttime\+Employee\+Added\+To\+List}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Parttime\+Employee\+Added\+To\+List}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Parttime\+Employee\+Added\+To\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_ab70c02349350d6afcd78c8d85b4bba05}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will create a part-\/time employee from the given information and add that employee to a list. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Add\+Employee.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is normal/functional.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+P\+T\textbackslash{}n\+Mark\textbackslash{}n\+Smith\textbackslash{}n872098933\textbackslash{}n1987\textbackslash{}n06\textbackslash{}n22\textbackslash{}n2014\textbackslash{}n08\textbackslash{}n14\textbackslash{}n30\textbackslash{}n2013\textbackslash{}n04\textbackslash{}n12\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the employee\+List.\+Count will return 1.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the employee\+List.\+Count returns 1. \hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_a3c3f8aff01f9c84800a8934b593c6cba}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Seasonal\+Employee\+Added\+To\+List@{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Seasonal\+Employee\+Added\+To\+List}}
+\index{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Seasonal\+Employee\+Added\+To\+List@{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Seasonal\+Employee\+Added\+To\+List}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Seasonal\+Employee\+Added\+To\+List}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Add\+Employee\+\_\+\+Valid\+Properties\+\_\+\+Seasonal\+Employee\+Added\+To\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_a3c3f8aff01f9c84800a8934b593c6cba}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee will create a seasonal employee from the given information and add that employee to a list. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Add\+Employee.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is normal/functional.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+S\+N\textbackslash{}n\+Jake\textbackslash{}n\+Williams\textbackslash{}n912098933\textbackslash{}n1991\textbackslash{}n03\textbackslash{}n18\textbackslash{}n\+Summer\textbackslash{}n10\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the employee\+List.\+Count will return 1.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the employee\+List.\+Count returns 1. \hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_a01ea79c78f37608dcc2a2581d281f48a}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Get\+Contract\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Contract\+Employee@{Get\+Contract\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Contract\+Employee}}
+\index{Get\+Contract\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Contract\+Employee@{Get\+Contract\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Contract\+Employee}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Get\+Contract\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Contract\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Get\+Contract\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Contract\+Employee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_a01ea79c78f37608dcc2a2581d281f48a}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Get\+Contract\+Employee\+Properties will return a blank employee if the given information is invalid. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Get\+Contract\+Employee\+Properties.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is fault/exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+Anna\textbackslash{}n\+Miller\textbackslash{}n89\+C\+F\+G\+H402\textbackslash{}n1989\textbackslash{}n07\textbackslash{}n02\textbackslash{}n2014\textbackslash{}n34\textbackslash{}n08\textbackslash{}n2014\textbackslash{}n09\textbackslash{}n12\textbackslash{}n25000\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the name of the returned employee is blank.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the name of the returned employee is blank. \hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_a736db3f025050c4ac8e09a238b1281b0}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Get\+Contract\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Contract\+Employee@{Get\+Contract\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Contract\+Employee}}
+\index{Get\+Contract\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Contract\+Employee@{Get\+Contract\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Contract\+Employee}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Get\+Contract\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Contract\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Get\+Contract\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Contract\+Employee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_a736db3f025050c4ac8e09a238b1281b0}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Get\+Contract\+Employee\+Properties creates an employee from the given information and returns that employee. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Get\+Contract\+Employee\+Properties.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is normal/functional.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+Anna\textbackslash{}n\+Miller\textbackslash{}n892398402\textbackslash{}n1989\textbackslash{}n07\textbackslash{}n02\textbackslash{}n2014\textbackslash{}n02\textbackslash{}n08\textbackslash{}n2014\textbackslash{}n09\textbackslash{}n12\textbackslash{}n25000\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the name of the returned employee is Anna.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the name of the returned employee is Anna. \hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_a4eb5e98f7407d60af8177d56907dd9bb}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Get\+Fulltime\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Fulltime\+Employee@{Get\+Fulltime\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Fulltime\+Employee}}
+\index{Get\+Fulltime\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Fulltime\+Employee@{Get\+Fulltime\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Fulltime\+Employee}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Get\+Fulltime\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Fulltime\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Get\+Fulltime\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Fulltime\+Employee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_a4eb5e98f7407d60af8177d56907dd9bb}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Get\+Fulltime\+Employee\+Properties will return a blank employee if the given information is invalid. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Get\+Fulltime\+Employee\+Properties.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is fault/exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+Sam\textbackslash{}n\+Jones\textbackslash{}n902398402\textbackslash{}n1990\textbackslash{}n94\textbackslash{}n100\textbackslash{}n1234\textbackslash{}n19\textbackslash{}n32\textbackslash{}n2010\textbackslash{}n67\textbackslash{}n11\textbackslash{}n50000\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the name of the returned employee is blank.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the name of the returned employee is blank. \hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_a6eb37c62a430e5823a61cb158ca02a8f}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Get\+Fulltime\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Fulltime\+Employee@{Get\+Fulltime\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Fulltime\+Employee}}
+\index{Get\+Fulltime\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Fulltime\+Employee@{Get\+Fulltime\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Fulltime\+Employee}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Get\+Fulltime\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Fulltime\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Get\+Fulltime\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Fulltime\+Employee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_a6eb37c62a430e5823a61cb158ca02a8f}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Get\+Fulltime\+Employee\+Properties creates an employee from the given information and returns that employee. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Get\+Fulltime\+Employee\+Properties.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is normal/functional.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+Sam\textbackslash{}n\+Jones\textbackslash{}n902398402\textbackslash{}n1990\textbackslash{}n09\textbackslash{}n10\textbackslash{}n2015\textbackslash{}n06\textbackslash{}n28\textbackslash{}n2010\textbackslash{}n10\textbackslash{}n11\textbackslash{}n50000\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the name of the returned employee is Sam.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the name of the returned employee is Sam. \hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_aa9ac558d1283759c06c7beb936687ec5}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Get\+Parttime\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Parttime\+Employee@{Get\+Parttime\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Parttime\+Employee}}
+\index{Get\+Parttime\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Parttime\+Employee@{Get\+Parttime\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Parttime\+Employee}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Get\+Parttime\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Parttime\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Get\+Parttime\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Parttime\+Employee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_aa9ac558d1283759c06c7beb936687ec5}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Get\+Parttime\+Employee\+Properties will return a blank employee if the given information is invalid. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Get\+Parttime\+Employee\+Properties.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is fault/exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+Mark\textbackslash{}n\+Smith\textbackslash{}n87209893\&\textbackslash{}n1987\textbackslash{}n06\textbackslash{}n78\textbackslash{}n1800\textbackslash{}n04\textbackslash{}n01\textbackslash{}n30\textbackslash{}n2013\textbackslash{}n04\textbackslash{}n12\textbackslash{}n\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the name of the returned employee is blank.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the name of the returned employee is blank. \hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_a2de59a3ddfb3172e91cf48a3b7003a39}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Get\+Parttime\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Parttime\+Employee@{Get\+Parttime\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Parttime\+Employee}}
+\index{Get\+Parttime\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Parttime\+Employee@{Get\+Parttime\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Parttime\+Employee}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Get\+Parttime\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Parttime\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Get\+Parttime\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Parttime\+Employee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_a2de59a3ddfb3172e91cf48a3b7003a39}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Get\+Parttime\+Employee\+Properties creates an employee from the given information and returns that employee. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Get\+Parttime\+Employee\+Properties.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is normal/functional.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+Mark\textbackslash{}n\+Smith\textbackslash{}n872098933\textbackslash{}n1987\textbackslash{}n06\textbackslash{}n22\textbackslash{}n2015\textbackslash{}n11\textbackslash{}n16\textbackslash{}n30\textbackslash{}n2013\textbackslash{}n04\textbackslash{}n12\textbackslash{}n\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the name of the returned employee is Mark.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the name of the returned employee is Mark. \hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_a3a016a2644147e1986067c9904f3eccd}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Get\+Seasonal\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Seasonal\+Employee@{Get\+Seasonal\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Seasonal\+Employee}}
+\index{Get\+Seasonal\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Seasonal\+Employee@{Get\+Seasonal\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Seasonal\+Employee}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Get\+Seasonal\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Seasonal\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Get\+Seasonal\+Employee\+Properties\+\_\+\+Invalid\+Properties\+\_\+\+Returns\+Blank\+Seasonal\+Employee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_a3a016a2644147e1986067c9904f3eccd}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Get\+Seasonal\+Employee\+Properties will return a blank employee if the given information is invalid. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Get\+Seasonal\+Employee\+Properties.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is fault/exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+Jake\textbackslash{}n\+Williams\textbackslash{}n902098933\textbackslash{}n1800\textbackslash{}n23\textbackslash{}n55\textbackslash{}n\+F\+F\+F\+F\textbackslash{}n20\textbackslash{}n\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the name of the returned employee is blank.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the name of the returned employee is blank. \hypertarget{class_the_company_1_1_tests_1_1_add_employee_tests_ac30034a498a77c2fc126bd6bdfd7c6b7}{}\index{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}!Get\+Seasonal\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Seasonal\+Employee@{Get\+Seasonal\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Seasonal\+Employee}}
+\index{Get\+Seasonal\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Seasonal\+Employee@{Get\+Seasonal\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Seasonal\+Employee}!The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests@{The\+Company\+::\+Tests\+::\+Add\+Employee\+Tests}}
+\subsubsection[{Get\+Seasonal\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Seasonal\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Add\+Employee\+Tests.\+Get\+Seasonal\+Employee\+Properties\+\_\+\+Valid\+Properties\+\_\+\+Returns\+Valid\+Seasonal\+Employee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_add_employee_tests_ac30034a498a77c2fc126bd6bdfd7c6b7}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Get\+Seasonal\+Employee\+Properties creates an employee from the given information and returns that employee. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Get\+Seasonal\+Employee\+Properties.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is normal/functional.
+
+\textbackslash{} {\bfseries  Sample Data Sets} \char`\"{}\+Jake\textbackslash{}n\+Williams\textbackslash{}n912098933\textbackslash{}n1991\textbackslash{}n03\textbackslash{}n18\textbackslash{}n\+Fall\textbackslash{}n20\textbackslash{}n\char`\"{}
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the name of the returned employee is Jake.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the name of the returned employee is Jake. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+S\+E\+T\+Repo/trunk/\+E\+M\+S/trunk/\+The\+Company/\+The\+Company.\+Tests/Add\+Employee\+Tests.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,305 @@
+\hypertarget{class_presentation_1_1_u_i_menu}{}\section{Presentation.\+U\+I\+Menu Class Reference}
+\label{class_presentation_1_1_u_i_menu}\index{Presentation.\+U\+I\+Menu@{Presentation.\+U\+I\+Menu}}
+
+
+{\bfseries Brief Description} -\/ This class dislays to the user a number of menus where the user then can access the database and either insert, delete, or make changes. The \hyperlink{class_presentation_1_1_u_i_menu}{U\+I\+Menu} class is related to the container class as it pulls methods from the class. If the user inputs don\textquotesingle{}t match up to what is acceptable, the user will be notified appropriately. The U\+I Menu will not be unit tested. It will be hand tested.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_presentation_1_1_u_i_menu_aecce7fd9ed4696929cbcada2da8c4c2c}{U\+I\+Menu} ()
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_presentation_1_1_u_i_menu}{U\+I\+Menu} constructor sets up a Container object to be used throughout the page. \end{DoxyCompactList}\item 
+\hyperlink{class_presentation_1_1_u_i_menu_ac27724c06cbdcddbcf940f812ba307e3}{U\+I\+Menu} (\hyperlink{class_the_company_1_1_container}{Container} repo)
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_presentation_1_1_u_i_menu}{U\+I\+Menu} constructor connects Container object to the repo. \end{DoxyCompactList}\item 
+bool \hyperlink{class_presentation_1_1_u_i_menu_aa358c475a580c724b992458425649ada}{Show\+Main\+Menu} ()
+\begin{DoxyCompactList}\small\item\em The Show\+Main\+Menu method will display to the user, a U\+I menu.\+This menu allows the user to choose either to manage E\+M\+S database files, manage employees, or to quit the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static String \hyperlink{class_presentation_1_1_u_i_menu_a501cb74c71850dc68b255ff502449031}{Get\+Info\+From\+User} (String User\+Prompt)
+\begin{DoxyCompactList}\small\item\em The Get\+Info\+From\+User method will get the users input and return it to further process it. \end{DoxyCompactList}\item 
+static void \hyperlink{class_presentation_1_1_u_i_menu_a8e46eecdb65e045345059e8a8a44c216}{Show\+Error} (String error\+Message)
+\begin{DoxyCompactList}\small\item\em The Show\+Error method displays an appropriate error message to the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_presentation_1_1_u_i_menu_aae74bf481ca23465073a4fbe0b02ee42}{Show\+File\+Management\+Menu} ()
+\begin{DoxyCompactList}\small\item\em The Show\+File\+Management\+Menu method will display to the user, a U\+I menu.\+This menu allows the user to choose either to load the E\+M\+S database from the file, save an employee set to the E\+M\+S database, or return to the main menu. \end{DoxyCompactList}\item 
+void \hyperlink{class_presentation_1_1_u_i_menu_a2755275ac6f0b154a342ea70d2acf6d1}{Show\+Employee\+Management\+Menu} ()
+\begin{DoxyCompactList}\small\item\em The Show\+Employee\+Management\+Menu method will display to the user, a U\+I menu.\+This menu allows the user to choose either to display an employee set, create a new employee, modify and exisiting employee, remove an existing employee, or return to the main menu. \end{DoxyCompactList}\item 
+\hyperlink{class_all_employees_1_1_employee}{Employee} \hyperlink{class_presentation_1_1_u_i_menu_a5329c6b06713f4244fd897403993d7fb}{Show\+Employee\+Details\+Menu} ()
+\begin{DoxyCompactList}\small\item\em The Show\+Employee\+Details\+Menu method will display to the user, a U\+I menu.\+This menu allows the user to choose either to specify base employee details, to specify values for any employee type, or return to the employee management menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_all_employees_1_1_employee}{Employee} \hyperlink{class_presentation_1_1_u_i_menu_a32f1de7167b0ffb469fea1c2714b81a6}{Get\+Base\+Employee\+Details} ()
+\begin{DoxyCompactList}\small\item\em The Get\+Base\+Employee\+Details method will get the users input, set it in an employee object and return the employee object to further process it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_presentation_1_1_u_i_menu_ada9168d7b009f78447aa7e748d160585}{}\hyperlink{class_the_company_1_1_container}{Container} {\bfseries company}\label{class_presentation_1_1_u_i_menu_ada9168d7b009f78447aa7e748d160585}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_presentation_1_1_u_i_menu_ad4c1bc726554d67c6de3d5641274df38}{}static int {\bfseries menu\+Option\+Flag} = 0\label{class_presentation_1_1_u_i_menu_ad4c1bc726554d67c6de3d5641274df38}
+
+\item 
+\hypertarget{class_presentation_1_1_u_i_menu_a766e4091fa9627d73aacc3ca046b5664}{}static bool {\bfseries cancel} = false\label{class_presentation_1_1_u_i_menu_a766e4091fa9627d73aacc3ca046b5664}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+{\bfseries Brief Description} -\/ This class dislays to the user a number of menus where the user then can access the database and either insert, delete, or make changes. The \hyperlink{class_presentation_1_1_u_i_menu}{U\+I\+Menu} class is related to the container class as it pulls methods from the class. If the user inputs don\textquotesingle{}t match up to what is acceptable, the user will be notified appropriately. The U\+I Menu will not be unit tested. It will be hand tested. 
+
+\begin{DoxyAuthor}{Author}
+{\itshape Jennifer Klimova} 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_presentation_1_1_u_i_menu_aecce7fd9ed4696929cbcada2da8c4c2c}{}\index{Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}!U\+I\+Menu@{U\+I\+Menu}}
+\index{U\+I\+Menu@{U\+I\+Menu}!Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}}
+\subsubsection[{U\+I\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}Presentation.\+U\+I\+Menu.\+U\+I\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_presentation_1_1_u_i_menu_aecce7fd9ed4696929cbcada2da8c4c2c}
+
+
+The \hyperlink{class_presentation_1_1_u_i_menu}{U\+I\+Menu} constructor sets up a Container object to be used throughout the page. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & -\/ n/a\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+End\+Of\+Program\+Exception$>$} & -\/ If the user wants the program to end\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_presentation_1_1_u_i_menu_ac27724c06cbdcddbcf940f812ba307e3}{}\index{Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}!U\+I\+Menu@{U\+I\+Menu}}
+\index{U\+I\+Menu@{U\+I\+Menu}!Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}}
+\subsubsection[{U\+I\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}Presentation.\+U\+I\+Menu.\+U\+I\+Menu (
+\begin{DoxyParamCaption}
+\item[{{\bf Container}}]{repo}
+\end{DoxyParamCaption}
+)}\label{class_presentation_1_1_u_i_menu_ac27724c06cbdcddbcf940f812ba307e3}
+
+
+The \hyperlink{class_presentation_1_1_u_i_menu}{U\+I\+Menu} constructor connects Container object to the repo. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & -\/ {\bfseries  Container repo } -\/ contains the container repo object\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+End\+Of\+Program\+Exception$>$} & -\/ If the user wants the program to end\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_presentation_1_1_u_i_menu_a32f1de7167b0ffb469fea1c2714b81a6}{}\index{Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}!Get\+Base\+Employee\+Details@{Get\+Base\+Employee\+Details}}
+\index{Get\+Base\+Employee\+Details@{Get\+Base\+Employee\+Details}!Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}}
+\subsubsection[{Get\+Base\+Employee\+Details}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Employee} Presentation.\+U\+I\+Menu.\+Get\+Base\+Employee\+Details (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_presentation_1_1_u_i_menu_a32f1de7167b0ffb469fea1c2714b81a6}
+
+
+The Get\+Base\+Employee\+Details method will get the users input, set it in an employee object and return the employee object to further process it. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & -\/ n/a\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+End\+Of\+Program\+Exception$>$} & -\/ If the user wants the program to end\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+-\/ {\bfseries  Employee emp }-\/ returns the employee with information 
+\end{DoxyReturn}
+\hypertarget{class_presentation_1_1_u_i_menu_a501cb74c71850dc68b255ff502449031}{}\index{Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}!Get\+Info\+From\+User@{Get\+Info\+From\+User}}
+\index{Get\+Info\+From\+User@{Get\+Info\+From\+User}!Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}}
+\subsubsection[{Get\+Info\+From\+User}]{\setlength{\rightskip}{0pt plus 5cm}static String Presentation.\+U\+I\+Menu.\+Get\+Info\+From\+User (
+\begin{DoxyParamCaption}
+\item[{String}]{User\+Prompt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_presentation_1_1_u_i_menu_a501cb74c71850dc68b255ff502449031}
+
+
+The Get\+Info\+From\+User method will get the users input and return it to further process it. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & -\/ {\bfseries string User\+Prompt} -\/ contains the users input\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+End\+Of\+Program\+Exception$>$} & -\/ If the user wants the program to end\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+-\/ {\bfseries  string User\+Prompt} -\/ returns the users information 
+\end{DoxyReturn}
+\hypertarget{class_presentation_1_1_u_i_menu_a5329c6b06713f4244fd897403993d7fb}{}\index{Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}!Show\+Employee\+Details\+Menu@{Show\+Employee\+Details\+Menu}}
+\index{Show\+Employee\+Details\+Menu@{Show\+Employee\+Details\+Menu}!Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}}
+\subsubsection[{Show\+Employee\+Details\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Employee} Presentation.\+U\+I\+Menu.\+Show\+Employee\+Details\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_presentation_1_1_u_i_menu_a5329c6b06713f4244fd897403993d7fb}
+
+
+The Show\+Employee\+Details\+Menu method will display to the user, a U\+I menu.\+This menu allows the user to choose either to specify base employee details, to specify values for any employee type, or return to the employee management menu. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & -\/ n/a\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+End\+Of\+Program\+Exception$>$} & -\/ If the user wants the program to end\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_presentation_1_1_u_i_menu_a2755275ac6f0b154a342ea70d2acf6d1}{}\index{Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}!Show\+Employee\+Management\+Menu@{Show\+Employee\+Management\+Menu}}
+\index{Show\+Employee\+Management\+Menu@{Show\+Employee\+Management\+Menu}!Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}}
+\subsubsection[{Show\+Employee\+Management\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}void Presentation.\+U\+I\+Menu.\+Show\+Employee\+Management\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_presentation_1_1_u_i_menu_a2755275ac6f0b154a342ea70d2acf6d1}
+
+
+The Show\+Employee\+Management\+Menu method will display to the user, a U\+I menu.\+This menu allows the user to choose either to display an employee set, create a new employee, modify and exisiting employee, remove an existing employee, or return to the main menu. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & -\/ n/a\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+End\+Of\+Program\+Exception$>$} & -\/ If the user wants the program to end\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_presentation_1_1_u_i_menu_a8e46eecdb65e045345059e8a8a44c216}{}\index{Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}!Show\+Error@{Show\+Error}}
+\index{Show\+Error@{Show\+Error}!Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}}
+\subsubsection[{Show\+Error}]{\setlength{\rightskip}{0pt plus 5cm}static void Presentation.\+U\+I\+Menu.\+Show\+Error (
+\begin{DoxyParamCaption}
+\item[{String}]{error\+Message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_presentation_1_1_u_i_menu_a8e46eecdb65e045345059e8a8a44c216}
+
+
+The Show\+Error method displays an appropriate error message to the user. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & -\/ {\bfseries  string error\+Message } -\/ contains the message\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+End\+Of\+Program\+Exception$>$} & -\/ If the user wants the program to end\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+-\/ n/a 
+\end{DoxyReturn}
+\hypertarget{class_presentation_1_1_u_i_menu_aae74bf481ca23465073a4fbe0b02ee42}{}\index{Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}!Show\+File\+Management\+Menu@{Show\+File\+Management\+Menu}}
+\index{Show\+File\+Management\+Menu@{Show\+File\+Management\+Menu}!Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}}
+\subsubsection[{Show\+File\+Management\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}void Presentation.\+U\+I\+Menu.\+Show\+File\+Management\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_presentation_1_1_u_i_menu_aae74bf481ca23465073a4fbe0b02ee42}
+
+
+The Show\+File\+Management\+Menu method will display to the user, a U\+I menu.\+This menu allows the user to choose either to load the E\+M\+S database from the file, save an employee set to the E\+M\+S database, or return to the main menu. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & -\/ n/a\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+End\+Of\+Program\+Exception$>$} & -\/ If the user wants the program to end\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_presentation_1_1_u_i_menu_aa358c475a580c724b992458425649ada}{}\index{Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}!Show\+Main\+Menu@{Show\+Main\+Menu}}
+\index{Show\+Main\+Menu@{Show\+Main\+Menu}!Presentation\+::\+U\+I\+Menu@{Presentation\+::\+U\+I\+Menu}}
+\subsubsection[{Show\+Main\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}bool Presentation.\+U\+I\+Menu.\+Show\+Main\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_presentation_1_1_u_i_menu_aa358c475a580c724b992458425649ada}
+
+
+The Show\+Main\+Menu method will display to the user, a U\+I menu.\+This menu allows the user to choose either to manage E\+M\+S database files, manage employees, or to quit the program. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & -\/ n/a\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+End\+Of\+Program\+Exception$>$} & -\/ If the user wants the program to end\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+S\+E\+T\+Repo/trunk/\+E\+M\+S/trunk/\+Presentation/\+Presentation/U\+I\+Menu.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,656 @@
+\hypertarget{class_the_company_1_1_container}{}\section{The\+Company.\+Container Class Reference}
+\label{class_the_company_1_1_container}\index{The\+Company.\+Container@{The\+Company.\+Container}}
+
+
+{\bfseries Brief Description} This class is used to add, remove, modify and delete full-\/time, part-\/time, contract and seasonal employees. Bad situations would be most likely to occur during the modification or creation of employees. If a user is modifying an employee\textquotesingle{}s properties and they enter improper data, an exception occurs and the property with the error is not changed. If a user is creating a new employee and they enter improper data, an exception occurs and the employee isn\textquotesingle{}t created. The container class holds employee objects from \hyperlink{namespace_all_employees}{All\+Employees}, and the methods in the container class uses a method in the \hyperlink{namespace_presentation}{Presentation} class to get user input.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_the_company_1_1_container_a5f7b06d8c706d98dd89d337c00c29d97}{Add\+Employee} ()
+\begin{DoxyCompactList}\small\item\em The add\+Employee method is used to create an employee and to add the created employee to a list. While creating the employee, this method uses a method from the U\+I\+Menu class to get user input for the employee\textquotesingle{}s properties. \end{DoxyCompactList}\item 
+bool \hyperlink{class_the_company_1_1_container_ad3b84fc48067495c959f9113c7512f81}{Add\+Employee\+To\+List} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Add\+Employee\+To\+List method is used to add a specified employee to the employee list. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_a83e3bd47b7d2b1a89fc87e70f8fb9082}{Remove\+Employee} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Remove\+Employee method is used to remove a specified employee from a list. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_a4ae3d96ffff3765f4b1f01314fbb4f45}{Display\+All\+Employees} ()
+\begin{DoxyCompactList}\small\item\em The Display\+All\+Employees method is used to traverse through all employee objects in the employee list. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_abe4c2da087834fa62e80fe6457eba47d}{Modify\+Employee} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Modify\+Employee method is used to modify a specified employee. The method goes through each of the employee\textquotesingle{}s properties and asks the user, by using a method from the U\+I\+Menu class, if they would like to update the property. If the user chooses to update a property, the method gets an updated property value from the user by using a method in the U\+I\+Menu class. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_ab031c4984b46f0bf58388860dd2a8d7a}{Modify\+Date\+Of\+Birth} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Modify\+Date\+Of\+Birth method is used to modify the date of birth of the specified employee. The method asks the user if they would like to modify the date of birth, and the user can choose yes or no. If the user enters yes, they will be prompted for a year, month and day. If the date of birth is invalid, the user will be informed. \end{DoxyCompactList}\item 
+\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} \hyperlink{class_the_company_1_1_container_a13074c7cb38cf312063d4dd63bb4f558}{Select\+Employee} (\hyperlink{class_all_employees_1_1_employee}{Employee} employee\+Parameters)
+\begin{DoxyCompactList}\small\item\em The Select\+Employee method is used to select an employee from a list. The method loops through an employee list and displays each employee individually to the user. When an employee is displayed to the user, the user will decide if they want to select the displayed employee or not. \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} $>$ \hyperlink{class_the_company_1_1_container_aad575168cb564c26eaa9a9722f425f23}{Get\+Employee\+List} ()
+\begin{DoxyCompactList}\small\item\em The Get\+Employee\+List method is used to return the list of employees to the calling method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_all_employees_1_1_fulltime_employee}{All\+Employees.\+Fulltime\+Employee} \hyperlink{class_the_company_1_1_container_a06dd9fa578f03d192bb0782b19b11c22}{Get\+Fulltime\+Employee\+Properties} ()
+\begin{DoxyCompactList}\small\item\em The Get\+Fulltime\+Employee\+Properties method is used to create a full-\/time employee object from the properties the user enters. A valid full-\/time employee object is created if the user entered valid data, otherwise a blank object is returned. \end{DoxyCompactList}\item 
+\hyperlink{class_all_employees_1_1_parttime_employee}{All\+Employees.\+Parttime\+Employee} \hyperlink{class_the_company_1_1_container_abf8f2eb5f6f39ff539f0f051979a427a}{Get\+Parttime\+Employee\+Properties} ()
+\begin{DoxyCompactList}\small\item\em The Get\+Parttime\+Employee\+Properties method is used to create a part-\/time employee object from the properties the user enters. A valid part-\/time employee object is created if the user entered valid data, otherwise a blank object is returned. \end{DoxyCompactList}\item 
+\hyperlink{class_all_employees_1_1_contract_employee}{All\+Employees.\+Contract\+Employee} \hyperlink{class_the_company_1_1_container_aff37e43af89a37628263cd78b80a60a5}{Get\+Contract\+Employee\+Properties} ()
+\begin{DoxyCompactList}\small\item\em The Get\+Contract\+Employee\+Properties method is used to create a contract employee object from the properties the user enters. A valid contract employee object is created if the user entered valid data, otherwise a blank object is returned. \end{DoxyCompactList}\item 
+\hyperlink{class_all_employees_1_1_seasonal_employee}{All\+Employees.\+Seasonal\+Employee} \hyperlink{class_the_company_1_1_container_aec76c3159677efddcb47b08ce8404478}{Get\+Seasonal\+Employee\+Properties} ()
+\begin{DoxyCompactList}\small\item\em The Get\+Seasonal\+Employee\+Properties method is used to create a seasonal employee object from the properties the user enters. A valid seasonal employee object is created if the user entered valid data, otherwise a blank object is returned. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_a4a7d1fc143b5508d5d75bf3f273efcc2}{Modify\+First\+Name} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Modify\+First\+Name method is used to modify the first name of the specified employee. The method asks the user if they would like to modify the first name, and the user can choose yes or no. If the user enters yes, they will be prompted for a new name. If the name is invalid, the user will be informed. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_a2e47d1205452ecb352ea6609e0cddcc5}{Modify\+Last\+Name} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Modify\+Last\+Name method is used to modify the last name of the specified employee. The method asks the user if they would like to modify the last name, and the user can choose yes or no. If the user enters yes, they will be prompted for a new name. If the name is invalid, the user will be informed. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_ac58d486919a05c5940937c8b3e29cb38}{Modify\+Social\+Insurance\+Number} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Modify\+Social\+Insurance\+Number method is used to modify the S\+I\+N of the specified employee. The method asks the user if they would like to modify the S\+I\+N, and the user can choose yes or no. If the user enters yes, they will be prompted for a S\+I\+N. If the S\+I\+N is invalid, the user will be informed. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_a6acf243566f6ef9fddbd7e5487bae64a}{Modify\+Employee\+Type} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Modify\+Employee\+Type method is used to modify the type of the specified employee. The method asks the user if they would like to modify the type, and the user can choose yes or no. If the user enters yes, they will be prompted for a type. If the type is invalid, the user will be informed. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_a71dabc365c2d76f2d491a97cae615c7d}{Modify\+Date\+Of\+Hire} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Modify\+Date\+Of\+Hire method is used to modify the date of hire of the specified employee. The method asks the user if they would like to modify the date of hire, and the user can choose yes or no. If the user enters yes, they will be prompted for a year, month and day. If the date of hire is invalid, the user will be informed. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_a2f5a129db55aa8d785ccfa6835ad3f29}{Modify\+Date\+Of\+Termination} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Modify\+Date\+Of\+Termination method is used to modify the date of termination of the specified employee. The method asks the user if they would like to modify the date of termination, and the user can choose yes or no. If the user enters yes, they will be prompted for a year, month and day. If the date of termination is invalid, the user will be informed. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_a84f82419fadc0bf39f1bc7622b23f39b}{Modify\+Salary} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Modify\+Salary method is used to modify the salary of the specified employee. The method asks the user if they would like to modify the salary, and the user can choose yes or no. If the user enters yes, they will be prompted for a new salary. If the salary is invalid, the user will be informed. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_a38b74f7d0fed04956c8b5360e194860b}{Modify\+Hourly\+Rate} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Modify\+Hourly\+Rate method is used to modify the hourly rate of the specified employee. The method asks the user if they would like to modify the hourly rate, and the user can choose yes or no. If the user enters yes, they will be prompted for a new hourly rate. If the hourly rate is invalid, the user will be informed. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_aa631559b361ba4cd6b7499d6e57af5c2}{Modify\+Contract\+Start\+Date} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Modify\+Contract\+Start\+Date method is used to modify the contract start date of the specified employee. The method asks the user if they would like to modify the contract start date, and the user can choose yes or no. If the user enters yes, they will be prompted for a new contract start date. If the new date is invalid, the user will be informed. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_a5966b88fe1b802920e09d984f40454f0}{Modify\+Contract\+Stop\+Date} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Modify\+Contract\+Stop\+Date method is used to modify the contract stop date of the specified employee. The method asks the user if they would like to modify the contract stop date, and the user can choose yes or no. If the user enters yes, they will be prompted for a new contract stop date. If the new date is invalid, the user will be informed. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_aa5548ce6d63db43b96e7002a6b398a64}{Modify\+Fixed\+Contract\+Amount} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Modify\+Fixed\+Contract\+Amount method is used to modify the fixed contract amount of the specified employee. The method asks the user if they would like to modify the contract amount, and the user can choose yes or no. If the user enters yes, they will be prompted for a new fixed contract amount. If the new amount is invalid, the user will be informed. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_af4aa83f1b02b8783ead9bae2edc771d3}{Modify\+Season} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Modify\+Season method is used to modify the season of the specified employee. The method asks the user if they would like to modify the season, and the user can choose yes or no. If the user enters yes, they will be prompted for a new season. If the new season is invalid, the user will be informed. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_container_ae080e1e6827c4525fb0aee041bf5d5b3}{Modify\+Piece\+Pay} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Modify\+Piece\+Pay method is used to modify the piece pay of the specified employee. The method asks the user if they would like to modify the piece pay, and the user can choose yes or no. If the user enters yes, they will be prompted for a new piece pay. If the new piece pay is invalid, the user will be informed. \end{DoxyCompactList}\item 
+\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} \hyperlink{class_the_company_1_1_container_a3f8038abb67c0cec90747c0f4410a2fa}{Is\+This\+The\+Desired\+Employee} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Is\+This\+The\+Desired\+Employee method is used to determine if the user wants the specified employee. An employee\textquotesingle{}s details are displayed to the user, and the user chooses whether or not they want to select that employee. \end{DoxyCompactList}\item 
+String \hyperlink{class_the_company_1_1_container_a7d0ce158e13ecc9f5d1e53700d82f354}{Display\+Employee\+Details} (\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} employee)
+\begin{DoxyCompactList}\small\item\em The Display\+Employee\+Detail method is used to display a specified employee\textquotesingle{}s details, and then ask the user if they would like to select the employee. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_the_company_1_1_container_a8011678e9e4b50803f94e1f011f64826}{}List$<$ \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} $>$ {\bfseries list\+Of\+Employees} = new List$<$\hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}$>$()\label{class_the_company_1_1_container_a8011678e9e4b50803f94e1f011f64826}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+{\bfseries Brief Description} This class is used to add, remove, modify and delete full-\/time, part-\/time, contract and seasonal employees. Bad situations would be most likely to occur during the modification or creation of employees. If a user is modifying an employee\textquotesingle{}s properties and they enter improper data, an exception occurs and the property with the error is not changed. If a user is creating a new employee and they enter improper data, an exception occurs and the employee isn\textquotesingle{}t created. The container class holds employee objects from \hyperlink{namespace_all_employees}{All\+Employees}, and the methods in the container class uses a method in the \hyperlink{namespace_presentation}{Presentation} class to get user input. 
+
+\begin{DoxyAuthor}{Author}
+{\itshape Lauren Machan} 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_the_company_1_1_container_a5f7b06d8c706d98dd89d337c00c29d97}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Add\+Employee@{Add\+Employee}}
+\index{Add\+Employee@{Add\+Employee}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Add\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Add\+Employee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_container_a5f7b06d8c706d98dd89d337c00c29d97}
+
+
+The add\+Employee method is used to create an employee and to add the created employee to a list. While creating the employee, this method uses a method from the U\+I\+Menu class to get user input for the employee\textquotesingle{}s properties. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_ad3b84fc48067495c959f9113c7512f81}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Add\+Employee\+To\+List@{Add\+Employee\+To\+List}}
+\index{Add\+Employee\+To\+List@{Add\+Employee\+To\+List}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Add\+Employee\+To\+List}]{\setlength{\rightskip}{0pt plus 5cm}bool The\+Company.\+Container.\+Add\+Employee\+To\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_container_ad3b84fc48067495c959f9113c7512f81}
+
+
+The Add\+Employee\+To\+List method is used to add a specified employee to the employee list. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to add to the list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_a4ae3d96ffff3765f4b1f01314fbb4f45}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Display\+All\+Employees@{Display\+All\+Employees}}
+\index{Display\+All\+Employees@{Display\+All\+Employees}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Display\+All\+Employees}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Display\+All\+Employees (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_container_a4ae3d96ffff3765f4b1f01314fbb4f45}
+
+
+The Display\+All\+Employees method is used to traverse through all employee objects in the employee list. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_a7d0ce158e13ecc9f5d1e53700d82f354}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Display\+Employee\+Details@{Display\+Employee\+Details}}
+\index{Display\+Employee\+Details@{Display\+Employee\+Details}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Display\+Employee\+Details}]{\setlength{\rightskip}{0pt plus 5cm}String The\+Company.\+Container.\+Display\+Employee\+Details (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_a7d0ce158e13ecc9f5d1e53700d82f354}
+
+
+The Display\+Employee\+Detail method is used to display a specified employee\textquotesingle{}s details, and then ask the user if they would like to select the employee. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee that will be displayed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+response -\/ {\bfseries String} -\/ If the user wants to select the employee or not 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_aff37e43af89a37628263cd78b80a60a5}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Get\+Contract\+Employee\+Properties@{Get\+Contract\+Employee\+Properties}}
+\index{Get\+Contract\+Employee\+Properties@{Get\+Contract\+Employee\+Properties}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Get\+Contract\+Employee\+Properties}]{\setlength{\rightskip}{0pt plus 5cm}{\bf All\+Employees.\+Contract\+Employee} The\+Company.\+Container.\+Get\+Contract\+Employee\+Properties (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_aff37e43af89a37628263cd78b80a60a5}
+
+
+The Get\+Contract\+Employee\+Properties method is used to create a contract employee object from the properties the user enters. A valid contract employee object is created if the user entered valid data, otherwise a blank object is returned. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+employee -\/ {\bfseries \hyperlink{class_all_employees_1_1_contract_employee}{All\+Employees.\+Contract\+Employee}} -\/ The contract employee object 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_aad575168cb564c26eaa9a9722f425f23}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Get\+Employee\+List@{Get\+Employee\+List}}
+\index{Get\+Employee\+List@{Get\+Employee\+List}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Get\+Employee\+List}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf All\+Employees.\+Employee}$>$ The\+Company.\+Container.\+Get\+Employee\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_container_aad575168cb564c26eaa9a9722f425f23}
+
+
+The Get\+Employee\+List method is used to return the list of employees to the calling method. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+Of\+Employees -\/ {\bfseries List} -\/ The list of all employees 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_a06dd9fa578f03d192bb0782b19b11c22}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Get\+Fulltime\+Employee\+Properties@{Get\+Fulltime\+Employee\+Properties}}
+\index{Get\+Fulltime\+Employee\+Properties@{Get\+Fulltime\+Employee\+Properties}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Get\+Fulltime\+Employee\+Properties}]{\setlength{\rightskip}{0pt plus 5cm}{\bf All\+Employees.\+Fulltime\+Employee} The\+Company.\+Container.\+Get\+Fulltime\+Employee\+Properties (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_a06dd9fa578f03d192bb0782b19b11c22}
+
+
+The Get\+Fulltime\+Employee\+Properties method is used to create a full-\/time employee object from the properties the user enters. A valid full-\/time employee object is created if the user entered valid data, otherwise a blank object is returned. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+employee -\/ {\bfseries \hyperlink{class_all_employees_1_1_fulltime_employee}{All\+Employees.\+Fulltime\+Employee}} -\/ The full-\/time employee object 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_abf8f2eb5f6f39ff539f0f051979a427a}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Get\+Parttime\+Employee\+Properties@{Get\+Parttime\+Employee\+Properties}}
+\index{Get\+Parttime\+Employee\+Properties@{Get\+Parttime\+Employee\+Properties}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Get\+Parttime\+Employee\+Properties}]{\setlength{\rightskip}{0pt plus 5cm}{\bf All\+Employees.\+Parttime\+Employee} The\+Company.\+Container.\+Get\+Parttime\+Employee\+Properties (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_abf8f2eb5f6f39ff539f0f051979a427a}
+
+
+The Get\+Parttime\+Employee\+Properties method is used to create a part-\/time employee object from the properties the user enters. A valid part-\/time employee object is created if the user entered valid data, otherwise a blank object is returned. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+employee -\/ {\bfseries \hyperlink{class_all_employees_1_1_parttime_employee}{All\+Employees.\+Parttime\+Employee}} -\/ The part-\/time employee object 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_aec76c3159677efddcb47b08ce8404478}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Get\+Seasonal\+Employee\+Properties@{Get\+Seasonal\+Employee\+Properties}}
+\index{Get\+Seasonal\+Employee\+Properties@{Get\+Seasonal\+Employee\+Properties}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Get\+Seasonal\+Employee\+Properties}]{\setlength{\rightskip}{0pt plus 5cm}{\bf All\+Employees.\+Seasonal\+Employee} The\+Company.\+Container.\+Get\+Seasonal\+Employee\+Properties (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_aec76c3159677efddcb47b08ce8404478}
+
+
+The Get\+Seasonal\+Employee\+Properties method is used to create a seasonal employee object from the properties the user enters. A valid seasonal employee object is created if the user entered valid data, otherwise a blank object is returned. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+employee -\/ {\bfseries \hyperlink{class_all_employees_1_1_seasonal_employee}{All\+Employees.\+Seasonal\+Employee}} -\/ The seasonal employee object 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_a3f8038abb67c0cec90747c0f4410a2fa}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Is\+This\+The\+Desired\+Employee@{Is\+This\+The\+Desired\+Employee}}
+\index{Is\+This\+The\+Desired\+Employee@{Is\+This\+The\+Desired\+Employee}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Is\+This\+The\+Desired\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}{\bf All\+Employees.\+Employee} The\+Company.\+Container.\+Is\+This\+The\+Desired\+Employee (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_a3f8038abb67c0cec90747c0f4410a2fa}
+
+
+The Is\+This\+The\+Desired\+Employee method is used to determine if the user wants the specified employee. An employee\textquotesingle{}s details are displayed to the user, and the user chooses whether or not they want to select that employee. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+employee -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The selected employee 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_aa631559b361ba4cd6b7499d6e57af5c2}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Modify\+Contract\+Start\+Date@{Modify\+Contract\+Start\+Date}}
+\index{Modify\+Contract\+Start\+Date@{Modify\+Contract\+Start\+Date}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Modify\+Contract\+Start\+Date}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Modify\+Contract\+Start\+Date (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_aa631559b361ba4cd6b7499d6e57af5c2}
+
+
+The Modify\+Contract\+Start\+Date method is used to modify the contract start date of the specified employee. The method asks the user if they would like to modify the contract start date, and the user can choose yes or no. If the user enters yes, they will be prompted for a new contract start date. If the new date is invalid, the user will be informed. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to modify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_a5966b88fe1b802920e09d984f40454f0}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Modify\+Contract\+Stop\+Date@{Modify\+Contract\+Stop\+Date}}
+\index{Modify\+Contract\+Stop\+Date@{Modify\+Contract\+Stop\+Date}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Modify\+Contract\+Stop\+Date}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Modify\+Contract\+Stop\+Date (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_a5966b88fe1b802920e09d984f40454f0}
+
+
+The Modify\+Contract\+Stop\+Date method is used to modify the contract stop date of the specified employee. The method asks the user if they would like to modify the contract stop date, and the user can choose yes or no. If the user enters yes, they will be prompted for a new contract stop date. If the new date is invalid, the user will be informed. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to modify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_ab031c4984b46f0bf58388860dd2a8d7a}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Modify\+Date\+Of\+Birth@{Modify\+Date\+Of\+Birth}}
+\index{Modify\+Date\+Of\+Birth@{Modify\+Date\+Of\+Birth}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Modify\+Date\+Of\+Birth}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Modify\+Date\+Of\+Birth (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_container_ab031c4984b46f0bf58388860dd2a8d7a}
+
+
+The Modify\+Date\+Of\+Birth method is used to modify the date of birth of the specified employee. The method asks the user if they would like to modify the date of birth, and the user can choose yes or no. If the user enters yes, they will be prompted for a year, month and day. If the date of birth is invalid, the user will be informed. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to modify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_a71dabc365c2d76f2d491a97cae615c7d}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Modify\+Date\+Of\+Hire@{Modify\+Date\+Of\+Hire}}
+\index{Modify\+Date\+Of\+Hire@{Modify\+Date\+Of\+Hire}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Modify\+Date\+Of\+Hire}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Modify\+Date\+Of\+Hire (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_a71dabc365c2d76f2d491a97cae615c7d}
+
+
+The Modify\+Date\+Of\+Hire method is used to modify the date of hire of the specified employee. The method asks the user if they would like to modify the date of hire, and the user can choose yes or no. If the user enters yes, they will be prompted for a year, month and day. If the date of hire is invalid, the user will be informed. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to modify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_a2f5a129db55aa8d785ccfa6835ad3f29}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Modify\+Date\+Of\+Termination@{Modify\+Date\+Of\+Termination}}
+\index{Modify\+Date\+Of\+Termination@{Modify\+Date\+Of\+Termination}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Modify\+Date\+Of\+Termination}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Modify\+Date\+Of\+Termination (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_a2f5a129db55aa8d785ccfa6835ad3f29}
+
+
+The Modify\+Date\+Of\+Termination method is used to modify the date of termination of the specified employee. The method asks the user if they would like to modify the date of termination, and the user can choose yes or no. If the user enters yes, they will be prompted for a year, month and day. If the date of termination is invalid, the user will be informed. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to modify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_abe4c2da087834fa62e80fe6457eba47d}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Modify\+Employee@{Modify\+Employee}}
+\index{Modify\+Employee@{Modify\+Employee}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Modify\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Modify\+Employee (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_container_abe4c2da087834fa62e80fe6457eba47d}
+
+
+The Modify\+Employee method is used to modify a specified employee. The method goes through each of the employee\textquotesingle{}s properties and asks the user, by using a method from the U\+I\+Menu class, if they would like to update the property. If the user chooses to update a property, the method gets an updated property value from the user by using a method in the U\+I\+Menu class. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to modify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_a6acf243566f6ef9fddbd7e5487bae64a}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Modify\+Employee\+Type@{Modify\+Employee\+Type}}
+\index{Modify\+Employee\+Type@{Modify\+Employee\+Type}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Modify\+Employee\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Modify\+Employee\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_a6acf243566f6ef9fddbd7e5487bae64a}
+
+
+The Modify\+Employee\+Type method is used to modify the type of the specified employee. The method asks the user if they would like to modify the type, and the user can choose yes or no. If the user enters yes, they will be prompted for a type. If the type is invalid, the user will be informed. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to modify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_a4a7d1fc143b5508d5d75bf3f273efcc2}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Modify\+First\+Name@{Modify\+First\+Name}}
+\index{Modify\+First\+Name@{Modify\+First\+Name}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Modify\+First\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Modify\+First\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_a4a7d1fc143b5508d5d75bf3f273efcc2}
+
+
+The Modify\+First\+Name method is used to modify the first name of the specified employee. The method asks the user if they would like to modify the first name, and the user can choose yes or no. If the user enters yes, they will be prompted for a new name. If the name is invalid, the user will be informed. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to modify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_aa5548ce6d63db43b96e7002a6b398a64}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Modify\+Fixed\+Contract\+Amount@{Modify\+Fixed\+Contract\+Amount}}
+\index{Modify\+Fixed\+Contract\+Amount@{Modify\+Fixed\+Contract\+Amount}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Modify\+Fixed\+Contract\+Amount}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Modify\+Fixed\+Contract\+Amount (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_aa5548ce6d63db43b96e7002a6b398a64}
+
+
+The Modify\+Fixed\+Contract\+Amount method is used to modify the fixed contract amount of the specified employee. The method asks the user if they would like to modify the contract amount, and the user can choose yes or no. If the user enters yes, they will be prompted for a new fixed contract amount. If the new amount is invalid, the user will be informed. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to modify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_a38b74f7d0fed04956c8b5360e194860b}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Modify\+Hourly\+Rate@{Modify\+Hourly\+Rate}}
+\index{Modify\+Hourly\+Rate@{Modify\+Hourly\+Rate}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Modify\+Hourly\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Modify\+Hourly\+Rate (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_a38b74f7d0fed04956c8b5360e194860b}
+
+
+The Modify\+Hourly\+Rate method is used to modify the hourly rate of the specified employee. The method asks the user if they would like to modify the hourly rate, and the user can choose yes or no. If the user enters yes, they will be prompted for a new hourly rate. If the hourly rate is invalid, the user will be informed. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to modify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_a2e47d1205452ecb352ea6609e0cddcc5}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Modify\+Last\+Name@{Modify\+Last\+Name}}
+\index{Modify\+Last\+Name@{Modify\+Last\+Name}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Modify\+Last\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Modify\+Last\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_a2e47d1205452ecb352ea6609e0cddcc5}
+
+
+The Modify\+Last\+Name method is used to modify the last name of the specified employee. The method asks the user if they would like to modify the last name, and the user can choose yes or no. If the user enters yes, they will be prompted for a new name. If the name is invalid, the user will be informed. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to modify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_ae080e1e6827c4525fb0aee041bf5d5b3}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Modify\+Piece\+Pay@{Modify\+Piece\+Pay}}
+\index{Modify\+Piece\+Pay@{Modify\+Piece\+Pay}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Modify\+Piece\+Pay}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Modify\+Piece\+Pay (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_ae080e1e6827c4525fb0aee041bf5d5b3}
+
+
+The Modify\+Piece\+Pay method is used to modify the piece pay of the specified employee. The method asks the user if they would like to modify the piece pay, and the user can choose yes or no. If the user enters yes, they will be prompted for a new piece pay. If the new piece pay is invalid, the user will be informed. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to modify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_a84f82419fadc0bf39f1bc7622b23f39b}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Modify\+Salary@{Modify\+Salary}}
+\index{Modify\+Salary@{Modify\+Salary}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Modify\+Salary}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Modify\+Salary (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_a84f82419fadc0bf39f1bc7622b23f39b}
+
+
+The Modify\+Salary method is used to modify the salary of the specified employee. The method asks the user if they would like to modify the salary, and the user can choose yes or no. If the user enters yes, they will be prompted for a new salary. If the salary is invalid, the user will be informed. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to modify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_af4aa83f1b02b8783ead9bae2edc771d3}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Modify\+Season@{Modify\+Season}}
+\index{Modify\+Season@{Modify\+Season}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Modify\+Season}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Modify\+Season (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_af4aa83f1b02b8783ead9bae2edc771d3}
+
+
+The Modify\+Season method is used to modify the season of the specified employee. The method asks the user if they would like to modify the season, and the user can choose yes or no. If the user enters yes, they will be prompted for a new season. If the new season is invalid, the user will be informed. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to modify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_ac58d486919a05c5940937c8b3e29cb38}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Modify\+Social\+Insurance\+Number@{Modify\+Social\+Insurance\+Number}}
+\index{Modify\+Social\+Insurance\+Number@{Modify\+Social\+Insurance\+Number}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Modify\+Social\+Insurance\+Number}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Modify\+Social\+Insurance\+Number (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_the_company_1_1_container_ac58d486919a05c5940937c8b3e29cb38}
+
+
+The Modify\+Social\+Insurance\+Number method is used to modify the S\+I\+N of the specified employee. The method asks the user if they would like to modify the S\+I\+N, and the user can choose yes or no. If the user enters yes, they will be prompted for a S\+I\+N. If the S\+I\+N is invalid, the user will be informed. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to modify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_a83e3bd47b7d2b1a89fc87e70f8fb9082}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Remove\+Employee@{Remove\+Employee}}
+\index{Remove\+Employee@{Remove\+Employee}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Remove\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Container.\+Remove\+Employee (
+\begin{DoxyParamCaption}
+\item[{{\bf All\+Employees.\+Employee}}]{employee}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_container_a83e3bd47b7d2b1a89fc87e70f8fb9082}
+
+
+The Remove\+Employee method is used to remove a specified employee from a list. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The employee to remove from a list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_the_company_1_1_container_a13074c7cb38cf312063d4dd63bb4f558}{}\index{The\+Company\+::\+Container@{The\+Company\+::\+Container}!Select\+Employee@{Select\+Employee}}
+\index{Select\+Employee@{Select\+Employee}!The\+Company\+::\+Container@{The\+Company\+::\+Container}}
+\subsubsection[{Select\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}{\bf All\+Employees.\+Employee} The\+Company.\+Container.\+Select\+Employee (
+\begin{DoxyParamCaption}
+\item[{{\bf Employee}}]{employee\+Parameters}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_container_a13074c7cb38cf312063d4dd63bb4f558}
+
+
+The Select\+Employee method is used to select an employee from a list. The method loops through an employee list and displays each employee individually to the user. When an employee is displayed to the user, the user will decide if they want to select the displayed employee or not. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+employee -\/ {\bfseries \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee}} -\/ The selected employee 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+S\+E\+T\+Repo/trunk/\+E\+M\+S/trunk/\+The\+Company/\+The\+Company/Container.\+cs\end{DoxyCompactItemize}

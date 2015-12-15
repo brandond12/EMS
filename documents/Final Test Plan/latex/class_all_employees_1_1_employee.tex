@@ -1,0 +1,447 @@
+\hypertarget{class_all_employees_1_1_employee}{}\section{All\+Employees.\+Employee Class Reference}
+\label{class_all_employees_1_1_employee}\index{All\+Employees.\+Employee@{All\+Employees.\+Employee}}
+
+
+{\bfseries Brief Description} The \hyperlink{class_all_employees_1_1_employee}{Employee} class is used to hold the basic infomation for all types of employees. This class is the parent to many classes that furthur define different types of employees. If the constructor creates a invalid employee, a exception is thrown. All other errors result in a defined return.  
+
+
+Inheritance diagram for All\+Employees.\+Employee\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.352657cm]{class_all_employees_1_1_employee}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_all_employees_1_1_employee_ac3aa5a59bf1ddba2c45cc933bf897e04}{Employee} ()
+\begin{DoxyCompactList}\small\item\em default constructor. Sets all values to default \end{DoxyCompactList}\item 
+\hyperlink{class_all_employees_1_1_employee_a0a75e7e1786f2c6e5fa482ad79a99234}{Employee} (string first\+Name, string last\+Name)
+\begin{DoxyCompactList}\small\item\em overloaded constructor. Sets name to inputed names, set all other values to default \end{DoxyCompactList}\item 
+\hyperlink{class_all_employees_1_1_employee_aae0bb0d49eb93ff488771dca5a3db315}{Employee} (string first\+Name, string last\+Name, int social\+Insurance\+Number, Date\+Time date\+Of\+Birth, string employee\+Type)
+\begin{DoxyCompactList}\small\item\em overloaded constructor. Sets all values to the values given. no default values \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_employee_ad44ba8da1da1dceb64e1e6f9e6f7c5a3}{Set\+First\+Name} (string first\+Name)
+\begin{DoxyCompactList}\small\item\em Setter for first\+Name. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_employee_a2b5ead1b4de39d2024422c4443034d4c}{Set\+Last\+Name} (string last\+Name)
+\begin{DoxyCompactList}\small\item\em Setter for last\+Name. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_employee_a25c3c9fd99a595fb812b3ba6791f3f11}{Set\+Social\+Insurance\+Number} (int social\+Insurance\+Number)
+\begin{DoxyCompactList}\small\item\em Setter for social\+Insurance\+Number. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_employee_aabdb35f9e42e4847bc33fda68482f7ab}{Set\+Employee\+Type} (string employee\+Type)
+\begin{DoxyCompactList}\small\item\em Setter for type of employee. \end{DoxyCompactList}\item 
+string \hyperlink{class_all_employees_1_1_employee_ae585e71d63222bcd0b87581fc8c1f936}{Get\+First\+Name} ()
+\begin{DoxyCompactList}\small\item\em Getter for first\+Name. \end{DoxyCompactList}\item 
+string \hyperlink{class_all_employees_1_1_employee_afaf5dbaa12c35930b36d3582e831b407}{Get\+Last\+Name} ()
+\begin{DoxyCompactList}\small\item\em Getter for last\+Name. \end{DoxyCompactList}\item 
+int \hyperlink{class_all_employees_1_1_employee_a0b5c62bd8eca3acd7f0921a478d8aefa}{Get\+Social\+Insurance\+Number} ()
+\begin{DoxyCompactList}\small\item\em Getter for social\+Insurance\+Number. \end{DoxyCompactList}\item 
+Date\+Time \hyperlink{class_all_employees_1_1_employee_a98f7200d68ab6a59f4e3283b8f81ce28}{Get\+Date\+Of\+Birth} ()
+\begin{DoxyCompactList}\small\item\em Getter for date\+Of\+Birth. \end{DoxyCompactList}\item 
+string \hyperlink{class_all_employees_1_1_employee_a2c310cf42cb87541a5fde6771e667212}{Get\+Date\+Of\+Birth\+String} ()
+\begin{DoxyCompactList}\small\item\em Getter for date\+Of\+Birth that returns formatted string. \end{DoxyCompactList}\item 
+string \hyperlink{class_all_employees_1_1_employee_a39116fe8a1dcc18735c92c1a3fcb579e}{Get\+Employee\+Type} ()
+\begin{DoxyCompactList}\small\item\em Getter for employee\+Type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_all_employees_1_1_employee_af679e8b4c683b9e94bec085062e5c88e}{Validate\+Base} ()
+\begin{DoxyCompactList}\small\item\em Used to determine in the object contains a valid employee. \end{DoxyCompactList}\item 
+string \hyperlink{class_all_employees_1_1_employee_a9e957826e327579e190cd5075789d1a9}{To\+String\+Base} ()
+\begin{DoxyCompactList}\small\item\em Overriden method To\+String used to return a formated string of all data. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_employee_ac8e625954f41a1e6c9039df61b020bc3}{Set\+Date\+Of\+Birth\+Base} (Date\+Time date)
+\begin{DoxyCompactList}\small\item\em Setter for date\+Of\+Birth using Date\+Time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_all_employees_1_1_employee_a04c4c16015aa2d889fd2042ce4b8a1d7}{}string {\bfseries first\+Name}\label{class_all_employees_1_1_employee_a04c4c16015aa2d889fd2042ce4b8a1d7}
+
+\item 
+\hypertarget{class_all_employees_1_1_employee_ac3721b61919ca9cd29a400620562170e}{}string {\bfseries last\+Name}\label{class_all_employees_1_1_employee_ac3721b61919ca9cd29a400620562170e}
+
+\item 
+\hypertarget{class_all_employees_1_1_employee_a31f55bb91fe0871c5d9a3cb77f44a4df}{}int {\bfseries social\+Insurance\+Number}\label{class_all_employees_1_1_employee_a31f55bb91fe0871c5d9a3cb77f44a4df}
+
+\item 
+\hypertarget{class_all_employees_1_1_employee_a00f33298e4408f0a0402a34c9aa2067a}{}Date\+Time {\bfseries date\+Of\+Birth}\label{class_all_employees_1_1_employee_a00f33298e4408f0a0402a34c9aa2067a}
+
+\item 
+\hypertarget{class_all_employees_1_1_employee_a246198254823dc5a10197029b17479b4}{}string {\bfseries employee\+Type}\label{class_all_employees_1_1_employee_a246198254823dc5a10197029b17479b4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+{\bfseries Brief Description} The \hyperlink{class_all_employees_1_1_employee}{Employee} class is used to hold the basic infomation for all types of employees. This class is the parent to many classes that furthur define different types of employees. If the constructor creates a invalid employee, a exception is thrown. All other errors result in a defined return. 
+
+\begin{DoxyAuthor}{Author}
+{\itshape Brandon} 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_all_employees_1_1_employee_ac3aa5a59bf1ddba2c45cc933bf897e04}{}\index{All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}!Employee@{Employee}}
+\index{Employee@{Employee}!All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}}
+\subsubsection[{Employee}]{\setlength{\rightskip}{0pt plus 5cm}All\+Employees.\+Employee.\+Employee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_employee_ac3aa5a59bf1ddba2c45cc933bf897e04}
+
+
+default constructor. Sets all values to default 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_employee_a0a75e7e1786f2c6e5fa482ad79a99234}{}\index{All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}!Employee@{Employee}}
+\index{Employee@{Employee}!All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}}
+\subsubsection[{Employee}]{\setlength{\rightskip}{0pt plus 5cm}All\+Employees.\+Employee.\+Employee (
+\begin{DoxyParamCaption}
+\item[{string}]{first\+Name, }
+\item[{string}]{last\+Name}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_employee_a0a75e7e1786f2c6e5fa482ad79a99234}
+
+
+overloaded constructor. Sets name to inputed names, set all other values to default 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+Name} & -\/ {\bfseries string} -\/ First Name of employee to add to records \\
+\hline
+{\em last\+Name} & -\/ {\bfseries string} -\/ Last Name of employee to add to records\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+Failed\+Constructor\+Exception$>$} & -\/ If the constructor failed to create the object\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_employee_aae0bb0d49eb93ff488771dca5a3db315}{}\index{All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}!Employee@{Employee}}
+\index{Employee@{Employee}!All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}}
+\subsubsection[{Employee}]{\setlength{\rightskip}{0pt plus 5cm}All\+Employees.\+Employee.\+Employee (
+\begin{DoxyParamCaption}
+\item[{string}]{first\+Name, }
+\item[{string}]{last\+Name, }
+\item[{int}]{social\+Insurance\+Number, }
+\item[{Date\+Time}]{date\+Of\+Birth, }
+\item[{string}]{employee\+Type}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_employee_aae0bb0d49eb93ff488771dca5a3db315}
+
+
+overloaded constructor. Sets all values to the values given. no default values 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+Name} & -\/ {\bfseries string} -\/ First Name of employee to add to records \\
+\hline
+{\em last\+Name} & -\/ {\bfseries string} -\/ Last Name of employee to add to records \\
+\hline
+{\em social\+Insurance\+Number} & -\/ {\bfseries int} -\/ Social Insurance Number of employee to add to records \\
+\hline
+{\em date\+Of\+Birth} & -\/ {\bfseries Date\+Time} -\/ Date Of Birth of employee to add to records\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+Failed\+Constructor\+Exception$>$} & -\/ If the constructor failed to create the object\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_all_employees_1_1_employee_a98f7200d68ab6a59f4e3283b8f81ce28}{}\index{All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}!Get\+Date\+Of\+Birth@{Get\+Date\+Of\+Birth}}
+\index{Get\+Date\+Of\+Birth@{Get\+Date\+Of\+Birth}!All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}}
+\subsubsection[{Get\+Date\+Of\+Birth}]{\setlength{\rightskip}{0pt plus 5cm}Date\+Time All\+Employees.\+Employee.\+Get\+Date\+Of\+Birth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_employee_a98f7200d68ab6a59f4e3283b8f81ce28}
+
+
+Getter for date\+Of\+Birth. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+date\+Of\+Birth {\bfseries string} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_employee_a2c310cf42cb87541a5fde6771e667212}{}\index{All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}!Get\+Date\+Of\+Birth\+String@{Get\+Date\+Of\+Birth\+String}}
+\index{Get\+Date\+Of\+Birth\+String@{Get\+Date\+Of\+Birth\+String}!All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}}
+\subsubsection[{Get\+Date\+Of\+Birth\+String}]{\setlength{\rightskip}{0pt plus 5cm}string All\+Employees.\+Employee.\+Get\+Date\+Of\+Birth\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_employee_a2c310cf42cb87541a5fde6771e667212}
+
+
+Getter for date\+Of\+Birth that returns formatted string. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+date\+Of\+Birth {\bfseries string} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_employee_a39116fe8a1dcc18735c92c1a3fcb579e}{}\index{All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}!Get\+Employee\+Type@{Get\+Employee\+Type}}
+\index{Get\+Employee\+Type@{Get\+Employee\+Type}!All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}}
+\subsubsection[{Get\+Employee\+Type}]{\setlength{\rightskip}{0pt plus 5cm}string All\+Employees.\+Employee.\+Get\+Employee\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_employee_a39116fe8a1dcc18735c92c1a3fcb579e}
+
+
+Getter for employee\+Type. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+employee\+Type {\bfseries string} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_employee_ae585e71d63222bcd0b87581fc8c1f936}{}\index{All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}!Get\+First\+Name@{Get\+First\+Name}}
+\index{Get\+First\+Name@{Get\+First\+Name}!All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}}
+\subsubsection[{Get\+First\+Name}]{\setlength{\rightskip}{0pt plus 5cm}string All\+Employees.\+Employee.\+Get\+First\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_employee_ae585e71d63222bcd0b87581fc8c1f936}
+
+
+Getter for first\+Name. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+first\+Name {\bfseries string} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_employee_afaf5dbaa12c35930b36d3582e831b407}{}\index{All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}!Get\+Last\+Name@{Get\+Last\+Name}}
+\index{Get\+Last\+Name@{Get\+Last\+Name}!All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}}
+\subsubsection[{Get\+Last\+Name}]{\setlength{\rightskip}{0pt plus 5cm}string All\+Employees.\+Employee.\+Get\+Last\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_employee_afaf5dbaa12c35930b36d3582e831b407}
+
+
+Getter for last\+Name. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+last\+Name {\bfseries string} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_employee_a0b5c62bd8eca3acd7f0921a478d8aefa}{}\index{All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}!Get\+Social\+Insurance\+Number@{Get\+Social\+Insurance\+Number}}
+\index{Get\+Social\+Insurance\+Number@{Get\+Social\+Insurance\+Number}!All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}}
+\subsubsection[{Get\+Social\+Insurance\+Number}]{\setlength{\rightskip}{0pt plus 5cm}int All\+Employees.\+Employee.\+Get\+Social\+Insurance\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_employee_a0b5c62bd8eca3acd7f0921a478d8aefa}
+
+
+Getter for social\+Insurance\+Number. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+social\+Insurance\+Number {\bfseries int} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_employee_ac8e625954f41a1e6c9039df61b020bc3}{}\index{All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}!Set\+Date\+Of\+Birth\+Base@{Set\+Date\+Of\+Birth\+Base}}
+\index{Set\+Date\+Of\+Birth\+Base@{Set\+Date\+Of\+Birth\+Base}!All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}}
+\subsubsection[{Set\+Date\+Of\+Birth\+Base}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Employee.\+Set\+Date\+Of\+Birth\+Base (
+\begin{DoxyParamCaption}
+\item[{Date\+Time}]{date}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_all_employees_1_1_employee_ac8e625954f41a1e6c9039df61b020bc3}
+
+
+Setter for date\+Of\+Birth using Date\+Time. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & {\bfseries Date\+Time} -\/ The date of birth of the employee\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_employee_aabdb35f9e42e4847bc33fda68482f7ab}{}\index{All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}!Set\+Employee\+Type@{Set\+Employee\+Type}}
+\index{Set\+Employee\+Type@{Set\+Employee\+Type}!All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}}
+\subsubsection[{Set\+Employee\+Type}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Employee.\+Set\+Employee\+Type (
+\begin{DoxyParamCaption}
+\item[{string}]{employee\+Type}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_employee_aabdb35f9e42e4847bc33fda68482f7ab}
+
+
+Setter for type of employee. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee\+Type} & {\bfseries string} -\/ The type of the employee. Must be\+: \char`\"{}\+F\+T\char`\"{} \char`\"{}\+P\+T\char`\"{} \char`\"{}\+C\+T\char`\"{} \char`\"{}\+S\+N\char`\"{} or \char`\"{}\char`\"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_employee_ad44ba8da1da1dceb64e1e6f9e6f7c5a3}{}\index{All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}!Set\+First\+Name@{Set\+First\+Name}}
+\index{Set\+First\+Name@{Set\+First\+Name}!All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}}
+\subsubsection[{Set\+First\+Name}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Employee.\+Set\+First\+Name (
+\begin{DoxyParamCaption}
+\item[{string}]{first\+Name}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_employee_ad44ba8da1da1dceb64e1e6f9e6f7c5a3}
+
+
+Setter for first\+Name. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+Name} & {\bfseries string} -\/ The first name of the employee\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_employee_a2b5ead1b4de39d2024422c4443034d4c}{}\index{All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}!Set\+Last\+Name@{Set\+Last\+Name}}
+\index{Set\+Last\+Name@{Set\+Last\+Name}!All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}}
+\subsubsection[{Set\+Last\+Name}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Employee.\+Set\+Last\+Name (
+\begin{DoxyParamCaption}
+\item[{string}]{last\+Name}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_employee_a2b5ead1b4de39d2024422c4443034d4c}
+
+
+Setter for last\+Name. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lastt\+Name} & {\bfseries string} -\/ The last name of the employee\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_employee_a25c3c9fd99a595fb812b3ba6791f3f11}{}\index{All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}!Set\+Social\+Insurance\+Number@{Set\+Social\+Insurance\+Number}}
+\index{Set\+Social\+Insurance\+Number@{Set\+Social\+Insurance\+Number}!All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}}
+\subsubsection[{Set\+Social\+Insurance\+Number}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Employee.\+Set\+Social\+Insurance\+Number (
+\begin{DoxyParamCaption}
+\item[{int}]{social\+Insurance\+Number}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_employee_a25c3c9fd99a595fb812b3ba6791f3f11}
+
+
+Setter for social\+Insurance\+Number. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em social\+Insurance\+Number} & {\bfseries int} -\/ The social insurance number of the employee\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_employee_a9e957826e327579e190cd5075789d1a9}{}\index{All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}!To\+String\+Base@{To\+String\+Base}}
+\index{To\+String\+Base@{To\+String\+Base}!All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}}
+\subsubsection[{To\+String\+Base}]{\setlength{\rightskip}{0pt plus 5cm}string All\+Employees.\+Employee.\+To\+String\+Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_all_employees_1_1_employee_a9e957826e327579e190cd5075789d1a9}
+
+
+Overriden method To\+String used to return a formated string of all data. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+employee\+String {\bfseries string} -\/ the formated string containing all employee data 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_employee_af679e8b4c683b9e94bec085062e5c88e}{}\index{All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}!Validate\+Base@{Validate\+Base}}
+\index{Validate\+Base@{Validate\+Base}!All\+Employees\+::\+Employee@{All\+Employees\+::\+Employee}}
+\subsubsection[{Validate\+Base}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Employee.\+Validate\+Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_all_employees_1_1_employee_af679e8b4c683b9e94bec085062e5c88e}
+
+
+Used to determine in the object contains a valid employee. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Valid -\/ {\bfseries bool} -\/ True if the object contains all data for a valid employee 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+S\+E\+T\+Repo/trunk/\+E\+M\+S/trunk/\+All\+Employees/\+All\+Employees/Employee.\+cs\end{DoxyCompactItemize}

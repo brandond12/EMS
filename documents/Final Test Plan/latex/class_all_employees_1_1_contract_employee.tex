@@ -1,0 +1,580 @@
+\hypertarget{class_all_employees_1_1_contract_employee}{}\section{All\+Employees.\+Contract\+Employee Class Reference}
+\label{class_all_employees_1_1_contract_employee}\index{All\+Employees.\+Contract\+Employee@{All\+Employees.\+Contract\+Employee}}
+
+
+{\bfseries Brief Description} The Contract \hyperlink{class_all_employees_1_1_employee}{Employee} class is used to store and manage data about a employee who is hired on a contract. This class is a child to \hyperlink{class_all_employees_1_1_employee}{Employee} class. It adds the contract start and stop date and the amout the employee is payed for the contract. The base classes Social Insurance Number is treated as a buisness number for this class. If the constructor creates a invalid employee, a exception is thrown. All other errors result in a defined return.  
+
+
+Inheritance diagram for All\+Employees.\+Contract\+Employee\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_all_employees_1_1_contract_employee}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_all_employees_1_1_contract_employee_afb78892e913ff2a34aed4d7b78d6c9f7}{Contract\+Employee} ()
+\begin{DoxyCompactList}\small\item\em default constructor. Sets all values to default \end{DoxyCompactList}\item 
+\hyperlink{class_all_employees_1_1_contract_employee_ac7aa7412d0f08a2176da6e9fc0a1ddba}{Contract\+Employee} (string first\+Name, string last\+Name)
+\begin{DoxyCompactList}\small\item\em overloaded constructor. Sets name to inputed names, set all other values to default \end{DoxyCompactList}\item 
+\hyperlink{class_all_employees_1_1_contract_employee_a0dba534ea305dea916d77f54e4534d85}{Contract\+Employee} (string first\+Name, string last\+Name, int social\+Insurance\+Number, Date\+Time date\+Of\+Birth, Date\+Time contract\+Start\+Date, Date\+Time contract\+Stop\+Date, double fixed\+Contract\+Amount)
+\begin{DoxyCompactList}\small\item\em overloaded constructor. Sets all values to the values given. no default values \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_contract_employee_a826e3f824d86fb6b4cd1c527350c5b3a}{Validate} ()
+\begin{DoxyCompactList}\small\item\em Used to determine in the object contains a valid employee. \end{DoxyCompactList}\item 
+string \hyperlink{class_all_employees_1_1_contract_employee_adc3a5e1e3280ac1ec77d1a0767b95c19}{Details} ()
+\begin{DoxyCompactList}\small\item\em Used to create a formated string of all employee to be printed to the screen. \end{DoxyCompactList}\item 
+override string \hyperlink{class_all_employees_1_1_contract_employee_ae0ba5deffac9dcf5317c91fd7d7f8816}{To\+String} ()
+\begin{DoxyCompactList}\small\item\em Overriden method To\+String used to return a formated string of all data about employee. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_contract_employee_a83870d3246c1ebd661e9125df1e1aae9}{Set\+Date\+Of\+Birth} (Date\+Time date)
+\begin{DoxyCompactList}\small\item\em Setter for date\+Of\+Hire. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_contract_employee_ab4c953037180f89d84a2f96f65da87aa}{Set\+Date\+Of\+Birth} (string date)
+\begin{DoxyCompactList}\small\item\em Setter for date\+Of\+Birth with String. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_contract_employee_a21695e3e1030af86e34384d4672d1ea6}{Set\+Date\+Of\+Birth} (int year, int month, int day)
+\begin{DoxyCompactList}\small\item\em Setter for date\+Of\+Birth with ints. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_contract_employee_a012c48affde48858bda39a3cb9c802c4}{Set\+Contract\+Start\+Date} (Date\+Time date)
+\begin{DoxyCompactList}\small\item\em Setter for contract\+Start\+Date from Date\+Time. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_contract_employee_aa10c777bc6b24385ceffaaff118e996e}{Set\+Contract\+Start\+Date} (string date)
+\begin{DoxyCompactList}\small\item\em Setter for contract\+Start\+Date from String. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_contract_employee_af29121fe33b4f31b28eb545235a31331}{Set\+Contract\+Start\+Date} (int year, int month, int day)
+\begin{DoxyCompactList}\small\item\em Setter for contract\+Start\+Date from ints. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_contract_employee_a60d9959aaf0368d3d951e00dc9b9276b}{Set\+Contract\+Stop\+Date} (Date\+Time date)
+\begin{DoxyCompactList}\small\item\em Setter for contract\+Stop\+Date from Date\+Time. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_contract_employee_a5564f971606a6c44977001b3faef78d1}{Set\+Contract\+Stop\+Date} (string date)
+\begin{DoxyCompactList}\small\item\em Setter for contract\+Stop\+Date from string. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_contract_employee_a3f7473cd491df8b2927333287b57a33d}{Set\+Contract\+Stop\+Date} (int year, int month, int day)
+\begin{DoxyCompactList}\small\item\em Setter for contract\+Stop\+Date from ints. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_contract_employee_aae02116f2c0f03f6cf9ed7c0b047299f}{Set\+Fixed\+Contract\+Amount} (double contract\+Amount)
+\begin{DoxyCompactList}\small\item\em Setter for fixed\+Contract\+Amount. \end{DoxyCompactList}\item 
+Date\+Time \hyperlink{class_all_employees_1_1_contract_employee_a270e070d2ccf2f707c9441f0ba1f2fad}{Get\+Contract\+Start\+Date} ()
+\begin{DoxyCompactList}\small\item\em Getter for contract\+Start\+Date that returns Date\+Time. \end{DoxyCompactList}\item 
+string \hyperlink{class_all_employees_1_1_contract_employee_a706f9a356995be719add2e1d522d1625}{Get\+Contract\+Start\+Date\+String} ()
+\begin{DoxyCompactList}\small\item\em Getter for contract\+Start\+Date that returns formatted string. \end{DoxyCompactList}\item 
+Date\+Time \hyperlink{class_all_employees_1_1_contract_employee_a98cacd6f03b693ba838b36c861c59b10}{Get\+Contract\+Stop\+Date} ()
+\begin{DoxyCompactList}\small\item\em Getter for contract\+Stop\+Date that returns Date\+Time. \end{DoxyCompactList}\item 
+string \hyperlink{class_all_employees_1_1_contract_employee_ada12137c290146af671d8e9b8db2b3fa}{Get\+Contract\+Stop\+Date\+String} ()
+\begin{DoxyCompactList}\small\item\em Getter for contract\+Stop\+Date that returns formatted string. \end{DoxyCompactList}\item 
+double \hyperlink{class_all_employees_1_1_contract_employee_ade999a96f8a2f43306980715ded26e47}{Get\+Fixed\+Contract\+Amount} ()
+\begin{DoxyCompactList}\small\item\em Getter for fixed\+Contract\+Amount. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_all_employees_1_1_contract_employee_aeef462cc8bd0639b674bba0632b6586b}{}Date\+Time {\bfseries contract\+Start\+Date}\label{class_all_employees_1_1_contract_employee_aeef462cc8bd0639b674bba0632b6586b}
+
+\item 
+\hypertarget{class_all_employees_1_1_contract_employee_ab549d2c8addad182fd66246c41ca73b7}{}Date\+Time {\bfseries contract\+Stop\+Date}\label{class_all_employees_1_1_contract_employee_ab549d2c8addad182fd66246c41ca73b7}
+
+\item 
+\hypertarget{class_all_employees_1_1_contract_employee_a8b9cdb0dd7f6e9cd04baa6c60e6edc63}{}double {\bfseries fixed\+Contract\+Amount}\label{class_all_employees_1_1_contract_employee_a8b9cdb0dd7f6e9cd04baa6c60e6edc63}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+{\bfseries Brief Description} The Contract \hyperlink{class_all_employees_1_1_employee}{Employee} class is used to store and manage data about a employee who is hired on a contract. This class is a child to \hyperlink{class_all_employees_1_1_employee}{Employee} class. It adds the contract start and stop date and the amout the employee is payed for the contract. The base classes Social Insurance Number is treated as a buisness number for this class. If the constructor creates a invalid employee, a exception is thrown. All other errors result in a defined return. 
+
+\begin{DoxyAuthor}{Author}
+{\itshape Brandon} 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_all_employees_1_1_contract_employee_afb78892e913ff2a34aed4d7b78d6c9f7}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Contract\+Employee@{Contract\+Employee}}
+\index{Contract\+Employee@{Contract\+Employee}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Contract\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}All\+Employees.\+Contract\+Employee.\+Contract\+Employee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_afb78892e913ff2a34aed4d7b78d6c9f7}
+
+
+default constructor. Sets all values to default 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_ac7aa7412d0f08a2176da6e9fc0a1ddba}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Contract\+Employee@{Contract\+Employee}}
+\index{Contract\+Employee@{Contract\+Employee}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Contract\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}All\+Employees.\+Contract\+Employee.\+Contract\+Employee (
+\begin{DoxyParamCaption}
+\item[{string}]{first\+Name, }
+\item[{string}]{last\+Name}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_ac7aa7412d0f08a2176da6e9fc0a1ddba}
+
+
+overloaded constructor. Sets name to inputed names, set all other values to default 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+Name} & -\/ {\bfseries string} -\/ First Name of employee to add to records \\
+\hline
+{\em last\+Name} & -\/ {\bfseries string} -\/ Last Name of employee to add to records\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+Failed\+Constructor\+Exception$>$} & -\/ If the constructor failed to create the object\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_a0dba534ea305dea916d77f54e4534d85}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Contract\+Employee@{Contract\+Employee}}
+\index{Contract\+Employee@{Contract\+Employee}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Contract\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}All\+Employees.\+Contract\+Employee.\+Contract\+Employee (
+\begin{DoxyParamCaption}
+\item[{string}]{first\+Name, }
+\item[{string}]{last\+Name, }
+\item[{int}]{social\+Insurance\+Number, }
+\item[{Date\+Time}]{date\+Of\+Birth, }
+\item[{Date\+Time}]{contract\+Start\+Date, }
+\item[{Date\+Time}]{contract\+Stop\+Date, }
+\item[{double}]{fixed\+Contract\+Amount}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_a0dba534ea305dea916d77f54e4534d85}
+
+
+overloaded constructor. Sets all values to the values given. no default values 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+Name} & -\/ {\bfseries string} -\/ First Name of employee to add to records \\
+\hline
+{\em last\+Name} & -\/ {\bfseries string} -\/ Last Name of employee to add to records \\
+\hline
+{\em social\+Insurance\+Number} & -\/ {\bfseries int} -\/ Social Insurance Number of employee to add to records \\
+\hline
+{\em date\+Of\+Birth} & -\/ {\bfseries Date\+Time} -\/ Date Of Birth of employee to add to records \\
+\hline
+{\em contract\+Start\+Date} & -\/ {\bfseries Date\+Time} -\/ Contract Start Date of employee contract to add to records \\
+\hline
+{\em contract\+Stop\+Date} & -\/ {\bfseries Date\+Time} -\/ Contract Stop Date of employee contract to add to records \\
+\hline
+{\em fixed\+Contract\+Amount} & -\/ {\bfseries double} -\/ Fixed Contract Amount of employee contract to add to records\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+Failed\+Constructor\+Exception$>$} & -\/ If the constructor failed to create the object\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_all_employees_1_1_contract_employee_adc3a5e1e3280ac1ec77d1a0767b95c19}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Details@{Details}}
+\index{Details@{Details}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Details}]{\setlength{\rightskip}{0pt plus 5cm}string All\+Employees.\+Contract\+Employee.\+Details (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_adc3a5e1e3280ac1ec77d1a0767b95c19}
+
+
+Used to create a formated string of all employee to be printed to the screen. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+user\+Info {\bfseries string} -\/ formatted string of employee data 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_a270e070d2ccf2f707c9441f0ba1f2fad}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Get\+Contract\+Start\+Date@{Get\+Contract\+Start\+Date}}
+\index{Get\+Contract\+Start\+Date@{Get\+Contract\+Start\+Date}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Get\+Contract\+Start\+Date}]{\setlength{\rightskip}{0pt plus 5cm}Date\+Time All\+Employees.\+Contract\+Employee.\+Get\+Contract\+Start\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_a270e070d2ccf2f707c9441f0ba1f2fad}
+
+
+Getter for contract\+Start\+Date that returns Date\+Time. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+contract\+Start\+Date {\bfseries Date\+Time} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_a706f9a356995be719add2e1d522d1625}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Get\+Contract\+Start\+Date\+String@{Get\+Contract\+Start\+Date\+String}}
+\index{Get\+Contract\+Start\+Date\+String@{Get\+Contract\+Start\+Date\+String}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Get\+Contract\+Start\+Date\+String}]{\setlength{\rightskip}{0pt plus 5cm}string All\+Employees.\+Contract\+Employee.\+Get\+Contract\+Start\+Date\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_a706f9a356995be719add2e1d522d1625}
+
+
+Getter for contract\+Start\+Date that returns formatted string. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+contract\+Start\+Date {\bfseries string} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_a98cacd6f03b693ba838b36c861c59b10}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Get\+Contract\+Stop\+Date@{Get\+Contract\+Stop\+Date}}
+\index{Get\+Contract\+Stop\+Date@{Get\+Contract\+Stop\+Date}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Get\+Contract\+Stop\+Date}]{\setlength{\rightskip}{0pt plus 5cm}Date\+Time All\+Employees.\+Contract\+Employee.\+Get\+Contract\+Stop\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_a98cacd6f03b693ba838b36c861c59b10}
+
+
+Getter for contract\+Stop\+Date that returns Date\+Time. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+contract\+Stop\+Date {\bfseries Date\+Time} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_ada12137c290146af671d8e9b8db2b3fa}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Get\+Contract\+Stop\+Date\+String@{Get\+Contract\+Stop\+Date\+String}}
+\index{Get\+Contract\+Stop\+Date\+String@{Get\+Contract\+Stop\+Date\+String}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Get\+Contract\+Stop\+Date\+String}]{\setlength{\rightskip}{0pt plus 5cm}string All\+Employees.\+Contract\+Employee.\+Get\+Contract\+Stop\+Date\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_ada12137c290146af671d8e9b8db2b3fa}
+
+
+Getter for contract\+Stop\+Date that returns formatted string. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+contract\+Stop\+Date {\bfseries string} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_ade999a96f8a2f43306980715ded26e47}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Get\+Fixed\+Contract\+Amount@{Get\+Fixed\+Contract\+Amount}}
+\index{Get\+Fixed\+Contract\+Amount@{Get\+Fixed\+Contract\+Amount}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Get\+Fixed\+Contract\+Amount}]{\setlength{\rightskip}{0pt plus 5cm}double All\+Employees.\+Contract\+Employee.\+Get\+Fixed\+Contract\+Amount (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_ade999a96f8a2f43306980715ded26e47}
+
+
+Getter for fixed\+Contract\+Amount. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+fixed\+Contract\+Amount {\bfseries double} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_a012c48affde48858bda39a3cb9c802c4}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Set\+Contract\+Start\+Date@{Set\+Contract\+Start\+Date}}
+\index{Set\+Contract\+Start\+Date@{Set\+Contract\+Start\+Date}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Set\+Contract\+Start\+Date}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Contract\+Employee.\+Set\+Contract\+Start\+Date (
+\begin{DoxyParamCaption}
+\item[{Date\+Time}]{date}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_a012c48affde48858bda39a3cb9c802c4}
+
+
+Setter for contract\+Start\+Date from Date\+Time. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & {\bfseries Date\+Time} -\/ The start date of the employees contract\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_aa10c777bc6b24385ceffaaff118e996e}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Set\+Contract\+Start\+Date@{Set\+Contract\+Start\+Date}}
+\index{Set\+Contract\+Start\+Date@{Set\+Contract\+Start\+Date}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Set\+Contract\+Start\+Date}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Contract\+Employee.\+Set\+Contract\+Start\+Date (
+\begin{DoxyParamCaption}
+\item[{string}]{date}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_aa10c777bc6b24385ceffaaff118e996e}
+
+
+Setter for contract\+Start\+Date from String. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & {\bfseries string} -\/ The start date of the employees contract\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_af29121fe33b4f31b28eb545235a31331}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Set\+Contract\+Start\+Date@{Set\+Contract\+Start\+Date}}
+\index{Set\+Contract\+Start\+Date@{Set\+Contract\+Start\+Date}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Set\+Contract\+Start\+Date}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Contract\+Employee.\+Set\+Contract\+Start\+Date (
+\begin{DoxyParamCaption}
+\item[{int}]{year, }
+\item[{int}]{month, }
+\item[{int}]{day}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_af29121fe33b4f31b28eb545235a31331}
+
+
+Setter for contract\+Start\+Date from ints. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & {\bfseries int} -\/ The start year of the employees contract \\
+\hline
+{\em month} & {\bfseries int} -\/ The start month of the employees contract \\
+\hline
+{\em day} & {\bfseries int} -\/ The start day of the employees contract\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_a60d9959aaf0368d3d951e00dc9b9276b}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Set\+Contract\+Stop\+Date@{Set\+Contract\+Stop\+Date}}
+\index{Set\+Contract\+Stop\+Date@{Set\+Contract\+Stop\+Date}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Set\+Contract\+Stop\+Date}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Contract\+Employee.\+Set\+Contract\+Stop\+Date (
+\begin{DoxyParamCaption}
+\item[{Date\+Time}]{date}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_a60d9959aaf0368d3d951e00dc9b9276b}
+
+
+Setter for contract\+Stop\+Date from Date\+Time. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & {\bfseries Date\+Time} -\/ The stop date of the employees contract\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_a5564f971606a6c44977001b3faef78d1}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Set\+Contract\+Stop\+Date@{Set\+Contract\+Stop\+Date}}
+\index{Set\+Contract\+Stop\+Date@{Set\+Contract\+Stop\+Date}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Set\+Contract\+Stop\+Date}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Contract\+Employee.\+Set\+Contract\+Stop\+Date (
+\begin{DoxyParamCaption}
+\item[{string}]{date}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_a5564f971606a6c44977001b3faef78d1}
+
+
+Setter for contract\+Stop\+Date from string. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & {\bfseries string} -\/ The stop date of the employees contract\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_a3f7473cd491df8b2927333287b57a33d}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Set\+Contract\+Stop\+Date@{Set\+Contract\+Stop\+Date}}
+\index{Set\+Contract\+Stop\+Date@{Set\+Contract\+Stop\+Date}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Set\+Contract\+Stop\+Date}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Contract\+Employee.\+Set\+Contract\+Stop\+Date (
+\begin{DoxyParamCaption}
+\item[{int}]{year, }
+\item[{int}]{month, }
+\item[{int}]{day}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_a3f7473cd491df8b2927333287b57a33d}
+
+
+Setter for contract\+Stop\+Date from ints. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & {\bfseries int} -\/ The stop year of the employees contract \\
+\hline
+{\em month} & {\bfseries int} -\/ The stop month of the employees contract \\
+\hline
+{\em day} & {\bfseries int} -\/ The stop day of the employees contract\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_a83870d3246c1ebd661e9125df1e1aae9}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}}
+\index{Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Set\+Date\+Of\+Birth}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Contract\+Employee.\+Set\+Date\+Of\+Birth (
+\begin{DoxyParamCaption}
+\item[{Date\+Time}]{date}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_a83870d3246c1ebd661e9125df1e1aae9}
+
+
+Setter for date\+Of\+Hire. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & {\bfseries Date\+Time} -\/ The employees date of hire\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_ab4c953037180f89d84a2f96f65da87aa}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}}
+\index{Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Set\+Date\+Of\+Birth}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Contract\+Employee.\+Set\+Date\+Of\+Birth (
+\begin{DoxyParamCaption}
+\item[{string}]{date}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_ab4c953037180f89d84a2f96f65da87aa}
+
+
+Setter for date\+Of\+Birth with String. 
+
+{\bfseries Details} -\/ string format\+: Y\+Y\+Y\+Y-\/\+M\+M-\/\+D\+D
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & {\bfseries string} -\/ The date of birth of the employee\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_a21695e3e1030af86e34384d4672d1ea6}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}}
+\index{Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Set\+Date\+Of\+Birth}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Contract\+Employee.\+Set\+Date\+Of\+Birth (
+\begin{DoxyParamCaption}
+\item[{int}]{year, }
+\item[{int}]{month, }
+\item[{int}]{day}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_a21695e3e1030af86e34384d4672d1ea6}
+
+
+Setter for date\+Of\+Birth with ints. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & {\bfseries int} -\/ The year of birth of the employee \\
+\hline
+{\em month} & {\bfseries int} -\/ The month of birth of the employee \\
+\hline
+{\em day} & {\bfseries int} -\/ The day of birth of the employee\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_aae02116f2c0f03f6cf9ed7c0b047299f}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Set\+Fixed\+Contract\+Amount@{Set\+Fixed\+Contract\+Amount}}
+\index{Set\+Fixed\+Contract\+Amount@{Set\+Fixed\+Contract\+Amount}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Set\+Fixed\+Contract\+Amount}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Contract\+Employee.\+Set\+Fixed\+Contract\+Amount (
+\begin{DoxyParamCaption}
+\item[{double}]{contract\+Amount}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_aae02116f2c0f03f6cf9ed7c0b047299f}
+
+
+Setter for fixed\+Contract\+Amount. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em contract\+Amount} & {\bfseries double} -\/ The amount the contract is payed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saves {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_ae0ba5deffac9dcf5317c91fd7d7f8816}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{To\+String}]{\setlength{\rightskip}{0pt plus 5cm}override string All\+Employees.\+Contract\+Employee.\+To\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_ae0ba5deffac9dcf5317c91fd7d7f8816}
+
+
+Overriden method To\+String used to return a formated string of all data about employee. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+employee\+String {\bfseries string} -\/ the formated string containing all employee data 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_contract_employee_a826e3f824d86fb6b4cd1c527350c5b3a}{}\index{All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}!Validate@{Validate}}
+\index{Validate@{Validate}!All\+Employees\+::\+Contract\+Employee@{All\+Employees\+::\+Contract\+Employee}}
+\subsubsection[{Validate}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Contract\+Employee.\+Validate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_contract_employee_a826e3f824d86fb6b4cd1c527350c5b3a}
+
+
+Used to determine in the object contains a valid employee. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Valid -\/ {\bfseries bool} -\/ True if the object contains all data for a valid employee 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+S\+E\+T\+Repo/trunk/\+E\+M\+S/trunk/\+All\+Employees/\+All\+Employees/Contract\+Employee.\+cs\end{DoxyCompactItemize}

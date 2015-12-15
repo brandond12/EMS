@@ -1,0 +1,134 @@
+\hypertarget{class_supporting_1_1_file_i_o}{}\section{Supporting.\+File\+I\+O Class Reference}
+\label{class_supporting_1_1_file_i_o}\index{Supporting.\+File\+I\+O@{Supporting.\+File\+I\+O}}
+
+
+{\bfseries Brief Description} This class allows files to be written to, read all the data from a file, open a file for reading, open a file for writing, closing a file and parsing data from a file. The file\+I\+O class is realted to employee and container class  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_supporting_1_1_file_i_o_a98bf48b6b28f84aa8cb879fba0ec3869}{File\+I\+O} ()
+\begin{DoxyCompactList}\small\item\em default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} $>$ \hyperlink{class_supporting_1_1_file_i_o_a85a68c35769506cf140f4dd0f937c182}{Read\+All\+Records} (String file\+Name)
+\begin{DoxyCompactList}\small\item\em Give file name, return list of all valid records. \end{DoxyCompactList}\item 
+static int \hyperlink{class_supporting_1_1_file_i_o_a6bf6984a4cc3fe887ad1e417991f3590}{Write\+Record} (List$<$ \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} $>$ employee\+List, String file\+Name)
+\begin{DoxyCompactList}\small\item\em Give employee write and file to write to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ \hyperlink{class_all_employees_1_1_employee}{All\+Employees.\+Employee} $>$ \hyperlink{class_supporting_1_1_file_i_o_ab08bc41626341cdcbb83ee47d173ea1a}{Pars\+Record} (String file\+Text)
+\begin{DoxyCompactList}\small\item\em given string from file, pars all data into list, return list valid employees \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_supporting_1_1_file_i_o_a8e398ed97d5a04cb711f2b9226b4eb82}{}static bool {\bfseries was\+Read} = false\label{class_supporting_1_1_file_i_o_a8e398ed97d5a04cb711f2b9226b4eb82}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+{\bfseries Brief Description} This class allows files to be written to, read all the data from a file, open a file for reading, open a file for writing, closing a file and parsing data from a file. The file\+I\+O class is realted to employee and container class 
+
+\begin{DoxyAuthor}{Author}
+{\itshape Nathan} 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_supporting_1_1_file_i_o_a98bf48b6b28f84aa8cb879fba0ec3869}{}\index{Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}!File\+I\+O@{File\+I\+O}}
+\index{File\+I\+O@{File\+I\+O}!Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}}
+\subsubsection[{File\+I\+O}]{\setlength{\rightskip}{0pt plus 5cm}Supporting.\+File\+I\+O.\+File\+I\+O (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_supporting_1_1_file_i_o_a98bf48b6b28f84aa8cb879fba0ec3869}
+
+
+default constructor. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_supporting_1_1_file_i_o_ab08bc41626341cdcbb83ee47d173ea1a}{}\index{Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}!Pars\+Record@{Pars\+Record}}
+\index{Pars\+Record@{Pars\+Record}!Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}}
+\subsubsection[{Pars\+Record}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf All\+Employees.\+Employee}$>$ Supporting.\+File\+I\+O.\+Pars\+Record (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+Text}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_supporting_1_1_file_i_o_ab08bc41626341cdcbb83ee47d173ea1a}
+
+
+given string from file, pars all data into list, return list valid employees 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Text} & -\/ {\bfseries string} -\/ The string of data containing an employees records\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+employee\+Rec -\/ {\bfseries List$<$\+All\+Employees.\+Employee$>$} -\/ The list of all the employee records in the strinng of data 
+\end{DoxyReturn}
+\hypertarget{class_supporting_1_1_file_i_o_a85a68c35769506cf140f4dd0f937c182}{}\index{Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}!Read\+All\+Records@{Read\+All\+Records}}
+\index{Read\+All\+Records@{Read\+All\+Records}!Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}}
+\subsubsection[{Read\+All\+Records}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf All\+Employees.\+Employee}$>$ Supporting.\+File\+I\+O.\+Read\+All\+Records (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_supporting_1_1_file_i_o_a85a68c35769506cf140f4dd0f937c182}
+
+
+Give file name, return list of all valid records. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & -\/ {\bfseries string} -\/ The file path and name of file storing the records\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+employee\+Rec -\/ {\bfseries List$<$\+All\+Employees.\+Employee$>$} -\/ The list of all the employee records in the file 
+\end{DoxyReturn}
+\hypertarget{class_supporting_1_1_file_i_o_a6bf6984a4cc3fe887ad1e417991f3590}{}\index{Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}!Write\+Record@{Write\+Record}}
+\index{Write\+Record@{Write\+Record}!Supporting\+::\+File\+I\+O@{Supporting\+::\+File\+I\+O}}
+\subsubsection[{Write\+Record}]{\setlength{\rightskip}{0pt plus 5cm}static int Supporting.\+File\+I\+O.\+Write\+Record (
+\begin{DoxyParamCaption}
+\item[{List$<$ {\bf All\+Employees.\+Employee} $>$}]{employee\+List, }
+\item[{String}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_supporting_1_1_file_i_o_a6bf6984a4cc3fe887ad1e417991f3590}
+
+
+Give employee write and file to write to. 
+
+{\bfseries Details}
+
+-\/ {\bfseries List$<$\+All\+Employees.\+Employee$>$} -\/ The employees records 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & -\/ {\bfseries String} -\/ The file path and name of file storing the records\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+um\+Of\+Records\+Saved -\/ {\bfseries Int} -\/ The number of employees that were sucessfully saved 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+S\+E\+T\+Repo/trunk/\+E\+M\+S/trunk/\+Supporting/\+Supporting/File\+I\+O.\+cs\end{DoxyCompactItemize}

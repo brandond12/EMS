@@ -1,0 +1,378 @@
+\hypertarget{class_all_employees_1_1_seasonal_employee}{}\section{All\+Employees.\+Seasonal\+Employee Class Reference}
+\label{class_all_employees_1_1_seasonal_employee}\index{All\+Employees.\+Seasonal\+Employee@{All\+Employees.\+Seasonal\+Employee}}
+
+
+{\bfseries Brief Description} The Seasonal \hyperlink{class_all_employees_1_1_employee}{Employee} class is used to store and manage data about a employee who is hired for a season. This class is a child to \hyperlink{class_all_employees_1_1_employee}{Employee} class. It adds the season the employee is hired for and how much the employee is paid per item completed/created. If the constructor creates a invalid employee, a exception is thrown. All other errors result in a defined return.  
+
+
+Inheritance diagram for All\+Employees.\+Seasonal\+Employee\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_all_employees_1_1_seasonal_employee}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_all_employees_1_1_seasonal_employee_a2206a19da96d42cbd56e7fb5d073c7d4}{Seasonal\+Employee} ()
+\begin{DoxyCompactList}\small\item\em default constructor. Sets all values to default \end{DoxyCompactList}\item 
+\hyperlink{class_all_employees_1_1_seasonal_employee_acc7fb6022faa7594a0e249a8ba89f217}{Seasonal\+Employee} (string first\+Name, string last\+Name)
+\begin{DoxyCompactList}\small\item\em overloaded constructor. Sets name to inputed names, set all other values to default \end{DoxyCompactList}\item 
+\hyperlink{class_all_employees_1_1_seasonal_employee_aae200d06e4faa2f87698cf4927463b0e}{Seasonal\+Employee} (string first\+Name, string last\+Name, int social\+Insurance\+Number, Date\+Time date\+Of\+Birth, string season, double piece\+Pay)
+\begin{DoxyCompactList}\small\item\em overloaded constructor. Sets all values to the values given. no default values \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_seasonal_employee_a70f911ac43a67b84f93ead74860bb6d9}{Validate} ()
+\begin{DoxyCompactList}\small\item\em Used to determine in the object contains a valid employee. \end{DoxyCompactList}\item 
+string \hyperlink{class_all_employees_1_1_seasonal_employee_a0474e4afe0e11f4e2dd0a523bff3034b}{Details} ()
+\begin{DoxyCompactList}\small\item\em Used to print all employee data to the consol. \end{DoxyCompactList}\item 
+override string \hyperlink{class_all_employees_1_1_seasonal_employee_a797da83b3ef0a5e7fb04fc5b0d373a11}{To\+String} ()
+\begin{DoxyCompactList}\small\item\em Overriden method To\+String used to return a formated string of all data. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_seasonal_employee_a3cefc2899365780dd013b990ef46326c}{Set\+Season} (string season)
+\begin{DoxyCompactList}\small\item\em Setter for season. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_seasonal_employee_ad28298b79565cec8f11ee686bc52fbe7}{Set\+Piece\+Pay} (double piece\+Pay)
+\begin{DoxyCompactList}\small\item\em Setter for piece\+Pay. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_seasonal_employee_ae9579944f7e43d9504d0d64159b79be2}{Set\+Date\+Of\+Birth} (Date\+Time date)
+\begin{DoxyCompactList}\small\item\em Setter for Set\+Date\+Of\+Birth. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_seasonal_employee_a86bfe17c0e2229d2308c3f25773acf2e}{Set\+Date\+Of\+Birth} (string date)
+\begin{DoxyCompactList}\small\item\em Setter for date\+Of\+Birth with String. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_seasonal_employee_a01ae315610e9d0259906622bdb268cbc}{Set\+Date\+Of\+Birth} (int year, int month, int day)
+\begin{DoxyCompactList}\small\item\em Setter for date\+Of\+Birth with ints. \end{DoxyCompactList}\item 
+string \hyperlink{class_all_employees_1_1_seasonal_employee_a189a882ddc11648f3df82e5c0acd5522}{Get\+Season} ()
+\begin{DoxyCompactList}\small\item\em Getter for season. \end{DoxyCompactList}\item 
+double \hyperlink{class_all_employees_1_1_seasonal_employee_aac2d6f048d03257ccc96481b1550be0b}{Get\+Piece\+Pay} ()
+\begin{DoxyCompactList}\small\item\em Getter for piece\+Pay. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_all_employees_1_1_seasonal_employee_a7615ccd677faed6b26afa27aadd7a71e}{}string {\bfseries season}\label{class_all_employees_1_1_seasonal_employee_a7615ccd677faed6b26afa27aadd7a71e}
+
+\item 
+\hypertarget{class_all_employees_1_1_seasonal_employee_a9f315de9818cbcd7868b2d3a1a4452cc}{}double {\bfseries piece\+Pay}\label{class_all_employees_1_1_seasonal_employee_a9f315de9818cbcd7868b2d3a1a4452cc}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+{\bfseries Brief Description} The Seasonal \hyperlink{class_all_employees_1_1_employee}{Employee} class is used to store and manage data about a employee who is hired for a season. This class is a child to \hyperlink{class_all_employees_1_1_employee}{Employee} class. It adds the season the employee is hired for and how much the employee is paid per item completed/created. If the constructor creates a invalid employee, a exception is thrown. All other errors result in a defined return. 
+
+\begin{DoxyAuthor}{Author}
+{\itshape Brandon} 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_all_employees_1_1_seasonal_employee_a2206a19da96d42cbd56e7fb5d073c7d4}{}\index{All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}!Seasonal\+Employee@{Seasonal\+Employee}}
+\index{Seasonal\+Employee@{Seasonal\+Employee}!All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}}
+\subsubsection[{Seasonal\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}All\+Employees.\+Seasonal\+Employee.\+Seasonal\+Employee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_seasonal_employee_a2206a19da96d42cbd56e7fb5d073c7d4}
+
+
+default constructor. Sets all values to default 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_seasonal_employee_acc7fb6022faa7594a0e249a8ba89f217}{}\index{All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}!Seasonal\+Employee@{Seasonal\+Employee}}
+\index{Seasonal\+Employee@{Seasonal\+Employee}!All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}}
+\subsubsection[{Seasonal\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}All\+Employees.\+Seasonal\+Employee.\+Seasonal\+Employee (
+\begin{DoxyParamCaption}
+\item[{string}]{first\+Name, }
+\item[{string}]{last\+Name}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_seasonal_employee_acc7fb6022faa7594a0e249a8ba89f217}
+
+
+overloaded constructor. Sets name to inputed names, set all other values to default 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+Name} & -\/ {\bfseries string} -\/ First Name of employee to add to records \\
+\hline
+{\em last\+Name} & -\/ {\bfseries string} -\/ Last Name of employee to add to records\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+Failed\+Constructor\+Exception$>$} & -\/ If the constructor failed to create the object\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_seasonal_employee_aae200d06e4faa2f87698cf4927463b0e}{}\index{All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}!Seasonal\+Employee@{Seasonal\+Employee}}
+\index{Seasonal\+Employee@{Seasonal\+Employee}!All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}}
+\subsubsection[{Seasonal\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}All\+Employees.\+Seasonal\+Employee.\+Seasonal\+Employee (
+\begin{DoxyParamCaption}
+\item[{string}]{first\+Name, }
+\item[{string}]{last\+Name, }
+\item[{int}]{social\+Insurance\+Number, }
+\item[{Date\+Time}]{date\+Of\+Birth, }
+\item[{string}]{season, }
+\item[{double}]{piece\+Pay}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_seasonal_employee_aae200d06e4faa2f87698cf4927463b0e}
+
+
+overloaded constructor. Sets all values to the values given. no default values 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+Name} & -\/ {\bfseries string} -\/ First Name of employee to add to records \\
+\hline
+{\em last\+Name} & -\/ {\bfseries string} -\/ Last Name of employee to add to records \\
+\hline
+{\em social\+Insurance\+Number} & -\/ {\bfseries int} -\/ Social Insurance Number of employee to add to records \\
+\hline
+{\em date\+Of\+Birth} & -\/ {\bfseries Date\+Time} -\/ Date Of Birth of employee to add to records \\
+\hline
+{\em season} & -\/ {\bfseries string} -\/ season the employee worked/works \\
+\hline
+{\em piece\+Pay} & -\/ {\bfseries double} -\/ the price per unit that the worker is payed\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+Failed\+Constructor\+Exception$>$} & -\/ If the constructor failed to create the object\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_all_employees_1_1_seasonal_employee_a0474e4afe0e11f4e2dd0a523bff3034b}{}\index{All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}!Details@{Details}}
+\index{Details@{Details}!All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}}
+\subsubsection[{Details}]{\setlength{\rightskip}{0pt plus 5cm}string All\+Employees.\+Seasonal\+Employee.\+Details (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_seasonal_employee_a0474e4afe0e11f4e2dd0a523bff3034b}
+
+
+Used to print all employee data to the consol. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+user\+Info {\bfseries string} -\/ formatted string of employee data 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_seasonal_employee_aac2d6f048d03257ccc96481b1550be0b}{}\index{All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}!Get\+Piece\+Pay@{Get\+Piece\+Pay}}
+\index{Get\+Piece\+Pay@{Get\+Piece\+Pay}!All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}}
+\subsubsection[{Get\+Piece\+Pay}]{\setlength{\rightskip}{0pt plus 5cm}double All\+Employees.\+Seasonal\+Employee.\+Get\+Piece\+Pay (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_seasonal_employee_aac2d6f048d03257ccc96481b1550be0b}
+
+
+Getter for piece\+Pay. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+piece\+Pay {\bfseries double} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_seasonal_employee_a189a882ddc11648f3df82e5c0acd5522}{}\index{All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}!Get\+Season@{Get\+Season}}
+\index{Get\+Season@{Get\+Season}!All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}}
+\subsubsection[{Get\+Season}]{\setlength{\rightskip}{0pt plus 5cm}string All\+Employees.\+Seasonal\+Employee.\+Get\+Season (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_seasonal_employee_a189a882ddc11648f3df82e5c0acd5522}
+
+
+Getter for season. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+season {\bfseries string} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_seasonal_employee_ae9579944f7e43d9504d0d64159b79be2}{}\index{All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}!Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}}
+\index{Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}!All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}}
+\subsubsection[{Set\+Date\+Of\+Birth}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Seasonal\+Employee.\+Set\+Date\+Of\+Birth (
+\begin{DoxyParamCaption}
+\item[{Date\+Time}]{date}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_seasonal_employee_ae9579944f7e43d9504d0d64159b79be2}
+
+
+Setter for Set\+Date\+Of\+Birth. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & {\bfseries Date\+Time} -\/ The employees date of birth\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_seasonal_employee_a86bfe17c0e2229d2308c3f25773acf2e}{}\index{All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}!Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}}
+\index{Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}!All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}}
+\subsubsection[{Set\+Date\+Of\+Birth}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Seasonal\+Employee.\+Set\+Date\+Of\+Birth (
+\begin{DoxyParamCaption}
+\item[{string}]{date}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_seasonal_employee_a86bfe17c0e2229d2308c3f25773acf2e}
+
+
+Setter for date\+Of\+Birth with String. 
+
+{\bfseries Details} -\/ string format\+: Y\+Y\+Y\+Y-\/\+M\+M-\/\+D\+D
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & {\bfseries string} -\/ The date of birth of the employee\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_seasonal_employee_a01ae315610e9d0259906622bdb268cbc}{}\index{All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}!Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}}
+\index{Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}!All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}}
+\subsubsection[{Set\+Date\+Of\+Birth}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Seasonal\+Employee.\+Set\+Date\+Of\+Birth (
+\begin{DoxyParamCaption}
+\item[{int}]{year, }
+\item[{int}]{month, }
+\item[{int}]{day}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_seasonal_employee_a01ae315610e9d0259906622bdb268cbc}
+
+
+Setter for date\+Of\+Birth with ints. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & {\bfseries int} -\/ The year of birth of the employee \\
+\hline
+{\em month} & {\bfseries int} -\/ The month of birth of the employee \\
+\hline
+{\em day} & {\bfseries int} -\/ The day of birth of the employee\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_seasonal_employee_ad28298b79565cec8f11ee686bc52fbe7}{}\index{All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}!Set\+Piece\+Pay@{Set\+Piece\+Pay}}
+\index{Set\+Piece\+Pay@{Set\+Piece\+Pay}!All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}}
+\subsubsection[{Set\+Piece\+Pay}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Seasonal\+Employee.\+Set\+Piece\+Pay (
+\begin{DoxyParamCaption}
+\item[{double}]{piece\+Pay}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_seasonal_employee_ad28298b79565cec8f11ee686bc52fbe7}
+
+
+Setter for piece\+Pay. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece\+Pay} & {\bfseries double} -\/ The price the employee is payed for each unit created\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_seasonal_employee_a3cefc2899365780dd013b990ef46326c}{}\index{All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}!Set\+Season@{Set\+Season}}
+\index{Set\+Season@{Set\+Season}!All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}}
+\subsubsection[{Set\+Season}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Seasonal\+Employee.\+Set\+Season (
+\begin{DoxyParamCaption}
+\item[{string}]{season}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_seasonal_employee_a3cefc2899365780dd013b990ef46326c}
+
+
+Setter for season. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em season} & {\bfseries string} -\/ The season the employee worked/works in\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_seasonal_employee_a797da83b3ef0a5e7fb04fc5b0d373a11}{}\index{All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}}
+\subsubsection[{To\+String}]{\setlength{\rightskip}{0pt plus 5cm}override string All\+Employees.\+Seasonal\+Employee.\+To\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_seasonal_employee_a797da83b3ef0a5e7fb04fc5b0d373a11}
+
+
+Overriden method To\+String used to return a formated string of all data. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+employee\+String {\bfseries string} -\/ the formated string containing all employee data 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_seasonal_employee_a70f911ac43a67b84f93ead74860bb6d9}{}\index{All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}!Validate@{Validate}}
+\index{Validate@{Validate}!All\+Employees\+::\+Seasonal\+Employee@{All\+Employees\+::\+Seasonal\+Employee}}
+\subsubsection[{Validate}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Seasonal\+Employee.\+Validate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_seasonal_employee_a70f911ac43a67b84f93ead74860bb6d9}
+
+
+Used to determine in the object contains a valid employee. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Valid -\/ {\bfseries bool} -\/ True if the object contains all data for a valid employee 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+S\+E\+T\+Repo/trunk/\+E\+M\+S/trunk/\+All\+Employees/\+All\+Employees/Seasonal\+Employee.\+cs\end{DoxyCompactItemize}

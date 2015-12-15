@@ -1,0 +1,580 @@
+\hypertarget{class_all_employees_1_1_fulltime_employee}{}\section{All\+Employees.\+Fulltime\+Employee Class Reference}
+\label{class_all_employees_1_1_fulltime_employee}\index{All\+Employees.\+Fulltime\+Employee@{All\+Employees.\+Fulltime\+Employee}}
+
+
+{\bfseries Brief Description} The Fulltime \hyperlink{class_all_employees_1_1_employee}{Employee} class is used to store and manage data about a employee who is hired for a full-\/time position. This class is a child to \hyperlink{class_all_employees_1_1_employee}{Employee} class. It adds the date of hire and termination, and the employees salary. If the constructor creates a invalid employee, a exception is thrown. All other errors result in a defined return.  
+
+
+Inheritance diagram for All\+Employees.\+Fulltime\+Employee\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_all_employees_1_1_fulltime_employee}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_all_employees_1_1_fulltime_employee_a2f7744fed20aa3161c5ac5cd37c1a281}{Fulltime\+Employee} ()
+\begin{DoxyCompactList}\small\item\em default constructor. Sets all values to default \end{DoxyCompactList}\item 
+\hyperlink{class_all_employees_1_1_fulltime_employee_a7cc8db6b3e7dd2fa71706c9ebaf68660}{Fulltime\+Employee} (string first\+Name, string last\+Name)
+\begin{DoxyCompactList}\small\item\em overloaded constructor. Sets name to inputed names, set all other values to default \end{DoxyCompactList}\item 
+\hyperlink{class_all_employees_1_1_fulltime_employee_a45c638281476043129e38c74bc16619f}{Fulltime\+Employee} (string first\+Name, string last\+Name, int social\+Insurance\+Number, Date\+Time date\+Of\+Birth, Date\+Time date\+Of\+Hire, Date\+Time date\+Of\+Termination, double salary)
+\begin{DoxyCompactList}\small\item\em overloaded constructor. Sets all values to the values given. no default values \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_fulltime_employee_a3e718749e4730c0f2a28f820530071da}{Validate} ()
+\begin{DoxyCompactList}\small\item\em Used to determine in the object contains a valid employee. \end{DoxyCompactList}\item 
+string \hyperlink{class_all_employees_1_1_fulltime_employee_a7660032e944e78c6ff26598aa7107796}{Details} ()
+\begin{DoxyCompactList}\small\item\em Used to print all employee data to the consol. \end{DoxyCompactList}\item 
+override string \hyperlink{class_all_employees_1_1_fulltime_employee_a3026e5a4c764fc0da54873cc131e2b82}{To\+String} ()
+\begin{DoxyCompactList}\small\item\em Overriden method To\+String used to return a formated string of all data. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_fulltime_employee_ae642df9b07e842857f998d539eeae502}{Set\+Date\+Of\+Birth} (Date\+Time date)
+\begin{DoxyCompactList}\small\item\em Setter for date\+Of\+Hire. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_fulltime_employee_a8c230e078f3a9d84ccfdf2dad618edfb}{Set\+Date\+Of\+Birth} (string date)
+\begin{DoxyCompactList}\small\item\em Setter for date\+Of\+Birth with String. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_fulltime_employee_a4198c95029b48d8da8ddf3d65574ea53}{Set\+Date\+Of\+Birth} (int year, int month, int day)
+\begin{DoxyCompactList}\small\item\em Setter for date\+Of\+Birth with ints. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_fulltime_employee_aaf2dc1dcb158819d06958d4399850f56}{Set\+Date\+Of\+Hire} (Date\+Time date)
+\begin{DoxyCompactList}\small\item\em Setter for date\+Of\+Hire. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_fulltime_employee_a6b7516d71f46e650da2200a308d6f226}{Set\+Date\+Of\+Hire} (string date)
+\begin{DoxyCompactList}\small\item\em Setter for date\+Of\+Hire from String. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_fulltime_employee_ae5612c076ead69a3b6f0bbc22a21e293}{Set\+Date\+Of\+Hire} (int year, int month, int day)
+\begin{DoxyCompactList}\small\item\em Setter for date\+Of\+Hire from ints. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_fulltime_employee_a94e9d4b67b20ecbe1449701a200b1c07}{Set\+Date\+Of\+Termination} (Date\+Time date)
+\begin{DoxyCompactList}\small\item\em Setter for date\+Of\+Termination. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_fulltime_employee_a7d142370fe7f81bd623de155a80d0214}{Set\+Date\+Of\+Termination} (string date)
+\begin{DoxyCompactList}\small\item\em Setter for date\+Of\+Termination from string. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_fulltime_employee_aed4ff527256f96b542d0ac0c17f3e2ea}{Set\+Date\+Of\+Termination} (int year, int month, int day)
+\begin{DoxyCompactList}\small\item\em Setter for date\+Of\+Termination from int. \end{DoxyCompactList}\item 
+bool \hyperlink{class_all_employees_1_1_fulltime_employee_a7749239bf39282a2b803550718cae1c6}{Set\+Salary} (double salary)
+\begin{DoxyCompactList}\small\item\em Setter for salary. \end{DoxyCompactList}\item 
+Date\+Time \hyperlink{class_all_employees_1_1_fulltime_employee_a3a975ad60176797d1d5529e257596565}{Get\+Date\+Of\+Hire} ()
+\begin{DoxyCompactList}\small\item\em Getter for date\+Of\+Hire. \end{DoxyCompactList}\item 
+string \hyperlink{class_all_employees_1_1_fulltime_employee_a91b4f15454d92eb7cd33968573050ef0}{Get\+Date\+Of\+Hire\+String} ()
+\begin{DoxyCompactList}\small\item\em Getter for date\+Of\+Hire that returns formatted string. \end{DoxyCompactList}\item 
+Date\+Time \hyperlink{class_all_employees_1_1_fulltime_employee_a97af3da9151f97e91543d60b6b67a4fa}{Get\+Date\+Of\+Termination} ()
+\begin{DoxyCompactList}\small\item\em Getter for date\+Of\+Termination. \end{DoxyCompactList}\item 
+string \hyperlink{class_all_employees_1_1_fulltime_employee_a7d0612eba21e83226bb09a174179847c}{Get\+Date\+Of\+Termination\+String} ()
+\begin{DoxyCompactList}\small\item\em Getter for date\+Of\+Termination that returns formatted string. \end{DoxyCompactList}\item 
+double \hyperlink{class_all_employees_1_1_fulltime_employee_aad38dced5f64bb3ea0bb6f474547370e}{Get\+Salary} ()
+\begin{DoxyCompactList}\small\item\em Getter for salary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_all_employees_1_1_fulltime_employee_aa072bd7c652567684c77e0cfd6638af2}{}Date\+Time {\bfseries date\+Of\+Hire}\label{class_all_employees_1_1_fulltime_employee_aa072bd7c652567684c77e0cfd6638af2}
+
+\item 
+\hypertarget{class_all_employees_1_1_fulltime_employee_a3836c1a3f74f71f87652c91913eb570c}{}Date\+Time {\bfseries date\+Of\+Termination}\label{class_all_employees_1_1_fulltime_employee_a3836c1a3f74f71f87652c91913eb570c}
+
+\item 
+\hypertarget{class_all_employees_1_1_fulltime_employee_ad52581c3ee723884cc6b34111cac53b7}{}double {\bfseries salary}\label{class_all_employees_1_1_fulltime_employee_ad52581c3ee723884cc6b34111cac53b7}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+{\bfseries Brief Description} The Fulltime \hyperlink{class_all_employees_1_1_employee}{Employee} class is used to store and manage data about a employee who is hired for a full-\/time position. This class is a child to \hyperlink{class_all_employees_1_1_employee}{Employee} class. It adds the date of hire and termination, and the employees salary. If the constructor creates a invalid employee, a exception is thrown. All other errors result in a defined return. 
+
+\begin{DoxyAuthor}{Author}
+{\itshape Brandon} 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_all_employees_1_1_fulltime_employee_a2f7744fed20aa3161c5ac5cd37c1a281}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Fulltime\+Employee@{Fulltime\+Employee}}
+\index{Fulltime\+Employee@{Fulltime\+Employee}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Fulltime\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}All\+Employees.\+Fulltime\+Employee.\+Fulltime\+Employee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_a2f7744fed20aa3161c5ac5cd37c1a281}
+
+
+default constructor. Sets all values to default 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_a7cc8db6b3e7dd2fa71706c9ebaf68660}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Fulltime\+Employee@{Fulltime\+Employee}}
+\index{Fulltime\+Employee@{Fulltime\+Employee}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Fulltime\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}All\+Employees.\+Fulltime\+Employee.\+Fulltime\+Employee (
+\begin{DoxyParamCaption}
+\item[{string}]{first\+Name, }
+\item[{string}]{last\+Name}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_a7cc8db6b3e7dd2fa71706c9ebaf68660}
+
+
+overloaded constructor. Sets name to inputed names, set all other values to default 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+Name} & -\/ {\bfseries string} -\/ First Name of employee to add to records \\
+\hline
+{\em last\+Name} & -\/ {\bfseries string} -\/ Last Name of employee to add to records\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+Failed\+Constructor\+Exception$>$} & -\/ If the constructor failed to create the object\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_a45c638281476043129e38c74bc16619f}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Fulltime\+Employee@{Fulltime\+Employee}}
+\index{Fulltime\+Employee@{Fulltime\+Employee}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Fulltime\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}All\+Employees.\+Fulltime\+Employee.\+Fulltime\+Employee (
+\begin{DoxyParamCaption}
+\item[{string}]{first\+Name, }
+\item[{string}]{last\+Name, }
+\item[{int}]{social\+Insurance\+Number, }
+\item[{Date\+Time}]{date\+Of\+Birth, }
+\item[{Date\+Time}]{date\+Of\+Hire, }
+\item[{Date\+Time}]{date\+Of\+Termination, }
+\item[{double}]{salary}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_a45c638281476043129e38c74bc16619f}
+
+
+overloaded constructor. Sets all values to the values given. no default values 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+Name} & -\/ {\bfseries string} -\/ First Name of employee to add to records \\
+\hline
+{\em last\+Name} & -\/ {\bfseries string} -\/ Last Name of employee to add to records \\
+\hline
+{\em social\+Insurance\+Number} & -\/ {\bfseries int} -\/ Social Insurance Number of employee to add to records \\
+\hline
+{\em date\+Of\+Birth} & -\/ {\bfseries Date\+Time} -\/ Date Of Birth of employee to add to records \\
+\hline
+{\em date\+Of\+Hire} & -\/ {\bfseries Date\+Time} -\/ Date Of Hire of employee to add to records \\
+\hline
+{\em date\+Of\+Termination} & -\/ {\bfseries Date\+Time} -\/ Date Of Termination of employee to add to records \\
+\hline
+{\em salary} & -\/ {\bfseries double} -\/ salary of employee to add to records\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$\+Failed\+Constructor\+Exception$>$} & -\/ If the constructor failed to create the object\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_all_employees_1_1_fulltime_employee_a7660032e944e78c6ff26598aa7107796}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Details@{Details}}
+\index{Details@{Details}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Details}]{\setlength{\rightskip}{0pt plus 5cm}string All\+Employees.\+Fulltime\+Employee.\+Details (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_a7660032e944e78c6ff26598aa7107796}
+
+
+Used to print all employee data to the consol. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+user\+Info {\bfseries string} -\/ formatted string of employee data 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_a3a975ad60176797d1d5529e257596565}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Get\+Date\+Of\+Hire@{Get\+Date\+Of\+Hire}}
+\index{Get\+Date\+Of\+Hire@{Get\+Date\+Of\+Hire}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Get\+Date\+Of\+Hire}]{\setlength{\rightskip}{0pt plus 5cm}Date\+Time All\+Employees.\+Fulltime\+Employee.\+Get\+Date\+Of\+Hire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_a3a975ad60176797d1d5529e257596565}
+
+
+Getter for date\+Of\+Hire. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+date\+Of\+Hire {\bfseries Date\+Time} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_a91b4f15454d92eb7cd33968573050ef0}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Get\+Date\+Of\+Hire\+String@{Get\+Date\+Of\+Hire\+String}}
+\index{Get\+Date\+Of\+Hire\+String@{Get\+Date\+Of\+Hire\+String}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Get\+Date\+Of\+Hire\+String}]{\setlength{\rightskip}{0pt plus 5cm}string All\+Employees.\+Fulltime\+Employee.\+Get\+Date\+Of\+Hire\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_a91b4f15454d92eb7cd33968573050ef0}
+
+
+Getter for date\+Of\+Hire that returns formatted string. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+date\+Of\+Hire {\bfseries string} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_a97af3da9151f97e91543d60b6b67a4fa}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Get\+Date\+Of\+Termination@{Get\+Date\+Of\+Termination}}
+\index{Get\+Date\+Of\+Termination@{Get\+Date\+Of\+Termination}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Get\+Date\+Of\+Termination}]{\setlength{\rightskip}{0pt plus 5cm}Date\+Time All\+Employees.\+Fulltime\+Employee.\+Get\+Date\+Of\+Termination (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_a97af3da9151f97e91543d60b6b67a4fa}
+
+
+Getter for date\+Of\+Termination. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+date\+Of\+Termination {\bfseries Date\+Time} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_a7d0612eba21e83226bb09a174179847c}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Get\+Date\+Of\+Termination\+String@{Get\+Date\+Of\+Termination\+String}}
+\index{Get\+Date\+Of\+Termination\+String@{Get\+Date\+Of\+Termination\+String}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Get\+Date\+Of\+Termination\+String}]{\setlength{\rightskip}{0pt plus 5cm}string All\+Employees.\+Fulltime\+Employee.\+Get\+Date\+Of\+Termination\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_a7d0612eba21e83226bb09a174179847c}
+
+
+Getter for date\+Of\+Termination that returns formatted string. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+date\+Of\+Termination {\bfseries string} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_aad38dced5f64bb3ea0bb6f474547370e}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Get\+Salary@{Get\+Salary}}
+\index{Get\+Salary@{Get\+Salary}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Get\+Salary}]{\setlength{\rightskip}{0pt plus 5cm}double All\+Employees.\+Fulltime\+Employee.\+Get\+Salary (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_aad38dced5f64bb3ea0bb6f474547370e}
+
+
+Getter for salary. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+salary {\bfseries double} 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_ae642df9b07e842857f998d539eeae502}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}}
+\index{Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Set\+Date\+Of\+Birth}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Fulltime\+Employee.\+Set\+Date\+Of\+Birth (
+\begin{DoxyParamCaption}
+\item[{Date\+Time}]{date}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_ae642df9b07e842857f998d539eeae502}
+
+
+Setter for date\+Of\+Hire. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & {\bfseries Date\+Time} -\/ The employees date of hire\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_a8c230e078f3a9d84ccfdf2dad618edfb}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}}
+\index{Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Set\+Date\+Of\+Birth}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Fulltime\+Employee.\+Set\+Date\+Of\+Birth (
+\begin{DoxyParamCaption}
+\item[{string}]{date}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_a8c230e078f3a9d84ccfdf2dad618edfb}
+
+
+Setter for date\+Of\+Birth with String. 
+
+{\bfseries Details} -\/ string format\+: Y\+Y\+Y\+Y-\/\+M\+M-\/\+D\+D
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & {\bfseries string} -\/ The date of birth of the employee\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_a4198c95029b48d8da8ddf3d65574ea53}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}}
+\index{Set\+Date\+Of\+Birth@{Set\+Date\+Of\+Birth}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Set\+Date\+Of\+Birth}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Fulltime\+Employee.\+Set\+Date\+Of\+Birth (
+\begin{DoxyParamCaption}
+\item[{int}]{year, }
+\item[{int}]{month, }
+\item[{int}]{day}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_a4198c95029b48d8da8ddf3d65574ea53}
+
+
+Setter for date\+Of\+Birth with ints. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & {\bfseries int} -\/ The year of birth of the employee \\
+\hline
+{\em month} & {\bfseries int} -\/ The month of birth of the employee \\
+\hline
+{\em day} & {\bfseries int} -\/ The day of birth of the employee\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_aaf2dc1dcb158819d06958d4399850f56}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Set\+Date\+Of\+Hire@{Set\+Date\+Of\+Hire}}
+\index{Set\+Date\+Of\+Hire@{Set\+Date\+Of\+Hire}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Set\+Date\+Of\+Hire}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Fulltime\+Employee.\+Set\+Date\+Of\+Hire (
+\begin{DoxyParamCaption}
+\item[{Date\+Time}]{date}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_aaf2dc1dcb158819d06958d4399850f56}
+
+
+Setter for date\+Of\+Hire. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & {\bfseries Date\+Time} -\/ The employees date of hire\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_a6b7516d71f46e650da2200a308d6f226}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Set\+Date\+Of\+Hire@{Set\+Date\+Of\+Hire}}
+\index{Set\+Date\+Of\+Hire@{Set\+Date\+Of\+Hire}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Set\+Date\+Of\+Hire}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Fulltime\+Employee.\+Set\+Date\+Of\+Hire (
+\begin{DoxyParamCaption}
+\item[{string}]{date}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_a6b7516d71f46e650da2200a308d6f226}
+
+
+Setter for date\+Of\+Hire from String. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & {\bfseries string} -\/ The employees date of hire\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_ae5612c076ead69a3b6f0bbc22a21e293}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Set\+Date\+Of\+Hire@{Set\+Date\+Of\+Hire}}
+\index{Set\+Date\+Of\+Hire@{Set\+Date\+Of\+Hire}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Set\+Date\+Of\+Hire}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Fulltime\+Employee.\+Set\+Date\+Of\+Hire (
+\begin{DoxyParamCaption}
+\item[{int}]{year, }
+\item[{int}]{month, }
+\item[{int}]{day}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_ae5612c076ead69a3b6f0bbc22a21e293}
+
+
+Setter for date\+Of\+Hire from ints. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & {\bfseries int} -\/ The start year of the employees date of hire \\
+\hline
+{\em month} & {\bfseries int} -\/ The start month of the employees date of hire \\
+\hline
+{\em day} & {\bfseries int} -\/ The start day of the employees date of hire\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_a94e9d4b67b20ecbe1449701a200b1c07}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Set\+Date\+Of\+Termination@{Set\+Date\+Of\+Termination}}
+\index{Set\+Date\+Of\+Termination@{Set\+Date\+Of\+Termination}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Set\+Date\+Of\+Termination}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Fulltime\+Employee.\+Set\+Date\+Of\+Termination (
+\begin{DoxyParamCaption}
+\item[{Date\+Time}]{date}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_a94e9d4b67b20ecbe1449701a200b1c07}
+
+
+Setter for date\+Of\+Termination. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & {\bfseries Date\+Time} -\/ The employees date of termination\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_a7d142370fe7f81bd623de155a80d0214}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Set\+Date\+Of\+Termination@{Set\+Date\+Of\+Termination}}
+\index{Set\+Date\+Of\+Termination@{Set\+Date\+Of\+Termination}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Set\+Date\+Of\+Termination}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Fulltime\+Employee.\+Set\+Date\+Of\+Termination (
+\begin{DoxyParamCaption}
+\item[{string}]{date}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_a7d142370fe7f81bd623de155a80d0214}
+
+
+Setter for date\+Of\+Termination from string. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & {\bfseries string} -\/ The employees date of termination\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_aed4ff527256f96b542d0ac0c17f3e2ea}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Set\+Date\+Of\+Termination@{Set\+Date\+Of\+Termination}}
+\index{Set\+Date\+Of\+Termination@{Set\+Date\+Of\+Termination}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Set\+Date\+Of\+Termination}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Fulltime\+Employee.\+Set\+Date\+Of\+Termination (
+\begin{DoxyParamCaption}
+\item[{int}]{year, }
+\item[{int}]{month, }
+\item[{int}]{day}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_aed4ff527256f96b542d0ac0c17f3e2ea}
+
+
+Setter for date\+Of\+Termination from int. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & {\bfseries int} -\/ The start year of the employees date of termination \\
+\hline
+{\em month} & {\bfseries int} -\/ The start month of the employees date of termination \\
+\hline
+{\em day} & {\bfseries int} -\/ The start day of the employees date of termination\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_a7749239bf39282a2b803550718cae1c6}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Set\+Salary@{Set\+Salary}}
+\index{Set\+Salary@{Set\+Salary}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Set\+Salary}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Fulltime\+Employee.\+Set\+Salary (
+\begin{DoxyParamCaption}
+\item[{double}]{salary}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_a7749239bf39282a2b803550718cae1c6}
+
+
+Setter for salary. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em salary} & {\bfseries double} -\/ The salary of the employee\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Saved {\bfseries bool} -\/ true if input was valid and data was changed. False it data was not changed 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_a3026e5a4c764fc0da54873cc131e2b82}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{To\+String}]{\setlength{\rightskip}{0pt plus 5cm}override string All\+Employees.\+Fulltime\+Employee.\+To\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_a3026e5a4c764fc0da54873cc131e2b82}
+
+
+Overriden method To\+String used to return a formated string of all data. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+employee\+String {\bfseries string} -\/ the formated string containing all employee data 
+\end{DoxyReturn}
+\hypertarget{class_all_employees_1_1_fulltime_employee_a3e718749e4730c0f2a28f820530071da}{}\index{All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}!Validate@{Validate}}
+\index{Validate@{Validate}!All\+Employees\+::\+Fulltime\+Employee@{All\+Employees\+::\+Fulltime\+Employee}}
+\subsubsection[{Validate}]{\setlength{\rightskip}{0pt plus 5cm}bool All\+Employees.\+Fulltime\+Employee.\+Validate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_all_employees_1_1_fulltime_employee_a3e718749e4730c0f2a28f820530071da}
+
+
+Used to determine in the object contains a valid employee. 
+
+{\bfseries Details}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n/a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+Valid -\/ {\bfseries bool} -\/ True if the object contains all data for a valid employee 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+S\+E\+T\+Repo/trunk/\+E\+M\+S/trunk/\+All\+Employees/\+All\+Employees/Fulltime\+Employee.\+cs\end{DoxyCompactItemize}
