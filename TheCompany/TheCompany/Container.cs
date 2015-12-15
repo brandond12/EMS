@@ -443,15 +443,28 @@ namespace TheCompany
         * 
         * \return n/a
         */
-        public void AddEmployeeToList(AllEmployees.Employee employee)
+        public bool AddEmployeeToList(AllEmployees.Employee employee)
         {
             String employeeType = employee.GetEmployeeType();
+            bool added = true;
             // Add an employee to the list if it has a valid employee type
             if ((employeeType == "FT") || (employeeType == "PT") || (employeeType == "CT") || (employeeType == "SN"))
             {
-                listOfEmployees.Add(employee);
-                Logging.Log("Container", "AddEmployeeToList", "Added an employee named " + employee.GetFirstName() + " to the container.");
+                foreach (Employee temp in listOfEmployees)
+                {
+                    if(temp.ToString() == employee.ToString())
+                    {
+                        added = false;
+                        Logging.Log("Container", "AddEmployeeToList", "Employee already in container: " + employee.GetFirstName());
+                    }
+                }
+                if (added)
+                {
+                    listOfEmployees.Add(employee);
+                    Logging.Log("Container", "AddEmployeeToList", "Added an employee named " + employee.GetFirstName() + " to the container.");
+                }
             }
+            return added;
         }
 
         /**

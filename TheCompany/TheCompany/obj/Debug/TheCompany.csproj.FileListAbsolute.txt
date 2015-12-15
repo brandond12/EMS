@@ -40,3 +40,4 @@ C:\Testing-EMS-2\trunk\TheCompany\TheCompany\bin\Debug\Presentation.pdb
 C:\Testing-EMS-2\trunk\TheCompany\TheCompany\bin\Debug\Supporting.pdb
 C:\Testing-EMS-2\trunk\TheCompany\TheCompany\obj\Debug\TheCompany.dll
 C:\Testing-EMS-2\trunk\TheCompany\TheCompany\obj\Debug\TheCompany.pdb
+C:\SETRepo\EMS\trunk\TheCompany\TheCompany\obj\Debug\TheCompany.csprojResolveAssemblyReference.cache

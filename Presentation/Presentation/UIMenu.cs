@@ -140,12 +140,16 @@ namespace Presentation
                     case "1":
                         // Gets employee list from the databas
                         employeeList = FileIO.ReadAllRecords(@"C:\DBase.txt");
+                        int employeesRead = employeeList.Count;
                         foreach (Employee emp in employeeList)
                         {
                             // Add it to the list
-                            company.AddEmployeeToList(emp);
+                            if(!company.AddEmployeeToList(emp))
+                            {
+                                employeesRead--;
+                            }
                         }
-                        Console.WriteLine(employeeList.Count().ToString() + " record(s) were read.");
+                        Console.WriteLine(employeesRead + " record(s) were read.");
                         break;
                     case "2":
                         // Send each individual employee back out to the database
