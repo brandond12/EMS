@@ -1,0 +1,171 @@
+\hypertarget{class_the_company_1_1_tests_1_1_other_tests}{}\section{The\+Company.\+Tests.\+Other\+Tests Class Reference}
+\label{class_the_company_1_1_tests_1_1_other_tests}\index{The\+Company.\+Tests.\+Other\+Tests@{The\+Company.\+Tests.\+Other\+Tests}}
+
+
+{\bfseries  Brief Description} This class is used to test the miscellaneous methods in the \hyperlink{class_the_company_1_1_container}{Container} class. The methods tested include Add\+Employee\+To\+List, Remove\+Employee, Display\+All\+Employees and Get\+Employee\+List. Some of the methods in this class require user input for testing (they will have a string called data\+To\+Pass\+In, and will use Console.\+Set\+In() and String\+Reader). To test the methods with user input, Console.\+Set\+In() and String\+Reader are used to simulate the user input. The idea/code to use the Console.\+Set\+In() and String\+Reader for user input was borrowed from Assaf Stone\textquotesingle{}s post at this link\+: \href{http://www.softwareandi.com/2012/02/how-to-write-automated-tests-for.html}{\tt http\+://www.\+softwareandi.\+com/2012/02/how-\/to-\/write-\/automated-\/tests-\/for.\+html}  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_the_company_1_1_tests_1_1_other_tests_a59add250f95b895297223af2c80c3c7f}{}void {\bfseries Test\+Initialize} ()\label{class_the_company_1_1_tests_1_1_other_tests_a59add250f95b895297223af2c80c3c7f}
+
+\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_other_tests_a99113d3b2e96f8888b5f50a1819697e4}{Add\+Employee\+To\+List\+\_\+\+Valid\+Employee\+\_\+\+Adds\+Employee\+To\+List} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee\+To\+List actually adds an employee to the employee list. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_other_tests_a833581f7d183dcc53d7c6cfe09ccc61e}{Add\+Employee\+To\+List\+\_\+\+Invalid\+Employee\+\_\+\+Employee\+Not\+Added\+To\+List} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee\+To\+List will not add an invalid employee to the employee list. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_other_tests_ae86fadae6c291598b1a9e0b86cbbb735}{Remove\+Employee\+\_\+\+Valid\+Employee\+In\+List\+\_\+\+Removes\+Employee} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Remove\+Employee will remove an employee from the employee list. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_other_tests_a1dbd7071338871b986591e32b6a697af}{Remove\+Employee\+\_\+\+Invalid\+Employee\+Not\+In\+List\+\_\+\+Employee\+Is\+Not\+Removed} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Remove\+Employee will not remove an invalid employee from the employee list. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_other_tests_a4173aa7634a92048d0afda36c89f7e55}{Display\+All\+Employees\+\_\+\+Valid\+Employees\+In\+List\+\_\+\+Displays\+All\+Employees} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Display\+All\+Employees displays the employee details of all employees in the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_company_1_1_tests_1_1_other_tests_a3809d7035a2570bae67b7b9610f5c96f}{Get\+Employee\+List\+\_\+\+Valid\+Employees\+In\+List\+\_\+\+Returns\+An\+Employee\+List} ()
+\begin{DoxyCompactList}\small\item\em The unit test\textquotesingle{}s purpose is to test if the method Get\+Employee\+List returns the employee list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_the_company_1_1_tests_1_1_other_tests_a76b4c4cdea3948df680a9cafbd75ebd0}{}\hyperlink{class_the_company_1_1_container}{Container} {\bfseries employee\+Repo}\label{class_the_company_1_1_tests_1_1_other_tests_a76b4c4cdea3948df680a9cafbd75ebd0}
+
+\item 
+\hypertarget{class_the_company_1_1_tests_1_1_other_tests_a1b44fe8f452b8c4116dbcde629dc0d65}{}\hyperlink{class_all_employees_1_1_fulltime_employee}{Fulltime\+Employee} {\bfseries F\+T\+Employee}\label{class_the_company_1_1_tests_1_1_other_tests_a1b44fe8f452b8c4116dbcde629dc0d65}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+{\bfseries  Brief Description} This class is used to test the miscellaneous methods in the \hyperlink{class_the_company_1_1_container}{Container} class. The methods tested include Add\+Employee\+To\+List, Remove\+Employee, Display\+All\+Employees and Get\+Employee\+List. Some of the methods in this class require user input for testing (they will have a string called data\+To\+Pass\+In, and will use Console.\+Set\+In() and String\+Reader). To test the methods with user input, Console.\+Set\+In() and String\+Reader are used to simulate the user input. The idea/code to use the Console.\+Set\+In() and String\+Reader for user input was borrowed from Assaf Stone\textquotesingle{}s post at this link\+: \href{http://www.softwareandi.com/2012/02/how-to-write-automated-tests-for.html}{\tt http\+://www.\+softwareandi.\+com/2012/02/how-\/to-\/write-\/automated-\/tests-\/for.\+html} 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_the_company_1_1_tests_1_1_other_tests_a833581f7d183dcc53d7c6cfe09ccc61e}{}\index{The\+Company\+::\+Tests\+::\+Other\+Tests@{The\+Company\+::\+Tests\+::\+Other\+Tests}!Add\+Employee\+To\+List\+\_\+\+Invalid\+Employee\+\_\+\+Employee\+Not\+Added\+To\+List@{Add\+Employee\+To\+List\+\_\+\+Invalid\+Employee\+\_\+\+Employee\+Not\+Added\+To\+List}}
+\index{Add\+Employee\+To\+List\+\_\+\+Invalid\+Employee\+\_\+\+Employee\+Not\+Added\+To\+List@{Add\+Employee\+To\+List\+\_\+\+Invalid\+Employee\+\_\+\+Employee\+Not\+Added\+To\+List}!The\+Company\+::\+Tests\+::\+Other\+Tests@{The\+Company\+::\+Tests\+::\+Other\+Tests}}
+\subsubsection[{Add\+Employee\+To\+List\+\_\+\+Invalid\+Employee\+\_\+\+Employee\+Not\+Added\+To\+List}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Other\+Tests.\+Add\+Employee\+To\+List\+\_\+\+Invalid\+Employee\+\_\+\+Employee\+Not\+Added\+To\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_other_tests_a833581f7d183dcc53d7c6cfe09ccc61e}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee\+To\+List will not add an invalid employee to the employee list. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Add\+Employee\+To\+List.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is fault/exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} Employee employee = new Employee(); employee.\+Set\+First\+Name(\char`\"{}\+Janet\char`\"{}); employee.\+Set\+Last\+Name(\char`\"{}\+Moore\char`\"{}); employee.\+Set\+Social\+Insurance\+Number(872046458);
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the employee\+List.\+Count will return 0.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the employee\+List.\+Count returns 0. \hypertarget{class_the_company_1_1_tests_1_1_other_tests_a99113d3b2e96f8888b5f50a1819697e4}{}\index{The\+Company\+::\+Tests\+::\+Other\+Tests@{The\+Company\+::\+Tests\+::\+Other\+Tests}!Add\+Employee\+To\+List\+\_\+\+Valid\+Employee\+\_\+\+Adds\+Employee\+To\+List@{Add\+Employee\+To\+List\+\_\+\+Valid\+Employee\+\_\+\+Adds\+Employee\+To\+List}}
+\index{Add\+Employee\+To\+List\+\_\+\+Valid\+Employee\+\_\+\+Adds\+Employee\+To\+List@{Add\+Employee\+To\+List\+\_\+\+Valid\+Employee\+\_\+\+Adds\+Employee\+To\+List}!The\+Company\+::\+Tests\+::\+Other\+Tests@{The\+Company\+::\+Tests\+::\+Other\+Tests}}
+\subsubsection[{Add\+Employee\+To\+List\+\_\+\+Valid\+Employee\+\_\+\+Adds\+Employee\+To\+List}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Other\+Tests.\+Add\+Employee\+To\+List\+\_\+\+Valid\+Employee\+\_\+\+Adds\+Employee\+To\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_other_tests_a99113d3b2e96f8888b5f50a1819697e4}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Add\+Employee\+To\+List actually adds an employee to the employee list. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Add\+Employee\+To\+List.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is normal/functional.
+
+\textbackslash{} {\bfseries  Sample Data Sets} A full-\/time employee reference\+: Date\+Time date\+Of\+Birth = new Date\+Time(1990, 09, 10); Date\+Time date\+Of\+Hire = new Date\+Time(2010, 10, 11); Date\+Time date\+Of\+Termination = new Date\+Time(2011, 03, 19); F\+T\+Employee = new Fulltime\+Employee(\char`\"{}\+Sam\char`\"{}, \char`\"{}\+Jones\char`\"{}, 902398402, date\+Of\+Birth, date\+Of\+Hire, date\+Of\+Termination, 50000);
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the employee\+List.\+Count will return 1.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the employee\+List.\+Count returns 1. \hypertarget{class_the_company_1_1_tests_1_1_other_tests_a4173aa7634a92048d0afda36c89f7e55}{}\index{The\+Company\+::\+Tests\+::\+Other\+Tests@{The\+Company\+::\+Tests\+::\+Other\+Tests}!Display\+All\+Employees\+\_\+\+Valid\+Employees\+In\+List\+\_\+\+Displays\+All\+Employees@{Display\+All\+Employees\+\_\+\+Valid\+Employees\+In\+List\+\_\+\+Displays\+All\+Employees}}
+\index{Display\+All\+Employees\+\_\+\+Valid\+Employees\+In\+List\+\_\+\+Displays\+All\+Employees@{Display\+All\+Employees\+\_\+\+Valid\+Employees\+In\+List\+\_\+\+Displays\+All\+Employees}!The\+Company\+::\+Tests\+::\+Other\+Tests@{The\+Company\+::\+Tests\+::\+Other\+Tests}}
+\subsubsection[{Display\+All\+Employees\+\_\+\+Valid\+Employees\+In\+List\+\_\+\+Displays\+All\+Employees}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Other\+Tests.\+Display\+All\+Employees\+\_\+\+Valid\+Employees\+In\+List\+\_\+\+Displays\+All\+Employees (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_other_tests_a4173aa7634a92048d0afda36c89f7e55}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Display\+All\+Employees displays the employee details of all employees in the list. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Display\+All\+Employees.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is run automatically, but the user has to view the output of the test to make sure that all of the employees were displayed with the correct data.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is normal/functional.
+
+\textbackslash{} {\bfseries  Sample Data Sets} A part-\/time employee reference\+: Date\+Time date\+Of\+Birth = new Date\+Time(1987, 06, 22); Date\+Time date\+Of\+Hire = new Date\+Time(2013, 04, 12); Date\+Time date\+Of\+Termination = new Date\+Time(2014, 05, 13); Parttime\+Employee P\+T\+Employee = new \hyperlink{class_all_employees_1_1_parttime_employee}{All\+Employees.\+Parttime\+Employee}(\char`\"{}\+Mark\char`\"{}, \char`\"{}\+Smith\char`\"{}, 872098933, date\+Of\+Birth, date\+Of\+Hire, date\+Of\+Termination, 30); A contract employee reference\+: date\+Of\+Birth = new Date\+Time(1989, 07, 02); Date\+Time contract\+Start\+Date = new Date\+Time(2014, 02, 08); Date\+Time contract\+Stop\+Date = new Date\+Time(2014, 09, 12); Contract\+Employee C\+T\+Employee = new \hyperlink{class_all_employees_1_1_contract_employee}{All\+Employees.\+Contract\+Employee}(\char`\"{}\+Anna\char`\"{}, \char`\"{}\+Miller\char`\"{}, 892398402, date\+Of\+Birth, contract\+Start\+Date, contract\+Stop\+Date, 25000); A seasonal employee reference\+: date\+Of\+Birth = new Date\+Time(1991, 03, 18); Seasonal\+Employee S\+N\+Employee = new \hyperlink{class_all_employees_1_1_seasonal_employee}{All\+Employees.\+Seasonal\+Employee}(\char`\"{}\+Jake\char`\"{}, \char`\"{}\+Williams\char`\"{}, 912098933, date\+Of\+Birth, \char`\"{}\+Summer\char`\"{}, 20);
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that all of the employees will be be displayed to the user with the correct details.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that all of the employees are displayed to the user with the correct details. \hypertarget{class_the_company_1_1_tests_1_1_other_tests_a3809d7035a2570bae67b7b9610f5c96f}{}\index{The\+Company\+::\+Tests\+::\+Other\+Tests@{The\+Company\+::\+Tests\+::\+Other\+Tests}!Get\+Employee\+List\+\_\+\+Valid\+Employees\+In\+List\+\_\+\+Returns\+An\+Employee\+List@{Get\+Employee\+List\+\_\+\+Valid\+Employees\+In\+List\+\_\+\+Returns\+An\+Employee\+List}}
+\index{Get\+Employee\+List\+\_\+\+Valid\+Employees\+In\+List\+\_\+\+Returns\+An\+Employee\+List@{Get\+Employee\+List\+\_\+\+Valid\+Employees\+In\+List\+\_\+\+Returns\+An\+Employee\+List}!The\+Company\+::\+Tests\+::\+Other\+Tests@{The\+Company\+::\+Tests\+::\+Other\+Tests}}
+\subsubsection[{Get\+Employee\+List\+\_\+\+Valid\+Employees\+In\+List\+\_\+\+Returns\+An\+Employee\+List}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Other\+Tests.\+Get\+Employee\+List\+\_\+\+Valid\+Employees\+In\+List\+\_\+\+Returns\+An\+Employee\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_other_tests_a3809d7035a2570bae67b7b9610f5c96f}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Get\+Employee\+List returns the employee list. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Get\+Employee\+List.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is normal/functional.
+
+\textbackslash{} {\bfseries  Sample Data Sets} A full-\/time employee reference\+: Date\+Time date\+Of\+Birth = new Date\+Time(1990, 09, 10); Date\+Time date\+Of\+Hire = new Date\+Time(2010, 10, 11); Date\+Time date\+Of\+Termination = new Date\+Time(2011, 03, 19); F\+T\+Employee = new Fulltime\+Employee(\char`\"{}\+Sam\char`\"{}, \char`\"{}\+Jones\char`\"{}, 902398402, date\+Of\+Birth, date\+Of\+Hire, date\+Of\+Termination, 50000); A part-\/time employee reference\+: Date\+Time date\+Of\+Birth = new Date\+Time(1987, 06, 22); Date\+Time date\+Of\+Hire = new Date\+Time(2013, 04, 12); Date\+Time date\+Of\+Termination = new Date\+Time(2014, 05, 13); Parttime\+Employee P\+T\+Employee = new \hyperlink{class_all_employees_1_1_parttime_employee}{All\+Employees.\+Parttime\+Employee}(\char`\"{}\+Mark\char`\"{}, \char`\"{}\+Smith\char`\"{}, 872098933, date\+Of\+Birth, date\+Of\+Hire, date\+Of\+Termination, 30);
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the employee\+List.\+Count will return 2.
+
+\textbackslash{} {\bfseries  Actual Result} The expected result is that the employee\+List.\+Count will return 2. \hypertarget{class_the_company_1_1_tests_1_1_other_tests_a1dbd7071338871b986591e32b6a697af}{}\index{The\+Company\+::\+Tests\+::\+Other\+Tests@{The\+Company\+::\+Tests\+::\+Other\+Tests}!Remove\+Employee\+\_\+\+Invalid\+Employee\+Not\+In\+List\+\_\+\+Employee\+Is\+Not\+Removed@{Remove\+Employee\+\_\+\+Invalid\+Employee\+Not\+In\+List\+\_\+\+Employee\+Is\+Not\+Removed}}
+\index{Remove\+Employee\+\_\+\+Invalid\+Employee\+Not\+In\+List\+\_\+\+Employee\+Is\+Not\+Removed@{Remove\+Employee\+\_\+\+Invalid\+Employee\+Not\+In\+List\+\_\+\+Employee\+Is\+Not\+Removed}!The\+Company\+::\+Tests\+::\+Other\+Tests@{The\+Company\+::\+Tests\+::\+Other\+Tests}}
+\subsubsection[{Remove\+Employee\+\_\+\+Invalid\+Employee\+Not\+In\+List\+\_\+\+Employee\+Is\+Not\+Removed}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Other\+Tests.\+Remove\+Employee\+\_\+\+Invalid\+Employee\+Not\+In\+List\+\_\+\+Employee\+Is\+Not\+Removed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_other_tests_a1dbd7071338871b986591e32b6a697af}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Remove\+Employee will not remove an invalid employee from the employee list. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Remove\+Employee.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is fault/exception.
+
+\textbackslash{} {\bfseries  Sample Data Sets} A full-\/time employee reference\+: Date\+Time date\+Of\+Birth = new Date\+Time(1990, 09, 10); Date\+Time date\+Of\+Hire = new Date\+Time(2010, 10, 11); Date\+Time date\+Of\+Termination = new Date\+Time(2011, 03, 19); F\+T\+Employee = new Fulltime\+Employee(\char`\"{}\+Sam\char`\"{}, \char`\"{}\+Jones\char`\"{}, 902398402, date\+Of\+Birth, date\+Of\+Hire, date\+Of\+Termination, 50000); And a part-\/time employee reference\+: Date\+Time date\+Of\+Birth = new Date\+Time(1987, 06, 22); Date\+Time date\+Of\+Hire = new Date\+Time(2013, 04, 12); Date\+Time date\+Of\+Termination = new Date\+Time(2015, 01, 25); Parttime\+Employee P\+T\+Employee = new Parttime\+Employee(\char`\"{}\+Mark\char`\"{}, \char`\"{}\+Smith\char`\"{}, 872098933, date\+Of\+Birth, date\+Of\+Hire, date\+Of\+Termination, 30);
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the employee\+List.\+Count will return 1.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the employee\+List.\+Count returns 1. \hypertarget{class_the_company_1_1_tests_1_1_other_tests_ae86fadae6c291598b1a9e0b86cbbb735}{}\index{The\+Company\+::\+Tests\+::\+Other\+Tests@{The\+Company\+::\+Tests\+::\+Other\+Tests}!Remove\+Employee\+\_\+\+Valid\+Employee\+In\+List\+\_\+\+Removes\+Employee@{Remove\+Employee\+\_\+\+Valid\+Employee\+In\+List\+\_\+\+Removes\+Employee}}
+\index{Remove\+Employee\+\_\+\+Valid\+Employee\+In\+List\+\_\+\+Removes\+Employee@{Remove\+Employee\+\_\+\+Valid\+Employee\+In\+List\+\_\+\+Removes\+Employee}!The\+Company\+::\+Tests\+::\+Other\+Tests@{The\+Company\+::\+Tests\+::\+Other\+Tests}}
+\subsubsection[{Remove\+Employee\+\_\+\+Valid\+Employee\+In\+List\+\_\+\+Removes\+Employee}]{\setlength{\rightskip}{0pt plus 5cm}void The\+Company.\+Tests.\+Other\+Tests.\+Remove\+Employee\+\_\+\+Valid\+Employee\+In\+List\+\_\+\+Removes\+Employee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_the_company_1_1_tests_1_1_other_tests_ae86fadae6c291598b1a9e0b86cbbb735}
+
+
+The unit test\textquotesingle{}s purpose is to test if the method Remove\+Employee will remove an employee from the employee list. 
+
+\textbackslash{} {\bfseries  Name of Method} The method being tested is Remove\+Employee.
+
+\textbackslash{} {\bfseries  How test is Conducted} The test is automatically conducted.
+
+\textbackslash{} {\bfseries  Type of Test} The type of test is normal/functional.
+
+\textbackslash{} {\bfseries  Sample Data Sets} A full-\/time employee reference\+: Date\+Time date\+Of\+Birth = new Date\+Time(1990, 09, 10); Date\+Time date\+Of\+Hire = new Date\+Time(2010, 10, 11); Date\+Time date\+Of\+Termination = new Date\+Time(2011, 03, 19); F\+T\+Employee = new Fulltime\+Employee(\char`\"{}\+Sam\char`\"{}, \char`\"{}\+Jones\char`\"{}, 902398402, date\+Of\+Birth, date\+Of\+Hire, date\+Of\+Termination, 50000);
+
+\textbackslash{} {\bfseries  Expected Result} The expected result is that the employee\+List.\+Count will return 0.
+
+\textbackslash{} {\bfseries  Actual Result} The actual result is that the employee\+List.\+Count returns 0. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+S\+E\+T\+Repo/trunk/\+E\+M\+S/trunk/\+The\+Company/\+The\+Company.\+Tests/Other\+Tests.\+cs\end{DoxyCompactItemize}

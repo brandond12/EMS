@@ -1,0 +1,7 @@
+C:\SETRepo\trunk\EMS\trunk\Supporting\Supporting\bin\Debug\Supporting.dll
+C:\SETRepo\trunk\EMS\trunk\Supporting\Supporting\bin\Debug\Supporting.pdb
+C:\SETRepo\trunk\EMS\trunk\Supporting\Supporting\bin\Debug\AllEmployees.dll
+C:\SETRepo\trunk\EMS\trunk\Supporting\Supporting\bin\Debug\AllEmployees.pdb
+C:\SETRepo\trunk\EMS\trunk\Supporting\Supporting\obj\Debug\Supporting.csprojResolveAssemblyReference.cache
+C:\SETRepo\trunk\EMS\trunk\Supporting\Supporting\obj\Debug\Supporting.dll
+C:\SETRepo\trunk\EMS\trunk\Supporting\Supporting\obj\Debug\Supporting.pdb

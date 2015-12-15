@@ -19,7 +19,7 @@ namespace TheCompany.Tests
 {
     /// \class  ModifyEmployeeTests
     ///
-    /// \brief <b>Brief Description</b> 
+    /// \brief  <b> Brief Description</b> 
     /// This class is used to test the ModifyEmployee methods in the Container class. The methods tested 
     /// include ModifyFirstName, ModifyLastName, ModifySocialInsuranceNumber, ModifyDateOfBirth, ModifyDateOfHire, 
     /// ModifyEmployeeType, ModifyDateOfTermination, ModifySalary, ModifyHourlyRate, ModifyContractStartDate, 
@@ -75,16 +75,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyFirstName
         * will modify the first name of an employee if the given first name is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyFirstName.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -93,10 +93,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nSamantha"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Samantha.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Samantha.
         */
         [TestMethod]
@@ -123,16 +123,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyFirstName
         * will not modify the first name of an employee if the given first name is blank.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyFirstName.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -141,10 +141,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n "
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Sam.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Sam.
         */
         [TestMethod]
@@ -171,16 +171,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyFirstName
         * will not modify the first name of an employee if the given first name is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyFirstName.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -189,10 +189,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n12345"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Sam.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Sam.
         */
         [TestMethod]
@@ -219,16 +219,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyFirstName
         * will not modify the first name of an employee if the user selects no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyFirstName.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -237,10 +237,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Sam.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Sam.
         */
         [TestMethod]
@@ -268,16 +268,16 @@ namespace TheCompany.Tests
         * will not modify the first name of an employee if an invalid choice is 
         * made and then the user says no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyFirstName.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -286,10 +286,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nN"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Sam.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Sam.
         */
         [TestMethod]
@@ -317,16 +317,16 @@ namespace TheCompany.Tests
         * will modify the first name of an employee if an invalid choice is 
         * made and then the user says yes with a valid name.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyFirstName.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -335,10 +335,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nY\nSamantha"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Samantha.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Samantha.
         */
         [TestMethod]
@@ -369,16 +369,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyLastName
         * will modify the last name of an employee if the given last name is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyLastName.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -387,10 +387,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nAnderson"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Anderson.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Anderson.
         */
         [TestMethod]
@@ -417,16 +417,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyLastName
         * will not modify the last name of an employee if the given last name is blank.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyLastName.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -435,10 +435,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n "
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Jones.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Jones.
         */
         [TestMethod]
@@ -465,16 +465,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyLastName
         * will not modify the last name of an employee if the given last name is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyLastName.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -483,10 +483,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n12345"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Jones.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Jones.
         */
         [TestMethod]
@@ -513,16 +513,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyLastName
         * will not modify the last name of an employee if the user selects no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyFirstName.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -531,10 +531,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Jones.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Jones.
         */
         [TestMethod]
@@ -562,16 +562,16 @@ namespace TheCompany.Tests
         * will not modify the last name of an employee if an invalid choice is 
         * made and then the user says no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyLastName.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -580,10 +580,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nN"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's last name is Jones.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's last name is Jones.
         */
         [TestMethod]
@@ -611,16 +611,16 @@ namespace TheCompany.Tests
         * will modify the last name of an employee if an invalid choice is 
         * made and then the user says yes with a valid name.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyLastName.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -629,10 +629,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nY\nAnderson"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's last name is Anderson.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's last name is Anderson.
         */
         [TestMethod]
@@ -663,16 +663,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifySocialInsuranceNumber
         * will modify the SIN of an employee if the given SIN is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySocialInsuranceNumber.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -681,10 +681,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n902398433"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's SIN is 902398433.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's SIN is 902398433.
         */
         [TestMethod]
@@ -711,16 +711,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifySocialInsuranceNumber
         * will not modify the SIN of an employee if the given SIN is blank.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySocialInsuranceNumber.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -729,10 +729,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n "
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's SIN is 902398402.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's SIN is 902398402.
         */
         [TestMethod]
@@ -759,16 +759,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifySocialInsuranceNumber
         * will not modify the SIN of an employee if the given SIN is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySocialInsuranceNumber.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -777,10 +777,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n90H098GO1"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's SIN is 902398402.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's SIN is 902398402.
         */
         [TestMethod]
@@ -807,16 +807,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifySocialInsuranceNumber
         * will not modify the SIN of an employee if the user selects no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySocialInsuranceNumber.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -825,10 +825,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's SIN is 902398402.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's SIN is 902398402.
         */
         [TestMethod]
@@ -856,16 +856,16 @@ namespace TheCompany.Tests
         * will not modify the SIN of an employee if an invalid choice is 
         * made and then the user says no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySocialInsuranceNumber.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -874,10 +874,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nN"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's SIN is 902398402.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's SIN is 902398402.
         */
         [TestMethod]
@@ -905,16 +905,16 @@ namespace TheCompany.Tests
         * will modify the SIN of an employee if an invalid choice is 
         * made and then the user says yes with a valid SIN.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySocialInsuranceNumber.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -923,10 +923,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nY\n902398461"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's SIN is 902398461.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's SIN is 902398461.
         */
         [TestMethod]
@@ -957,16 +957,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyDateOfBirth
         * will modify the DOB of an employee if the given DOB is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfBirth.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -975,10 +975,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n1991\n09\n21"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOB is 1991-09-21.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOB is 1991-09-21.
         */
         [TestMethod]
@@ -1006,16 +1006,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyDateOfBirth
         * will not modify the DOB of an employee if the given DOB is blank.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfBirth.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1024,10 +1024,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n "
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOB is 1990-09-10.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOB is 1990-09-10.
         */
         [TestMethod]
@@ -1055,16 +1055,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyDateOfBirth
         * will not modify the DOB of an employee if the given DOB is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfBirth.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1073,10 +1073,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n1900\n40\n67"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOB is 1990-09-10.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOB is 1990-09-10.
         */
         [TestMethod]
@@ -1104,16 +1104,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyDateOfBirth
         * will not modify the DOB of an employee if the user selects no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfBirth.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1122,10 +1122,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOB is 1990-09-10.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOB is 1990-09-10.
         */
         [TestMethod]
@@ -1154,16 +1154,16 @@ namespace TheCompany.Tests
         * will not modify the DOB of an employee if an invalid choice is 
         * made and then the user says no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfBirth.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1172,10 +1172,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nN"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOB is 1990-09-10.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOB is 1990-09-10.
         */
         [TestMethod]
@@ -1204,16 +1204,16 @@ namespace TheCompany.Tests
         * will modify the DOB of an employee if an invalid choice is 
         * made and then the user says yes with a valid DOB.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfBirth.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1222,10 +1222,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nY\n1992\n10\n09"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOB is 1992-10-09.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOB is 1992-10-09.
         */
         [TestMethod]
@@ -1257,16 +1257,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployeeType
         * will modify the type of an employee if the given type is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployeeType.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1275,10 +1275,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nPT"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's type is PT (part-time).
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's is PT (part-time).
         */
         [TestMethod]
@@ -1305,16 +1305,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployeeType
         * will not modify the type of an employee if the given type is blank.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployeeType.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1323,10 +1323,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n "
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's type is FT (full-time).
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's type is FT (full-time).
         */
         [TestMethod]
@@ -1353,16 +1353,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployeeType
         * will not modify the type of an employee if the given type is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployeeType.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1371,10 +1371,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nOT"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's type is FT (full-time).
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's type is FT (full-time).
         */
         [TestMethod]
@@ -1401,16 +1401,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployeeType
         * will not modify the type of an employee if the user selects no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployeeType.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1419,10 +1419,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's type is FT (full-time).
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's type is FT (full-time).
         */
         [TestMethod]
@@ -1450,16 +1450,16 @@ namespace TheCompany.Tests
         * will not modify the DOB of an employee if an invalid choice is 
         * made and then the user says no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployeeType.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1468,10 +1468,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nN"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's type is FT (full-time).
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's type is FT (full-time).
         */
         [TestMethod]
@@ -1499,16 +1499,16 @@ namespace TheCompany.Tests
         * will modify the type of an employee if an invalid choice is 
         * made and then the user says yes with a valid type.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployeeType.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1517,10 +1517,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nY\nSN"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's type is SN (seasonal).
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's type is SN (seasonal).
         */
         [TestMethod]
@@ -1551,16 +1551,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyDateOfHire
         * will modify the DOH of an employee if the given DOH is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfHire.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1569,10 +1569,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n2010\n03\n22"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOH is 2010-03-22.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOH is 2010-03-22.
         */
         [TestMethod]
@@ -1600,16 +1600,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyDateOfHire
         * will not modify the DOH of an employee if the given DOH is blank.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfHire.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1618,10 +1618,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n "
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOH is 2010-10-11.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOH is 2010-10-11.
         */
         [TestMethod]
@@ -1649,16 +1649,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyDateOfHire
         * will not modify the DOH of an employee if the given DOH is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfHire.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1667,10 +1667,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n1900\n40\n67"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOH is 2010-10-11.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOH is 2010-10-11.
         */
         [TestMethod]
@@ -1698,16 +1698,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyDateOfHire
         * will not modify the DOH of an employee if the user selects no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfHire.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1716,10 +1716,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOH is 2010-10-11.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOH is 2010-10-11.
         */
         [TestMethod]
@@ -1748,16 +1748,16 @@ namespace TheCompany.Tests
         * will not modify the DOH of an employee if an invalid choice is 
         * made and then the user says no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfHire.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1766,10 +1766,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nN"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOH is 2010-10-11.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOH is 2010-10-11.
         */
         [TestMethod]
@@ -1798,16 +1798,16 @@ namespace TheCompany.Tests
         * will modify the DOH of an employee if an invalid choice is 
         * made and then the user says yes with a valid DOH.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfHire.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1816,10 +1816,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nY\n2011\n01\n29"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOH is 2011-01-29.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOH is 2011-01-29.
         */
         [TestMethod]
@@ -1851,16 +1851,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyDateOfTermination
         * will modify the DOT of an employee if the given DOT is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfTermination.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1869,10 +1869,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n2015\n11\n30"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOT is 2015-11-30.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOT is 2015-11-30.
         */
         [TestMethod]
@@ -1900,16 +1900,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyDateOfTermination
         * will not modify the DOT of an employee if the given DOT is blank.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfTermination.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1918,10 +1918,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n "
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOT is 2012-02-19.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOT is 2012-02-19.
         */
         [TestMethod]
@@ -1949,16 +1949,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyDateOfTermination
         * will not modify the DOT of an employee if the given DOT is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfTermination.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1967,10 +1967,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n1900\n40\n67"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOT is 2012-02-19.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOT is 2012-02-19.
         */
         [TestMethod]
@@ -1998,16 +1998,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyDateOfTermination
         * will not modify the DOT of an employee if the user selects no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfTermination.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -2016,10 +2016,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOT is 2012-02-19.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOT is 2012-02-19.
         */
         [TestMethod]
@@ -2048,16 +2048,16 @@ namespace TheCompany.Tests
         * will not modify the DOT of an employee if an invalid choice is 
         * made and then the user says no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfTermination.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -2066,10 +2066,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nN"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOT is 2012-02-19.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOT is 2012-02-19.
         */
         [TestMethod]
@@ -2098,16 +2098,16 @@ namespace TheCompany.Tests
         * will modify the DOT of an employee if an invalid choice is 
         * made and then the user says yes with a valid DOT.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyDateOfTermination.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -2116,10 +2116,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nY\n2015\n05\n13"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOT is 2015-05-13.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOT is 2011-05-13.
         */
         [TestMethod]
@@ -2151,16 +2151,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifySalary
         * will modify the salary of an employee if the given salary is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySalary.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -2169,10 +2169,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n65000"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's salary is 65000.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's salary is 65000.
         */
         [TestMethod]
@@ -2199,16 +2199,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifySalary
         * will not modify the salary of an employee if the given salary is blank.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySalary.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -2217,10 +2217,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n "
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's salary is 50000.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's salary is 50000.
         */
         [TestMethod]
@@ -2247,16 +2247,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifySalary
         * will not modify the salary of an employee if the given salary is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySalary.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -2265,10 +2265,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n-999999"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's salary is 50000.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's salary is 50000.
         */
         [TestMethod]
@@ -2295,16 +2295,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifySalary
         * will not modify the salary of an employee if the user selects no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySalary.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -2313,10 +2313,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's salary is 50000.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's salary is 50000.
         */
         [TestMethod]
@@ -2344,16 +2344,16 @@ namespace TheCompany.Tests
         * will not modify the salary of an employee if an invalid choice is 
         * made and then the user says no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySalary.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -2362,10 +2362,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nN"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's salary is 50000.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's salary is 50000.
         */
         [TestMethod]
@@ -2393,16 +2393,16 @@ namespace TheCompany.Tests
         * will modify the salary of an employee if an invalid choice is 
         * made and then the user says yes with a valid salary.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySalary.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -2411,10 +2411,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nY\n70000"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's salary is 70000.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's salary is 70000.
         */
         [TestMethod]
@@ -2445,16 +2445,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyHourlyRate
         * will modify the hourly rate of an employee if the given hourly rate is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyHourlyRate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A part-time employee reference: 
         * dateOfBirth = new DateTime(1987, 06, 22);
         * dateOfHire = new DateTime(2013, 04, 12);
@@ -2463,10 +2463,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n35.50"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's hourly rate is 35.50.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's hourly rate is 35.50.
         */
         [TestMethod]
@@ -2493,16 +2493,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyHourlyRate
         * will not modify the hourly rate of an employee if the given hourly rate is blank.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyHourlyRate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A part-time employee reference: 
         * dateOfBirth = new DateTime(1987, 06, 22);
         * dateOfHire = new DateTime(2013, 04, 12);
@@ -2511,10 +2511,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n "
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's hourly rate is 30.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's hourly rate is 30.
         */
         [TestMethod]
@@ -2541,16 +2541,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyHourlyRate
         * will not modify the hourly rate of an employee if the given hourly rate is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyHourlyRate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A part-time employee reference: 
         * dateOfBirth = new DateTime(1987, 06, 22);
         * dateOfHire = new DateTime(2013, 04, 12);
@@ -2559,10 +2559,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n-15"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's hourly rate is 30.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's hourly rate is 30.
         */
         [TestMethod]
@@ -2589,16 +2589,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyHourlyRate
         * will not modify the hourly rate of an employee if the user selects no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyHourlyRate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A part-time employee reference: 
         * dateOfBirth = new DateTime(1987, 06, 22);
         * dateOfHire = new DateTime(2013, 04, 12);
@@ -2607,10 +2607,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n-15"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's hourly rate is 30.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's hourly rate is 30.
         */
         [TestMethod]
@@ -2638,16 +2638,16 @@ namespace TheCompany.Tests
         * will not modify the hourly rate of an employee if an invalid choice is 
         * made and then the user says no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyHourlyRate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A part-time employee reference: 
         * dateOfBirth = new DateTime(1987, 06, 22);
         * dateOfHire = new DateTime(2013, 04, 12);
@@ -2656,10 +2656,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nN"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's hourly rate is 30.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's hourly rate is 30.
         */
         [TestMethod]
@@ -2687,16 +2687,16 @@ namespace TheCompany.Tests
         * will modify the hourly rate of an employee if an invalid choice is 
         * made and then the user says yes with a valid hourly rate.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyHourlyRate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A part-time employee reference: 
         * dateOfBirth = new DateTime(1987, 06, 22);
         * dateOfHire = new DateTime(2013, 04, 12);
@@ -2705,10 +2705,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nY\n25.00"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's hourly rate is 25.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's hourly rate is 25.
         */
         [TestMethod]
@@ -2739,16 +2739,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyContractStartDate
         * will modify the contract start date of an employee if the given date is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyContractStartDate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -2757,10 +2757,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n2013\n01\n16"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract start date is 2013-01-16.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract start date is 2013-01-16.
         */
         [TestMethod]
@@ -2788,16 +2788,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyContractStartDate
         * will not modify the contract start date of an employee if the given date is blank.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyContractStartDate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -2806,10 +2806,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n "
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract start date is 2014-02-08.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract start date is 2014-02-08.
         */
         [TestMethod]
@@ -2837,16 +2837,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyContractStartDate
         * will not modify the contract start date of an employee if the given date is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyContractStartDate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -2855,10 +2855,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n1600\n37\n88"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract start date is 2014-02-08.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract start date is 2014-02-08.
         */
         [TestMethod]
@@ -2886,16 +2886,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyContractStartDate
         * will not modify the contract start date of an employee if the user selects no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyContractStartDate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -2904,10 +2904,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract start date is 2014-02-08.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract start date is 2014-02-08.
         */
         [TestMethod]
@@ -2936,16 +2936,16 @@ namespace TheCompany.Tests
         * will not modify the contract start date of an employee if an invalid choice is 
         * made and then the user says no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyContractStartDate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -2954,10 +2954,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nN"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract start date is 2014-02-08.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract start date is 2014-02-08.
         */
         [TestMethod]
@@ -2986,16 +2986,16 @@ namespace TheCompany.Tests
         * will modify the contract start date of an employee if an invalid choice is 
         * made and then the user says yes with a valid date.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyContractStartDate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -3004,10 +3004,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nY\n2013\n01\n25"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract start date is 2013-01-25.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract start date is 2013-01-25.
         */
         [TestMethod]
@@ -3039,16 +3039,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyContractStopDate
         * will modify the contract stop date of an employee if the given date is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyContractStopDate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -3057,10 +3057,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n2014\n10\n27"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract stop date is 2014-10-27.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract stop date is 2014-10-27.
         */
         [TestMethod]
@@ -3088,16 +3088,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyContractStopDate
         * will not modify the contract stop date of an employee if the given date is blank.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyContractStopDate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -3106,10 +3106,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n "
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract stop date is 2014-09-12.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract stop date is 2014-09-12.
         */
         [TestMethod]
@@ -3137,16 +3137,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyContractStopDate
         * will not modify the contract stop date of an employee if the given date is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyContractStopDate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -3155,10 +3155,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n1400\n90\n36"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract stop date is 2014-09-12.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract stop date is 2014-09-12.
         */
         [TestMethod]
@@ -3186,16 +3186,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyContractStopDate
         * will not modify the contract stop date of an employee if the user selects no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyContractStopDate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -3204,10 +3204,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract stop date is 2014-09-12.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract stop date is 2014-09-12.
         */
         [TestMethod]
@@ -3236,16 +3236,16 @@ namespace TheCompany.Tests
         * will not modify the contract stop date of an employee if an invalid choice is 
         * made and then the user says no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyContractStopDate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -3254,10 +3254,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nN"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract stop date is 2014-09-12.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract stop date is 2014-09-12.
         */
         [TestMethod]
@@ -3286,16 +3286,16 @@ namespace TheCompany.Tests
         * will modify the contract stop date of an employee if an invalid choice is 
         * made and then the user says yes with a valid date.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyContractStopDate.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -3304,10 +3304,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nY\n2014\n08\n01"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract stop date is 2014-08-01.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract stop date is 2014-08-01.
         */
         [TestMethod]
@@ -3339,16 +3339,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyFixedContractAmount
         * will modify the contract amount of an employee if the given amount is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyFixedContractAmount.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -3357,10 +3357,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n30000"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract amount is 30000.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract amount is 30000.
         */
         [TestMethod]
@@ -3387,16 +3387,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyFixedContractAmount
         * will not modify the contract amount of an employee if the given amount is blank.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyFixedContractAmount.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -3405,10 +3405,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n "
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract amount is 25000.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract amount is 25000.
         */
         [TestMethod]
@@ -3435,16 +3435,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyFixedContractAmount
         * will not modify the contract amount of an employee if the given amount is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyFixedContractAmount.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -3453,10 +3453,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n-123456"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract amount is 25000.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract amount is 25000.
         */
         [TestMethod]
@@ -3483,16 +3483,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyFixedContractAmount
         * will not modify the contract amount of an employee if the user selects no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyFixedContractAmount.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -3501,10 +3501,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract amount is 25000.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract amount is 25000.
         */
         [TestMethod]
@@ -3532,16 +3532,16 @@ namespace TheCompany.Tests
         * will not modify the contract amount of an employee if an invalid choice is 
         * made and then the user says no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyFixedContractAmount.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -3550,10 +3550,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nN"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract amount is 25000.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract amount is 25000.
         */
         [TestMethod]
@@ -3581,16 +3581,16 @@ namespace TheCompany.Tests
         * will modify the contract amount of an employee if an invalid choice is 
         * made and then the user says yes with a valid amount.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyFixedContractAmount.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -3599,10 +3599,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nY\n15000"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract amount is 15000.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract amount is 15000.
         */
         [TestMethod]
@@ -3633,26 +3633,26 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifySeason
         * will modify the season of an employee if the given season is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySeason.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference: 
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "Y\nFall"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's season is Fall.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's season is Fall.
         */
         [TestMethod]
@@ -3679,26 +3679,26 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifySeason
         * will not modify the season of an employee if the given season is blank.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySeason.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference: 
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "Y\n "
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's season is Summer.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's season is Summer.
         */
         [TestMethod]
@@ -3725,26 +3725,26 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifySeason
         * will not modify the season of an employee if the given season is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySeason.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference: 
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "Y\nSumminter"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's season is Summer.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's season is Summer.
         */
         [TestMethod]
@@ -3771,26 +3771,26 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifySeason
         * will not modify the season of an employee if the user selects no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySeason.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference: 
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "N\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's season is Summer.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's season is Summer.
         */
         [TestMethod]
@@ -3818,26 +3818,26 @@ namespace TheCompany.Tests
         * will not modify the season of an employee if an invalid choice is 
         * made and then the user says no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySeason.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference: 
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "no and yes\nN"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's season is Summer.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's season is Summer.
         */
         [TestMethod]
@@ -3865,26 +3865,26 @@ namespace TheCompany.Tests
         * will modify the season of an employee if an invalid choice is 
         * made and then the user says yes with a valid season.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifySeason.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference: 
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "no and yes\nY\nSpring"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's season is Spring.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's season is Spring.
         */
         [TestMethod]
@@ -3915,26 +3915,26 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyPiecePay
         * will modify the piece pay of an employee if the given pay is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyPiecePay.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference: 
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "Y\n25"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's piece pay is 25.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's piece pay is 25.
         */
         [TestMethod]
@@ -3961,26 +3961,26 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyPiecePay
         * will not modify the piece pay of an employee if the given season is blank.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyPiecePay.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference: 
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "Y\n "
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's piece pay is 20.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's piece pay is 20.
         */
         [TestMethod]
@@ -4007,26 +4007,26 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyPiecePay
         * will not modify the piece pay of an employee if the given season is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyPiecePay.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference: 
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "Y\n-10"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's piece pay is 20.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's piece pay is 20.
         */
         [TestMethod]
@@ -4053,26 +4053,26 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyPiecePay
         * will not modify the piece pay of an employee if the user selects no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyPiecePay.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference: 
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "N\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's piece pay is 20.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's piece pay is 20.
         */
         [TestMethod]
@@ -4100,26 +4100,26 @@ namespace TheCompany.Tests
         * will not modify the piece pay of an employee if an invalid choice is 
         * made and then the user says no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyPiecePay.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference: 
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "no and yes\nN"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's piece pay is 20.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's piece pay is 20.
         */
         [TestMethod]
@@ -4147,26 +4147,26 @@ namespace TheCompany.Tests
         * will modify the piece pay of an employee if an invalid choice is 
         * made and then the user says yes with a valid piece pay.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyPiecePay.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception then normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference: 
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "no and yes\nY\n30"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's piece pay is 30.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's piece pay is 30.
         */
         [TestMethod]
@@ -4197,16 +4197,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the first name of an employee if the given name is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -4215,10 +4215,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's first name is Samantha.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's first name is Samantha.
         */
         [TestMethod]
@@ -4245,16 +4245,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the last name of an employee if the given name is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -4263,10 +4263,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's last name is Jamieson.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's last name is Jamieson.
         */
         [TestMethod]
@@ -4293,16 +4293,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the SIN of an employee if the SIN is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -4311,10 +4311,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's SIN is 902098933.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's SIN is 902098933.
         */
         [TestMethod]
@@ -4340,16 +4340,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the DOB of an employee if the DOB is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -4358,10 +4358,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOB is 1990-09-02.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOB is 1990-09-02.
         */
         [TestMethod]
@@ -4388,16 +4388,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the type of a full-time employee if the type is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -4406,10 +4406,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nSamantha\nY\nJamieson\nY\n900398933\nY\n1990\n09\n09\nY\nPT\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n35\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's type is PT.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's type is PT.
         */
         [TestMethod]
@@ -4437,16 +4437,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will not modify the type of a full-time employee if entered data is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -4455,10 +4455,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nSamantha\nY\nJamieson\nY\n900398933\nY\n1990\n09\n09\nY\nPT\nY\n2011\n45\n11\n\nY\n2012\n12\n66\n\nY\n35\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's type is FT.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's type is FT.
         */
         [TestMethod]
@@ -4486,16 +4486,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the type of a part-time employee if the type is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A part-time employee reference: 
         * dateOfBirth = new DateTime(1987, 06, 22);
         * dateOfHire = new DateTime(2013, 04, 12);
@@ -4504,10 +4504,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nMarcus\nY\nSmithy\nY\n872098934\nY\n1987\n07\n22\nY\nCT\nY\n2014\n02\n09\nY\n2014\n09\n13\nY\n25000\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's type is CT.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's type is CT.
         */
         [TestMethod]
@@ -4535,16 +4535,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will not modify the type of a part-time employee if entered data is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A part-time employee reference: 
         * dateOfBirth = new DateTime(1987, 06, 22);
         * dateOfHire = new DateTime(2013, 04, 12);
@@ -4553,10 +4553,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nMarcus\nY\nSmithy\nY\n872098934\nY\n1987\n07\n22\nY\nCT\nY\n2014\n02\n09\nY\n2014\n09\n13\nY\n0\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's type is PT.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's type is PT.
         */
         [TestMethod]
@@ -4584,16 +4584,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the type of a contract employee if the type is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -4602,10 +4602,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nAnnie\nY\nMillerton\nY\n892398402\nY\n1989\n03\n04\nY\nSN\nY\nWinter\nY\n10000\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's type is SN.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's type is SN.
         */
         [TestMethod]
@@ -4633,16 +4633,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will not modify the type of a contract employee if entered data is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -4651,10 +4651,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nAnnie\nY\nMillerton\nY\n892398402\nY\n1989\n03\n04\nY\nSN\nY\nFalummer\n\nY\n10000\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's type is CT.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's type is CT.
         */
         [TestMethod]
@@ -4682,26 +4682,26 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the type of a seasonal employee if the type is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference: 
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "Y\nJake\nY\nWilliams\nY\n902198934\nY\n1990\n09\n08\nY\nFT\nY\n2010\n03\n12\nY\n2014\n05\n23\nY\n85000\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's type is FT.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's type is FT.
         */
         [TestMethod]
@@ -4729,26 +4729,26 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will not modify the type of a seasonal employee if entered data is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference: 
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "Y\nJake\nY\nWilliams\nY\n902198934\nY\n1990\n09\n08\nY\nFT\nY\n2010\n03\n12\nY\n2014\n05\n23\nY\n0\n\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's type is SN.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's type is SN.
         */
         [TestMethod]
@@ -4776,16 +4776,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the DOH of a full-time employee if the DOH is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -4794,10 +4794,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOH is 2011-10-11.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOH is 2011-10-11.
         */
         [TestMethod]
@@ -4824,16 +4824,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the DOT of a full-time employee if the DOT is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -4842,10 +4842,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nSamantha\nY\nJamieson\nY\n900989332\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOT is 2012-12-02.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOT is 2012-12-02.
         */
         [TestMethod]
@@ -4872,16 +4872,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the salary of an employee if the salary is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -4890,10 +4890,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nSamantha\nY\nJamieson\nY\n902098933\nY\n1990\n09\n20\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n70000\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's salary is 70000.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's salary is 70000.
         */
         [TestMethod]
@@ -4919,16 +4919,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the DOH of a part-time employee if the DOH is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A part-time employee reference: 
         * dateOfBirth = new DateTime(1987, 06, 22);
         * dateOfHire = new DateTime(2013, 04, 12);
@@ -4937,10 +4937,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nMarcus\nY\nSmithy\nY\n900398988\nY\n1990\n09\n09\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n35\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOH is 2011-10-11.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOH is 2011-10-11.
         */
         [TestMethod]
@@ -4967,16 +4967,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the DOT of a part-time employee if the DOT is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A part-time employee reference: 
         * dateOfBirth = new DateTime(1987, 06, 22);
         * dateOfHire = new DateTime(2013, 04, 12);
@@ -4985,10 +4985,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nMarcus\nY\nSmithy\nY\n900398988\nY\n1990\n09\n09\nN\nY\n2011\n10\n11\nY\n2012\n12\n02\nY\n35\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's DOT is 2011-10-11.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's DOT is 2011-10-11.
         */
         [TestMethod]
@@ -5015,16 +5015,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the hourly rate of an employee if the hourly rate is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A part-time employee reference: 
         * dateOfBirth = new DateTime(1987, 06, 22);
         * dateOfHire = new DateTime(2013, 04, 12);
@@ -5033,10 +5033,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nMarcus\nY\nSmithy\nY\n900398988\nY\n1990\n09\n09\nN\nY\n2010\n10\n11\nY\n2012\n12\n02\nY\n35\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's hourly rate is 35.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's hourly rate is 35.
         */
         [TestMethod]
@@ -5062,16 +5062,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the contract start date of an employee if the date is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -5080,10 +5080,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nAnnie\nY\nMillerton\nY\n892398400\nY\n1989\n08\n02\nN\nY\n2014\n03\n08\nY\n2014\n10\n12\nY\n10000\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract start date is 2014-03-08.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract start date is 2014-03-08.
         */
         [TestMethod]
@@ -5110,16 +5110,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the contract stop date of an employee if the date is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -5128,10 +5128,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nAnnie\nY\nMillerton\nY\n892398400\nY\n1989\n08\n02\nN\nY\n2014\n03\n08\nY\n2014\n10\n12\nY\n10000\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract stop date is 2014-10-12.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract stop date is 2014-10-12.
         */
         [TestMethod]
@@ -5158,16 +5158,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the contract amount of an employee if the amount is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference: 
         * dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -5176,10 +5176,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\nAnnie\nY\nMillerton\nY\n892398400\nY\n1989\n08\n02\nN\nY\n2014\n03\n08\nY\n2014\n10\n12\nY\n10000\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's contract amount is 10000.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's contract amount is 10000.
         */
         [TestMethod]
@@ -5205,26 +5205,26 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the season of an employee if the season is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference: 
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "Y\nJacob\nY\nWilliams\nY\n902098988\nY\n1990\n09\n20\nN\nY\nFall\nY\n15000"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's season is Fall.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's season is Fall.
         */
         [TestMethod]
@@ -5250,26 +5250,26 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method ModifyEmployee
         * will modify the piece pay of an employee if the piece pay is valid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is ModifyEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference: 
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "Y\nJacob\nY\nWilliams\nY\n902098988\nY\n1990\n09\n20\nN\nY\nFall\nY\n15000"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's piece pay is 15000.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's piece pay is 15000.
         */
         [TestMethod]

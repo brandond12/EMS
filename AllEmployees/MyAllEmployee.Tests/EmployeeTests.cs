@@ -17,22 +17,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will check if either name contains anything other than a letter, apostrophe, dash. It will throw an exception if wrong.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * ConstructorWithNamesTestValid1()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Brandon", "Davies"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that there is no exception
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * There is no exception. 
         */
         [TestMethod]
@@ -44,22 +44,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will check if either name contains anything other than a letter, apostrophe, dash. It will throw an exception if wrong.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * ConstructorWithNamesTestValid2()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Brandon", "Mc'Davies"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that there is no exception
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * There is no exception. 
         */
         [TestMethod]
@@ -72,22 +72,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will check if either name contains anything other than a letter, apostrophe, dash. It will throw an exception if wrong.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * ConstructorWithNamesTestValid3()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Brandon", "LeRoy-Davies"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that there is no exception
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * There is no exception. 
         */
         [TestMethod]
@@ -100,22 +100,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will check if the constructor will fail and if the string is invalid because it contains a slash
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * ConstructorWithNamesTestInvalidSlash()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Brandon", "Mc/Davies"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that it will throw an exception
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * An exception is thrown 
         */
         [TestMethod]
@@ -129,22 +129,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will check if the constructor will fail and if the string is invalid because it contains a space
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * ConstructorWithNamesTestInvalidSpace()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Brandon", "Mc Davies"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that it will throw an exception
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * An exception is thrown 
         */
         [TestMethod]
@@ -158,22 +158,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will check if the constructor will fail and if the string is invalid because it contains a number
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * ConstructorWithNamesTestInvalidNumber()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Brandon2", "Davies"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that it will throw an exception
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * An exception is thrown 
         */
         [TestMethod]
@@ -187,23 +187,23 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will check the constructor that takes in all possible parameters, and give them all valid data
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * ConstructorWithAllParamTestValid1()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an normal/function.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * DateTime DOB = new DateTime(2003, 02, 20);
         * "Brandon", "Davies", 123456789, DOB, "FT"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that there is no exception
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * An exception is not thrown 
         */
         [TestMethod]
@@ -217,23 +217,23 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will check the constructor that takes in all possible parameters, and give them all valid data
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * ConstructorWithAllParamTestValid2()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an normal/function.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * DateTime DOB = new DateTime(1993, 04, 24);
         * "Brandon", "Mc'Davies", 123456789, DOB, "PT"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that there is no exception
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * An exception is not thrown 
         */
         [TestMethod]
@@ -247,23 +247,23 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will check the constructor that takes in all possible parameters, and give them all valid data
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * ConstructorWithAllParamTestValid3()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an normal/function.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * DateTime DOB = new DateTime(1943, 12, 1);
         * "Brandon", "Davies", 999999999, DOB, "SN"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that there is no exception
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * An exception is not thrown 
         */
         [TestMethod]
@@ -277,23 +277,23 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will check the constructor that takes in all possible parameters, and give them all invalid data
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * ConstructorWithAllParamTestInvalidSIN()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * DateTime DOB = new DateTime(1943, 12, 1);
         * "Brandon", "Davies",  99999999, DOB, "SN"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that there is an exception
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * An exception is thrown 
         */
         [TestMethod]
@@ -308,23 +308,23 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will check the constructor that takes in all possible parameters, and give them all invalid data
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * ConstructorWithAllParamTestInvalidEmployeeType()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * DateTime DOB = new DateTime(1943, 12, 1);
         * "Brandon", "McDavies",  99999999, DOB, "N"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that there is an exception
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * An exception is thrown 
         */
         [TestMethod]
@@ -339,23 +339,23 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will check the constructor that takes in all possible parameters, and give them all invalid data
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * ConstructorWithAllParamTestInvalidFirstName()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * DateTime DOB = new DateTime(2013, 12, 1);
         * "Brandon", "McDavies",  99999999, DOB, "CT"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that there is an exception
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * An exception is thrown 
         */
         [TestMethod]
@@ -370,22 +370,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the first name to a valid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetFirstNameTestValid1()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an normal/function.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Brandon"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be true and the data member should have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is true, and the data member should have changed
         */
         [TestMethod]
@@ -401,22 +401,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the first name to a valid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetFirstNameTestValid2()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an normal/function.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Mc'Brandon"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be true and the data member should have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is true, and the data member should have changed
         */
         [TestMethod]
@@ -432,22 +432,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the first name to a valid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetFirstNameTestValid3()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an normal/function.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Mc-Brandon"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be true and the data member should have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is true, and the data member should have changed
         */
         [TestMethod]
@@ -463,22 +463,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the first name to an invalid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetFirstNameTestInvalidSpace()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Mc Brandon"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be false and the data member should not have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is false, and the data member should not have changed
         */
         [TestMethod]
@@ -494,22 +494,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the first name to an invalid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetFirstNameTestInvalidNumber()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Brandon", "Davies", "Brandon23"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be false and the data member should not have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is false, and the data member should not have changed
         */
         [TestMethod]
@@ -525,22 +525,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the first name to an invalid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetFirstNameTestInvalidSlash()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Mc/Brandon"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be false and the data member should not have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is false, and the data member should not have changed
         */
         [TestMethod]
@@ -556,22 +556,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the last name to a valid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetLastNameTestValid1()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an normal/function.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Brandon"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be true and the data member should have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is true, and the data member should have changed
         */
         [TestMethod]
@@ -587,22 +587,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the last name to a valid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetLastNameTestValid2()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an normal/function.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Mc'Brandon"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be true and the data member should have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is true, and the data member should have changed
         */
         [TestMethod]
@@ -618,22 +618,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the last name to a valid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetLastNameTestValid3()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an normal/function.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Mc-Brandon"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be true and the data member should have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is true, and the data member should have changed
         */
         [TestMethod]
@@ -649,22 +649,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the last name to an invalid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetLastNameTestInvalidSpace()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Mc Brandon"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be false and the data member should not have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is false, and the data member should not have changed
         */
         [TestMethod]
@@ -680,22 +680,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the last name to an invalid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetLastNameTestInvalidNumber()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Brandon", "Davies", "Brandon23"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be false and the data member should not have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is false, and the data member should not have changed
         */
         [TestMethod]
@@ -711,22 +711,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the last name to an invalid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetLastNameTestInvalidSlash()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Mc/Brandon"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be false and the data member should not have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is false, and the data member should not have changed
         */
         [TestMethod]
@@ -741,22 +741,22 @@ namespace MyAllEmployee.Tests
 
         /**
         * \brief This unit test will set the SIN number to a valid number
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetSocialInsuranceNumberTestValid()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an normal/function.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * 123456789
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be true and the data member should have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is true, and the data member should have changed
         */
         [TestMethod]
@@ -771,22 +771,22 @@ namespace MyAllEmployee.Tests
 
         /**
         * \brief This unit test will set the SIN number to an invalid number
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetSocialInsuranceNumberTestInvalidToShort()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * 12345678
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be false and the data member should not have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is false, and the data member should not have changed
         */
         [TestMethod]
@@ -801,22 +801,22 @@ namespace MyAllEmployee.Tests
 
         /**
         * \brief This unit test will set the SIN number to an invalid number
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetSocialInsuranceNumberTestInvalidNegitive()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * -12345678
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be false and the data member should not have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is false, and the data member should not have changed
         */
         [TestMethod]
@@ -831,22 +831,22 @@ namespace MyAllEmployee.Tests
 
         /**
         * \brief This unit test will set the SIN number to an invalid number
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetSocialInsuranceNumberTestInvalidTooLarge()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * -12345678
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be false and the data member should not have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is false, and the data member should not have changed
         */
         [TestMethod]
@@ -862,22 +862,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the employee type to a valid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetEmployeeTypeTestValidContract()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an normal/function.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "CT"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be true and the data member should have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is true, and the data member should have changed
         */
         [TestMethod]
@@ -893,22 +893,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the employee type to a valid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetEmployeeTypeTestValidFullTime()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an normal/function.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "FT"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be true and the data member should have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is true, and the data member should have changed
         */
         [TestMethod]
@@ -924,22 +924,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the employee type to a valid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetEmployeeTypeTestValidPartTime()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an normal/function.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "PT"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be true and the data member should have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is true, and the data member should have changed
         */
         [TestMethod]
@@ -955,22 +955,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the employee type to a valid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetEmployeeTypeTestValidSeasonal()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an normal/function.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "SN"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be true and the data member should have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is true, and the data member should have changed
         */
         [TestMethod]
@@ -986,22 +986,22 @@ namespace MyAllEmployee.Tests
         /**
         * \brief This unit test will set the employee type to a valid value
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetEmployeeTypeTestValidNoType()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an normal/function.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * ""
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be true and the data member should have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is true, and the data member should have changed
         */
         [TestMethod]
@@ -1016,22 +1016,22 @@ namespace MyAllEmployee.Tests
 
         /**
         * \brief This unit test will set the employee type to an invalid value
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * SetEmployeeTypeTestInvalid()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is run automatically
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is an exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "AB"
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is the return value should be false and the data member should not have changed
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Return value is false, and the data member should not have changed
         */
         [TestMethod]

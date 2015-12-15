@@ -19,25 +19,25 @@ namespace Loggingtests
         * \brief This unit test will create it's own log event, and then send information to the logging function and compare the results to 
         * see if it properly logged the events.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * Logging_ValidInput_ReturnsValidLogFileEntry()
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * This test is given set string variables, which will then allow it to be run automatically, and will compare 2 results (1 created in 
         * the test function, and the other created in the original Logging function).
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * string methodName = "GetEmployeeInformation";
         * string className = "Employee";
         * string eventDetails = "Employee - Clarke,Sean (333 333 333) VALIDER";
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that both logging events are the same in terms of what information they were given. 
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * Both logs matched up as required.
         */
         [TestMethod]

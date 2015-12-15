@@ -19,7 +19,7 @@ namespace TheCompany.Tests
 {
     /// \class OtherTests
     ///
-    /// \brief <b>Brief Description</b> 
+    /// \brief  <b> Brief Description</b> 
     /// This class is used to test the miscellaneous methods in the Container class. The methods tested 
     /// include AddEmployeeToList, RemoveEmployee, DisplayAllEmployees and GetEmployeeList. Some of the 
     /// methods in this class require user input for testing (they will have a string called dataToPassIn, 
@@ -52,26 +52,26 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method AddEmployeeToList 
         * actually adds an employee to the employee list.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is AddEmployeeToList.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
         * DateTime dateOfTermination = new DateTime(2011, 03, 19);
         * FTEmployee = new FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employeeList.Count will return 1.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employeeList.Count returns 1.
         */
         [TestMethod]
@@ -90,25 +90,25 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method AddEmployeeToList 
         * will not add an invalid employee to the employee list.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is AddEmployeeToList.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * Employee employee = new Employee();
         * employee.SetFirstName("Janet");
         * employee.SetLastName("Moore");
         * employee.SetSocialInsuranceNumber(872046458);
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employeeList.Count will return 0.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employeeList.Count returns 0.
         */
         [TestMethod]
@@ -137,26 +137,26 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method RemoveEmployee
         * will remove an employee from the employee list.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is RemoveEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference: 
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
         * DateTime dateOfTermination = new DateTime(2011, 03, 19);
         * FTEmployee = new FulltimeEmployee("Sam", "Jones", 902398402, dateOfBirth, dateOfHire, dateOfTermination, 50000);
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employeeList.Count will return 0.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employeeList.Count returns 0.
         */
         [TestMethod]
@@ -178,16 +178,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method RemoveEmployee
         * will not remove an invalid employee from the employee list.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is RemoveEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -199,10 +199,10 @@ namespace TheCompany.Tests
         * DateTime dateOfTermination = new DateTime(2015, 01, 25);
         * ParttimeEmployee PTEmployee = new ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employeeList.Count will return 1.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employeeList.Count returns 1.
         */
         [TestMethod]
@@ -232,17 +232,17 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method DisplayAllEmployees
         * displays the employee details of all employees in the list.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is DisplayAllEmployees.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is run automatically, but the user has to view the output of the test 
         * to make sure that all of the employees were displayed with the correct data.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A part-time employee reference:
         * DateTime dateOfBirth = new DateTime(1987, 06, 22);
         * DateTime dateOfHire = new DateTime(2013, 04, 12);
@@ -257,11 +257,11 @@ namespace TheCompany.Tests
         * dateOfBirth = new DateTime(1991, 03, 18);
         * SeasonalEmployee SNEmployee = new AllEmployees.SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that all of the employees will be be displayed to the user 
         * with the correct details.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that all of the employees are displayed to the user 
         * with the correct details.
         */
@@ -312,16 +312,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method 
         * GetEmployeeList returns the employee list.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is GetEmployeeList.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -333,10 +333,10 @@ namespace TheCompany.Tests
         * DateTime dateOfTermination = new DateTime(2014, 05, 13);
         * ParttimeEmployee PTEmployee = new AllEmployees.ParttimeEmployee("Mark", "Smith", 872098933, dateOfBirth, dateOfHire, dateOfTermination, 30);
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employeeList.Count will return 2.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The expected result is that the employeeList.Count will return 2.
         */
         [TestMethod]

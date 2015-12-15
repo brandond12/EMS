@@ -18,7 +18,7 @@ namespace TheCompany.Tests
 {
     /// \class  SelectEmployeeTests
     ///
-    /// \brief <b>Brief Description</b> 
+    /// \brief  <b> Brief Description</b> 
     /// This class is used to test the SelectEmployee methods in the Container class. The methods tested 
     /// include SelectEmployee, IsThisTheDesiredEmployee and DisplayEmployeeDetails. Some of the methods in 
     /// this class require user input for testing (they will have a string called dataToPassIn, and will use 
@@ -81,16 +81,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select an employee based on the given first name.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -121,10 +121,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\nY\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Sam.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Sam.
         */
         [TestMethod]
@@ -153,16 +153,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select an employee based on the given last name.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -193,10 +193,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n"    
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Mark.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Mark.
         */
         [TestMethod]
@@ -225,16 +225,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select an employee based on the given SIN.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -265,10 +265,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Mark.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Mark.
         */
         [TestMethod]
@@ -297,16 +297,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select an employee based on the given DOB.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -337,10 +337,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\nY\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Sam.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Sam.
         */
         [TestMethod]
@@ -369,16 +369,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select an employee based on the given type.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -409,10 +409,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\nY\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Sam.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Sam.
         */
         [TestMethod]
@@ -441,16 +441,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select a full-time employee based on the given DOH.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -481,10 +481,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Sam.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Sam.
         */
         [TestMethod]
@@ -513,16 +513,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select a full-time employee based on the given DOT.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -553,10 +553,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\nY\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Sam.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Sam.
         */
         [TestMethod]
@@ -585,16 +585,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select an employee based on the given salary.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -625,10 +625,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\nY\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Sam.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Sam.
         */
         [TestMethod]
@@ -657,16 +657,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select a part-time employee based on the given DOH.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -702,10 +702,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\nY\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Karen.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Karen.
         */
         [TestMethod]
@@ -742,16 +742,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select a part-time employee based on the given DOT.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -787,10 +787,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\nY\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Karen.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Karen.
         */
         [TestMethod]
@@ -827,16 +827,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select an employee based on the given hourly rate.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -872,10 +872,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\nY\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Karen.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Karen.
         */
         [TestMethod]
@@ -912,16 +912,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select an employee based on the given contract start date.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -957,10 +957,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\nY\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Jack.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Jack.
         */
         [TestMethod]
@@ -997,16 +997,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select an employee based on the given contract stop date.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -1042,10 +1042,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\nY\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Jack.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Jack.
         */
         [TestMethod]
@@ -1082,16 +1082,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select an employee based on the given contract amount.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -1128,10 +1128,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\nY\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Jack.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Jack.
         */
         [TestMethod]
@@ -1168,16 +1168,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select an employee based on the given season.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -1211,10 +1211,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\nY\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Oliver.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Oliver.
         */
         [TestMethod]
@@ -1249,16 +1249,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select an employee based on the given piece pay.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -1292,10 +1292,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\nY\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Oliver.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Oliver.
         */
         [TestMethod]
@@ -1330,16 +1330,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method SelectEmployee
         * will select an employee based on the given last name and SIN.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -1371,10 +1371,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\nY\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Mark.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Mark.
         */
         [TestMethod]
@@ -1405,16 +1405,16 @@ namespace TheCompany.Tests
         * will select an employee based on the given contract start date, contract 
         * stop date, and contract amount.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is SelectEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A bunch of employees in the container:
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
@@ -1452,10 +1452,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\nY\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Jimmy.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Jimmy.
         */
         [TestMethod]
@@ -1498,16 +1498,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method IsThisTheDesiredEmployee
         * will return a valid employee when the user returns yes.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is IsThisTheDesiredEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1516,10 +1516,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n"   
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Sam.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Sam.
         */
         [TestMethod]
@@ -1545,16 +1545,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method IsThisTheDesiredEmployee
         * will return a blank employee when the user returns no.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is IsThisTheDesiredEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1563,10 +1563,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\n" 
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name will be blank.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name will be blank.
         */
         [TestMethod]
@@ -1592,16 +1592,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method IsThisTheDesiredEmployee
         * will return a valid employee when the user selects an invalid choice then yes.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is IsThisTheDesiredEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1610,10 +1610,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nY"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name is Sam.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name is Sam.
         */
         [TestMethod]
@@ -1639,16 +1639,16 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method IsThisTheDesiredEmployee
         * will return a blank employee when the user selects an invalid choice then yes.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is IsThisTheDesiredEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1657,10 +1657,10 @@ namespace TheCompany.Tests
         * Input string:
         * "no and yes\nN" 
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employee's name will be blank.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employee's name will be blank.
         */
         [TestMethod]
@@ -1690,17 +1690,17 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method DisplayEmployeeDetails
         * will return yes if the user selects yes and a full-time employee wil be displayed.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is IsThisTheDesiredEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted. However, the user has to check the output 
         * of the unit test to ensure the details of the employees being displayed are correct.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1709,10 +1709,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the user's response will be Y.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the user's response will be Y.
         */
         [TestMethod]
@@ -1738,17 +1738,17 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method DisplayEmployeeDetails
         * will return no if the user selects no and a full-time employee wil be displayed.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is DisplayEmployeeDetails.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted. However, the user has to check the output 
         * of the unit test to ensure the details of the employees being displayed are correct.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A full-time employee reference:
         * DateTime dateOfBirth = new DateTime(1990, 09, 10);
         * DateTime dateOfHire = new DateTime(2010, 10, 11);
@@ -1757,10 +1757,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the user's response will be N.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the user's response will be N.
         */
         [TestMethod]
@@ -1786,17 +1786,17 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method DisplayEmployeeDetails
         * will return yes if the user selects yes and a part-time employee wil be displayed.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is DisplayEmployeeDetails.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted. However, the user has to check the output 
         * of the unit test to ensure the details of the employees being displayed are correct.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A part-time employee reference:
         * DateTime dateOfBirth = new DateTime(1987, 06, 22);
         * DateTime dateOfHire = new DateTime(2013, 04, 12);
@@ -1805,10 +1805,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the user's response will be Y.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the user's response will be Y.
         */
         [TestMethod]
@@ -1838,17 +1838,17 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method DisplayEmployeeDetails
         * will return no if the user selects no and a part-time employee wil be displayed.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is DisplayEmployeeDetails.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted. However, the user has to check the output 
         * of the unit test to ensure the details of the employees being displayed are correct.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A part-time employee reference:
         * DateTime dateOfBirth = new DateTime(1987, 06, 22);
         * DateTime dateOfHire = new DateTime(2013, 04, 12);
@@ -1857,10 +1857,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the user's response will be N.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the user's response will be N.
         */
         [TestMethod]
@@ -1890,17 +1890,17 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method DisplayEmployeeDetails
         * will return no if the user selects no and a contract employee wil be displayed.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is DisplayEmployeeDetails.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted. However, the user has to check the output 
         * of the unit test to ensure the details of the employees being displayed are correct.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference:
         * DateTime dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -1909,10 +1909,10 @@ namespace TheCompany.Tests
         * Input string:
         * "Y\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the user's response will be Y.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the user's response will be Y.
         */
         [TestMethod]
@@ -1942,17 +1942,17 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method DisplayEmployeeDetails
         * will return no if the user selects no and a contract employee wil be displayed.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is DisplayEmployeeDetails.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted. However, the user has to check the output 
         * of the unit test to ensure the details of the employees being displayed are correct.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A contract employee reference:
         * DateTime dateOfBirth = new DateTime(1989, 07, 02);
         * DateTime contractStartDate = new DateTime(2014, 02, 08);
@@ -1961,10 +1961,10 @@ namespace TheCompany.Tests
         * Input string:
         * "N\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the user's response will be N.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the user's response will be N.
         */
         [TestMethod]
@@ -1994,27 +1994,27 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method DisplayEmployeeDetails
         * will return yes if the user selects yes and a seasonal employee wil be displayed.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is DisplayEmployeeDetails.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted. However, the user has to check the output 
         * of the unit test to ensure the details of the employees being displayed are correct.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference:
         * DateTime dateOfBirth = new DateTime(1991, 03, 18);
         * SeasonalEmployee SNEmployee = new SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "Y\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the user's response will be Y.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the user's response will be Y.
         */
         [TestMethod]
@@ -2042,27 +2042,27 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method DisplayEmployeeDetails
         * will return no if the user selects no and a seasonal employee wil be displayed.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is DisplayEmployeeDetails.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted. However, the user has to check the output 
         * of the unit test to ensure the details of the employees being displayed are correct.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * A seasonal employee reference:
         * DateTime dateOfBirth = new DateTime(1991, 03, 18);
         * SeasonalEmployee SNEmployee = new SeasonalEmployee("Jake", "Williams", 912098933, dateOfBirth, "Summer", 20);
         * Input string:
         * "N\n"   
         * 
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the user's response will be N.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the user's response will be N.
         */
         [TestMethod]
@@ -2091,27 +2091,27 @@ namespace TheCompany.Tests
         * will return a blank if the user selects a blank and a no employee will be 
         * displayed.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is DisplayEmployeeDetails.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted. However, the user has to check the output 
         * of the unit test to ensure the details of the employees being displayed are correct.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * An employee reference:
         * DateTime dateOfBirth = new DateTime(1991, 03, 18);
         * FulltimeEmployee employee = new FulltimeEmployee("Janet", "Moore", 720460450, dateOfBirth, new DateTime(2013, 04, 05), new DateTime(2016, 03, 04), 35000);
         * Input string:
         * "\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the user's response will be a blank.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the user's response will be a blank.
         */
         [TestMethod]

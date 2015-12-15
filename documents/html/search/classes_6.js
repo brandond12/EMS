@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uimenu',['UIMenu',['../class_presentation_1_1_u_i_menu.html',1,'Presentation']]]
+  ['othertests',['OtherTests',['../class_the_company_1_1_tests_1_1_other_tests.html',1,'TheCompany::Tests']]]
 ];

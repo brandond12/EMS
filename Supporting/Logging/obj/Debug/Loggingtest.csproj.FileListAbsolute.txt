@@ -1,0 +1,9 @@
+C:\SETRepo\trunk\EMS\trunk\Supporting\Logging\bin\Debug\Logging.dll
+C:\SETRepo\trunk\EMS\trunk\Supporting\Logging\bin\Debug\Logging.pdb
+C:\SETRepo\trunk\EMS\trunk\Supporting\Logging\bin\Debug\Supporting.dll
+C:\SETRepo\trunk\EMS\trunk\Supporting\Logging\bin\Debug\AllEmployees.dll
+C:\SETRepo\trunk\EMS\trunk\Supporting\Logging\bin\Debug\Supporting.pdb
+C:\SETRepo\trunk\EMS\trunk\Supporting\Logging\bin\Debug\AllEmployees.pdb
+C:\SETRepo\trunk\EMS\trunk\Supporting\Logging\obj\Debug\Loggingtest.csprojResolveAssemblyReference.cache
+C:\SETRepo\trunk\EMS\trunk\Supporting\Logging\obj\Debug\Logging.dll
+C:\SETRepo\trunk\EMS\trunk\Supporting\Logging\obj\Debug\Logging.pdb

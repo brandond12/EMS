@@ -1,0 +1,227 @@
+
+12/13/2015 1:56:49 PM [Employee.GetEmployeeInformation] Employee - Clarke,Sean (333 333 333) VALIDER
+12/13/2015 1:56:54 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: CT
+12/13/2015 1:56:54 PM [Employee.SetEmployeeType] Employee Type Changed - From: CT To: CT
+12/13/2015 1:56:54 PM [Employee.SetLastName] Last Name Changed - From:  To: Brandon
+12/13/2015 1:56:54 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 933456793 To: 933456793
+12/13/2015 1:56:54 PM [ContractEmployee.SetDateOfBirth] Date of Birth Changed From: 0001-01-01 To: 1993-04-24
+12/13/2015 1:56:54 PM [Employee.SetDateOfBirthBase] Date of Birth Changed - From: 0001-01-01 To: 1993-04-24
+12/13/2015 1:56:54 PM [ContractEmployee.SetContractStartDate] Contract Start Date Changed From: 0001-01-01 To: 2000-12-12
+12/13/2015 1:56:54 PM [ContractEmployee.SetContractStopDate] Contract Stop Date Changed From: N/A To: 2004-03-02
+12/13/2015 1:56:54 PM [ContractEmployee.SetFixedContractAmount] Contract Amount Changed From: 0 To: 18.78
+12/13/2015 1:56:54 PM [FileIO.ParsRecord] contract employee added
+12/13/2015 1:56:54 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 1:56:54 PM [Employee.SetEmployeeType] Employee Type Changed - From: FT To: FT
+12/13/2015 1:56:54 PM [Employee.SetLastName] Last Name Changed - From:  To: Brandon
+12/13/2015 1:56:54 PM [Employee.SetFirstName] First Name Changed - From:  To: Davies
+12/13/2015 1:56:54 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 933456793 To: 933456793
+12/13/2015 1:56:54 PM [FulltimeEmployee.SetDateOfBirth] Date of Birth Changed From: 0001-01-01 To: 1993-04-24
+12/13/2015 1:56:54 PM [Employee.SetDateOfBirthBase] Date of Birth Changed - From: 0001-01-01 To: 1993-04-24
+12/13/2015 1:56:54 PM [FulltimeEmployee.SetDateOfHire] Date of Hire Changed From: 0001-01-01 To: 2000-12-12
+12/13/2015 1:56:54 PM [ContractEmployee.SetContractStopDate] Contract Stop Date Changed From: N/A To: 2004-03-02
+12/13/2015 1:56:54 PM [ContractEmployee.SetContractStopDate] Contract Stop Date Changed From: 
+12/13/2015 1:56:54 PM [FileIO.ParsRecord] full time employee added
+12/13/2015 1:56:54 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: PT
+12/13/2015 1:56:54 PM [Employee.SetEmployeeType] Employee Type Changed - From: PT To: PT
+12/13/2015 1:56:54 PM [Employee.SetLastName] Last Name Changed - From:  To: Brandon
+12/13/2015 1:56:54 PM [Employee.SetFirstName] First Name Changed - From:  To: Davies
+12/13/2015 1:56:54 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 933456793 To: 933456793
+12/13/2015 1:56:54 PM [ParttimeEmployee.SetDateOfBirth] Date of Birth Changed From: 0001-01-01 To: 1993-04-24
+12/13/2015 1:56:54 PM [Employee.SetDateOfBirthBase] Date of Birth Changed - From: 0001-01-01 To: 1993-04-24
+12/13/2015 1:56:54 PM [ParttimeEmployee.SetDateOfHire] Date of Hire Changed From: 0001-01-01 To: 2000-12-12
+12/13/2015 1:56:54 PM [ParttimeEmployee.SetContractStopDate] Contract Stop Date Changed From: N/A To: 2004-03-02
+12/13/2015 1:56:54 PM [ParttimeEmployee.SetHourlyRate] Hourly Rate Changed From: 0 To: 18.78
+12/13/2015 1:56:54 PM [FileIO.ParsRecord] part time employee added
+12/13/2015 1:56:54 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: SN
+12/13/2015 1:56:54 PM [Employee.SetEmployeeType] Employee Type Changed - From: SN To: SN
+12/13/2015 1:56:54 PM [Employee.SetLastName] Last Name Changed - From:  To: Brandon
+12/13/2015 1:56:54 PM [Employee.SetFirstName] First Name Changed - From:  To: Davies
+12/13/2015 1:56:54 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 123456789 To: 123456789
+12/13/2015 1:56:54 PM [Employee.SetDateOfBirthBase] Date of Birth Changed - From: 0001-01-01 To: 1993-04-24
+12/13/2015 1:56:54 PM [FileIO.ParsRecord] seasonal employee added
+12/13/2015 1:56:54 PM [FileIO.ReadAllRecords] file read sucessfully: DBase\DBase.txt
+12/13/2015 1:56:54 PM [Employee.Employee] New Employee Created: Brandon||933456793|1993-04-24|
+12/13/2015 1:56:54 PM [ContractEmployee.ContractEmployee] New Contract Employee Created
+12/13/2015 1:56:54 PM [Employee.Employee] New Employee Created: Brandon|Davies|933456793|1993-04-24|
+12/13/2015 1:56:54 PM [FulltimeEmployee.FulltimeEmployee] New Full timeEmployee Created
+12/13/2015 1:56:54 PM [Employee.Employee] New Employee Created: Brandon|Davies|933456793|1993-04-24|
+12/13/2015 1:56:54 PM [ParttimeEmployee.ParttimeEmployee] New Parttime Employee Created
+12/13/2015 1:56:54 PM [Employee.Employee] New Employee Created: Brandon|Davies|123456789|1993-04-24|
+12/13/2015 1:56:57 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 1:56:57 PM [Employee.SetEmployeeType] Employee Type Changed - From: FT To: FT
+12/13/2015 1:56:57 PM [Employee.SetLastName] Last Name Changed - From:  To: Brandon
+12/13/2015 1:56:57 PM [Employee.SetFirstName] First Name Changed - From:  To: Davies
+12/13/2015 1:56:57 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 933456793 To: 933456793
+12/13/2015 1:56:57 PM [FulltimeEmployee.SetDateOfBirth] Date of Birth Changed From: 0001-01-01 To: 1993-04-24
+12/13/2015 1:56:57 PM [Employee.SetDateOfBirthBase] Date of Birth Changed - From: 0001-01-01 To: 1993-04-24
+12/13/2015 1:56:57 PM [FulltimeEmployee.SetDateOfHire] Date of Hire Changed From: 0001-01-01 To: 2000-12-12
+12/13/2015 1:56:57 PM [ContractEmployee.SetContractStopDate] Contract Stop Date Changed From: 
+12/13/2015 1:56:57 PM [FileIO.ParsRecord] full time employee added
+12/13/2015 1:56:57 PM [FileIO.ReadAllRecords] file read sucessfully: DBase\DBase.txt
+12/13/2015 1:56:57 PM [Employee.Employee] New Employee Created: Brandon|Davies|933456793|1993-04-24|
+12/13/2015 1:56:57 PM [FulltimeEmployee.FulltimeEmployee] New Full timeEmployee Created
+12/13/2015 1:56:59 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: CT
+12/13/2015 1:56:59 PM [Employee.SetEmployeeType] Employee Type Changed - From: CT To: CT
+12/13/2015 1:56:59 PM [Employee.SetLastName] Last Name Changed - From:  To: Brandon
+12/13/2015 1:56:59 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 933456793 To: 933456793
+12/13/2015 1:56:59 PM [ContractEmployee.SetDateOfBirth] Date of Birth Changed From: 0001-01-01 To: 1993-04-24
+12/13/2015 1:56:59 PM [Employee.SetDateOfBirthBase] Date of Birth Changed - From: 0001-01-01 To: 1993-04-24
+12/13/2015 1:56:59 PM [ContractEmployee.SetContractStartDate] Contract Start Date Changed From: 0001-01-01 To: 2000-12-12
+12/13/2015 1:56:59 PM [ContractEmployee.SetContractStopDate] Contract Stop Date Changed From: N/A To: 2004-03-02
+12/13/2015 1:56:59 PM [ContractEmployee.SetFixedContractAmount] Contract Amount Changed From: 0 To: 18.78
+12/13/2015 1:56:59 PM [FileIO.ParsRecord] contract employee added
+12/13/2015 1:56:59 PM [FileIO.ReadAllRecords] file read sucessfully: DBase\DBase.txt
+12/13/2015 1:57:01 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: CT
+12/13/2015 1:57:01 PM [Employee.SetEmployeeType] Employee Type Changed - From: CT To: CT
+12/13/2015 1:57:01 PM [Employee.SetLastName] Last Name Changed - From:  To: Brandon
+12/13/2015 1:57:01 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 933456793 To: 933456793
+12/13/2015 1:57:01 PM [ContractEmployee.SetDateOfBirth] Date of Birth Changed From: 0001-01-01 To: 1993-04-24
+12/13/2015 1:57:01 PM [Employee.SetDateOfBirthBase] Date of Birth Changed - From: 0001-01-01 To: 1993-04-24
+12/13/2015 1:57:01 PM [ContractEmployee.SetContractStartDate] Contract Start Date Changed From: 0001-01-01 To: 2000-12-12
+12/13/2015 1:57:01 PM [ContractEmployee.SetFixedContractAmount] Contract Amount Changed From: 0 To: 18.78
+12/13/2015 1:57:01 PM [FileIO.ParsRecord] contract employee added
+12/13/2015 1:57:01 PM [FileIO.ReadAllRecords] file read sucessfully: DBase\DBase.txt
+12/13/2015 1:57:01 PM [Employee.Employee] New Employee Created: Brandon||933456793|1993-04-24|
+12/13/2015 1:57:01 PM [ContractEmployee.ContractEmployee] New Contract Employee Created
+12/13/2015 1:57:04 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: CT
+12/13/2015 1:57:04 PM [Employee.SetEmployeeType] Employee Type Changed - From: CT To: CT
+12/13/2015 1:57:04 PM [Employee.SetLastName] Last Name Changed - From:  To: Brandon
+12/13/2015 1:57:04 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 933456793 To: 933456793
+12/13/2015 1:57:04 PM [ContractEmployee.SetDateOfBirth] Date of Birth Changed From: 0001-01-01 To: 1993-04-24
+12/13/2015 1:57:04 PM [Employee.SetDateOfBirthBase] Date of Birth Changed - From: 0001-01-01 To: 1993-04-24
+12/13/2015 1:57:04 PM [ContractEmployee.SetContractStartDate] Contract Start Date Changed From: 0001-01-01 To: 2000-12-12
+12/13/2015 1:57:04 PM [ContractEmployee.SetContractStopDate] Contract Stop Date Changed From: N/A To: 2004-03-02
+12/13/2015 1:57:04 PM [ContractEmployee.SetFixedContractAmount] Contract Amount Changed From: 0 To: 18.78
+12/13/2015 1:57:04 PM [FileIO.ParsRecord] contract employee added
+12/13/2015 1:57:04 PM [FileIO.ReadAllRecords] file read sucessfully: DBase\DBase.txt
+12/13/2015 2:35:20 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 2:35:20 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: PT
+12/13/2015 2:35:20 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: CT
+12/13/2015 2:35:20 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: SN
+12/13/2015 2:36:45 PM [Employee.ValidateBase] Invalid Employee Type - Types can only be: FT PT CT SN. Input : HH
+12/13/2015 2:36:50 PM [Employee.ValidateBase] Invalid Employee Type - Types can only be: FT PT CT SN. Input : GE
+12/13/2015 2:37:37 PM [Employee.ValidateBase] Invalid Employee Type - Types can only be: FT PT CT SN. Input : 99
+12/13/2015 2:37:41 PM [Employee.ValidateBase] Invalid Employee Type - Types can only be: FT PT CT SN. Input : FTG
+12/13/2015 2:37:46 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 2:37:50 PM [Employee.SetFirstName] Invalid First Name - Contains Invalid Characters. Input: 
+12/13/2015 2:37:50 PM [Employee.SetFirstName] Invalid First Name - Contains Invalid Characters. Input: 
+12/13/2015 2:37:50 PM [Employee.SetFirstName] Invalid First Name - Contains Invalid Characters. Input: 
+12/13/2015 2:37:50 PM [Employee.SetFirstName] Invalid First Name - Contains Invalid Characters. Input: 
+12/13/2015 2:37:55 PM [Employee.SetFirstName] Invalid First Name - Contains Invalid Characters. Input: 
+12/13/2015 2:37:55 PM [Employee.SetFirstName] Invalid First Name - Contains Invalid Characters. Input: 
+12/13/2015 2:37:55 PM [Employee.SetFirstName] Invalid First Name - Contains Invalid Characters. Input: 
+12/13/2015 2:38:49 PM [Employee.SetFirstName] Invalid First Name - Contains Invalid Characters. Input: 
+12/13/2015 2:38:49 PM [Employee.SetFirstName] Invalid First Name - Contains Invalid Characters. Input: 
+12/13/2015 2:38:49 PM [Employee.SetFirstName] Invalid First Name - Contains Invalid Characters. Input: 
+12/13/2015 2:38:49 PM [Employee.SetFirstName] Invalid First Name - Contains Invalid Characters. Input: 
+12/13/2015 2:38:49 PM [Employee.SetFirstName] Invalid First Name - Contains Invalid Characters. Input: 
+12/13/2015 2:38:49 PM [Employee.SetFirstName] Invalid First Name - Contains Invalid Characters. Input: 
+12/13/2015 2:38:58 PM [Employee.SetLastName] Last Name Changed - From:  To: gg
+12/13/2015 2:39:01 PM [Employee.SetFirstName] Invalid First Name - Contains Invalid Characters. Input: 33
+12/13/2015 2:39:01 PM [Employee.SetFirstName] Invalid First Name - Contains Invalid Characters. Input: 33
+12/13/2015 2:39:04 PM [Employee.SetFirstName] First Name Changed - From:  To: bg
+12/13/2015 2:39:11 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 0 To: 0
+12/13/2015 2:39:14 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 0 To: 0
+12/13/2015 2:39:18 PM [Employee.SetSocialInsuranceNumber] Invalid Social Insurance Number - Incorrect number of characters. Input: 44444
+12/13/2015 2:39:20 PM [Employee.SetSocialInsuranceNumber] Invalid Social Insurance Number - Incorrect number of characters. Input: 444444
+12/13/2015 2:39:23 PM [Employee.SetSocialInsuranceNumber] Invalid Social Insurance Number - Incorrect number of characters. Input: 44444444
+12/13/2015 2:39:26 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 0 To: 0
+12/13/2015 2:39:29 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 444444444 To: 444444444
+12/13/2015 2:39:45 PM [FulltimeEmployee.SetDateOfBirth] Exception Caught in Method. Input string was not in a correct format.
+12/13/2015 2:39:53 PM [FulltimeEmployee.SetDateOfBirth] Invalid Date of Hire - Delimiters not '-'
+12/13/2015 2:40:00 PM [FulltimeEmployee.SetDateOfBirth] Date of Birth Changed From: 0001-01-01 To: 1995-12-28
+12/13/2015 2:40:00 PM [Employee.SetDateOfBirthBase] Date of Birth Changed - From: 0001-01-01 To: 1995-12-28
+12/13/2015 3:24:01 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 3:24:01 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: PT
+12/13/2015 3:24:01 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: CT
+12/13/2015 3:24:01 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: SN
+12/13/2015 3:24:03 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 3:24:09 PM [Employee.SetLastName] Last Name Changed - From:  To: Nickel
+12/13/2015 3:24:10 PM [Employee.SetFirstName] First Name Changed - From:  To: Nathan
+12/13/2015 3:24:14 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 555666999 To: 555666999
+12/13/2015 3:24:22 PM [FulltimeEmployee.SetDateOfBirth] Date of Birth Changed From: 0001-01-01 To: 1995-12-28
+12/13/2015 3:24:22 PM [Employee.SetDateOfBirthBase] Date of Birth Changed - From: 0001-01-01 To: 1995-12-28
+12/13/2015 3:24:33 PM [FulltimeEmployee.SetDateOfHire] Date of Hire Changed From: 0001-01-01 To: 2001-05-02
+12/13/2015 3:24:51 PM [ContractEmployee.SetContractStopDate] Contract Stop Date Changed From: N/A To: 2010-02-03
+12/13/2015 3:25:00 PM [ContractEmployee.SetContractStopDate] Contract Stop Date Changed From: 
+12/13/2015 3:25:06 PM [Container.AddEmployeeToList] Added an employee named Nathan to the container.
+12/13/2015 3:25:35 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 3:25:35 PM [FileIO.WriteAllRecords] FulltimeEmployee written to file
+12/13/2015 3:36:51 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 3:36:51 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: PT
+12/13/2015 3:36:51 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: CT
+12/13/2015 3:36:51 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: SN
+12/13/2015 3:36:56 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: SN
+12/13/2015 3:36:57 PM [Employee.SetLastName] Last Name Changed - From:  To: 
+12/13/2015 3:36:58 PM [Employee.SetFirstName] First Name Changed - From:  To: 
+12/13/2015 3:36:58 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 0 To: 0
+12/13/2015 3:40:57 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 3:40:57 PM [Employee.SetEmployeeType] Employee Type Changed - From: FT To: FT
+12/13/2015 3:40:57 PM [Employee.SetLastName] Last Name Changed - From:  To: Davies
+12/13/2015 3:40:57 PM [Employee.SetFirstName] First Name Changed - From:  To: Brandon
+12/13/2015 3:40:57 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 555444777 To: 555444777
+12/13/2015 3:40:57 PM [FulltimeEmployee.SetDateOfBirth] Date of Birth Changed From: 0001-01-01 To: 1993-05-01
+12/13/2015 3:40:57 PM [Employee.SetDateOfBirthBase] Date of Birth Changed - From: 0001-01-01 To: 1993-05-01
+12/13/2015 3:40:57 PM [FulltimeEmployee.SetDateOfHire] Date of Hire Changed From: 0001-01-01 To: 2001-05-02
+12/13/2015 3:40:57 PM [ContractEmployee.SetContractStopDate] Contract Stop Date Changed From: 
+12/13/2015 3:40:57 PM [FulltimeEmployee.Validate] Invalid Employee: FT|Davies|Brandon|555444777|1993-05-01|2001-05-02|N/A|0|
+12/13/2015 3:40:57 PM [FileIO.ParsRecord] invalid employee data for a full time employee
+12/13/2015 3:40:57 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 3:40:57 PM [Employee.SetEmployeeType] Employee Type Changed - From: FT To: FT
+12/13/2015 3:40:57 PM [Employee.SetLastName] Last Name Changed - From:  To: Nickel
+12/13/2015 3:40:57 PM [Employee.SetFirstName] First Name Changed - From:  To: Nathan
+12/13/2015 3:40:57 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 555666999 To: 555666999
+12/13/2015 3:40:57 PM [FulltimeEmployee.SetDateOfBirth] Date of Birth Changed From: 0001-01-01 To: 1995-12-28
+12/13/2015 3:40:57 PM [Employee.SetDateOfBirthBase] Date of Birth Changed - From: 0001-01-01 To: 1995-12-28
+12/13/2015 3:40:57 PM [FulltimeEmployee.SetDateOfHire] Date of Hire Changed From: 0001-01-01 To: 2001-05-02
+12/13/2015 3:40:57 PM [ContractEmployee.SetContractStopDate] Contract Stop Date Changed From: N/A To: 2010-02-03
+12/13/2015 3:40:57 PM [ContractEmployee.SetContractStopDate] Contract Stop Date Changed From: 
+12/13/2015 3:40:57 PM [FileIO.ParsRecord] full time employee added
+12/13/2015 3:40:57 PM [FileIO.ReadAllRecords] file read sucessfully: ..\..\..\..\DBase.txt
+12/13/2015 3:40:57 PM [Container.AddEmployeeToList] Added an employee named Nathan to the container.
+12/13/2015 3:41:02 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 3:41:02 PM [FileIO.WriteAllRecords] FulltimeEmployee written to file
+12/13/2015 3:42:24 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 3:42:24 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: PT
+12/13/2015 3:42:24 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: CT
+12/13/2015 3:42:24 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: SN
+12/13/2015 3:42:28 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: PT
+12/13/2015 3:42:30 PM [Employee.SetLastName] Last Name Changed - From:  To: 
+12/13/2015 3:42:30 PM [Employee.SetFirstName] First Name Changed - From:  To: 
+12/13/2015 3:42:31 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 0 To: 0
+12/13/2015 4:47:25 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 4:47:25 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: PT
+12/13/2015 4:47:25 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: CT
+12/13/2015 4:47:25 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: SN
+12/13/2015 4:47:32 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: 
+12/13/2015 4:47:38 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 4:47:38 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: PT
+12/13/2015 4:47:38 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: CT
+12/13/2015 4:47:38 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: SN
+12/13/2015 4:47:38 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: 
+12/13/2015 4:47:40 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 4:47:40 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: PT
+12/13/2015 4:47:40 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: CT
+12/13/2015 4:47:40 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: SN
+12/13/2015 4:47:49 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: 
+12/13/2015 4:52:26 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 4:52:26 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: PT
+12/13/2015 4:52:26 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: CT
+12/13/2015 4:52:26 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: SN
+12/13/2015 4:52:27 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: 
+12/13/2015 4:52:29 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 4:52:29 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: PT
+12/13/2015 4:52:29 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: CT
+12/13/2015 4:52:29 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: SN
+12/13/2015 4:52:33 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: SN
+12/13/2015 4:53:13 PM [Employee.SetLastName] Last Name Changed - From:  To: 
+12/13/2015 4:53:14 PM [Employee.SetFirstName] First Name Changed - From:  To: 
+12/13/2015 4:53:15 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 0 To: 0
+12/13/2015 4:53:39 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: FT
+12/13/2015 4:53:39 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: PT
+12/13/2015 4:53:39 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: CT
+12/13/2015 4:53:39 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: SN
+12/13/2015 4:53:42 PM [Employee.SetEmployeeType] Employee Type Changed - From:  To: SN
+12/13/2015 4:53:43 PM [Employee.SetLastName] Last Name Changed - From:  To: 
+12/13/2015 4:53:44 PM [Employee.SetFirstName] First Name Changed - From:  To: 
+12/13/2015 4:53:44 PM [Employee.SetSocialInsuranceNumber] Social Insurance Number Changed - From: 0 To: 0

@@ -19,7 +19,7 @@ namespace TheCompany.Tests
 {
     /// \class AddEmployeeTests
     ///
-    /// \brief <b>Brief Description</b> 
+    /// \brief  <b> Brief Description</b> 
     /// This class is used to test the AddEmployee methods in the Container class. The methods tested 
     /// include GetFulltimeEmployeeProperties, GetParttimeEmployeeProperties, GetContractEmployeeProperties,
     /// GetSeasonalEmployeeProperties and AddEmployee. Some of the methods in this class require user input 
@@ -48,22 +48,22 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method GetFulltimeEmployeeProperties
         * creates an employee from the given information and returns that employee.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is GetFulltimeEmployeeProperties.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Sam\nJones\n902398402\n1990\n09\n10\n2015\n06\n28\n2010\n10\n11\n50000"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the name of the returned employee is Sam.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the name of the returned employee is Sam.
         */
         [TestMethod]
@@ -89,22 +89,22 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method GetFulltimeEmployeeProperties
         * will return a blank employee if the given information is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is GetFulltimeEmployeeProperties.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Sam\nJones\n902398402\n1990\n94\n100\n1234\n19\n32\n2010\n67\n11\n50000"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the name of the returned employee is blank.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the name of the returned employee is blank.
         */
         [TestMethod]
@@ -134,22 +134,22 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method GetParttimeEmployeeProperties
         * creates an employee from the given information and returns that employee.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is GetParttimeEmployeeProperties.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Mark\nSmith\n872098933\n1987\n06\n22\n2015\n11\n16\n30\n2013\n04\n12\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the name of the returned employee is Mark.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the name of the returned employee is Mark.
         */
         [TestMethod]
@@ -175,22 +175,22 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method GetParttimeEmployeeProperties
         * will return a blank employee if the given information is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is GetParttimeEmployeeProperties.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Mark\nSmith\n87209893&\n1987\n06\n78\n1800\n04\n01\n30\n2013\n04\n12\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the name of the returned employee is blank.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the name of the returned employee is blank.
         */
         [TestMethod]
@@ -220,22 +220,22 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method GetContractEmployeeProperties
         * creates an employee from the given information and returns that employee.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is GetContractEmployeeProperties.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Anna\nMiller\n892398402\n1989\n07\n02\n2014\n02\n08\n2014\n09\n12\n25000"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the name of the returned employee is Anna.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the name of the returned employee is Anna.
         */
         [TestMethod]
@@ -261,22 +261,22 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method GetContractEmployeeProperties
         * will return a blank employee if the given information is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is GetContractEmployeeProperties.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Anna\nMiller\n89CFGH402\n1989\n07\n02\n2014\n34\n08\n2014\n09\n12\n25000"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the name of the returned employee is blank.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the name of the returned employee is blank.
         */
         [TestMethod]
@@ -306,22 +306,22 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method GetSeasonalEmployeeProperties
         * creates an employee from the given information and returns that employee.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is GetSeasonalEmployeeProperties.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Jake\nWilliams\n912098933\n1991\n03\n18\nFall\n20\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the name of the returned employee is Jake.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the name of the returned employee is Jake.
         */
         [TestMethod]
@@ -347,22 +347,22 @@ namespace TheCompany.Tests
         * \brief The unit test's purpose is to test if the method GetSeasonalEmployeeProperties
         * will return a blank employee if the given information is invalid.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is GetSeasonalEmployeeProperties.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "Jake\nWilliams\n902098933\n1800\n23\n55\nFFFF\n20\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the name of the returned employee is blank.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the name of the returned employee is blank.
         */
         [TestMethod]
@@ -393,22 +393,22 @@ namespace TheCompany.Tests
         * create a full-time employee from the given information and add that employee 
         * to a list.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is AddEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "FT\nSam\nJones\n902398402\n1990\n09\n10\n2015\n01\n02\n2010\n10\n11\n50000"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employeeList.Count will return 1.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employeeList.Count returns 1.
         */
         [TestMethod]
@@ -435,22 +435,22 @@ namespace TheCompany.Tests
         * not create a full-time employee from the given invalid information and therefore 
         * not add it to the employee list.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is AddEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "FT\nSam\nJones\n90239*402\n1990\n09\n10\n2015\n06\n04\n2010\n10\n65\n50000"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employeeList.Count will return 0.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employeeList.Count returns 0.
         */
         [TestMethod]
@@ -477,22 +477,22 @@ namespace TheCompany.Tests
         * create a part-time employee from the given information and add that employee 
         * to a list.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is AddEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "PT\nMark\nSmith\n872098933\n1987\n06\n22\n2014\n08\n14\n30\n2013\n04\n12"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employeeList.Count will return 1.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employeeList.Count returns 1.
         */
         [TestMethod]
@@ -519,22 +519,22 @@ namespace TheCompany.Tests
         * not create a part-time employee from the given invalid information and therefore 
         * not add it to the employee list.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is AddEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "PT\nMark\nSmith\n872098933\n1987\n33\n122\n2015\n07\n13\n30\n2013\n04\n12"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employeeList.Count will return 0.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employeeList.Count returns 0.
         */
         [TestMethod]
@@ -561,22 +561,22 @@ namespace TheCompany.Tests
         * create a contract employee from the given information and add that employee 
         * to a list.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is AddEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "CT\nAnna\nMiller\n892398402\n1989\n07\n02\n2014\n02\n08\n2014\n09\n12\n15000"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employeeList.Count will return 1.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employeeList.Count returns 1.
         */
         [TestMethod]
@@ -603,22 +603,22 @@ namespace TheCompany.Tests
         * not create a contract employee from the given invalid information and therefore 
         * not add it to the employee list.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is AddEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "CT\nAnna\nMiller\n892398402\n1989\n07\n02\n2014\n02\n08\n2014\n99\n48\n15000"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employeeList.Count will return 0.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employeeList.Count returns 0.
         */
         [TestMethod]
@@ -645,22 +645,22 @@ namespace TheCompany.Tests
         * create a seasonal employee from the given information and add that employee 
         * to a list.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is AddEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is normal/functional.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "SN\nJake\nWilliams\n912098933\n1991\n03\n18\nSummer\n10"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employeeList.Count will return 1.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employeeList.Count returns 1.
         */
         [TestMethod]
@@ -688,22 +688,22 @@ namespace TheCompany.Tests
         * not create a seasonal employee from the given invalid information and therefore 
         * not add it to the employee list.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is AddEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "SN\nJake\nWilliams\n912098933\n1991\n03\n18\nSumwinter\n10"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employeeList.Count will return 0.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employeeList.Count returns 0.
         */
         [TestMethod]
@@ -730,22 +730,22 @@ namespace TheCompany.Tests
         * not create an employee from the given invalid employee type and therefore 
         * not add it to the employee list.
         * 
-        * \<b>Name of Method/b>
+        * \ <b> Name of Method</b>
         * The method being tested is AddEmployee.
         * 
-        * \<b>How test is Conducted/b>
+        * \ <b> How test is Conducted</b>
         * The test is automatically conducted.
         * 
-        * \<b>Type of Test</b>
+        * \ <b> Type of Test</b>
         * The type of test is fault/exception.
         * 
-        * \<b>Sample Data Sets</b>
+        * \ <b> Sample Data Sets</b>
         * "OT\n"
         *    
-        * \<b>Expected Result</b>
+        * \ <b> Expected Result</b>
         * The expected result is that the employeeList.Count will return 0.
         * 
-        * \<b>Actual Result</b>
+        * \ <b> Actual Result</b>
         * The actual result is that the employeeList.Count returns 0.
         */
         [TestMethod]
