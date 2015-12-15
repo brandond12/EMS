@@ -732,10 +732,10 @@ namespace Presentation
                 {
                     if (error)
                     {
-                        Console.WriteLine("Invalid data was put in. A Buisness Number number should be in the format of #### #####");
+                        Console.WriteLine("Invalid data was put in. A Business Number number should be in the format of #### #####");
                     }
                     error = true;
-                    Console.WriteLine("Enter the employee's Buinsess Number number:");
+                    Console.WriteLine("Enter the employee's Business Number number:");
                     empSIN = Console.ReadLine();
                     Console.Clear();
                     empSIN.Replace(" ", "");
