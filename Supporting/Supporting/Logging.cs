@@ -40,14 +40,13 @@ namespace Supporting
             StreamWriter log;
             String timeStamp = DateTime.Now.ToString();
 
-            string filePath = "..\\..\\..\\..\\ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log";
+            string filePath = "C:\\ems." + String.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".log";
             // Check to see if the file exists
             if (!File.Exists(filePath))
             {
                 // If not, create it
                 log = new StreamWriter(filePath);
             }
-
             else
             {
                 // If it does, append

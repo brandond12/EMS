@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Supporting;
 
 namespace AllEmployees
 {
@@ -43,6 +44,7 @@ namespace AllEmployees
             SetEmployeeType("SN");
             season = "";
             piecePay = 0;
+            Logging.Log("SeasonalEmployee", "SeasonalEmployee", "New Seasonal Employee Created");
         }
 
         /**
@@ -63,6 +65,7 @@ namespace AllEmployees
             SetEmployeeType("SN");
             season = "";
             piecePay = 0;
+            Logging.Log("SeasonalEmployee", "SeasonalEmployee", "New Seasonal Employee Created");
         }
 
 
@@ -89,8 +92,10 @@ namespace AllEmployees
             this.piecePay = piecePay;
             if (this.Validate() != true)
             {
+                Logging.Log("SeasonalEmployee", "SeasonalEmployee", "Invalid ContractEmployee made in constructor");
                 throw new FailedConstructorException();
             }
+            Logging.Log("SeasonalEmployee", "SeasonalEmployee", "New Seasonal Employee Created");
         }
 
         /**
@@ -105,19 +110,23 @@ namespace AllEmployees
         public bool Validate()
         {
             bool dataValid = ValidateBase();
-            if (GetFirstName() == "")
+
+            if (GetLastName() == "")
             {
                 dataValid = false;
+                Logging.Log("SeasonalEmployee", "Validate", "Invalid Last Name - Cannot be blank");
             }
             if (season != "Spring" && season != "SPRING" && season != "Summer" && season != "SUMMER" && season != "Winter" && season != "WINTER" && season != "Fall" && season != "Fall")
             {
                 dataValid = false;
+                Logging.Log("SeasonalEmployee", "Validate", "Invalid Season");
             }
             else if (piecePay <= 0)
             {
                 dataValid = false;
+                Logging.Log("SeasonalEmployee", "Validate", "Invalid Piece Pay - must be number greater than 0");
             }
-
+            Logging.Log("SeasonalEmployee", "Validate", dataValid.ToString() + " Employee: " + this.ToString());
             return dataValid;
         }
 
@@ -189,10 +198,12 @@ namespace AllEmployees
             bool dataSaved = true;
             if (season != "Spring" && season != "SPRING" && season != "Summer" && season != "SUMMER" && season != "Winter" && season != "WINTER" && season != "Fall" && season != "Fall")
             {
+                Logging.Log("SeasonalEmployee", "SetSeason", "Invalid Season");
                 dataSaved = false;
             }
             else
             {
+                Logging.Log("SeasonalEmployee", "SetSeason", "Season changed from " + this.season + " to " + season);
                 this.season = season;
             }
             return dataSaved;
@@ -213,10 +224,12 @@ namespace AllEmployees
 
             if (piecePay >= 0)
             {
+                Logging.Log("SeasonalEmployee", "SetPiecePay", "Piece Pay changed from " + this.piecePay.ToString() + " to " + piecePay.ToString());
                 this.piecePay = piecePay;
             }
             else
             {
+                Logging.Log("SeasonalEmployee", "SetPiecePay", "Invalid Piece Pay - Must be greater than 0");
                 dataSaved = false;
             }
 

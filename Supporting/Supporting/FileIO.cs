@@ -385,8 +385,6 @@ namespace Supporting
 
                         try
                         {
-
-
                             seasonalEmp.SetEmployeeType(words[wordCounter]);
                             wordCounter++;
                             seasonalEmp.SetLastName(words[wordCounter]);
@@ -395,11 +393,13 @@ namespace Supporting
                             wordCounter++;
                             seasonalEmp.SetSocialInsuranceNumber(Convert.ToInt32(words[wordCounter]));//only takes an int
                             wordCounter++;
+                            Logging.Log("FileIO", "ParsRecord", "SN Birthday: " + words[wordCounter]);
                             seasonalEmp.SetDateOfBirth(words[wordCounter]);
                             wordCounter++;
-
+                            Logging.Log("FileIO", "ParsRecord", "SN Season: " + words[wordCounter]);
                             seasonalEmp.SetSeason(words[wordCounter]);
                             wordCounter++;
+                            Logging.Log("FileIO", "ParsRecord", "SN PiecePay: " + words[wordCounter]);
                             seasonalEmp.SetPiecePay(Convert.ToDouble(words[wordCounter]));//only takes a float
                             wordCounter++;
 

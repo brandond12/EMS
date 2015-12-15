@@ -138,8 +138,8 @@ namespace Presentation
                 switch (str)
                 {
                     case "1":
-                        // Gets employee list from the database
-                        employeeList = FileIO.ReadAllRecords(@"..\..\..\..\DBase.txt");
+                        // Gets employee list from the databas
+                        employeeList = FileIO.ReadAllRecords(@"C:\DBase.txt");
                         foreach (Employee emp in employeeList)
                         {
                             // Add it to the list
@@ -151,7 +151,7 @@ namespace Presentation
                         // Send each individual employee back out to the database
                         employeeList = company.GetEmployeeList();
 
-                        int validEmployee = FileIO.WriteRecord(employeeList, @"..\..\..\..\DBase.txt");
+                        int validEmployee = FileIO.WriteRecord(employeeList, @"C:\DBase.txt");
                         Console.WriteLine(validEmployee.ToString() + " employee(s) were saved from " + employeeList.Count().ToString() + " record(s)" );
                         break;
                     case "9":
@@ -347,7 +347,12 @@ namespace Presentation
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((FulltimeEmployee)employee).SetDateOfHire(Console.ReadLine()) == false)
                             {
+                                Console.Clear();
                                 Console.WriteLine("The date was not valid");
+                            }
+                            else
+                            {
+                                Console.Clear();
                             }
                             break;
                         case "3":
@@ -355,12 +360,19 @@ namespace Presentation
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((FulltimeEmployee)employee).SetDateOfTermination(Console.ReadLine()) == false)
                             {
+                                Console.Clear();
                                 Console.WriteLine("The date was not valid");
                             }
+                            else
+                            {
+                                Console.Clear();
+                            }
+
                             break;
                         case "4":
                             Console.WriteLine("Specify the salary");
                             string salaryInput = Console.ReadLine();
+                            Console.Clear();
                             double salaryAmount;
                             double.TryParse(salaryInput, out salaryAmount);
                             // Sets the employee details to the users input and checks if it is in the proper format
@@ -401,7 +413,12 @@ namespace Presentation
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((ParttimeEmployee)employee).SetDateOfHire(Console.ReadLine()) == false)
                             {
+                                Console.Clear();
                                 Console.WriteLine("The date was not valid");
+                            }
+                            else
+                            {
+                                Console.Clear();
                             }
                             break;
                         case "3":
@@ -409,7 +426,12 @@ namespace Presentation
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((ParttimeEmployee)employee).SetDateOfTermination(Console.ReadLine()) == false)
                             {
+                                Console.Clear();
                                 Console.WriteLine("The date was not valid");
+                            }
+                            else
+                            {
+                                Console.Clear();
                             }
                             break;
                         case "4":
@@ -417,7 +439,12 @@ namespace Presentation
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((ParttimeEmployee)employee).SetHourlyRate(double.Parse(Console.ReadLine())) == false)
                             {
+                                Console.Clear();
                                 Console.WriteLine("The hourly rate must be greater than 0");
+                            }
+                            else
+                            {
+                                Console.Clear();
                             }
                             break;
                         case "8":
@@ -452,7 +479,12 @@ namespace Presentation
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((ContractEmployee)employee).SetContractStartDate(Console.ReadLine()) == false)
                             {
-                                    Console.WriteLine("The date was not valid");
+                                Console.Clear();
+                                Console.WriteLine("The date was not valid");
+                            }
+                            else
+                            {
+                                Console.Clear();
                             }
                             break;
                         case "3":
@@ -460,7 +492,12 @@ namespace Presentation
                             // Sets the employee details to the users input and checks if it is in the proper format
                             if (((ContractEmployee)employee).SetContractStopDate(Console.ReadLine()) == false)
                             {
+                                Console.Clear();
                                 Console.WriteLine("The date was not valid");
+                            }
+                            else
+                            {
+                                Console.Clear();
                             }
                             break;
                         case "4":
@@ -472,7 +509,12 @@ namespace Presentation
                             if (((ContractEmployee)employee).SetFixedContractAmount(contractAmount) == false)
                             // first line get users input instead of try parse, just have the users input, second in if statement use the users input
                             {
+                                Console.Clear();
                                 Console.WriteLine("The fixed contract amount must be greater than 0");
+                            }
+                            else
+                            {
+                                Console.Clear();
                             }
                             break;
                         case "8":
@@ -746,7 +788,11 @@ namespace Presentation
                 {
                     if (error)
                     {
-                        Console.WriteLine("Invalid data was put in. The date must be in the format of YYYY-MM-DD. \nThe last 2 digits of the year should match the first 2 digits of the Buisness Number");
+                        Console.WriteLine("Invalid data was put in. The date must be in the format of YYYY-MM-DD.");
+                        if(CTemp.GetSocialInsuranceNumber() != 0)
+                        {
+                            Console.WriteLine("The last 2 digits of the year \nshould match the first 2 digits of the Buisness Number: " + CTemp.GetSocialInsuranceNumber().ToString().Substring(0, 2));
+                        }
                     }
                     error = true;
                     Console.WriteLine("Enter the employee's date of incorporation in the format: YYYY-MM-DD");

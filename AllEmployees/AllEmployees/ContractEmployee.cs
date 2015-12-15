@@ -48,6 +48,7 @@ namespace AllEmployees
             contractStopDate = new DateTime();
             fixedContractAmount = 0;
             SetEmployeeType("CT");
+            Logging.Log("ContractEmployee", "ContractEmployee", "New Contract Employee Created");
         }
 
         /**
@@ -158,7 +159,7 @@ namespace AllEmployees
                 dataValid = false;
                 Logging.Log("ContractEmployee", "Validate", "Invalid Employee: " + this.ToString());
             }
-            Logging.Log("ContractEmployee", "Validate", dataValid.ToString());
+            Logging.Log("ContractEmployee", "Validate", dataValid.ToString() + " Employee: " + this.ToString());
             return dataValid;
         }
 

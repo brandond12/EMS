@@ -149,6 +149,7 @@ namespace AllEmployees
                 dataValid = false;
                 Logging.Log("FulltimeEmployee", "Validate", "Invalid Employee: " + this.ToString());
             }
+            Logging.Log("FulltimeEmployee", "Validate", dataValid.ToString() + " Employee: " + this.ToString());
             return dataValid;
         }
 
