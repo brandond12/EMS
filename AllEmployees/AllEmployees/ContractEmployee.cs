@@ -158,6 +158,7 @@ namespace AllEmployees
                 dataValid = false;
                 Logging.Log("ContractEmployee", "Validate", "Invalid Employee: " + this.ToString());
             }
+            Logging.Log("ContractEmployee", "Validate", dataValid.ToString());
             return dataValid;
         }
 
@@ -193,7 +194,7 @@ namespace AllEmployees
             {
                 returnString += GetContractStopDateString();
             }
-            returnString += "\nFixed Contract Amount: " + fixedContractAmount.ToString();
+            returnString += "\nFixed Contract Amount: " + string.Format("{0:N2}", fixedContractAmount);
 
             return returnString;
         }

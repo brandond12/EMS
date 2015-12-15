@@ -184,7 +184,8 @@ namespace AllEmployees
             {
                 details += GetDateOfTerminationString();
             }
-            details += "\nSalary: " + salary.ToString();
+            details += "\nSalary: " + string.Format("{0:N2}", salary);
+            //details += "\nSalary: " + salary.ToString();
             return details;
         }
 

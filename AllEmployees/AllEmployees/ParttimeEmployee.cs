@@ -185,7 +185,7 @@ namespace AllEmployees
             {
                 details += GetDateOfTerminationString();
             }
-            details += "\nHourly Rate: " + hourlyRate.ToString();
+            details += "\nHourly Rate: " + string.Format("{0:N2}", hourlyRate);
             return details;
         }
 
