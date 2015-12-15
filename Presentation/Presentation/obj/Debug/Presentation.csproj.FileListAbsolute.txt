@@ -31,3 +31,14 @@ C:\GITRepo\EMS\trunk\Presentation\Presentation\bin\Debug\TheCompany.pdb
 C:\GITRepo\EMS\trunk\Presentation\Presentation\obj\Debug\Presentation.dll
 C:\GITRepo\EMS\trunk\Presentation\Presentation\obj\Debug\Presentation.pdb
 C:\GITRepo\EMS\trunk\Presentation\Presentation\obj\Debug\Presentation.csprojResolveAssemblyReference.cache
+C:\Testing-EMS-3\trunk\Presentation\Presentation\obj\Debug\Presentation.dll
+C:\Testing-EMS-3\trunk\Presentation\Presentation\bin\Debug\Presentation.dll
+C:\Testing-EMS-3\trunk\Presentation\Presentation\bin\Debug\Presentation.pdb
+C:\Testing-EMS-3\trunk\Presentation\Presentation\bin\Debug\AllEmployees.dll
+C:\Testing-EMS-3\trunk\Presentation\Presentation\bin\Debug\Supporting.dll
+C:\Testing-EMS-3\trunk\Presentation\Presentation\bin\Debug\TheCompany.dll
+C:\Testing-EMS-3\trunk\Presentation\Presentation\bin\Debug\AllEmployees.pdb
+C:\Testing-EMS-3\trunk\Presentation\Presentation\bin\Debug\Supporting.pdb
+C:\Testing-EMS-3\trunk\Presentation\Presentation\bin\Debug\TheCompany.pdb
+C:\Testing-EMS-3\trunk\Presentation\Presentation\obj\Debug\Presentation.pdb
+C:\Testing-EMS-3\trunk\Presentation\Presentation\obj\Debug\Presentation.csprojResolveAssemblyReference.cache

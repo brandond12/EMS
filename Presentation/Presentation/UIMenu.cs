@@ -731,10 +731,10 @@ namespace Presentation
                 {
                     if (error)
                     {
-                        Console.WriteLine("Invalid data was put in. A SIN number should be in the format of ### ### ###");
+                        Console.WriteLine("Invalid data was put in. A Buisness Number number should be in the format of #### #####");
                     }
                     error = true;
-                    Console.WriteLine("Enter the employee's SIN number:");
+                    Console.WriteLine("Enter the employee's Buinsess Number number:");
                     empSIN = Console.ReadLine();
                     Console.Clear();
                     empSIN.Replace(" ", "");
@@ -745,7 +745,7 @@ namespace Presentation
                 {
                     if (error)
                     {
-                        Console.WriteLine("Invalid data was put in. The date must be in the format of  YYYY-MM-DD");
+                        Console.WriteLine("Invalid data was put in. The date must be in the format of YYYY-MM-DD. \nThe last 2 digits of the year should match the first 2 digits of the Buisness Number");
                     }
                     error = true;
                     Console.WriteLine("Enter the employee's date of incorporation in the format: YYYY-MM-DD");

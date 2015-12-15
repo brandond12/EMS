@@ -241,11 +241,15 @@ namespace AllEmployees
                 dataSaved = false;
                 Logging.Log("ContractEmployee", "SetDateOfBirth", "Invalid Date of Birth - Can Not be in Future");
             }
+            else if (int.Parse(GetSocialInsuranceNumber().ToString().Substring(0, 2)) != int.Parse(date.Year.ToString().Substring(2, 2)))
+            {
+                dataSaved = false;
+                Logging.Log("ContractEmployee", "SetDateOfBirth", "Invalid Date of Birth - Does not math buisness Number");
+            }
             else
             {
                 Logging.Log("ContractEmployee", "SetDateOfBirth", "Date of Birth Changed From: " + GetDateOfBirthString() + " To: " + String.Format("{0:yyyy-MM-dd}", date));
                 SetDateOfBirthBase(date);
-                
             }
             return dataSaved;
         }
@@ -286,6 +290,11 @@ namespace AllEmployees
                 {
                     Logging.Log("ContractEmployee", "SetDateOfBirth", "Invalid Date of Hire - Delimiters not '-'");
                     dataSaved = false;
+                }
+                else if (int.Parse(GetSocialInsuranceNumber().ToString().Substring(0, 2)) != int.Parse(year.ToString().Substring(2, 2)))
+                {
+                    dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetDateOfBirth", "Invalid Date of Birth - Does not math buisness Number");
                 }
                 else
                 {
@@ -333,11 +342,17 @@ namespace AllEmployees
                     dataSaved = false;
                     Logging.Log("ContractEmployee", "SetDateOfBirth", "Invalid Date of Birth - Can Not be in Future");
                 }
+                else if (int.Parse(GetSocialInsuranceNumber().ToString().Substring(0, 2)) != int.Parse(year.ToString().Substring(2, 2)))
+                {
+                    dataSaved = false;
+                    Logging.Log("ContractEmployee", "SetDateOfBirth", "Invalid Date of Birth - Does not math buisness Number");
+                }
                 else
                 {
                     Logging.Log("ContractEmployee", "SetDateOfBirth", "Date of Birth Changed From: " + GetDateOfBirthString() + " To: " + String.Format("{0:yyyy-MM-dd}", DOB));
                     SetDateOfBirthBase(DOB);
                 }
+                
             }
             catch (Exception ex)
             {
